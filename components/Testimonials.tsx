@@ -60,7 +60,7 @@ export default function Testimonials() {
 
   const t = useTranslations("testimonials");
   return (
-    <section className="py-24 px-4 bg-white overflow-hidden">
+    <section className="py-10 px-4 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
         <div className="lg:w-2/5 space-y-8">
           <h2 className="text-6xl font-black leading-[1.1] text-[#111]">

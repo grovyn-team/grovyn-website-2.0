@@ -49,7 +49,7 @@ export default function Footer({ locale }: { locale: string }) {
           </div>
 
           <div>
-            <h5 className="text-white text-sm font-bold mb-6">{t("capabilities")}</h5>
+            <h5 className="text-white text-sm font-bold mb-6">{t("services_heading")}</h5>
             <ul className="text-xs space-y-4">
               <li>
                 <Link href={`${base}#web-dev`} className="hover:text-emerald-500 transition-colors">
@@ -57,10 +57,7 @@ export default function Footer({ locale }: { locale: string }) {
                 </Link>
               </li>
               <li>
-                <Link
-                  href={`${base}#mobile-apps`}
-                  className="hover:text-emerald-500 transition-colors"
-                >
+                <Link href={`${base}#mobile-apps`} className="hover:text-emerald-500 transition-colors">
                   {t("mobile_eng")}
                 </Link>
               </li>
@@ -70,10 +67,7 @@ export default function Footer({ locale }: { locale: string }) {
                 </Link>
               </li>
               <li>
-                <Link
-                  href={`${base}#backend-cloud`}
-                  className="hover:text-emerald-500 transition-colors"
-                >
+                <Link href={`${base}#backend-cloud`} className="hover:text-emerald-500 transition-colors">
                   {t("cloud_arch")}
                 </Link>
               </li>
@@ -81,33 +75,7 @@ export default function Footer({ locale }: { locale: string }) {
           </div>
 
           <div>
-            <h5 className="text-white text-sm font-bold mb-6">{t("integrations")}</h5>
-            <ul className="text-xs space-y-4">
-              <li>
-                <a href="#" className="hover:text-emerald-500 transition-colors">
-                  CometChat SDK
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-emerald-500 transition-colors">
-                  Sendbird UIKit
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-emerald-500 transition-colors">
-                  Payment Gateways
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-emerald-500 transition-colors">
-                  Third-party APIs
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h5 className="text-white text-sm font-bold mb-6">{t("connect")}</h5>
+            <h5 className="text-white text-sm font-bold mb-6">{t("company_heading")}</h5>
             <ul className="text-xs space-y-4">
               <li>
                 <Link href={`${base}/about`} className="hover:text-emerald-500 transition-colors">
@@ -119,15 +87,36 @@ export default function Footer({ locale }: { locale: string }) {
                   {t("careers")}
                 </Link>
               </li>
-              <li>
-                <a href="#" className="hover:text-emerald-500 transition-colors">
-                  LinkedIn
-                </a>
-              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 className="text-white text-sm font-bold mb-6">{t("resources_heading")}</h5>
+            <ul className="text-xs space-y-4">
               <li>
                 <Link href={`${base}#contact`} className="hover:text-emerald-500 transition-colors">
                   {t("contact")}
                 </Link>
+              </li>
+              <li>
+                <Link href={`${base}/privacy`} className="hover:text-emerald-500 transition-colors">
+                  {t("privacy")}
+                </Link>
+              </li>
+              <li>
+                <Link href={`${base}/terms`} className="hover:text-emerald-500 transition-colors">
+                  {t("terms")}
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/grovynsystems/about"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-emerald-500 transition-colors"
+                >
+                  {t("linkedin")}
+                </a>
               </li>
             </ul>
           </div>
@@ -136,12 +125,12 @@ export default function Footer({ locale }: { locale: string }) {
         <div className="pt-8 border-t border-gray-800 flex justify-between items-center text-[10px] uppercase tracking-[0.1em] font-bold">
           <p>© {new Date().getFullYear()} {t("copyright")}</p>
           <div className="flex space-x-8">
-            <a href="#" className="hover:text-white">
+            <Link href={`${base}/privacy`} className="hover:text-white">
               {t("privacy")}
-            </a>
-            <a href="#" className="hover:text-white">
+            </Link>
+            <Link href={`${base}/terms`} className="hover:text-white">
               {t("terms")}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -19,6 +19,15 @@
     "resources": "Recursos",
     "careers": "Carreiras",
     "cta": "Agendar chamada de descoberta",
+    "privacy": "Privacidade",
+    "terms": "Termos",
+    "solutions_menu": {
+      "industries": "Indústrias que atendemos",
+      "industries_desc": "Engenharia específica por domínio para saúde, fintech, e-commerce e mais."
+    },
+    "resources_menu": {
+      "contact": "Contato"
+    },
     "menus": {
       "web": "Desenvolvimento web",
       "web_desc": "Aplicações web escaláveis com React, Angular e Vue.",
@@ -30,12 +39,25 @@
       "ai_desc": "Agentes de IA e soluções de IA generativa de ponta."
     }
   },
+  "services_we_offer": {
+    "badge": "O que entregamos",
+    "title": "Projetos que",
+    "highlight": "construímos",
+    "subtitle": "De sites corporativos a e-commerce e portfólios — entregamos soluções que escalam e performam.",
+    "cards": [
+      { "title": "Sites empresariais", "description": "Sites corporativos profissionais que estabelecem credibilidade e impulsionam crescimento com design focado em conversão.", "tags": ["Marca corporativa", "Geração de leads", "SEO otimizado"] },
+      { "title": "Plataformas e-commerce", "description": "Lojas online completas com pagamentos seguros, gestão de estoque e checkout fluido.", "tags": ["Gateway de pagamento", "Estoque", "Rastreamento de pedidos"] },
+      { "title": "Portfólio e showcase", "description": "Sites de apresentação para criativos, artistas e profissionais exibirem seu trabalho.", "tags": ["Galerias", "Casos de estudo", "Formulários de contato"] }
+    ],
+    "cta_link": "Explorar todos os serviços web"
+  },
   "industries": {
     "badge": "Indústrias que atendemos",
     "title_line1": "Excelência em engenharia",
     "title_line2": "específica de domínio",
     "title_highlight": ".",
     "subtitle": "Soluções sob medida para cenários industriais complexos.",
+    "core_areas_label": "Nossas principais áreas de atuação",
     "total_deployments": "Total de deploys",
     "system_availability": "Disponibilidade do sistema",
     "healthcare": {
@@ -165,6 +187,9 @@
     "tagline": "Engenharia da próxima geração de produtos digitais. De plataformas em nuvem em grande escala a experiências móveis fluidas.",
     "hours": "9h às 19h",
     "location": "Mumbai, Maharashtra",
+    "services_heading": "Serviços",
+    "company_heading": "Empresa",
+    "resources_heading": "Recursos",
     "capabilities": "Capacidades",
     "web_dev": "Desenvolvimento web",
     "mobile_eng": "Engenharia móvel",
@@ -177,6 +202,7 @@
     "contact": "Contato",
     "privacy": "Privacidade",
     "terms": "Termos",
+    "linkedin": "LinkedIn",
     "copyright": "Grovyn Inc."
   },
   "about": {
@@ -271,5 +297,188 @@
     "success_title": "Candidatura registrada.",
     "success_message": "Nossos líderes de engenharia estão analisando seu perfil. Entraremos em contato em 48 horas para uma sessão técnica aprofundada.",
     "return_btn": "Voltar a Carreiras"
+  },
+  "why_grovyn": {
+    "badge": "Por que GROVYN?",
+    "title_line1": "Construído para",
+    "title_highlight": "empresas",
+    "title_line2": "que levam tecnologia",
+    "title_highlight2": "a sério",
+    "items": [
+      { "title": "Entrega rápida, sem compromisso", "description": "MVPs normalmente em semanas, não meses. Velocidade vem de experiência, decisões claras e fundamentos sólidos." },
+      { "title": "Preços transparentes e fixos", "description": "Cada projeto é escopado com entregas e prazos claros. Sem custos surpresa ou dependências ocultas." },
+      { "title": "Pronto para produção por padrão", "description": "Cada build inclui testes, revisões de código, documentação e prontidão para implantação." },
+      { "title": "Propriedade total, sem lock-in", "description": "Você é dono do código desde o primeiro dia. Tecnologias padrão, sem frameworks proprietários." },
+      { "title": "Entrega global, execução cuidadosa", "description": "Trabalhamos em regiões e fusos com comunicação forte e execução confiável." },
+      { "title": "Garantia de qualidade 90 dias", "description": "Suporte pós-lançamento para corrigir problemas, garantir estabilidade e afinar desempenho." }
+    ]
+  },
+  "technology_stack": {
+    "title": "Construído com tecnologias modernas e comprovadas",
+    "badge": "Nossa Stack",
+    "root_label": "Modern Technology Stack",
+    "categories": [
+      { "title": "Web Development", "items": ["React", "Next.js", "Node.js", "Express", "MongoDB", "PostgreSQL"] },
+      { "title": "Mobile Development", "items": ["React Native", "Flutter", "Expo", "Android", "iOS"] },
+      { "title": "Cloud e DevOps", "items": ["AWS", "Docker", "Kubernetes", "CI/CD", "Serverless", "Terraform"] },
+      { "title": "AI & Data", "items": ["Machine Learning", "NLP", "Computer Vision", "Python", "TensorFlow", "PyTorch"] },
+      { "title": "Blockchain & Web3", "items": ["Ethereum", "Solidity", "Web3.js", "NFTs", "DeFi"] }
+    ]
+  },
+  "ai_section": {
+    "title_line1": "Inteligência integrada ao sistema",
+    "title_highlight": "não sobreposta.",
+    "para1": "Inteligência artificial na GROVYN não é uma oferta isolada. É uma capacidade integrada em plataformas onde a inteligência gera valor operacional real.",
+    "para2": "Projetamos sistemas que incorporam automação, aprendizado de máquina e decisões baseadas em dados, mantendo confiabilidade, explicabilidade e manutenção ao longo do tempo."
+  },
+  "free_quote_cta": {
+    "badge": "Garantia de resposta rápida",
+    "title_line1": "Obtenha um orçamento gratuito em",
+    "title_highlight": "24 horas",
+    "subtitle": "Compartilhe os requisitos do projeto e receba uma proposta técnica detalhada com preço fixo em 24 horas. Sem obrigações.",
+    "benefit1": "Proposta técnica detalhada",
+    "benefit2": "Orçamento com preço fixo",
+    "benefit3": "Cronograma semanal",
+    "benefit4": "Sem obrigações",
+    "cta": "Solicitar orçamento gratuito",
+    "hint": "Agende uma call de descoberta de 20 min • Proposta em 24 horas"
+  },
+  "privacy_page": {
+    "intro": "Respeitamos sua privacidade e estamos comprometidos em proteger seus dados pessoais. Esta política explica como coletamos, usamos e protegemos suas informações.",
+    "contact": "Para dúvidas sobre privacidade, entre em contato pelo formulário ou e-mail indicado neste site."
+  },
+  "terms_page": {
+    "intro": "Ao usar nosso site e serviços, você concorda com estes termos e condições. Reservamo-nos o direito de atualizá-los a qualquer momento.",
+    "contact": "Para dúvidas sobre estes termos, entre em contato pelo formulário ou e-mail indicado neste site."
+  },
+  "services_detail": {
+    "web": {
+      "hero_badge": "Desenvolvimento web",
+      "hero_title_line1": "Aplicações web para",
+      "hero_title_highlight": "confiabilidade, escala e crescimento de longo prazo.",
+      "hero_subtitle": "Projetamos e construímos plataformas web modernas para operações reais, fluxos complexos e ambientes de alto uso.",
+      "cta_primary": "Iniciar conversa",
+      "cta_secondary": "Ver casos de uso",
+      "tech_title": "Stack tecnológico",
+      "tech_items": ["React", "Next.js", "Angular", "Vue", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
+      "offerings_title": "O que entregamos",
+      "offerings_intro": "Plataformas web desenhadas em torno de necessidades reais de negócio.",
+      "offerings": [
+        { "title": "SPAs e frameworks modernos", "desc": "Aplicações de página única com React, Angular, Next.js e Vue." },
+        { "title": "Backend e APIs", "desc": "APIs escaláveis, microserviços e arquiteturas serverless." },
+        { "title": "Sistemas em tempo real", "desc": "Dados ao vivo, WebSockets e camadas de sincronização." }
+      ],
+      "features_title": "Recursos principais",
+      "features": ["Auth e autorização seguras", "Engenharia performance-first", "Backends escaláveis", "Front-ends mantíveis", "Deploy e monitoramento", "Suporte offline e cache"],
+      "advanced_title": "Capacidades avançadas",
+      "advanced": ["Integrações SDK", "Gateways de pagamento", "Analytics e logging", "CI/CD e IaC"],
+      "process_title": "Como trabalhamos",
+      "process_steps": [
+        { "step": "01", "title": "Discovery e arquitetura", "desc": "Escopo, design de sistema e abordagem técnica." },
+        { "step": "02", "title": "Entrega por sprints", "desc": "Construção iterativa com marcos e demos." },
+        { "step": "03", "title": "Lançamento e suporte", "desc": "Deploy, monitoramento e otimização pós-lançamento." }
+      ],
+      "cta_title": "Vamos desenhar uma plataforma web que cresce com seu negócio.",
+      "cta_button": "Falar com a equipe"
+    },
+    "mobile": {
+      "hero_badge": "Desenvolvimento móvel",
+      "hero_title_line1": "Apps móveis para",
+      "hero_title_highlight": "performance, confiabilidade e uso real.",
+      "hero_subtitle": "Aplicações nativas e multiplataforma para iOS e Android.",
+      "cta_primary": "Iniciar conversa",
+      "cta_secondary": "Ver capacidades",
+      "tech_title": "Stack tecnológico",
+      "tech_items": ["React Native", "Flutter", "iOS (Swift)", "Android (Kotlin)", "TypeScript", "Firebase", "GraphQL"],
+      "offerings_title": "O que entregamos",
+      "offerings_intro": "Experiências móveis para escala e qualidade.",
+      "offerings": [
+        { "title": "iOS e Android nativos", "desc": "Apps Swift e Kotlin para máxima performance." },
+        { "title": "Cross-platform (React Native, Flutter)", "desc": "Uma base de código para iOS e Android." },
+        { "title": "Push, background e sync", "desc": "Notificações push e sincronização offline-first." }
+      ],
+      "features_title": "Recursos principais",
+      "features": ["Performance nativa", "Offline-first e sync", "Push notifications", "Auth segura e biométrica", "Deploy em lojas", "CI/CD e OTA"],
+      "advanced_title": "Capacidades avançadas",
+      "advanced": ["Mensageria em tempo real", "SDKs de pagamento", "Analytics e crash", "Deep linking"],
+      "process_title": "Como trabalhamos",
+      "process_steps": [
+        { "step": "01", "title": "Alinhamento produto e UX", "desc": "Fluxos de usuário e viabilidade técnica." },
+        { "step": "02", "title": "Desenvolvimento iterativo", "desc": "Builds por sprint com testes em dispositivo." },
+        { "step": "03", "title": "Submissão às lojas e suporte", "desc": "Prontidão de release e conformidade com lojas." }
+      ],
+      "cta_title": "Vamos construir uma experiência móvel que os usuários amam.",
+      "cta_button": "Falar com a equipe"
+    },
+    "backend": {
+      "hero_badge": "Backend e cloud",
+      "hero_title_line1": "Sistemas backend e cloud para",
+      "hero_title_highlight": "escala, segurança e confiabilidade.",
+      "hero_subtitle": "Microserviços, APIs e infraestrutura cloud-native.",
+      "cta_primary": "Iniciar conversa",
+      "cta_secondary": "Ver capacidades",
+      "tech_title": "Stack tecnológico",
+      "tech_items": ["Node.js", "Python", "PostgreSQL", "MongoDB", "Redis", "AWS", "Google Cloud", "Docker", "Kubernetes"],
+      "offerings_title": "O que entregamos",
+      "offerings_intro": "Engenharia de cloud e backend para sistemas de produção.",
+      "offerings": [
+        { "title": "API e microserviços", "desc": "APIs REST e GraphQL. Arquitetura orientada a eventos." },
+        { "title": "Infraestrutura cloud", "desc": "AWS, GCP, Azure. Serverless, containers e IaC." },
+        { "title": "DevOps e confiabilidade", "desc": "CI/CD, monitoramento e práticas SRE." }
+      ],
+      "features_title": "Recursos principais",
+      "features": ["APIs escaláveis", "Design e otimização de banco", "Cache e CDN", "Segurança e conformidade", "Monitoramento", "Disaster recovery"],
+      "advanced_title": "Capacidades avançadas",
+      "advanced": ["Arquitetura event-driven", "Deploy multi-região", "Otimização de custo", "Migração de legacy"],
+      "process_title": "Como trabalhamos",
+      "process_steps": [
+        { "step": "01", "title": "Arquitetura e design", "desc": "Design de sistema e estratégia de cloud." },
+        { "step": "02", "title": "Construção e automação", "desc": "Implementação, IaC e pipelines." },
+        { "step": "03", "title": "Operar e iterar", "desc": "Deploy, monitoramento e melhoria contínua." }
+      ],
+      "cta_title": "Vamos desenhar um backend que escala com seu negócio.",
+      "cta_button": "Falar com a equipe"
+    },
+    "ai": {
+      "hero_badge": "IA e Gen AI",
+      "hero_title_line1": "Soluções de IA integradas em",
+      "hero_title_highlight": "seus sistemas, não em camada.",
+      "hero_subtitle": "Integrações AI/ML customizadas, RAG e fluxos agentes para valor operacional real.",
+      "cta_primary": "Iniciar conversa",
+      "cta_secondary": "Ver casos de uso",
+      "tech_title": "Tecnologias",
+      "tech_items": ["LLMs e embeddings", "Pipelines RAG", "LangChain", "Python", "Vector DBs", "OpenAI", "Anthropic", "ML custom"],
+      "offerings_title": "O que entregamos",
+      "offerings_intro": "Inteligência onde gera valor.",
+      "offerings": [
+        { "title": "RAG e sistemas de conhecimento", "desc": "IA empresarial com seus dados. RAG e busca semântica." },
+        { "title": "IA agentes e fluxos", "desc": "Agentes autônomos e automação de fluxos." },
+        { "title": "ML custom e integrações", "desc": "Fine-tuning e integração com plataformas existentes." }
+      ],
+      "features_title": "Capacidades principais",
+      "features": ["Pipelines RAG", "Fluxos agentes", "Tratamento seguro de dados", "Explicabilidade e guardrails", "Integrações API", "Avaliação e monitoramento"],
+      "advanced_title": "Capacidades avançadas",
+      "advanced": ["IA multimodal", "Fine-tuning de modelos", "Inferência em tempo real", "Conformidade empresarial"],
+      "process_title": "Como trabalhamos",
+      "process_steps": [
+        { "step": "01", "title": "Caso de uso e dados", "desc": "Definir valor, fontes de dados e métricas de sucesso." },
+        { "step": "02", "title": "Protótipo e integração", "desc": "Design RAG/agente, APIs e checagens de segurança." },
+        { "step": "03", "title": "Deploy e iterar", "desc": "Deploy em produção e melhoria contínua." }
+      ],
+      "cta_title": "Vamos construir IA que funciona para seu negócio.",
+      "cta_button": "Falar com a equipe"
+    }
+  },
+  "solutions_industries": {
+    "hero_badge": "Indústrias que atendemos",
+    "hero_title_line1": "Excelência em engenharia",
+    "hero_title_highlight": "específica por domínio.",
+    "hero_subtitle": "Soluções sob medida para Healthcare, Fintech, E-commerce e mais. Engenharia de produção e conhecimento de domínio."
+  },
+  "projects": {
+    "title": "Trabalhos selecionados",
+    "subtitle": "Uma seleção de projetos que entregamos para times globais.",
+    "view_project": "Ver projeto",
+    "detail_back": "Voltar aos projetos"
   }
 }

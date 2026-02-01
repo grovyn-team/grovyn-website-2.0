@@ -19,6 +19,15 @@
     "resources": "Resources",
     "careers": "Careers",
     "cta": "Book a discovery call",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "solutions_menu": {
+      "industries": "Industries We Serve",
+      "industries_desc": "Domain-specific engineering for Healthcare, Fintech, E-commerce and more."
+    },
+    "resources_menu": {
+      "contact": "Contact"
+    },
     "menus": {
       "web": "Web Development",
       "web_desc": "Scaleable web applications with React, Angular, and Vue.",
@@ -30,12 +39,25 @@
       "ai_desc": "Cutting-edge AI agents and Generative AI solutions."
     }
   },
+  "services_we_offer": {
+    "badge": "What we deliver",
+    "title": "Projects we",
+    "highlight": "build",
+    "subtitle": "From corporate sites to e-commerce and portfolios — we ship solutions that scale and perform.",
+    "cards": [
+      { "title": "Business Websites", "description": "Professional corporate sites that establish credibility and drive growth with clear, conversion-focused design.", "tags": ["Corporate branding", "Lead generation", "SEO optimized"] },
+      { "title": "E-commerce Platforms", "description": "Full-featured online stores with secure payments, inventory management, and seamless checkout.", "tags": ["Payment gateway", "Inventory", "Order tracking"] },
+      { "title": "Portfolio & Showcase", "description": "Stunning showcase sites for creatives, artists, and professionals to present their work.", "tags": ["Galleries", "Case studies", "Contact forms"] }
+    ],
+    "cta_link": "Explore all web services"
+  },
   "industries": {
     "badge": "Industries We Power",
     "title_line1": "Engineering Domain-",
     "title_line2": "Specific",
     "title_highlight": "Excellence.",
     "subtitle": "Tailored solutions for complex industry landscapes.",
+    "core_areas_label": "Our Core Areas of Operation",
     "total_deployments": "Total Deployments",
     "system_availability": "System Availability",
     "healthcare": {
@@ -165,6 +187,9 @@
     "tagline": "Engineering the next generation of digital products. From high-scale cloud platforms to seamless mobile experiences.",
     "hours": "9:00am to 7:00pm",
     "location": "Mumbai, Maharashtra",
+    "services_heading": "Services",
+    "company_heading": "Company",
+    "resources_heading": "Resources",
     "capabilities": "Capabilities",
     "web_dev": "Web Development",
     "mobile_eng": "Mobile Engineering",
@@ -177,6 +202,7 @@
     "contact": "Contact",
     "privacy": "Privacy",
     "terms": "Terms",
+    "linkedin": "LinkedIn",
     "copyright": "Grovyn Inc."
   },
   "about": {
@@ -271,5 +297,217 @@
     "success_title": "Application Logged.",
     "success_message": "Our engineering leads are reviewing your profile. You'll hear from us within 48 hours for a technical deep-dive.",
     "return_btn": "Return to Careers"
+  },
+  "why_grovyn": {
+    "badge": "Why GROVYN?",
+    "title_line1": "Built for",
+    "title_highlight": "Businesses",
+    "title_line2": "That Take Technology",
+    "title_highlight2": "Seriously",
+    "items": [
+      { "title": "Fast Delivery, Without Compromise", "description": "MVPs typically ship in weeks, not months. Speed comes from experience, clear decisions, and strong fundamentals." },
+      { "title": "Transparent, Fixed Pricing", "description": "Every project is scoped upfront with clear deliverables and timelines. No surprise costs or hidden dependencies." },
+      { "title": "Production-Ready by Default", "description": "Every build includes testing, code reviews, documentation, and deployment readiness." },
+      { "title": "Full Ownership, No Lock-In", "description": "You own the code from day one. Standard technologies, no proprietary frameworks or vendor dependencies." },
+      { "title": "Global Delivery, Thoughtful Execution", "description": "We work across regions and time zones with strong communication and dependable execution." },
+      { "title": "90-Day Quality Guarantee", "description": "Post-launch support to fix issues, ensure stability, and fine-tune performance. We stand behind what we build." }
+    ]
+  },
+  "technology_stack": {
+    "title": "Built with Modern, Proven Technologies",
+    "badge": "OUR STACK",
+    "root_label": "Modern Technology Stack",
+    "categories": [
+      { "title": "Web Development", "items": ["React", "Next.js", "Node.js", "Express", "MongoDB", "PostgreSQL"] },
+      { "title": "Mobile Development", "items": ["React Native", "Flutter", "Expo", "Android", "iOS"] },
+      { "title": "Cloud & DevOps", "items": ["AWS", "Docker", "Kubernetes", "CI/CD", "Serverless", "Terraform"] },
+      { "title": "AI & Data", "items": ["Machine Learning", "NLP", "Computer Vision", "Python", "TensorFlow", "PyTorch"] },
+      { "title": "Blockchain & Web3", "items": ["Ethereum", "Solidity", "Web3.js", "NFTs", "DeFi"] }
+    ]
+  },
+  "ai_section": {
+    "title_line1": "Intelligence built into the system",
+    "title_highlight": "not layered on top.",
+    "para1": "Artificial intelligence at GROVYN is not a standalone offering. It is an integrated capability embedded into platforms where intelligence creates real operational value.",
+    "para2": "We design systems that incorporate automation, machine learning, and data-driven decision-making while remaining reliable, explainable, and maintainable over time."
+  },
+  "free_quote_cta": {
+    "badge": "Fast Response Guarantee",
+    "title_line1": "Get a Free Quote in",
+    "title_highlight": "24 Hours",
+    "subtitle": "Share your project requirements and receive a detailed technical proposal with fixed pricing within 24 hours. No obligations, just clarity.",
+    "benefit1": "Detailed technical proposal",
+    "benefit2": "Fixed-price quote",
+    "benefit3": "Week-by-week timeline",
+    "benefit4": "No obligations",
+    "cta": "Request Free Quote",
+    "hint": "Book a 20-minute discovery call • Receive proposal within 24 hours"
+  },
+  "privacy_page": {
+    "intro": "We respect your privacy and are committed to protecting your personal data. This policy explains how we collect, use, and safeguard your information when you use our website or services.",
+    "contact": "For any privacy-related questions, please contact us through the contact form or email provided on this website."
+  },
+  "terms_page": {
+    "intro": "By using our website and services, you agree to these terms and conditions. Please read them carefully. We reserve the right to update these terms at any time.",
+    "contact": "For questions about these terms, please contact us through the contact form or email provided on this website."
+  },
+  "services_detail": {
+    "web": {
+      "hero_badge": "Web Development",
+      "hero_title_line1": "Web applications built for",
+      "hero_title_highlight": "reliability, scale, and long-term growth.",
+      "hero_subtitle": "We design and engineer modern web platforms that support real business operations, complex workflows, and high-usage environments.",
+      "cta_primary": "Start a conversation",
+      "cta_secondary": "Explore use cases",
+      "tech_title": "Tech stack we work with",
+      "tech_items": ["React", "Next.js", "Angular", "Vue", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
+      "offer_section_title": "What we offer",
+      "offer_section_highlight": "under Web",
+      "offer_section_subtitle": "From business websites to complex e-commerce platforms — we build solutions that scale.",
+      "offer_cards": [
+        { "title": "Business Websites", "description": "Professional corporate sites that establish credibility and drive growth with clear, conversion-focused design.", "tags": ["Corporate branding", "Lead generation", "SEO optimized"] },
+        { "title": "E-commerce Platforms", "description": "Full-featured online stores with secure payments, inventory management, and seamless checkout experiences.", "tags": ["Payment gateway", "Inventory system", "Order tracking"] },
+        { "title": "Portfolio & Showcase", "description": "Stunning showcase sites for creatives, artists, photographers, and professionals to present their work.", "tags": ["Visual galleries", "Case studies", "Contact forms"] }
+      ],
+      "offerings_title": "What we deliver",
+      "offerings_intro": "Web platforms designed around real business needs.",
+      "offerings": [
+        { "title": "SPAs & modern frameworks", "desc": "Single-page applications with React, Angular, Next.js, and Vue. Performance and SEO focused." },
+        { "title": "Backend & APIs", "desc": "Scalable APIs, microservices, and serverless architectures. Clear system design." },
+        { "title": "Real-time systems", "desc": "Live data, WebSockets, and sync layers for collaborative and real-time experiences." }
+      ],
+      "features_title": "Core features we build",
+      "features": ["Secure auth & authorization", "Performance-first engineering", "Scalable backend foundations", "Clean, maintainable front-ends", "Reliable deployment & monitoring", "Offline support & caching"],
+      "advanced_title": "Advanced capabilities",
+      "advanced": ["Third-party SDK integrations", "Payment gateways & workflows", "Analytics & logging platforms", "CI/CD & infrastructure as code"],
+      "process_title": "How we work",
+      "process_steps": [
+        { "step": "01", "title": "Discovery & architecture", "desc": "Define scope, system design, and technical approach." },
+        { "step": "02", "title": "Sprint-based delivery", "desc": "Iterative builds with clear milestones and demos." },
+        { "step": "03", "title": "Launch & support", "desc": "Deployment, monitoring, and post-launch optimization." }
+      ],
+      "cta_title": "Let's design a web platform that grows with your business.",
+      "cta_button": "Talk to our team"
+    },
+    "mobile": {
+      "hero_badge": "Mobile Development",
+      "hero_title_line1": "Mobile apps built for",
+      "hero_title_highlight": "performance, reliability, and real-world usage.",
+      "hero_subtitle": "Native and cross-platform mobile applications that feel premium and perform flawlessly on iOS and Android.",
+      "cta_primary": "Start a conversation",
+      "cta_secondary": "Explore capabilities",
+      "tech_title": "Tech stack we work with",
+      "tech_items": ["React Native", "Flutter", "iOS (Swift)", "Android (Kotlin)", "TypeScript", "Firebase", "GraphQL"],
+      "offer_section_title": "What we offer",
+      "offer_section_highlight": "under Mobile",
+      "offer_section_subtitle": "From consumer apps to enterprise solutions — we build mobile experiences that perform.",
+      "offer_cards": [
+        { "title": "Consumer Apps", "description": "Engaging apps for end users with smooth UX, app store presence, and growth-focused features.", "tags": ["App store presence", "Push notifications", "In-app purchases"] },
+        { "title": "Enterprise Apps", "description": "Secure, scalable mobile solutions for teams with role-based access, offline sync, and compliance in mind.", "tags": ["Secure auth", "Offline sync", "Role-based access"] },
+        { "title": "Marketplace Apps", "description": "Multi-sided platforms connecting buyers and sellers with payments, reviews, and real-time updates.", "tags": ["Multi-vendor", "Payments", "Reviews & ratings"] }
+      ],
+      "offerings_title": "What we deliver",
+      "offerings": [
+        { "title": "Native iOS & Android", "desc": "Swift and Kotlin apps for maximum performance and platform fidelity." },
+        { "title": "Cross-platform (React Native, Flutter)", "desc": "Single codebase for iOS and Android. Shared logic, native UI." },
+        { "title": "Push, background & sync", "desc": "Push notifications, background processing, and offline-first data sync." }
+      ],
+      "features_title": "Core features we build",
+      "features": ["Native performance", "Offline-first & sync", "Push notifications", "Secure auth & biometrics", "App store deployment", "CI/CD & OTA updates"],
+      "advanced_title": "Advanced capabilities",
+      "advanced": ["Real-time messaging", "Payment SDKs", "Analytics & crash reporting", "Deep linking & universal links"],
+      "process_title": "How we work",
+      "process_steps": [
+        { "step": "01", "title": "Product & UX alignment", "desc": "User flows, platform guidelines, and technical feasibility." },
+        { "step": "02", "title": "Iterative development", "desc": "Sprint-based builds with device testing and feedback loops." },
+        { "step": "03", "title": "Store submission & support", "desc": "Release readiness, store compliance, and post-launch updates." }
+      ],
+      "cta_title": "Let's build a mobile experience that users love.",
+      "cta_button": "Talk to our team"
+    },
+    "backend": {
+      "hero_badge": "Backend & Cloud",
+      "hero_title_line1": "Backend and cloud systems built for",
+      "hero_title_highlight": "scale, security, and reliability.",
+      "hero_subtitle": "Microservices, APIs, and cloud-native infrastructure designed for high availability and long-term maintainability.",
+      "cta_primary": "Start a conversation",
+      "cta_secondary": "Explore capabilities",
+      "tech_title": "Tech stack we work with",
+      "tech_items": ["Node.js", "Python", "PostgreSQL", "MongoDB", "Redis", "AWS", "Google Cloud", "Docker", "Kubernetes"],
+      "offer_section_title": "What we offer",
+      "offer_section_highlight": "under Backend & Cloud",
+      "offer_section_subtitle": "From APIs to cloud infrastructure — we build systems that scale and stay reliable.",
+      "offer_cards": [
+        { "title": "API & Integrations", "description": "RESTful and GraphQL APIs, webhooks, and third-party integrations that power your product.", "tags": ["REST / GraphQL", "Webhooks", "Third-party sync"] },
+        { "title": "Cloud Infrastructure", "description": "Multi-cloud setup, auto-scaling, and disaster recovery so your systems stay up and efficient.", "tags": ["Multi-cloud", "Auto-scaling", "Disaster recovery"] },
+        { "title": "Data & Analytics", "description": "Pipelines, dashboards, and real-time reporting so you can make data-driven decisions.", "tags": ["Pipelines", "Dashboards", "Real-time reporting"] }
+      ],
+      "offerings_title": "What we deliver",
+      "offerings": [
+        { "title": "API & microservices", "desc": "RESTful and GraphQL APIs. Event-driven and service-oriented architecture." },
+        { "title": "Cloud infrastructure", "desc": "AWS, GCP, Azure. Serverless, containers, and infrastructure as code." },
+        { "title": "DevOps & reliability", "desc": "CI/CD, monitoring, alerting, and SRE practices for 24/7 reliability." }
+      ],
+      "features_title": "Core features we build",
+      "features": ["Scalable APIs", "Database design & optimization", "Caching & CDN", "Security & compliance", "Monitoring & observability", "Disaster recovery"],
+      "advanced_title": "Advanced capabilities",
+      "advanced": ["Event-driven architecture", "Multi-region deployment", "Cost optimization", "Legacy migration"],
+      "process_title": "How we work",
+      "process_steps": [
+        { "step": "01", "title": "Architecture & design", "desc": "System design, data models, and cloud strategy." },
+        { "step": "02", "title": "Build & automate", "desc": "Implementation, IaC, and pipeline setup." },
+        { "step": "03", "title": "Operate & iterate", "desc": "Deployment, monitoring, and continuous improvement." }
+      ],
+      "cta_title": "Let's design a backend that scales with your business.",
+      "cta_button": "Talk to our team"
+    },
+    "ai": {
+      "hero_badge": "AI & Gen AI",
+      "hero_title_line1": "AI solutions built into",
+      "hero_title_highlight": "your systems, not layered on top.",
+      "hero_subtitle": "Custom AI/ML integrations, RAG, and agentic workflows that create real operational value while staying reliable and maintainable.",
+      "cta_primary": "Start a conversation",
+      "cta_secondary": "Explore use cases",
+      "tech_title": "Tech we work with",
+      "tech_items": ["LLMs & embeddings", "RAG pipelines", "LangChain", "Python", "Vector DBs", "OpenAI", "Anthropic", "Custom ML"],
+      "offer_section_title": "What we offer",
+      "offer_section_highlight": "under AI & Gen AI",
+      "offer_section_subtitle": "From RAG to agentic workflows — we build intelligence that fits your systems.",
+      "offer_cards": [
+        { "title": "RAG & Semantic Search", "description": "Enterprise knowledge bases with semantic search, document ingestion, and grounded answers with citations.", "tags": ["Semantic search", "Document ingestion", "Citations"] },
+        { "title": "Agentic Workflows", "description": "Autonomous agents that plan, use tools, and automate multi-step tasks with guardrails.", "tags": ["Task automation", "Tool use", "Multi-step reasoning"] },
+        { "title": "Custom ML & Deployment", "description": "Fine-tuning, embeddings, and model deployment so your AI runs where and how you need it.", "tags": ["Fine-tuning", "Embeddings", "Model deployment"] }
+      ],
+      "offerings_title": "What we deliver",
+      "offerings": [
+        { "title": "RAG & knowledge systems", "desc": "Enterprise AI with your data. Retrieval-augmented generation and semantic search." },
+        { "title": "Agentic AI & workflows", "desc": "Autonomous agents, tool use, and workflow automation." },
+        { "title": "Custom ML & integrations", "desc": "Fine-tuning, embeddings, and integration with existing platforms." }
+      ],
+      "features_title": "Core capabilities",
+      "features": ["RAG pipelines", "Agentic workflows", "Secure data handling", "Explainability & guardrails", "API integrations", "Evaluation & monitoring"],
+      "advanced_title": "Advanced capabilities",
+      "advanced": ["Multi-modal AI", "Custom model fine-tuning", "Real-time inference", "Enterprise compliance"],
+      "process_title": "How we work",
+      "process_steps": [
+        { "step": "01", "title": "Use case & data", "desc": "Define value, data sources, and success metrics." },
+        { "step": "02", "title": "Prototype & integrate", "desc": "RAG/agent design, APIs, and safety checks." },
+        { "step": "03", "title": "Deploy & iterate", "desc": "Production deployment, monitoring, and continuous improvement." }
+      ],
+      "cta_title": "Let's build AI that works for your business.",
+      "cta_button": "Talk to our team"
+    }
+  },
+  "solutions_industries": {
+    "hero_badge": "Industries We Serve",
+    "hero_title_line1": "Domain-specific",
+    "hero_title_highlight": "engineering excellence.",
+    "hero_subtitle": "Tailored solutions for Healthcare, Fintech, E-commerce, and more. We bring deep domain understanding and production-grade engineering."
+  },
+  "projects": {
+    "title": "Selected Work",
+    "subtitle": "A selection of projects we've delivered for global teams.",
+    "view_project": "View project",
+    "detail_back": "Back to projects"
   }
 }

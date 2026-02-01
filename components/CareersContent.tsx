@@ -100,7 +100,7 @@ export default function CareersContent() {
               {t("badge")}
             </span>
           </div>
-          <h1 className="text-6xl md:text-[8rem] font-black text-white tracking-tighter leading-[0.85] mb-8">
+          <h1 className="text-4xl md:text-[4.4rem] font-black text-white tracking-tighter leading-[0.85] mb-8">
             {t("title_line1")} <br />
             <span className="text-[#10b981]">{t("title_highlight")}</span>
           </h1>
@@ -113,37 +113,37 @@ export default function CareersContent() {
         </div>
       </section>
 
-      <section className="py-40 bg-white">
+      <section className="py-24 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-24">
+          <div className="text-center mb-16">
             <div className="inline-block relative">
               <span className="text-[#10b981] font-black text-[10px] uppercase tracking-[0.6em] mb-4 block">
                 {t("culture_badge")}
               </span>
-              <h2 className="text-5xl md:text-7xl font-black text-[#111] tracking-tighter leading-none">
+              <h2 className="text-4xl md:text-6xl font-black text-[#111] tracking-tighter leading-none">
                 {t("culture_title")} <span className="text-[#10b981]">{t("culture_highlight")}</span>
               </h2>
               <div className="absolute -right-8 -top-8 animate-bounce hidden md:block">
-                <Sparkles className="text-[#10b981]" size={32} />
+                <Sparkles className="text-[#10b981]" size={28} />
               </div>
             </div>
-            <p className="mt-8 text-gray-500 text-lg font-medium max-w-2xl mx-auto leading-relaxed">
+            <p className="mt-6 text-gray-500 text-base font-medium max-w-2xl mx-auto leading-relaxed">
               {t("culture_subtitle")}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8 auto-rows-[minmax(320px,_auto)]">
-            <div className="md:col-span-7 group relative bg-[#f9f9f9] rounded-[2.5rem] p-10 lg:p-14 overflow-hidden border border-gray-100 transition-all duration-700 hover:shadow-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 lg:gap-6 auto-rows-[minmax(260px,_auto)]">
+            <div className="md:col-span-7 group relative bg-[#f9f9f9] rounded-2xl p-6 lg:p-8 overflow-hidden border border-gray-100 transition-all duration-700 hover:shadow-2xl">
               <div className="h-full flex flex-col justify-between relative z-10">
-                <div className="space-y-6">
-                  <div className="w-14 h-14 rounded-2xl bg-[#10b981] flex items-center justify-center text-black shadow-lg shadow-[#10b981]/20">
-                    <Map size={28} />
+                <div className="space-y-4">
+                  <div className="w-11 h-11 rounded-xl bg-[#10b981] flex items-center justify-center text-black shadow-lg shadow-[#10b981]/20">
+                    <Map size={22} />
                   </div>
                   <div>
                     <span className="text-[10px] font-black uppercase tracking-widest text-[#10b981]">
                       {t("remote_badge")}
                     </span>
-                    <h3 className="text-3xl font-black text-[#111] tracking-tighter mt-1">
+                    <h3 className="text-2xl font-black text-[#111] tracking-tighter mt-1">
                       {t("remote_title")}
                     </h3>
                   </div>
@@ -153,24 +153,24 @@ export default function CareersContent() {
                 </div>
               </div>
               <div className="absolute right-0 top-0 bottom-0 w-1/2 opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none">
-                <Map className="w-full h-full object-contain p-8" strokeWidth={1} />
+                <Map className="w-full h-full object-contain p-6" strokeWidth={1} />
               </div>
             </div>
 
-            <div className="md:col-span-5 group bg-black rounded-[2.5rem] p-10 flex flex-col justify-between relative overflow-hidden transition-all duration-700 border border-white/5">
+            <div className="md:col-span-5 group bg-black rounded-2xl p-6 lg:p-8 flex flex-col justify-between relative overflow-hidden transition-all duration-700 border border-white/5">
               <div className="absolute inset-0 bg-gradient-to-br from-[#10b981]/10 to-transparent" />
-              <div className="relative z-10 space-y-4">
-                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#10b981]">
-                  <Activity size={24} />
+              <div className="relative z-10 space-y-3">
+                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-[#10b981]">
+                  <Activity size={20} />
                 </div>
-                <h3 className="text-3xl font-black text-white tracking-tight">
+                <h3 className="text-2xl font-black text-white tracking-tight">
                   {t("rhythm_title")}
                 </h3>
                 <p className="text-gray-400 text-xs leading-relaxed font-medium">
                   {t("rhythm_desc")}
                 </p>
               </div>
-              <div className="h-20 flex items-end justify-between space-x-1 relative z-10">
+              <div className="h-14 flex items-end justify-between space-x-1 relative z-10">
                 {[30, 60, 45, 90, 60, 80, 50, 95, 40, 70].map((h, i) => (
                   <div
                     key={i}
@@ -181,81 +181,89 @@ export default function CareersContent() {
               </div>
             </div>
 
-            <div className="md:col-span-6 group bg-white border border-gray-100 rounded-[2.5rem] p-10 flex items-center justify-between hover:bg-gray-50 transition-all duration-500">
-              <div className="space-y-3">
-                <div className="inline-flex items-center space-x-2 text-[#10b981] text-[9px] font-black uppercase tracking-widest">
-                  <Code2 size={14} />
-                  <span>{t("agency_badge")}</span>
+            <div className="md:col-span-6 group border border-gray-100 hover:bg-black bg-[#21453c] rounded-2xl p-6 lg:p-8 flex items-center justify-between transition-all duration-500">
+              <div className="space-y-2">
+                <div className="inline-flex items-center space-x-2 group-hover:text-[#10b981] text-white text-[9px] font-black uppercase tracking-widest">
+                  <Code2 size={12} />
+                  <span className="group-hover:text-[#10b981]">{t("agency_badge")}</span>
                 </div>
-                <h4 className="text-3xl font-black text-[#111]">{t("agency_title")}</h4>
-                <p className="text-gray-400 text-sm font-medium max-w-xs">
+                <h4 className="text-2xl font-black group-hover:text-white text-white">{t("agency_title")}</h4>
+                <p className="text-white text-sm font-medium max-w-xs">
                   {t("agency_desc")}
                 </p>
               </div>
-              <div className="w-16 h-16 rounded-3xl bg-gray-50 flex items-center justify-center text-[#10b981] group-hover:bg-[#10b981] group-hover:text-white transition-all duration-500">
-                <MousePointer2 size={28} />
+              <div className="w-12 h-12 rounded-2xl bg-gray-50 flex items-center justify-center text-[#10b981] group-hover:bg-[#10b981] group-hover:text-white transition-all duration-500 shrink-0">
+                <MousePointer2 size={22} />
               </div>
             </div>
 
-            <div className="md:col-span-6 group bg-[#10b981] rounded-[2.5rem] p-10 flex items-center justify-between hover:bg-black transition-all duration-500 hover:scale-[0.99]">
-              <div className="space-y-3">
+            <div className="md:col-span-6 group border border-gray-100 rounded-2xl p-6 lg:p-8 flex items-center justify-between transition-all duration-500 hover:scale-[0.99]">
+              <div className="space-y-2">
                 <div className="inline-flex items-center space-x-2 text-black group-hover:text-[#10b981] text-[9px] font-black uppercase tracking-widest">
-                  <ShieldCheck size={14} />
+                  <ShieldCheck size={12} />
                   <span>{t("trust_badge")}</span>
                 </div>
-                <h4 className="text-3xl font-black text-black group-hover:text-white transition-colors">
+                <h4 className="text-2xl font-black text-black transition-colors">
                   {t("trust_title")}
                 </h4>
-                <p className="text-black/50 group-hover:text-white/40 text-sm font-medium max-w-xs transition-colors">
+                <p className="text-black/50 text-sm font-medium max-w-xs transition-colors">
                   {t("trust_desc")}
                 </p>
               </div>
-              <div className="w-16 h-16 rounded-3xl bg-black group-hover:bg-[#10b981] flex items-center justify-center text-[#10b981] group-hover:text-black transition-all duration-500">
-                <Users size={28} />
+              <div className="w-12 h-12 rounded-2xl bg-black group-hover:bg-[#10b981] flex items-center justify-center text-[#10b981] group-hover:text-black transition-all duration-500 shrink-0">
+                <Users size={22} />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-40 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-24 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-black text-[#111] tracking-tighter">
-              {t("openings_title")}
-            </h2>
-            <p className="text-gray-400 font-bold text-xs uppercase tracking-widest">
+      <section className="bg-white py-24 md:py-32">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center mb-14">
+            <p className="text-[#10b981] font-black text-[10px] uppercase tracking-[0.2em] mb-3">
               {t("openings_sub")}
             </p>
+            <h2 className="text-3xl md:text-4xl font-black text-[#111] tracking-tighter">
+              {t("openings_title")}
+            </h2>
           </div>
-          <div className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {openings.map((job, i) => (
               <div
                 key={i}
-                className="group bg-gray-50/50 hover:bg-black p-8 rounded-[2rem] flex flex-col md:flex-row justify-between items-center transition-all duration-500 cursor-pointer border border-transparent hover:border-[#10b981]/50"
+                role="button"
+                tabIndex={0}
+                onClick={() =>
+                  document.getElementById("apply-form")?.scrollIntoView({ behavior: "smooth" })
+                }
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    document.getElementById("apply-form")?.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+                className="group relative bg-white border border-gray-100 rounded-2xl p-5 lg:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 transition-all duration-300 hover:bg-black hover:border-[#10b981]/40 hover:shadow-xl cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10b981] focus-visible:ring-offset-2"
               >
-                <div className="space-y-1 mb-6 md:mb-0 text-center md:text-left">
-                  <h4 className="text-xl font-black text-[#111] group-hover:text-white transition-colors tracking-tight">
+                <div className="min-w-0 flex-1">
+                  <h3 className="text-lg font-black text-[#111] group-hover:text-white transition-colors tracking-tight leading-tight">
                     {job.title}
-                  </h4>
-                  <div className="flex items-center justify-center md:justify-start space-x-4 text-[10px] font-bold uppercase tracking-widest text-gray-400 group-hover:text-[#10b981] transition-colors">
+                  </h3>
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-0.5 mt-1.5 text-[10px] font-bold uppercase tracking-widest text-gray-400 group-hover:text-[#10b981] transition-colors">
                     <span>{job.team}</span>
-                    <span className="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-[#10b981]" />
+                    <span className="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-[#10b981] shrink-0" aria-hidden />
                     <span>{job.type}</span>
                   </div>
                 </div>
-                <button
-                  type="button"
-                  className="flex items-center space-x-3 text-[11px] font-black uppercase tracking-widest text-[#10b981] group-hover:text-white group-hover:underline underline-offset-4"
-                >
-                  <span>{t("apply")}</span>
-                  <ExternalLink size={14} />
-                </button>
+                <span className="inline-flex items-center justify-center gap-2 shrink-0 w-full sm:w-auto px-4 py-2.5 rounded-full text-[11px] font-black uppercase tracking-wider bg-[#10b981]/10 text-[#10b981] group-hover:bg-[#10b981] group-hover:text-black transition-all duration-300 border border-[#10b981]/20 group-hover:border-[#10b981] pointer-events-none">
+                  {t("apply")}
+                  <ExternalLink size={12} strokeWidth={2.5} />
+                </span>
               </div>
             ))}
           </div>
-          <div className="mt-20 text-center">
-            <p className="text-gray-400 text-sm font-medium">
+          <div className="mt-14 text-center">
+            <p className="text-gray-500 text-sm font-medium">
               {t("no_fit")}
             </p>
             <button
@@ -263,83 +271,87 @@ export default function CareersContent() {
               onClick={() =>
                 document.getElementById("apply-form")?.scrollIntoView({ behavior: "smooth" })
               }
-              className="mt-4 text-[#10b981] font-black text-xs uppercase tracking-[0.2em] hover:opacity-80 transition-opacity"
+              className="mt-3 inline-flex items-center gap-2 text-[#10b981] font-bold text-xs uppercase tracking-wider hover:underline underline-offset-4 transition-opacity hover:opacity-90"
             >
               {t("general_app")}
+              <ExternalLink size={12} />
             </button>
           </div>
         </div>
       </section>
 
-      <section id="apply-form" className="py-40 px-6 bg-[#fcfcfc]">
+      <section id="apply-form" className="py-24 md:py-32 px-6 bg-[#fafafa]">
         <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-20">
-            <div className="lg:w-1/3 space-y-8">
-              <div className="inline-flex items-center px-4 py-2 rounded-xl bg-black text-[#10b981] text-[10px] font-black uppercase tracking-widest">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+            <div className="lg:w-2/5 space-y-6">
+              <div className="inline-flex items-center px-3 py-1.5 rounded-lg bg-black text-[#10b981] text-[10px] font-black uppercase tracking-widest">
                 {t("form_badge")}
               </div>
-              <h2 className="text-4xl font-black text-[#111] tracking-tighter leading-none">
+              <h2 className="text-3xl md:text-4xl font-black text-[#111] tracking-tighter leading-tight">
                 {t("form_title")}
               </h2>
-              <p className="text-gray-400 text-sm font-medium leading-relaxed">
+              <p className="text-gray-500 text-sm font-medium leading-relaxed">
                 {t("form_subtitle")}
               </p>
-              <div className="pt-8 space-y-4">
-                <div className="flex items-center space-x-3 text-[11px] font-black uppercase tracking-widest text-gray-800">
-                  <div className="w-2 h-2 rounded-full bg-[#10b981]" />
-                  <span>{t("review_24h")}</span>
-                </div>
-                <div className="flex items-center space-x-3 text-[11px] font-black uppercase tracking-widest text-gray-800">
-                  <div className="w-2 h-2 rounded-full bg-[#10b981]" />
-                  <span>{t("direct_access")}</span>
-                </div>
-              </div>
+              <ul className="space-y-3 pt-4">
+                <li className="flex items-center gap-3 text-xs font-bold uppercase tracking-wider text-gray-700">
+                  <span className="w-2 h-2 rounded-full bg-[#10b981] shrink-0" aria-hidden />
+                  {t("review_24h")}
+                </li>
+                <li className="flex items-center gap-3 text-xs font-bold uppercase tracking-wider text-gray-700">
+                  <span className="w-2 h-2 rounded-full bg-[#10b981] shrink-0" aria-hidden />
+                  {t("direct_access")}
+                </li>
+              </ul>
             </div>
 
-            <div className="lg:w-2/3">
+            <div className="lg:w-3/5">
               <form
                 onSubmit={handleSubmit}
-                className="bg-white p-8 lg:p-14 rounded-[3.5rem] shadow-2xl border border-gray-100 space-y-10 relative overflow-hidden group"
+                className="bg-white p-6 lg:p-10 rounded-3xl shadow-lg border border-gray-100 space-y-6 relative overflow-hidden"
               >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#10b981]/5 rounded-full blur-3xl -mr-16 -mt-16" />
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="space-y-2">
-                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">
+                <div className="absolute top-0 right-0 w-40 h-40 bg-[#10b981]/5 rounded-full blur-3xl -mr-20 -mt-20" aria-hidden />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 relative">
+                  <div className="space-y-1.5">
+                    <label htmlFor="careers-fullname" className="text-[10px] font-black uppercase tracking-widest text-gray-400 block">
                       {t("identity")}
                     </label>
                     <input
+                      id="careers-fullname"
                       required
                       type="text"
                       placeholder={t("full_name_placeholder")}
-                      className="w-full bg-gray-50/50 border border-transparent rounded-2xl px-6 py-4 text-sm font-bold focus:outline-none focus:bg-white focus:border-[#10b981] transition-all"
+                      className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-sm font-medium text-[#111] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#10b981] focus:border-transparent transition-all"
                       onChange={(e) =>
                         setFormData({ ...formData, fullName: e.target.value })
                       }
                     />
                   </div>
-                  <div className="space-y-2">
-                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">
+                  <div className="space-y-1.5">
+                    <label htmlFor="careers-email" className="text-[10px] font-black uppercase tracking-widest text-gray-400 block">
                       {t("communication")}
                     </label>
                     <input
+                      id="careers-email"
                       required
                       type="email"
                       placeholder={t("email_placeholder")}
-                      className="w-full bg-gray-50/50 border border-transparent rounded-2xl px-6 py-4 text-sm font-bold focus:outline-none focus:bg-white focus:border-[#10b981] transition-all"
+                      className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-sm font-medium text-[#111] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#10b981] focus:border-transparent transition-all"
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
                       }
                     />
                   </div>
                 </div>
-                <div className="space-y-2">
-                  <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">
+                <div className="space-y-1.5 relative">
+                  <label htmlFor="careers-role" className="text-[10px] font-black uppercase tracking-widest text-gray-400 block">
                     {t("target_role")}
                   </label>
                   <div className="relative">
                     <select
+                      id="careers-role"
                       required
-                      className="w-full bg-gray-50/50 border border-transparent rounded-2xl px-6 py-4 text-sm font-bold focus:outline-none focus:bg-white focus:border-[#10b981] transition-all appearance-none cursor-pointer"
+                      className="w-full bg-gray-50 border border-gray-100 rounded-xl pl-4 pr-10 py-3 text-sm font-medium text-[#111] focus:outline-none focus:ring-2 focus:ring-[#10b981] focus:border-transparent appearance-none cursor-pointer transition-all"
                       onChange={(e) =>
                         setFormData({ ...formData, position: e.target.value })
                       }
@@ -352,33 +364,34 @@ export default function CareersContent() {
                       <option value="design">{t("option_design")}</option>
                     </select>
                     <ChevronDown
-                      className="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
-                      size={18}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none"
+                      size={16}
                     />
                   </div>
                 </div>
-                <div className="space-y-2">
-                  <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">
+                <div className="space-y-1.5 relative">
+                  <label htmlFor="careers-brief" className="text-[10px] font-black uppercase tracking-widest text-gray-400 block">
                     {t("technical_brief")}
                   </label>
                   <textarea
-                    rows={5}
+                    id="careers-brief"
+                    rows={4}
                     placeholder={t("technical_brief_placeholder")}
-                    className="w-full bg-gray-50/50 border border-transparent rounded-2xl px-6 py-4 text-sm font-bold focus:outline-none focus:border-[#10b981] transition-all resize-none"
+                    className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-sm font-medium text-[#111] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#10b981] focus:border-transparent resize-none transition-all"
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
                     }
                   />
                 </div>
-                <div className="space-y-4">
-                  <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">
+                <div className="space-y-2 relative">
+                  <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 block">
                     {t("resume_label")}
                   </label>
-                  <div className="relative border-2 border-dashed border-gray-100 rounded-[2.5rem] p-12 hover:border-[#10b981] hover:bg-[#10b981]/5 transition-all group/upload flex flex-col items-center justify-center space-y-4 cursor-pointer">
+                  <label className="flex flex-col items-center justify-center min-h-[140px] rounded-2xl border-2 border-dashed border-gray-200 bg-gray-50/80 hover:border-[#10b981] hover:bg-[#10b981]/5 focus-within:border-[#10b981] focus-within:ring-2 focus-within:ring-[#10b981]/20 transition-all cursor-pointer group/upload">
                     <input
                       type="file"
                       required
-                      className="absolute inset-0 opacity-0 cursor-pointer"
+                      className="sr-only"
                       accept=".pdf,.doc,.docx"
                       onChange={(e) =>
                         setFormData({
@@ -387,28 +400,25 @@ export default function CareersContent() {
                         })
                       }
                     />
-                    <div className="w-16 h-16 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover/upload:bg-[#10b981] group-hover/upload:text-white transition-all duration-500">
-                      <Upload size={24} />
+                    <div className="w-12 h-12 rounded-xl bg-white border border-gray-100 flex items-center justify-center text-gray-400 group-hover/upload:bg-[#10b981] group-hover/upload:text-white group-hover/upload:border-[#10b981] transition-colors duration-200 shadow-sm">
+                      <Upload size={20} strokeWidth={2} />
                     </div>
-                    <div className="text-center">
-                      <p className="text-sm font-black text-[#111]">
+                    <div className="mt-3 text-center px-4">
+                      <p className="text-sm font-bold text-[#111]">
                         {formData.resume ? formData.resume.name : t("resume_placeholder")}
                       </p>
-                      <p className="text-xs font-medium text-gray-400 mt-1">
+                      <p className="text-xs text-gray-500 mt-0.5">
                         {t("resume_hint")}
                       </p>
                     </div>
-                  </div>
+                  </label>
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-[#10b981] text-black py-5 rounded-2xl font-black text-xs uppercase tracking-[0.3em] flex items-center justify-center space-x-4 hover:bg-black hover:text-white transition-all transform hover:-translate-y-1 shadow-2xl shadow-[#10b981]/20 group/btn"
+                  className="w-full bg-[#10b981] text-black py-4 rounded-xl font-black text-xs uppercase tracking-wider flex items-center justify-center gap-3 hover:bg-black hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10b981] focus-visible:ring-offset-2 transition-all shadow-lg shadow-[#10b981]/25 hover:shadow-xl hover:shadow-black/10"
                 >
                   <span>{t("submit_btn")}</span>
-                  <Send
-                    size={18}
-                    className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform"
-                  />
+                  <Send size={18} strokeWidth={2.5} />
                 </button>
               </form>
             </div>

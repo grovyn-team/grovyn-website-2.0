@@ -183,7 +183,7 @@ export default function AboutContent() {
 
       <section className="py-40 px-6 lg:px-12 bg-white relative overflow-hidden">
         <div className="max-w-6xl mx-auto">
-          <div className="relative bg-[#080808] rounded-[4rem] p-12 lg:p-32 overflow-hidden shadow-[0_60px_100px_-20px_rgba(0,0,0,0.5)] border border-white/10 group">
+          <div className="relative bg-[#080808] rounded-[4rem] p-12 overflow-hidden shadow-[0_60px_100px_-20px_rgba(0,0,0,0.5)] border border-white/10 group">
             <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-[#10b981]/10 rounded-full blur-[160px] animate-pulse" />
             <div className="relative z-10 flex flex-col items-center text-center space-y-12">
               <div className="inline-flex items-center space-x-3 px-5 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-4 group-hover:border-[#10b981]/30 transition-colors">
@@ -192,7 +192,7 @@ export default function AboutContent() {
                   {t("cta_badge")}
                 </span>
               </div>
-              <h2 className="text-6xl md:text-[6.8rem] font-black text-white tracking-[-0.06em] leading-[0.9] drop-shadow-2xl">
+              <h2 className="text-3xl md:text-[3.8rem] font-black text-white tracking-[-0.06em] leading-[0.9] drop-shadow-2xl">
                 {t("cta_title")}
                 <br />
                 <span className="text-[#10b981]">{t("cta_highlight")}</span>
@@ -200,7 +200,7 @@ export default function AboutContent() {
               <p className="text-gray-400 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed opacity-80 pt-4">
                 {t("cta_subtitle")}
               </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full pt-4">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-2 w-full pt-4">
                 <Link
                   href={`/${locale}#contact`}
                   className="relative overflow-hidden bg-[#10b981] text-black px-12 py-5 rounded-full font-black text-sm uppercase tracking-widest flex items-center space-x-4 hover:scale-105 transition-all duration-500 shadow-[0_0_50px_rgba(16,185,129,0.3)]"
@@ -215,7 +215,7 @@ export default function AboutContent() {
                   {t("case_studies")}
                 </Link>
               </div>
-              <div className="pt-16 flex items-center space-x-12 opacity-20">
+              <div className="pt-6 flex items-center space-x-12 opacity-20">
                 {[Server, Lock, Globe].map((Icon, i) => (
                   <Icon key={i} size={24} className="text-[#10b981]" />
                 ))}

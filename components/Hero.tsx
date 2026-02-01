@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <div className="bg-white">
       
-      <section className="bg-black text-white pt-22 pb-20 px-6 lg:px-12 rounded-b-[4.5rem] relative overflow-hidden">
+      <section className="bg-black text-white pt-22 pb-20 px-6 lg:px-12 rounded-b-[3rem] relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_45%,_rgba(16,185,129,0.12)_0%,_transparent_60%)]" />
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20 relative z-10">
           <div className="lg:w-[55%] space-y-12">

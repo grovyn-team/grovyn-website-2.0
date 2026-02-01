@@ -64,6 +64,24 @@
   animation: float-fast 6s ease-in-out infinite;
 }
 
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spin-mid-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 30s linear infinite;
+}
+
+.animate-spin-mid-reverse {
+  animation: spin-mid-reverse 18s linear infinite;
+}
+
 .clip-path-hologram {
   clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
 }
