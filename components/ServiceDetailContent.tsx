@@ -22,6 +22,11 @@ import {
   Search,
   Bot,
   Cpu,
+  ChevronDown,
+  ExternalLink,
+  Cog,
+  Rocket,
+  Code,
 } from "lucide-react";
 
 type ServiceSlug = "web" | "mobile" | "backend" | "ai";
@@ -63,6 +68,24 @@ const OFFER_CARD_IMAGES: Record<ServiceSlug, string[]> = {
   ],
 };
 
+const WEBSITE_SERVICES_ICONS = [
+  <Briefcase key="b" size={24} />,
+  <ShoppingCart key="s" size={24} />,
+  <Palette key="p" size={24} />,
+  <Cog key="c" size={24} />,
+  <Rocket key="r" size={24} />,
+  <Code key="x" size={24} />,
+];
+
+const WEBSITE_SERVICES_IMAGES = [
+  "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800",
+  "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+  "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=800",
+  "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
+  "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800",
+  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+];
+
 export default function ServiceDetailContent({ slug }: { slug: ServiceSlug }) {
   const t = useTranslations(`services_detail.${slug}`);
   const locale = useLocale();
@@ -75,6 +98,228 @@ export default function ServiceDetailContent({ slug }: { slug: ServiceSlug }) {
   const advanced = t.raw("advanced") as string[];
   const processSteps = t.raw("process_steps") as { step: string; title: string; desc: string }[];
 
+  // Web service page — Figma-inspired layout (light, self-explanatory)
+  if (slug === "web") {
+    const expertiseCardsRaw = t.raw("expertise_cards") as { title: string; subtitle: string; bullets: string[] }[] | undefined;
+    const expertiseCards = expertiseCardsRaw?.length ? expertiseCardsRaw : offerCards.map((c) => ({ title: c.title, subtitle: c.description.slice(0, 50) + (c.description.length > 50 ? "…" : ""), bullets: c.tags }));
+    const websiteServicesCardsRaw = t.raw("website_services_cards") as { title: string; description: string; tags: string[] }[] | undefined;
+    const websiteServicesCards = websiteServicesCardsRaw?.length ? websiteServicesCardsRaw : [];
+    const metricsRaw = t.raw("metrics") as { value: string; label: string }[] | undefined;
+    const metrics = metricsRaw?.length ? metricsRaw : [{ value: "150%", label: "Increase in platform performance efficiency" }, { value: "2.4s", label: "Average page load under heavy traffic" }, { value: "$40M+", label: "Transaction volume supported" }];
+    const methodologySteps = processSteps;
+
+    return (
+      <div className="bg-[#fafafa] text-[#111]">
+        {/* Hero — light, headline + tagline + CTAs, abstract graphic right */}
+        <section className="pt-28 pb-24 px-6 lg:px-12 max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#10b981] leading-tight tracking-tighter mb-4">
+                {t("hero_title_line1")}{" "}
+                <span className="text-[#10b981]">{t("hero_title_highlight")}</span>
+              </h1>
+              <p className="text-xl font-bold text-[#111] mb-4">
+                {t("hero_subtitle_tagline")}
+              </p>
+              <p className="text-gray-600 text-lg leading-relaxed mb-10 max-w-xl">
+                {t("hero_subtitle")}
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href={`${base}#contact`}
+                  className="inline-flex items-center gap-2 bg-[#10b981] text-white px-8 py-4 rounded-lg font-black text-sm hover:bg-[#059669] transition-all shadow-lg"
+                >
+                  {t("cta_primary")}
+                  <ArrowUpRight size={18} />
+                </Link>
+                <Link
+                  href="#expertise"
+                  className="inline-flex items-center gap-2 bg-white border-2 border-gray-300 text-[#111] px-8 py-4 rounded-lg font-black text-sm hover:border-[#10b981] hover:bg-[#10b981]/5 transition-all"
+                >
+                  {t("cta_secondary")}
+                </Link>
+              </div>
+            </div>
+            <div className="hidden lg:block relative h-80 rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+              <Image
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200"
+                alt="Web development and engineering"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 0px, 50vw"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
+            </div>
+          </div>
+        </section>
+
+        {/* Website Development Services — 6 redesigned cards (image, icon, title, description, tags) */}
+        {websiteServicesCards.length > 0 && (
+          <section className="py-20 md:py-28 px-6 bg-[#fafafa]" aria-labelledby="website-services-heading">
+            <div className="max-w-6xl mx-auto text-center mb-14">
+              <h2 id="website-services-heading" className="text-3xl md:text-4xl font-black tracking-tight text-[#111] mb-2">
+                {t("website_services_heading")}{" "}
+                <span className="text-[#10b981]">{t("website_services_highlight")}</span>
+              </h2>
+              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                {t("website_services_subtitle")}
+              </p>
+            </div>
+            <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              {websiteServicesCards.map((card, i) => (
+                <article
+                  key={i}
+                  className="group relative flex flex-col rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-[#10b981]/40 transition-all duration-300"
+                >
+                  <div className="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+                    <Image
+                      src={WEBSITE_SERVICES_IMAGES[i]}
+                      alt=""
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                    <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white to-transparent pointer-events-none" />
+                  </div>
+                  <div className="relative z-10 -mt-8 px-6">
+                    <div className="w-14 h-14 rounded-2xl bg-[#10b981] flex items-center justify-center text-white shadow-lg border-4 border-white ring-2 ring-[#10b981]/20">
+                      {WEBSITE_SERVICES_ICONS[i]}
+                    </div>
+                  </div>
+                  <div className="relative flex flex-col flex-1 px-6 pb-6 pt-2">
+                    <h3 className="text-xl font-black text-[#111] tracking-tight mb-2">
+                      {card.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-1">
+                      {card.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {card.tags.map((tag, j) => (
+                        <span
+                          key={j}
+                          className="inline-block px-3 py-1.5 rounded-full text-xs font-semibold bg-[#10b981]/10 text-[#059669] border border-[#10b981]/20"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Dedicated Teams — two columns: copy + CTA | illustration */}
+        <section className="py-20 md:py-28 px-6 bg-white">
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-black text-[#10b981] tracking-tight mb-3">
+                {t("dedicated_heading")}
+              </h2>
+              <p className="text-xl font-bold text-[#111] mb-2">
+                {t("dedicated_subheading")}
+              </p>
+              <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                {t("dedicated_desc")}
+              </p>
+              <Link
+                href={`${base}/projects`}
+                className="inline-flex items-center gap-2 bg-[#10b981] text-white px-8 py-4 rounded-lg font-black text-sm hover:bg-[#059669] transition-all shadow-lg"
+              >
+                {t("dedicated_cta")}
+                <ChevronDown size={18} className="rotate-[-90deg]" />
+              </Link>
+            </div>
+            <div className="relative h-80 rounded-2xl overflow-hidden border border-gray-200 shadow-lg">
+              <Image
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200"
+                alt="Dedicated teams collaboration"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#fafafa]/80 via-transparent to-transparent pointer-events-none" />
+            </div>
+          </div>
+        </section>
+
+        {/* Metrics — 3 KPIs */}
+        <section className="py-16 md:py-24 px-6 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+              {metrics.map((m, i) => (
+                <div key={i} className="text-center md:text-left">
+                  <div className="text-4xl md:text-5xl font-black text-[#10b981] mb-2">
+                    {m.value}
+                  </div>
+                  <p className="text-gray-600 text-sm md:text-base font-medium">
+                    {m.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* The Methodology — 5-step vertical timeline */}
+        <section className="py-20 md:py-28 px-6 bg-[#fafafa]">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-black text-[#10b981] tracking-tight mb-3">
+              {t("methodology_heading")}
+            </h2>
+            <p className="text-xl font-bold text-[#111] mb-14">
+              {t("methodology_subheading")}
+            </p>
+            <div className="relative pl-2">
+              <div className="absolute left-6 top-5 bottom-5 w-0.5 bg-gray-200" style={{ transform: "translateX(-50%)" }} aria-hidden />
+              {methodologySteps.map((step, i) => (
+                <div
+                  key={i}
+                  className="relative flex gap-6 pb-12 last:pb-0 items-start"
+                >
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#f4f6f8] border-2 border-gray-200 flex items-center justify-center text-[#10b981] font-black text-sm z-10">
+                    {step.step}
+                  </div>
+                  <div className="flex-1 pt-1">
+                    <h3 className="text-lg font-black text-[#111] mb-2">
+                      {step.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {step.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="mt-12 text-gray-600 font-medium text-center">
+              {t("methodology_conclusion")}
+            </p>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-20 px-6 bg-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-black text-[#111] tracking-tight mb-8">
+              {t("cta_title")}
+            </h2>
+            <Link
+              href={`${base}#contact`}
+              className="inline-flex items-center gap-2 bg-[#10b981] text-white px-10 py-4 rounded-lg font-black text-sm hover:bg-[#059669] transition-all shadow-lg"
+            >
+              {t("cta_button")}
+              <ArrowUpRight size={18} />
+            </Link>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
+  // Default layout for mobile, backend, ai
   return (
     <div className="bg-white">
       {/* Hero — dark (like home page) */}

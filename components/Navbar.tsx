@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import { Phone, ChevronDown, Monitor, Smartphone, Database, Box, LayoutGrid, Users, Briefcase, Mail, Shield, FileCheck, X } from "lucide-react";
+import { Phone, ChevronDown, Monitor, Smartphone, Database, Box, LayoutGrid, Users, Briefcase, Mail, Shield, FileCheck, X, Cloud, Network, Server, Headphones, GitBranch, Building2, MessageCircle, Truck } from "lucide-react";
 import { locales, localeNames, type Locale } from "@/i18n/config";
 
 export default function Navbar() {
@@ -54,6 +54,38 @@ export default function Navbar() {
   const solutionItems = [
     { title: t("solutions_menu.industries"), desc: t("solutions_menu.industries_desc"), icon: <LayoutGrid size={20} />, href: `/${locale}/solutions/industries` },
   ];
+
+  const ti = (key: string) => t(`infrastructure_menu.${key}`);
+  const infrastructureColumns = [
+    {
+      title: ti("cloud_network_title"),
+      subtitle: ti("cloud_network_subtitle"),
+      items: [
+        { slug: "cloud", label: ti("cloud"), desc: ti("cloud_desc"), icon: <Cloud size={18} /> },
+        { slug: "network", label: ti("network"), desc: ti("network_desc"), icon: <Network size={18} /> },
+        { slug: "servers", label: ti("servers"), desc: ti("servers_desc"), icon: <Server size={18} /> },
+      ],
+    },
+    {
+      title: ti("security_support_title"),
+      subtitle: ti("security_support_subtitle"),
+      items: [
+        { slug: "security", label: ti("security"), desc: ti("security_desc"), icon: <Shield size={18} /> },
+        { slug: "support", label: ti("support"), desc: ti("support_desc"), icon: <Headphones size={18} /> },
+        { slug: "backup", label: ti("backup"), desc: ti("backup_desc"), icon: <Database size={18} /> },
+      ],
+    },
+    {
+      title: ti("operations_title"),
+      subtitle: ti("operations_subtitle"),
+      items: [
+        { slug: "devops", label: ti("devops"), desc: ti("devops_desc"), icon: <GitBranch size={18} /> },
+        { slug: "datacenter", label: ti("datacenter"), desc: ti("datacenter_desc"), icon: <Building2 size={18} /> },
+        { slug: "communication", label: ti("communication"), desc: ti("communication_desc"), icon: <MessageCircle size={18} /> },
+      ],
+    },
+  ];
+  const infrastructureFeatured = { slug: "migration", label: ti("migration"), desc: ti("migration_desc"), icon: <Truck size={20} /> };
 
   const resourceItems = [
     { title: t("about"), href: `/${locale}/about`, icon: <Users size={20} /> },
@@ -178,6 +210,86 @@ export default function Navbar() {
                       </div>
                     </Link>
                   ))}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="relative group flex items-center h-full"
+            onMouseEnter={() => setActiveMenu("infrastructure")}
+            onMouseLeave={() => setActiveMenu(null)}
+          >
+            <div className="relative h-full flex items-center">
+              <button
+                className={`flex items-center space-x-1.5 transition-colors py-2 ${linkClass(activeMenu === "infrastructure")}`}
+              >
+                <span>{t("infrastructure")}</span>
+                <ChevronDown
+                  size={14}
+                  className={`transition-transform duration-300 opacity-60 ${activeMenu === "infrastructure" ? "rotate-180 opacity-100" : ""}`}
+                />
+              </button>
+              <div
+                className={`absolute top-full left-1/2 -translate-x-1/2 pt-2 transition-all duration-300 transform origin-top ${
+                  activeMenu === "infrastructure"
+                    ? "opacity-100 visible translate-y-0 scale-100"
+                    : "opacity-0 invisible -translate-y-2 scale-95"
+                }`}
+              >
+                <div className="bg-white text-[#111] border border-gray-100 rounded-[2rem] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] p-8 w-[720px]">
+                  <div className="grid grid-cols-3 gap-8 mb-6">
+                    {infrastructureColumns.map((col, i) => (
+                      <div key={i} className="space-y-4">
+                        <div>
+                          <h4 className="font-black text-sm text-[#111]">{col.title}</h4>
+                          <p className="text-[11px] font-medium text-gray-400 mt-0.5">{col.subtitle}</p>
+                        </div>
+                        <ul className="space-y-2">
+                          {col.items.map((item) => (
+                            <li key={item.slug}>
+                              <Link
+                                href={`/${locale}/infrastructure/${item.slug}`}
+                                className="flex items-start gap-3 p-2 -m-2 rounded-xl hover:bg-gray-50/80 transition-all group/item"
+                                onClick={() => setActiveMenu(null)}
+                              >
+                                <span className="w-8 h-8 rounded-lg bg-[#10b981]/10 flex items-center justify-center text-[#10b981] shrink-0 group-hover/item:bg-[#10b981] group-hover/item:text-white transition-all">
+                                  {item.icon}
+                                </span>
+                                <div>
+                                  <span className="font-bold text-sm text-[#111] block">{item.label}</span>
+                                  <span className="text-[11px] font-medium text-gray-400">{item.desc}</span>
+                                </div>
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex items-center justify-between gap-4 pt-4 border-t border-gray-100">
+                    <Link
+                      href={`/${locale}/infrastructure/${infrastructureFeatured.slug}`}
+                      className="flex items-center gap-4 p-4 rounded-2xl bg-[#10b981]/10 border border-[#10b981]/20 hover:bg-[#10b981]/15 transition-all flex-1"
+                      onClick={() => setActiveMenu(null)}
+                    >
+                      <span className="w-12 h-12 rounded-xl bg-[#10b981] flex items-center justify-center text-white shrink-0">
+                        {infrastructureFeatured.icon}
+                      </span>
+                      <div className="text-left min-w-0">
+                        <span className="text-[10px] font-black uppercase tracking-wider text-[#10b981]">{ti("featured_tag")}</span>
+                        <p className="font-black text-sm text-[#111] mt-0.5">{infrastructureFeatured.label}</p>
+                        <p className="text-[11px] font-medium text-gray-500 mt-0.5 line-clamp-2">{infrastructureFeatured.desc}</p>
+                        <span className="inline-flex items-center gap-1 text-xs font-bold text-[#10b981] mt-2">{ti("featured_link")} →</span>
+                      </div>
+                    </Link>
+                    <Link
+                      href={`/${locale}#contact`}
+                      className="shrink-0 px-5 py-3 rounded-xl bg-[#10b981] text-black font-bold text-sm hover:bg-[#059669] transition-all"
+                      onClick={() => setActiveMenu(null)}
+                    >
+                      {ti("footer_cta")}
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -360,6 +472,23 @@ export default function Navbar() {
                         {item.icon}
                       </div>
                       {item.title}
+                    </Link>
+                  ))}
+                  <hr className="border-gray-100" />
+                  <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">
+                    {t("infrastructure")}
+                  </p>
+                  {infrastructureColumns.flatMap((col) => col.items).concat([{ slug: infrastructureFeatured.slug, label: infrastructureFeatured.label, desc: infrastructureFeatured.desc, icon: infrastructureFeatured.icon }]).map((item) => (
+                    <Link
+                      key={item.slug}
+                      href={`/${locale}/infrastructure/${item.slug}`}
+                      className="flex items-center gap-4 font-bold"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      <div className="w-12 h-12 rounded-xl bg-[#10b981]/10 flex items-center justify-center text-[#10b981]">
+                        {item.icon}
+                      </div>
+                      {item.label}
                     </Link>
                   ))}
                   <hr className="border-gray-100" />

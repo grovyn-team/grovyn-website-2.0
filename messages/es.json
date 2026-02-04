@@ -17,6 +17,7 @@
     "about": "Nosotros",
     "solutions": "Soluciones",
     "resources": "Recursos",
+    "infrastructure": "Infraestructura",
     "careers": "Carreras",
     "cta": "Reservar una llamada de descubrimiento",
     "privacy": "Privacidad",
@@ -27,6 +28,40 @@
     },
     "resources_menu": {
       "contact": "Contacto"
+    },
+    "infrastructure_menu": {
+      "cloud_network_title": "Cloud y red",
+      "cloud_network_subtitle": "Servicios de infraestructura principales",
+      "security_support_title": "Seguridad y soporte",
+      "security_support_subtitle": "Protección y mantenimiento",
+      "operations_title": "Operaciones",
+      "operations_subtitle": "Optimice sus sistemas",
+      "featured_tag": "Destacado",
+      "featured_title": "Migración a la nube",
+      "featured_desc": "Migre su infraestructura a la nube con nuestro equipo. Cero tiempo de inactividad garantizado.",
+      "featured_link": "Saber más",
+      "footer_text": "¿Necesita una evaluación de infraestructura?",
+      "footer_cta": "Obtener consulta gratuita",
+      "cloud": "Infraestructura cloud",
+      "cloud_desc": "Configuración AWS, Azure y GCP",
+      "network": "Infraestructura de red",
+      "network_desc": "Diseño LAN, WAN y redes",
+      "servers": "Infraestructura de servidores",
+      "servers_desc": "Servidores on-premise e híbridos",
+      "security": "Ciberseguridad",
+      "security_desc": "Auditorías y cumplimiento de seguridad",
+      "support": "Soporte y mesa de ayuda IT",
+      "support_desc": "Soporte técnico 24/7",
+      "backup": "Backup y DR",
+      "backup_desc": "Soluciones de recuperación ante desastres",
+      "devops": "DevOps y automatización",
+      "devops_desc": "CI/CD e infraestructura como código",
+      "datacenter": "Diseño de centro de datos",
+      "datacenter_desc": "Soluciones modernas de centro de datos",
+      "communication": "Comunicación unificada",
+      "communication_desc": "VoIP y herramientas de colaboración",
+      "migration": "Migración a la nube",
+      "migration_desc": "Migración a la nube sin tiempo de inactividad"
     },
     "menus": {
       "web": "Desarrollo web",
@@ -499,6 +534,132 @@
       ],
       "cta_title": "Construyamos IA que funcione para tu negocio.",
       "cta_button": "Hablar con el equipo"
+    }
+  },
+  "infrastructure_detail": {
+    "hero_badge": "Infraestructura",
+    "cta_primary": "Obtener evaluación",
+    "cta_secondary": "Explorar servicios",
+    "cta_title": "¿Necesita una evaluación de infraestructura?",
+    "cta_button": "Obtener consulta gratuita",
+    "features_title": "Lo que entregamos",
+    "process_title": "Cómo trabajamos",
+    "offerings_title": "Capacidades principales",
+    "services_offered_title": "Servicios ofrecidos",
+    "technologies_used_title": "Tecnologías utilizadas",
+    "featured_projects_title": "Proyectos destacados",
+    "target_clients_title": "Clientes objetivo",
+    "slugs": {
+      "cloud": {
+        "title": "Infraestructura cloud",
+        "subtitle": "Configuración, escalado y optimización en AWS, Azure y GCP. Diseñamos e implementamos soluciones cloud que escalan con su negocio.",
+        "features": ["Estrategia y migración multi-cloud", "Auto-escalado y optimización de costes", "Kubernetes y contenedores gestionados", "Arquitectura serverless", "Backup y recuperación ante desastres", "Monitorización y soporte 24/7"],
+        "process_steps": [
+          { "step": "01", "title": "Evaluación y diseño", "desc": "Evaluar infraestructura actual y definir arquitectura cloud objetivo y postura de seguridad." },
+          { "step": "02", "title": "Migrar y desplegar", "desc": "Migración sin tiempo de inactividad con despliegue por fases y validación." },
+          { "step": "03", "title": "Operar y optimizar", "desc": "Gestión continua, FinOps y optimización de rendimiento." }
+        ],
+        "offerings": ["AWS, Azure y GCP", "Terraform e IaC", "Kubernetes y Docker", "Pipelines CI/CD", "Optimización de costes"]
+      },
+      "network": {
+        "title": "Infraestructura de red",
+        "subtitle": "Diseño LAN, WAN y redes para rendimiento, seguridad y fiabilidad. Desde redes de oficina hasta conectividad cloud híbrida.",
+        "features": ["Diseño y arquitectura de red", "Conectividad SD-WAN e híbrida", "Firewall y segmentación", "Balanceo de carga y failover", "VPN y acceso zero-trust", "Monitorización de rendimiento"],
+        "process_steps": [
+          { "step": "01", "title": "Descubrimiento y diseño", "desc": "Mapear topología, tráfico y definir arquitectura de red objetivo." },
+          { "step": "02", "title": "Implementar y probar", "desc": "Desplegar con rollout por fases, redundancia y validación bajo carga." },
+          { "step": "03", "title": "Monitorizar y mantener", "desc": "Monitorización continua, planificación de capacidad y actualizaciones de seguridad." }
+        ],
+        "offerings": ["Cisco, Juniper, Aruba", "SD-WAN", "Zero-trust", "Auditorías de red"]
+      },
+      "servers": {
+        "title": "Infraestructura de servidores",
+        "subtitle": "Servidores on-premise e híbridos. Soluciones físicas, virtuales e hiperconvergentes adaptadas a su carga de trabajo.",
+        "features": ["Aprovisionamiento y ciclo de vida de servidores", "Virtualización (VMware, Hyper-V)", "Almacenamiento y diseño SAN", "Alta disponibilidad y clustering", "Parches y cumplimiento", "Planificación de capacidad"],
+        "process_steps": [
+          { "step": "01", "title": "Requisitos y diseño", "desc": "Análisis de cargas, dimensionamiento y arquitectura híbrida/on-premise." },
+          { "step": "02", "title": "Desplegar y configurar", "desc": "Instalar, configurar e integrar con sistemas existentes." },
+          { "step": "03", "title": "Soporte y evolución", "desc": "Soporte continuo, actualizaciones y desmantelamiento cuando proceda." }
+        ],
+        "offerings": ["VMware, Hyper-V", "SAN/NAS", "Integración backup", "Replicación DR"]
+      },
+      "security": {
+        "title": "Ciberseguridad",
+        "subtitle": "Auditorías de seguridad, cumplimiento y protección. Identificar riesgos, endurecer sistemas y cumplir requisitos regulatorios.",
+        "features": ["Evaluaciones y auditorías de seguridad", "Cumplimiento (SOC2, ISO, GDPR)", "Pruebas de penetración", "Gestión de identidad y acceso", "Detección y respuesta a amenazas", "Formación en seguridad"],
+        "process_steps": [
+          { "step": "01", "title": "Evaluar y delimitar", "desc": "Identificar activos, amenazas y requisitos de cumplimiento." },
+          { "step": "02", "title": "Remediar y endurecer", "desc": "Implementar controles, corregir brechas y documentar políticas." },
+          { "step": "03", "title": "Monitorizar e informar", "desc": "Monitorización continua, respuesta a incidentes e informes de cumplimiento." }
+        ],
+        "offerings": ["SOC2, ISO 27001", "Pen testing", "IAM", "SIEM"]
+      },
+      "support": {
+        "title": "Soporte y mesa de ayuda IT",
+        "subtitle": "Soporte técnico 24/7 y mesa de ayuda. Mantenga a sus equipos productivos con soporte por niveles y SLAs claros.",
+        "features": ["Mesa de ayuda y tickets 24/7", "Soporte niveles 1–3", "Soporte remoto y presencial", "Gestión de activos y licencias", "Base de conocimiento y autoservicio", "Informes SLA"],
+        "process_steps": [
+          { "step": "01", "title": "Incorporación y documentación", "desc": "Definir alcance, SLAs, rutas de escalado y base de conocimiento." },
+          { "step": "02", "title": "Prestar soporte", "desc": "Gestionar incidentes, solicitudes y cambios según los SLAs acordados." },
+          { "step": "03", "title": "Mejorar e informar", "desc": "Revisiones periódicas, análisis de tendencias y mejora continua." }
+        ],
+        "offerings": ["Helpdesk", "NOC", "On-site", "Servicios gestionados"]
+      },
+      "backup": {
+        "title": "Backup y DR",
+        "subtitle": "Recuperación ante desastres y continuidad de negocio. Proteja datos, defina RPO/RTO y asegure la recuperación cuando importe.",
+        "features": ["Estrategia y diseño de backup", "Backup on-prem y en la nube", "Replicación y failover", "Pruebas de recuperación", "Alineación RPO/RTO", "Runbooks documentados"],
+        "process_steps": [
+          { "step": "01", "title": "Evaluar y diseñar", "desc": "Definir RPO/RTO, clasificar datos y diseñar arquitectura de backup y DR." },
+          { "step": "02", "title": "Implementar y probar", "desc": "Desplegar backup y replicación; ejecutar pruebas de recuperación periódicas." },
+          { "step": "03", "title": "Mantener y evolucionar", "desc": "Monitorizar salud del backup, actualizar runbooks y adaptarse a cambios." }
+        ],
+        "offerings": ["Veeam, Commvault", "Backup en la nube", "Simulacros DR", "Runbooks"]
+      },
+      "devops": {
+        "title": "DevOps y automatización",
+        "subtitle": "CI/CD, infraestructura como código y automatización. Entregue más rápido y con más fiabilidad con herramientas y prácticas modernas.",
+        "features": ["Diseño de pipelines CI/CD", "Infraestructura como código (Terraform, Ansible)", "Orquestación de contenedores", "Gestión de releases y configuración", "Observabilidad y logging", "Prácticas SRE"],
+        "process_steps": [
+          { "step": "01", "title": "Evaluar y diseñar", "desc": "Mapear proceso de release actual y definir pipelines e IaC objetivo." },
+          { "step": "02", "title": "Construir y automatizar", "desc": "Implementar pipelines, IaC y automatización de despliegues." },
+          { "step": "03", "title": "Operar e iterar", "desc": "Monitorizar, ajustar y evolucionar pipelines y prácticas." }
+        ],
+        "offerings": ["GitLab, GitHub Actions", "Terraform", "Kubernetes", "Prometheus"]
+      },
+      "datacenter": {
+        "title": "Diseño de centro de datos",
+        "subtitle": "Soluciones y diseño modernos de centro de datos. Desde colocation hasta nube privada, le ayudamos a planificar y operar instalaciones eficientes.",
+        "features": ["Estrategia de centro de datos", "Energía, refrigeración y cableado", "Diseño de racks y distribución", "Monitorización y DCIM", "Planificación de capacidad", "Verde y eficiencia"],
+        "process_steps": [
+          { "step": "01", "title": "Estrategia y diseño", "desc": "Requisitos, capacidad y diseño físico y de red." },
+          { "step": "02", "title": "Construir o migrar", "desc": "Construcción, migración e integración con sistemas existentes." },
+          { "step": "03", "title": "Operar y optimizar", "desc": "Operaciones día dos, capacidad y mejoras de eficiencia." }
+        ],
+        "offerings": ["Diseño colo", "DCIM", "Energía/refrigeración", "Cumplimiento"]
+      },
+      "communication": {
+        "title": "Comunicación unificada",
+        "subtitle": "VoIP, herramientas de colaboración y comunicaciones unificadas. Voz, video, mensajería e integraciones en una sola plataforma.",
+        "features": ["VoIP y telefonía", "Videoconferencia", "Mensajería y colaboración en equipo", "Integración con CRM/ERP", "Centro de llamadas e IVR", "Acceso móvil y remoto"],
+        "process_steps": [
+          { "step": "01", "title": "Requisitos y diseño", "desc": "Necesidades de usuario, integraciones y arquitectura UC." },
+          { "step": "02", "title": "Desplegar e integrar", "desc": "Desplegar plataformas, migrar números y formar a usuarios." },
+          { "step": "03", "title": "Soporte y evolución", "desc": "Soporte continuo, actualizaciones y adopción." }
+        ],
+        "offerings": ["Microsoft Teams", "Zoom", "Cisco", "SIP trunking"]
+      },
+      "migration": {
+        "title": "Migración a la nube",
+        "subtitle": "Migración a la nube sin tiempo de inactividad. Planificamos, ejecutamos y validamos migraciones para que su negocio siga funcionando.",
+        "features": ["Evaluación y planificación de migración", "Rehost, refactor o reconstruir", "Migración y cutover por fases", "Cero tiempo de inactividad cuando sea posible", "Optimización post-migración", "Formación y entrega"],
+        "process_steps": [
+          { "step": "01", "title": "Descubrir y planificar", "desc": "Inventario de aplicaciones, dependencias y hoja de ruta de migración." },
+          { "step": "02", "title": "Migrar por fases", "desc": "Ejecutar oleadas de migración con validación y planes de rollback." },
+          { "step": "03", "title": "Optimizar y desmantelar", "desc": "Dimensionar, optimizar costes y desmantelar sistemas legacy." }
+        ],
+        "offerings": ["AWS Migration", "Azure Migrate", "VMware Cloud", "Migración de bases de datos"]
+      }
     }
   },
   "solutions_industries": {

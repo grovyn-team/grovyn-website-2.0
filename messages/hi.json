@@ -28,6 +28,41 @@
     "resources_menu": {
       "contact": "संपर्क"
     },
+    "infrastructure": "अवसंरचना",
+    "infrastructure_menu": {
+      "cloud_network_title": "क्लाउड और नेटवर्क",
+      "cloud_network_subtitle": "कोर इन्फ्रास्ट्रक्चर सेवाएं",
+      "security_support_title": "सुरक्षा और सहायता",
+      "security_support_subtitle": "सुरक्षा और रखरखाव",
+      "operations_title": "संचालन",
+      "operations_subtitle": "अपने सिस्टम ऑप्टिमाइज़ करें",
+      "featured_tag": "विशेष",
+      "featured_title": "क्लाउड माइग्रेशन",
+      "featured_desc": "हमारी टीम के साथ क्लाउड में माइग्रेट करें। शून्य डाउनटाइम गारंटी।",
+      "featured_link": "और जानें",
+      "footer_text": "इन्फ्रास्ट्रक्चर मूल्यांकन चाहिए?",
+      "footer_cta": "मुफ्त परामर्श लें",
+      "cloud": "क्लाउड इन्फ्रास्ट्रक्चर",
+      "cloud_desc": "AWS, Azure और GCP सेटअप",
+      "network": "नेटवर्क इन्फ्रास्ट्रक्चर",
+      "network_desc": "LAN, WAN और नेटवर्क डिज़ाइन",
+      "servers": "सर्वर इन्फ्रास्ट्रक्चर",
+      "servers_desc": "ऑन-प्रिमाइज़ और हाइब्रिड सर्वर",
+      "security": "साइबर सुरक्षा",
+      "security_desc": "सुरक्षा ऑडिट और अनुपालन",
+      "support": "IT हेल्पडेस्क और सपोर्ट",
+      "support_desc": "24/7 तकनीकी सहायता",
+      "backup": "बैकअप और DR",
+      "backup_desc": "डिज़ास्टर रिकवरी समाधान",
+      "devops": "DevOps और ऑटोमेशन",
+      "devops_desc": "CI/CD और इन्फ्रास्ट्रक्चर ऐज़ कोड",
+      "datacenter": "डेटा सेंटर डिज़ाइन",
+      "datacenter_desc": "आधुनिक डेटा सेंटर समाधान",
+      "communication": "यूनिफाइड कम्युनिकेशन",
+      "communication_desc": "VoIP और सहयोग टूल",
+      "migration": "क्लाउड माइग्रेशन",
+      "migration_desc": "शून्य डाउनटाइम क्लाउड माइग्रेशन"
+    },
     "menus": {
       "web": "वेब विकास",
       "web_desc": "React, Angular और Vue के साथ स्केलेबल वेब ऐप।",
@@ -45,9 +80,33 @@
     "highlight": "बनाते हैं",
     "subtitle": "कॉर्पोरेट साइट्स से ई-कॉमर्स और पोर्टफोलियो तक — हम ऐसे सॉल्यूशन डिलिवर करते हैं जो स्केल और परफॉर्म करते हैं।",
     "cards": [
-      { "title": "बिजनेस वेबसाइट्स", "description": "पेशेवर कॉर्पोरेट साइट्स जो क्रेडिबिलिटी बनाती हैं और क्लियर, कन्वर्जन-फोकस्ड डिज़ाइन से ग्रोथ ड्राइव करती हैं।", "tags": ["कॉर्पोरेट ब्रांडिंग", "लीड जनरेशन", "SEO ऑप्टिमाइज़्ड"] },
-      { "title": "ई-कॉमर्स प्लेटफॉर्म", "description": "सिक्योर पेमेंट्स, इन्वेंटरी मैनेजमेंट और सीमलेस चेकआउट के साथ फुल-फीचर्ड ऑनलाइन स्टोर।", "tags": ["पेमेंट गेटवे", "इन्वेंटरी", "ऑर्डर ट्रैकिंग"] },
-      { "title": "पोर्टफोलियो और शोकेस", "description": "क्रिएटिव्स, आर्टिस्ट्स और प्रोफेशनल्स के लिए स्टनिंग शोकेस साइट्स।", "tags": ["गैलरीज़", "केस स्टडीज़", "कॉन्टैक्ट फॉर्म्स"] }
+      {
+        "title": "बिजनेस वेबसाइट्स",
+        "description": "पेशेवर कॉर्पोरेट साइट्स जो क्रेडिबिलिटी बनाती हैं और क्लियर, कन्वर्जन-फोकस्ड डिज़ाइन से ग्रोथ ड्राइव करती हैं।",
+        "tags": [
+          "कॉर्पोरेट ब्रांडिंग",
+          "लीड जनरेशन",
+          "SEO ऑप्टिमाइज़्ड"
+        ]
+      },
+      {
+        "title": "ई-कॉमर्स प्लेटफॉर्म",
+        "description": "सिक्योर पेमेंट्स, इन्वेंटरी मैनेजमेंट और सीमलेस चेकआउट के साथ फुल-फीचर्ड ऑनलाइन स्टोर।",
+        "tags": [
+          "पेमेंट गेटवे",
+          "इन्वेंटरी",
+          "ऑर्डर ट्रैकिंग"
+        ]
+      },
+      {
+        "title": "पोर्टफोलियो और शोकेस",
+        "description": "क्रिएटिव्स, आर्टिस्ट्स और प्रोफेशनल्स के लिए स्टनिंग शोकेस साइट्स।",
+        "tags": [
+          "गैलरीज़",
+          "केस स्टडीज़",
+          "कॉन्टैक्ट फॉर्म्स"
+        ]
+      }
     ],
     "cta_link": "सभी वेब सर्विसेज़ एक्सप्लोर करें"
   },
@@ -106,18 +165,48 @@
     "title_line5": "बनाने के लिए",
     "subtext": "सटीकता, विश्वसनीयता और दीर्घकालिक दृष्टि के साथ इंजीनियर किए गए उत्पादन-तैयार सिस्टम।",
     "left": [
-      { "title": "कस्टम सॉफ्टवेयर और प्लेटफॉर्म इंजीनियरिंग", "description": "उच्च प्रदर्शन और आर्किटेक्चरल अखंडता के लिए अनुकूलित सॉफ्टवेयर समाधान।" },
-      { "title": "वेब और क्लाउड-नेटिव एप्लिकेशन विकास", "description": "उपलब्धता और स्केल के लिए आधुनिक, क्लाउड-नेटिव आर्किटेक्चर के साथ उच्च प्रदर्शन वेब ऐप।" },
-      { "title": "मोबाइल एप्लिकेशन विकास", "description": "नेटिव और क्रॉस-प्लेटफॉर्म मोबाइल अनुभव जो प्रीमियम और निर्दोष परफॉर्म करते हैं।" },
-      { "title": "प्रोडक्ट इंजीनियरिंग और सिस्टम इवोल्यूशन", "description": "MVP से एंटरप्राइज-स्केल इवोल्यूशन तक एंड-टू-एंड प्रोडक्ट लाइफसाइकल प्रबंधन।" },
-      { "title": "क्लाउड इन्फ्रास्ट्रक्चर, DevOps और रिलायबिलिटी इंजीनियरिंग", "description": "अपटाइम, सुरक्षा और ऑटोमेशन पर ध्यान के साथ मजबूत इन्फ्रास्ट्रक्चर प्रबंधन।" }
+      {
+        "title": "कस्टम सॉफ्टवेयर और प्लेटफॉर्म इंजीनियरिंग",
+        "description": "उच्च प्रदर्शन और आर्किटेक्चरल अखंडता के लिए अनुकूलित सॉफ्टवेयर समाधान।"
+      },
+      {
+        "title": "वेब और क्लाउड-नेटिव एप्लिकेशन विकास",
+        "description": "उपलब्धता और स्केल के लिए आधुनिक, क्लाउड-नेटिव आर्किटेक्चर के साथ उच्च प्रदर्शन वेब ऐप।"
+      },
+      {
+        "title": "मोबाइल एप्लिकेशन विकास",
+        "description": "नेटिव और क्रॉस-प्लेटफॉर्म मोबाइल अनुभव जो प्रीमियम और निर्दोष परफॉर्म करते हैं।"
+      },
+      {
+        "title": "प्रोडक्ट इंजीनियरिंग और सिस्टम इवोल्यूशन",
+        "description": "MVP से एंटरप्राइज-स्केल इवोल्यूशन तक एंड-टू-एंड प्रोडक्ट लाइफसाइकल प्रबंधन।"
+      },
+      {
+        "title": "क्लाउड इन्फ्रास्ट्रक्चर, DevOps और रिलायबिलिटी इंजीनियरिंग",
+        "description": "अपटाइम, सुरक्षा और ऑटोमेशन पर ध्यान के साथ मजबूत इन्फ्रास्ट्रक्चर प्रबंधन।"
+      }
     ],
     "right": [
-      { "title": "UI/UX डिज़ाइन और एक्सपीरियंस इंजीनियरिंग", "description": "यूजर-सेंट्रिक डिज़ाइन जो सौंदर्य और कार्यात्मक उत्कृष्टता को संतुलित करता है।" },
-      { "title": "क्वालिटी इंजीनियरिंग और टेस्टिंग", "description": "कड़े टेस्टिंग प्रोटोकॉल ताकि हर लाइन एंटरप्राइज मानकों को पूरा करे।" },
-      { "title": "सुरक्षा, अनुपालन और डेटा संरक्षण", "description": "आपकी IP और यूजर डेटा की रक्षा के लिए शीर्ष सुरक्षा उपाय।" },
-      { "title": "API, प्लेटफॉर्म और सिस्टम इंटीग्रेशन", "description": "आपके कोर प्रोडक्ट्स और तीसरे पक्ष के इकोसिस्टम के बीच सीमलेस कनेक्टिविटी।" },
-      { "title": "लॉन्ग-टर्म सपोर्ट और लाइफसाइकल मैनेजमेंट", "description": "आपके सिस्टम को पीक परफॉर्मेंस पर चलाने के लिए निरंतर मॉनिटरिंग और अपडेट।" }
+      {
+        "title": "UI/UX डिज़ाइन और एक्सपीरियंस इंजीनियरिंग",
+        "description": "यूजर-सेंट्रिक डिज़ाइन जो सौंदर्य और कार्यात्मक उत्कृष्टता को संतुलित करता है।"
+      },
+      {
+        "title": "क्वालिटी इंजीनियरिंग और टेस्टिंग",
+        "description": "कड़े टेस्टिंग प्रोटोकॉल ताकि हर लाइन एंटरप्राइज मानकों को पूरा करे।"
+      },
+      {
+        "title": "सुरक्षा, अनुपालन और डेटा संरक्षण",
+        "description": "आपकी IP और यूजर डेटा की रक्षा के लिए शीर्ष सुरक्षा उपाय।"
+      },
+      {
+        "title": "API, प्लेटफॉर्म और सिस्टम इंटीग्रेशन",
+        "description": "आपके कोर प्रोडक्ट्स और तीसरे पक्ष के इकोसिस्टम के बीच सीमलेस कनेक्टिविटी।"
+      },
+      {
+        "title": "लॉन्ग-टर्म सपोर्ट और लाइफसाइकल मैनेजमेंट",
+        "description": "आपके सिस्टम को पीक परफॉर्मेंस पर चलाने के लिए निरंतर मॉनिटरिंग और अपडेट।"
+      }
     ]
   },
   "metrics": {
@@ -264,10 +353,26 @@
     "openings_title": "वर्तमान पद",
     "openings_sub": "टेबल पर अपनी सीट ढूंढें",
     "openings": [
-      { "title": "सीनियर फुल-स्टैक इंजीनियर", "type": "रिमोट / फुल-टाइम", "team": "प्रोडक्ट इंजन" },
-      { "title": "लीड मोबाइल आर्किटेक्ट", "type": "रिमोट / फुल-टाइम", "team": "मोबाइल एक्सपीरियंस" },
-      { "title": "DevOps और SRE स्पेशलिस्ट", "type": "रिमोट / फुल-टाइम", "team": "प्लेटफॉर्म इन्फ्रास्ट्रक्चर" },
-      { "title": "प्रोडक्ट डिज़ाइनर", "type": "रिमोट / फुल-टाइम", "team": "क्रिएटिव सिस्टम्स" }
+      {
+        "title": "सीनियर फुल-स्टैक इंजीनियर",
+        "type": "रिमोट / फुल-टाइम",
+        "team": "प्रोडक्ट इंजन"
+      },
+      {
+        "title": "लीड मोबाइल आर्किटेक्ट",
+        "type": "रिमोट / फुल-टाइम",
+        "team": "मोबाइल एक्सपीरियंस"
+      },
+      {
+        "title": "DevOps और SRE स्पेशलिस्ट",
+        "type": "रिमोट / फुल-टाइम",
+        "team": "प्लेटफॉर्म इन्फ्रास्ट्रक्चर"
+      },
+      {
+        "title": "प्रोडक्ट डिज़ाइनर",
+        "type": "रिमोट / फुल-टाइम",
+        "team": "क्रिएटिव सिस्टम्स"
+      }
     ],
     "apply": "रोल के लिए आवेदन करें",
     "no_fit": "कोई फिट नहीं? हम असाधारण टैलेंट के लिए हमेशा खुले हैं।",
@@ -305,12 +410,30 @@
     "title_line2": "के लिए बनाया जो टेक्नोलॉजी को",
     "title_highlight2": "गंभीरता से लेते हैं",
     "items": [
-      { "title": "तेज़ डिलीवरी, बिना समझौता", "description": "MVP आमतौर पर हफ्तों में शिप होते हैं, महीनों में नहीं। स्पीड अनुभव, स्पष्ट निर्णय और मजबूत बुनियाद से आती है।" },
-      { "title": "पारदर्शी, फिक्स्ड प्राइसिंग", "description": "हर प्रोजेक्ट पहले से स्पष्ट डिलिवरेबल्स और टाइमलाइन के साथ स्कोप किया जाता है। कोई सरप्राइज कॉस्ट नहीं।" },
-      { "title": "डिफ़ॉल्ट प्रोडक्शन-रेडी", "description": "हर बिल्ड में टेस्टिंग, कोड रिव्यू, डॉक्यूमेंटेशन और डिप्लॉयमेंट रेडीनेस शामिल है।" },
-      { "title": "पूर्ण स्वामित्व, कोई लॉक-इन नहीं", "description": "दिन एक से आप कोड के मालिक हैं। स्टैंडर्ड टेक्नोलॉजी, कोई प्रोप्राइटरी फ्रेमवर्क नहीं।" },
-      { "title": "ग्लोबल डिलीवरी, सोच-समझकर एक्ज़ीक्यूशन", "description": "हम रीजन और टाइम जोन में काम करते हैं, मजबूत कम्युनिकेशन और भरोसेमंद एक्ज़ीक्यूशन के साथ।" },
-      { "title": "90-दिन क्वालिटी गारंटी", "description": "पोस्ट-लॉन्च सपोर्ट इश्यू फिक्स, स्टेबिलिटी और परफॉर्मेंस फाइन-ट्यून के लिए। हम जो बनाते हैं उसके पीछे खड़े हैं।" }
+      {
+        "title": "तेज़ डिलीवरी, बिना समझौता",
+        "description": "MVP आमतौर पर हफ्तों में शिप होते हैं, महीनों में नहीं। स्पीड अनुभव, स्पष्ट निर्णय और मजबूत बुनियाद से आती है।"
+      },
+      {
+        "title": "पारदर्शी, फिक्स्ड प्राइसिंग",
+        "description": "हर प्रोजेक्ट पहले से स्पष्ट डिलिवरेबल्स और टाइमलाइन के साथ स्कोप किया जाता है। कोई सरप्राइज कॉस्ट नहीं।"
+      },
+      {
+        "title": "डिफ़ॉल्ट प्रोडक्शन-रेडी",
+        "description": "हर बिल्ड में टेस्टिंग, कोड रिव्यू, डॉक्यूमेंटेशन और डिप्लॉयमेंट रेडीनेस शामिल है।"
+      },
+      {
+        "title": "पूर्ण स्वामित्व, कोई लॉक-इन नहीं",
+        "description": "दिन एक से आप कोड के मालिक हैं। स्टैंडर्ड टेक्नोलॉजी, कोई प्रोप्राइटरी फ्रेमवर्क नहीं।"
+      },
+      {
+        "title": "ग्लोबल डिलीवरी, सोच-समझकर एक्ज़ीक्यूशन",
+        "description": "हम रीजन और टाइम जोन में काम करते हैं, मजबूत कम्युनिकेशन और भरोसेमंद एक्ज़ीक्यूशन के साथ।"
+      },
+      {
+        "title": "90-दिन क्वालिटी गारंटी",
+        "description": "पोस्ट-लॉन्च सपोर्ट इश्यू फिक्स, स्टेबिलिटी और परफॉर्मेंस फाइन-ट्यून के लिए। हम जो बनाते हैं उसके पीछे खड़े हैं।"
+      }
     ]
   },
   "technology_stack": {
@@ -318,11 +441,59 @@
     "badge": "हमारा स्टैक",
     "root_label": "Modern Technology Stack",
     "categories": [
-      { "title": "Web Development", "items": ["React", "Next.js", "Node.js", "Express", "MongoDB", "PostgreSQL"] },
-      { "title": "Mobile Development", "items": ["React Native", "Flutter", "Expo", "Android", "iOS"] },
-      { "title": "Cloud और DevOps", "items": ["AWS", "Docker", "Kubernetes", "CI/CD", "Serverless", "Terraform"] },
-      { "title": "AI & Data", "items": ["Machine Learning", "NLP", "Computer Vision", "Python", "TensorFlow", "PyTorch"] },
-      { "title": "Blockchain & Web3", "items": ["Ethereum", "Solidity", "Web3.js", "NFTs", "DeFi"] }
+      {
+        "title": "Web Development",
+        "items": [
+          "React",
+          "Next.js",
+          "Node.js",
+          "Express",
+          "MongoDB",
+          "PostgreSQL"
+        ]
+      },
+      {
+        "title": "Mobile Development",
+        "items": [
+          "React Native",
+          "Flutter",
+          "Expo",
+          "Android",
+          "iOS"
+        ]
+      },
+      {
+        "title": "Cloud और DevOps",
+        "items": [
+          "AWS",
+          "Docker",
+          "Kubernetes",
+          "CI/CD",
+          "Serverless",
+          "Terraform"
+        ]
+      },
+      {
+        "title": "AI & Data",
+        "items": [
+          "Machine Learning",
+          "NLP",
+          "Computer Vision",
+          "Python",
+          "TensorFlow",
+          "PyTorch"
+        ]
+      },
+      {
+        "title": "Blockchain & Web3",
+        "items": [
+          "Ethereum",
+          "Solidity",
+          "Web3.js",
+          "NFTs",
+          "DeFi"
+        ]
+      }
     ]
   },
   "ai_section": {
@@ -360,23 +531,65 @@
       "cta_primary": "बातचीत शुरू करें",
       "cta_secondary": "उपयोग के मामले देखें",
       "tech_title": "टेक स्टैक",
-      "tech_items": ["React", "Next.js", "Angular", "Vue", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
+      "tech_items": [
+        "React",
+        "Next.js",
+        "Angular",
+        "Vue",
+        "TypeScript",
+        "Tailwind CSS",
+        "Node.js",
+        "PostgreSQL"
+      ],
       "offerings_title": "हम क्या डिलीवर करते हैं",
       "offerings_intro": "वास्तविक व्यवसाय जरूरतों के आसपास डिज़ाइन किए गए वेब प्लेटफॉर्म।",
       "offerings": [
-        { "title": "SPAs और आधुनिक फ्रेमवर्क", "desc": "React, Angular, Next.js और Vue के साथ सिंगल-पेज एप्लिकेशन।" },
-        { "title": "बैकएंड और API", "desc": "स्केलेबल API, माइक्रोसर्विसेज और सर्वरलेस आर्किटेक्चर।" },
-        { "title": "रीयल-टाइम सिस्टम", "desc": "लाइव डेटा, WebSockets और सिंक लेयर।" }
+        {
+          "title": "SPAs और आधुनिक फ्रेमवर्क",
+          "desc": "React, Angular, Next.js और Vue के साथ सिंगल-पेज एप्लिकेशन।"
+        },
+        {
+          "title": "बैकएंड और API",
+          "desc": "स्केलेबल API, माइक्रोसर्विसेज और सर्वरलेस आर्किटेक्चर।"
+        },
+        {
+          "title": "रीयल-टाइम सिस्टम",
+          "desc": "लाइव डेटा, WebSockets और सिंक लेयर।"
+        }
       ],
       "features_title": "कोर फीचर्स",
-      "features": ["सुरक्षित ऑथ और अथॉराइज़ेशन", "परफॉर्मेंस-फर्स्ट इंजीनियरिंग", "स्केलेबल बैकएंड", "मेंटेन करने योग्य फ्रंट-एंड", "डिप्लॉयमेंट और मॉनिटरिंग", "ऑफ़लाइन सपोर्ट और कैशिंग"],
+      "features": [
+        "सुरक्षित ऑथ और अथॉराइज़ेशन",
+        "परफॉर्मेंस-फर्स्ट इंजीनियरिंग",
+        "स्केलेबल बैकएंड",
+        "मेंटेन करने योग्य फ्रंट-एंड",
+        "डिप्लॉयमेंट और मॉनिटरिंग",
+        "ऑफ़लाइन सपोर्ट और कैशिंग"
+      ],
       "advanced_title": "उन्नत क्षमताएं",
-      "advanced": ["थर्ड-पार्टी SDK इंटीग्रेशन", "पेमेंट गेटवे", "एनालिटिक्स और लॉगिंग", "CI/CD और IaC"],
+      "advanced": [
+        "थर्ड-पार्टी SDK इंटीग्रेशन",
+        "पेमेंट गेटवे",
+        "एनालिटिक्स और लॉगिंग",
+        "CI/CD और IaC"
+      ],
       "process_title": "हम कैसे काम करते हैं",
       "process_steps": [
-        { "step": "01", "title": "डिस्कवरी और आर्किटेक्चर", "desc": "स्कोप, सिस्टम डिज़ाइन और तकनीकी दृष्टिकोण।" },
-        { "step": "02", "title": "स्प्रिंट-आधारित डिलीवरी", "desc": "माइलस्टोन और डेमो के साथ इटरेटिव बिल्ड।" },
-        { "step": "03", "title": "लॉन्च और सपोर्ट", "desc": "डिप्लॉयमेंट, मॉनिटरिंग और पोस्ट-लॉन्च ऑप्टिमाइज़ेशन।" }
+        {
+          "step": "01",
+          "title": "डिस्कवरी और आर्किटेक्चर",
+          "desc": "स्कोप, सिस्टम डिज़ाइन और तकनीकी दृष्टिकोण।"
+        },
+        {
+          "step": "02",
+          "title": "स्प्रिंट-आधारित डिलीवरी",
+          "desc": "माइलस्टोन और डेमो के साथ इटरेटिव बिल्ड।"
+        },
+        {
+          "step": "03",
+          "title": "लॉन्च और सपोर्ट",
+          "desc": "डिप्लॉयमेंट, मॉनिटरिंग और पोस्ट-लॉन्च ऑप्टिमाइज़ेशन।"
+        }
       ],
       "cta_title": "आइए एक वेब प्लेटफॉर्म डिज़ाइन करें जो आपके व्यवसाय के साथ बढ़े।",
       "cta_button": "टीम से बात करें"
@@ -389,23 +602,64 @@
       "cta_primary": "बातचीत शुरू करें",
       "cta_secondary": "क्षमताएं देखें",
       "tech_title": "टेक स्टैक",
-      "tech_items": ["React Native", "Flutter", "iOS (Swift)", "Android (Kotlin)", "TypeScript", "Firebase", "GraphQL"],
+      "tech_items": [
+        "React Native",
+        "Flutter",
+        "iOS (Swift)",
+        "Android (Kotlin)",
+        "TypeScript",
+        "Firebase",
+        "GraphQL"
+      ],
       "offerings_title": "हम क्या डिलीवर करते हैं",
       "offerings_intro": "स्केल और क्वालिटी के लिए मोबाइल अनुभव।",
       "offerings": [
-        { "title": "नेटिव iOS और Android", "desc": "Swift और Kotlin ऐप।" },
-        { "title": "क्रॉस-प्लेटफॉर्म (React Native, Flutter)", "desc": "iOS और Android के लिए एक कोडबेस।" },
-        { "title": "पुश, बैकग्राउंड और सिंक", "desc": "पुश नोटिफिकेशन और ऑफ़लाइन-फर्स्ट सिंक।" }
+        {
+          "title": "नेटिव iOS और Android",
+          "desc": "Swift और Kotlin ऐप।"
+        },
+        {
+          "title": "क्रॉस-प्लेटफॉर्म (React Native, Flutter)",
+          "desc": "iOS और Android के लिए एक कोडबेस।"
+        },
+        {
+          "title": "पुश, बैकग्राउंड और सिंक",
+          "desc": "पुश नोटिफिकेशन और ऑफ़लाइन-फर्स्ट सिंक।"
+        }
       ],
       "features_title": "कोर फीचर्स",
-      "features": ["नेटिव परफॉर्मेंस", "ऑफ़लाइन-फर्स्ट और सिंक", "पुश नोटिफिकेशन", "सुरक्षित ऑथ", "ऐप स्टोर डिप्लॉयमेंट", "CI/CD और OTA"],
+      "features": [
+        "नेटिव परफॉर्मेंस",
+        "ऑफ़लाइन-फर्स्ट और सिंक",
+        "पुश नोटिफिकेशन",
+        "सुरक्षित ऑथ",
+        "ऐप स्टोर डिप्लॉयमेंट",
+        "CI/CD और OTA"
+      ],
       "advanced_title": "उन्नत क्षमताएं",
-      "advanced": ["रीयल-टाइम मैसेजिंग", "पेमेंट SDK", "एनालिटिक्स और क्रैश रिपोर्ट", "डीप लिंकिंग"],
+      "advanced": [
+        "रीयल-टाइम मैसेजिंग",
+        "पेमेंट SDK",
+        "एनालिटिक्स और क्रैश रिपोर्ट",
+        "डीप लिंकिंग"
+      ],
       "process_title": "हम कैसे काम करते हैं",
       "process_steps": [
-        { "step": "01", "title": "प्रोडक्ट और UX अलाइनमेंट", "desc": "यूजर फ्लो और तकनीकी व्यवहार्यता।" },
-        { "step": "02", "title": "इटरेटिव डेवलपमेंट", "desc": "डिवाइस टेस्टिंग के साथ स्प्रिंट बिल्ड।" },
-        { "step": "03", "title": "स्टोर सबमिशन और सपोर्ट", "desc": "रिलीज़ रेडीनेस और स्टोर कंप्लायंस।" }
+        {
+          "step": "01",
+          "title": "प्रोडक्ट और UX अलाइनमेंट",
+          "desc": "यूजर फ्लो और तकनीकी व्यवहार्यता।"
+        },
+        {
+          "step": "02",
+          "title": "इटरेटिव डेवलपमेंट",
+          "desc": "डिवाइस टेस्टिंग के साथ स्प्रिंट बिल्ड।"
+        },
+        {
+          "step": "03",
+          "title": "स्टोर सबमिशन और सपोर्ट",
+          "desc": "रिलीज़ रेडीनेस और स्टोर कंप्लायंस।"
+        }
       ],
       "cta_title": "आइए एक मोबाइल अनुभव बनाएं जो यूजर्स को पसंद आए।",
       "cta_button": "टीम से बात करें"
@@ -418,23 +672,66 @@
       "cta_primary": "बातचीत शुरू करें",
       "cta_secondary": "क्षमताएं देखें",
       "tech_title": "टेक स्टैक",
-      "tech_items": ["Node.js", "Python", "PostgreSQL", "MongoDB", "Redis", "AWS", "Google Cloud", "Docker", "Kubernetes"],
+      "tech_items": [
+        "Node.js",
+        "Python",
+        "PostgreSQL",
+        "MongoDB",
+        "Redis",
+        "AWS",
+        "Google Cloud",
+        "Docker",
+        "Kubernetes"
+      ],
       "offerings_title": "हम क्या डिलीवर करते हैं",
       "offerings_intro": "प्रोडक्शन-ग्रेड सिस्टम के लिए क्लाउड और बैकएंड इंजीनियरिंग।",
       "offerings": [
-        { "title": "API और माइक्रोसर्विसेज", "desc": "REST और GraphQL API। इवेंट-ड्रिवन आर्किटेक्चर।" },
-        { "title": "क्लाउड इन्फ्रास्ट्रक्चर", "desc": "AWS, GCP, Azure। सर्वरलेस, कंटेनर और IaC।" },
-        { "title": "DevOps और विश्वसनीयता", "desc": "CI/CD, मॉनिटरिंग और SRE प्रथाएं।" }
+        {
+          "title": "API और माइक्रोसर्विसेज",
+          "desc": "REST और GraphQL API। इवेंट-ड्रिवन आर्किटेक्चर।"
+        },
+        {
+          "title": "क्लाउड इन्फ्रास्ट्रक्चर",
+          "desc": "AWS, GCP, Azure। सर्वरलेस, कंटेनर और IaC।"
+        },
+        {
+          "title": "DevOps और विश्वसनीयता",
+          "desc": "CI/CD, मॉनिटरिंग और SRE प्रथाएं।"
+        }
       ],
       "features_title": "कोर फीचर्स",
-      "features": ["स्केलेबल API", "डेटाबेस डिज़ाइन", "कैशिंग और CDN", "सुरक्षा और कंप्लायंस", "मॉनिटरिंग", "डिज़ास्टर रिकवरी"],
+      "features": [
+        "स्केलेबल API",
+        "डेटाबेस डिज़ाइन",
+        "कैशिंग और CDN",
+        "सुरक्षा और कंप्लायंस",
+        "मॉनिटरिंग",
+        "डिज़ास्टर रिकवरी"
+      ],
       "advanced_title": "उन्नत क्षमताएं",
-      "advanced": ["इवेंट-ड्रिवन आर्किटेक्चर", "मल्टी-रिजन डिप्लॉयमेंट", "कॉस्ट ऑप्टिमाइज़ेशन", "लेगेसी माइग्रेशन"],
+      "advanced": [
+        "इवेंट-ड्रिवन आर्किटेक्चर",
+        "मल्टी-रिजन डिप्लॉयमेंट",
+        "कॉस्ट ऑप्टिमाइज़ेशन",
+        "लेगेसी माइग्रेशन"
+      ],
       "process_title": "हम कैसे काम करते हैं",
       "process_steps": [
-        { "step": "01", "title": "आर्किटेक्चर और डिज़ाइन", "desc": "सिस्टम डिज़ाइन और क्लाउड स्ट्रैटेजी।" },
-        { "step": "02", "title": "बिल्ड और ऑटोमेट", "desc": "इम्प्लीमेंटेशन, IaC और पाइपलाइन।" },
-        { "step": "03", "title": "ऑपरेट और इटरेट", "desc": "डिप्लॉयमेंट, मॉनिटरिंग और निरंतर सुधार।" }
+        {
+          "step": "01",
+          "title": "आर्किटेक्चर और डिज़ाइन",
+          "desc": "सिस्टम डिज़ाइन और क्लाउड स्ट्रैटेजी।"
+        },
+        {
+          "step": "02",
+          "title": "बिल्ड और ऑटोमेट",
+          "desc": "इम्प्लीमेंटेशन, IaC और पाइपलाइन।"
+        },
+        {
+          "step": "03",
+          "title": "ऑपरेट और इटरेट",
+          "desc": "डिप्लॉयमेंट, मॉनिटरिंग और निरंतर सुधार।"
+        }
       ],
       "cta_title": "आइए एक बैकएंड डिज़ाइन करें जो आपके व्यवसाय के साथ स्केल करे।",
       "cta_button": "टीम से बात करें"
@@ -447,23 +744,65 @@
       "cta_primary": "बातचीत शुरू करें",
       "cta_secondary": "उपयोग के मामले देखें",
       "tech_title": "टेक",
-      "tech_items": ["LLM और एम्बेडिंग", "RAG पाइपलाइन", "LangChain", "Python", "वेक्टर DB", "OpenAI", "Anthropic", "कस्टम ML"],
+      "tech_items": [
+        "LLM और एम्बेडिंग",
+        "RAG पाइपलाइन",
+        "LangChain",
+        "Python",
+        "वेक्टर DB",
+        "OpenAI",
+        "Anthropic",
+        "कस्टम ML"
+      ],
       "offerings_title": "हम क्या डिलीवर करते हैं",
       "offerings_intro": "जहां वैल्यू बनती है वहां इंटेलिजेंस।",
       "offerings": [
-        { "title": "RAG और नॉलेज सिस्टम", "desc": "आपके डेटा के साथ एंटरप्राइज़ AI।" },
-        { "title": "एजेंटिक AI और वर्कफ़्लो", "desc": "स्वायत्त एजेंट और वर्कफ़्लो ऑटोमेशन।" },
-        { "title": "कस्टम ML और इंटीग्रेशन", "desc": "फाइन-ट्यूनिंग और मौजूदा प्लेटफॉर्म इंटीग्रेशन।" }
+        {
+          "title": "RAG और नॉलेज सिस्टम",
+          "desc": "आपके डेटा के साथ एंटरप्राइज़ AI।"
+        },
+        {
+          "title": "एजेंटिक AI और वर्कफ़्लो",
+          "desc": "स्वायत्त एजेंट और वर्कफ़्लो ऑटोमेशन।"
+        },
+        {
+          "title": "कस्टम ML और इंटीग्रेशन",
+          "desc": "फाइन-ट्यूनिंग और मौजूदा प्लेटफॉर्म इंटीग्रेशन।"
+        }
       ],
       "features_title": "कोर क्षमताएं",
-      "features": ["RAG पाइपलाइन", "एजेंटिक वर्कफ़्लो", "सुरक्षित डेटा हैंडलिंग", "एक्सप्लेनबिलिटी और गार्डरेल", "API इंटीग्रेशन", "मूल्यांकन और मॉनिटरिंग"],
+      "features": [
+        "RAG पाइपलाइन",
+        "एजेंटिक वर्कफ़्लो",
+        "सुरक्षित डेटा हैंडलिंग",
+        "एक्सप्लेनबिलिटी और गार्डरेल",
+        "API इंटीग्रेशन",
+        "मूल्यांकन और मॉनिटरिंग"
+      ],
       "advanced_title": "उन्नत क्षमताएं",
-      "advanced": ["मल्टी-मोडल AI", "मॉडल फाइन-ट्यूनिंग", "रीयल-टाइम इन्फरेंस", "एंटरप्राइज़ कंप्लायंस"],
+      "advanced": [
+        "मल्टी-मोडल AI",
+        "मॉडल फाइन-ट्यूनिंग",
+        "रीयल-टाइम इन्फरेंस",
+        "एंटरप्राइज़ कंप्लायंस"
+      ],
       "process_title": "हम कैसे काम करते हैं",
       "process_steps": [
-        { "step": "01", "title": "उपयोग केस और डेटा", "desc": "वैल्यू, डेटा स्रोत और सक्सेस मेट्रिक्स।" },
-        { "step": "02", "title": "प्रोटोटाइप और इंटीग्रेट", "desc": "RAG/एजेंट डिज़ाइन, API और सेफ्टी चेक।" },
-        { "step": "03", "title": "डिप्लॉय और इटरेट", "desc": "प्रोडक्शन डिप्लॉयमेंट और निरंतर सुधार।" }
+        {
+          "step": "01",
+          "title": "उपयोग केस और डेटा",
+          "desc": "वैल्यू, डेटा स्रोत और सक्सेस मेट्रिक्स।"
+        },
+        {
+          "step": "02",
+          "title": "प्रोटोटाइप और इंटीग्रेट",
+          "desc": "RAG/एजेंट डिज़ाइन, API और सेफ्टी चेक।"
+        },
+        {
+          "step": "03",
+          "title": "डिप्लॉय और इटरेट",
+          "desc": "प्रोडक्शन डिप्लॉयमेंट और निरंतर सुधार।"
+        }
       ],
       "cta_title": "आइए AI बनाएं जो आपके व्यवसाय के लिए काम करे।",
       "cta_button": "टीम से बात करें"
@@ -480,5 +819,372 @@
     "subtitle": "वैश्विक टीमों के लिए हमारे द्वारा डिलीवर किए गए प्रोजेक्ट का चयन।",
     "view_project": "प्रोजेक्ट देखें",
     "detail_back": "प्रोजेक्ट पर वापस"
+  },
+  "infrastructure_detail": {
+    "hero_badge": "Infrastructure",
+    "cta_primary": "Get assessment",
+    "cta_secondary": "Explore services",
+    "cta_title": "Need an infrastructure assessment?",
+    "cta_button": "Get a free consultation",
+    "features_title": "What we deliver",
+    "process_title": "How we work",
+    "offerings_title": "Core capabilities",
+    "services_offered_title": "Services Offered",
+    "technologies_used_title": "Technologies Used",
+    "featured_projects_title": "Featured Projects",
+    "target_clients_title": "Target Clients",
+    "slugs": {
+      "cloud": {
+        "title": "Cloud Infrastructure",
+        "subtitle": "AWS, Azure & GCP setup, scaling, and optimization. We design and deploy cloud-native solutions that scale with your business and reduce cost.",
+        "features": [
+          "Multi-cloud strategy & migration",
+          "Auto-scaling & cost optimization",
+          "Managed Kubernetes & containers",
+          "Serverless architecture",
+          "Disaster recovery & backup",
+          "24/7 monitoring & support"
+        ],
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Assessment & design",
+            "desc": "Evaluate current infrastructure and define target cloud architecture and security posture."
+          },
+          {
+            "step": "02",
+            "title": "Migrate & deploy",
+            "desc": "Zero-downtime migration with phased rollout, validation, and cutover."
+          },
+          {
+            "step": "03",
+            "title": "Operate & optimize",
+            "desc": "Ongoing management, FinOps, and continuous performance optimization."
+          }
+        ],
+        "offerings": [
+          "AWS, Azure & GCP",
+          "Terraform & IaC",
+          "Kubernetes & Docker",
+          "CI/CD pipelines",
+          "Cost optimization"
+        ]
+      },
+      "network": {
+        "title": "Network Infrastructure",
+        "subtitle": "LAN, WAN & network design for performance, security, and reliability. From office networks to hybrid cloud connectivity.",
+        "features": [
+          "Network design & architecture",
+          "SD-WAN & hybrid connectivity",
+          "Firewall & segmentation",
+          "Load balancing & failover",
+          "VPN & zero-trust access",
+          "Performance monitoring"
+        ],
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Discovery & design",
+            "desc": "Map current topology, traffic patterns, and define target network architecture."
+          },
+          {
+            "step": "02",
+            "title": "Implement & test",
+            "desc": "Deploy with staged rollout, redundancy, and validation under load."
+          },
+          {
+            "step": "03",
+            "title": "Monitor & maintain",
+            "desc": "Ongoing monitoring, capacity planning, and security updates."
+          }
+        ],
+        "offerings": [
+          "Cisco, Juniper, Aruba",
+          "SD-WAN",
+          "Zero-trust",
+          "Network audits"
+        ]
+      },
+      "servers": {
+        "title": "Server Infrastructure",
+        "subtitle": "On-premise & hybrid server infrastructure. Physical, virtual, and hyperconverged solutions tailored to your workload.",
+        "features": [
+          "Server provisioning & lifecycle",
+          "Virtualization (VMware, Hyper-V)",
+          "Storage & SAN design",
+          "High availability & clustering",
+          "Patching & compliance",
+          "Capacity planning"
+        ],
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Requirements & design",
+            "desc": "Workload analysis, sizing, and hybrid/on-prem architecture."
+          },
+          {
+            "step": "02",
+            "title": "Deploy & configure",
+            "desc": "Install, configure, and integrate with existing systems."
+          },
+          {
+            "step": "03",
+            "title": "Support & evolve",
+            "desc": "Ongoing support, upgrades, and decommissioning when needed."
+          }
+        ],
+        "offerings": [
+          "VMware, Hyper-V",
+          "SAN/NAS",
+          "Backup integration",
+          "DR replication"
+        ]
+      },
+      "security": {
+        "title": "Cybersecurity",
+        "subtitle": "Security audits, compliance, and protection. Identify risks, harden systems, and meet regulatory requirements.",
+        "features": [
+          "Security assessments & audits",
+          "Compliance (SOC2, ISO, GDPR)",
+          "Penetration testing",
+          "Identity & access management",
+          "Threat detection & response",
+          "Security training"
+        ],
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Assess & scope",
+            "desc": "Identify assets, threats, and compliance requirements."
+          },
+          {
+            "step": "02",
+            "title": "Remediate & harden",
+            "desc": "Implement controls, patch gaps, and document policies."
+          },
+          {
+            "step": "03",
+            "title": "Monitor & report",
+            "desc": "Ongoing monitoring, incident response, and compliance reporting."
+          }
+        ],
+        "offerings": [
+          "SOC2, ISO 27001",
+          "Pen testing",
+          "IAM",
+          "SIEM"
+        ]
+      },
+      "support": {
+        "title": "IT Helpdesk & Support",
+        "subtitle": "24/7 technical support and helpdesk. Keep your teams productive with responsive, tiered support and clear SLAs.",
+        "features": [
+          "24/7 helpdesk & ticketing",
+          "Tier 1–3 support",
+          "Remote & on-site support",
+          "Asset & license management",
+          "Knowledge base & self-service",
+          "SLA reporting"
+        ],
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Onboard & document",
+            "desc": "Define scope, SLAs, escalation paths, and knowledge base."
+          },
+          {
+            "step": "02",
+            "title": "Deliver support",
+            "desc": "Handle incidents, requests, and changes per agreed SLAs."
+          },
+          {
+            "step": "03",
+            "title": "Improve & report",
+            "desc": "Regular reviews, trend analysis, and continuous improvement."
+          }
+        ],
+        "offerings": [
+          "Helpdesk",
+          "NOC",
+          "On-site",
+          "Managed services"
+        ]
+      },
+      "backup": {
+        "title": "Backup & DR",
+        "subtitle": "Disaster recovery and business continuity. Protect data, define RPO/RTO, and ensure you can recover when it matters.",
+        "features": [
+          "Backup strategy & design",
+          "On-prem & cloud backup",
+          "Replication & failover",
+          "Recovery testing",
+          "RPO/RTO alignment",
+          "Documented runbooks"
+        ],
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Assess & design",
+            "desc": "Define RPO/RTO, classify data, and design backup and DR architecture."
+          },
+          {
+            "step": "02",
+            "title": "Implement & test",
+            "desc": "Deploy backup and replication; run regular recovery tests."
+          },
+          {
+            "step": "03",
+            "title": "Maintain & evolve",
+            "desc": "Monitor backup health, update runbooks, and adapt to changes."
+          }
+        ],
+        "offerings": [
+          "Veeam, Commvault",
+          "Cloud backup",
+          "DR drills",
+          "Runbooks"
+        ]
+      },
+      "devops": {
+        "title": "DevOps & Automation",
+        "subtitle": "CI/CD, infrastructure as code, and automation. Ship faster and more reliably with modern tooling and practices.",
+        "features": [
+          "CI/CD pipeline design",
+          "Infrastructure as Code (Terraform, Ansible)",
+          "Container orchestration",
+          "Release & config management",
+          "Observability & logging",
+          "SRE practices"
+        ],
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Assess & design",
+            "desc": "Map current release process and define target pipelines and IaC strategy."
+          },
+          {
+            "step": "02",
+            "title": "Build & automate",
+            "desc": "Implement pipelines, IaC, and deployment automation."
+          },
+          {
+            "step": "03",
+            "title": "Operate & iterate",
+            "desc": "Monitor, tune, and evolve pipelines and practices."
+          }
+        ],
+        "offerings": [
+          "GitLab, GitHub Actions",
+          "Terraform",
+          "Kubernetes",
+          "Prometheus"
+        ]
+      },
+      "datacenter": {
+        "title": "Data Center Design",
+        "subtitle": "Modern data center solutions and design. From colocation to private cloud, we help you plan and operate efficient, resilient facilities.",
+        "features": [
+          "Data center strategy",
+          "Power, cooling & cabling",
+          "Rack & layout design",
+          "Monitoring & DCIM",
+          "Capacity planning",
+          "Green & efficiency"
+        ],
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Strategy & design",
+            "desc": "Requirements, capacity, and physical/network design."
+          },
+          {
+            "step": "02",
+            "title": "Build or migrate",
+            "desc": "Build-out, migration, and integration with existing systems."
+          },
+          {
+            "step": "03",
+            "title": "Operate & optimize",
+            "desc": "Day-two operations, capacity, and efficiency improvements."
+          }
+        ],
+        "offerings": [
+          "Colo design",
+          "DCIM",
+          "Power/cooling",
+          "Compliance"
+        ]
+      },
+      "communication": {
+        "title": "Unified Communication",
+        "subtitle": "VoIP, collaboration tools, and unified comms. Voice, video, messaging, and integrations in one cohesive platform.",
+        "features": [
+          "VoIP & telephony",
+          "Video conferencing",
+          "Team messaging & collaboration",
+          "Integration with CRM/ERP",
+          "Call center & IVR",
+          "Mobile & remote access"
+        ],
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Requirements & design",
+            "desc": "User needs, integrations, and UC architecture."
+          },
+          {
+            "step": "02",
+            "title": "Deploy & integrate",
+            "desc": "Roll out platforms, migrate numbers, and train users."
+          },
+          {
+            "step": "03",
+            "title": "Support & evolve",
+            "desc": "Ongoing support, upgrades, and adoption."
+          }
+        ],
+        "offerings": [
+          "Microsoft Teams",
+          "Zoom",
+          "Cisco",
+          "SIP trunking"
+        ]
+      },
+      "migration": {
+        "title": "Cloud Migration",
+        "subtitle": "Seamless cloud migration with zero downtime. We plan, execute, and validate migrations so your business keeps running.",
+        "features": [
+          "Migration assessment & planning",
+          "Rehost, refactor, or rebuild",
+          "Phased migration & cutover",
+          "Zero-downtime where possible",
+          "Post-migration optimization",
+          "Training & handover"
+        ],
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Discover & plan",
+            "desc": "Application inventory, dependencies, and migration roadmap."
+          },
+          {
+            "step": "02",
+            "title": "Migrate in phases",
+            "desc": "Execute migration waves with validation and rollback plans."
+          },
+          {
+            "step": "03",
+            "title": "Optimize & decommission",
+            "desc": "Right-size, optimize cost, and decommission legacy."
+          }
+        ],
+        "offerings": [
+          "AWS Migration",
+          "Azure Migrate",
+          "VMware Cloud",
+          "Database migration"
+        ]
+      }
+    }
   }
 }

@@ -28,6 +28,41 @@
     "resources_menu": {
       "contact": "Kontakt"
     },
+    "infrastructure": "Infrastruktur",
+    "infrastructure_menu": {
+      "cloud_network_title": "Cloud & Netzwerk",
+      "cloud_network_subtitle": "Kern-Infrastruktur-Services",
+      "security_support_title": "Sicherheit & Support",
+      "security_support_subtitle": "Schutz und Wartung",
+      "operations_title": "Betrieb",
+      "operations_subtitle": "Optimieren Sie Ihre Systeme",
+      "featured_tag": "Empfohlen",
+      "featured_title": "Cloud-Migration",
+      "featured_desc": "Migrieren Sie Ihre Infrastruktur nahtlos in die Cloud. Null Ausfallzeit garantiert.",
+      "featured_link": "Mehr erfahren",
+      "footer_text": "Brauchen Sie eine Infrastruktur-Bewertung?",
+      "footer_cta": "Kostenlose Beratung",
+      "cloud": "Cloud-Infrastruktur",
+      "cloud_desc": "AWS-, Azure- und GCP-Setup",
+      "network": "Netzwerk-Infrastruktur",
+      "network_desc": "LAN-, WAN- und Netzwerkdesign",
+      "servers": "Server-Infrastruktur",
+      "servers_desc": "On-Premise- und Hybrid-Server",
+      "security": "Cybersicherheit",
+      "security_desc": "Sicherheitsaudits und Compliance",
+      "support": "IT-Helpdesk & Support",
+      "support_desc": "24/7 technischer Support",
+      "backup": "Backup & DR",
+      "backup_desc": "Disaster-Recovery-Lösungen",
+      "devops": "DevOps & Automatisierung",
+      "devops_desc": "CI/CD und Infrastructure as Code",
+      "datacenter": "Rechenzentrum-Design",
+      "datacenter_desc": "Moderne Rechenzentrumslösungen",
+      "communication": "Unified Communication",
+      "communication_desc": "VoIP und Kollaborationstools",
+      "migration": "Cloud-Migration",
+      "migration_desc": "Cloud-Migration ohne Ausfallzeit"
+    },
     "menus": {
       "web": "Web-Entwicklung",
       "web_desc": "Skalierbare Webanwendungen mit React, Angular und Vue.",
@@ -45,9 +80,33 @@
     "highlight": "bauen",
     "subtitle": "Von Unternehmensseiten über E-Commerce bis zu Portfolios — wir liefern skalierbare, leistungsstarke Lösungen.",
     "cards": [
-      { "title": "Unternehmens-Webseiten", "description": "Professionelle Corporate-Websites, die Glaubwürdigkeit schaffen und mit klarem, conversion-orientiertem Design Wachstum fördern.", "tags": ["Corporate Branding", "Lead-Generierung", "SEO-optimiert"] },
-      { "title": "E-Commerce-Plattformen", "description": "Voll ausgestattete Online-Shops mit sicheren Zahlungen, Bestandsverwaltung und nahtlosem Checkout.", "tags": ["Zahlungsgateway", "Inventar", "Bestellverfolgung"] },
-      { "title": "Portfolio & Showcase", "description": "Beeindruckende Präsentationsseiten für Kreative, Künstler und Profis zur Darstellung ihrer Arbeit.", "tags": ["Galerien", "Fallstudien", "Kontaktformulare"] }
+      {
+        "title": "Unternehmens-Webseiten",
+        "description": "Professionelle Corporate-Websites, die Glaubwürdigkeit schaffen und mit klarem, conversion-orientiertem Design Wachstum fördern.",
+        "tags": [
+          "Corporate Branding",
+          "Lead-Generierung",
+          "SEO-optimiert"
+        ]
+      },
+      {
+        "title": "E-Commerce-Plattformen",
+        "description": "Voll ausgestattete Online-Shops mit sicheren Zahlungen, Bestandsverwaltung und nahtlosem Checkout.",
+        "tags": [
+          "Zahlungsgateway",
+          "Inventar",
+          "Bestellverfolgung"
+        ]
+      },
+      {
+        "title": "Portfolio & Showcase",
+        "description": "Beeindruckende Präsentationsseiten für Kreative, Künstler und Profis zur Darstellung ihrer Arbeit.",
+        "tags": [
+          "Galerien",
+          "Fallstudien",
+          "Kontaktformulare"
+        ]
+      }
     ],
     "cta_link": "Alle Web-Services entdecken"
   },
@@ -106,18 +165,48 @@
     "title_line5": "zählt",
     "subtext": "Produktionsreife Systeme mit Präzision, Zuverlässigkeit und langfristiger Vision entwickelt.",
     "left": [
-      { "title": "Individuelle Software- und Plattform-Entwicklung", "description": "Maßgeschneiderte Softwarelösungen für hohe Performance und architektonische Integrität." },
-      { "title": "Web- und Cloud-Native-Anwendungsentwicklung", "description": "Hochperformante Webanwendungen mit modernen, cloud-nativen Architekturen für Verfügbarkeit und Skalierung." },
-      { "title": "Mobile Anwendungsentwicklung", "description": "Native und plattformübergreifende Mobile-Erlebnisse, premium und fehlerfrei." },
-      { "title": "Produkt-Engineering und Systemevolution", "description": "End-to-End-Produktlebenszyklus vom MVP bis zur Unternehmensskalierung." },
-      { "title": "Cloud-Infrastruktur, DevOps und Reliability Engineering", "description": "Robuste Infrastrukturverwaltung mit Fokus auf Uptime, Sicherheit und Automatisierung." }
+      {
+        "title": "Individuelle Software- und Plattform-Entwicklung",
+        "description": "Maßgeschneiderte Softwarelösungen für hohe Performance und architektonische Integrität."
+      },
+      {
+        "title": "Web- und Cloud-Native-Anwendungsentwicklung",
+        "description": "Hochperformante Webanwendungen mit modernen, cloud-nativen Architekturen für Verfügbarkeit und Skalierung."
+      },
+      {
+        "title": "Mobile Anwendungsentwicklung",
+        "description": "Native und plattformübergreifende Mobile-Erlebnisse, premium und fehlerfrei."
+      },
+      {
+        "title": "Produkt-Engineering und Systemevolution",
+        "description": "End-to-End-Produktlebenszyklus vom MVP bis zur Unternehmensskalierung."
+      },
+      {
+        "title": "Cloud-Infrastruktur, DevOps und Reliability Engineering",
+        "description": "Robuste Infrastrukturverwaltung mit Fokus auf Uptime, Sicherheit und Automatisierung."
+      }
     ],
     "right": [
-      { "title": "UI/UX-Design und Experience Engineering", "description": "Nutzerzentriertes Design, das ästhetische Qualität mit funktionaler Exzellenz verbindet." },
-      { "title": "Quality Engineering und Testing", "description": "Rigorose Testprotokolle, damit jede Codezeile Unternehmensstandards erfüllt." },
-      { "title": "Sicherheit, Compliance und Datenschutz", "description": "Top-Sicherheitsmaßnahmen zum Schutz Ihres geistigen Eigentums und Nutzerdaten." },
-      { "title": "API-, Plattform- und Systemintegrationen", "description": "Nahtlose Anbindung zwischen Ihren Kernprodukten und Drittanbieter-Ökosystemen." },
-      { "title": "Langzeitsupport und Lifecycle-Management", "description": "Kontinuierliche Überwachung und Updates für Spitzenperformance Ihrer Systeme." }
+      {
+        "title": "UI/UX-Design und Experience Engineering",
+        "description": "Nutzerzentriertes Design, das ästhetische Qualität mit funktionaler Exzellenz verbindet."
+      },
+      {
+        "title": "Quality Engineering und Testing",
+        "description": "Rigorose Testprotokolle, damit jede Codezeile Unternehmensstandards erfüllt."
+      },
+      {
+        "title": "Sicherheit, Compliance und Datenschutz",
+        "description": "Top-Sicherheitsmaßnahmen zum Schutz Ihres geistigen Eigentums und Nutzerdaten."
+      },
+      {
+        "title": "API-, Plattform- und Systemintegrationen",
+        "description": "Nahtlose Anbindung zwischen Ihren Kernprodukten und Drittanbieter-Ökosystemen."
+      },
+      {
+        "title": "Langzeitsupport und Lifecycle-Management",
+        "description": "Kontinuierliche Überwachung und Updates für Spitzenperformance Ihrer Systeme."
+      }
     ]
   },
   "metrics": {
@@ -264,10 +353,26 @@
     "openings_title": "Aktuelle Stellen",
     "openings_sub": "Finden Sie Ihren Platz am Tisch",
     "openings": [
-      { "title": "Senior Full-Stack Engineer", "type": "Remote / Vollzeit", "team": "Product Engine" },
-      { "title": "Lead Mobile Architect", "type": "Remote / Vollzeit", "team": "Mobile Experience" },
-      { "title": "DevOps & SRE Specialist", "type": "Remote / Vollzeit", "team": "Platform Infrastructure" },
-      { "title": "Product Designer", "type": "Remote / Vollzeit", "team": "Creative Systems" }
+      {
+        "title": "Senior Full-Stack Engineer",
+        "type": "Remote / Vollzeit",
+        "team": "Product Engine"
+      },
+      {
+        "title": "Lead Mobile Architect",
+        "type": "Remote / Vollzeit",
+        "team": "Mobile Experience"
+      },
+      {
+        "title": "DevOps & SRE Specialist",
+        "type": "Remote / Vollzeit",
+        "team": "Platform Infrastructure"
+      },
+      {
+        "title": "Product Designer",
+        "type": "Remote / Vollzeit",
+        "team": "Creative Systems"
+      }
     ],
     "apply": "Für Rolle bewerben",
     "no_fit": "Kein passender Fit? Wir sind immer offen für außergewöhnliches Talent.",
@@ -305,12 +410,30 @@
     "title_line2": "die Technologie",
     "title_highlight2": "ernst nehmen",
     "items": [
-      { "title": "Schnelle Lieferung, ohne Kompromisse", "description": "MVPs liefern wir in Wochen, nicht Monaten. Geschwindigkeit durch Erfahrung, klare Entscheidungen und starke Grundlagen." },
-      { "title": "Transparente Festpreise", "description": "Jedes Projekt wird im Voraus mit klaren Lieferungen und Zeitplänen definiert. Keine versteckten Kosten." },
-      { "title": "Produktionsreif von Anfang an", "description": "Jeder Build umfasst Tests, Code-Reviews, Dokumentation und Deployment-Bereitschaft." },
-      { "title": "Volle Eigentümerschaft, kein Lock-in", "description": "Sie besitzen den Code vom ersten Tag an. Standardtechnologien, keine Anbieterabhängigkeit." },
-      { "title": "Globale Lieferung, durchdachte Umsetzung", "description": "Wir arbeiten über Regionen und Zeitzonen hinweg mit klarer Kommunikation und zuverlässiger Ausführung." },
-      { "title": "90-Tage-Qualitätsgarantie", "description": "Support nach dem Launch zur Behebung von Problemen, Stabilität und Feintuning. Wir stehen zu dem, was wir bauen." }
+      {
+        "title": "Schnelle Lieferung, ohne Kompromisse",
+        "description": "MVPs liefern wir in Wochen, nicht Monaten. Geschwindigkeit durch Erfahrung, klare Entscheidungen und starke Grundlagen."
+      },
+      {
+        "title": "Transparente Festpreise",
+        "description": "Jedes Projekt wird im Voraus mit klaren Lieferungen und Zeitplänen definiert. Keine versteckten Kosten."
+      },
+      {
+        "title": "Produktionsreif von Anfang an",
+        "description": "Jeder Build umfasst Tests, Code-Reviews, Dokumentation und Deployment-Bereitschaft."
+      },
+      {
+        "title": "Volle Eigentümerschaft, kein Lock-in",
+        "description": "Sie besitzen den Code vom ersten Tag an. Standardtechnologien, keine Anbieterabhängigkeit."
+      },
+      {
+        "title": "Globale Lieferung, durchdachte Umsetzung",
+        "description": "Wir arbeiten über Regionen und Zeitzonen hinweg mit klarer Kommunikation und zuverlässiger Ausführung."
+      },
+      {
+        "title": "90-Tage-Qualitätsgarantie",
+        "description": "Support nach dem Launch zur Behebung von Problemen, Stabilität und Feintuning. Wir stehen zu dem, was wir bauen."
+      }
     ]
   },
   "technology_stack": {
@@ -318,11 +441,59 @@
     "badge": "Unser Stack",
     "root_label": "Modern Technology Stack",
     "categories": [
-      { "title": "Web Development", "items": ["React", "Next.js", "Node.js", "Express", "MongoDB", "PostgreSQL"] },
-      { "title": "Mobile Development", "items": ["React Native", "Flutter", "Expo", "Android", "iOS"] },
-      { "title": "Cloud & DevOps", "items": ["AWS", "Docker", "Kubernetes", "CI/CD", "Serverless", "Terraform"] },
-      { "title": "AI & Data", "items": ["Machine Learning", "NLP", "Computer Vision", "Python", "TensorFlow", "PyTorch"] },
-      { "title": "Blockchain & Web3", "items": ["Ethereum", "Solidity", "Web3.js", "NFTs", "DeFi"] }
+      {
+        "title": "Web Development",
+        "items": [
+          "React",
+          "Next.js",
+          "Node.js",
+          "Express",
+          "MongoDB",
+          "PostgreSQL"
+        ]
+      },
+      {
+        "title": "Mobile Development",
+        "items": [
+          "React Native",
+          "Flutter",
+          "Expo",
+          "Android",
+          "iOS"
+        ]
+      },
+      {
+        "title": "Cloud & DevOps",
+        "items": [
+          "AWS",
+          "Docker",
+          "Kubernetes",
+          "CI/CD",
+          "Serverless",
+          "Terraform"
+        ]
+      },
+      {
+        "title": "AI & Data",
+        "items": [
+          "Machine Learning",
+          "NLP",
+          "Computer Vision",
+          "Python",
+          "TensorFlow",
+          "PyTorch"
+        ]
+      },
+      {
+        "title": "Blockchain & Web3",
+        "items": [
+          "Ethereum",
+          "Solidity",
+          "Web3.js",
+          "NFTs",
+          "DeFi"
+        ]
+      }
     ]
   },
   "ai_section": {
@@ -360,23 +531,65 @@
       "cta_primary": "Gespräch starten",
       "cta_secondary": "Use Cases ansehen",
       "tech_title": "Tech-Stack",
-      "tech_items": ["React", "Next.js", "Angular", "Vue", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
+      "tech_items": [
+        "React",
+        "Next.js",
+        "Angular",
+        "Vue",
+        "TypeScript",
+        "Tailwind CSS",
+        "Node.js",
+        "PostgreSQL"
+      ],
       "offerings_title": "Was wir liefern",
       "offerings_intro": "Web-Plattformen für echte Geschäftsanforderungen.",
       "offerings": [
-        { "title": "SPAs und moderne Frameworks", "desc": "Single-Page-Apps mit React, Angular, Next.js und Vue. Performance und SEO." },
-        { "title": "Backend und APIs", "desc": "Skalierbare APIs, Microservices und Serverless-Architekturen." },
-        { "title": "Echtzeit-Systeme", "desc": "Live-Daten, WebSockets und Sync-Layer." }
+        {
+          "title": "SPAs und moderne Frameworks",
+          "desc": "Single-Page-Apps mit React, Angular, Next.js und Vue. Performance und SEO."
+        },
+        {
+          "title": "Backend und APIs",
+          "desc": "Skalierbare APIs, Microservices und Serverless-Architekturen."
+        },
+        {
+          "title": "Echtzeit-Systeme",
+          "desc": "Live-Daten, WebSockets und Sync-Layer."
+        }
       ],
       "features_title": "Kernfunktionen",
-      "features": ["Sichere Auth und Autorisierung", "Performance-first Engineering", "Skalierbare Backends", "Wartbare Front-ends", "Deployment und Monitoring", "Offline und Cache"],
+      "features": [
+        "Sichere Auth und Autorisierung",
+        "Performance-first Engineering",
+        "Skalierbare Backends",
+        "Wartbare Front-ends",
+        "Deployment und Monitoring",
+        "Offline und Cache"
+      ],
       "advanced_title": "Erweiterte Fähigkeiten",
-      "advanced": ["SDK-Integrationen", "Zahlungsgateways", "Analytics und Logging", "CI/CD und IaC"],
+      "advanced": [
+        "SDK-Integrationen",
+        "Zahlungsgateways",
+        "Analytics und Logging",
+        "CI/CD und IaC"
+      ],
       "process_title": "So arbeiten wir",
       "process_steps": [
-        { "step": "01", "title": "Discovery und Architektur", "desc": "Umfang, Systemdesign und technischer Ansatz." },
-        { "step": "02", "title": "Sprint-basierte Lieferung", "desc": "Iterative Entwicklung mit Meilensteinen und Demos." },
-        { "step": "03", "title": "Launch und Support", "desc": "Deployment, Monitoring und Post-Launch-Optimierung." }
+        {
+          "step": "01",
+          "title": "Discovery und Architektur",
+          "desc": "Umfang, Systemdesign und technischer Ansatz."
+        },
+        {
+          "step": "02",
+          "title": "Sprint-basierte Lieferung",
+          "desc": "Iterative Entwicklung mit Meilensteinen und Demos."
+        },
+        {
+          "step": "03",
+          "title": "Launch und Support",
+          "desc": "Deployment, Monitoring und Post-Launch-Optimierung."
+        }
       ],
       "cta_title": "Lassen Sie uns eine Web-Plattform gestalten, die mit Ihrem Business wächst.",
       "cta_button": "Team kontaktieren"
@@ -389,23 +602,64 @@
       "cta_primary": "Gespräch starten",
       "cta_secondary": "Fähigkeiten ansehen",
       "tech_title": "Tech-Stack",
-      "tech_items": ["React Native", "Flutter", "iOS (Swift)", "Android (Kotlin)", "TypeScript", "Firebase", "GraphQL"],
+      "tech_items": [
+        "React Native",
+        "Flutter",
+        "iOS (Swift)",
+        "Android (Kotlin)",
+        "TypeScript",
+        "Firebase",
+        "GraphQL"
+      ],
       "offerings_title": "Was wir liefern",
       "offerings_intro": "Mobile Erlebnisse für Skalierung und Qualität.",
       "offerings": [
-        { "title": "Native iOS und Android", "desc": "Swift- und Kotlin-Apps für maximale Performance." },
-        { "title": "Cross-platform (React Native, Flutter)", "desc": "Eine Codebasis für iOS und Android." },
-        { "title": "Push, Background und Sync", "desc": "Push-Benachrichtigungen und Offline-first-Sync." }
+        {
+          "title": "Native iOS und Android",
+          "desc": "Swift- und Kotlin-Apps für maximale Performance."
+        },
+        {
+          "title": "Cross-platform (React Native, Flutter)",
+          "desc": "Eine Codebasis für iOS und Android."
+        },
+        {
+          "title": "Push, Background und Sync",
+          "desc": "Push-Benachrichtigungen und Offline-first-Sync."
+        }
       ],
       "features_title": "Kernfunktionen",
-      "features": ["Native Performance", "Offline-first und Sync", "Push-Benachrichtigungen", "Sichere Auth", "Store-Deployment", "CI/CD und OTA"],
+      "features": [
+        "Native Performance",
+        "Offline-first und Sync",
+        "Push-Benachrichtigungen",
+        "Sichere Auth",
+        "Store-Deployment",
+        "CI/CD und OTA"
+      ],
       "advanced_title": "Erweiterte Fähigkeiten",
-      "advanced": ["Echtzeit-Messaging", "Zahlungs-SDKs", "Analytics und Crash-Reports", "Deep Linking"],
+      "advanced": [
+        "Echtzeit-Messaging",
+        "Zahlungs-SDKs",
+        "Analytics und Crash-Reports",
+        "Deep Linking"
+      ],
       "process_title": "So arbeiten wir",
       "process_steps": [
-        { "step": "01", "title": "Produkt- und UX-Ausrichtung", "desc": "User Flows und technische Machbarkeit." },
-        { "step": "02", "title": "Iterative Entwicklung", "desc": "Sprint-basierte Entwicklung mit Gerätetests." },
-        { "step": "03", "title": "Store-Einreichung und Support", "desc": "Release-Readiness und Store-Compliance." }
+        {
+          "step": "01",
+          "title": "Produkt- und UX-Ausrichtung",
+          "desc": "User Flows und technische Machbarkeit."
+        },
+        {
+          "step": "02",
+          "title": "Iterative Entwicklung",
+          "desc": "Sprint-basierte Entwicklung mit Gerätetests."
+        },
+        {
+          "step": "03",
+          "title": "Store-Einreichung und Support",
+          "desc": "Release-Readiness und Store-Compliance."
+        }
       ],
       "cta_title": "Lassen Sie uns ein Mobile-Erlebnis bauen, das Nutzer lieben.",
       "cta_button": "Team kontaktieren"
@@ -418,23 +672,66 @@
       "cta_primary": "Gespräch starten",
       "cta_secondary": "Fähigkeiten ansehen",
       "tech_title": "Tech-Stack",
-      "tech_items": ["Node.js", "Python", "PostgreSQL", "MongoDB", "Redis", "AWS", "Google Cloud", "Docker", "Kubernetes"],
+      "tech_items": [
+        "Node.js",
+        "Python",
+        "PostgreSQL",
+        "MongoDB",
+        "Redis",
+        "AWS",
+        "Google Cloud",
+        "Docker",
+        "Kubernetes"
+      ],
       "offerings_title": "Was wir liefern",
       "offerings_intro": "Cloud- und Backend-Engineering für Produktionssysteme.",
       "offerings": [
-        { "title": "API und Microservices", "desc": "REST- und GraphQL-APIs. Event-getriebene Architektur." },
-        { "title": "Cloud-Infrastruktur", "desc": "AWS, GCP, Azure. Serverless, Container und IaC." },
-        { "title": "DevOps und Zuverlässigkeit", "desc": "CI/CD, Monitoring und SRE-Praktiken." }
+        {
+          "title": "API und Microservices",
+          "desc": "REST- und GraphQL-APIs. Event-getriebene Architektur."
+        },
+        {
+          "title": "Cloud-Infrastruktur",
+          "desc": "AWS, GCP, Azure. Serverless, Container und IaC."
+        },
+        {
+          "title": "DevOps und Zuverlässigkeit",
+          "desc": "CI/CD, Monitoring und SRE-Praktiken."
+        }
       ],
       "features_title": "Kernfunktionen",
-      "features": ["Skalierbare APIs", "Datenbankdesign", "Cache und CDN", "Sicherheit und Compliance", "Monitoring", "Disaster Recovery"],
+      "features": [
+        "Skalierbare APIs",
+        "Datenbankdesign",
+        "Cache und CDN",
+        "Sicherheit und Compliance",
+        "Monitoring",
+        "Disaster Recovery"
+      ],
       "advanced_title": "Erweiterte Fähigkeiten",
-      "advanced": ["Event-getriebene Architektur", "Multi-Region-Deployment", "Kostenoptimierung", "Legacy-Migration"],
+      "advanced": [
+        "Event-getriebene Architektur",
+        "Multi-Region-Deployment",
+        "Kostenoptimierung",
+        "Legacy-Migration"
+      ],
       "process_title": "So arbeiten wir",
       "process_steps": [
-        { "step": "01", "title": "Architektur und Design", "desc": "Systemdesign und Cloud-Strategie." },
-        { "step": "02", "title": "Aufbau und Automatisierung", "desc": "Implementierung, IaC und Pipelines." },
-        { "step": "03", "title": "Betrieb und Iteration", "desc": "Deployment, Monitoring und kontinuierliche Verbesserung." }
+        {
+          "step": "01",
+          "title": "Architektur und Design",
+          "desc": "Systemdesign und Cloud-Strategie."
+        },
+        {
+          "step": "02",
+          "title": "Aufbau und Automatisierung",
+          "desc": "Implementierung, IaC und Pipelines."
+        },
+        {
+          "step": "03",
+          "title": "Betrieb und Iteration",
+          "desc": "Deployment, Monitoring und kontinuierliche Verbesserung."
+        }
       ],
       "cta_title": "Lassen Sie uns ein Backend gestalten, das mit Ihrem Business skaliert.",
       "cta_button": "Team kontaktieren"
@@ -447,23 +744,65 @@
       "cta_primary": "Gespräch starten",
       "cta_secondary": "Use Cases ansehen",
       "tech_title": "Technologien",
-      "tech_items": ["LLMs und Embeddings", "RAG-Pipelines", "LangChain", "Python", "Vector DBs", "OpenAI", "Anthropic", "Custom ML"],
+      "tech_items": [
+        "LLMs und Embeddings",
+        "RAG-Pipelines",
+        "LangChain",
+        "Python",
+        "Vector DBs",
+        "OpenAI",
+        "Anthropic",
+        "Custom ML"
+      ],
       "offerings_title": "Was wir liefern",
       "offerings_intro": "Intelligenz dort, wo sie Wert schafft.",
       "offerings": [
-        { "title": "RAG und Wissenssysteme", "desc": "Unternehmens-KI mit Ihren Daten. RAG und semantische Suche." },
-        { "title": "Agenten-KI und Workflows", "desc": "Autonome Agenten und Workflow-Automatisierung." },
-        { "title": "Custom ML und Integrationen", "desc": "Fine-Tuning und Integration in bestehende Plattformen." }
+        {
+          "title": "RAG und Wissenssysteme",
+          "desc": "Unternehmens-KI mit Ihren Daten. RAG und semantische Suche."
+        },
+        {
+          "title": "Agenten-KI und Workflows",
+          "desc": "Autonome Agenten und Workflow-Automatisierung."
+        },
+        {
+          "title": "Custom ML und Integrationen",
+          "desc": "Fine-Tuning und Integration in bestehende Plattformen."
+        }
       ],
       "features_title": "Kernfähigkeiten",
-      "features": ["RAG-Pipelines", "Agenten-Workflows", "Sichere Datenverarbeitung", "Erklärbarkeit und Guardrails", "API-Integrationen", "Evaluierung und Monitoring"],
+      "features": [
+        "RAG-Pipelines",
+        "Agenten-Workflows",
+        "Sichere Datenverarbeitung",
+        "Erklärbarkeit und Guardrails",
+        "API-Integrationen",
+        "Evaluierung und Monitoring"
+      ],
       "advanced_title": "Erweiterte Fähigkeiten",
-      "advanced": ["Multimodale KI", "Modell-Fine-Tuning", "Echtzeit-Inferenz", "Unternehmens-Compliance"],
+      "advanced": [
+        "Multimodale KI",
+        "Modell-Fine-Tuning",
+        "Echtzeit-Inferenz",
+        "Unternehmens-Compliance"
+      ],
       "process_title": "So arbeiten wir",
       "process_steps": [
-        { "step": "01", "title": "Use Case und Daten", "desc": "Wert, Datenquellen und Erfolgsmetriken definieren." },
-        { "step": "02", "title": "Prototyp und Integration", "desc": "RAG/Agent-Design, APIs und Sicherheitsprüfungen." },
-        { "step": "03", "title": "Deployment und Iteration", "desc": "Produktions-Deployment und kontinuierliche Verbesserung." }
+        {
+          "step": "01",
+          "title": "Use Case und Daten",
+          "desc": "Wert, Datenquellen und Erfolgsmetriken definieren."
+        },
+        {
+          "step": "02",
+          "title": "Prototyp und Integration",
+          "desc": "RAG/Agent-Design, APIs und Sicherheitsprüfungen."
+        },
+        {
+          "step": "03",
+          "title": "Deployment und Iteration",
+          "desc": "Produktions-Deployment und kontinuierliche Verbesserung."
+        }
       ],
       "cta_title": "Lassen Sie uns KI bauen, die für Ihr Business funktioniert.",
       "cta_button": "Team kontaktieren"
@@ -480,5 +819,372 @@
     "subtitle": "Eine Auswahl von Projekten für globale Teams.",
     "view_project": "Projekt ansehen",
     "detail_back": "Zurück zu Projekten"
+  },
+  "infrastructure_detail": {
+    "hero_badge": "Infrastructure",
+    "cta_primary": "Get assessment",
+    "cta_secondary": "Explore services",
+    "cta_title": "Need an infrastructure assessment?",
+    "cta_button": "Get a free consultation",
+    "features_title": "What we deliver",
+    "process_title": "How we work",
+    "offerings_title": "Core capabilities",
+    "services_offered_title": "Services Offered",
+    "technologies_used_title": "Technologies Used",
+    "featured_projects_title": "Featured Projects",
+    "target_clients_title": "Target Clients",
+    "slugs": {
+      "cloud": {
+        "title": "Cloud Infrastructure",
+        "subtitle": "AWS, Azure & GCP setup, scaling, and optimization. We design and deploy cloud-native solutions that scale with your business and reduce cost.",
+        "features": [
+          "Multi-cloud strategy & migration",
+          "Auto-scaling & cost optimization",
+          "Managed Kubernetes & containers",
+          "Serverless architecture",
+          "Disaster recovery & backup",
+          "24/7 monitoring & support"
+        ],
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Assessment & design",
+            "desc": "Evaluate current infrastructure and define target cloud architecture and security posture."
+          },
+          {
+            "step": "02",
+            "title": "Migrate & deploy",
+            "desc": "Zero-downtime migration with phased rollout, validation, and cutover."
+          },
+          {
+            "step": "03",
+            "title": "Operate & optimize",
+            "desc": "Ongoing management, FinOps, and continuous performance optimization."
+          }
+        ],
+        "offerings": [
+          "AWS, Azure & GCP",
+          "Terraform & IaC",
+          "Kubernetes & Docker",
+          "CI/CD pipelines",
+          "Cost optimization"
+        ]
+      },
+      "network": {
+        "title": "Network Infrastructure",
+        "subtitle": "LAN, WAN & network design for performance, security, and reliability. From office networks to hybrid cloud connectivity.",
+        "features": [
+          "Network design & architecture",
+          "SD-WAN & hybrid connectivity",
+          "Firewall & segmentation",
+          "Load balancing & failover",
+          "VPN & zero-trust access",
+          "Performance monitoring"
+        ],
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Discovery & design",
+            "desc": "Map current topology, traffic patterns, and define target network architecture."
+          },
+          {
+            "step": "02",
+            "title": "Implement & test",
+            "desc": "Deploy with staged rollout, redundancy, and validation under load."
+          },
+          {
+            "step": "03",
+            "title": "Monitor & maintain",
+            "desc": "Ongoing monitoring, capacity planning, and security updates."
+          }
+        ],
+        "offerings": [
+          "Cisco, Juniper, Aruba",
+          "SD-WAN",
+          "Zero-trust",
+          "Network audits"
+        ]
+      },
+      "servers": {
+        "title": "Server Infrastructure",
+        "subtitle": "On-premise & hybrid server infrastructure. Physical, virtual, and hyperconverged solutions tailored to your workload.",
+        "features": [
+          "Server provisioning & lifecycle",
+          "Virtualization (VMware, Hyper-V)",
+          "Storage & SAN design",
+          "High availability & clustering",
+          "Patching & compliance",
+          "Capacity planning"
+        ],
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Requirements & design",
+            "desc": "Workload analysis, sizing, and hybrid/on-prem architecture."
+          },
+          {
+            "step": "02",
+            "title": "Deploy & configure",
+            "desc": "Install, configure, and integrate with existing systems."
+          },
+          {
+            "step": "03",
+            "title": "Support & evolve",
+            "desc": "Ongoing support, upgrades, and decommissioning when needed."
+          }
+        ],
+        "offerings": [
+          "VMware, Hyper-V",
+          "SAN/NAS",
+          "Backup integration",
+          "DR replication"
+        ]
+      },
+      "security": {
+        "title": "Cybersecurity",
+        "subtitle": "Security audits, compliance, and protection. Identify risks, harden systems, and meet regulatory requirements.",
+        "features": [
+          "Security assessments & audits",
+          "Compliance (SOC2, ISO, GDPR)",
+          "Penetration testing",
+          "Identity & access management",
+          "Threat detection & response",
+          "Security training"
+        ],
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Assess & scope",
+            "desc": "Identify assets, threats, and compliance requirements."
+          },
+          {
+            "step": "02",
+            "title": "Remediate & harden",
+            "desc": "Implement controls, patch gaps, and document policies."
+          },
+          {
+            "step": "03",
+            "title": "Monitor & report",
+            "desc": "Ongoing monitoring, incident response, and compliance reporting."
+          }
+        ],
+        "offerings": [
+          "SOC2, ISO 27001",
+          "Pen testing",
+          "IAM",
+          "SIEM"
+        ]
+      },
+      "support": {
+        "title": "IT Helpdesk & Support",
+        "subtitle": "24/7 technical support and helpdesk. Keep your teams productive with responsive, tiered support and clear SLAs.",
+        "features": [
+          "24/7 helpdesk & ticketing",
+          "Tier 1–3 support",
+          "Remote & on-site support",
+          "Asset & license management",
+          "Knowledge base & self-service",
+          "SLA reporting"
+        ],
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Onboard & document",
+            "desc": "Define scope, SLAs, escalation paths, and knowledge base."
+          },
+          {
+            "step": "02",
+            "title": "Deliver support",
+            "desc": "Handle incidents, requests, and changes per agreed SLAs."
+          },
+          {
+            "step": "03",
+            "title": "Improve & report",
+            "desc": "Regular reviews, trend analysis, and continuous improvement."
+          }
+        ],
+        "offerings": [
+          "Helpdesk",
+          "NOC",
+          "On-site",
+          "Managed services"
+        ]
+      },
+      "backup": {
+        "title": "Backup & DR",
+        "subtitle": "Disaster recovery and business continuity. Protect data, define RPO/RTO, and ensure you can recover when it matters.",
+        "features": [
+          "Backup strategy & design",
+          "On-prem & cloud backup",
+          "Replication & failover",
+          "Recovery testing",
+          "RPO/RTO alignment",
+          "Documented runbooks"
+        ],
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Assess & design",
+            "desc": "Define RPO/RTO, classify data, and design backup and DR architecture."
+          },
+          {
+            "step": "02",
+            "title": "Implement & test",
+            "desc": "Deploy backup and replication; run regular recovery tests."
+          },
+          {
+            "step": "03",
+            "title": "Maintain & evolve",
+            "desc": "Monitor backup health, update runbooks, and adapt to changes."
+          }
+        ],
+        "offerings": [
+          "Veeam, Commvault",
+          "Cloud backup",
+          "DR drills",
+          "Runbooks"
+        ]
+      },
+      "devops": {
+        "title": "DevOps & Automation",
+        "subtitle": "CI/CD, infrastructure as code, and automation. Ship faster and more reliably with modern tooling and practices.",
+        "features": [
+          "CI/CD pipeline design",
+          "Infrastructure as Code (Terraform, Ansible)",
+          "Container orchestration",
+          "Release & config management",
+          "Observability & logging",
+          "SRE practices"
+        ],
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Assess & design",
+            "desc": "Map current release process and define target pipelines and IaC strategy."
+          },
+          {
+            "step": "02",
+            "title": "Build & automate",
+            "desc": "Implement pipelines, IaC, and deployment automation."
+          },
+          {
+            "step": "03",
+            "title": "Operate & iterate",
+            "desc": "Monitor, tune, and evolve pipelines and practices."
+          }
+        ],
+        "offerings": [
+          "GitLab, GitHub Actions",
+          "Terraform",
+          "Kubernetes",
+          "Prometheus"
+        ]
+      },
+      "datacenter": {
+        "title": "Data Center Design",
+        "subtitle": "Modern data center solutions and design. From colocation to private cloud, we help you plan and operate efficient, resilient facilities.",
+        "features": [
+          "Data center strategy",
+          "Power, cooling & cabling",
+          "Rack & layout design",
+          "Monitoring & DCIM",
+          "Capacity planning",
+          "Green & efficiency"
+        ],
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Strategy & design",
+            "desc": "Requirements, capacity, and physical/network design."
+          },
+          {
+            "step": "02",
+            "title": "Build or migrate",
+            "desc": "Build-out, migration, and integration with existing systems."
+          },
+          {
+            "step": "03",
+            "title": "Operate & optimize",
+            "desc": "Day-two operations, capacity, and efficiency improvements."
+          }
+        ],
+        "offerings": [
+          "Colo design",
+          "DCIM",
+          "Power/cooling",
+          "Compliance"
+        ]
+      },
+      "communication": {
+        "title": "Unified Communication",
+        "subtitle": "VoIP, collaboration tools, and unified comms. Voice, video, messaging, and integrations in one cohesive platform.",
+        "features": [
+          "VoIP & telephony",
+          "Video conferencing",
+          "Team messaging & collaboration",
+          "Integration with CRM/ERP",
+          "Call center & IVR",
+          "Mobile & remote access"
+        ],
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Requirements & design",
+            "desc": "User needs, integrations, and UC architecture."
+          },
+          {
+            "step": "02",
+            "title": "Deploy & integrate",
+            "desc": "Roll out platforms, migrate numbers, and train users."
+          },
+          {
+            "step": "03",
+            "title": "Support & evolve",
+            "desc": "Ongoing support, upgrades, and adoption."
+          }
+        ],
+        "offerings": [
+          "Microsoft Teams",
+          "Zoom",
+          "Cisco",
+          "SIP trunking"
+        ]
+      },
+      "migration": {
+        "title": "Cloud Migration",
+        "subtitle": "Seamless cloud migration with zero downtime. We plan, execute, and validate migrations so your business keeps running.",
+        "features": [
+          "Migration assessment & planning",
+          "Rehost, refactor, or rebuild",
+          "Phased migration & cutover",
+          "Zero-downtime where possible",
+          "Post-migration optimization",
+          "Training & handover"
+        ],
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Discover & plan",
+            "desc": "Application inventory, dependencies, and migration roadmap."
+          },
+          {
+            "step": "02",
+            "title": "Migrate in phases",
+            "desc": "Execute migration waves with validation and rollback plans."
+          },
+          {
+            "step": "03",
+            "title": "Optimize & decommission",
+            "desc": "Right-size, optimize cost, and decommission legacy."
+          }
+        ],
+        "offerings": [
+          "AWS Migration",
+          "Azure Migrate",
+          "VMware Cloud",
+          "Database migration"
+        ]
+      }
+    }
   }
 }
