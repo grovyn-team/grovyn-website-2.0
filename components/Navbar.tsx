@@ -6,13 +6,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import { Phone, ChevronDown, Monitor, Smartphone, Database, Box, LayoutGrid, Users, Briefcase, Mail, Shield, FileCheck, X, Cloud, Network, Server, Headphones, GitBranch, Building2, MessageCircle, Truck } from "lucide-react";
+import { Phone, ChevronDown, Monitor, Smartphone, LayoutGrid, Users, Briefcase, Mail, X, Cloud, Network, Server, Headphones, GitBranch, Building2, MessageCircle, Truck, BookOpen, Shield, Database, ArrowRight } from "lucide-react";
 import { locales, localeNames, type Locale } from "@/i18n/config";
 
 export default function Navbar() {
   const t = useTranslations("navbar");
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [capabilitiesSub, setCapabilitiesSub] = useState<"services" | "infrastructure">("services");
   const [localeOpen, setLocaleOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -47,12 +48,7 @@ export default function Navbar() {
   const serviceItems = [
     { title: t("menus.web"), desc: t("menus.web_desc"), icon: <Monitor size={20} />, slug: "web" },
     { title: t("menus.mobile"), desc: t("menus.mobile_desc"), icon: <Smartphone size={20} />, slug: "mobile" },
-    { title: t("menus.backend"), desc: t("menus.backend_desc"), icon: <Database size={20} />, slug: "backend" },
-    { title: t("menus.ai"), desc: t("menus.ai_desc"), icon: <Box size={20} />, slug: "ai" },
-  ];
-
-  const solutionItems = [
-    { title: t("solutions_menu.industries"), desc: t("solutions_menu.industries_desc"), icon: <LayoutGrid size={20} />, href: `/${locale}/solutions/industries` },
+    { title: t("menus.platform"), desc: t("menus.platform_desc"), icon: <LayoutGrid size={20} />, slug: "platform" },
   ];
 
   const ti = (key: string) => t(`infrastructure_menu.${key}`);
@@ -90,9 +86,8 @@ export default function Navbar() {
   const resourceItems = [
     { title: t("about"), href: `/${locale}/about`, icon: <Users size={20} /> },
     { title: t("careers"), href: `/${locale}/careers`, icon: <Briefcase size={20} /> },
+    { title: t("resources_menu.blog"), href: `/${locale}/blog`, icon: <BookOpen size={20} /> },
     { title: t("resources_menu.contact"), href: `/${locale}#contact`, icon: <Mail size={20} /> },
-    { title: t("privacy"), href: `/${locale}/privacy`, icon: <Shield size={20} /> },
-    { title: t("terms"), href: `/${locale}/terms`, icon: <FileCheck size={20} /> },
   ];
 
   const switchLocale = (newLocale: Locale) => {
@@ -112,6 +107,22 @@ export default function Navbar() {
   const linkClass = (active?: boolean) =>
     `hover:text-[#10b981] transition-colors py-2 ${active ? "text-[#10b981]" : ""}`;
 
+  const dropPanel = isDarkNav
+    ? "bg-[#111] text-white border border-white/10 rounded-[2rem] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.5)]"
+    : "bg-white text-[#111] border border-gray-100 rounded-[2rem] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)]";
+  const dropItemHover = isDarkNav ? "hover:bg-white/10" : "hover:bg-gray-50/50";
+  const dropItemHoverAlt = isDarkNav ? "hover:bg-white/10" : "hover:bg-gray-50/80";
+  const dropTitle = isDarkNav ? "text-white" : "text-[#111]";
+  const dropDesc = "text-gray-400";
+  const dropBorder = isDarkNav ? "border-white/10" : "border-gray-100";
+  const localeDropdown = isDarkNav
+    ? "bg-[#111] text-white border border-white/10 rounded-xl shadow-xl"
+    : "bg-white text-[#111] border border-gray-100 rounded-xl shadow-xl";
+  const localeItemHover = isDarkNav ? "hover:bg-white/10" : "hover:bg-gray-50";
+  const localeButtonClass = isDarkNav
+    ? "border-white/20 hover:bg-white/10"
+    : "border-gray-200 hover:bg-gray-100 text-[#111]";
+
   return (
     <nav className={navClass}>
       <div className="max-w-7xl mx-auto px-6 lg:px-12 h-full flex justify-between items-center">
@@ -130,170 +141,167 @@ export default function Navbar() {
         <div className="hidden md:flex items-center space-x-10 text-sm font-bold h-full">
           <div
             className="relative group flex items-center h-full"
-            onMouseEnter={() => setActiveMenu("services")}
+            onMouseEnter={() => { setActiveMenu("capabilities"); setCapabilitiesSub((s) => (s === "services" || s === "infrastructure" ? s : "services")); }}
             onMouseLeave={() => setActiveMenu(null)}
           >
             <div className="relative h-full flex items-center">
               <button
-                className={`flex items-center space-x-1.5 transition-colors py-2 ${linkClass(activeMenu === "services")}`}
+                className={`flex items-center space-x-1.5 transition-colors py-2 ${linkClass(activeMenu === "capabilities")}`}
               >
-                <span>{t("services")}</span>
+                <span>{t("capabilities")}</span>
                 <ChevronDown
                   size={14}
-                  className={`transition-transform duration-300 opacity-60 ${activeMenu === "services" ? "rotate-180 opacity-100" : ""}`}
+                  className={`transition-transform duration-300 opacity-60 ${activeMenu === "capabilities" ? "rotate-180 opacity-100" : ""}`}
                 />
               </button>
               <div
-                className={`absolute top-full left-1/2 -translate-x-1/2 pt-2 transition-all duration-300 transform origin-top ${
-                  activeMenu === "services"
+                className={`absolute top-full left-1/2 -translate-x-1/6 pt-2 transition-all duration-300 transform origin-top ${
+                  activeMenu === "capabilities"
                     ? "opacity-100 visible translate-y-0 scale-100"
                     : "opacity-0 invisible -translate-y-2 scale-95"
                 }`}
               >
-                <div className="bg-white text-[#111] border border-gray-100 rounded-[2rem] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] p-8 w-[600px] grid grid-cols-2 gap-x-10 gap-y-8">
-                  {serviceItems.map((service) => (
-                    <Link
-                      key={service.slug}
-                      href={`/${locale}/services/${service.slug}`}
-                      className="flex items-start space-x-4 group/item hover:bg-gray-50/50 p-2 -m-2 rounded-2xl transition-all"
+                <div className={`${dropPanel} flex w-[min(980px,calc(100vw-2rem))] overflow-hidden rounded-[2rem]`}>
+                  <div className={`shrink-0 w-[220px] border-r ${dropBorder} flex flex-col`}>
+                    <p className={`px-5 pt-5 pb-2 text-[10px] font-black uppercase tracking-widest ${dropDesc}`}>
+                      {t("capabilities_explore")}
+                    </p>
+                    <button
+                      type="button"
+                      onMouseEnter={() => setCapabilitiesSub("services")}
+                      className={`flex items-center gap-3 px-5 py-4 text-left transition-all border-l-2 ${capabilitiesSub === "services" ? "border-[#10b981] bg-[#10b981]/5" : `border-transparent ${dropItemHover}`}`}
                     >
-                      <div className="w-12 h-12 rounded-xl bg-[#10b981]/10 flex items-center justify-center text-[#10b981] shrink-0 group-hover/item:scale-110 group-hover/item:bg-[#10b981] group-hover/item:text-white transition-all">
-                        {service.icon}
-                      </div>
-                      <div className="space-y-1">
-                        <h5 className="text-[#111] font-black text-sm">{service.title}</h5>
-                        <p className="text-gray-400 text-[11px] font-medium leading-relaxed">
-                          {service.desc}
-                        </p>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="relative group flex items-center h-full"
-            onMouseEnter={() => setActiveMenu("solutions")}
-            onMouseLeave={() => setActiveMenu(null)}
-          >
-            <div className="relative h-full flex items-center">
-              <button
-                className={`flex items-center space-x-1.5 transition-colors py-2 ${linkClass(activeMenu === "solutions")}`}
-              >
-                <span>{t("solutions")}</span>
-                <ChevronDown
-                  size={14}
-                  className={`transition-transform duration-300 opacity-60 ${activeMenu === "solutions" ? "rotate-180 opacity-100" : ""}`}
-                />
-              </button>
-              <div
-                className={`absolute top-full left-1/2 -translate-x-1/2 pt-2 transition-all duration-300 transform origin-top ${
-                  activeMenu === "solutions"
-                    ? "opacity-100 visible translate-y-0 scale-100"
-                    : "opacity-0 invisible -translate-y-2 scale-95"
-                }`}
-              >
-                <div className="bg-white text-[#111] border border-gray-100 rounded-[2rem] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] p-6 w-[320px]">
-                  {solutionItems.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className="flex items-start space-x-4 group/item hover:bg-gray-50/50 p-3 -m-3 rounded-2xl transition-all"
+                      <Monitor size={20} className={capabilitiesSub === "services" ? "text-[#10b981]" : "opacity-60"} />
+                      <span className={`font-bold text-sm ${dropTitle}`}>{t("services")}</span>
+                    </button>
+                    <button
+                      type="button"
+                      onMouseEnter={() => setCapabilitiesSub("infrastructure")}
+                      className={`flex items-center gap-3 px-5 py-4 text-left transition-all border-l-2 ${capabilitiesSub === "infrastructure" ? "border-[#10b981] bg-[#10b981]/5" : `border-transparent ${dropItemHover}`}`}
                     >
-                      <div className="w-10 h-10 rounded-xl bg-[#10b981]/10 flex items-center justify-center text-[#10b981] shrink-0 group-hover/item:bg-[#10b981] group-hover/item:text-white transition-all">
-                        {item.icon}
-                      </div>
-                      <div className="space-y-0.5">
-                        <h5 className="text-[#111] font-black text-sm">{item.title}</h5>
-                        <p className="text-gray-400 text-[11px] font-medium leading-relaxed">{item.desc}</p>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="relative group flex items-center h-full"
-            onMouseEnter={() => setActiveMenu("infrastructure")}
-            onMouseLeave={() => setActiveMenu(null)}
-          >
-            <div className="relative h-full flex items-center">
-              <button
-                className={`flex items-center space-x-1.5 transition-colors py-2 ${linkClass(activeMenu === "infrastructure")}`}
-              >
-                <span>{t("infrastructure")}</span>
-                <ChevronDown
-                  size={14}
-                  className={`transition-transform duration-300 opacity-60 ${activeMenu === "infrastructure" ? "rotate-180 opacity-100" : ""}`}
-                />
-              </button>
-              <div
-                className={`absolute top-full left-1/2 -translate-x-1/2 pt-2 transition-all duration-300 transform origin-top ${
-                  activeMenu === "infrastructure"
-                    ? "opacity-100 visible translate-y-0 scale-100"
-                    : "opacity-0 invisible -translate-y-2 scale-95"
-                }`}
-              >
-                <div className="bg-white text-[#111] border border-gray-100 rounded-[2rem] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] p-8 w-[720px]">
-                  <div className="grid grid-cols-3 gap-8 mb-6">
-                    {infrastructureColumns.map((col, i) => (
-                      <div key={i} className="space-y-4">
-                        <div>
-                          <h4 className="font-black text-sm text-[#111]">{col.title}</h4>
-                          <p className="text-[11px] font-medium text-gray-400 mt-0.5">{col.subtitle}</p>
-                        </div>
-                        <ul className="space-y-2">
-                          {col.items.map((item) => (
-                            <li key={item.slug}>
-                              <Link
-                                href={`/${locale}/infrastructure/${item.slug}`}
-                                className="flex items-start gap-3 p-2 -m-2 rounded-xl hover:bg-gray-50/80 transition-all group/item"
-                                onClick={() => setActiveMenu(null)}
-                              >
-                                <span className="w-8 h-8 rounded-lg bg-[#10b981]/10 flex items-center justify-center text-[#10b981] shrink-0 group-hover/item:bg-[#10b981] group-hover/item:text-white transition-all">
-                                  {item.icon}
-                                </span>
-                                <div>
-                                  <span className="font-bold text-sm text-[#111] block">{item.label}</span>
-                                  <span className="text-[11px] font-medium text-gray-400">{item.desc}</span>
-                                </div>
-                              </Link>
-                            </li>
+                      <Cloud size={20} className={capabilitiesSub === "infrastructure" ? "text-[#10b981]" : "opacity-60"} />
+                      <span className={`font-bold text-sm ${dropTitle}`}>{t("infrastructure")}</span>
+                    </button>
+                  </div>
+                  <div className="flex-1 min-w-0 p-8 flex flex-col">
+                    {capabilitiesSub === "services" && (
+                      <>
+                        <h3 className={`text-xs font-black uppercase tracking-widest ${dropDesc} mb-5`}>
+                          {t("capabilities_services_heading")}
+                        </h3>
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                          {serviceItems.map((service) => (
+                            <Link
+                              key={service.slug}
+                              href={`/${locale}/services/${service.slug}`}
+                              className={`flex items-start gap-4 group/item p-5 rounded-2xl border transition-all ${isDarkNav ? "border-white/10 hover:border-[#10b981]/40" : "border-gray-100 hover:border-[#10b981]/40 hover:shadow-md"}`}
+                              onClick={() => setActiveMenu(null)}
+                            >
+                              <div className="w-12 h-12 rounded-xl bg-[#10b981]/10 flex items-center justify-center text-[#10b981] shrink-0 group-hover/item:bg-[#10b981] group-hover/item:text-white transition-all">
+                                {service.icon}
+                              </div>
+                              <div className="space-y-1 min-w-0 flex-1">
+                                <h5 className={`${dropTitle} font-black text-sm leading-tight`}>{service.title}</h5>
+                                <p className={`${dropDesc} text-[12px] font-medium leading-relaxed`}>
+                                  {service.desc}
+                                </p>
+                              </div>
+                              <ArrowRight size={16} className={`shrink-0 opacity-0 group-hover/item:opacity-100 text-[#10b981] transition-opacity`} />
+                            </Link>
                           ))}
-                        </ul>
+                        </div>
+                        <Link
+                          href={`/${locale}/services/web`}
+                          className={`mt-4 inline-flex items-center gap-2 text-xs font-bold ${isDarkNav ? "text-[#10b981] hover:text-[#34d399]" : "text-[#10b981] hover:text-[#059669]"}`}
+                          onClick={() => setActiveMenu(null)}
+                        >
+                          {t("view_all_services")}
+                          <ArrowRight size={14} />
+                        </Link>
+                      </>
+                    )}
+                    {capabilitiesSub === "infrastructure" && (
+                      <div className="space-y-5 flex-1 flex flex-col">
+                        <h3 className={`text-xs font-black uppercase tracking-widest ${dropDesc} mb-3`}>
+                          {t("capabilities_infra_heading")}
+                        </h3>
+                        <div className="grid grid-cols-3 gap-8">
+                          {infrastructureColumns.map((col, i) => (
+                            <div key={i} className="space-y-4 min-w-0">
+                              <div className="mb-5">
+                                <h4 className={`font-black text-sm ${dropTitle}`}>{col.title}</h4>
+                                <p className={`text-[11px] font-medium ${dropDesc} mt-0.5`}>{col.subtitle}</p>
+                              </div>
+                              <ul className="space-y-2">
+                                {col.items.map((item) => (
+                                  <li key={item.slug}>
+                                    <Link
+                                      href={`/${locale}/infrastructure/${item.slug}`}
+                                      className={`flex items-start gap-3 p-2.5 -m-2.5 rounded-xl ${dropItemHoverAlt} transition-all group/item`}
+                                      onClick={() => setActiveMenu(null)}
+                                    >
+                                      <span className="w-8 h-8 rounded-lg bg-[#10b981]/10 flex items-center justify-center text-[#10b981] shrink-0 group-hover/item:bg-[#10b981] group-hover/item:text-white transition-all">
+                                        {item.icon}
+                                      </span>
+                                      <div className="min-w-0 flex-1">
+                                        <span className={`font-bold text-xs ${dropTitle} block`}>{item.label}</span>
+                                        <span className={`text-[11px] font-medium ${dropDesc} block leading-snug`}>{item.desc}</span>
+                                      </div>
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                        <div className={`flex items-center justify-between gap-4 pt-6 mt-2 border-t ${dropBorder}`}>
+                          <Link
+                            href={`/${locale}/infrastructure/${infrastructureFeatured.slug}`}
+                            className="flex items-center gap-4 p-4 rounded-xl bg-[#10b981]/10 border border-[#10b981]/20 hover:bg-[#10b981]/15 transition-all flex-1 min-w-0"
+                            onClick={() => setActiveMenu(null)}
+                          >
+                            <span className="w-10 h-10 rounded-lg bg-[#10b981] flex items-center justify-center text-white shrink-0">
+                              {infrastructureFeatured.icon}
+                            </span>
+                            <div className="text-left min-w-0">
+                              <span className="text-[9px] font-black uppercase tracking-wider text-[#10b981]">{ti("featured_tag")}</span>
+                              <p className={`font-black text-xs ${dropTitle} mt-0.5`}>{infrastructureFeatured.label}</p>
+                              <span className="inline-flex items-center gap-1 text-[10px] font-bold text-[#10b981] mt-1">{ti("featured_link")} →</span>
+                            </div>
+                          </Link>
+                          <Link
+                            href={`/${locale}#contact`}
+                            className="shrink-0 px-4 py-2.5 rounded-xl bg-[#10b981] text-black font-bold text-xs hover:bg-[#059669] transition-all"
+                            onClick={() => setActiveMenu(null)}
+                          >
+                            {ti("footer_cta")}
+                          </Link>
+                        </div>
                       </div>
-                    ))}
-                  </div>
-                  <div className="flex items-center justify-between gap-4 pt-4 border-t border-gray-100">
-                    <Link
-                      href={`/${locale}/infrastructure/${infrastructureFeatured.slug}`}
-                      className="flex items-center gap-4 p-4 rounded-2xl bg-[#10b981]/10 border border-[#10b981]/20 hover:bg-[#10b981]/15 transition-all flex-1"
-                      onClick={() => setActiveMenu(null)}
-                    >
-                      <span className="w-12 h-12 rounded-xl bg-[#10b981] flex items-center justify-center text-white shrink-0">
-                        {infrastructureFeatured.icon}
-                      </span>
-                      <div className="text-left min-w-0">
-                        <span className="text-[10px] font-black uppercase tracking-wider text-[#10b981]">{ti("featured_tag")}</span>
-                        <p className="font-black text-sm text-[#111] mt-0.5">{infrastructureFeatured.label}</p>
-                        <p className="text-[11px] font-medium text-gray-500 mt-0.5 line-clamp-2">{infrastructureFeatured.desc}</p>
-                        <span className="inline-flex items-center gap-1 text-xs font-bold text-[#10b981] mt-2">{ti("featured_link")} →</span>
-                      </div>
-                    </Link>
-                    <Link
-                      href={`/${locale}#contact`}
-                      className="shrink-0 px-5 py-3 rounded-xl bg-[#10b981] text-black font-bold text-sm hover:bg-[#059669] transition-all"
-                      onClick={() => setActiveMenu(null)}
-                    >
-                      {ti("footer_cta")}
-                    </Link>
+                    )}
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <Link
+            href={`/${locale}/industries`}
+            className={`transition-colors py-2 ${linkClass(pathname.includes("industries"))}`}
+          >
+            {t("industries")}
+          </Link>
+          <Link
+            href={`/${locale}/portfolio`}
+            className={`transition-colors py-2 ${linkClass(pathname.includes("portfolio"))}`}
+          >
+            {t("portfolio")}
+          </Link>
+          <Link
+            href={`/${locale}/automations`}
+            className={`transition-colors py-2 ${linkClass(pathname.includes("automations"))}`}
+          >
+            {t("automations")}
+          </Link>
           <div
             className="relative group flex items-center h-full"
             onMouseEnter={() => setActiveMenu("resources")}
@@ -316,12 +324,12 @@ export default function Navbar() {
                     : "opacity-0 invisible -translate-y-2 scale-95"
                 }`}
               >
-                <div className="bg-white text-[#111] border border-gray-100 rounded-[2rem] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] p-4 w-[240px] space-y-0.5">
+                <div className={`${dropPanel} p-4 w-[240px] space-y-0.5`}>
                   {resourceItems.map((item) => (
                     <Link
                       key={item.href}
                       href={item.href}
-                      className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-50/80 transition-all font-bold text-sm"
+                      className={`flex items-center gap-3 space-x-3 p-2 rounded-xl ${dropItemHoverAlt} transition-all font-bold text-sm ${dropTitle}`}
                       onClick={() => setActiveMenu(null)}
                     >
                       <div className="w-8 h-8 rounded-lg bg-[#10b981]/10 flex items-center justify-center text-[#10b981] shrink-0">
@@ -341,7 +349,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setLocaleOpen(!localeOpen)}
-              className="text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full border border-white/20 hover:bg-white/10 transition-colors flex items-center gap-1"
+              className={`text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full border transition-colors flex items-center gap-1 ${localeButtonClass}`}
             >
               {localeNames[locale as Locale]}
               <ChevronDown size={12} className={localeOpen ? "rotate-180" : ""} />
@@ -353,13 +361,13 @@ export default function Navbar() {
                   onClick={() => setLocaleOpen(false)}
                   aria-hidden
                 />
-                <div className="absolute top-full right-0 mt-1 py-2 bg-white text-[#111] border border-gray-100 rounded-xl shadow-xl z-[95] min-w-[140px]">
+                <div className={`absolute top-full right-0 mt-1 py-2 ${localeDropdown} z-[95] min-w-[140px]`}>
                   {locales.map((loc) => (
                     <button
                       key={loc}
                       type="button"
                       onClick={() => switchLocale(loc)}
-                      className={`block w-full text-left px-4 py-2 text-sm font-medium hover:bg-gray-50 transition-colors ${locale === loc ? "text-[#10b981]" : ""}`}
+                      className={`block w-full text-left px-4 py-2 text-sm font-medium ${localeItemHover} transition-colors ${locale === loc ? "text-[#10b981]" : ""} ${dropTitle}`}
                     >
                       {localeNames[loc]}
                     </button>
@@ -442,55 +450,60 @@ export default function Navbar() {
                 </div>
                 <div className="flex flex-col gap-6 mt-2 overflow-y-auto">
                   <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">
-                    {t("services")}
+                    {t("capabilities")}
                   </p>
+                  <p className="text-[10px] font-bold text-gray-500 pl-0">{t("services")}</p>
                   {serviceItems.map((s) => (
                     <Link
                       key={s.slug}
                       href={`/${locale}/services/${s.slug}`}
-                      className="flex items-center gap-4 font-bold"
+                      className="flex items-center gap-6 font-bold pl-2"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      <div className="w-12 h-12 rounded-xl bg-[#10b981]/10 flex items-center justify-center text-[#10b981]">
+                      <div className="w-12 h-12 rounded-xl bg-[#10b981]/10 flex items-center justify-center text-[#10b981] shrink-0">
                         {s.icon}
                       </div>
                       {s.title}
                     </Link>
                   ))}
-                  <hr className="border-gray-100" />
-                  <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">
-                    {t("solutions")}
-                  </p>
-                  {solutionItems.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className="flex items-center gap-4 font-bold"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      <div className="w-12 h-12 rounded-xl bg-[#10b981]/10 flex items-center justify-center text-[#10b981]">
-                        {item.icon}
-                      </div>
-                      {item.title}
-                    </Link>
-                  ))}
-                  <hr className="border-gray-100" />
-                  <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">
-                    {t("infrastructure")}
-                  </p>
+                  <p className="text-[10px] font-bold text-gray-500 pl-0 pt-2">{t("infrastructure")}</p>
                   {infrastructureColumns.flatMap((col) => col.items).concat([{ slug: infrastructureFeatured.slug, label: infrastructureFeatured.label, desc: infrastructureFeatured.desc, icon: infrastructureFeatured.icon }]).map((item) => (
                     <Link
                       key={item.slug}
                       href={`/${locale}/infrastructure/${item.slug}`}
-                      className="flex items-center gap-4 font-bold"
+                      className="flex items-center gap-6 font-bold pl-2"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      <div className="w-12 h-12 rounded-xl bg-[#10b981]/10 flex items-center justify-center text-[#10b981]">
+                      <div className="w-12 h-12 rounded-xl bg-[#10b981]/10 flex items-center justify-center text-[#10b981] shrink-0">
                         {item.icon}
                       </div>
                       {item.label}
                     </Link>
                   ))}
+                  <hr className="border-gray-100" />
+                  <Link
+                    href={`/${locale}/industries`}
+                    className="flex items-center gap-4 font-bold"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {t("industries")}
+                  </Link>
+                  <hr className="border-gray-100" />
+                  <Link
+                    href={`/${locale}/portfolio`}
+                    className="flex items-center gap-4 font-bold"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {t("portfolio")}
+                  </Link>
+                  <hr className="border-gray-100" />
+                  <Link
+                    href={`/${locale}/automations`}
+                    className="flex items-center gap-4 font-bold"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {t("automations")}
+                  </Link>
                   <hr className="border-gray-100" />
                   <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">
                     {t("resources")}
@@ -499,10 +512,10 @@ export default function Navbar() {
                     <Link
                       key={item.href}
                       href={item.href}
-                      className="flex items-center gap-4 font-bold"
+                      className="flex items-center gap-6 font-bold"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      <div className="w-12 h-12 rounded-xl bg-[#10b981]/10 flex items-center justify-center text-[#10b981]">
+                      <div className="w-12 h-12 rounded-xl bg-[#10b981]/10 flex items-center justify-center text-[#10b981] shrink-0">
                         {item.icon}
                       </div>
                       {item.title}

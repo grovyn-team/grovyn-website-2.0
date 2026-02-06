@@ -48,16 +48,8 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="lg:w-[45%] relative mt-20 lg:mt-0">
+          <div className="lg:w-[45%] sm:w-[40%] relative mt-20 lg:mt-0">
             <div className="relative w-full aspect-square max-w-[500px] mx-auto">
-              <div className="absolute bottom-[8%] left-1/2 -translate-x-1/2 w-[95%] h-32 pointer-events-none">
-                <div className="absolute inset-x-0 bottom-0 h-[3px] bg-[#10b981] rounded-full blur-[4px] opacity-40 animate-pulse" />
-                <div className="absolute inset-x-2 bottom-4 h-[1px] bg-[#10b981]/30 rounded-full" />
-                <div className="absolute inset-x-8 bottom-8 h-[1px] bg-[#10b981]/15 rounded-full" />
-                <div className="absolute inset-x-0 bottom-0 top-[-250px] bg-gradient-to-t from-[#10b981]/20 via-[#10b981]/5 to-transparent clip-path-hologram opacity-40" />
-                <div className="absolute bottom-[-30px] left-1/2 -translate-x-1/2 w-[130%] h-32 bg-[#10b981]/5 rounded-full blur-3xl" />
-              </div>
-
               <div className="relative z-20 w-full h-full flex items-center justify-center">
                 <div className="absolute top-[10%] left-0 w-[65%] aspect-[4/3] bg-[#0c0c0c] rounded-2xl border border-white/10 shadow-2xl overflow-hidden animate-float-slow opacity-90 scale-95">
                   <div className="p-4 space-y-3">

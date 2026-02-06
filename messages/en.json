@@ -13,21 +13,39 @@
     "cta_secondary": "Get Started Now"
   },
   "navbar": {
+    "capabilities": "Capabilities",
     "services": "Services",
     "about": "About Us",
-    "solutions": "Solutions",
+    "portfolio": "Portfolio",
+    "industries": "Industries",
+    "automations": "Automations",
     "resources": "Resources",
     "infrastructure": "Infrastructure",
+    "capabilities_explore": "Explore",
+    "capabilities_services_heading": "Development services",
+    "capabilities_infra_heading": "Infrastructure & operations",
+    "view_all_services": "View all services",
     "careers": "Careers",
-    "cta": "Book a discovery call",
+    "cta": "GET STARTED",
     "privacy": "Privacy",
     "terms": "Terms",
-    "solutions_menu": {
-      "industries": "Industries We Serve",
-      "industries_desc": "Domain-specific engineering for Healthcare, Fintech, E-commerce and more."
-    },
     "resources_menu": {
-      "contact": "Contact"
+      "contact": "Contact",
+      "blog": "Blog"
+    },
+    "industries_menu": {
+      "healthcare": "Healthcare",
+      "healthcare_desc": "Domain-specific solutions for health systems.",
+      "fintech": "Fintech",
+      "fintech_desc": "Digital banking, payments & financial platforms.",
+      "ecommerce": "E-commerce",
+      "ecommerce_desc": "Marketplaces, retail & D2C platforms.",
+      "edtech": "EdTech",
+      "edtech_desc": "Learning platforms & education technology.",
+      "saas": "SaaS",
+      "saas_desc": "Scalable software-as-a-service products.",
+      "startups": "Startups",
+      "startups_desc": "MVP to scale for high-growth ventures."
     },
     "infrastructure_menu": {
       "cloud_network_title": "Cloud & Network",
@@ -65,13 +83,11 @@
     },
     "menus": {
       "web": "Web Development",
-      "web_desc": "Scaleable web applications with React, Angular, and Vue.",
+      "web_desc": "scalable web platforms",
       "mobile": "Mobile Apps",
-      "mobile_desc": "Native and cross-platform apps for iOS and Android.",
-      "backend": "Backend & Cloud",
-      "backend_desc": "Microservices, API development, and scalable cloud infra.",
-      "ai": "AI & Gen AI",
-      "ai_desc": "Cutting-edge AI agents and Generative AI solutions."
+      "mobile_desc": "ios & android experiences",
+      "platform": "Platform Design",
+      "platform_desc": "architectural blueprints"
     }
   },
   "services_we_offer": {
@@ -281,6 +297,49 @@
     "title_line1": "Build for",
     "title_highlight": "Real Impact.",
     "subtitle": "Grovyn is a high-performance collective. We are looking for engineers who care about the \"How\" as much as the \"What\".",
+    "hero_badge": "Join us",
+    "hero_title_line1": "Shape the",
+    "hero_title_line2": "future of",
+    "hero_title_highlight": "Engineering.",
+    "hero_subtitle": "We are transforming enterprise experiences using next-gen engineering solutions. From our offices in Singapore, Indonesia, Philippines and India, our team is solving real-world problems.",
+    "one_team_title": "One team, One goal,",
+    "one_team_title_highlight": "One family",
+    "one_team_subtitle": "We work hard and play even harder. At Grovyn you can expect a vibrant working environment and a people-focused culture, where we support each other to reach our goals.",
+    "one_team_item_1": "Grow professionally and personally",
+    "one_team_item_2": "Help & support from your colleagues",
+    "one_team_item_3": "Flat structure",
+    "one_team_item_4": "Experimentation and Innovation",
+    "open_roles_title": "Open Roles",
+    "open_roles_count": "{count} open positions across all offices and teams",
+    "filter_by": "Filter By:",
+    "filter_all_locations": "All Locations",
+    "filter_all_types": "All Types",
+    "filter_all_teams": "All Teams",
+    "requirements_label": "Requirements",
+    "apply_now": "Apply Now",
+    "why_join_title": "Why join Grovyn?",
+    "why_join_subtitle": "Engineering the future requires the best environment.",
+    "perk_remote": "Remote First",
+    "perk_stock": "Stock Options",
+    "perk_learning": "Learning Fund",
+    "perk_gear": "Premium Gear",
+    "all_openings": "All Openings",
+    "detail_mission_title": "Mission & Context",
+    "detail_mission_body": "Grovyn is at the forefront of digital transformation. As a {title}, you will be part of a high-performance collective that values clean architecture, peer-reviewed engineering, and end-to-end ownership. You'll contribute to systems that process billions of events and serve millions of users globally.",
+    "detail_requirements_title": "Primary Requirements",
+    "detail_offer_title": "What We Offer",
+    "detail_form_heading": "Personal Information",
+    "detail_form_subheading": "Dossier Submission Protocol",
+    "detail_position_label": "Position Applying For *",
+    "detail_message_placeholder": "Tell us why you're interested in joining Grovyn...",
+    "detail_resume_drop": "Drag and drop your resume here",
+    "detail_resume_browse": "or click to browse files",
+    "detail_resume_formats": "Supported formats: PDF, DOC, DOCX, TXT (Max 5MB)",
+    "detail_submit": "Submit Application",
+    "detail_secure": "Secure encrypted submission",
+    "detail_success_title": "Application Logged.",
+    "detail_success_message": "Your application for the {title} position has been successfully recorded. Our talent team will reach out within 48 hours.",
+    "back_to_roles": "Back to All Roles",
     "culture_badge": "The Grovyn Core",
     "culture_title": "Pillars of",
     "culture_highlight": "Excellence",
@@ -299,10 +358,10 @@
     "openings_title": "Current Openings",
     "openings_sub": "Find your seat at the table",
     "openings": [
-      { "title": "Senior Full-Stack Engineer", "type": "Remote / Full-time", "team": "Product Engine" },
-      { "title": "Lead Mobile Architect", "type": "Remote / Full-time", "team": "Mobile Experience" },
-      { "title": "DevOps & SRE Specialist", "type": "Remote / Full-time", "team": "Platform Infrastructure" },
-      { "title": "Product Designer", "type": "Remote / Full-time", "team": "Creative Systems" }
+      { "slug": "senior-full-stack-engineer", "title": "Senior Full-Stack Engineer", "type": "Full-time", "team": "Product Engine", "location": "Remote", "description": "Own end-to-end delivery of product features. You'll work with React, Node, and cloud infrastructure to build scalable systems.", "requirements": ["5+ years of experience with React, Node.js, and TypeScript.", "Strong understanding of distributed systems and microservices.", "Experience with AWS/GCP and Kubernetes orchestration.", "Proven track record of building scalable SaaS platforms."] },
+      { "slug": "lead-mobile-architect", "title": "Lead Mobile Architect (Flutter)", "type": "Full-time", "team": "Mobile Experience", "location": "Mumbai, IN", "description": "Define mobile architecture and lead delivery of iOS and Android experiences.", "requirements": ["Expert knowledge of Flutter and Dart.", "Experience with native iOS/Android bridging.", "Strong architecture skills (BLoC, Clean Architecture).", "Lead experience in high-performance consumer apps."] },
+      { "slug": "devops-sre-specialist", "title": "DevOps & SRE Specialist", "type": "Full-time", "team": "Platform Infrastructure", "location": "Remote", "description": "Build and maintain CI/CD, observability, and reliability. Kubernetes, Terraform, and cloud-native practices.", "requirements": ["4+ years in DevOps/SRE or platform engineering.", "Strong experience with Kubernetes, Terraform, and CI/CD.", "Monitoring and observability (Prometheus, Grafana, etc.).", "Scripting and automation (Bash, Python, or Go)."] },
+      { "slug": "product-designer", "title": "Product Designer", "type": "Full-time", "team": "Creative Systems", "location": "Remote", "description": "Design user experiences and interfaces for web and mobile products. Strong collaboration with engineering.", "requirements": ["4+ years of product or UX/UI design experience.", "Portfolio demonstrating end-to-end product design.", "Proficiency in Figma and design systems.", "Experience working closely with engineering teams."] }
     ],
     "apply": "Apply for role",
     "no_fit": "Don't see a fit? We're always open to exceptional talent.",
@@ -485,6 +544,9 @@
       "features": ["Native performance", "Offline-first & sync", "Push notifications", "Secure auth & biometrics", "App store deployment", "CI/CD & OTA updates"],
       "advanced_title": "Advanced capabilities",
       "advanced": ["Real-time messaging", "Payment SDKs", "Analytics & crash reporting", "Deep linking & universal links"],
+      "methodology_heading": "The Methodology",
+      "methodology_subheading": "A systemized approach to building fast, reliable products.",
+      "methodology_conclusion": "No handoffs. No black boxes. Just clean execution.",
       "process_title": "How we work",
       "process_steps": [
         { "step": "01", "title": "Product & UX alignment", "desc": "User flows, platform guidelines, and technical feasibility." },
@@ -492,6 +554,45 @@
         { "step": "03", "title": "Store submission & support", "desc": "Release readiness, store compliance, and post-launch updates." }
       ],
       "cta_title": "Let's build a mobile experience that users love.",
+      "cta_button": "Talk to our team"
+    },
+    "platform": {
+      "hero_badge": "Platform Design",
+      "hero_title_line1": "Architectural blueprints for",
+      "hero_title_highlight": "scale, clarity, and long-term evolution.",
+      "hero_subtitle": "We design platform architectures—APIs, system boundaries, and integration strategies—so your product can scale without rewriting.",
+      "cta_primary": "Start a conversation",
+      "cta_secondary": "Explore capabilities",
+      "tech_title": "Tech stack we work with",
+      "tech_items": ["System design", "API design", "Event-driven architecture", "Microservices", "Domain modeling", "Cloud-native patterns"],
+      "offer_section_title": "What we offer",
+      "offer_section_highlight": "under Platform Design",
+      "offer_section_subtitle": "From API design to multi-tenant architecture — we create blueprints that scale.",
+      "offer_cards": [
+        { "title": "API & Integration Design", "description": "RESTful and GraphQL API design, versioning, and third-party integration strategies.", "tags": ["API design", "Versioning", "Integrations"] },
+        { "title": "System & Domain Modeling", "description": "Domain-driven design, bounded contexts, and clear system boundaries for complex products.", "tags": ["DDD", "Bounded contexts", "Domain modeling"] },
+        { "title": "Multi-Tenant & Scalable Architecture", "description": "Architectures that support multiple tenants and horizontal scale from day one.", "tags": ["Multi-tenant", "Scalability", "Security"] }
+      ],
+      "offerings_title": "What we deliver",
+      "offerings": [
+        { "title": "Architecture blueprints", "desc": "Clear documentation, diagrams, and technical specs for implementation teams." },
+        { "title": "API & contract design", "desc": "API contracts, event schemas, and integration patterns." },
+        { "title": "Migration & evolution", "desc": "Pathways from legacy to target architecture with minimal risk." }
+      ],
+      "features_title": "Core capabilities",
+      "features": ["System boundaries", "API design", "Data modeling", "Security & compliance", "Scalability patterns", "Integration strategies"],
+      "advanced_title": "Advanced capabilities",
+      "advanced": ["Event-driven design", "Multi-region architecture", "Legacy modernization", "Platform as a product"],
+      "methodology_heading": "The Methodology",
+      "methodology_subheading": "A systemized approach to building fast, reliable products.",
+      "methodology_conclusion": "No handoffs. No black boxes. Just clean execution.",
+      "process_title": "How we work",
+      "process_steps": [
+        { "step": "01", "title": "Discovery & scope", "desc": "Understand domain, constraints, and target scale." },
+        { "step": "02", "title": "Architecture & design", "desc": "Blueprints, APIs, and integration strategy." },
+        { "step": "03", "title": "Documentation & handoff", "desc": "Clear specs for implementation and ongoing evolution." }
+      ],
+      "cta_title": "Let's design a platform that scales with your vision.",
       "cta_button": "Talk to our team"
     },
     "backend": {
@@ -569,10 +670,30 @@
   },
   "infrastructure_detail": {
     "hero_badge": "Infrastructure",
+    "hero_tag": "Grovyn Solutions & Tech",
     "cta_primary": "Get assessment",
+    "cta_discover_more": "Discover More",
+    "cta_watch_intro": "Watch Solution Intro",
     "cta_secondary": "Explore services",
     "cta_title": "Need an infrastructure assessment?",
     "cta_button": "Get a free consultation",
+    "template_expert_tag": "Professional Insight",
+    "template_expert_heading": "Expert Architecture",
+    "template_expert_highlight": "for Elite Efficiency.",
+    "template_expert_para": "We move beyond simple installation. Our engineers provide architectural blueprints that ensure your infrastructure foundation is ready for petabyte-scale growth and multi-regional resilience.",
+    "template_expert_bullets": ["Full Domain Sovereignty", "Modular Scalability", "SLA-Backed Reliability", "Proactive Threat Mitigation"],
+    "template_blueprint_line1": "The Blueprint of",
+    "template_blueprint_highlight": "Tomorrow's Digital Core.",
+    "template_what_we_do": "What We Do",
+    "template_services_line1": "Get the best tech",
+    "template_services_highlight": "Services & Solutions.",
+    "template_ready": "Ready to",
+    "template_modernize": "Modernize?",
+    "template_cta_quote": "Empower your business with architecture designed for the future. Our leads are waiting to map your trajectory.",
+    "template_consultation": "Consultation Request",
+    "template_explore_portfolio": "Explore Portfolio",
+    "template_expert_engineers": "Expert Engineers",
+    "template_lead_architect": "Lead Infrastructure Architect",
     "features_title": "What we deliver",
     "process_title": "How we work",
     "offerings_title": "Core capabilities",
@@ -790,10 +911,291 @@
     "hero_title_highlight": "engineering excellence.",
     "hero_subtitle": "Tailored solutions for Healthcare, Fintech, E-commerce, and more. We bring deep domain understanding and production-grade engineering."
   },
+  "industries_landing": {
+    "hero_badge": "Strategic Verticals",
+    "hero_title_line1": "Engineering",
+    "hero_title_line2": "The Future of",
+    "hero_title_highlight": "Your Industry.",
+    "hero_subtitle": "We build specialized digital ecosystems for high-growth sectors. From healthcare orchestration to fintech scale, our architecture is designed for global resilience. Whatever your industry — we're here to help you build.",
+    "hero_cta": "Discover More",
+    "hero_explore_sectors": "Explore sectors",
+    "section2_badge": "Global Expertise",
+    "section2_title_line1": "Leading Choice",
+    "section2_title_line2": "For Enterprise",
+    "section2_title_highlight": "Scaling.",
+    "section2_subtitle": "Our engineering protocols are trusted by global leaders in SaaS, Fintech, and E-commerce to deliver consistent, high-fidelity user experiences regardless of system load.",
+    "section2_cta": "Review Case Studies",
+    "section3_title_line1": "About Our",
+    "section3_title_line2": "Industry Focus",
+    "section3_body": "We don't just build apps; we engineer foundations. Each sector requires a unique technical response. Our teams include domain-specialized squads that understand compliance, security, and scaling — and we work with many more industries than the ones we highlight here. Your use case and your industry matter to us.",
+    "section3_items": ["Healthcare Excellence", "Fintech Security", "E-commerce Velocity"],
+    "section3_cta": "Read More",
+    "section3_showcase_title": "Engineering Showcase",
+    "section3_showcase_label": "Soft & Cozy",
+    "section4_title_line1": "We know &",
+    "section4_title_line2": "understand",
+    "section4_title_line3": "your",
+    "section4_title_line4": "great choice.",
+    "section4_subtitle": "Every industry has a heartbeat. We listen to the rhythm of your market to build systems that resonate with your users and outperform competitors. Not just the six we highlight — we're here for your project.",
+    "section4_outcome_1": "Compliance & security",
+    "section4_outcome_2": "Scale & performance",
+    "section4_outcome_3": "Your domain, our stack",
+    "section4_deliver_label": "What we deliver",
+    "section4_deliver_1": "Web & mobile",
+    "section4_deliver_2": "Cloud & APIs",
+    "section4_deliver_3": "Support & evolution",
+    "section4_cta": "Discuss your project",
+    "section4_image_1_label": "Health & life sciences",
+    "section4_image_2_label": "Data & analytics",
+    "section4_image_3_label": "Engineering & delivery",
+    "section_why_heading": "What we bring to your industry",
+    "section_why_1_title": "Production-ready systems",
+    "section_why_1_desc": "Deploy with testing, docs & monitoring from day one.",
+    "section_why_2_title": "Domain-aware architecture",
+    "section_why_2_desc": "Compliance, workflows and scale tuned to your sector.",
+    "section_why_3_title": "Transparent scope & pricing",
+    "section_why_3_desc": "Fixed timelines and clear deliverables, no surprises.",
+    "section_why_4_title": "Global delivery",
+    "section_why_4_desc": "Singapore, India, Indonesia, Philippines — one team.",
+    "verticals_heading": "Industries we serve",
+    "verticals_heading_highlight": "",
+    "verticals_subtitle": "We deliver specialized engineering in these areas — and beyond. Your sector and use case are welcome; reach out to see how we can help.",
+    "verticals_badge": "Industry Verticals",
+    "read_more": "Read More",
+    "healthcare_title": "Healthcare & Telemedicine",
+    "healthcare_desc": "EHR, telemedicine, compliance & health SaaS",
+    "fintech_title": "Fintech & Digital Assets",
+    "fintech_desc": "Banking, payments, lending & digital assets",
+    "saas_title": "SaaS Platforms",
+    "saas_desc": "Multi-tenant, subscriptions & scale",
+    "ecommerce_title": "E-commerce Engine",
+    "ecommerce_desc": "Marketplaces, D2C & B2B commerce",
+    "edtech_title": "EdTech Solutions",
+    "edtech_desc": "LMS, course platforms & learning tools",
+    "startups_title": "Startups & Scale-ups",
+    "startups_desc": "MVP to scale, fixed scope & ownership",
+    "newsletter_title": "Let's stay in touch",
+    "newsletter_subtitle": "Enjoy 15% off your first consultation when you join our mailing list.",
+    "newsletter_placeholder": "Enter your email address",
+    "newsletter_cta": "Subscribe",
+    "newsletter_disclaimer": "We respect your privacy. Unsubscribe at any time."
+  },
   "projects": {
     "title": "Selected Work",
     "subtitle": "A selection of projects we've delivered for global teams.",
     "view_project": "View project",
     "detail_back": "Back to projects"
+  },
+  "industries_detail": {
+    "hero_badge": "Industries",
+    "cta_primary": "Get in touch",
+    "cta_secondary": "Explore services",
+    "cta_title": "Ready to build for your industry?",
+    "cta_button": "Contact us",
+    "slugs": {
+      "healthcare": {
+        "title": "Healthcare",
+        "title_highlight": "Intelligence",
+        "subtitle": "Domain-specific engineering for health systems: EHR platforms, telemedicine, hospital management, and healthcare SaaS.",
+        "hero_metrics": [
+          { "value": "12+", "label": "Projects Delivered" },
+          { "value": "99.99%", "label": "Uptime" },
+          { "value": "HIPAA", "label": "Compliant" }
+        ],
+        "features": ["Hospital & Clinic Management", "EHR Platforms", "Telemedicine & Remote Care", "Healthcare SaaS"],
+        "process_steps": [
+          { "step": "01", "title": "Discovery", "desc": "Understand compliance, workflows, and integration needs." },
+          { "step": "02", "title": "Design & build", "desc": "Secure, scalable systems built for healthcare." },
+          { "step": "03", "title": "Deploy & support", "desc": "Ongoing compliance and reliability." }
+        ]
+      },
+      "fintech": {
+        "title": "Fintech &",
+        "title_highlight": "Digital Economy",
+        "subtitle": "Digital banking, payment gateways, lending platforms, and blockchain-native financial systems.",
+        "hero_metrics": [
+          { "value": "18+", "label": "Projects" },
+          { "value": "100%", "label": "Uptime" }
+        ],
+        "features": ["Digital Banking", "Payment Gateways", "Lending & Mortgage", "Asset Management", "Blockchain & DeFi"],
+        "process_steps": [
+          { "step": "01", "title": "Compliance & design", "desc": "Regulatory alignment and architecture." },
+          { "step": "02", "title": "Build", "desc": "Secure, auditable systems." },
+          { "step": "03", "title": "Operate", "desc": "Monitoring and continuous compliance." }
+        ]
+      },
+      "ecommerce": {
+        "title": "E-commerce &",
+        "title_highlight": "Retail Tech",
+        "subtitle": "Marketplaces, D2C platforms, inventory and logistics systems, and B2B commerce engines.",
+        "hero_metrics": [
+          { "value": "24+", "label": "Projects" },
+          { "value": "99.98%", "label": "Uptime" }
+        ],
+        "features": ["Multi-vendor Marketplaces", "Inventory & Logistics", "D2C Platforms", "B2B Commerce"],
+        "process_steps": [
+          { "step": "01", "title": "Strategy", "desc": "Catalog, fulfillment, and scale requirements." },
+          { "step": "02", "title": "Build", "desc": "Checkout, payments, and operations." },
+          { "step": "03", "title": "Scale", "desc": "Performance and growth optimization." }
+        ]
+      },
+      "edtech": {
+        "title": "EdTech &",
+        "title_highlight": "Learning Platforms",
+        "subtitle": "Learning management systems, course platforms, and education technology for institutions and learners.",
+        "hero_metrics": [
+          { "value": "10+", "label": "Projects" }
+        ],
+        "features": ["LMS & Course Platforms", "Assessment & Analytics", "Collaboration Tools", "Mobile Learning"],
+        "process_steps": [
+          { "step": "01", "title": "Discover", "desc": "Learning outcomes and user flows." },
+          { "step": "02", "title": "Build", "desc": "Engaging, accessible learning experiences." },
+          { "step": "03", "title": "Iterate", "desc": "Content and feature evolution." }
+        ]
+      },
+      "saas": {
+        "title": "SaaS &",
+        "title_highlight": "Software Products",
+        "subtitle": "Scalable software-as-a-service products: multi-tenant architecture, subscriptions, and global delivery.",
+        "hero_metrics": [
+          { "value": "30+", "label": "Products" }
+        ],
+        "features": ["Multi-tenant Architecture", "Subscriptions & Billing", "API-first Design", "Analytics & Growth"],
+        "process_steps": [
+          { "step": "01", "title": "Product & architecture", "desc": "Tenancy, scale, and go-to-market." },
+          { "step": "02", "title": "Build", "desc": "Secure, scalable SaaS platform." },
+          { "step": "03", "title": "Launch & iterate", "desc": "Deploy and optimize." }
+        ]
+      },
+      "startups": {
+        "title": "Startups &",
+        "title_highlight": "High-Growth Ventures",
+        "subtitle": "From MVP to scale: fast delivery, clear architecture, and full ownership for startups.",
+        "hero_metrics": [
+          { "value": "2-4", "label": "Weeks to MVP" },
+          { "value": "90", "label": "Day Guarantee" }
+        ],
+        "features": ["MVP in Weeks", "Fixed Pricing", "Full Ownership", "Scale-Ready Architecture"],
+        "process_steps": [
+          { "step": "01", "title": "Scope", "desc": "Clear scope and fixed timeline." },
+          { "step": "02", "title": "Build", "desc": "Velocity without compromise." },
+          { "step": "03", "title": "Launch", "desc": "Deploy and support." }
+        ]
+      }
+    }
+  },
+  "blog": {
+    "badge": "Blog",
+    "title_line1": "Insights &",
+    "title_highlight": "Engineering",
+    "title_line2": "Updates",
+    "subtitle": "Technical insights, product updates, and engineering best practices from the Grovyn team.",
+    "read_more": "Read more",
+    "back": "Back to blog",
+    "no_posts": "No posts yet. Check back soon."
+  },
+  "automations": {
+    "hero_title_1": "Superhuman",
+    "hero_title_2": "team of",
+    "hero_title_highlight": "AI-employees.",
+    "hero_subtitle": "Custom-built digital workers that handle support, research, and documentation so your team can focus on growth.",
+    "hero_cta": "Book a demo ✦",
+    "hero_trust": "Loved by high-performance organizations",
+    "orbital_card_title": "AI Receptionist",
+    "orbital_card_status": "Active Status",
+    "orbital_card_workflow": "Workflow",
+    "orbital_card_sync": "Synchronizing...",
+    "orbital_support": "Support AI",
+    "orbital_scribe": "Scribe AI",
+    "orbital_researcher": "Researcher",
+    "orbital_custom": "Custom AI",
+    "use_cases": [
+      {
+        "id": "01",
+        "title": "Chat Bot",
+        "agent": "The AI Assistant",
+        "desc": "Deploy intelligent conversational agents that understand context, handle complex queries, and provide instant support 24/7. Seamlessly integrates with your existing systems to deliver personalized customer experiences at scale.",
+        "outcome": "95% reduction in response time, 24/7 availability.",
+        "accent": "text-emerald-500",
+        "color": "bg-emerald-50"
+      },
+      {
+        "id": "02",
+        "title": "Voice AI",
+        "agent": "The Voice Agent",
+        "desc": "Natural language processing that powers voice-activated interfaces, call center automation, and voice-enabled workflows. Understands intent, context, and sentiment to deliver human-like interactions.",
+        "outcome": "70% reduction in call handling time.",
+        "accent": "text-cyan-500",
+        "color": "bg-cyan-50"
+      },
+      {
+        "id": "03",
+        "title": "Fraud Detection",
+        "agent": "The Security Guardian",
+        "desc": "Real-time anomaly detection powered by advanced machine learning. Analyzes transaction patterns, user behavior, and system logs to identify and prevent fraudulent activities before they impact your business.",
+        "outcome": "99.9% fraud prevention accuracy.",
+        "accent": "text-orange-500",
+        "color": "bg-orange-50"
+      },
+      {
+        "id": "04",
+        "title": "Recommendation Systems",
+        "agent": "The Personalization Engine",
+        "desc": "Intelligent algorithms that analyze user behavior, preferences, and historical data to deliver hyper-personalized product, content, and service recommendations that drive engagement and conversion.",
+        "outcome": "40% increase in conversion rates.",
+        "accent": "text-purple-500",
+        "color": "bg-purple-50"
+      },
+      {
+        "id": "05",
+        "title": "Automations",
+        "agent": "The Workflow Orchestrator",
+        "desc": "End-to-end process automation that eliminates repetitive tasks. From data entry to complex multi-step workflows, our AI handles it all—intelligently routing, processing, and executing business operations.",
+        "outcome": "80% reduction in manual processing time.",
+        "accent": "text-pink-500",
+        "color": "bg-pink-50"
+      },
+      {
+        "id": "06",
+        "title": "Marketing Intelligence",
+        "agent": "The Growth Analyst",
+        "desc": "Data-driven insights that power your marketing strategy. Analyzes campaign performance, customer segments, market trends, and competitor activity to optimize spend and maximize ROI across all channels.",
+        "outcome": "3x improvement in marketing ROI.",
+        "accent": "text-blue-500",
+        "color": "bg-blue-50"
+      }
+    ],
+    "session_label": "GROVYN_LIVE_SESSION",
+    "dashboard_title": "Project Dashboard",
+    "dashboard_updated": "Updated: Real-time",
+    "system_operational": "System Operational",
+    "processing_label": "Processing...",
+    "agent_active": "is active",
+    "agent_active_desc": "Analyzing incoming data and updating internal business systems in real-time.",
+    "latest_logs": "Latest Processed Logs",
+    "log_template": "Data validation successful. Action items for {title} have been indexed and archived in your corporate storage.",
+    "deployed_agent": "Deployed Agent:",
+    "results_badge": "Why Grovyn AI?",
+    "results_heading": "Engineered",
+    "results_highlight": "Reliability.",
+    "results_cards": [
+      {
+        "title": "Infinite Memory",
+        "desc": "Our AI remembers every document and conversation, creating a persistent brain for your company."
+      },
+      {
+        "title": "24/7 Operations",
+        "desc": "Digital workers that never tire, ensuring your processes run smoothly while you sleep."
+      },
+      {
+        "title": "Enterprise ROI",
+        "desc": "Scale your output without increasing headcount. Achieve 10x throughput instantly."
+      }
+    ],
+    "cta_heading_1": "Build the",
+    "cta_heading_2": "Future.",
+    "cta_subtitle": "Stop hiring. Start building digital workers that scale with your ambition.",
+    "cta_button": "Book Your AI Audit",
+    "cta_compliance": "ISO 27001 COMPLIANT"
   }
 }

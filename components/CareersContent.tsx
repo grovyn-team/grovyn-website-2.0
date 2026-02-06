@@ -3,29 +3,37 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import {
-  Code2,
-  Users,
-  Upload,
-  Send,
   ChevronDown,
   CheckCircle2,
-  ShieldCheck,
-  ExternalLink,
+  Globe,
   Sparkles,
-  Map,
-  Activity,
-  MousePointer2,
+  Terminal,
+  Cpu,
+  ArrowRight,
+  MapPin,
+  Upload,
+  Send,
+  ExternalLink,
 } from "lucide-react";
 
-type Opening = { title: string; type: string; team: string };
+type Opening = {
+  slug?: string;
+  title: string;
+  type: string;
+  team: string;
+  location?: string;
+  requirements?: string[];
+};
 
 export default function CareersContent() {
+  const locale = useLocale();
   const t = useTranslations("careers");
   const openings = (t.raw("openings") as Opening[]) ?? [];
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [openJobSlug, setOpenJobSlug] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -73,209 +81,290 @@ export default function CareersContent() {
     );
   }
 
+  const oneTeamItems = [
+    t("one_team_item_1"),
+    t("one_team_item_2"),
+    t("one_team_item_3"),
+    t("one_team_item_4"),
+  ];
+
+  const perks = [
+    { label: t("perk_remote"), icon: <Globe /> },
+    { label: t("perk_stock"), icon: <Sparkles /> },
+    { label: t("perk_learning"), icon: <Terminal /> },
+    { label: t("perk_gear"), icon: <Cpu /> },
+  ];
+
   return (
-    <div className="bg-white overflow-x-hidden">
-      <section className="relative min-h-[85vh] flex items-center justify-center bg-black overflow-hidden px-6">
-        <div className="absolute inset-0 opacity-40">
+    <div className="bg-white overflow-x-hidden selection:bg-[#10b981] selection:text-white">
+      <section className="relative min-h-[85vh] flex items-center bg-black overflow-hidden px-6 lg:px-12 pt-20">
+        <div className="absolute inset-0 z-0">
           <div className="absolute inset-0">
             <Image
               src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2000"
-              alt="Cyber Engineering"
+              alt="Engineering Future"
               fill
-              className="object-cover mix-blend-overlay"
+              className="object-cover opacity-20"
               priority
               sizes="100vw"
             />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-white" />
+          <div className="absolute bottom-0 left-0 w-full h-64 overflow-hidden pointer-events-none opacity-40">
+            <svg viewBox="0 0 1440 320" className="absolute bottom-0 w-[120%] h-full text-[#10b981] fill-none stroke-current stroke-[1.5]">
+              <path d="M0,160 C320,300 420,100 640,200 C860,300 960,100 1280,200 L1440,320" />
+              <path d="M0,200 C320,100 420,300 640,160 C860,100 960,300 1280,160 L1440,200" className="opacity-50" />
+            </svg>
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent" />
         </div>
+
         <div
-          className={`relative z-10 max-w-6xl mx-auto text-center transition-all duration-1000 transform ${
+          className={`relative z-10 max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-20 items-center transition-all duration-1000 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
           }`}
         >
-          <div className="inline-flex mt-3 items-center space-x-3 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl mb-10">
-            <div className="w-2 h-2 rounded-full bg-[#10b981] animate-ping" />
-            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white">
-              {t("badge")}
-            </span>
-          </div>
-          <h1 className="text-4xl md:text-[4.4rem] font-black text-white tracking-tighter leading-[0.85] mb-8">
-            {t("title_line1")} <br />
-            <span className="text-[#10b981]">{t("title_highlight")}</span>
-          </h1>
-          <p className="text-gray-400 text-lg md:text-2xl font-medium max-w-3xl mx-auto leading-relaxed px-4">
-            {t("subtitle")}
-          </p>
-          <div className="mt-16 flex justify-center">
-            <div className="w-[1px] h-20 bg-gradient-to-b from-[#10b981] to-transparent" />
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 md:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="inline-block relative">
-              <span className="text-[#10b981] font-black text-[10px] uppercase tracking-[0.6em] mb-4 block">
-                {t("culture_badge")}
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <span className="text-white/60 font-black text-xs uppercase tracking-[0.4em]">
+                {t("hero_badge")}
               </span>
-              <h2 className="text-4xl md:text-6xl font-black text-[#111] tracking-tighter leading-none">
-                {t("culture_title")} <span className="text-[#10b981]">{t("culture_highlight")}</span>
-              </h2>
-              <div className="absolute -right-8 -top-8 animate-bounce hidden md:block">
-                <Sparkles className="text-[#10b981]" size={28} />
-              </div>
+              <h1 className="text-4xl md:text-[4.5rem] font-black text-white tracking-tighter leading-[0.85]">
+                {t("hero_title_line1")} <br />
+                {t("hero_title_line2")} <br />
+                <span className="text-[#10b981]">{t("hero_title_highlight")}</span>
+              </h1>
             </div>
-            <p className="mt-6 text-gray-500 text-base font-medium max-w-2xl mx-auto leading-relaxed">
-              {t("culture_subtitle")}
+            <p className="text-gray-400 text-lg md:text-xl font-medium max-w-xl leading-relaxed">
+              {t("hero_subtitle")}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 lg:gap-6 auto-rows-[minmax(260px,_auto)]">
-            <div className="md:col-span-7 group relative bg-[#f9f9f9] rounded-2xl p-6 lg:p-8 overflow-hidden border border-gray-100 transition-all duration-700 hover:shadow-2xl">
-              <div className="h-full flex flex-col justify-between relative z-10">
-                <div className="space-y-4">
-                  <div className="w-11 h-11 rounded-xl bg-[#10b981] flex items-center justify-center text-black shadow-lg shadow-[#10b981]/20">
-                    <Map size={22} />
-                  </div>
-                  <div>
-                    <span className="text-[10px] font-black uppercase tracking-widest text-[#10b981]">
-                      {t("remote_badge")}
-                    </span>
-                    <h3 className="text-2xl font-black text-[#111] tracking-tighter mt-1">
-                      {t("remote_title")}
-                    </h3>
-                  </div>
-                  <p className="text-gray-500 text-sm leading-relaxed font-medium max-w-sm">
-                    {t("remote_desc")}
-                  </p>
-                </div>
-              </div>
-              <div className="absolute right-0 top-0 bottom-0 w-1/2 opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none">
-                <Map className="w-full h-full object-contain p-6" strokeWidth={1} />
-              </div>
-            </div>
-
-            <div className="md:col-span-5 group bg-black rounded-2xl p-6 lg:p-8 flex flex-col justify-between relative overflow-hidden transition-all duration-700 border border-white/5">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#10b981]/10 to-transparent" />
-              <div className="relative z-10 space-y-3">
-                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-[#10b981]">
-                  <Activity size={20} />
-                </div>
-                <h3 className="text-2xl font-black text-white tracking-tight">
-                  {t("rhythm_title")}
-                </h3>
-                <p className="text-gray-400 text-xs leading-relaxed font-medium">
-                  {t("rhythm_desc")}
-                </p>
-              </div>
-              <div className="h-14 flex items-end justify-between space-x-1 relative z-10">
-                {[30, 60, 45, 90, 60, 80, 50, 95, 40, 70].map((h, i) => (
-                  <div
-                    key={i}
-                    className="flex-1 bg-[#10b981]/20 rounded-t-sm group-hover:bg-[#10b981] transition-all duration-500"
-                    style={{ height: `${h}%`, transitionDelay: `${i * 30}ms` }}
-                  />
-                ))}
-              </div>
-            </div>
-
-            <div className="md:col-span-6 group border border-gray-100 hover:bg-black bg-[#21453c] rounded-2xl p-6 lg:p-8 flex items-center justify-between transition-all duration-500">
-              <div className="space-y-2">
-                <div className="inline-flex items-center space-x-2 group-hover:text-[#10b981] text-white text-[9px] font-black uppercase tracking-widest">
-                  <Code2 size={12} />
-                  <span className="group-hover:text-[#10b981]">{t("agency_badge")}</span>
-                </div>
-                <h4 className="text-2xl font-black group-hover:text-white text-white">{t("agency_title")}</h4>
-                <p className="text-white text-sm font-medium max-w-xs">
-                  {t("agency_desc")}
-                </p>
-              </div>
-              <div className="w-12 h-12 rounded-2xl bg-gray-50 flex items-center justify-center text-[#10b981] group-hover:bg-[#10b981] group-hover:text-white transition-all duration-500 shrink-0">
-                <MousePointer2 size={22} />
-              </div>
-            </div>
-
-            <div className="md:col-span-6 group border border-gray-100 rounded-2xl p-6 lg:p-8 flex items-center justify-between transition-all duration-500 hover:scale-[0.99]">
-              <div className="space-y-2">
-                <div className="inline-flex items-center space-x-2 text-black group-hover:text-[#10b981] text-[9px] font-black uppercase tracking-widest">
-                  <ShieldCheck size={12} />
-                  <span>{t("trust_badge")}</span>
-                </div>
-                <h4 className="text-2xl font-black text-black transition-colors">
-                  {t("trust_title")}
-                </h4>
-                <p className="text-black/50 text-sm font-medium max-w-xs transition-colors">
-                  {t("trust_desc")}
-                </p>
-              </div>
-              <div className="w-12 h-12 rounded-2xl bg-black group-hover:bg-[#10b981] flex items-center justify-center text-[#10b981] group-hover:text-black transition-all duration-500 shrink-0">
-                <Users size={22} />
-              </div>
+          <div className="relative group">
+            <div className="absolute -inset-4 bg-[#10b981]/10 rounded-[3rem] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white/10 aspect-video">
+              <Image
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200"
+                alt="Our Workspace"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-white py-24 md:py-32">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <p className="text-[#10b981] font-black text-[10px] uppercase tracking-[0.2em] mb-3">
-              {t("openings_sub")}
-            </p>
-            <h2 className="text-3xl md:text-4xl font-black text-[#111] tracking-tighter">
-              {t("openings_title")}
-            </h2>
+      <section className="py-40 bg-white px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-24">
+          <div className="lg:w-1/2 relative">
+            <div className="grid grid-cols-2 gap-4 md:gap-8">
+              <div className="rounded-[2rem] overflow-hidden aspect-[4/3] shadow-xl border-4 border-white">
+                <Image
+                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=600"
+                  alt="Team 1"
+                  width={600}
+                  height={450}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="rounded-[2.5rem] overflow-hidden aspect-[3/4] shadow-2xl border-4 border-white translate-y-12">
+                <Image
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600"
+                  alt="Team 2"
+                  width={600}
+                  height={800}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="rounded-[2.5rem] overflow-hidden aspect-square shadow-2xl border-4 border-white -translate-y-12">
+                <Image
+                  src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=600"
+                  alt="Team 3"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="rounded-[2rem] overflow-hidden aspect-[4/3] shadow-xl border-4 border-white">
+                <Image
+                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=600"
+                  alt="Team 4"
+                  width={600}
+                  height={450}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {openings.map((job, i) => (
-              <div
-                key={i}
-                role="button"
-                tabIndex={0}
-                onClick={() =>
-                  document.getElementById("apply-form")?.scrollIntoView({ behavior: "smooth" })
-                }
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    document.getElementById("apply-form")?.scrollIntoView({ behavior: "smooth" });
-                  }
-                }}
-                className="group relative bg-white border border-gray-100 rounded-2xl p-5 lg:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 transition-all duration-300 hover:bg-black hover:border-[#10b981]/40 hover:shadow-xl cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10b981] focus-visible:ring-offset-2"
-              >
-                <div className="min-w-0 flex-1">
-                  <h3 className="text-lg font-black text-[#111] group-hover:text-white transition-colors tracking-tight leading-tight">
-                    {job.title}
-                  </h3>
-                  <div className="flex flex-wrap items-center gap-x-3 gap-y-0.5 mt-1.5 text-[10px] font-bold uppercase tracking-widest text-gray-400 group-hover:text-[#10b981] transition-colors">
-                    <span>{job.team}</span>
-                    <span className="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-[#10b981] shrink-0" aria-hidden />
-                    <span>{job.type}</span>
+
+          <div className="lg:w-1/2 space-y-10">
+            <h2 className="text-5xl font-black text-[#111] tracking-tighter leading-none">
+              {t("one_team_title")} <br />
+              <span className="text-[#10b981]">{t("one_team_title_highlight")}</span>
+            </h2>
+            <p className="text-gray-500 text-lg leading-relaxed font-medium">
+              {t("one_team_subtitle")}
+            </p>
+            <div className="space-y-4">
+              {oneTeamItems.map((item) => (
+                <div key={item} className="flex items-center space-x-4">
+                  <div className="text-[#10b981]">
+                    <CheckCircle2 size={20} />
+                  </div>
+                  <span className="font-bold text-gray-700">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-40 bg-gray-50/50 border-t border-gray-100 px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-20 space-y-4">
+            <h2 className="text-5xl font-black text-[#111] tracking-tighter">
+              {t("open_roles_title")}
+            </h2>
+            <p className="text-gray-400 font-black text-xs uppercase tracking-widest">
+              {t("open_roles_count", { count: openings.length })}
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-6 mb-12">
+            <div className="text-[10px] font-black uppercase tracking-widest text-gray-400">
+              {t("filter_by")}
+            </div>
+            <div className="flex flex-wrap gap-4">
+              {[t("filter_all_locations"), t("filter_all_types"), t("filter_all_teams")].map(
+                (filter) => (
+                  <div key={filter} className="relative group">
+                    <button
+                      type="button"
+                      className="bg-white border border-gray-100 rounded-xl px-6 py-3.5 text-xs font-black uppercase tracking-widest flex items-center space-x-6 min-w-[180px] justify-between shadow-sm"
+                    >
+                      <span>{filter}</span>
+                      <ChevronDown size={14} className="text-gray-400" />
+                    </button>
+                  </div>
+                )
+              )}
+            </div>
+          </div>
+
+          <div className="space-y-2">
+            {openings.map((job) => {
+              const slug = job.slug ?? job.title.toLowerCase().replace(/\s+/g, "-");
+              const isOpen = openJobSlug === slug;
+              const requirements = job.requirements ?? [];
+
+              return (
+                <div
+                  key={slug}
+                  className={`bg-white border rounded-[2rem] overflow-hidden transition-all duration-500 ${
+                    isOpen ? "border-[#10b981] shadow-2xl" : "border-gray-100 hover:border-gray-200"
+                  }`}
+                >
+                  <button
+                    type="button"
+                    onClick={() => setOpenJobSlug(isOpen ? null : slug)}
+                    className="w-full px-10 py-10 flex flex-col md:flex-row items-center justify-between text-left group"
+                  >
+                    <div className="space-y-2 mb-6 md:mb-0">
+                      <h3 className="text-2xl font-black text-[#111] tracking-tight group-hover:text-[#10b981] transition-colors">
+                        {job.title}
+                      </h3>
+                      <div className="flex items-center space-x-4 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                        <span>{job.team}</span>
+                        <span className="w-1 h-1 rounded-full bg-gray-200" />
+                        <span>{job.type}</span>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-12">
+                      {job.location && (
+                        <div className="text-sm font-bold text-gray-400 flex items-center space-x-2">
+                          <MapPin size={16} className="text-[#10b981]" />
+                          <span>{job.location}</span>
+                        </div>
+                      )}
+                      <div
+                        className={`transition-transform duration-500 ${isOpen ? "rotate-180" : ""}`}
+                      >
+                        <ChevronDown size={24} className="text-gray-300" />
+                      </div>
+                    </div>
+                  </button>
+
+                  <div
+                    className={`grid transition-[grid-template-rows,opacity] duration-500 ${
+                      isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <div className="px-10 pb-12 pt-4 border-t border-gray-50 bg-[#fafafa]/50">
+                        <div className="grid lg:grid-cols-2 gap-12">
+                          <div className="space-y-6">
+                            <h4 className="text-xs font-black uppercase tracking-widest text-[#10b981]">
+                              {t("requirements_label")}
+                            </h4>
+                            <ul className="space-y-4">
+                              {requirements.map((req, idx) => (
+                                <li key={idx} className="flex items-start space-x-4 group">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-[#10b981] mt-2 group-hover:scale-150 transition-transform shrink-0" />
+                                  <span className="text-gray-600 font-medium leading-relaxed">
+                                    {req}
+                                  </span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div className="flex flex-col justify-end items-center lg:items-end">
+                            <Link
+                              href={`/${locale}/careers/${slug}`}
+                              className="bg-black text-white px-12 py-5 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-[#10b981] hover:text-black transition-all shadow-xl flex items-center space-x-4 group"
+                            >
+                              <span>{t("apply_now")}</span>
+                              <ArrowRight
+                                size={18}
+                                className="group-hover:translate-x-2 transition-transform"
+                              />
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <span className="inline-flex items-center justify-center gap-2 shrink-0 w-full sm:w-auto px-4 py-2.5 rounded-full text-[11px] font-black uppercase tracking-wider bg-[#10b981]/10 text-[#10b981] group-hover:bg-[#10b981] group-hover:text-black transition-all duration-300 border border-[#10b981]/20 group-hover:border-[#10b981] pointer-events-none">
-                  {t("apply")}
-                  <ExternalLink size={12} strokeWidth={2.5} />
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-40 px-6 lg:px-12 bg-white text-center">
+        <div className="max-w-4xl mx-auto space-y-24">
+          <div className="space-y-4">
+            <h2 className="text-5xl font-black tracking-tighter">
+              {t("why_join_title")}
+            </h2>
+            <p className="text-gray-500 text-lg font-medium">
+              {t("why_join_subtitle")}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+            {perks.map((perk) => (
+              <div
+                key={perk.label}
+                className="flex flex-col items-center space-y-6 group"
+              >
+                <div className="w-20 h-20 rounded-3xl bg-gray-50 flex items-center justify-center text-[#10b981] group-hover:bg-[#10b981] group-hover:text-white transition-all shadow-sm">
+                  {perk.icon}
+                </div>
+                <span className="text-xs font-black uppercase tracking-widest text-gray-800">
+                  {perk.label}
                 </span>
               </div>
             ))}
-          </div>
-          <div className="mt-14 text-center">
-            <p className="text-gray-500 text-sm font-medium">
-              {t("no_fit")}
-            </p>
-            <button
-              type="button"
-              onClick={() =>
-                document.getElementById("apply-form")?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="mt-3 inline-flex items-center gap-2 text-[#10b981] font-bold text-xs uppercase tracking-wider hover:underline underline-offset-4 transition-opacity hover:opacity-90"
-            >
-              {t("general_app")}
-              <ExternalLink size={12} />
-            </button>
           </div>
         </div>
       </section>
@@ -322,9 +411,7 @@ export default function CareersContent() {
                       type="text"
                       placeholder={t("full_name_placeholder")}
                       className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-sm font-medium text-[#111] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#10b981] focus:border-transparent transition-all"
-                      onChange={(e) =>
-                        setFormData({ ...formData, fullName: e.target.value })
-                      }
+                      onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     />
                   </div>
                   <div className="space-y-1.5">
@@ -337,9 +424,7 @@ export default function CareersContent() {
                       type="email"
                       placeholder={t("email_placeholder")}
                       className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-sm font-medium text-[#111] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#10b981] focus:border-transparent transition-all"
-                      onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
-                      }
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     />
                   </div>
                 </div>
@@ -352,9 +437,7 @@ export default function CareersContent() {
                       id="careers-role"
                       required
                       className="w-full bg-gray-50 border border-gray-100 rounded-xl pl-4 pr-10 py-3 text-sm font-medium text-[#111] focus:outline-none focus:ring-2 focus:ring-[#10b981] focus:border-transparent appearance-none cursor-pointer transition-all"
-                      onChange={(e) =>
-                        setFormData({ ...formData, position: e.target.value })
-                      }
+                      onChange={(e) => setFormData({ ...formData, position: e.target.value })}
                     >
                       <option value="">{t("select_domain")}</option>
                       <option value="frontend">{t("option_frontend")}</option>
@@ -378,9 +461,7 @@ export default function CareersContent() {
                     rows={4}
                     placeholder={t("technical_brief_placeholder")}
                     className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-sm font-medium text-[#111] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#10b981] focus:border-transparent resize-none transition-all"
-                    onChange={(e) =>
-                      setFormData({ ...formData, message: e.target.value })
-                    }
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   />
                 </div>
                 <div className="space-y-2 relative">
@@ -407,9 +488,7 @@ export default function CareersContent() {
                       <p className="text-sm font-bold text-[#111]">
                         {formData.resume ? formData.resume.name : t("resume_placeholder")}
                       </p>
-                      <p className="text-xs text-gray-500 mt-0.5">
-                        {t("resume_hint")}
-                      </p>
+                      <p className="text-xs text-gray-500 mt-0.5">{t("resume_hint")}</p>
                     </div>
                   </label>
                 </div>

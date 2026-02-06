@@ -94,6 +94,11 @@ export default function Footer({ locale }: { locale: string }) {
             <h5 className="text-white text-sm font-bold mb-6">{t("resources_heading")}</h5>
             <ul className="text-xs space-y-4">
               <li>
+                <Link href={`${base}/blog`} className="hover:text-emerald-500 transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
                 <Link href={`${base}#contact`} className="hover:text-emerald-500 transition-colors">
                   {t("contact")}
                 </Link>

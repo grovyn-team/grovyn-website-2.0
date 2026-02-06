@@ -16,7 +16,6 @@ export default function ServicesWeOffer() {
 
   return (
     <section className="relative py-20 md:py-28 px-6 overflow-hidden bg-[#f8fafc]">
-      {/* Subtle grid pattern */}
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
@@ -39,9 +38,7 @@ export default function ServicesWeOffer() {
           </p>
         </div>
 
-        {/* Bento grid: one large left card, two stacked right cards */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 md:gap-6">
-          {/* Featured card — spans 2 rows on large screens */}
           <div className="lg:col-span-2 lg:row-span-2">
             <Card
               data={cards[0]}
@@ -93,7 +90,6 @@ function Card({
         featured ? "lg:p-8" : ""
       }`}
     >
-      {/* Accent blob — different position per card type */}
       <div
         className={`absolute rounded-full bg-[#10b981]/10 blur-3xl transition-opacity group-hover:bg-[#10b981]/15 ${
           featured ? "w-48 h-48 -top-12 -right-12" : "w-32 h-32 top-0 right-0"

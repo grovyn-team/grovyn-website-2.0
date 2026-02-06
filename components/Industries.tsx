@@ -12,7 +12,8 @@ import {
   Database,
   BarChart3,
   Globe,
-  Settings,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -85,11 +86,6 @@ function BlueprintIllustration({
         >
           {icons[id]}
         </div>
-        {isActive && (
-          <div className="absolute -bottom-1.5 px-1.5 py-0.5 bg-[#10b981] text-[6px] font-black text-white rounded-full uppercase tracking-widest">
-            {id}
-          </div>
-        )}
       </div>
       {isActive &&
         satelliteIcons[id].map((Icon, idx) => {
@@ -128,12 +124,39 @@ export default function Industries() {
     [t]
   );
   const [activeIndex, setActiveIndex] = useState(0);
+  const [windowStart, setWindowStart] = useState(0);
   const current = industries[activeIndex];
 
-  const next = useCallback(
-    () => setActiveIndex((prev) => (prev + 1) % industries.length),
-    [industries.length]
-  );
+  const visibleCount = Math.min(4, industries.length);
+  const visibleIndustries = industries.slice(windowStart, windowStart + visibleCount);
+
+  const next = useCallback(() => {
+    const nextIdx = (activeIndex + 1) % industries.length;
+    setActiveIndex(nextIdx);
+    setWindowStart((start) => {
+      if (nextIdx >= start + visibleCount) return nextIdx - visibleCount + 1;
+      if (nextIdx < start) return nextIdx;
+      return start;
+    });
+  }, [industries.length, activeIndex, visibleCount]);
+
+  const prev = useCallback(() => {
+    const prevIdx = (activeIndex - 1 + industries.length) % industries.length;
+    setActiveIndex(prevIdx);
+    setWindowStart((start) => {
+      if (prevIdx < start) return prevIdx;
+      if (prevIdx >= start + visibleCount) return prevIdx - visibleCount + 1;
+      return start;
+    });
+  }, [industries.length, activeIndex, visibleCount]);
+
+  useEffect(() => {
+    setWindowStart((start) => {
+      if (activeIndex < start) return activeIndex;
+      if (activeIndex >= start + visibleCount) return activeIndex - visibleCount + 1;
+      return start;
+    });
+  }, [activeIndex, visibleCount]);
 
   useEffect(() => {
     const interval = setInterval(next, 5000);
@@ -146,7 +169,6 @@ export default function Industries() {
       className="py-16 bg-white px-6 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <div className="flex items-center space-x-4 mb-10">
           <div className="flex space-x-2">
             {[...Array(3)].map((_, i) => (
@@ -161,8 +183,7 @@ export default function Industries() {
           </h2>
         </div>
 
-        {/* Content card — reduced padding and radii */}
-        <div className="relative bg-[#f4f6f8] rounded-[3rem] p-5 md:p-8 lg:p-10 overflow-hidden border border-gray-100 shadow-[inset_0_2px_4px_rgba(0,0,0,0.01)]">
+        <div className="relative bg-[#f4f6f8] rounded-[2rem] p-5 md:p-8 lg:p-10 overflow-hidden border border-gray-100 shadow-[inset_0_2px_4px_rgba(0,0,0,0.01)]">
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none opacity-[0.035] overflow-hidden">
             <h1 className="text-[10rem] lg:text-[16rem] font-black tracking-tighter text-black whitespace-nowrap leading-none transition-all duration-1000">
               {current.watermark}
@@ -170,9 +191,8 @@ export default function Industries() {
           </div>
 
           <div className="flex flex-col lg:flex-row items-stretch gap-8 lg:gap-12 relative z-10">
-            {/* Left: image card — smaller border and radii */}
             <div className="lg:w-[46%] relative">
-              <div className="rounded-[2.5rem] overflow-hidden aspect-[1.15/1] shadow-xl relative border-4 border-white/40 group">
+              <div className="rounded-[1rem] overflow-hidden aspect-[1.15/1] shadow-xl relative border-4 border-white/40 group">
                 <Image
                   src={current.image}
                   alt={current.title}
@@ -208,7 +228,6 @@ export default function Industries() {
               </div>
             </div>
 
-            {/* Right: title, list, metrics — smaller typography and spacing */}
             <div className="lg:w-[54%] flex flex-col justify-center space-y-8">
               <div className="space-y-3">
                 <h3 className="text-4xl md:text-5xl font-black text-[#111] leading-[0.9] tracking-tighter">
@@ -255,30 +274,47 @@ export default function Industries() {
           </div>
         </div>
 
-        <div className="mt-[-30px] flex flex-col items-center justify-center">
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-            <div className="w-5 h-5 rounded-full bg-gray-300 flex-shrink-0" aria-hidden />
-            <div className="flex items-center space-x-3 md:space-x-5">
-              {industries.map((ind, idx) => (
-                <button
-                  key={ind.id}
-                  type="button"
-                  onClick={() => setActiveIndex(idx)}
-                  className={`group relative w-20 h-20 bg-white rounded-2xl flex items-center justify-center transition-all duration-500 border-2 overflow-hidden ${activeIndex === idx ? "border-[#10b981] shadow-xl z-20 scale-105 bg-[#10b981]/5" : "border-gray-300 hover:border-gray-300"}`}
-                  aria-label={`Go to ${ind.title}`}
-                  aria-current={activeIndex === idx ? "true" : undefined}
-                >
-                  <BlueprintIllustration
-                    id={ind.id}
-                    isActive={activeIndex === idx}
-                  />
-                  {activeIndex === idx && (
-                    <div className="absolute inset-0 border-4 border-[#10b981]/10 rounded-2xl animate-pulse" />
-                  )}
-                </button>
-              ))}
+        <div className="mt-[-20px] flex flex-col items-center justify-center relative z-10">
+          <div className="flex items-center justify-center gap-4 md:gap-6">
+            <button
+              type="button"
+              onClick={prev}
+              className="relative z-0 w-12 h-12 rounded-xl bg-white border-2 border-gray-200 flex items-center justify-center text-gray-500 hover:text-[#10b981] hover:border-[#10b981]/40 hover:bg-[#10b981]/5 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_12px_rgba(16,185,129,0.15)] transition-all duration-300 flex-shrink-0"
+              aria-label="Previous industry"
+            >
+              <ChevronLeft size={24} strokeWidth={2.5} />
+            </button>
+            <div className="relative z-10 flex items-center space-x-3 md:space-x-5">
+              {visibleIndustries.map((ind) => {
+                const idx = industries.indexOf(ind);
+                return (
+                  <button
+                    key={ind.id}
+                    type="button"
+                    onClick={() => setActiveIndex(idx)}
+                    className={`group relative z-10 w-20 h-20 bg-white rounded-2xl flex items-center justify-center transition-all duration-500 border-2 overflow-visible ${activeIndex === idx ? "border-[#10b981] shadow-[0_8px_24px_-4px_rgba(16,185,129,0.25),0_0_0_1px_rgba(16,185,129,0.1)] scale-105 bg-[#10b981]/5" : "border-gray-300 hover:border-gray-400 hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)]"}`}
+                    aria-label={`Go to ${ind.title}`}
+                    aria-current={activeIndex === idx ? "true" : undefined}
+                  >
+                    <BlueprintIllustration
+                      id={ind.id}
+                      isActive={activeIndex === idx}
+                    />
+                    {activeIndex === idx && (
+                      <div className="absolute inset-0 border-4 border-[#10b981]/10 rounded-2xl animate-pulse pointer-events-none" />
+                    )}
+                  </button>
+                );
+              })}
             </div>
-            <div className="w-5 h-5 rounded-full bg-gray-300 flex-shrink-0" aria-hidden />
+            <button
+              type="button"
+              onClick={next}
+              className="relative z-0 w-12 h-12 rounded-xl bg-white border-2 border-gray-200 flex items-center justify-center text-gray-500 hover:text-[#10b981] hover:border-[#10b981]/40 hover:bg-[#10b981]/5 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_12px_rgba(16,185,129,0.15)] transition-all duration-300 flex-shrink-0"
+              aria-label="Next industry"
+            >
+              <ChevronRight size={24} strokeWidth={2.5} />
+            </button>
           </div>
         </div>
       </div>
