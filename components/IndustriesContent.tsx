@@ -86,31 +86,31 @@ export default function IndustriesContent() {
           aria-hidden
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-3 text-[#10b981] font-bold text-xs uppercase tracking-[0.35em] mb-6 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
-              <div className="w-10 h-[2px] bg-[#10b981] rounded-full" />
+            <div className="flex items-center gap-2 sm:gap-3 text-[#10b981] font-bold text-[10px] sm:text-xs uppercase tracking-[0.35em] mb-4 sm:mb-6 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+              <div className="w-8 sm:w-10 h-[2px] bg-[#10b981] rounded-full" />
               <span>{t("hero_badge")}</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-[4.2rem] xl:text-[4.5rem] font-black tracking-tight leading-[0.92] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[4.2rem] xl:text-[4.5rem] font-black tracking-tight leading-[0.92] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
               {t("hero_title_line1")}{" "}
               <span className="text-white">{t("hero_title_line2")}</span>
               <br />
               <span className="text-[#10b981] italic drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]">{t("hero_title_highlight")}</span>
             </h1>
-            <p className="mt-6 text-white/95 text-base lg:text-lg font-medium leading-relaxed max-w-lg drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
+            <p className="mt-4 sm:mt-6 text-white/95 text-sm sm:text-base lg:text-lg font-medium leading-relaxed max-w-lg drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
               {t("hero_subtitle")}
             </p>
-            <div className="flex flex-wrap items-center gap-4 mt-10">
+            <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 mt-6 sm:mt-10">
               <Link
                 href={`${base}#contact`}
-                className="inline-flex items-center justify-center gap-2 bg-[#10b981] text-black px-8 py-4 rounded-xl font-black text-xs uppercase tracking-widest hover:bg-[#34d399] hover:scale-[1.02] transition-all shadow-lg shadow-[#10b981]/30"
+                className="inline-flex items-center justify-center gap-2 bg-[#10b981] text-black px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-black text-[10px] sm:text-xs uppercase tracking-widest hover:bg-[#34d399] hover:scale-[1.02] transition-all shadow-lg shadow-[#10b981]/30 w-full sm:w-auto"
               >
                 {t("hero_cta")}
               </Link>
               <a
                 href={`${base}#verticals`}
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-white/30 bg-white/10 text-white font-bold text-sm uppercase tracking-wider hover:bg-[#10b981]/20 hover:border-[#10b981]/50 hover:text-[#10b981] transition-all drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-white/30 bg-white/10 text-white font-bold text-xs sm:text-sm uppercase tracking-wider hover:bg-[#10b981]/20 hover:border-[#10b981]/50 hover:text-[#10b981] transition-all drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)] w-full sm:w-auto"
               >
                 {t("hero_explore_sectors")}
                 <span className="text-[#10b981]">↓</span>
@@ -120,29 +120,29 @@ export default function IndustriesContent() {
         </div>
       </section>
 
-      <section className="py-32 px-6 lg:px-12 bg-[#f4f7fa]">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center">
-          <div className="space-y-8">
-            <span className="text-gray-400 font-bold text-xs uppercase tracking-widest">
+      <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-12 bg-[#f4f7fa]">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-24 items-center">
+          <div className="space-y-6 sm:space-y-8">
+            <span className="text-gray-400 font-bold text-[10px] sm:text-xs uppercase tracking-widest">
               {t("section2_badge")}
             </span>
-            <h2 className="text-5xl font-black text-[#111] tracking-tighter leading-[0.95]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111] tracking-tighter leading-[0.95]">
               {t("section2_title_line1")} <br />
               {t("section2_title_line2")} <br />
               <span className="text-[#10b981]">{t("section2_title_highlight")}</span>
             </h2>
-            <p className="text-gray-500 text-lg font-medium leading-relaxed max-w-md">
+            <p className="text-gray-500 text-base sm:text-lg font-medium leading-relaxed max-w-md">
               {t("section2_subtitle")}
             </p>
             <Link
               href={`${base}/portfolio`}
-              className="inline-block bg-[#10b981] text-black px-10 py-4 rounded-xl font-black text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-all"
+              className="inline-block bg-[#10b981] text-black px-8 sm:px-10 py-3 sm:py-4 rounded-xl font-black text-[10px] sm:text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-all w-full sm:w-auto text-center"
             >
               {t("section2_cta")}
             </Link>
           </div>
-          <div className="relative">
-            <div className="relative z-10 w-[80%] rounded-3xl overflow-hidden shadow-2xl border-8 border-white aspect-[4/3]">
+          <div className="relative w-full lg:w-auto">
+            <div className="relative z-10 w-full lg:w-[80%] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-4 sm:border-6 lg:border-8 border-white aspect-[4/3]">
               <Image
                 src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800"
                 alt="Tech 1"
@@ -173,20 +173,20 @@ export default function IndustriesContent() {
         </div>
       </section>
 
-      <section className="py-32 px-6 lg:px-12 bg-[#edf4f9]" id="verticals">
-        <div className="max-w-7xl mx-auto text-center space-y-4 mb-20">
-          <h2 className="text-4xl lg:text-5xl font-black text-[#111] tracking-tighter">
+      <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-12 bg-[#edf4f9]" id="verticals">
+        <div className="max-w-7xl mx-auto text-center space-y-3 sm:space-y-4 mb-12 sm:mb-16 lg:mb-20">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111] tracking-tighter">
             {t("verticals_heading")}
             {t("verticals_heading_highlight") ? (
               <span className="text-[#10b981]"> {t("verticals_heading_highlight")}</span>
             ) : null}
           </h2>
-          <p className="text-gray-400 font-medium text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-400 font-medium text-base sm:text-lg max-w-2xl mx-auto leading-relaxed px-4">
             {t("verticals_subtitle")}
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 sm:gap-6">
           <div
             className="lg:col-span-6 group relative rounded-[2rem] overflow-hidden aspect-[16/10] shadow-xl"
             id="healthcare"
@@ -200,15 +200,15 @@ export default function IndustriesContent() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 h-2/3 bg-gradient-to-t from-black/95 to-transparent pointer-events-none" />
-            <div className="absolute bottom-8 left-8 right-8 text-white space-y-3">
-              <span className="inline-block px-2.5 py-1 rounded bg-black/70 text-[10px] font-black uppercase tracking-widest text-[#10b981] border border-[#10b981]/40">
+            <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-8 right-4 sm:right-6 lg:right-8 text-white space-y-2 sm:space-y-3">
+              <span className="inline-block px-2 sm:px-2.5 py-0.5 sm:py-1 rounded bg-black/70 text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-[#10b981] border border-[#10b981]/40">
                 {t("verticals_badge")}
               </span>
-              <h4 className="text-2xl font-black text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{t("healthcare_title")}</h4>
-              <p className="text-sm font-medium max-w-sm text-white/95 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">{t("healthcare_desc")}</p>
+              <h4 className="text-xl sm:text-2xl font-black text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{t("healthcare_title")}</h4>
+              <p className="text-xs sm:text-sm font-medium max-w-sm text-white/95 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">{t("healthcare_desc")}</p>
               <Link
                 href={`${base}#contact`}
-                className="inline-block bg-[#10b981] text-black px-6 py-2 rounded-lg text-[9px] font-black uppercase tracking-widest hover:bg-white transition-colors"
+                className="inline-block bg-[#10b981] text-black px-4 sm:px-6 py-1.5 sm:py-2 rounded-lg text-[8px] sm:text-[9px] font-black uppercase tracking-widest hover:bg-white transition-colors"
               >
                 {t("read_more")}
               </Link>
@@ -227,15 +227,15 @@ export default function IndustriesContent() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 h-2/3 bg-gradient-to-t from-black/95 to-transparent pointer-events-none" />
-            <div className="absolute bottom-8 left-8 right-8 text-white space-y-3">
-              <span className="inline-block px-2.5 py-1 rounded bg-black/70 text-[10px] font-black uppercase tracking-widest text-[#10b981] border border-[#10b981]/40">
+            <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-8 right-4 sm:right-6 lg:right-8 text-white space-y-2 sm:space-y-3">
+              <span className="inline-block px-2 sm:px-2.5 py-0.5 sm:py-1 rounded bg-black/70 text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-[#10b981] border border-[#10b981]/40">
                 {t("verticals_badge")}
               </span>
-              <h4 className="text-2xl font-black text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{t("fintech_title")}</h4>
-              <p className="text-sm font-medium max-w-sm text-white/95 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">{t("fintech_desc")}</p>
+              <h4 className="text-xl sm:text-2xl font-black text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{t("fintech_title")}</h4>
+              <p className="text-xs sm:text-sm font-medium max-w-sm text-white/95 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">{t("fintech_desc")}</p>
               <Link
                 href={`${base}#contact`}
-                className="inline-block bg-[#10b981] text-black px-6 py-2 rounded-lg text-[9px] font-black uppercase tracking-widest hover:bg-white transition-colors"
+                className="inline-block bg-[#10b981] text-black px-4 sm:px-6 py-1.5 sm:py-2 rounded-lg text-[8px] sm:text-[9px] font-black uppercase tracking-widest hover:bg-white transition-colors"
               >
                 {t("read_more")}
               </Link>
@@ -257,15 +257,15 @@ export default function IndustriesContent() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 h-2/3 bg-gradient-to-t from-black/95 to-transparent pointer-events-none" />
-              <div className="absolute bottom-6 left-6 right-6 text-white space-y-3">
-                <span className="inline-block px-2.5 py-1 rounded bg-black/70 text-[10px] font-black uppercase tracking-widest text-[#10b981] border border-[#10b981]/40">
+              <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 text-white space-y-2 sm:space-y-3">
+                <span className="inline-block px-2 sm:px-2.5 py-0.5 sm:py-1 rounded bg-black/70 text-[8px] sm:text-[10px] font-black uppercase tracking-widest text-[#10b981] border border-[#10b981]/40">
                   {t("verticals_badge")}
                 </span>
-                <h4 className="text-xl font-black text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{t(INDUSTRY_CARD[slug].titleKey)}</h4>
+                <h4 className="text-lg sm:text-xl font-black text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{t(INDUSTRY_CARD[slug].titleKey)}</h4>
                 <p className="text-xs font-medium line-clamp-2 text-white/95 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">{t(`${slug}_desc`)}</p>
                 <Link
                   href={`${base}#contact`}
-                  className="inline-block bg-[#10b981] text-black px-5 py-2 rounded-lg text-[8px] font-black uppercase tracking-widest hover:bg-white transition-colors"
+                  className="inline-block bg-[#10b981] text-black px-4 sm:px-5 py-1.5 sm:py-2 rounded-lg text-[7px] sm:text-[8px] font-black uppercase tracking-widest hover:bg-white transition-colors"
                 >
                   {t("read_more")}
                 </Link>
@@ -275,29 +275,29 @@ export default function IndustriesContent() {
         </div>
       </section>
 
-      <section className="py-32 px-6 lg:px-12 bg-white">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12">
-          <div className="lg:col-span-4 bg-[#0a0c10] text-white p-12 lg:p-16 rounded-[2.5rem] flex flex-col justify-between shadow-2xl">
-            <div className="space-y-8">
-              <h3 className="text-3xl font-black tracking-tighter">
+      <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-12 bg-white">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12">
+          <div className="lg:col-span-4 bg-[#0a0c10] text-white p-8 sm:p-10 lg:p-12 xl:p-16 rounded-[2rem] sm:rounded-[2.5rem] flex flex-col justify-between shadow-2xl">
+            <div className="space-y-6 sm:space-y-8">
+              <h3 className="text-2xl sm:text-3xl font-black tracking-tighter">
                 {t("section3_title_line1")} <br />
                 {t("section3_title_line2")}
               </h3>
-              <p className="text-gray-400 text-sm font-medium leading-relaxed">
+              <p className="text-gray-400 text-xs sm:text-sm font-medium leading-relaxed">
                 {t("section3_body")}
               </p>
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {section3Items.map((item) => (
-                  <div key={item} className="flex items-center space-x-3">
+                  <div key={item} className="flex items-center space-x-2 sm:space-x-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#10b981]" />
-                    <span className="text-xs font-black uppercase tracking-widest">{item}</span>
+                    <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest">{item}</span>
                   </div>
                 ))}
               </div>
             </div>
             <Link
               href={`${base}#contact`}
-              className="bg-[#10b981] text-black px-10 py-4 rounded-xl font-black text-[10px] uppercase tracking-widest mt-12 hover:bg-white transition-colors inline-block w-fit"
+              className="bg-[#10b981] text-black px-8 sm:px-10 py-3 sm:py-4 rounded-xl font-black text-[9px] sm:text-[10px] uppercase tracking-widest mt-8 sm:mt-12 hover:bg-white transition-colors inline-block w-full sm:w-fit text-center"
             >
               {t("section3_cta")}
             </Link>
@@ -328,7 +328,7 @@ export default function IndustriesContent() {
         </div>
       </section>
 
-      <section className="relative min-h-[80vh] py-24 flex items-center overflow-hidden">
+      <section className="relative min-h-[60vh] sm:min-h-[70vh] lg:min-h-[80vh] py-12 sm:py-16 lg:py-24 flex items-center overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2000"
           alt="Office Space"
@@ -338,8 +338,8 @@ export default function IndustriesContent() {
           priority={false}
         />
         <div className="absolute inset-0 bg-black/60" />
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full relative z-10 flex flex-col lg:flex-row justify-between items-center gap-12 lg:gap-16">
-          <div className="w-full lg:w-[45%] grid grid-cols-2 gap-3 lg:gap-4 max-w-xl lg:max-w-none">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full relative z-10 flex flex-col lg:flex-row justify-between items-center gap-8 sm:gap-12 lg:gap-16">
+          <div className="w-full lg:w-[45%] grid grid-cols-2 gap-2 sm:gap-3 lg:gap-4 max-w-xl lg:max-w-none">
             <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl aspect-[4/5]">
               <Image
                 src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=600"
@@ -380,40 +380,40 @@ export default function IndustriesContent() {
               </span>
             </div>
           </div>
-          <div className="w-full lg:w-1/2 space-y-8 text-white">
-            <h2 className="text-4xl lg:text-5xl font-black tracking-tighter leading-[0.9] italic">
+          <div className="w-full lg:w-1/2 space-y-6 sm:space-y-8 text-white">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tighter leading-[0.9] italic">
               {t("section4_title_line1")} <br />
               <span className="text-[#10b981]">{t("section4_title_line2")}</span>{" "}
               {t("section4_title_line3")} <br />
               {t("section4_title_line4")}
             </h2>
-            <p className="text-gray-300 text-lg font-medium leading-relaxed max-w-lg">
+            <p className="text-gray-300 text-base sm:text-lg font-medium leading-relaxed max-w-lg">
               {t("section4_subtitle")}
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2 sm:gap-3">
               {[t("section4_outcome_1"), t("section4_outcome_2"), t("section4_outcome_3")].map(
                 (label) => (
                   <span
                     key={label}
-                    className="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-xs font-bold uppercase tracking-wider text-white/90"
+                    className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/10 border border-white/20 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-white/90"
                   >
                     {label}
                   </span>
                 )
               )}
             </div>
-            <p className="text-[10px] font-black uppercase tracking-widest text-white/50 pt-2">
+            <p className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-white/50 pt-2">
               {t("section4_deliver_label")}
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3 sm:gap-4">
               {[
-                { label: t("section4_deliver_1"), icon: <LayoutGrid size={18} /> },
-                { label: t("section4_deliver_2"), icon: <Cloud size={18} /> },
-                { label: t("section4_deliver_3"), icon: <Headphones size={18} /> },
+                { label: t("section4_deliver_1"), icon: <LayoutGrid size={16} className="sm:w-[18px] sm:h-[18px]" /> },
+                { label: t("section4_deliver_2"), icon: <Cloud size={16} className="sm:w-[18px] sm:h-[18px]" /> },
+                { label: t("section4_deliver_3"), icon: <Headphones size={16} className="sm:w-[18px] sm:h-[18px]" /> },
               ].map(({ label, icon }) => (
                 <div
                   key={label}
-                  className="flex items-center gap-2 px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-sm font-bold text-white"
+                  className="flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-3 rounded-xl bg-white/5 border border-white/10 text-xs sm:text-sm font-bold text-white"
                 >
                   <span className="text-[#10b981]">{icon}</span>
                   {label}
@@ -422,7 +422,7 @@ export default function IndustriesContent() {
             </div>
             <Link
               href={`${base}#contact`}
-              className="inline-block bg-[#10b981] text-black px-8 py-4 rounded-xl font-black text-xs uppercase tracking-widest hover:bg-white transition-all mt-4"
+              className="inline-block bg-[#10b981] text-black px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-black text-[10px] sm:text-xs uppercase tracking-widest hover:bg-white transition-all mt-4 w-full sm:w-auto text-center"
             >
               {t("section4_cta")}
             </Link>
@@ -430,12 +430,12 @@ export default function IndustriesContent() {
         </div>
       </section>
 
-      <section className="py-20 px-6 lg:px-12 bg-white border-t border-gray-100">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-12 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-center text-2xl lg:text-3xl font-black text-[#111] tracking-tighter mb-12">
+          <h2 className="text-center text-2xl sm:text-3xl lg:text-3xl font-black text-[#111] tracking-tighter mb-8 sm:mb-10 lg:mb-12">
             {t("section_why_heading")}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
               { titleKey: "section_why_1_title", descKey: "section_why_1_desc", icon: <Zap size={24} /> },
               { titleKey: "section_why_2_title", descKey: "section_why_2_desc", icon: <Shield size={24} /> },
@@ -461,7 +461,7 @@ export default function IndustriesContent() {
         </div>
       </section>
 
-      <section className="relative py-48 px-6 lg:px-12 overflow-hidden flex items-center justify-center">
+      <section className="relative py-24 sm:py-32 lg:py-48 px-4 sm:px-6 lg:px-12 overflow-hidden flex items-center justify-center">
         <Image
           src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&q=80&w=2000"
           alt=""
@@ -472,27 +472,27 @@ export default function IndustriesContent() {
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="max-w-4xl mx-auto w-full relative z-10">
-          <div className="bg-white/95 backdrop-blur-md rounded-[3rem] p-12 lg:p-20 text-center shadow-2xl space-y-10">
-            <div className="space-y-4">
-              <h2 className="text-4xl font-black text-[#111] tracking-tighter">
+          <div className="bg-white/95 backdrop-blur-md rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3rem] p-8 sm:p-10 lg:p-12 xl:p-20 text-center shadow-2xl space-y-6 sm:space-y-8 lg:space-y-10">
+            <div className="space-y-3 sm:space-y-4">
+              <h2 className="text-3xl sm:text-4xl font-black text-[#111] tracking-tighter">
                 {t("newsletter_title")}
               </h2>
-              <p className="text-gray-500 font-medium text-lg">{t("newsletter_subtitle")}</p>
+              <p className="text-gray-500 font-medium text-base sm:text-lg">{t("newsletter_subtitle")}</p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-lg mx-auto">
               <input
                 type="email"
                 placeholder={t("newsletter_placeholder")}
-                className="flex-grow bg-gray-50 border border-gray-100 rounded-xl px-6 py-4 text-sm font-bold focus:outline-none focus:border-[#10b981] transition-all"
+                className="flex-grow bg-gray-50 border border-gray-100 rounded-xl px-5 sm:px-6 py-3 sm:py-4 text-sm font-bold focus:outline-none focus:border-[#10b981] transition-all"
               />
               <button
                 type="button"
-                className="bg-[#10b981] text-black px-10 py-4 rounded-xl font-black text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-all shadow-xl"
+                className="bg-[#10b981] text-black px-8 sm:px-10 py-3 sm:py-4 rounded-xl font-black text-[10px] sm:text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-all shadow-xl w-full sm:w-auto"
               >
                 {t("newsletter_cta")}
               </button>
             </div>
-            <p className="text-[10px] font-medium text-gray-400">{t("newsletter_disclaimer")}</p>
+            <p className="text-[9px] sm:text-[10px] font-medium text-gray-400">{t("newsletter_disclaimer")}</p>
           </div>
         </div>
       </section>

@@ -26,11 +26,28 @@ function CapabilityItem({
     <div
       onMouseEnter={() => onHover(cap.id)}
       onMouseLeave={() => onHover(null)}
-      className={`group relative transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] px-5 py-3 rounded-2xl border will-change-transform ${
-        isHovered
-          ? "bg-[#f0fdf9] border-[#10b981]/10 shadow-[0_15px_40px_-20px_rgba(16,185,129,0.1)] translate-x-1"
-          : "bg-transparent border-transparent"
-      }`}
+      className={`group relative transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]
+        px-5 py-4 will-change-transform
+      
+        /* MOBILE BASE: LIST ROW */
+        bg-white border-b border-gray-200/70 rounded-none
+      
+        /* DESKTOP BASE */
+        lg:px-5 lg:py-3 lg:rounded-2xl lg:border-transparent lg:bg-transparent
+      
+        ${
+          isHovered
+            ? `
+              /* ACTIVE STATE (MOBILE + DESKTOP) */
+              bg-[#f0fdf9]
+              border-[#10b981]/20
+              shadow-[0_12px_30px_-18px_rgba(16,185,129,0.25)]
+              lg:translate-x-1
+              rounded-2xl
+            `
+            : ""
+        }
+      `}
     >
       <div className="flex items-center justify-between pointer-events-none">
         <h4
@@ -89,7 +106,7 @@ export default function Capabilities() {
         <div className="flex flex-col lg:flex-row justify-between items-start mb-16 gap-12">
           <div className="lg:w-3/5">
             <h2 className="text-3xl lg:text-[3.4rem] font-black leading-[0.96] text-[#111] tracking-tighter">
-              {t("title_line1")} 
+              {t("title_line1")+' '} 
               {t("title_line2")}
               {t("title_line3")} <span className="text-[#10b981]">{t("title_highlight")}</span> 
               {t("title_line4")} 

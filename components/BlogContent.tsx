@@ -119,18 +119,18 @@ export default function BlogContent() {
 
   return (
     <div className="bg-white overflow-x-hidden selection:bg-[#10b981] selection:text-white">
-      <section className="py-12 px-6 bg-[#fafafa] text-center border-b border-gray-100">
-        <div className="max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
-          <div className="inline-flex items-center space-x-3 px-4 py-1.5 rounded-full bg-white border border-gray-100 shadow-sm">
+      <section className="py-8 sm:py-10 lg:py-12 px-4 sm:px-6 bg-[#fafafa] text-center border-b border-gray-100">
+        <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
+          <div className="inline-flex items-center space-x-2 sm:space-x-3 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-white border border-gray-100 shadow-sm">
             <div className="w-2 h-2 rounded-full bg-[#10b981] animate-pulse" />
-            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-400">
+            <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.4em] text-gray-400">
               {t("badge")}
             </span>
           </div>
-          <h1 className="text-4xl md:text-[4.5rem] font-black text-[#111] tracking-tighter italic">
+          <h1 className="text-3xl sm:text-4xl md:text-[4.5rem] font-black text-[#111] tracking-tighter italic px-4">
             {t("title_line1")} <span className="text-[#10b981]">{t("title_highlight")}</span> {t("title_line2")}
           </h1>
-          <p className="text-gray-500 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-500 text-base sm:text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed px-4">
             {t("subtitle")}
           </p>
         </div>
@@ -170,26 +170,26 @@ export default function BlogContent() {
         </div>
       </section> */}
 
-      <section className="py-24 px-6 lg:px-12 max-w-7xl mx-auto">
-        <div className="flex items-center justify-between mb-16">
+      <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+        <div className="flex items-center justify-between mb-10 sm:mb-12 lg:mb-16">
           <div className="space-y-1">
-            <h2 className="text-3xl font-black tracking-tight text-[#111]">All Articles</h2>
-            <p className="text-gray-400 text-[10px] font-black uppercase tracking-widest">
+            <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-[#111]">All Articles</h2>
+            <p className="text-gray-400 text-[9px] sm:text-[10px] font-black uppercase tracking-widest">
               Find tools and insights built to last.
             </p>
           </div>
-          <div className="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center text-gray-300">
-            <Filter size={18} />
+          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-gray-100 flex items-center justify-center text-gray-300">
+            <Filter size={16} className="sm:w-[18px] sm:h-[18px]" />
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 mb-10 sm:mb-12 lg:mb-16">
           {filteredPosts
             .filter((p) => p.isFeatured)
             .slice(0, 2)
             .map((post) => (
               <article key={post.id} className="group cursor-pointer">
-                <div className="relative rounded-[3.5rem] overflow-hidden aspect-[16/10] mb-8 shadow-2xl border-4 border-gray-50">
+                <div className="relative rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3.5rem] overflow-hidden aspect-[16/10] mb-6 sm:mb-8 shadow-2xl border-2 sm:border-4 border-gray-50">
                   <Image
                     src={post.image}
                     alt=""
@@ -198,39 +198,39 @@ export default function BlogContent() {
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-                  <div className="absolute top-6 left-6">
-                    <div className="px-4 py-1.5 bg-[#10b981] text-black text-[9px] font-black uppercase tracking-widest rounded-full shadow-lg">
+                  <div className="absolute top-4 sm:top-6 left-4 sm:left-6">
+                    <div className="px-3 sm:px-4 py-1 sm:py-1.5 bg-[#10b981] text-black text-[8px] sm:text-[9px] font-black uppercase tracking-widest rounded-full shadow-lg">
                       {post.category}
                     </div>
                   </div>
                 </div>
-                <div className="space-y-4 px-4">
-                  <div className="flex items-center space-x-4 text-[10px] font-black text-gray-400 uppercase tracking-widest">
+                <div className="space-y-3 sm:space-y-4 px-2 sm:px-4">
+                  <div className="flex items-center space-x-3 sm:space-x-4 text-[9px] sm:text-[10px] font-black text-gray-400 uppercase tracking-widest">
                     <span>{post.date}</span>
                     <span className="w-1 h-1 rounded-full bg-gray-200" />
                     <span>{post.readTime}</span>
                   </div>
-                  <h3 className="text-3xl font-black text-[#111] tracking-tight group-hover:text-[#10b981] transition-colors leading-tight">
+                  <h3 className="text-2xl sm:text-3xl font-black text-[#111] tracking-tight group-hover:text-[#10b981] transition-colors leading-tight">
                     {post.title}
                   </h3>
-                  <p className="text-gray-500 font-medium leading-relaxed line-clamp-2">
+                  <p className="text-gray-500 text-sm sm:text-base font-medium leading-relaxed line-clamp-2">
                     {post.excerpt}
                   </p>
-                  <div className="pt-4 flex items-center space-x-3 text-[11px] font-black uppercase tracking-[0.3em] text-[#111] group-hover:translate-x-2 transition-transform">
+                  <div className="pt-3 sm:pt-4 flex items-center space-x-2 sm:space-x-3 text-[10px] sm:text-[11px] font-black uppercase tracking-[0.3em] text-[#111] group-hover:translate-x-2 transition-transform">
                     <span>{t("read_more")}</span>
-                    <ArrowRight size={16} className="text-[#10b981]" />
+                    <ArrowRight size={14} className="sm:w-4 sm:h-4 text-[#10b981]" />
                   </div>
                 </div>
               </article>
             ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
           {filteredPosts
             .filter((p) => !p.isFeatured || filteredPosts.length <= 2)
             .map((post) => (
               <article key={post.id} className="group cursor-pointer">
-                <div className="relative rounded-[3rem] overflow-hidden aspect-[16/11] mb-6 shadow-xl border-4 border-gray-50">
+                <div className="relative rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3rem] overflow-hidden aspect-[16/11] mb-4 sm:mb-6 shadow-xl border-2 sm:border-4 border-gray-50">
                   <Image
                     src={post.image}
                     alt=""
@@ -238,78 +238,78 @@ export default function BlogContent() {
                     className="object-cover grayscale-[0.3] group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
-                  <div className="absolute top-5 left-5">
-                    <div className="px-3 py-1 bg-black text-white text-[8px] font-black uppercase tracking-widest rounded-full border border-white/20">
+                  <div className="absolute top-4 sm:top-5 left-4 sm:left-5">
+                    <div className="px-2.5 sm:px-3 py-0.5 sm:py-1 bg-black text-white text-[7px] sm:text-[8px] font-black uppercase tracking-widest rounded-full border border-white/20">
                       {post.category}
                     </div>
                   </div>
                 </div>
-                <div className="space-y-4 px-2">
-                  <div className="flex items-center space-x-3 text-[9px] font-black text-gray-400 uppercase tracking-widest">
+                <div className="space-y-3 sm:space-y-4 px-2">
+                  <div className="flex items-center space-x-2 sm:space-x-3 text-[8px] sm:text-[9px] font-black text-gray-400 uppercase tracking-widest">
                     <span>{post.date}</span>
                     <span className="w-1 h-1 rounded-full bg-gray-200" />
                     <span>{post.readTime}</span>
                   </div>
-                  <h3 className="text-xl font-black text-[#111] tracking-tight group-hover:text-[#10b981] transition-colors leading-snug">
+                  <h3 className="text-lg sm:text-xl font-black text-[#111] tracking-tight group-hover:text-[#10b981] transition-colors leading-snug">
                     {post.title}
                   </h3>
-                  <p className="text-gray-500 text-sm font-medium leading-relaxed line-clamp-2">
+                  <p className="text-gray-500 text-xs sm:text-sm font-medium leading-relaxed line-clamp-2">
                     {post.excerpt}
                   </p>
-                  <div className="pt-2 flex items-center space-x-2 text-[10px] font-black uppercase tracking-widest text-[#111]">
+                  <div className="pt-2 flex items-center space-x-2 text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-[#111]">
                     <span>Read Dossier</span>
-                    <ArrowRight size={14} className="text-[#10b981] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                    <ArrowRight size={12} className="sm:w-[14px] sm:h-[14px] text-[#10b981] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                   </div>
                 </div>
               </article>
             ))}
         </div>
 
-        <div className="mt-24 text-center">
+        <div className="mt-16 sm:mt-20 lg:mt-24 text-center">
           <button
             type="button"
-            className="px-16 py-5 rounded-[2rem] border-2 border-gray-100 font-black text-[11px] uppercase tracking-widest text-[#111] hover:bg-black hover:text-white hover:border-black transition-all shadow-sm"
+            className="px-12 sm:px-14 lg:px-16 py-4 sm:py-5 rounded-[1.5rem] sm:rounded-[2rem] border-2 border-gray-100 font-black text-[10px] sm:text-[11px] uppercase tracking-widest text-[#111] hover:bg-black hover:text-white hover:border-black transition-all shadow-sm w-full sm:w-auto"
           >
             View More
           </button>
         </div>
       </section>
 
-      <section className="py-32 px-6 lg:px-12 bg-gray-50 mt-20">
-        <div className="max-w-5xl mx-auto bg-white rounded-[4rem] p-12 lg:p-24 shadow-2xl text-center space-y-10 border border-gray-100 relative overflow-hidden">
-          <div className="absolute top-0 right-0 p-12 opacity-[0.03] rotate-12 pointer-events-none">
-            <Mail size={300} />
+      <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-12 bg-gray-50 mt-12 sm:mt-16 lg:mt-20">
+        <div className="max-w-5xl mx-auto bg-white rounded-[2.5rem] sm:rounded-[3rem] lg:rounded-[4rem] p-8 sm:p-10 lg:p-12 xl:p-24 shadow-2xl text-center space-y-6 sm:space-y-8 lg:space-y-10 border border-gray-100 relative overflow-hidden">
+          <div className="absolute top-0 right-0 p-8 sm:p-12 opacity-[0.03] rotate-12 pointer-events-none hidden sm:block">
+            <Mail size={200} className="sm:w-[250px] sm:h-[250px] lg:w-[300px] lg:h-[300px]" />
           </div>
-          <div className="space-y-4 relative z-10">
-            <h2 className="text-4xl lg:text-6xl font-black text-[#111] tracking-tighter italic">
+          <div className="space-y-3 sm:space-y-4 relative z-10">
+            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-black text-[#111] tracking-tighter italic">
               The Engineering <span className="text-[#10b981]">Newsletter.</span>
             </h2>
-            <p className="text-gray-500 text-lg font-medium max-w-xl mx-auto">
+            <p className="text-gray-500 text-base sm:text-lg font-medium max-w-xl mx-auto px-4">
               Elevate your projects effortlessly with our technical blueprints and user-friendly customization advice.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 relative z-10">
             <input
               type="email"
               placeholder="Enter your email address"
-              className="w-full sm:w-80 bg-gray-50 border border-gray-100 rounded-2xl px-8 py-5 text-sm font-bold focus:outline-none focus:border-[#10b981] transition-all"
+              className="w-full sm:w-80 bg-gray-50 border border-gray-100 rounded-xl sm:rounded-2xl px-6 sm:px-8 py-4 sm:py-5 text-xs sm:text-sm font-bold focus:outline-none focus:border-[#10b981] transition-all"
             />
             <button
               type="button"
-              className="w-full sm:w-auto bg-[#10b981] text-black px-12 py-5 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-all shadow-xl"
+              className="w-full sm:w-auto bg-[#10b981] text-black px-10 sm:px-12 py-4 sm:py-5 rounded-xl sm:rounded-2xl font-black text-[10px] sm:text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-all shadow-xl"
             >
               Subscribe
             </button>
           </div>
-          <div className="pt-8 flex justify-center items-center space-x-6 relative z-10">
-            <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">
+          <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 relative z-10">
+            <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-gray-400">
               Trusted by 10k+ engineers
             </span>
             <div className="flex -space-x-2">
               {[...Array(4)].map((_, i) => (
                 <div
                   key={i}
-                  className="w-8 h-8 rounded-full border-2 border-white bg-gray-100 overflow-hidden relative"
+                  className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-white bg-gray-100 overflow-hidden relative"
                 >
                   <Image
                     src={`https://i.pravatar.cc/100?u=${i}`}

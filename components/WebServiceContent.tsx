@@ -62,8 +62,8 @@ export default function WebServiceContent() {
   const processSteps = t.raw("process_steps") as { step: string; title: string; desc: string }[];
 
   return (
-    <div className="bg-[#050505] text-white min-h-screen pt-20 overflow-x-hidden selection:bg-[#10b981] selection:text-black font-sans">
-      <section className="relative min-h-screen flex items-center justify-center px-6 lg:px-12 overflow-hidden">
+    <div className="bg-[#050505] text-white min-h-screen overflow-x-hidden selection:bg-[#10b981] selection:text-black font-sans">
+      <section className="relative py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-12 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-[-10%] right-[-10%] w-[800px] h-[800px] bg-[#10b981]/10 rounded-full blur-[120px] animate-pulse"></div>
           <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-[100px] animate-pulse delay-700"></div>
@@ -71,34 +71,34 @@ export default function WebServiceContent() {
         </div>
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(#fff 1px, transparent 1px)", backgroundSize: "40px 40px" }}></div>
 
-        <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-20 items-center relative z-10">
-          <div className="space-y-10">
-            <div className="space-y-6">
+        <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center relative z-10">
+          <div className="space-y-6 sm:space-y-8 lg:space-y-10">
+            <div className="space-y-4 sm:space-y-6">
               <div className="inline-flex items-center space-x-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
                 <Terminal size={14} className="text-[#10b981]" />
                 <span className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-400">Engineering Protocol 2.5</span>
               </div>
-              <h1 className="text-5xl lg:text-[5.5rem] font-black tracking-[-0.06em] leading-[0.85] text-white">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[5.5rem] font-black tracking-[-0.06em] leading-[0.85] text-white">
                 Web <br />
                 <span className="text-[#10b981]">Engineering</span> <br />
                 Manifesto.
               </h1>
-              <p className="text-gray-400 text-base lg:text-lg font-medium max-w-xl leading-relaxed">
+              <p className="text-gray-400 text-sm sm:text-base lg:text-lg font-medium max-w-xl leading-relaxed">
                 Moving beyond &quot;development&quot; into high-fidelity system architecture. We build web assets that are fast by default and scalable by design.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-6">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
               <Link
                 href={`${base}#contact`}
-                className="bg-white text-black px-12 py-5 rounded-2xl font-black text-xs uppercase tracking-widest flex items-center justify-center space-x-4 hover:bg-[#10b981] transition-all duration-500 group"
+                className="w-full sm:w-auto bg-white text-black px-8 sm:px-12 py-4 sm:py-5 rounded-2xl font-black text-xs uppercase tracking-widest flex items-center justify-center space-x-4 hover:bg-[#10b981] transition-all duration-500 group"
               >
                 <span>Talk to an Architect</span>
                 <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
               </Link>
               <Link
                 href={`${base}/portfolio`}
-                className="bg-white/5 border border-white/10 backdrop-blur-md px-12 py-5 rounded-2xl font-black text-xs uppercase tracking-widest text-white hover:bg-white/10 transition-all text-center"
+                className="w-full sm:w-auto bg-white/5 border border-white/10 backdrop-blur-md px-8 sm:px-12 py-4 sm:py-5 rounded-2xl font-black text-xs uppercase tracking-widest text-white hover:bg-white/10 transition-all text-center"
               >
                 The Playbook
               </Link>
@@ -151,15 +151,15 @@ export default function WebServiceContent() {
         </div>
       </section>
 
-      <section className="py-40 px-6 lg:px-12 bg-[#fafafa] border-y border-gray-200">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center">
-          <div className="space-y-12">
-            <div className="space-y-4">
+      <section className="py-16 sm:py-24 lg:py-40 px-4 sm:px-6 lg:px-12 bg-[#fafafa] border-y border-gray-200">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-24 items-center">
+          <div className="space-y-8 sm:space-y-10 lg:space-y-12">
+            <div className="space-y-4 sm:space-y-6">
               <span className="text-[#10b981] font-black text-[10px] uppercase tracking-[0.6em]">System Architecture</span>
-              <h2 className="text-3xl lg:text-4xl font-black tracking-tighter leading-tight text-[#111]">The Three Layers of <br />Scalable Web Systems.</h2>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tighter leading-tight text-[#111]">The Three Layers of <br />Scalable Web Systems.</h2>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-4 sm:space-y-6">
               {architecturalLayers.map((layer, i) => (
                 <button
                   key={i}
@@ -210,15 +210,15 @@ export default function WebServiceContent() {
         </div>
       </section>
 
-      <section className="py-40 px-6 lg:px-12 bg-white text-black relative">
+      <section className="py-16 sm:py-24 lg:py-40 px-4 sm:px-6 lg:px-12 bg-white text-black relative">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-12">
-            <div className="space-y-4">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 sm:mb-16 lg:mb-24 gap-8 sm:gap-10 lg:gap-12">
+            <div className="space-y-4 sm:space-y-6">
               <div className="flex items-center space-x-3 text-[10px] font-black uppercase tracking-[0.5em] text-gray-300">
                 <Command size={14} />
                 <span>Strategic_Execution_Overview</span>
               </div>
-              <h2 className="text-5xl lg:text-[5rem] font-black tracking-tighter leading-[0.85]">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[5rem] font-black tracking-tighter leading-[0.85]">
                 Engineered <br />
                 for <span className="text-[#10b981]">Results.</span>
               </h2>
@@ -235,8 +235,8 @@ export default function WebServiceContent() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 auto-rows-[380px]">
-            <div className="md:col-span-8 group relative bg-[#050505] rounded-[3.5rem] p-12 overflow-hidden flex flex-col justify-between transition-all duration-700 shadow-2xl border border-white/5">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-6 lg:gap-8 md:auto-rows-[380px]">
+            <div className="md:col-span-8 group relative bg-[#050505] rounded-xl md:rounded-[3.5rem] p-4 md:p-8 lg:p-12 overflow-hidden flex flex-col justify-between transition-all duration-700 shadow-2xl border border-white/5 min-h-[240px] md:min-h-0">
               <div className="absolute inset-0 opacity-10 pointer-events-none">
                 <div className="w-full h-full bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
                 <svg className="absolute bottom-0 left-0 w-full h-1/2" viewBox="0 0 800 200">
@@ -245,19 +245,19 @@ export default function WebServiceContent() {
               </div>
 
               <div className="relative z-10 flex justify-between items-start">
-                <div className="space-y-8">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-16 h-16 rounded-[1.8rem] bg-[#10b981] flex items-center justify-center text-black shadow-[0_0_30px_rgba(16,185,129,0.4)]">
-                      <Zap size={32} strokeWidth={2.5} />
+                <div className="space-y-3 md:space-y-8">
+                  <div className="flex items-center space-x-2 md:space-x-4">
+                    <div className="w-8 h-8 md:w-16 md:h-16 rounded-lg md:rounded-[1.8rem] bg-[#10b981] flex items-center justify-center text-black shadow-[0_0_30px_rgba(16,185,129,0.4)]">
+                      <Zap size={16} strokeWidth={2.5} className="md:w-8 md:h-8" />
                     </div>
-                    <div className="space-y-1">
-                      <span className="text-[10px] font-mono text-[#10b981] uppercase tracking-[0.2em]">Live_Throughput</span>
-                      <div className="text-white text-xs font-bold uppercase tracking-widest">Optimized Pipeline</div>
+                    <div className="space-y-0 md:space-y-1">
+                      <span className="text-[6px] md:text-[10px] font-mono text-[#10b981] uppercase tracking-[0.2em] block">Live_Throughput</span>
+                      <div className="text-white text-[8px] md:text-xs font-bold uppercase tracking-widest">Optimized Pipeline</div>
                     </div>
                   </div>
-                  <div className="space-y-4">
-                    <h3 className="text-3xl lg:text-5xl font-black tracking-tight leading-none text-white">Sub-Second <br />Execution.</h3>
-                    <p className="text-gray-500 text-sm font-medium max-w-sm leading-relaxed">
+                  <div className="space-y-1.5 md:space-y-6">
+                    <h3 className="text-base md:text-3xl lg:text-5xl font-black tracking-tight leading-none text-white">Sub-Second <br />Execution.</h3>
+                    <p className="text-gray-500 text-[10px] md:text-sm font-medium max-w-sm leading-relaxed line-clamp-2 md:line-clamp-none">
                       We eliminate bloat at the compiler level. Every byte is optimized for sub-100ms response times globally.
                     </p>
                   </div>
@@ -281,21 +281,21 @@ export default function WebServiceContent() {
                 </div>
               </div>
 
-              <div className="relative z-10 flex items-center space-x-6">
+              <div className="relative z-10 flex flex-col md:flex-row items-center space-y-1.5 md:space-y-0 md:space-x-6 mt-3 md:mt-0">
                 <Link
                   href={`${base}#contact`}
-                  className="bg-white text-black px-10 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-[#10b981] transition-all duration-500"
+                  className="w-full md:w-auto bg-white text-black px-4 md:px-10 py-2 md:py-4 rounded-lg md:rounded-2xl text-[8px] md:text-[10px] font-black uppercase tracking-widest hover:bg-[#10b981] transition-all duration-500 text-center"
                 >
                   Benchmark System
                 </Link>
-                <div className="flex items-center space-x-2 text-[10px] font-mono text-gray-500">
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#10b981] animate-pulse"></div>
+                <div className="flex items-center space-x-1.5 md:space-x-2 text-[8px] md:text-[10px] font-mono text-gray-500">
+                  <div className="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-[#10b981] animate-pulse"></div>
                   <span>Real-time Stream: Active</span>
                 </div>
               </div>
             </div>
 
-            <div className="md:col-span-4 bg-[#10b981] rounded-[3.5rem] p-12 flex flex-col justify-between items-center relative overflow-hidden group hover:scale-[1.03] transition-all duration-700">
+            <div className="md:col-span-4 bg-[#10b981] rounded-xl md:rounded-[3.5rem] p-4 md:p-8 lg:p-12 flex flex-col justify-between items-center relative overflow-hidden group hover:scale-[1.03] transition-all duration-700 min-h-[200px] md:min-h-0">
               <div className="absolute inset-0 flex items-center justify-center opacity-10">
                 <div className="w-[400px] h-[400px] border border-black rounded-full animate-ping"></div>
                 <div className="absolute w-[200px] h-[200px] border border-black rounded-full"></div>
@@ -303,91 +303,91 @@ export default function WebServiceContent() {
               </div>
 
               <div className="relative z-10 w-full flex justify-between items-start">
-                <div className="w-14 h-14 rounded-2xl bg-black/10 backdrop-blur-xl flex items-center justify-center text-black">
-                  <Radar size={28} />
+                <div className="w-8 h-8 md:w-14 md:h-14 rounded-lg md:rounded-2xl bg-black/10 backdrop-blur-xl flex items-center justify-center text-black">
+                  <Radar size={14} className="md:w-7 md:h-7" />
                 </div>
                 <div className="flex flex-col items-end">
-                  <span className="text-[10px] font-black uppercase tracking-widest text-black/40">Status</span>
-                  <span className="text-xs font-bold text-black">OPERATIONAL</span>
+                  <span className="text-[7px] md:text-[10px] font-black uppercase tracking-widest text-black/40">Status</span>
+                  <span className="text-[8px] md:text-xs font-bold text-black">OPERATIONAL</span>
                 </div>
               </div>
 
               <div className="relative z-10 text-center">
-                <div className="text-7xl font-black tracking-tighter text-black leading-none mb-4">99.9%</div>
-                <div className="px-6 py-2 bg-black text-[#10b981] rounded-full text-[10px] font-black uppercase tracking-[0.4em] inline-block shadow-2xl">
+                <div className="text-3xl md:text-7xl font-black tracking-tighter text-black leading-none mb-1.5 md:mb-4">99.9%</div>
+                <div className="px-2.5 md:px-6 py-1 md:py-2 bg-black text-[#10b981] rounded-full text-[7px] md:text-[10px] font-black uppercase tracking-[0.4em] inline-block shadow-2xl">
                   SLA_Guaranteed
                 </div>
               </div>
 
-              <div className="relative z-10 w-full text-center space-y-1">
-                <p className="text-black/60 font-bold text-xs">Uninterrupted Global Availability</p>
-                <p className="text-[9px] font-mono text-black/30">Last Failover: N/A</p>
+              <div className="relative z-10 w-full text-center space-y-0 md:space-y-1">
+                <p className="text-black/60 font-bold text-[9px] md:text-xs">Uninterrupted Global Availability</p>
+                <p className="text-[7px] md:text-[9px] font-mono text-black/30">Last Failover: N/A</p>
               </div>
             </div>
 
-            <div className="md:col-span-5 bg-[#0a0a0a] rounded-[3.5rem] p-12 text-white flex flex-col justify-between relative overflow-hidden group hover:shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8)] transition-all duration-700">
+            <div className="md:col-span-5 bg-[#0a0a0a] rounded-xl md:rounded-[3.5rem] p-4 md:p-8 lg:p-12 text-white flex flex-col justify-between relative overflow-hidden group hover:shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8)] transition-all duration-700 min-h-[220px] md:min-h-0">
               <div className="absolute top-0 left-0 w-full h-[2px] bg-[#10b981] shadow-[0_0_15px_#10b981] animate-[scan_6s_ease-in-out_infinite] opacity-40 z-20"></div>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(16,185,129,0.05)_0%,_transparent_100%)]"></div>
 
               <div className="relative z-10 flex justify-between items-start">
-                <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[#10b981]">
-                  <ShieldCheck size={32} />
+                <div className="w-8 h-8 md:w-16 md:h-16 rounded-lg md:rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[#10b981]">
+                  <ShieldCheck size={16} className="md:w-8 md:h-8" />
                 </div>
                 <div className="text-right">
-                  <span className="text-[9px] font-mono text-gray-500 uppercase tracking-widest block">Threat_Matrix</span>
-                  <span className="text-[10px] font-black text-[#10b981] tracking-widest">SECURE</span>
+                  <span className="text-[6px] md:text-[9px] font-mono text-gray-500 uppercase tracking-widest block">Threat_Matrix</span>
+                  <span className="text-[7px] md:text-[10px] font-black text-[#10b981] tracking-widest">SECURE</span>
                 </div>
               </div>
 
-              <div className="relative z-10 space-y-8">
-                <div className="space-y-4">
-                  <h3 className="text-3xl lg:text-4xl font-black tracking-tighter leading-none">Hardened <br />Protocols.</h3>
-                  <p className="text-gray-500 text-sm font-medium leading-relaxed">
+              <div className="relative z-10 space-y-2 md:space-y-8">
+                <div className="space-y-1.5 md:space-y-6">
+                  <h3 className="text-base md:text-3xl lg:text-4xl font-black tracking-tighter leading-none">Hardened <br />Protocols.</h3>
+                  <p className="text-gray-500 text-[10px] md:text-sm font-medium leading-relaxed line-clamp-2 md:line-clamp-none">
                     Beyond encryption. We implement zero-trust access control and real-time vulnerability mitigation.
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="p-4 rounded-2xl bg-white/5 border border-white/5 flex flex-col space-y-2">
-                    <Lock size={16} className="text-emerald-400" />
-                    <span className="text-[10px] font-mono text-white/40 uppercase">AES-256</span>
+                <div className="grid grid-cols-2 gap-1.5 md:gap-4">
+                  <div className="p-2 md:p-4 rounded-lg md:rounded-2xl bg-white/5 border border-white/5 flex flex-col space-y-1 md:space-y-2">
+                    <Lock size={10} className="text-emerald-400 md:w-4 md:h-4" />
+                    <span className="text-[7px] md:text-[10px] font-mono text-white/40 uppercase">AES-256</span>
                   </div>
-                  <div className="p-4 rounded-2xl bg-white/5 border border-white/5 flex flex-col space-y-2">
-                    <span className="text-[10px] font-mono text-white/40 uppercase">2FA_CORE</span>
+                  <div className="p-2 md:p-4 rounded-lg md:rounded-2xl bg-white/5 border border-white/5 flex flex-col space-y-1 md:space-y-2">
+                    <span className="text-[7px] md:text-[10px] font-mono text-white/40 uppercase">2FA_CORE</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="md:col-span-7 bg-[#f8f9fa] border border-gray-100 rounded-[3.5rem] p-12 flex flex-col lg:flex-row items-center justify-between group hover:border-[#10b981]/40 transition-all duration-700 relative overflow-hidden shadow-inner">
+            <div className="md:col-span-7 bg-[#f8f9fa] border border-gray-100 rounded-xl md:rounded-[3.5rem] p-4 md:p-8 lg:p-12 flex flex-col lg:flex-row items-center justify-between group hover:border-[#10b981]/40 transition-all duration-700 relative overflow-hidden shadow-inner min-h-[240px] md:min-h-0">
               <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_70%_50%,_rgba(16,185,129,0.02)_0%,_transparent_70%)]"></div>
 
-              <div className="relative z-10 space-y-10 flex-grow">
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3 text-[10px] font-black text-[#10b981] uppercase tracking-[0.4em]">
-                    <Share2 size={12} />
+              <div className="relative z-10 space-y-2 md:space-y-10 flex-grow">
+                <div className="space-y-1.5 md:space-y-6">
+                  <div className="flex items-center space-x-1.5 md:space-x-3 text-[7px] md:text-[10px] font-black text-[#10b981] uppercase tracking-[0.4em]">
+                    <Share2 size={8} className="md:w-3 md:h-3" />
                     <span>Architectural_Flexibility</span>
                   </div>
-                  <h3 className="text-3xl lg:text-4xl font-black tracking-tighter leading-none">Modular <br />Ecosystem.</h3>
-                  <p className="text-gray-500 text-sm font-medium max-w-sm leading-relaxed">
+                  <h3 className="text-base md:text-3xl lg:text-4xl font-black tracking-tighter leading-none">Modular <br />Ecosystem.</h3>
+                  <p className="text-gray-500 text-[10px] md:text-sm font-medium max-w-sm leading-relaxed line-clamp-2 md:line-clamp-none">
                     Deploy micro-frontends and shared logic clusters that grow with your user base. Future-proof code without the legacy overhead.
                   </p>
                 </div>
 
-                <div className="flex space-x-12">
-                  <div className="space-y-1">
-                    <div className="text-2xl font-black text-black tracking-tight">Zero</div>
-                    <div className="text-[9px] font-black uppercase tracking-widest text-gray-400">Tech Debt</div>
+                <div className="flex space-x-5 md:space-x-12">
+                  <div className="space-y-0 md:space-y-1">
+                    <div className="text-base md:text-2xl font-black text-black tracking-tight">Zero</div>
+                    <div className="text-[6px] md:text-[9px] font-black uppercase tracking-widest text-gray-400">Tech Debt</div>
                   </div>
-                  <div className="w-[1px] h-12 bg-gray-200"></div>
-                  <div className="space-y-1">
-                    <div className="text-2xl font-black text-black tracking-tight">100%</div>
-                    <div className="text-[9px] font-black uppercase tracking-widest text-gray-400">Ownership</div>
+                  <div className="w-[1px] h-5 md:h-12 bg-gray-200"></div>
+                  <div className="space-y-0 md:space-y-1">
+                    <div className="text-base md:text-2xl font-black text-black tracking-tight">100%</div>
+                    <div className="text-[6px] md:text-[9px] font-black uppercase tracking-widest text-gray-400">Ownership</div>
                   </div>
                 </div>
               </div>
 
-              <div className="relative z-10 w-full lg:w-[45%] aspect-square flex items-center justify-center">
+              <div className="relative z-10 w-full lg:w-[45%] aspect-square flex items-center justify-center mt-4 lg:mt-0 hidden md:flex">
                 <div className="relative w-full h-full p-4">
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-white rounded-[3rem] shadow-2xl border border-gray-100 rotate-[-12deg] flex items-center justify-center group-hover:rotate-0 transition-transform duration-700">
                     <Server size={64} className="text-gray-100" />
@@ -405,18 +405,18 @@ export default function WebServiceContent() {
         </div>
       </section>
 
-      <section className="py-40 px-6 lg:px-12 bg-[#050505] text-white relative">
+      <section className="py-16 sm:py-24 lg:py-40 px-4 sm:px-6 lg:px-12 bg-[#050505] text-white relative">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-24 space-y-6">
-            <h2 className="text-5xl font-black tracking-tighter">How it works</h2>
-            <p className="text-gray-400 text-lg font-medium max-w-2xl mx-auto leading-relaxed">
+          <div className="text-center mb-12 sm:mb-16 lg:mb-24 space-y-4 sm:space-y-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tighter">How it works</h2>
+            <p className="text-gray-400 text-base sm:text-lg font-medium max-w-2xl mx-auto leading-relaxed">
               Our engineering lifecycle is a synchronized progression from deep discovery to global optimization. We prioritize velocity without compromising stability.
             </p>
           </div>
 
-          <div className="relative mb-40">
+          <div className="relative mb-16 sm:mb-24 lg:mb-40">
             <div className="absolute top-1.5 left-0 w-full h-[2px] bg-white/10 hidden lg:block"></div>
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 relative">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 relative">
               {[
                 { step: "Step 1", title: "Discovery Scan", desc: "Technical audit of infrastructure and architectural constraints." },
                 { step: "Step 2", title: "Blueprint Phase", desc: "Modeling data structures and user flow hierarchies." },
@@ -437,9 +437,9 @@ export default function WebServiceContent() {
             </div>
           </div>
 
-          <div className="relative bg-white/5 border border-white/5 rounded-[4rem] p-12 lg:p-20 overflow-hidden group">
+          <div className="relative bg-white/5 border border-white/5 rounded-[4rem] p-6 sm:p-8 lg:p-12 xl:p-20 overflow-hidden group">
             <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: "radial-gradient(#10b981 1px, transparent 1px)", backgroundSize: "30px 30px" }}></div>
-            <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
+            <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 lg:gap-12">
               <div className="flex flex-col space-y-4 lg:w-[20%]">
                 {[
                   { label: "Infra Audit", icon: <FileSearch size={14} /> },
@@ -519,12 +519,12 @@ export default function WebServiceContent() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 px-6 bg-[#fafafa]">
+      <section className="py-12 sm:py-16 lg:py-20 md:py-28 px-4 sm:px-6 bg-[#fafafa]">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-black text-[#10b981] tracking-tight mb-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#10b981] tracking-tight mb-3">
             {t("methodology_heading")}
           </h2>
-          <p className="text-xl font-bold text-[#111] mb-14">
+          <p className="text-lg sm:text-xl font-bold text-[#111] mb-8 sm:mb-12 lg:mb-14">
             {t("methodology_subheading")}
           </p>
           <div className="relative pl-2">
@@ -554,9 +554,9 @@ export default function WebServiceContent() {
         </div>
       </section>
 
-      <section className="py-40 px-6 lg:px-12 bg-white text-black">
+      <section className="py-16 sm:py-24 lg:py-40 px-4 sm:px-6 lg:px-12 bg-white text-black">
         <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col items-center text-center mb-24 space-y-6">
+          <div className="flex flex-col items-center text-center mb-12 sm:mb-16 lg:mb-24 space-y-4 sm:space-y-6">
             <div className="relative group">
               <div className="absolute -inset-4 bg-[#10b981]/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <div className="relative w-20 h-20 rounded-[2rem] bg-gray-50 border border-gray-100 flex items-center justify-center text-[#10b981] shadow-sm transform group-hover:scale-105 transition-transform">
@@ -564,12 +564,12 @@ export default function WebServiceContent() {
               </div>
             </div>
             <div className="space-y-2">
-              <h2 className="text-3xl lg:text-4xl font-black tracking-tight">System Queries <span className="text-[#10b981]">(FAQ)</span></h2>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight">System Queries <span className="text-[#10b981]">(FAQ)</span></h2>
               <p className="text-gray-400 text-[10px] font-black uppercase tracking-[0.4em]">Technical Deep-Dive & Logistics Protocol</p>
             </div>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {[
               { q: "What is your stance on Technical Debt?", a: "We treat technical debt as a priority. Our architectural blueprints are peer-reviewed to ensure that short-term delivery never compromises long-term maintenance and scaling." },
               { q: "How do you handle real-time data synchronization?", a: "We utilize event-driven architectures with systems like Redis and RabbitMQ to ensure that your users receive updates in real-time with sub-50ms propagation." },
@@ -605,37 +605,37 @@ export default function WebServiceContent() {
         </div>
       </section>
 
-      <section className="py-40 px-6 lg:px-12 bg-white">
+      <section className="py-16 sm:py-24 lg:py-40 px-4 sm:px-6 lg:px-12 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-black rounded-[4rem] p-12 lg:p-24 text-center relative overflow-hidden group shadow-[0_60px_100px_-20px_rgba(0,0,0,0.6)]">
+          <div className="bg-black rounded-[4rem] p-8 sm:p-12 lg:p-16 xl:p-24 text-center relative overflow-hidden group shadow-[0_60px_100px_-20px_rgba(0,0,0,0.6)]">
             <div className="absolute top-0 right-0 p-12 opacity-5 rotate-12 group-hover:rotate-0 transition-transform duration-1000"><Terminal size={400} /></div>
 
-            <div className="relative z-10 space-y-12">
-              <div className="space-y-6">
+            <div className="relative z-10 space-y-8 sm:space-y-10 lg:space-y-12">
+              <div className="space-y-4 sm:space-y-6">
                 <div className="inline-flex items-center space-x-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-4">
                   <div className="w-2 h-2 rounded-full bg-[#10b981] animate-ping"></div>
                   <span className="text-[9px] font-black uppercase tracking-[0.4em] text-white/50">Consultation_Session_Open</span>
                 </div>
-                <h2 className="text-5xl lg:text-[5.5rem] font-black tracking-tighter leading-[0.85] text-white">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[5.5rem] font-black tracking-tighter leading-[0.85] text-white">
                   Let&apos;s Build <br />
                   The <span className="text-[#10b981]">Next Level.</span>
                 </h2>
-                <p className="text-gray-400 text-lg font-medium max-w-xl mx-auto">
+                <p className="text-gray-400 text-base sm:text-lg font-medium max-w-xl mx-auto">
                   Skip the agencies. Talk directly to the architects who will own your system&apos;s trajectory.
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 pt-4">
                 <Link
                   href={`${base}#contact`}
-                  className="bg-[#10b981] text-black px-12 py-5 rounded-2xl font-black text-xs uppercase tracking-widest hover:scale-105 transition-all shadow-2xl shadow-[#10b981]/30 flex items-center justify-center space-x-4"
+                  className="w-full sm:w-auto bg-[#10b981] text-black px-8 sm:px-12 py-4 sm:py-5 rounded-2xl font-black text-xs uppercase tracking-widest hover:scale-105 transition-all shadow-2xl shadow-[#10b981]/30 flex items-center justify-center space-x-4"
                 >
                   <span>Initiate Engineering Brief</span>
                   <Maximize2 size={16} />
                 </Link>
                 <Link
                   href={`${base}/portfolio`}
-                  className="bg-white/5 border border-white/10 backdrop-blur-md text-white px-12 py-5 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all"
+                  className="w-full sm:w-auto bg-white/5 border border-white/10 backdrop-blur-md text-white px-8 sm:px-12 py-4 sm:py-5 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all text-center"
                 >
                   Review Deployments
                 </Link>

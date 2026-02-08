@@ -110,13 +110,13 @@ export default function AutomationsContent() {
     <div className="bg-white text-black min-h-screen selection:bg-[#10b981] selection:text-white font-sans overflow-x-hidden">
       <motion.section
         ref={heroRef}
-        className="relative min-h-[95vh] flex items-center justify-center px-6 lg:px-12 overflow-hidden bg-gradient-to-br from-[#fafafa] via-white to-[#f0fdf4]"
+        className="relative min-h-[80vh] sm:min-h-[90vh] lg:min-h-[95vh] flex items-center justify-center px-4 sm:px-6 lg:px-12 overflow-hidden bg-gradient-to-br from-[#fafafa] via-white to-[#f0fdf4]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
         <motion.div
-          className="absolute top-[20%] left-[10%] w-[600px] h-[600px] bg-[#10b981]/5 rounded-full blur-[140px] pointer-events-none"
+          className="absolute top-[20%] left-[5%] sm:left-[10%] w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-[#10b981]/5 rounded-full blur-[80px] sm:blur-[140px] pointer-events-none"
           animate={{
             scale: [1, 1.1, 1],
             opacity: [0.5, 0.8, 0.5],
@@ -132,7 +132,7 @@ export default function AutomationsContent() {
           }}
         />
         <motion.div
-          className="absolute bottom-[10%] right-[15%] w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none"
+          className="absolute bottom-[10%] right-[5%] sm:right-[15%] w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-blue-500/5 rounded-full blur-[80px] sm:blur-[120px] pointer-events-none"
           animate={{
             scale: [1, 1.15, 1],
             opacity: [0.3, 0.6, 0.3],
@@ -150,23 +150,23 @@ export default function AutomationsContent() {
         />
         
         <motion.div
-          className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-20 items-center relative z-10"
+          className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-20 items-center relative z-10"
           style={{ y: heroY, opacity: heroOpacity }}
         >
-          <div className="space-y-10 text-center lg:text-left">
+          <div className="space-y-8 sm:space-y-10 text-center lg:text-left">
             <motion.div
-              className="space-y-8"
+              className="space-y-6 sm:space-y-8"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h1 className="text-4xl md:text-4xl lg:text-[4.5rem] font-black tracking-tight leading-[0.9] text-[#111]">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[4.5rem] font-black tracking-tight leading-[0.95] sm:leading-[0.9] text-[#111] px-2 sm:px-0">
                 {t("hero_title_1")} <br />
                 {t("hero_title_2")} <br />
                 <span className="text-[#10b981] relative inline-block">
                   {t("hero_title_highlight")}
                   <motion.div
-                    className="absolute -bottom-2 left-0 w-full h-1 bg-[#10b981]/20 rounded-full"
+                    className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-0.5 sm:h-1 bg-[#10b981]/20 rounded-full"
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
@@ -174,28 +174,28 @@ export default function AutomationsContent() {
                   />
                 </span>
               </h1>
-              <p className="text-gray-500 text-xl md:text-2xl font-medium max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              <p className="text-gray-500 text-base sm:text-xl md:text-2xl font-medium max-w-xl mx-auto lg:mx-0 leading-relaxed px-4 sm:px-0">
                 {t("hero_subtitle")}
               </p>
             </motion.div>
             
             <motion.div
-              className="flex flex-col sm:flex-row justify-center lg:justify-start gap-6 pt-4"
+              className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 sm:gap-6 pt-4 px-4 sm:px-0"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }} className="w-full sm:w-auto">
                 <Link
                   href={`/${locale}#contact`}
-                  className="bg-[#111] text-white px-12 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-[#10b981] transition-colors shadow-2xl flex items-center justify-center space-x-4 group"
+                  className="bg-[#111] text-white px-10 sm:px-12 py-4 sm:py-5 rounded-xl sm:rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-[#10b981] transition-colors shadow-2xl flex items-center justify-center space-x-3 sm:space-x-4 group"
                 >
                   <span>{t("hero_cta")}</span>
                   <motion.div
                     animate={{ rotate: [0, 10, -10, 0] }}
                     transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                   >
-                    <Sparkles size={20} />
+                    <Sparkles size={18} className="sm:w-5 sm:h-5" />
                   </motion.div>
                 </Link>
               </motion.div>
@@ -438,16 +438,16 @@ export default function AutomationsContent() {
         </motion.div>
       </motion.section>
 
-      <section className="relative px-6 lg:px-12 max-w-7xl mx-auto py-10">
+      <section className="relative px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto py-8 sm:py-10">
         <motion.div
-          className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-start"
+          className="grid lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-24 items-start"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
-          <div className="lg:col-span-5 sticky top-32">
-            <div className="space-y-2">
+          <div className="lg:col-span-5 lg:sticky lg:top-32 order-2 lg:order-1">
+            <div className="space-y-1 sm:space-y-2">
               {cases.map((useCase, idx) => (
                 <motion.button
                   key={idx}
@@ -461,14 +461,14 @@ export default function AutomationsContent() {
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
                   <motion.div
-                    className="flex items-center space-x-8"
+                    className="flex items-center space-x-4 sm:space-x-6 lg:space-x-8"
                     animate={{
                       scale: activeIndex === idx ? 1.02 : 1,
                     }}
                     transition={{ duration: 0.3 }}
                   >
                     <motion.span
-                      className={`text-xl font-black transition-all duration-500 ${activeIndex === idx ? "text-[#111]" : "text-gray-200"}`}
+                      className={`text-lg sm:text-xl font-black transition-all duration-500 ${activeIndex === idx ? "text-[#111]" : "text-gray-200"}`}
                       animate={{
                         color: activeIndex === idx ? "#111" : "#e5e5e5",
                       }}
@@ -476,7 +476,7 @@ export default function AutomationsContent() {
                       {useCase.id}
                     </motion.span>
                     <motion.h3
-                      className={`text-1.5xl lg:text-3xl font-black tracking-tighter`}
+                      className={`text-xl sm:text-2xl lg:text-3xl font-black tracking-tighter`}
                       animate={{
                         color: activeIndex === idx ? "#111" : "#e5e5e5",
                         x: activeIndex === idx ? 5 : 0,
@@ -489,19 +489,19 @@ export default function AutomationsContent() {
                   <div
                     className={`grid transition-all duration-700 ease-in-out ${activeIndex === idx ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
                   >
-                    <div className="overflow-hidden space-y-6 pl-14 pb-8">
-                      <p className="text-gray-500 text-lg lg:text-xl font-medium leading-relaxed max-w-md">
+                    <div className="overflow-hidden space-y-4 sm:space-y-6 pl-10 sm:pl-12 lg:pl-14 pb-6 sm:pb-8">
+                      <p className="text-gray-500 text-base sm:text-lg lg:text-xl font-medium leading-relaxed max-w-md">
                         {useCase.desc}
                       </p>
-                      <div className="flex items-center space-x-4 text-[#10b981] pt-2">
-                        <CheckCircle2 size={18} />
-                        <span className="font-black text-[11px] uppercase tracking-widest">{useCase.outcome}</span>
+                      <div className="flex items-center space-x-3 sm:space-x-4 text-[#10b981] pt-2">
+                        <CheckCircle2 size={16} className="sm:w-4.5 sm:h-4.5" />
+                        <span className="font-black text-[10px] sm:text-[11px] uppercase tracking-widest">{useCase.outcome}</span>
                       </div>
-                      <div className="pt-4 flex items-center space-x-4">
-                        <div className="w-10 h-10 rounded-2xl bg-gray-50 flex items-center justify-center text-[#10b981] border border-gray-100">
-                          <Bot size={20} />
+                      <div className="pt-3 sm:pt-4 flex items-center space-x-3 sm:space-x-4">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl bg-gray-50 flex items-center justify-center text-[#10b981] border border-gray-100">
+                          <Bot size={18} className="sm:w-5 sm:h-5" />
                         </div>
-                        <div className="text-[10px] font-black uppercase tracking-widest text-gray-400">
+                        <div className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-gray-400">
                           {t("deployed_agent")} <span className="text-[#111]">{useCase.agent}</span>
                         </div>
                       </div>
@@ -512,10 +512,10 @@ export default function AutomationsContent() {
             </div>
           </div>
 
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 order-1 lg:order-2">
             <div
               ref={rightScrollRef}
-              className="max-h-[85vh] overflow-y-auto scroll-smooth snap-y snap-mandatory automations-hide-scrollbar pr-4 -mr-4 space-y-32 py-10"
+              className="lg:max-h-[85vh] overflow-y-auto scroll-smooth snap-y snap-mandatory automations-hide-scrollbar lg:pr-4 lg:-mr-4 space-y-12 sm:space-y-16 lg:space-y-32 py-4 sm:py-6 lg:py-10"
             >
               {cases.map((useCase, idx) => (
                 <div

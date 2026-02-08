@@ -1,1190 +1,1196 @@
 {
   "meta": {
-    "title": "GROVYN | आधुनिक उद्यमों के लिए सॉफ्टवेयर इंजीनियरिंग",
-    "description": "Grovyn वेब, मोबाइल और बैकएंड समाधानों में विशेषज्ञता वाली सॉफ्टवेयर इंजीनियरिंग कंपनी है।"
+    "title": "Grovyn | Software Engineering That Lasts",
+    "description": "We build reliable software systems for growing businesses. Clear architecture, dependable execution, and technology that works."
   },
   "hero": {
-    "title_line1": "तकनीकी क्षमताएं",
-    "title_line2": "वास्तविक दुनिया",
-    "title_highlight": "पैमाने",
-    "title_highlight2": "के लिए तैयार",
-    "subtitle": "Grovyn वैश्विक व्यवसायों के लिए उत्पादन-तैयार सॉफ्टवेयर सिस्टम बनाता है — विश्वसनीयता, प्रदर्शन और दीर्घकालिक रखरखाव पर ध्यान, आर्किटेक्चर से डिप्लॉयमेंट तक।",
-    "cta_primary": "संपर्क करें",
-    "cta_secondary": "अभी शुरू करें"
+    "title_line1": "Technology Capabilities",
+    "title_line2": "Engineered for",
+    "title_highlight": "not slow",
+    "title_highlight2": "it down",
+    "subtitle": "Grovyn helps teams build software systems that are designed to stay reliable as products and businesses scale. We focus on clear architecture, maintainable code, and technology choices that age well.",
+    "cta_primary": "Start a conversation",
+    "cta_secondary": "See how we work"
   },
   "navbar": {
-    "services": "सेवाएं",
-    "about": "हमारे बारे में",
-    "solutions": "समाधान",
-    "resources": "संसाधन",
-    "careers": "करियर",
-    "cta": "डिस्कवरी कॉल बुक करें",
-    "privacy": "गोपनीयता",
-    "terms": "नियम और शर्तें",
-    "solutions_menu": {
-      "industries": "जिन उद्योगों को हम संचालित करते हैं",
-      "industries_desc": "हेल्थकेयर, फिनटेक, ई-कॉमर्स आदि के लिए डोमेन-विशिष्ट इंजीनियरिंग।"
-    },
+    "capabilities": "Capabilities",
+    "services": "Services",
+    "about": "About",
+    "portfolio": "Work",
+    "industries": "Industries",
+    "automations": "Automations",
+    "resources": "Resources",
+    "infrastructure": "Infrastructure",
+    "capabilities_explore": "What we do",
+    "capabilities_services_heading": "Software development",
+    "capabilities_infra_heading": "Infrastructure",
+    "view_all_services": "View all services",
+    "careers": "Careers",
+    "cta": "Get in touch",
+    "privacy": "Privacy",
+    "terms": "Terms",
     "resources_menu": {
-      "contact": "संपर्क"
+      "contact": "Contact",
+      "blog": "Blog"
     },
-    "infrastructure": "अवसंरचना",
+    "industries_menu": {
+      "healthcare": "Healthcare",
+      "healthcare_desc": "Systems for health and medical technology",
+      "fintech": "Finance",
+      "fintech_desc": "Banking, payments, and financial services",
+      "ecommerce": "Commerce",
+      "ecommerce_desc": "Online retail and marketplace platforms",
+      "edtech": "Education",
+      "edtech_desc": "Learning platforms and education tools",
+      "saas": "SaaS",
+      "saas_desc": "Software products and platforms",
+      "startups": "Startups",
+      "startups_desc": "From concept to market launch"
+    },
     "infrastructure_menu": {
-      "cloud_network_title": "क्लाउड और नेटवर्क",
-      "cloud_network_subtitle": "कोर इन्फ्रास्ट्रक्चर सेवाएं",
-      "security_support_title": "सुरक्षा और सहायता",
-      "security_support_subtitle": "सुरक्षा और रखरखाव",
-      "operations_title": "संचालन",
-      "operations_subtitle": "अपने सिस्टम ऑप्टिमाइज़ करें",
-      "featured_tag": "विशेष",
-      "featured_title": "क्लाउड माइग्रेशन",
-      "featured_desc": "हमारी टीम के साथ क्लाउड में माइग्रेट करें। शून्य डाउनटाइम गारंटी।",
-      "featured_link": "और जानें",
-      "footer_text": "इन्फ्रास्ट्रक्चर मूल्यांकन चाहिए?",
-      "footer_cta": "मुफ्त परामर्श लें",
-      "cloud": "क्लाउड इन्फ्रास्ट्रक्चर",
-      "cloud_desc": "AWS, Azure और GCP सेटअप",
-      "network": "नेटवर्क इन्फ्रास्ट्रक्चर",
-      "network_desc": "LAN, WAN और नेटवर्क डिज़ाइन",
-      "servers": "सर्वर इन्फ्रास्ट्रक्चर",
-      "servers_desc": "ऑन-प्रिमाइज़ और हाइब्रिड सर्वर",
-      "security": "साइबर सुरक्षा",
-      "security_desc": "सुरक्षा ऑडिट और अनुपालन",
-      "support": "IT हेल्पडेस्क और सपोर्ट",
-      "support_desc": "24/7 तकनीकी सहायता",
-      "backup": "बैकअप और DR",
-      "backup_desc": "डिज़ास्टर रिकवरी समाधान",
-      "devops": "DevOps और ऑटोमेशन",
-      "devops_desc": "CI/CD और इन्फ्रास्ट्रक्चर ऐज़ कोड",
-      "datacenter": "डेटा सेंटर डिज़ाइन",
-      "datacenter_desc": "आधुनिक डेटा सेंटर समाधान",
-      "communication": "यूनिफाइड कम्युनिकेशन",
-      "communication_desc": "VoIP और सहयोग टूल",
-      "migration": "क्लाउड माइग्रेशन",
-      "migration_desc": "शून्य डाउनटाइम क्लाउड माइग्रेशन"
+      "cloud_network_title": "Cloud & Network",
+      "cloud_network_subtitle": "Infrastructure foundations",
+      "security_support_title": "Security & Support",
+      "security_support_subtitle": "Protection and maintenance",
+      "operations_title": "Operations",
+      "operations_subtitle": "Keep systems running well",
+      "featured_tag": "Featured",
+      "featured_title": "Cloud Migration",
+      "featured_desc": "Move to cloud infrastructure with minimal disruption and clear planning.",
+      "featured_link": "Learn more",
+      "footer_text": "Need help with infrastructure?",
+      "footer_cta": "Talk to our team",
+      "cloud": "Cloud Infrastructure",
+      "cloud_desc": "AWS, Azure, and Google Cloud",
+      "network": "Network Infrastructure",
+      "network_desc": "Network design and connectivity",
+      "servers": "Server Infrastructure",
+      "servers_desc": "Physical and virtual servers",
+      "security": "Security",
+      "security_desc": "Security systems and compliance",
+      "support": "Support",
+      "support_desc": "Ongoing technical support",
+      "backup": "Backup & Recovery",
+      "backup_desc": "Data protection and recovery",
+      "devops": "DevOps",
+      "devops_desc": "Automation and deployment",
+      "datacenter": "Data Centers",
+      "datacenter_desc": "Facility planning and design",
+      "communication": "Communication Systems",
+      "communication_desc": "Voice and collaboration tools",
+      "migration": "Cloud Migration",
+      "migration_desc": "Infrastructure transition planning"
     },
     "menus": {
-      "web": "वेब विकास",
-      "web_desc": "React, Angular और Vue के साथ स्केलेबल वेब ऐप।",
-      "mobile": "मोबाइल ऐप",
-      "mobile_desc": "iOS और Android के लिए नेटिव और क्रॉस-प्लेटफॉर्म ऐप।",
-      "backend": "बैकएंड और क्लाउड",
-      "backend_desc": "माइक्रोसर्विसेज, API विकास और स्केलेबल क्लाउड इन्फ्रा।",
-      "ai": "AI और जनरेटिव AI",
-      "ai_desc": "अत्याधुनिक AI एजेंट और जनरेटिव AI समाधान।"
+      "web": "Web Development",
+      "web_desc": "web applications and platforms",
+      "mobile": "Mobile Apps",
+      "mobile_desc": "iOS and Android development",
+      "platform": "Platform Design",
+      "platform_desc": "system architecture planning"
     }
   },
   "services_we_offer": {
-    "badge": "हम क्या डिलिवर करते हैं",
-    "title": "प्रोजेक्ट जो हम",
-    "highlight": "बनाते हैं",
-    "subtitle": "कॉर्पोरेट साइट्स से ई-कॉमर्स और पोर्टफोलियो तक — हम ऐसे सॉल्यूशन डिलिवर करते हैं जो स्केल और परफॉर्म करते हैं।",
+    "badge": "What we build",
+    "title": "Software that",
+    "highlight": "works",
+    "subtitle": "We build web applications, mobile apps, and platforms that stay reliable as your business grows.",
     "cards": [
-      {
-        "title": "बिजनेस वेबसाइट्स",
-        "description": "पेशेवर कॉर्पोरेट साइट्स जो क्रेडिबिलिटी बनाती हैं और क्लियर, कन्वर्जन-फोकस्ड डिज़ाइन से ग्रोथ ड्राइव करती हैं।",
-        "tags": [
-          "कॉर्पोरेट ब्रांडिंग",
-          "लीड जनरेशन",
-          "SEO ऑप्टिमाइज़्ड"
-        ]
-      },
-      {
-        "title": "ई-कॉमर्स प्लेटफॉर्म",
-        "description": "सिक्योर पेमेंट्स, इन्वेंटरी मैनेजमेंट और सीमलेस चेकआउट के साथ फुल-फीचर्ड ऑनलाइन स्टोर।",
-        "tags": [
-          "पेमेंट गेटवे",
-          "इन्वेंटरी",
-          "ऑर्डर ट्रैकिंग"
-        ]
-      },
-      {
-        "title": "पोर्टफोलियो और शोकेस",
-        "description": "क्रिएटिव्स, आर्टिस्ट्स और प्रोफेशनल्स के लिए स्टनिंग शोकेस साइट्स।",
-        "tags": [
-          "गैलरीज़",
-          "केस स्टडीज़",
-          "कॉन्टैक्ट फॉर्म्स"
-        ]
-      }
+      { "title": "Web Applications", "description": "Custom web platforms built with modern tools and clear architecture.", "tags": ["React", "Node.js", "Cloud hosting"] },
+      { "title": "Mobile Applications", "description": "Native iOS and Android apps designed for performance and maintainability.", "tags": ["React Native", "Flutter", "Native iOS/Android"] },
+      { "title": "Platform Architecture", "description": "System design and technical planning for products that need to scale.", "tags": ["Architecture", "APIs", "System design"] }
     ],
-    "cta_link": "सभी वेब सर्विसेज़ एक्सप्लोर करें"
+    "cta_link": "See what we do"
   },
   "industries": {
-    "badge": "जिन उद्योगों को हम संचालित करते हैं",
-    "title_line1": "डोमेन-विशिष्ट",
-    "title_line2": "इंजीनियरिंग",
-    "title_highlight": "उत्कृष्टता।",
-    "subtitle": "जटिल उद्योग परिदृश्यों के लिए अनुकूलित समाधान।",
-    "core_areas_label": "हमारे मुख्य संचालन क्षेत्र",
-    "total_deployments": "कुल डिप्लॉयमेंट",
-    "system_availability": "सिस्टम उपलब्धता",
+    "badge": "Where we work",
+    "title_line1": "Building software for",
+    "title_line2": "growing businesses",
+    "title_highlight": "across sectors",
+    "subtitle": "We work with teams in healthcare, finance, commerce, and other industries that take their technology seriously.",
+    "core_areas_label": "What we focus on",
+    "total_deployments": "Projects shipped",
+    "system_availability": "Reliability",
     "healthcare": {
-      "title": "हेल्थकेयर इंटेलिजेंस",
-      "location": "सिस्टम इन्फ्रास्ट्रक्चर - ग्लोबल हेल्थ",
+      "title": "Healthcare Technology",
+      "location": "Health systems and medical platforms",
       "areas": [
-        "हॉस्पिटल और क्लिनिक मैनेजमेंट सिस्टम",
-        "इलेक्ट्रॉनिक हेल्थ रिकॉर्ड (EHR) प्लेटफॉर्म",
-        "टेलीमेडिसिन और रिमोट पेशेंट केयर",
-        "हेल्थकेयर SaaS एंटरप्राइज समाधान"
+        "Hospital and clinic management",
+        "Electronic health records",
+        "Telemedicine platforms",
+        "Healthcare software products"
       ],
       "projects": "12+",
       "uptime": "99.99%"
     },
     "finance": {
-      "title": "फिनटेक और डिजिटल इकोनॉमी",
-      "location": "ग्लोबल फाइनेंशियल ऑपरेशंस हब",
+      "title": "Financial Technology",
+      "location": "Banking and financial services",
       "areas": [
-        "डिजिटल बैंकिंग और पेमेंट गेटवे",
-        "एसेट मैनेजमेंट और ट्रेडिंग प्लेटफॉर्म",
-        "लेंडिंग और मॉर्टगेज ऑटोमेशन",
-        "ब्लॉकचेन-नेटिव फाइनेंशियल सिस्टम"
+        "Digital banking platforms",
+        "Payment processing",
+        "Lending systems",
+        "Financial data platforms"
       ],
       "projects": "18+",
       "uptime": "100%"
     },
     "ecommerce": {
-      "title": "ई-कॉमर्स और रिटेल टेक",
-      "location": "लॉजिस्टिक्स आर्किटेक्चर सेंटर",
+      "title": "Commerce Platforms",
+      "location": "Retail and marketplace systems",
       "areas": [
-        "हाइपर-स्केल मल्टी-वेंडर मार्केटप्लेस",
-        "ऑटोमेटेड इन्वेंटरी और लॉजिस्टिक्स सिस्टम",
-        "D2C ब्रांड परफॉर्मेंस प्लेटफॉर्म",
-        "B2B कॉमर्स और डिस्ट्रीब्यूशन इंजन"
+        "Marketplace platforms",
+        "Inventory management",
+        "Direct-to-consumer stores",
+        "B2B commerce systems"
       ],
       "projects": "24+",
       "uptime": "99.98%"
     }
   },
   "capabilities": {
-    "title_line1": "वह इंजीनियरिंग",
-    "title_line2": "पार्टनर",
-    "title_line3": "जिस पर आप",
-    "title_highlight": "भरोसा कर सकते हैं",
-    "title_line4": "जो मायने रखता है वह",
-    "title_line5": "बनाने के लिए",
-    "subtext": "सटीकता, विश्वसनीयता और दीर्घकालिक दृष्टि के साथ इंजीनियर किए गए उत्पादन-तैयार सिस्टम।",
+    "title_line1": "Technology Capabilities",
+    "title_line2": "that support growth,",
+    "title_line3": "",
+    "title_highlight": "not complexity",
+    "title_line4": "",
+    "title_line5": "",
+    "subtext": "We help teams build software that stays reliable and maintainable as products grow.",
     "left": [
-      {
-        "title": "कस्टम सॉफ्टवेयर और प्लेटफॉर्म इंजीनियरिंग",
-        "description": "उच्च प्रदर्शन और आर्किटेक्चरल अखंडता के लिए अनुकूलित सॉफ्टवेयर समाधान।"
-      },
-      {
-        "title": "वेब और क्लाउड-नेटिव एप्लिकेशन विकास",
-        "description": "उपलब्धता और स्केल के लिए आधुनिक, क्लाउड-नेटिव आर्किटेक्चर के साथ उच्च प्रदर्शन वेब ऐप।"
-      },
-      {
-        "title": "मोबाइल एप्लिकेशन विकास",
-        "description": "नेटिव और क्रॉस-प्लेटफॉर्म मोबाइल अनुभव जो प्रीमियम और निर्दोष परफॉर्म करते हैं।"
-      },
-      {
-        "title": "प्रोडक्ट इंजीनियरिंग और सिस्टम इवोल्यूशन",
-        "description": "MVP से एंटरप्राइज-स्केल इवोल्यूशन तक एंड-टू-एंड प्रोडक्ट लाइफसाइकल प्रबंधन।"
-      },
-      {
-        "title": "क्लाउड इन्फ्रास्ट्रक्चर, DevOps और रिलायबिलिटी इंजीनियरिंग",
-        "description": "अपटाइम, सुरक्षा और ऑटोमेशन पर ध्यान के साथ मजबूत इन्फ्रास्ट्रक्चर प्रबंधन।"
-      }
+      { "title": "Custom Software Development", "description": "Web and mobile applications built for your specific needs." },
+      { "title": "Web Applications", "description": "Modern web platforms designed for performance and clarity." },
+      { "title": "Mobile Applications", "description": "iOS and Android apps that feel native and work reliably." },
+      { "title": "Product Development", "description": "From initial concept through to launch and beyond." },
+      { "title": "Cloud Infrastructure", "description": "Hosting, deployment, and operations that scale smoothly." }
     ],
     "right": [
-      {
-        "title": "UI/UX डिज़ाइन और एक्सपीरियंस इंजीनियरिंग",
-        "description": "यूजर-सेंट्रिक डिज़ाइन जो सौंदर्य और कार्यात्मक उत्कृष्टता को संतुलित करता है।"
-      },
-      {
-        "title": "क्वालिटी इंजीनियरिंग और टेस्टिंग",
-        "description": "कड़े टेस्टिंग प्रोटोकॉल ताकि हर लाइन एंटरप्राइज मानकों को पूरा करे।"
-      },
-      {
-        "title": "सुरक्षा, अनुपालन और डेटा संरक्षण",
-        "description": "आपकी IP और यूजर डेटा की रक्षा के लिए शीर्ष सुरक्षा उपाय।"
-      },
-      {
-        "title": "API, प्लेटफॉर्म और सिस्टम इंटीग्रेशन",
-        "description": "आपके कोर प्रोडक्ट्स और तीसरे पक्ष के इकोसिस्टम के बीच सीमलेस कनेक्टिविटी।"
-      },
-      {
-        "title": "लॉन्ग-टर्म सपोर्ट और लाइफसाइकल मैनेजमेंट",
-        "description": "आपके सिस्टम को पीक परफॉर्मेंस पर चलाने के लिए निरंतर मॉनिटरिंग और अपडेट।"
-      }
+      { "title": "Product Design", "description": "User interfaces that make sense and work across devices." },
+      { "title": "Quality Assurance", "description": "Testing and quality processes to catch issues early." },
+      { "title": "Security", "description": "Security practices built into development from the start." },
+      { "title": "Integrations", "description": "Connecting your systems with third-party services." },
+      { "title": "Ongoing Support", "description": "Maintenance and updates to keep systems running well." }
     ]
   },
   "metrics": {
-    "title": "Grovyn नेक्स्ट-जन इंजीनियरिंग पहल",
-    "subtitle": "सटीकता, विश्वसनीयता और दीर्घकालिक दृष्टि के साथ इंजीनियर किए गए उत्पादन-तैयार सिस्टम। हम आपकी वृद्धि के लिए स्केलेबल आर्किटेक्चर और हाई-परफॉर्मेंस डिलीवरी को प्राथमिकता देते हैं।",
-    "deliveries": "उत्पादन सिस्टम डिलीवरी।",
-    "pricing_title": "पारदर्शी और फिक्स्ड प्राइसिंग",
-    "get_quote": "मुफ्त कोट लें",
-    "global_delivery": "ग्लोबल डिलीवरी, सोच-समझकर एक्जीक्यूशन",
-    "mvp_delivery": "औसत MVP डिलीवरी",
-    "mvp_value": "2-4 सप्ताह",
-    "quality_guarantee": "गुणवत्ता गारंटी",
-    "quality_value": "90 दिन",
-    "ownership": "पूर्ण स्वामित्व, वेंडर लॉक-इन नहीं",
-    "ticker": "स्केलेबल सिस्टम"
+    "title": "How we work",
+    "subtitle": "We focus on clear communication, realistic timelines, and building systems that continue to work well as your business grows.",
+    "deliveries": "Projects shipped",
+    "pricing_title": "Clear pricing upfront",
+    "get_quote": "Talk to us",
+    "global_delivery": "Teams across time zones",
+    "mvp_delivery": "Typical project start",
+    "mvp_value": "2-4 weeks",
+    "quality_guarantee": "Support included",
+    "quality_value": "90 days",
+    "ownership": "You own everything we build",
+    "ticker": "Reliable systems"
   },
   "testimonials": {
-    "title": "लंबी अवधि के लिए बनाने वाली टीमों द्वारा विश्वसनीय",
-    "subtitle": "एंटरप्राइज टीमें सुरक्षित, विश्वसनीय सिस्टम के लिए Grovyn पर भरोसा करती हैं जो स्केल पर लगातार परफॉर्म करते हैं।"
+    "title": "Built for teams that need technology they can depend on",
+    "subtitle": "We work with businesses that take their software seriously and need systems that remain stable, clear, and dependable over time."
   },
   "contact": {
-    "badge": "डायरेक्ट इंजीनियरिंग एक्सेस",
-    "title_line1": "आपकी इंजीनियरिंग",
-    "title_highlight": "प्राथमिकताओं",
-    "title_line2": "पर चर्चा करें",
-    "subtitle": "आर्किटेक्चर, व्यवहार्यता और अपनी अगली पहल के लिए एक्जीक्यूशन स्ट्रैटेजी का मूल्यांकन करने के लिए सीनियर इंजीनियरों के साथ सीधे जुड़ें।",
-    "confidential": "गोपनीय चर्चाएं",
-    "confidential_desc": "सख्त गोपनीयता प्रोटोकॉल के तहत सुरक्षित परामर्श।",
-    "nda": "NDA उपलब्ध",
-    "nda_desc": "आपकी IP की रक्षा के लिए मानक या कस्टम समझौते।",
-    "no_sales": "कोई सेल्स मध्यस्थ नहीं",
-    "no_sales_desc": "सीधे उन इंजीनियरों से बात करें जो आपका प्रोडक्ट बना रहे हैं।",
-    "step_your_info": "आपकी जानकारी",
-    "step_goal": "प्रोजेक्ट लक्ष्य",
-    "step_details": "विवरण",
-    "your_info_title": "आपकी जानकारी",
-    "your_info_sub": "हमें आपका संदर्भ समझने में मदद करें",
-    "project_goal_title": "प्रोजेक्ट लक्ष्य",
-    "project_goal_sub": "हम एक साथ क्या बना रहे हैं?",
-    "details_title": "प्रोजेक्ट विवरण",
-    "details_sub": "एक्जीक्यूशन के बारीक बिंदु",
-    "full_name": "पूरा नाम *",
-    "email": "ईमेल पता *",
-    "company": "कंपनी *",
-    "i_want": "मैं चाहता/चाहती हूं...",
-    "build_mvp": "नया MVP बनाएं",
-    "scale_platform": "मौजूदा प्लेटफॉर्म स्केल करें",
-    "integration": "इंटीग्रेशन सेवाएं",
-    "modernize": "लेगेसी स्टैक आधुनिक बनाएं",
-    "target_platforms": "टारगेट प्लेटफॉर्म",
-    "web_app": "वेब एप्लिकेशन",
-    "mobile_app": "iOS/Android ऐप",
-    "brief_desc": "संक्षिप्त विवरण",
-    "brief_placeholder": "तकनीकी आवश्यकताओं या चुनौतियों के बारे में बताएं...",
-    "budget": "अनुमानित बजट",
-    "timeline": "वांछित टाइमलाइन",
-    "select_range": "रेंज चुनें",
-    "select_timeline": "टाइमलाइन चुनें",
-    "back": "वापस",
-    "continue": "जारी रखें",
-    "send_request": "अनुरोध भेजें",
-    "success_title": "अनुरोध प्राप्त।",
-    "success_message": "हमारी इंजीनियरिंग टीम आपकी आवश्यकताओं की समीक्षा करेगी और डीप-डाइव सत्र शेड्यूल करने के लिए 24 घंटे के भीतर संपर्क करेगी।",
-    "start_new": "नया अनुरोध शुरू करें"
+    "badge": "Get in touch",
+    "title_line1": "Let's talk about",
+    "title_highlight": "your project",
+    "title_line2": "",
+    "subtitle": "Share what you are planning to build. We will help you think through the scope, technical considerations, and whether working together makes sense.",
+    "confidential": "Private discussions",
+    "confidential_desc": "Everything we discuss is treated as confidential from the first conversation.",
+    "nda": "NDAs available",
+    "nda_desc": "We are comfortable signing standard or custom non-disclosure agreements when required.",
+    "no_sales": "Talk to engineers",
+    "no_sales_desc": "You will speak directly with the people responsible for designing and building the system.",
+    "step_your_info": "Your details",
+    "step_goal": "Your project",
+    "step_details": "More details",
+    "your_info_title": "About you",
+    "your_info_sub": "Help us understand who you are",
+    "project_goal_title": "What you need",
+    "project_goal_sub": "What are you looking to build?",
+    "details_title": "Project details",
+    "details_sub": "Tell us more about your needs",
+    "full_name": "Your name",
+    "email": "Email address",
+    "company": "Company",
+    "i_want": "I need help with",
+    "build_mvp": "Building something new",
+    "scale_platform": "Growing an existing product",
+    "integration": "Adding integrations",
+    "modernize": "Updating older technology",
+    "target_platforms": "What are you building?",
+    "web_app": "Web application",
+    "mobile_app": "Mobile app (iOS/Android)",
+    "brief_desc": "Tell us about your project",
+    "brief_placeholder": "What are you trying to build? What challenges are you facing?",
+    "budget": "Budget range",
+    "timeline": "When do you need this?",
+    "select_range": "Select range",
+    "select_timeline": "Select timeline",
+    "back": "Back",
+    "continue": "Continue",
+    "send_request": "Send",
+    "success_title": "We received your message",
+    "success_message": "Someone from our team will reach out within 24 hours to discuss your project.",
+    "start_new": "Send another message"
   },
   "footer": {
-    "tagline": "अगली पीढ़ी के डिजिटल उत्पादों की इंजीनियरिंग। हाई-स्केल क्लाउड प्लेटफॉर्म से सीमलेस मोबाइल अनुभव तक।",
-    "hours": "सुबह 9:00 से शाम 7:00",
-    "location": "मुंबई, महाराष्ट्र",
-    "services_heading": "सेवाएं",
-    "company_heading": "कंपनी",
-    "resources_heading": "संसाधन",
-    "capabilities": "क्षमताएं",
-    "web_dev": "वेब विकास",
-    "mobile_eng": "मोबाइल इंजीनियरिंग",
-    "ui_ux": "UI/UX डिज़ाइन",
-    "cloud_arch": "क्लाउड आर्किटेक्चर",
-    "integrations": "इंटीग्रेशन",
-    "connect": "जुड़ें",
-    "about": "हमारे बारे में",
-    "careers": "करियर",
-    "contact": "संपर्क",
-    "privacy": "गोपनीयता",
-    "terms": "नियम और शर्तें",
-    "linkedin": "लिंक्डइन",
-    "copyright": "Grovyn Inc."
+    "tagline": "We build software systems that stay reliable as businesses grow. Clear architecture, maintainable code, and technology choices that age well.",
+    "hours": "9:00am to 7:00pm IST",
+    "location": "Mumbai, India",
+    "services_heading": "Services",
+    "company_heading": "Company",
+    "resources_heading": "Resources",
+    "capabilities": "What we do",
+    "web_dev": "Web Development",
+    "mobile_eng": "Mobile Development",
+    "ui_ux": "Product Design",
+    "cloud_arch": "Cloud Infrastructure",
+    "integrations": "Integrations",
+    "connect": "Connect",
+    "about": "About",
+    "careers": "Careers",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "linkedin": "LinkedIn",
+    "copyright": "Grovyn"
   },
   "about": {
-    "badge": "भविष्य की इंजीनियरिंग",
-    "title_line1": "लचीलापन के लिए",
-    "title_highlight": "बनाया,",
-    "title_line2": "पैमाने के लिए",
-    "title_italic": "डिज़ाइन।",
-    "subtitle": "Grovyn वैश्विक उद्यमों के लिए जटिल आर्किटेक्चरल चुनौतियों को हल करने के लिए समर्पित एक हाई-परफॉर्मेंस इंजीनियरिंग सामूहिक है।",
-    "philosophy_title": "हमारा इंजीनियरिंग",
-    "philosophy_highlight": "फर्स्ट फिलॉसफी",
-    "philosophy_desc": "हम सिर्फ फीचर शिप नहीं करते; हम सिस्टम इंजीनियर करते हैं। हमारा दृष्टिकोण तकनीकी ऋण कमी, ऑब्जर्वेबल आर्किटेक्चर और यूजर-सेंट्रिक फ्लो को प्राथमिकता देता है।",
-    "clean_code": "क्लीन कोड",
-    "clean_code_desc": "मेंटेन करने योग्य, पीयर-रिव्यूड और डॉक्यूमेंटेड।",
-    "cloud_native": "क्लाउड नेटिव",
-    "cloud_native_desc": "AWS, Azure और GCP विश्वसनीयता के लिए बनाया गया।",
-    "zero_latency": "जीरो लेटेंसी",
-    "zero_latency_desc": "वैश्विक यूजर्स के लिए ऑप्टिमाइज्ड रिस्पॉन्स टाइम।",
-    "data_security": "डेटा सुरक्षा",
-    "data_security_desc": "एंड-टू-एंड एन्क्रिप्शन और अनुपालन।",
-    "precision_title": "प्रेरित",
-    "precision_highlight": "परिशुद्धता",
-    "principles": "से। हमारे कोर ऑपरेटिंग प्रिंसिपल",
-    "transparency": "कट्टर पारदर्शिता",
-    "transparency_desc": "हमारे इंजीनियरिंग डैशबोर्ड के माध्यम से रियल-टाइम प्रोजेक्ट विजिबिलिटी।",
-    "reliability": "अत्यधिक विश्वसनीयता",
-    "reliability_desc": "पीक ग्लोबल ट्रैफिक का सामना करने के लिए डिज़ाइन किए गए फॉल्ट-टॉलरेंट सिस्टम।",
-    "user_flow": "यूजर-फर्स्ट फ्लो",
-    "user_flow_desc": "सीमलेस UX इंजीनियरिंग जो कोड और मानव इरादे के बीच की खाई पाटती है।",
-    "cta_badge": "प्रोडक्शन डिप्लॉयमेंट इंजन",
-    "cta_title": "इंजीनियर करने के लिए तैयार",
-    "cta_highlight": "आपका विकास?",
-    "cta_subtitle": "आज ही हमारे आर्किटेक्ट्स के साथ डीप-डाइव सत्र शेड्यूल करें और अपने प्रोजेक्ट की ट्रैजेक्टरी मैप करें।",
-    "deploy_btn": "मेरा प्रोजेक्ट डिप्लॉय करें",
-    "case_studies": "केस स्टडी देखें",
+    "badge": "About Grovyn",
+    "title_line1": "Technology that supports",
+    "title_highlight": "growth",
+    "title_line2": "instead of",
+    "title_italic": "slowing it down",
+    "subtitle": "Grovyn helps teams build software that stays reliable and maintainable as products and businesses scale.",
+    "philosophy_title": "How we",
+    "philosophy_highlight": "approach work",
+    "philosophy_desc": "We focus on clear architecture, maintainable code, and technology choices that continue to work well as systems grow. No shortcuts that create problems later.",
+    "clean_code": "Clear code",
+    "clean_code_desc": "Code that other people can understand and maintain",
+    "cloud_native": "Modern infrastructure",
+    "cloud_native_desc": "Built for cloud platforms that scale smoothly",
+    "zero_latency": "Good performance",
+    "zero_latency_desc": "Systems designed to respond quickly",
+    "data_security": "Security first",
+    "data_security_desc": "Security practices built in from the start",
+    "precision_title": "Built with",
+    "precision_highlight": "care",
+    "principles": "What matters to us",
+    "transparency": "Clear communication",
+    "transparency_desc": "You'll know what's happening with your project.",
+    "reliability": "Dependable systems",
+    "reliability_desc": "Technology that continues to work as you grow.",
+    "user_flow": "Good user experience",
+    "user_flow_desc": "Products that make sense to the people using them.",
+    "cta_badge": "Start a conversation",
+    "cta_title": "Let's talk about",
+    "cta_highlight": "your project",
+    "cta_subtitle": "Tell us what you're building and we'll help you understand what's involved.",
+    "cta_button": "Get in touch",
+    "case_studies": "See our work",
     "code_metric_value": "240,000+",
-    "code_metric_label": "मासिक डिप्लॉय की गई कोड लाइनें"
+    "code_metric_label": "Lines of code shipped each month"
   },
   "careers": {
-    "badge": "इंजीनियरिंग पद",
-    "title_line1": "वास्तविक प्रभाव के लिए",
-    "title_highlight": "बनाएं।",
-    "subtitle": "Grovyn एक हाई-परफॉर्मेंस सामूहिक है। हम ऐसे इंजीनियर ढूंढ रहे हैं जिन्हें \"कैसे\" उतना ही अहम लगता है जितना \"क्या\"।",
-    "culture_badge": "Grovyn कोर",
-    "culture_title": "उत्कृष्टता के",
-    "culture_highlight": "स्तंभ",
-    "culture_subtitle": "हमने एक संस्कृति इंजीनियर की है जो डीप वर्क, हाई एजेंसी और कट्टर विश्वास को प्राथमिकता देती है। कोई लेगेसी बैगेज नहीं, बस फॉरवर्ड-थिंकिंग इंजीनियरिंग।",
-    "remote_title": "रिमोट फर्स्ट कल्चर",
-    "remote_badge": "एसिंक फर्स्ट",
-    "remote_desc": "योगदान से मापा जाता है, क्लॉक-इन से नहीं। कहीं से भी काम करें, हाई-फिडेलिटी एसिंक टूल्स से सपोर्टेड।",
-    "rhythm_title": "सस्टेनेबल रिदम",
-    "rhythm_desc": "फोकस्ड इंजीनियरिंग थकान को हराती है। हम आपके डीप-वर्क ब्लॉक्स की रक्षा करते हैं।",
-    "agency_title": "हाई एजेंसी",
-    "agency_badge": "डोमेन ओनरशिप",
-    "agency_desc": "छोटी टीमें, बड़ा आर्किटेक्चरल प्रभाव। हम ओनर्स हायर करते हैं।",
-    "trust_title": "कट्टर विश्वास",
-    "trust_badge": "पारदर्शिता",
-    "trust_desc": "डिफॉल्ट रूप से ओपन रोडमैप और ओपन कम्युनिकेशन।",
-    "openings_title": "वर्तमान पद",
-    "openings_sub": "टेबल पर अपनी सीट ढूंढें",
+    "badge": "Join our team",
+    "title_line1": "Build software",
+    "title_highlight": "that matters",
+    "subtitle": "We're looking for people who care about writing good code and building systems that last.",
+    "hero_badge": "Work with us",
+    "hero_title_line1": "Help build",
+    "hero_title_line2": "technology",
+    "hero_title_highlight": "that lasts",
+    "hero_subtitle": "We work with growing businesses around the world. Our team is spread across India, Singapore, Indonesia, and the Philippines.",
+    "one_team_title": "One team,",
+    "one_team_title_highlight": "clear goals",
+    "one_team_subtitle": "We focus on building good software and supporting each other along the way.",
+    "one_team_item_1": "Grow your skills",
+    "one_team_item_2": "Work with experienced people",
+    "one_team_item_3": "Direct communication",
+    "one_team_item_4": "Space to learn and improve",
+    "open_roles_title": "Open positions",
+    "open_roles_count": "{count} open roles",
+    "filter_by": "Filter by",
+    "filter_all_locations": "All locations",
+    "filter_all_types": "All types",
+    "filter_all_teams": "All teams",
+    "requirements_label": "What we need",
+    "apply_now": "Apply",
+    "why_join_title": "Why work here",
+    "why_join_subtitle": "We try to create an environment where people can do good work.",
+    "perk_remote": "Remote work",
+    "perk_stock": "Equity options",
+    "perk_learning": "Learning budget",
+    "perk_gear": "Good equipment",
+    "all_openings": "All openings",
+    "detail_mission_title": "About this role",
+    "detail_mission_body": "We're looking for someone who can help us build reliable software for growing businesses. You'll work directly with our team and our clients to understand what they need and build systems that solve real problems.",
+    "detail_requirements_title": "What we need",
+    "detail_offer_title": "What we offer",
+    "detail_form_heading": "Apply for this position",
+    "detail_form_subheading": "Tell us about yourself",
+    "detail_position_label": "Position",
+    "detail_message_placeholder": "Tell us why you're interested in this role and what experience you bring.",
+    "detail_resume_drop": "Drop your resume here",
+    "detail_resume_browse": "or click to choose a file",
+    "detail_resume_formats": "PDF, DOC, DOCX, or TXT (Max 5MB)",
+    "detail_submit": "Submit application",
+    "detail_secure": "Secure submission",
+    "detail_success_title": "Application received",
+    "detail_success_message": "We'll review your application and get back to you within a few days.",
+    "back_to_roles": "Back to all roles",
+    "culture_badge": "Our culture",
+    "culture_title": "How we",
+    "culture_highlight": "work",
+    "culture_subtitle": "We focus on clear communication, realistic timelines, and giving people space to do good work.",
+    "remote_title": "Remote work",
+    "remote_badge": "Flexible",
+    "remote_desc": "Work from where you're most productive. We focus on what you build, not where you sit.",
+    "rhythm_title": "Sustainable pace",
+    "rhythm_desc": "We try to plan work in a way that doesn't require long hours or weekend work.",
+    "agency_title": "Ownership",
+    "agency_badge": "Your work",
+    "agency_desc": "When you're responsible for something, you make the decisions.",
+    "trust_title": "Clear communication",
+    "trust_badge": "Transparency",
+    "trust_desc": "You'll know what's happening and why.",
+    "openings_title": "Open positions",
+    "openings_sub": "See what's available",
     "openings": [
-      {
-        "title": "सीनियर फुल-स्टैक इंजीनियर",
-        "type": "रिमोट / फुल-टाइम",
-        "team": "प्रोडक्ट इंजन"
-      },
-      {
-        "title": "लीड मोबाइल आर्किटेक्ट",
-        "type": "रिमोट / फुल-टाइम",
-        "team": "मोबाइल एक्सपीरियंस"
-      },
-      {
-        "title": "DevOps और SRE स्पेशलिस्ट",
-        "type": "रिमोट / फुल-टाइम",
-        "team": "प्लेटफॉर्म इन्फ्रास्ट्रक्चर"
-      },
-      {
-        "title": "प्रोडक्ट डिज़ाइनर",
-        "type": "रिमोट / फुल-टाइम",
-        "team": "क्रिएटिव सिस्टम्स"
-      }
+      { "slug": "senior-full-stack-engineer", "title": "Senior Full-Stack Engineer", "type": "Full-time", "team": "Product", "location": "Remote", "description": "We need someone who can build web applications end-to-end. You'll work with React, Node.js, and cloud infrastructure.", "requirements": ["5+ years building web applications", "Experience with React and Node.js", "Comfortable with databases and APIs", "Have shipped products that people use"] },
+      { "slug": "lead-mobile-architect", "title": "Mobile Developer (Flutter)", "type": "Full-time", "team": "Mobile", "location": "Mumbai, India", "description": "Help us build mobile apps for iOS and Android using Flutter.", "requirements": ["Experience with Flutter and Dart", "Understanding of native iOS and Android", "Have shipped apps to the App Store and Play Store", "Can write code that other people can maintain"] },
+      { "slug": "devops-sre-specialist", "title": "DevOps Engineer", "type": "Full-time", "team": "Infrastructure", "location": "Remote", "description": "Help us keep our systems running reliably. You'll work with cloud infrastructure, deployment automation, and monitoring.", "requirements": ["Experience with cloud platforms (AWS, GCP, or Azure)", "Know how to work with Kubernetes and containers", "Comfortable writing scripts and automation", "Understand monitoring and incident response"] },
+      { "slug": "product-designer", "title": "Product Designer", "type": "Full-time", "team": "Design", "location": "Remote", "description": "Design interfaces and experiences for web and mobile products. Work closely with engineers and clients.", "requirements": ["4+ years designing digital products", "Portfolio showing your design process", "Experience with Figma or similar tools", "Comfortable working with engineers"] }
     ],
-    "apply": "रोल के लिए आवेदन करें",
-    "no_fit": "कोई फिट नहीं? हम असाधारण टैलेंट के लिए हमेशा खुले हैं।",
-    "general_app": "सामान्य आवेदन",
-    "form_badge": "टैलेंट डिप्लॉय करें",
-    "form_title": "भविष्य को इंजीनियर करने के लिए तैयार?",
-    "form_subtitle": "नीचे तकनीकी ब्रीफ भरें। हम आपके प्रोजेक्ट्स, आर्किटेक्चर प्रिफरेंस और हाई-स्केल सिस्टम के लिए आपकी विजन में रुचि रखते हैं।",
-    "review_24h": "24 घंटे प्रारंभिक समीक्षा",
-    "direct_access": "लीड्स तक सीधी पहुंच",
-    "identity": "पहचान",
-    "communication": "संचार",
-    "full_name_placeholder": "पूरा नाम",
-    "email_placeholder": "email@grovyn.in",
-    "target_role": "टारगेट रोल",
-    "select_domain": "डोमेन चुनें",
-    "option_frontend": "हाई-परफॉर्मेंस फ्रंटएंड",
-    "option_backend": "डिस्ट्रिब्यूटेड सिस्टम्स (बैकएंड)",
-    "option_mobile": "प्रीमियम मोबाइल इंजीनियरिंग",
-    "option_infra": "क्लाउड और प्लेटफॉर्म ऑप्स",
-    "option_design": "सिस्टम्स डिज़ाइन / UX",
-    "technical_brief": "तकनीकी ब्रीफ / पोर्टफोलियो",
-    "technical_brief_placeholder": "अपनी तकनीकी उपलब्धियों को संक्षेप में हाइलाइट करें या अपने सबसे मजबूत काम का लिंक दें...",
-    "resume_label": "इंजीनियरिंग डॉसियर (रिज़्यूमे)",
-    "resume_placeholder": "अपना PDF यहां ड्रॉप करें",
-    "resume_hint": "या लोकल फाइलें ब्राउज़ करने के लिए क्लिक करें",
-    "submit_btn": "डिप्लॉयमेंट शुरू करें",
-    "success_title": "आवेदन दर्ज।",
-    "success_message": "हमारे इंजीनियरिंग लीड आपकी प्रोफाइल की समीक्षा कर रहे हैं। तकनीकी डीप-डाइव के लिए 48 घंटे के भीतर हम संपर्क करेंगे।",
-    "return_btn": "करियर पर वापस"
+    "apply": "Apply",
+    "no_fit": "Don't see something that fits? We're always interested in talking to talented people.",
+    "general_app": "General inquiry",
+    "form_badge": "Get in touch",
+    "form_title": "Interested in working with us?",
+    "form_subtitle": "Tell us about yourself and what kind of work you're looking for.",
+    "review_24h": "We'll review within 24 hours",
+    "direct_access": "Talk to the team directly",
+    "identity": "About you",
+    "communication": "Contact",
+    "full_name_placeholder": "Your name",
+    "email_placeholder": "your@email.com",
+    "target_role": "What interests you?",
+    "select_domain": "Choose one",
+    "option_frontend": "Frontend development",
+    "option_backend": "Backend development",
+    "option_mobile": "Mobile development",
+    "option_infra": "Infrastructure and operations",
+    "option_design": "Product design",
+    "technical_brief": "Tell us about your experience",
+    "technical_brief_placeholder": "What have you built? What are you good at? Link to your work if you have it.",
+    "resume_label": "Resume",
+    "resume_placeholder": "Drop your resume here",
+    "resume_hint": "or click to choose a file",
+    "submit_btn": "Send application",
+    "success_title": "Application received",
+    "success_message": "We'll review your application and get back to you soon.",
+    "return_btn": "Back to careers"
   },
   "why_grovyn": {
-    "badge": "GROVYN क्यों?",
-    "title_line1": "उन",
-    "title_highlight": "बिजनेस",
-    "title_line2": "के लिए बनाया जो टेक्नोलॉजी को",
-    "title_highlight2": "गंभीरता से लेते हैं",
+    "badge": "Why Grovyn",
+    "title_line1": "For teams that",
+    "title_highlight": "need software",
+    "title_line2": "they can",
+    "title_highlight2": "depend on",
     "items": [
-      {
-        "title": "तेज़ डिलीवरी, बिना समझौता",
-        "description": "MVP आमतौर पर हफ्तों में शिप होते हैं, महीनों में नहीं। स्पीड अनुभव, स्पष्ट निर्णय और मजबूत बुनियाद से आती है।"
-      },
-      {
-        "title": "पारदर्शी, फिक्स्ड प्राइसिंग",
-        "description": "हर प्रोजेक्ट पहले से स्पष्ट डिलिवरेबल्स और टाइमलाइन के साथ स्कोप किया जाता है। कोई सरप्राइज कॉस्ट नहीं।"
-      },
-      {
-        "title": "डिफ़ॉल्ट प्रोडक्शन-रेडी",
-        "description": "हर बिल्ड में टेस्टिंग, कोड रिव्यू, डॉक्यूमेंटेशन और डिप्लॉयमेंट रेडीनेस शामिल है।"
-      },
-      {
-        "title": "पूर्ण स्वामित्व, कोई लॉक-इन नहीं",
-        "description": "दिन एक से आप कोड के मालिक हैं। स्टैंडर्ड टेक्नोलॉजी, कोई प्रोप्राइटरी फ्रेमवर्क नहीं।"
-      },
-      {
-        "title": "ग्लोबल डिलीवरी, सोच-समझकर एक्ज़ीक्यूशन",
-        "description": "हम रीजन और टाइम जोन में काम करते हैं, मजबूत कम्युनिकेशन और भरोसेमंद एक्ज़ीक्यूशन के साथ।"
-      },
-      {
-        "title": "90-दिन क्वालिटी गारंटी",
-        "description": "पोस्ट-लॉन्च सपोर्ट इश्यू फिक्स, स्टेबिलिटी और परफॉर्मेंस फाइन-ट्यून के लिए। हम जो बनाते हैं उसके पीछे खड़े हैं।"
-      }
+      { "title": "Clear timelines", "description": "We'll tell you upfront how long things will take and keep you updated along the way." },
+      { "title": "Fixed pricing", "description": "You'll know what something costs before we start. No surprise invoices or hidden fees." },
+      { "title": "Production ready", "description": "What we build is tested, documented, and ready to deploy." },
+      { "title": "You own everything", "description": "All code and assets belong to you. No proprietary frameworks or vendor lock-in." },
+      { "title": "Global team", "description": "We work across time zones with clear communication." },
+      { "title": "90-day support", "description": "After launch, we'll help fix issues and make adjustments." }
     ]
   },
   "technology_stack": {
-    "title": "आधुनिक, प्रूवन टेक्नोलॉजी से बनाया",
-    "badge": "हमारा स्टैक",
-    "root_label": "Modern Technology Stack",
+    "title": "Technology we work with",
+    "badge": "Our stack",
+    "root_label": "Our Tech-Stacks",
     "categories": [
-      {
-        "title": "Web Development",
-        "items": [
-          "React",
-          "Next.js",
-          "Node.js",
-          "Express",
-          "MongoDB",
-          "PostgreSQL"
-        ]
-      },
-      {
-        "title": "Mobile Development",
-        "items": [
-          "React Native",
-          "Flutter",
-          "Expo",
-          "Android",
-          "iOS"
-        ]
-      },
-      {
-        "title": "Cloud और DevOps",
-        "items": [
-          "AWS",
-          "Docker",
-          "Kubernetes",
-          "CI/CD",
-          "Serverless",
-          "Terraform"
-        ]
-      },
-      {
-        "title": "AI & Data",
-        "items": [
-          "Machine Learning",
-          "NLP",
-          "Computer Vision",
-          "Python",
-          "TensorFlow",
-          "PyTorch"
-        ]
-      },
-      {
-        "title": "Blockchain & Web3",
-        "items": [
-          "Ethereum",
-          "Solidity",
-          "Web3.js",
-          "NFTs",
-          "DeFi"
-        ]
-      }
+      { "title": "Web", "items": ["React", "Next.js", "Node.js", "Express", "PostgreSQL", "MongoDB"] },
+      { "title": "Mobile", "items": ["React Native", "Flutter", "iOS", "Android"] },
+      { "title": "Cloud", "items": ["AWS", "Docker", "Kubernetes", "CI/CD"] },
+      { "title": "AI", "items": ["Python", "TensorFlow", "OpenAI", "LangChain"] },
+      { "title": "AI", "items": ["Python", "TensorFlow", "OpenAI", "LangChain"] }
     ]
   },
   "ai_section": {
-    "title_line1": "सिस्टम में बनी इंटेलिजेंस",
-    "title_highlight": "ऊपर से नहीं चढ़ाई।",
-    "para1": "GROVYN में आर्टिफिशियल इंटेलिजेंस एक अलग ऑफर नहीं है। यह प्लेटफॉर्म में एम्बेडेड क्षमता है जहाँ इंटेलिजेंस असली ऑपरेशनल वैल्यू बनाती है।",
-    "para2": "हम ऐसे सिस्टम डिज़ाइन करते हैं जिनमें ऑटोमेशन, मशीन लर्निंग और डेटा-ड्रिवन डिसीजन शामिल हों, साथ ही रिलायबल, एक्सप्लेनबल और लंबे समय तक मेंटेन करने योग्य।"
+    "title_line1": "AI built into systems,",
+    "title_highlight": "not added on top",
+    "para1": "When AI makes sense for your product, we build it into the architecture from the start. This means it works reliably and can be maintained like the rest of your system.",
+    "para2": "We focus on practical applications where automation and intelligence add clear value without creating unnecessary complexity."
   },
   "free_quote_cta": {
-    "badge": "फास्ट रिस्पॉन्स गारंटी",
-    "title_line1": "24 घंटे में",
-    "title_highlight": "मुफ्त कोटेशन पाएं",
-    "subtitle": "अपनी प्रोजेक्ट रिक्वायरमेंट्स शेयर करें और 24 घंटे में फिक्स्ड प्राइसिंग के साथ डिटेल्ड टेक्निकल प्रोपोज़ल पाएं। कोई ऑब्लिगेशन नहीं।",
-    "benefit1": "डिटेल्ड टेक्निकल प्रोपोज़ल",
-    "benefit2": "फिक्स्ड-प्राइस कोट",
-    "benefit3": "वीक-बाय-वीक टाइमलाइन",
-    "benefit4": "कोई ऑब्लिगेशन नहीं",
-    "cta": "मुफ्त कोटेशन रिक्वेस्ट करें",
-    "hint": "20 मिनट डिस्कवरी कॉल बुक करें • 24 घंटे में प्रोपोज़ल"
+    "badge": "Start a conversation",
+    "title_line1": "Tell us about",
+    "title_highlight": "your project",
+    "subtitle": "We'll help you understand what's involved, how long it might take, and whether we're a good fit.",
+    "benefit1": "Clear project scope",
+    "benefit2": "Realistic timeline",
+    "benefit3": "Fixed price estimate",
+    "benefit4": "No obligation",
+    "cta": "Get in touch",
+    "hint": "Quick call to understand your needs"
   },
   "privacy_page": {
-    "intro": "हम आपकी प्राइवेसी का सम्मान करते हैं और आपके पर्सनल डेटा की सुरक्षा के लिए प्रतिबद्ध हैं। यह पॉलिसी बताती है कि हम आपकी जानकारी कैसे एकत्र, उपयोग और सुरक्षित करते हैं।",
-    "contact": "प्राइवेसी से जुड़े सवालों के लिए कृपया इस साइट पर दिए कॉन्टैक्ट फॉर्म या ईमेल के ज़रिए संपर्क करें।"
+    "intro": "We respect your privacy. This policy explains how we collect, use, and protect your information.",
+    "contact": "If you have questions about privacy, please contact us."
   },
   "terms_page": {
-    "intro": "हमारी वेबसाइट और सेवाओं का उपयोग करके आप ये नियम और शर्तें स्वीकार करते हैं। हम किसी भी समय इन्हें अपडेट करने का अधिकार सुरक्षित रखते हैं।",
-    "contact": "इन नियमों के बारे में सवालों के लिए कृपया इस साइट पर दिए कॉन्टैक्ट फॉर्म या ईमेल के ज़रिए संपर्क करें।"
+    "intro": "By using our website and services, you agree to these terms. Please read them carefully.",
+    "contact": "If you have questions about these terms, please contact us."
   },
   "services_detail": {
     "web": {
-      "hero_badge": "वेब डेवलपमेंट",
-      "hero_title_line1": "वेब एप्लिकेशन बनाए गए",
-      "hero_title_highlight": "विश्वसनीयता, स्केल और लंबी अवधि के विकास के लिए।",
-      "hero_subtitle": "हम आधुनिक वेब प्लेटफॉर्म डिज़ाइन और बनाते हैं जो वास्तविक व्यवसाय संचालन, जटिल वर्कफ़्लो और उच्च-उपयोग वातावरण का समर्थन करते हैं।",
-      "cta_primary": "बातचीत शुरू करें",
-      "cta_secondary": "उपयोग के मामले देखें",
-      "tech_title": "टेक स्टैक",
-      "tech_items": [
-        "React",
-        "Next.js",
-        "Angular",
-        "Vue",
-        "TypeScript",
-        "Tailwind CSS",
-        "Node.js",
-        "PostgreSQL"
+      "hero_badge": "Web Development",
+      "hero_title_line1": "Web applications",
+      "hero_title_highlight": "built to last",
+      "hero_subtitle_tagline": "Reliable, maintainable, performant",
+      "hero_subtitle": "We build web platforms and applications that stay reliable as your business grows. Clear architecture, clean code, and technology choices that age well.",
+      "cta_primary": "Talk to us",
+      "cta_secondary": "See our work",
+      "expertise_heading": "What we build",
+      "expertise_subheading": "Web systems for growing businesses",
+      "expertise_intro": "We focus on applications where performance, reliability, and maintainability actually matter.",
+      "expertise_cards": [
+        { "title": "Business Applications", "subtitle": "Custom web platforms", "bullets": ["Internal tools", "Customer portals", "Data dashboards"] },
+        { "title": "E-commerce", "subtitle": "Online stores", "bullets": ["Product catalogs", "Payment processing", "Order management"] },
+        { "title": "Content Platforms", "subtitle": "Publishing and media", "bullets": ["Content management", "Publishing workflows", "Media handling"] }
       ],
-      "offerings_title": "हम क्या डिलीवर करते हैं",
-      "offerings_intro": "वास्तविक व्यवसाय जरूरतों के आसपास डिज़ाइन किए गए वेब प्लेटफॉर्म।",
+      "dedicated_heading": "How we work",
+      "dedicated_subheading": "Clear communication, realistic timelines",
+      "dedicated_desc": "We become part of your team. You'll talk directly to the people building your product, and you'll always know what's happening.",
+      "dedicated_cta": "See our work",
+      "metrics": [
+        { "value": "150+", "label": "Projects shipped" },
+        { "value": "2.4s", "label": "Average page load" },
+        { "value": "$40M+", "label": "Transaction value processed" }
+      ],
+      "methodology_heading": "Our process",
+      "methodology_subheading": "Clear steps from start to finish",
+      "methodology_conclusion": "No surprises. Just good work.",
+      "website_services_heading": "Web",
+      "website_services_highlight": "Development",
+      "website_services_subtitle": "From simple websites to complex platforms. We build what you need.",
+      "website_services_cards": [
+        { "title": "Business Websites", "description": "Professional websites that represent your business well and work across all devices.", "tags": ["Responsive design", "Fast loading", "SEO friendly"] },
+        { "title": "E-commerce Platforms", "description": "Online stores with product management, payment processing, and order fulfillment.", "tags": ["Shopping cart", "Payment integration", "Inventory"] },
+        { "title": "Web Applications", "description": "Custom platforms built for your specific business needs and workflows.", "tags": ["Custom features", "User management", "API integration"] }
+      ],
+      "tech_title": "Technology we use",
+      "tech_items": ["React", "Next.js", "Node.js", "TypeScript", "PostgreSQL", "AWS"],
+      "offer_section_title": "What we",
+      "offer_section_highlight": "build",
+      "offer_section_subtitle": "Web systems designed to stay reliable as you grow",
+      "offer_cards": [
+        { "title": "Web Platforms", "description": "Custom applications built for your business needs.", "tags": ["Modern stack", "Scalable", "Maintainable"] },
+        { "title": "E-commerce", "description": "Online stores that handle transactions reliably.", "tags": ["Secure payments", "Inventory", "Orders"] },
+        { "title": "Content Systems", "description": "Platforms for publishing and managing content.", "tags": ["CMS", "Publishing", "Media"] }
+      ],
+      "offerings_title": "What we deliver",
+      "offerings_intro": "Web platforms built around real business needs",
       "offerings": [
-        {
-          "title": "SPAs और आधुनिक फ्रेमवर्क",
-          "desc": "React, Angular, Next.js और Vue के साथ सिंगल-पेज एप्लिकेशन।"
-        },
-        {
-          "title": "बैकएंड और API",
-          "desc": "स्केलेबल API, माइक्रोसर्विसेज और सर्वरलेस आर्किटेक्चर।"
-        },
-        {
-          "title": "रीयल-टाइम सिस्टम",
-          "desc": "लाइव डेटा, WebSockets और सिंक लेयर।"
-        }
+        { "title": "Modern web apps", "desc": "Built with React, Next.js, and similar tools for good performance and maintainability." },
+        { "title": "APIs and backends", "desc": "Server-side systems designed to handle load and integrate with other services." },
+        { "title": "Real-time features", "desc": "Live updates, notifications, and collaborative features when you need them." }
       ],
-      "features_title": "कोर फीचर्स",
-      "features": [
-        "सुरक्षित ऑथ और अथॉराइज़ेशन",
-        "परफॉर्मेंस-फर्स्ट इंजीनियरिंग",
-        "स्केलेबल बैकएंड",
-        "मेंटेन करने योग्य फ्रंट-एंड",
-        "डिप्लॉयमेंट और मॉनिटरिंग",
-        "ऑफ़लाइन सपोर्ट और कैशिंग"
-      ],
-      "advanced_title": "उन्नत क्षमताएं",
-      "advanced": [
-        "थर्ड-पार्टी SDK इंटीग्रेशन",
-        "पेमेंट गेटवे",
-        "एनालिटिक्स और लॉगिंग",
-        "CI/CD और IaC"
-      ],
-      "process_title": "हम कैसे काम करते हैं",
+      "features_title": "What's included",
+      "features": ["User authentication", "Good performance", "Database design", "Clean code", "Deployment setup", "Documentation"],
+      "advanced_title": "Integrations",
+      "advanced": ["Payment processing", "Third-party APIs", "Analytics", "Email services"],
+      "process_title": "How we work",
       "process_steps": [
-        {
-          "step": "01",
-          "title": "डिस्कवरी और आर्किटेक्चर",
-          "desc": "स्कोप, सिस्टम डिज़ाइन और तकनीकी दृष्टिकोण।"
-        },
-        {
-          "step": "02",
-          "title": "स्प्रिंट-आधारित डिलीवरी",
-          "desc": "माइलस्टोन और डेमो के साथ इटरेटिव बिल्ड।"
-        },
-        {
-          "step": "03",
-          "title": "लॉन्च और सपोर्ट",
-          "desc": "डिप्लॉयमेंट, मॉनिटरिंग और पोस्ट-लॉन्च ऑप्टिमाइज़ेशन।"
-        }
+        { "step": "01", "title": "Understand your needs", "desc": "We'll talk about what you're building and why. We'll help you understand what's involved." },
+        { "step": "02", "title": "Plan and design", "desc": "Clear scope, realistic timeline, and fixed price before we start building." },
+        { "step": "03", "title": "Build and test", "desc": "Regular updates, working software every couple of weeks, testing as we go." },
+        { "step": "04", "title": "Launch and support", "desc": "Deployment, monitoring, and support to make sure everything works well." }
       ],
-      "cta_title": "आइए एक वेब प्लेटफॉर्म डिज़ाइन करें जो आपके व्यवसाय के साथ बढ़े।",
-      "cta_button": "टीम से बात करें"
+      "cta_title": "Let's talk about your web project",
+      "cta_button": "Get in touch"
     },
     "mobile": {
-      "hero_badge": "मोबाइल डेवलपमेंट",
-      "hero_title_line1": "मोबाइल ऐप बनाए गए",
-      "hero_title_highlight": "परफॉर्मेंस, विश्वसनीयता और वास्तविक उपयोग के लिए।",
-      "hero_subtitle": "iOS और Android के लिए नेटिव और क्रॉस-प्लेटफॉर्म मोबाइल एप्लिकेशन।",
-      "cta_primary": "बातचीत शुरू करें",
-      "cta_secondary": "क्षमताएं देखें",
-      "tech_title": "टेक स्टैक",
-      "tech_items": [
-        "React Native",
-        "Flutter",
-        "iOS (Swift)",
-        "Android (Kotlin)",
-        "TypeScript",
-        "Firebase",
-        "GraphQL"
+      "hero_badge": "Mobile Development",
+      "hero_title_line1": "Mobile apps that",
+      "hero_title_highlight": "work reliably",
+      "hero_subtitle": "Native iOS and Android applications that feel good to use and continue to work well over time.",
+      "cta_primary": "Talk to us",
+      "cta_secondary": "See what we do",
+      "tech_title": "Technology we use",
+      "tech_items": ["React Native", "Flutter", "Swift", "Kotlin", "TypeScript", "Firebase"],
+      "offer_section_title": "Mobile",
+      "offer_section_highlight": "applications",
+      "offer_section_subtitle": "Apps that feel native and work reliably",
+      "offer_cards": [
+        { "title": "Consumer Apps", "description": "Apps for end users with good UX and reliable performance.", "tags": ["iOS", "Android", "App stores"] },
+        { "title": "Business Apps", "description": "Internal tools and employee-facing applications.", "tags": ["Authentication", "Offline support", "Data sync"] },
+        { "title": "Marketplace Apps", "description": "Platforms connecting buyers and sellers.", "tags": ["Payments", "Reviews", "Notifications"] }
       ],
-      "offerings_title": "हम क्या डिलीवर करते हैं",
-      "offerings_intro": "स्केल और क्वालिटी के लिए मोबाइल अनुभव।",
+      "offerings_title": "What we build",
       "offerings": [
-        {
-          "title": "नेटिव iOS और Android",
-          "desc": "Swift और Kotlin ऐप।"
-        },
-        {
-          "title": "क्रॉस-प्लेटफॉर्म (React Native, Flutter)",
-          "desc": "iOS और Android के लिए एक कोडबेस।"
-        },
-        {
-          "title": "पुश, बैकग्राउंड और सिंक",
-          "desc": "पुश नोटिफिकेशन और ऑफ़लाइन-फर्स्ट सिंक।"
-        }
+        { "title": "Native apps", "desc": "Swift for iOS and Kotlin for Android when you need the best performance and platform integration." },
+        { "title": "Cross-platform", "desc": "React Native or Flutter when you need to ship to both platforms from one codebase." },
+        { "title": "Offline and sync", "desc": "Apps that work without internet and sync data when reconnected." }
       ],
-      "features_title": "कोर फीचर्स",
-      "features": [
-        "नेटिव परफॉर्मेंस",
-        "ऑफ़लाइन-फर्स्ट और सिंक",
-        "पुश नोटिफिकेशन",
-        "सुरक्षित ऑथ",
-        "ऐप स्टोर डिप्लॉयमेंट",
-        "CI/CD और OTA"
-      ],
-      "advanced_title": "उन्नत क्षमताएं",
-      "advanced": [
-        "रीयल-टाइम मैसेजिंग",
-        "पेमेंट SDK",
-        "एनालिटिक्स और क्रैश रिपोर्ट",
-        "डीप लिंकिंग"
-      ],
-      "process_title": "हम कैसे काम करते हैं",
+      "features_title": "What's included",
+      "features": ["Native feel", "Offline support", "Push notifications", "Secure login", "App store deployment", "Updates"],
+      "advanced_title": "Integrations",
+      "advanced": ["Real-time messaging", "Payment systems", "Analytics", "Deep linking"],
+      "methodology_heading": "Our process",
+      "methodology_subheading": "From concept to app store",
+      "methodology_conclusion": "Clear communication every step",
+      "process_title": "How we work",
       "process_steps": [
-        {
-          "step": "01",
-          "title": "प्रोडक्ट और UX अलाइनमेंट",
-          "desc": "यूजर फ्लो और तकनीकी व्यवहार्यता।"
-        },
-        {
-          "step": "02",
-          "title": "इटरेटिव डेवलपमेंट",
-          "desc": "डिवाइस टेस्टिंग के साथ स्प्रिंट बिल्ड।"
-        },
-        {
-          "step": "03",
-          "title": "स्टोर सबमिशन और सपोर्ट",
-          "desc": "रिलीज़ रेडीनेस और स्टोर कंप्लायंस।"
-        }
+        { "step": "01", "title": "Define and design", "desc": "Understand what users need and how the app should work." },
+        { "step": "02", "title": "Build and test", "desc": "Iterative development with testing on real devices." },
+        { "step": "03", "title": "Launch and maintain", "desc": "App store submission and ongoing updates." }
       ],
-      "cta_title": "आइए एक मोबाइल अनुभव बनाएं जो यूजर्स को पसंद आए।",
-      "cta_button": "टीम से बात करें"
+      "cta_title": "Let's talk about your mobile app",
+      "cta_button": "Get in touch"
+    },
+    "platform": {
+      "hero_badge": "Platform Design",
+      "hero_title_line1": "System architecture",
+      "hero_title_highlight": "that scales smoothly",
+      "hero_subtitle": "We help teams plan technical architecture so products can grow without requiring rewrites.",
+      "cta_primary": "Talk to us",
+      "cta_secondary": "See what we do",
+      "tech_title": "What we focus on",
+      "tech_items": ["System design", "API architecture", "Data modeling", "Scaling patterns", "Integration strategy"],
+      "offer_section_title": "Platform",
+      "offer_section_highlight": "architecture",
+      "offer_section_subtitle": "Technical planning that helps products scale smoothly",
+      "offer_cards": [
+        { "title": "API Design", "description": "Well-designed APIs that are easy to use and maintain.", "tags": ["REST", "GraphQL", "Versioning"] },
+        { "title": "System Design", "description": "Architecture that can handle growth without rewrites.", "tags": ["Scalability", "Data modeling", "Boundaries"] },
+        { "title": "Multi-tenant Systems", "description": "Platforms that serve many customers from one codebase.", "tags": ["Isolation", "Performance", "Security"] }
+      ],
+      "offerings_title": "What we deliver",
+      "offerings": [
+        { "title": "Architecture plans", "desc": "Clear documentation and diagrams showing how systems fit together." },
+        { "title": "API design", "desc": "Well-structured APIs that are easy to use and maintain." },
+        { "title": "Migration paths", "desc": "Plans for moving from old systems to new ones with minimal risk." }
+      ],
+      "features_title": "What we focus on",
+      "features": ["System boundaries", "API design", "Data models", "Security", "Scaling", "Integration"],
+      "advanced_title": "Advanced topics",
+      "advanced": ["Event-driven design", "Multi-region", "Legacy modernization", "Platform thinking"],
+      "methodology_heading": "Our process",
+      "methodology_subheading": "Planning before building",
+      "methodology_conclusion": "Clear plans, less risk",
+      "process_title": "How we work",
+      "process_steps": [
+        { "step": "01", "title": "Understand needs", "desc": "What are you building and how big does it need to get?" },
+        { "step": "02", "title": "Design architecture", "desc": "Plan the technical structure and how pieces fit together." },
+        { "step": "03", "title": "Document and guide", "desc": "Clear specs that teams can use to build from." }
+      ],
+      "cta_title": "Let's talk about your platform architecture",
+      "cta_button": "Get in touch"
     },
     "backend": {
-      "hero_badge": "बैकएंड और क्लाउड",
-      "hero_title_line1": "बैकएंड और क्लाउड सिस्टम बनाए गए",
-      "hero_title_highlight": "स्केल, सुरक्षा और विश्वसनीयता के लिए।",
-      "hero_subtitle": "माइक्रोसर्विसेज, API और क्लाउड-नेटिव इन्फ्रास्ट्रक्चर।",
-      "cta_primary": "बातचीत शुरू करें",
-      "cta_secondary": "क्षमताएं देखें",
-      "tech_title": "टेक स्टैक",
-      "tech_items": [
-        "Node.js",
-        "Python",
-        "PostgreSQL",
-        "MongoDB",
-        "Redis",
-        "AWS",
-        "Google Cloud",
-        "Docker",
-        "Kubernetes"
+      "hero_badge": "Backend Development",
+      "hero_title_line1": "Backend systems",
+      "hero_title_highlight": "built for reliability",
+      "hero_subtitle": "APIs, databases, and cloud infrastructure designed to handle load and stay maintainable.",
+      "cta_primary": "Talk to us",
+      "cta_secondary": "See what we do",
+      "tech_title": "Technology we use",
+      "tech_items": ["Node.js", "Python", "PostgreSQL", "MongoDB", "Redis", "AWS", "Docker", "Kubernetes"],
+      "offer_section_title": "Backend",
+      "offer_section_highlight": "systems",
+      "offer_section_subtitle": "Server-side infrastructure that handles load reliably",
+      "offer_cards": [
+        { "title": "APIs", "description": "RESTful and GraphQL APIs that are easy to use and maintain.", "tags": ["REST", "GraphQL", "Documentation"] },
+        { "title": "Cloud Infrastructure", "description": "Hosting and deployment that scales smoothly.", "tags": ["AWS", "Auto-scaling", "Monitoring"] },
+        { "title": "Data Systems", "description": "Databases and data processing that handle growing data.", "tags": ["Databases", "Caching", "Analytics"] }
       ],
-      "offerings_title": "हम क्या डिलीवर करते हैं",
-      "offerings_intro": "प्रोडक्शन-ग्रेड सिस्टम के लिए क्लाउड और बैकएंड इंजीनियरिंग।",
+      "offerings_title": "What we build",
       "offerings": [
-        {
-          "title": "API और माइक्रोसर्विसेज",
-          "desc": "REST और GraphQL API। इवेंट-ड्रिवन आर्किटेक्चर।"
-        },
-        {
-          "title": "क्लाउड इन्फ्रास्ट्रक्चर",
-          "desc": "AWS, GCP, Azure। सर्वरलेस, कंटेनर और IaC।"
-        },
-        {
-          "title": "DevOps और विश्वसनीयता",
-          "desc": "CI/CD, मॉनिटरिंग और SRE प्रथाएं।"
-        }
+        { "title": "APIs", "desc": "RESTful and GraphQL APIs designed for reliability and ease of use." },
+        { "title": "Cloud hosting", "desc": "Infrastructure on AWS, GCP, or Azure that scales smoothly." },
+        { "title": "DevOps", "desc": "Deployment automation, monitoring, and incident response." }
       ],
-      "features_title": "कोर फीचर्स",
-      "features": [
-        "स्केलेबल API",
-        "डेटाबेस डिज़ाइन",
-        "कैशिंग और CDN",
-        "सुरक्षा और कंप्लायंस",
-        "मॉनिटरिंग",
-        "डिज़ास्टर रिकवरी"
-      ],
-      "advanced_title": "उन्नत क्षमताएं",
-      "advanced": [
-        "इवेंट-ड्रिवन आर्किटेक्चर",
-        "मल्टी-रिजन डिप्लॉयमेंट",
-        "कॉस्ट ऑप्टिमाइज़ेशन",
-        "लेगेसी माइग्रेशन"
-      ],
-      "process_title": "हम कैसे काम करते हैं",
+      "features_title": "What's included",
+      "features": ["Scalable APIs", "Database design", "Caching", "Security", "Monitoring", "Backups"],
+      "advanced_title": "Advanced capabilities",
+      "advanced": ["Event-driven systems", "Multi-region", "Cost optimization", "Legacy migration"],
+      "process_title": "How we work",
       "process_steps": [
-        {
-          "step": "01",
-          "title": "आर्किटेक्चर और डिज़ाइन",
-          "desc": "सिस्टम डिज़ाइन और क्लाउड स्ट्रैटेजी।"
-        },
-        {
-          "step": "02",
-          "title": "बिल्ड और ऑटोमेट",
-          "desc": "इम्प्लीमेंटेशन, IaC और पाइपलाइन।"
-        },
-        {
-          "step": "03",
-          "title": "ऑपरेट और इटरेट",
-          "desc": "डिप्लॉयमेंट, मॉनिटरिंग और निरंतर सुधार।"
-        }
+        { "step": "01", "title": "Architecture", "desc": "Plan how data flows and how systems connect." },
+        { "step": "02", "title": "Build", "desc": "Implement with testing and documentation." },
+        { "step": "03", "title": "Deploy and monitor", "desc": "Launch with monitoring and support." }
       ],
-      "cta_title": "आइए एक बैकएंड डिज़ाइन करें जो आपके व्यवसाय के साथ स्केल करे।",
-      "cta_button": "टीम से बात करें"
+      "cta_title": "Let's talk about your backend needs",
+      "cta_button": "Get in touch"
     },
     "ai": {
-      "hero_badge": "AI और Gen AI",
-      "hero_title_line1": "AI समाधान बनाए गए",
-      "hero_title_highlight": "आपके सिस्टम में, ऊपर नहीं।",
-      "hero_subtitle": "कस्टम AI/ML इंटीग्रेशन, RAG और एजेंटिक वर्कफ़्लो।",
-      "cta_primary": "बातचीत शुरू करें",
-      "cta_secondary": "उपयोग के मामले देखें",
-      "tech_title": "टेक",
-      "tech_items": [
-        "LLM और एम्बेडिंग",
-        "RAG पाइपलाइन",
-        "LangChain",
-        "Python",
-        "वेक्टर DB",
-        "OpenAI",
-        "Anthropic",
-        "कस्टम ML"
+      "hero_badge": "AI Development",
+      "hero_title_line1": "AI built into",
+      "hero_title_highlight": "your systems",
+      "hero_subtitle": "Custom AI features that add value without creating unnecessary complexity. Built to be maintained like the rest of your product.",
+      "cta_primary": "Talk to us",
+      "cta_secondary": "See examples",
+      "tech_title": "What we work with",
+      "tech_items": ["LLMs", "RAG", "LangChain", "Python", "Vector databases", "OpenAI", "Anthropic"],
+      "offer_section_title": "AI",
+      "offer_section_highlight": "features",
+      "offer_section_subtitle": "Practical AI that adds clear value",
+      "offer_cards": [
+        { "title": "Search and Knowledge", "description": "Help users find information in your documents and data.", "tags": ["Semantic search", "Document Q&A", "Citations"] },
+        { "title": "Automation", "description": "Automate repetitive tasks that follow clear patterns.", "tags": ["Task automation", "Workflows", "Processing"] },
+        { "title": "Custom AI", "description": "Fine-tuning and custom models for specific needs.", "tags": ["Fine-tuning", "Training", "Deployment"] }
       ],
-      "offerings_title": "हम क्या डिलीवर करते हैं",
-      "offerings_intro": "जहां वैल्यू बनती है वहां इंटेलिजेंस।",
+      "offerings_title": "What we build",
       "offerings": [
-        {
-          "title": "RAG और नॉलेज सिस्टम",
-          "desc": "आपके डेटा के साथ एंटरप्राइज़ AI।"
-        },
-        {
-          "title": "एजेंटिक AI और वर्कफ़्लो",
-          "desc": "स्वायत्त एजेंट और वर्कफ़्लो ऑटोमेशन।"
-        },
-        {
-          "title": "कस्टम ML और इंटीग्रेशन",
-          "desc": "फाइन-ट्यूनिंग और मौजूदा प्लेटफॉर्म इंटीग्रेशन।"
-        }
+        { "title": "Document search", "desc": "Semantic search across your documents and data with accurate answers." },
+        { "title": "AI workflows", "desc": "Automated processes that handle multi-step tasks." },
+        { "title": "Custom features", "desc": "AI capabilities designed for your specific use case." }
       ],
-      "features_title": "कोर क्षमताएं",
-      "features": [
-        "RAG पाइपलाइन",
-        "एजेंटिक वर्कफ़्लो",
-        "सुरक्षित डेटा हैंडलिंग",
-        "एक्सप्लेनबिलिटी और गार्डरेल",
-        "API इंटीग्रेशन",
-        "मूल्यांकन और मॉनिटरिंग"
-      ],
-      "advanced_title": "उन्नत क्षमताएं",
-      "advanced": [
-        "मल्टी-मोडल AI",
-        "मॉडल फाइन-ट्यूनिंग",
-        "रीयल-टाइम इन्फरेंस",
-        "एंटरप्राइज़ कंप्लायंस"
-      ],
-      "process_title": "हम कैसे काम करते हैं",
+      "features_title": "What we focus on",
+      "features": ["Clear value", "Reliable output", "Secure data", "Explainable results", "Good performance", "Maintainable code"],
+      "advanced_title": "Advanced work",
+      "advanced": ["Multi-modal AI", "Fine-tuning", "Real-time inference", "Compliance"],
+      "process_title": "How we work",
       "process_steps": [
-        {
-          "step": "01",
-          "title": "उपयोग केस और डेटा",
-          "desc": "वैल्यू, डेटा स्रोत और सक्सेस मेट्रिक्स।"
-        },
-        {
-          "step": "02",
-          "title": "प्रोटोटाइप और इंटीग्रेट",
-          "desc": "RAG/एजेंट डिज़ाइन, API और सेफ्टी चेक।"
-        },
-        {
-          "step": "03",
-          "title": "डिप्लॉय और इटरेट",
-          "desc": "प्रोडक्शन डिप्लॉयमेंट और निरंतर सुधार।"
-        }
+        { "step": "01", "title": "Define value", "desc": "What problem are we solving and how will we measure success?" },
+        { "step": "02", "title": "Build and test", "desc": "Develop AI features with guardrails and testing." },
+        { "step": "03", "title": "Deploy and monitor", "desc": "Launch with monitoring and continuous improvement." }
       ],
-      "cta_title": "आइए AI बनाएं जो आपके व्यवसाय के लिए काम करे।",
-      "cta_button": "टीम से बात करें"
+      "cta_title": "Let's talk about AI for your product",
+      "cta_button": "Get in touch"
     }
-  },
-  "solutions_industries": {
-    "hero_badge": "जिन उद्योगों की हम सेवा करते हैं",
-    "hero_title_line1": "डोमेन-विशिष्ट",
-    "hero_title_highlight": "इंजीनियरिंग उत्कृष्टता।",
-    "hero_subtitle": "हेल्थकेयर, फिनटेक, ई-कॉमर्स और अधिक के लिए अनुकूलित समाधान।"
-  },
-  "projects": {
-    "title": "चयनित कार्य",
-    "subtitle": "वैश्विक टीमों के लिए हमारे द्वारा डिलीवर किए गए प्रोजेक्ट का चयन।",
-    "view_project": "प्रोजेक्ट देखें",
-    "detail_back": "प्रोजेक्ट पर वापस"
   },
   "infrastructure_detail": {
     "hero_badge": "Infrastructure",
-    "cta_primary": "Get assessment",
-    "cta_secondary": "Explore services",
-    "cta_title": "Need an infrastructure assessment?",
-    "cta_button": "Get a free consultation",
+    "hero_tag": "Grovyn Infrastructure Services",
+    "cta_primary": "Talk to us",
+    "cta_discover_more": "Learn more",
+    "cta_watch_intro": "See how it works",
+    "cta_secondary": "See services",
+    "cta_title": "Need help with infrastructure?",
+    "cta_button": "Get in touch",
+    "template_expert_tag": "Expert guidance",
+    "template_expert_heading": "Infrastructure",
+    "template_expert_highlight": "that works",
+    "template_expert_para": "We help teams plan and manage infrastructure that stays reliable as systems grow. Clear architecture, good monitoring, and technology choices that age well.",
+    "template_expert_bullets": ["Clear planning", "Reliable systems", "Good monitoring", "Security first"],
+    "template_blueprint_line1": "Infrastructure built",
+    "template_blueprint_highlight": "to last",
+    "template_what_we_do": "What we do",
+    "template_services_line1": "Infrastructure",
+    "template_services_highlight": "services",
+    "template_ready": "Ready to",
+    "template_modernize": "improve your infrastructure?",
+    "template_cta_quote": "Let's talk about your infrastructure needs and how we can help.",
+    "template_consultation": "Get in touch",
+    "template_explore_portfolio": "See our work",
+    "template_expert_engineers": "Experienced engineers",
+    "template_lead_architect": "Infrastructure Engineer",
     "features_title": "What we deliver",
     "process_title": "How we work",
-    "offerings_title": "Core capabilities",
-    "services_offered_title": "Services Offered",
-    "technologies_used_title": "Technologies Used",
-    "featured_projects_title": "Featured Projects",
-    "target_clients_title": "Target Clients",
+    "offerings_title": "Services",
+    "services_offered_title": "What we offer",
+    "technologies_used_title": "Technology",
+    "featured_projects_title": "Example projects",
+    "target_clients_title": "Who we work with",
     "slugs": {
       "cloud": {
-        "title": "Cloud Infrastructure",
-        "subtitle": "AWS, Azure & GCP setup, scaling, and optimization. We design and deploy cloud-native solutions that scale with your business and reduce cost.",
-        "features": [
-          "Multi-cloud strategy & migration",
-          "Auto-scaling & cost optimization",
-          "Managed Kubernetes & containers",
-          "Serverless architecture",
-          "Disaster recovery & backup",
-          "24/7 monitoring & support"
+        "title": "Cloud",
+        "title_highlight": "Infrastructure",
+        "title_suffix": "",
+        "subtitle": "We help teams move to cloud infrastructure and manage it reliably. AWS, Azure, and Google Cloud.",
+        "hero_metrics": [
+          { "value": "3", "label": "Cloud platforms" },
+          { "value": "10K+", "label": "VMs managed" },
+          { "value": "99.99%", "label": "Reliability" },
+          { "value": "40%", "label": "Cost reduction" }
         ],
+        "features": ["Cloud migration", "Cloud backup", "Cost optimization", "Hybrid cloud", "Security", "Managed services"],
         "process_steps": [
-          {
-            "step": "01",
-            "title": "Assessment & design",
-            "desc": "Evaluate current infrastructure and define target cloud architecture and security posture."
-          },
-          {
-            "step": "02",
-            "title": "Migrate & deploy",
-            "desc": "Zero-downtime migration with phased rollout, validation, and cutover."
-          },
-          {
-            "step": "03",
-            "title": "Operate & optimize",
-            "desc": "Ongoing management, FinOps, and continuous performance optimization."
-          }
+          { "step": "01", "title": "Assessment", "desc": "Review current setup and plan the migration." },
+          { "step": "02", "title": "Migration", "desc": "Move systems with minimal disruption." },
+          { "step": "03", "title": "Operation", "desc": "Ongoing management and optimization." }
         ],
-        "offerings": [
-          "AWS, Azure & GCP",
-          "Terraform & IaC",
-          "Kubernetes & Docker",
-          "CI/CD pipelines",
-          "Cost optimization"
-        ]
+        "offerings": ["AWS", "Azure", "GCP", "Terraform", "Ansible"],
+        "featured_projects_title": "Example projects",
+        "featured_projects": [
+          { "title": "Cloud Migration", "subtitle": "Manufacturing Company", "description": "Moved 500+ VMs to AWS with no downtime.", "tags": ["AWS", "Terraform"], "metric": "40% cost reduction" },
+          { "title": "Multi-Cloud Setup", "subtitle": "Financial Services", "description": "Built infrastructure across AWS and Azure for redundancy.", "tags": ["AWS", "Azure", "Kubernetes"], "metric": "99.99% uptime" },
+          { "title": "Cost Optimization", "subtitle": "SaaS Company", "description": "Reduced cloud spending through better resource management.", "tags": ["AWS", "Monitoring"], "metric": "$500K saved annually" }
+        ],
+        "target_clients": ["Growing businesses", "SaaS companies", "Financial services", "Healthcare", "Government"]
       },
       "network": {
-        "title": "Network Infrastructure",
-        "subtitle": "LAN, WAN & network design for performance, security, and reliability. From office networks to hybrid cloud connectivity.",
-        "features": [
-          "Network design & architecture",
-          "SD-WAN & hybrid connectivity",
-          "Firewall & segmentation",
-          "Load balancing & failover",
-          "VPN & zero-trust access",
-          "Performance monitoring"
+        "title": "Network",
+        "title_highlight": "Infrastructure",
+        "title_suffix": "",
+        "subtitle": "We design and manage network infrastructure that keeps your business connected reliably.",
+        "hero_metrics": [
+          { "value": "500+", "label": "Networks" },
+          { "value": "50K+", "label": "Devices" },
+          { "value": "Enterprise", "label": "Security" },
+          { "value": "99.9%", "label": "Uptime" }
         ],
+        "features": ["Network design", "VPN setup", "Firewall management", "Network monitoring", "SD-WAN", "Security"],
         "process_steps": [
-          {
-            "step": "01",
-            "title": "Discovery & design",
-            "desc": "Map current topology, traffic patterns, and define target network architecture."
-          },
-          {
-            "step": "02",
-            "title": "Implement & test",
-            "desc": "Deploy with staged rollout, redundancy, and validation under load."
-          },
-          {
-            "step": "03",
-            "title": "Monitor & maintain",
-            "desc": "Ongoing monitoring, capacity planning, and security updates."
-          }
+          { "step": "01", "title": "Design", "desc": "Plan network architecture for your needs." },
+          { "step": "02", "title": "Implementation", "desc": "Deploy with testing and validation." },
+          { "step": "03", "title": "Monitoring", "desc": "Ongoing monitoring and maintenance." }
         ],
-        "offerings": [
-          "Cisco, Juniper, Aruba",
-          "SD-WAN",
-          "Zero-trust",
-          "Network audits"
-        ]
+        "offerings": ["Cisco", "Juniper", "Fortinet", "Ubiquiti"],
+        "featured_projects_title": "Example projects",
+        "featured_projects": [
+          { "title": "Campus Network", "subtitle": "Education", "description": "Built reliable network for campus with 5,000+ users.", "tags": ["Cisco", "WiFi"], "metric": "99.9% uptime" },
+          { "title": "SD-WAN", "subtitle": "Retail Chain", "description": "Connected 200+ stores with centralized management.", "tags": ["SD-WAN", "Security"], "metric": "50% cost reduction" },
+          { "title": "Zero-Trust Network", "subtitle": "Healthcare", "description": "Secure access for remote and on-site users.", "tags": ["Security", "VPN"], "metric": "SOC2 compliant" }
+        ],
+        "target_clients": ["Enterprises", "Retail", "Healthcare", "Education", "Government"]
       },
       "servers": {
-        "title": "Server Infrastructure",
-        "subtitle": "On-premise & hybrid server infrastructure. Physical, virtual, and hyperconverged solutions tailored to your workload.",
-        "features": [
-          "Server provisioning & lifecycle",
-          "Virtualization (VMware, Hyper-V)",
-          "Storage & SAN design",
-          "High availability & clustering",
-          "Patching & compliance",
-          "Capacity planning"
+        "title": "Server",
+        "title_highlight": "Infrastructure",
+        "title_suffix": "",
+        "subtitle": "We manage server infrastructure that stays reliable under load. Physical and virtual servers.",
+        "hero_metrics": [
+          { "value": "5K+", "label": "Servers" },
+          { "value": "10PB+", "label": "Storage" },
+          { "value": "20K+", "label": "VMs" },
+          { "value": "99.99%", "label": "Uptime" }
         ],
+        "features": ["Virtualization", "Storage", "Server management", "High availability", "Performance tuning"],
         "process_steps": [
-          {
-            "step": "01",
-            "title": "Requirements & design",
-            "desc": "Workload analysis, sizing, and hybrid/on-prem architecture."
-          },
-          {
-            "step": "02",
-            "title": "Deploy & configure",
-            "desc": "Install, configure, and integrate with existing systems."
-          },
-          {
-            "step": "03",
-            "title": "Support & evolve",
-            "desc": "Ongoing support, upgrades, and decommissioning when needed."
-          }
+          { "step": "01", "title": "Planning", "desc": "Size and design server infrastructure." },
+          { "step": "02", "title": "Deployment", "desc": "Install and configure systems." },
+          { "step": "03", "title": "Support", "desc": "Ongoing maintenance and updates." }
         ],
-        "offerings": [
-          "VMware, Hyper-V",
-          "SAN/NAS",
-          "Backup integration",
-          "DR replication"
-        ]
+        "offerings": ["VMware", "Hyper-V", "KVM", "Dell EMC", "NetApp"],
+        "featured_projects_title": "Example projects",
+        "featured_projects": [
+          { "title": "Virtualization", "subtitle": "Government", "description": "Consolidated 200 servers to 20 hosts.", "tags": ["VMware"], "metric": "85% hardware reduction" },
+          { "title": "High Availability", "subtitle": "Healthcare", "description": "Built failover cluster for critical systems.", "tags": ["Windows Server", "SQL"], "metric": "Zero downtime" },
+          { "title": "Storage Upgrade", "subtitle": "Manufacturing", "description": "Deployed fast storage for business systems.", "tags": ["Dell EMC", "NetApp"], "metric": "10x faster" }
+        ],
+        "target_clients": ["Government", "Healthcare", "Manufacturing", "Enterprises"]
       },
       "security": {
-        "title": "Cybersecurity",
-        "subtitle": "Security audits, compliance, and protection. Identify risks, harden systems, and meet regulatory requirements.",
-        "features": [
-          "Security assessments & audits",
-          "Compliance (SOC2, ISO, GDPR)",
-          "Penetration testing",
-          "Identity & access management",
-          "Threat detection & response",
-          "Security training"
+        "title": "Security",
+        "title_highlight": "Services",
+        "title_suffix": "",
+        "subtitle": "We help teams protect their systems and meet compliance requirements.",
+        "hero_metrics": [
+          { "value": "SOC", "label": "Monitoring" },
+          { "value": "24/7", "label": "Protection" },
+          { "value": "Compliance", "label": "Ready" }
         ],
+        "features": ["Security hardening", "Access management", "Compliance audits", "Endpoint security", "Penetration testing", "Security monitoring"],
         "process_steps": [
-          {
-            "step": "01",
-            "title": "Assess & scope",
-            "desc": "Identify assets, threats, and compliance requirements."
-          },
-          {
-            "step": "02",
-            "title": "Remediate & harden",
-            "desc": "Implement controls, patch gaps, and document policies."
-          },
-          {
-            "step": "03",
-            "title": "Monitor & report",
-            "desc": "Ongoing monitoring, incident response, and compliance reporting."
-          }
+          { "step": "01", "title": "Assessment", "desc": "Identify security gaps and compliance needs." },
+          { "step": "02", "title": "Implementation", "desc": "Deploy security controls and policies." },
+          { "step": "03", "title": "Monitoring", "desc": "Ongoing monitoring and incident response." }
         ],
-        "offerings": [
-          "SOC2, ISO 27001",
-          "Pen testing",
-          "IAM",
-          "SIEM"
-        ]
+        "offerings": ["Firewall", "EDR", "IAM", "Compliance"],
+        "technologies_used_title": "Security tools",
+        "featured_projects_title": "Example projects",
+        "featured_projects": [
+          { "title": "Zero Trust", "subtitle": "Fintech", "description": "Built zero-trust access for hybrid environment.", "tags": ["Security", "Access control"], "metric": "SOC2 compliant" },
+          { "title": "SOC2 Compliance", "subtitle": "SaaS Company", "description": "Achieved SOC2 Type II certification.", "tags": ["Compliance", "Monitoring"], "metric": "Certified" },
+          { "title": "Endpoint Security", "subtitle": "Healthcare", "description": "Protected 5,000 endpoints with EDR and MFA.", "tags": ["EDR", "MFA"], "metric": "100% coverage" }
+        ],
+        "target_clients": ["Fintech", "Healthcare", "E-commerce", "Government"]
       },
       "support": {
-        "title": "IT Helpdesk & Support",
-        "subtitle": "24/7 technical support and helpdesk. Keep your teams productive with responsive, tiered support and clear SLAs.",
-        "features": [
-          "24/7 helpdesk & ticketing",
-          "Tier 1–3 support",
-          "Remote & on-site support",
-          "Asset & license management",
-          "Knowledge base & self-service",
-          "SLA reporting"
-        ],
+        "title": "IT Support",
+        "subtitle": "24/7 technical support to keep your teams productive.",
+        "features": ["24/7 helpdesk", "Tiered support", "Remote and on-site", "Asset management", "Knowledge base", "SLA reporting"],
         "process_steps": [
-          {
-            "step": "01",
-            "title": "Onboard & document",
-            "desc": "Define scope, SLAs, escalation paths, and knowledge base."
-          },
-          {
-            "step": "02",
-            "title": "Deliver support",
-            "desc": "Handle incidents, requests, and changes per agreed SLAs."
-          },
-          {
-            "step": "03",
-            "title": "Improve & report",
-            "desc": "Regular reviews, trend analysis, and continuous improvement."
-          }
+          { "step": "01", "title": "Setup", "desc": "Define support scope and SLAs." },
+          { "step": "02", "title": "Support", "desc": "Handle incidents and requests." },
+          { "step": "03", "title": "Improvement", "desc": "Regular reviews and optimization." }
         ],
-        "offerings": [
-          "Helpdesk",
-          "NOC",
-          "On-site",
-          "Managed services"
-        ]
+        "offerings": ["Helpdesk", "NOC", "On-site support", "Managed services"]
       },
       "backup": {
-        "title": "Backup & DR",
-        "subtitle": "Disaster recovery and business continuity. Protect data, define RPO/RTO, and ensure you can recover when it matters.",
-        "features": [
-          "Backup strategy & design",
-          "On-prem & cloud backup",
-          "Replication & failover",
-          "Recovery testing",
-          "RPO/RTO alignment",
-          "Documented runbooks"
+        "title": "Backup &",
+        "title_highlight": "Recovery",
+        "title_suffix": "",
+        "subtitle": "We help protect your data with reliable backup and recovery systems.",
+        "hero_metrics": [
+          { "value": "50PB+", "label": "Data protected" },
+          { "value": "1000+", "label": "Recoveries" },
+          { "value": "100+", "label": "DR sites" },
+          { "value": "99.9%", "label": "Success rate" }
         ],
+        "features": ["Backup planning", "DR site setup", "Cloud DR", "RTO/RPO planning", "Ransomware recovery", "Business continuity"],
         "process_steps": [
-          {
-            "step": "01",
-            "title": "Assess & design",
-            "desc": "Define RPO/RTO, classify data, and design backup and DR architecture."
-          },
-          {
-            "step": "02",
-            "title": "Implement & test",
-            "desc": "Deploy backup and replication; run regular recovery tests."
-          },
-          {
-            "step": "03",
-            "title": "Maintain & evolve",
-            "desc": "Monitor backup health, update runbooks, and adapt to changes."
-          }
+          { "step": "01", "title": "Assessment", "desc": "Define backup and recovery requirements." },
+          { "step": "02", "title": "Implementation", "desc": "Deploy backup and test recovery." },
+          { "step": "03", "title": "Maintenance", "desc": "Monitor backups and update plans." }
         ],
-        "offerings": [
-          "Veeam, Commvault",
-          "Cloud backup",
-          "DR drills",
-          "Runbooks"
-        ]
+        "offerings": ["Veeam", "Acronis", "Azure Site Recovery", "AWS Backup"],
+        "featured_projects_title": "Example projects",
+        "featured_projects": [
+          { "title": "Backup System", "subtitle": "Healthcare", "description": "Protected 500TB with 15-minute RPO.", "tags": ["Veeam", "AWS"], "metric": "100% success" },
+          { "title": "DR Solution", "subtitle": "E-commerce", "description": "Built active-active DR across regions.", "tags": ["Azure", "Zerto"], "metric": "5min RTO" },
+          { "title": "Ransomware Protection", "subtitle": "Manufacturing", "description": "Immutable backups with quick recovery.", "tags": ["Rubrik", "AWS"], "metric": "4-hour recovery" }
+        ],
+        "target_clients": ["Financial services", "Healthcare", "E-commerce", "Government"]
       },
       "devops": {
-        "title": "DevOps & Automation",
-        "subtitle": "CI/CD, infrastructure as code, and automation. Ship faster and more reliably with modern tooling and practices.",
-        "features": [
-          "CI/CD pipeline design",
-          "Infrastructure as Code (Terraform, Ansible)",
-          "Container orchestration",
-          "Release & config management",
-          "Observability & logging",
-          "SRE practices"
+        "title": "DevOps",
+        "title_highlight": "Services",
+        "title_suffix": "",
+        "subtitle": "We help teams automate deployment and manage infrastructure reliably.",
+        "hero_metrics": [
+          { "value": "1000+", "label": "Pipelines" },
+          { "value": "50K+", "label": "Containers" },
+          { "value": "500+", "label": "Deploys/day" },
+          { "value": "10x", "label": "Faster" }
         ],
+        "features": ["CI/CD pipelines", "Infrastructure as code", "Container orchestration", "Monitoring", "GitOps", "Cloud-native"],
         "process_steps": [
-          {
-            "step": "01",
-            "title": "Assess & design",
-            "desc": "Map current release process and define target pipelines and IaC strategy."
-          },
-          {
-            "step": "02",
-            "title": "Build & automate",
-            "desc": "Implement pipelines, IaC, and deployment automation."
-          },
-          {
-            "step": "03",
-            "title": "Operate & iterate",
-            "desc": "Monitor, tune, and evolve pipelines and practices."
-          }
+          { "step": "01", "title": "Assessment", "desc": "Review current deployment process." },
+          { "step": "02", "title": "Automation", "desc": "Build pipelines and automation." },
+          { "step": "03", "title": "Operation", "desc": "Monitor and improve continuously." }
         ],
-        "offerings": [
-          "GitLab, GitHub Actions",
-          "Terraform",
-          "Kubernetes",
-          "Prometheus"
-        ]
+        "offerings": ["Docker", "Kubernetes", "Terraform", "Jenkins", "Prometheus"],
+        "featured_projects_title": "Example projects",
+        "featured_projects": [
+          { "title": "Kubernetes Platform", "subtitle": "SaaS Startup", "description": "Built production Kubernetes on AWS.", "tags": ["EKS", "ArgoCD"], "metric": "10x faster deploys" },
+          { "title": "CI/CD Modernization", "subtitle": "Fintech", "description": "Automated deployment pipeline.", "tags": ["GitLab CI", "Terraform"], "metric": "500+ deploys/day" },
+          { "title": "Infrastructure as Code", "subtitle": "Enterprise", "description": "Migrated to Terraform management.", "tags": ["Terraform", "AWS"], "metric": "Full IaC" }
+        ],
+        "target_clients": ["Startups", "SaaS companies", "Digital-first businesses"]
       },
       "datacenter": {
         "title": "Data Center Design",
-        "subtitle": "Modern data center solutions and design. From colocation to private cloud, we help you plan and operate efficient, resilient facilities.",
-        "features": [
-          "Data center strategy",
-          "Power, cooling & cabling",
-          "Rack & layout design",
-          "Monitoring & DCIM",
-          "Capacity planning",
-          "Green & efficiency"
-        ],
+        "subtitle": "We help plan and operate data center facilities.",
+        "features": ["Strategy", "Power and cooling", "Layout design", "Monitoring", "Capacity planning"],
         "process_steps": [
-          {
-            "step": "01",
-            "title": "Strategy & design",
-            "desc": "Requirements, capacity, and physical/network design."
-          },
-          {
-            "step": "02",
-            "title": "Build or migrate",
-            "desc": "Build-out, migration, and integration with existing systems."
-          },
-          {
-            "step": "03",
-            "title": "Operate & optimize",
-            "desc": "Day-two operations, capacity, and efficiency improvements."
-          }
+          { "step": "01", "title": "Strategy", "desc": "Define requirements and design." },
+          { "step": "02", "title": "Build", "desc": "Build-out and migration." },
+          { "step": "03", "title": "Operation", "desc": "Operate and optimize." }
         ],
-        "offerings": [
-          "Colo design",
-          "DCIM",
-          "Power/cooling",
-          "Compliance"
-        ]
+        "offerings": ["Design", "DCIM", "Power/cooling", "Compliance"]
       },
       "communication": {
-        "title": "Unified Communication",
-        "subtitle": "VoIP, collaboration tools, and unified comms. Voice, video, messaging, and integrations in one cohesive platform.",
-        "features": [
-          "VoIP & telephony",
-          "Video conferencing",
-          "Team messaging & collaboration",
-          "Integration with CRM/ERP",
-          "Call center & IVR",
-          "Mobile & remote access"
-        ],
+        "title": "Communication Systems",
+        "subtitle": "We set up voice, video, and collaboration platforms.",
+        "features": ["VoIP", "Video conferencing", "Team messaging", "CRM integration", "Call centers", "Mobile access"],
         "process_steps": [
-          {
-            "step": "01",
-            "title": "Requirements & design",
-            "desc": "User needs, integrations, and UC architecture."
-          },
-          {
-            "step": "02",
-            "title": "Deploy & integrate",
-            "desc": "Roll out platforms, migrate numbers, and train users."
-          },
-          {
-            "step": "03",
-            "title": "Support & evolve",
-            "desc": "Ongoing support, upgrades, and adoption."
-          }
+          { "step": "01", "title": "Requirements", "desc": "Define needs and architecture." },
+          { "step": "02", "title": "Deployment", "desc": "Roll out and train users." },
+          { "step": "03", "title": "Support", "desc": "Ongoing support and updates." }
         ],
-        "offerings": [
-          "Microsoft Teams",
-          "Zoom",
-          "Cisco",
-          "SIP trunking"
-        ]
+        "offerings": ["Microsoft Teams", "Zoom", "Cisco", "SIP"]
       },
       "migration": {
         "title": "Cloud Migration",
-        "subtitle": "Seamless cloud migration with zero downtime. We plan, execute, and validate migrations so your business keeps running.",
-        "features": [
-          "Migration assessment & planning",
-          "Rehost, refactor, or rebuild",
-          "Phased migration & cutover",
-          "Zero-downtime where possible",
-          "Post-migration optimization",
-          "Training & handover"
-        ],
+        "subtitle": "We help teams move to cloud infrastructure with minimal disruption.",
+        "features": ["Migration planning", "Rehost or refactor", "Phased migration", "Zero-downtime goals", "Post-migration optimization", "Training"],
         "process_steps": [
-          {
-            "step": "01",
-            "title": "Discover & plan",
-            "desc": "Application inventory, dependencies, and migration roadmap."
-          },
-          {
-            "step": "02",
-            "title": "Migrate in phases",
-            "desc": "Execute migration waves with validation and rollback plans."
-          },
-          {
-            "step": "03",
-            "title": "Optimize & decommission",
-            "desc": "Right-size, optimize cost, and decommission legacy."
-          }
+          { "step": "01", "title": "Discovery", "desc": "Inventory systems and plan migration." },
+          { "step": "02", "title": "Migration", "desc": "Execute in phases with testing." },
+          { "step": "03", "title": "Optimization", "desc": "Optimize and decommission old systems." }
         ],
-        "offerings": [
-          "AWS Migration",
-          "Azure Migrate",
-          "VMware Cloud",
-          "Database migration"
+        "offerings": ["AWS Migration", "Azure Migrate", "VMware Cloud", "Database migration"]
+      }
+    }
+  },
+  "solutions_industries": {
+    "hero_badge": "Industries",
+    "hero_title_line1": "Software for",
+    "hero_title_highlight": "your industry",
+    "hero_subtitle": "We work with teams in healthcare, finance, commerce, and other sectors that need reliable technology."
+  },
+  "industries_landing": {
+    "hero_badge": "Industries",
+    "hero_title_line1": "Software built for",
+    "hero_title_line2": "",
+    "hero_title_highlight": "your sector",
+    "hero_subtitle": "We build systems for healthcare, finance, commerce, education, and other industries that need reliable technology.",
+    "hero_cta": "See what we do",
+    "hero_explore_sectors": "Explore sectors",
+    "section2_badge": "Experience",
+    "section2_title_line1": "Built for teams",
+    "section2_title_line2": "that need",
+    "section2_title_highlight": "systems that work",
+    "section2_subtitle": "We work with businesses that take their technology seriously and need systems that stay reliable as they grow.",
+    "section2_cta": "See our work",
+    "section3_title_line1": "Industry",
+    "section3_title_line2": "experience",
+    "section3_body": "Different industries have different needs. Healthcare needs HIPAA compliance. Finance needs security and audit trails. E-commerce needs reliable payment processing. We understand these requirements and build accordingly.",
+    "section3_items": ["Healthcare", "Finance", "Commerce"],
+    "section3_cta": "Learn more",
+    "section3_showcase_title": "Our work",
+    "section3_showcase_label": "Projects",
+    "section4_title_line1": "Built for",
+    "section4_title_line2": "your",
+    "section4_title_line3": "industry",
+    "section4_title_line4": "",
+    "section4_subtitle": "Every industry has specific requirements. We learn your sector so we can build systems that work the way you need them to.",
+    "section4_outcome_1": "Compliance",
+    "section4_outcome_2": "Reliability",
+    "section4_outcome_3": "Your needs",
+    "section4_deliver_label": "What we build",
+    "section4_deliver_1": "Web and mobile",
+    "section4_deliver_2": "Cloud and APIs",
+    "section4_deliver_3": "Support",
+    "section4_cta": "Talk to us",
+    "section4_image_1_label": "Healthcare",
+    "section4_image_2_label": "Data",
+    "section4_image_3_label": "Engineering",
+    "section_why_heading": "What we bring",
+    "section_why_1_title": "Production-ready",
+    "section_why_1_desc": "Systems tested and ready to deploy.",
+    "section_why_2_title": "Industry knowledge",
+    "section_why_2_desc": "We learn your sector's requirements.",
+    "section_why_3_title": "Clear pricing",
+    "section_why_3_desc": "Fixed quotes and realistic timelines.",
+    "section_why_4_title": "Global team",
+    "section_why_4_desc": "Work across time zones with clear communication.",
+    "verticals_heading": "Sectors we",
+    "verticals_heading_highlight": "work in",
+    "verticals_subtitle": "We have experience in these industries and are always open to learning about new sectors.",
+    "verticals_badge": "Industries",
+    "read_more": "Learn more",
+    "healthcare_title": "Healthcare",
+    "healthcare_desc": "Health records, telemedicine, compliance",
+    "fintech_title": "Finance",
+    "fintech_desc": "Banking, payments, lending",
+    "saas_title": "SaaS",
+    "saas_desc": "Software products and platforms",
+    "ecommerce_title": "Commerce",
+    "ecommerce_desc": "Online stores and marketplaces",
+    "edtech_title": "Education",
+    "edtech_desc": "Learning platforms and tools",
+    "startups_title": "Startups",
+    "startups_desc": "From concept to launch",
+    "newsletter_title": "Stay updated",
+    "newsletter_subtitle": "Get occasional updates about our work.",
+    "newsletter_placeholder": "Your email",
+    "newsletter_cta": "Subscribe",
+    "newsletter_disclaimer": "We respect your privacy. Unsubscribe anytime."
+  },
+  "projects": {
+    "title": "Our work",
+    "subtitle": "Projects we've built for teams around the world.",
+    "view_project": "View project",
+    "detail_back": "Back to projects"
+  },
+  "industries_detail": {
+    "hero_badge": "Industries",
+    "cta_primary": "Get in touch",
+    "cta_secondary": "See services",
+    "cta_title": "Need software for your industry?",
+    "cta_button": "Talk to us",
+    "slugs": {
+      "healthcare": {
+        "title": "Healthcare",
+        "title_highlight": "Technology",
+        "subtitle": "Software for health systems: electronic health records, telemedicine, hospital management, and healthcare platforms.",
+        "hero_metrics": [
+          { "value": "12+", "label": "Projects" },
+          { "value": "99.99%", "label": "Uptime" },
+          { "value": "HIPAA", "label": "Compliant" }
+        ],
+        "features": ["Hospital management", "Health records", "Telemedicine", "Healthcare platforms"],
+        "process_steps": [
+          { "step": "01", "title": "Understanding needs", "desc": "Learn compliance and workflow requirements." },
+          { "step": "02", "title": "Build", "desc": "Secure, compliant systems." },
+          { "step": "03", "title": "Support", "desc": "Ongoing compliance and maintenance." }
+        ]
+      },
+      "fintech": {
+        "title": "Financial",
+        "title_highlight": "Technology",
+        "subtitle": "Banking platforms, payment systems, lending, and financial services software.",
+        "hero_metrics": [
+          { "value": "18+", "label": "Projects" },
+          { "value": "100%", "label": "Uptime" }
+        ],
+        "features": ["Digital banking", "Payment processing", "Lending systems", "Asset management"],
+        "process_steps": [
+          { "step": "01", "title": "Compliance", "desc": "Understand regulatory requirements." },
+          { "step": "02", "title": "Build", "desc": "Secure, auditable systems." },
+          { "step": "03", "title": "Operate", "desc": "Monitor and maintain compliance." }
+        ]
+      },
+      "ecommerce": {
+        "title": "Commerce",
+        "title_highlight": "Platforms",
+        "subtitle": "Online stores, marketplaces, inventory systems, and B2B commerce.",
+        "hero_metrics": [
+          { "value": "24+", "label": "Projects" },
+          { "value": "99.98%", "label": "Uptime" }
+        ],
+        "features": ["Marketplaces", "Inventory systems", "Online stores", "B2B commerce"],
+        "process_steps": [
+          { "step": "01", "title": "Strategy", "desc": "Plan catalog, fulfillment, and scale." },
+          { "step": "02", "title": "Build", "desc": "Checkout, payments, operations." },
+          { "step": "03", "title": "Scale", "desc": "Performance and growth." }
+        ]
+      },
+      "edtech": {
+        "title": "Education",
+        "title_highlight": "Technology",
+        "subtitle": "Learning management systems, course platforms, and education software.",
+        "hero_metrics": [
+          { "value": "10+", "label": "Projects" }
+        ],
+        "features": ["Learning platforms", "Assessment tools", "Collaboration", "Mobile learning"],
+        "process_steps": [
+          { "step": "01", "title": "Discover", "desc": "Understand learning goals." },
+          { "step": "02", "title": "Build", "desc": "Accessible learning experiences." },
+          { "step": "03", "title": "Iterate", "desc": "Improve based on usage." }
+        ]
+      },
+      "saas": {
+        "title": "SaaS",
+        "title_highlight": "Platforms",
+        "subtitle": "Software products: multi-tenant architecture, subscriptions, and APIs.",
+        "hero_metrics": [
+          { "value": "30+", "label": "Products" }
+        ],
+        "features": ["Multi-tenant systems", "Subscriptions", "API-first design", "Analytics"],
+        "process_steps": [
+          { "step": "01", "title": "Architecture", "desc": "Plan for scale and tenancy." },
+          { "step": "02", "title": "Build", "desc": "Secure, scalable platform." },
+          { "step": "03", "title": "Launch", "desc": "Deploy and optimize." }
+        ]
+      },
+      "startups": {
+        "title": "Startups",
+        "title_highlight": "",
+        "subtitle": "From concept to launch: fast delivery and clear architecture for growing companies.",
+        "hero_metrics": [
+          { "value": "2-4", "label": "Weeks to launch" },
+          { "value": "90", "label": "Days support" }
+        ],
+        "features": ["Fast delivery", "Fixed pricing", "You own everything", "Built to scale"],
+        "process_steps": [
+          { "step": "01", "title": "Scope", "desc": "Clear plan and timeline." },
+          { "step": "02", "title": "Build", "desc": "Fast, quality delivery." },
+          { "step": "03", "title": "Launch", "desc": "Deploy and support." }
         ]
       }
     }
+  },
+  "blog": {
+    "badge": "Blog",
+    "title_line1": "Updates and",
+    "title_highlight": "technical",
+    "title_line2": "insights",
+    "subtitle": "Occasional posts about our work and technology.",
+    "read_more": "Read more",
+    "back": "Back to blog",
+    "no_posts": "No posts yet."
+  },
+  "automations": {
+    "hero_title_1": "AI systems that",
+    "hero_title_2": "add clear",
+    "hero_title_highlight": "value",
+    "hero_subtitle": "Custom AI features built into your products. From document search to workflow automation.",
+    "hero_cta": "Talk to us",
+    "hero_trust": "Built for businesses that need reliable systems",
+    "orbital_card_title": "AI Assistant",
+    "orbital_card_status": "Active",
+    "orbital_card_workflow": "Workflow",
+    "orbital_card_sync": "Syncing",
+    "orbital_support": "Support AI",
+    "orbital_scribe": "Document AI",
+    "orbital_researcher": "Research",
+    "orbital_custom": "Custom AI",
+    "use_cases": [
+      {
+        "id": "01",
+        "title": "Chat Assistants",
+        "agent": "AI Assistant",
+        "desc": "Conversational AI that helps users find information and complete tasks. Built to handle real conversations with context and accuracy.",
+        "outcome": "24/7 availability, faster responses",
+        "accent": "text-emerald-500",
+        "color": "bg-emerald-50"
+      },
+      {
+        "id": "02",
+        "title": "Voice Systems",
+        "agent": "Voice AI",
+        "desc": "Voice-activated features and call automation that understand what users mean and respond appropriately.",
+        "outcome": "Reduced call handling time",
+        "accent": "text-cyan-500",
+        "color": "bg-cyan-50"
+      },
+      {
+        "id": "03",
+        "title": "Fraud Detection",
+        "agent": "Security AI",
+        "desc": "Automated monitoring that identifies unusual patterns and potential fraud in real-time.",
+        "outcome": "Early fraud detection",
+        "accent": "text-orange-500",
+        "color": "bg-orange-50"
+      },
+      {
+        "id": "04",
+        "title": "Recommendations",
+        "agent": "Personalization",
+        "desc": "Systems that suggest relevant products or content based on user behavior and preferences.",
+        "outcome": "Better engagement",
+        "accent": "text-purple-500",
+        "color": "bg-purple-50"
+      },
+      {
+        "id": "05",
+        "title": "Process Automation",
+        "agent": "Workflow AI",
+        "desc": "Automated workflows that handle repetitive tasks, from data entry to multi-step processes.",
+        "outcome": "Less manual work",
+        "accent": "text-pink-500",
+        "color": "bg-pink-50"
+      },
+      {
+        "id": "06",
+        "title": "Marketing Insights",
+        "agent": "Analytics AI",
+        "desc": "Data analysis that helps understand customer behavior, campaign performance, and market trends.",
+        "outcome": "Better marketing decisions",
+        "accent": "text-blue-500",
+        "color": "bg-blue-50"
+      }
+    ],
+    "session_label": "LIVE_SESSION",
+    "dashboard_title": "Dashboard",
+    "dashboard_updated": "Updated in real-time",
+    "system_operational": "System operational",
+    "processing_label": "Processing",
+    "agent_active": "active",
+    "agent_active_desc": "Processing data and updating systems.",
+    "latest_logs": "Recent activity",
+    "log_template": "Processing complete. Results indexed and stored.",
+    "deployed_agent": "Active agent:",
+    "results_badge": "Why this works",
+    "results_heading": "Built for",
+    "results_highlight": "reliability",
+    "results_cards": [
+      {
+        "title": "Persistent memory",
+        "desc": "AI that remembers context and learns from your data."
+      },
+      {
+        "title": "Always available",
+        "desc": "Systems that work 24/7 without breaks."
+      },
+      {
+        "title": "Clear ROI",
+        "desc": "More output without proportional headcount growth."
+      }
+    ],
+    "cta_heading_1": "Let's talk about",
+    "cta_heading_2": "AI for your product",
+    "cta_subtitle": "Tell us what you're trying to solve and we'll help you understand if AI is a good fit.",
+    "cta_button": "Get in touch",
+    "cta_compliance": "Security and compliance ready"
   }
 }
