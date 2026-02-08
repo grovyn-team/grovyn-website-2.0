@@ -12,25 +12,31 @@ import {
   Database,
   BarChart3,
   Globe,
+  GraduationCap,
+  Tv,
+  Building2,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-const industryIds = ["healthcare", "finance", "ecommerce"] as const;
+const industryIds = ["healthcare", "fintech", "ecommerce", "edtech", "media", "construction"] as const;
 const industryImages: Record<string, string> = {
-  healthcare:
-    "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200",
-  finance:
-    "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200",
-  ecommerce:
-    "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1200",
+  healthcare: "/assets/Healthcare.png",
+  fintech: "/assets/FinTech.png",
+  ecommerce: "/assets/E-Commerce.png",
+  edtech: "/assets/EdTech.png",
+  media: "/assets/Media%20%26%20Content%20Plateforms.png",
+  construction: "/assets/Construction.png",
 };
 
 const watermarks: Record<string, string> = {
   healthcare: "HEALTHCARE",
-  finance: "FINANCE",
+  fintech: "FINTECH",
   ecommerce: "COMMERCE",
+  edtech: "EDTECH",
+  media: "MEDIA",
+  construction: "CONSTRUCTION",
 };
 
 type IndustryId = (typeof industryIds)[number];
@@ -44,8 +50,11 @@ function BlueprintIllustration({
 }) {
   const icons: Record<IndustryId, React.ReactNode> = {
     healthcare: <Heart size={20} strokeWidth={1.5} className="sm:w-7 sm:h-7" />,
-    finance: <CreditCard size={20} strokeWidth={1.5} className="sm:w-7 sm:h-7" />,
+    fintech: <CreditCard size={20} strokeWidth={1.5} className="sm:w-7 sm:h-7" />,
     ecommerce: <ShoppingCart size={20} strokeWidth={1.5} className="sm:w-7 sm:h-7" />,
+    edtech: <GraduationCap size={20} strokeWidth={1.5} className="sm:w-7 sm:h-7" />,
+    media: <Tv size={20} strokeWidth={1.5} className="sm:w-7 sm:h-7" />,
+    construction: <Building2 size={20} strokeWidth={1.5} className="sm:w-7 sm:h-7" />,
   };
   const satelliteIcons: Record<IndustryId, React.ReactNode[]> = {
     healthcare: [
@@ -54,7 +63,7 @@ function BlueprintIllustration({
       <Activity size={7} key="3" className="sm:w-[10px] sm:h-[10px]" />,
       <Heart size={7} key="4" className="sm:w-[10px] sm:h-[10px]" />,
     ],
-    finance: [
+    fintech: [
       <BarChart3 size={7} key="1" className="sm:w-[10px] sm:h-[10px]" />,
       <Globe size={7} key="2" className="sm:w-[10px] sm:h-[10px]" />,
       <Zap size={7} key="3" className="sm:w-[10px] sm:h-[10px]" />,
@@ -65,6 +74,24 @@ function BlueprintIllustration({
       <Zap size={7} key="2" className="sm:w-[10px] sm:h-[10px]" />,
       <Globe size={7} key="3" className="sm:w-[10px] sm:h-[10px]" />,
       <Shield size={7} key="4" className="sm:w-[10px] sm:h-[10px]" />,
+    ],
+    edtech: [
+      <GraduationCap size={7} key="1" className="sm:w-[10px] sm:h-[10px]" />,
+      <Activity size={7} key="2" className="sm:w-[10px] sm:h-[10px]" />,
+      <Database size={7} key="3" className="sm:w-[10px] sm:h-[10px]" />,
+      <Globe size={7} key="4" className="sm:w-[10px] sm:h-[10px]" />,
+    ],
+    media: [
+      <Tv size={7} key="1" className="sm:w-[10px] sm:h-[10px]" />,
+      <Globe size={7} key="2" className="sm:w-[10px] sm:h-[10px]" />,
+      <Zap size={7} key="3" className="sm:w-[10px] sm:h-[10px]" />,
+      <Activity size={7} key="4" className="sm:w-[10px] sm:h-[10px]" />,
+    ],
+    construction: [
+      <Building2 size={7} key="1" className="sm:w-[10px] sm:h-[10px]" />,
+      <Shield size={7} key="2" className="sm:w-[10px] sm:h-[10px]" />,
+      <Activity size={7} key="3" className="sm:w-[10px] sm:h-[10px]" />,
+      <Database size={7} key="4" className="sm:w-[10px] sm:h-[10px]" />,
     ],
   };
 
@@ -196,9 +223,9 @@ export default function Industries() {
           </div>
 
           <div className={`flex flex-col lg:flex-row items-stretch gap-3 sm:gap-6 lg:gap-12 relative z-10 transition-opacity duration-300 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}>
-            <div className="w-full lg:w-[46%] relative">
-              <div className="rounded-[1rem] overflow-hidden lg:aspect-[1.15/1] aspect-[1.15/1] sm:aspect-[3.5/2] shadow-xl relative border-2 sm:border-4 border-white/40 group">
-                <div className="relative w-full h-full">
+            <div className="w-full lg:w-[46%] relative lg:min-h-0 flex flex-col">
+              <div className="rounded-[1rem] overflow-hidden aspect-[1.15/1] sm:aspect-[3.5/2] lg:aspect-auto lg:min-h-0 lg:flex-1 lg:h-full shadow-xl relative border-2 sm:border-4 border-white/40 group">
+                <div className="absolute inset-0">
                   <Image
                     key={current.id}
                     src={current.image}
@@ -210,22 +237,6 @@ export default function Industries() {
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-                  <div 
-                    key={`icon-${current.id}`}
-                    className="relative p-3 sm:p-6 rounded-full bg-[#10b981]/5 backdrop-blur-md border border-[#10b981]/20 shadow-[0_0_30px_rgba(16,185,129,0.2)]"
-                  >
-                    <div className="text-[#10b981] scale-[1.3] sm:scale-[2.2] transition-all duration-700">
-                      {current.id === "healthcare" ? (
-                        <Heart size={24} className="sm:w-9 sm:h-9" />
-                      ) : current.id === "finance" ? (
-                        <CreditCard size={24} className="sm:w-9 sm:h-9" />
-                      ) : (
-                        <ShoppingCart size={24} className="sm:w-9 sm:h-9" />
-                      )}
-                    </div>
-                  </div>
-                </div>
                 <div className="absolute bottom-2 sm:bottom-6 lg:bottom-8 left-0 w-full px-3 sm:px-6 lg:px-8">
                   <div className="flex items-center space-x-2 sm:space-x-4">
                     <div className="h-[2px] w-3 sm:w-8 bg-[#10b981]" />
@@ -238,7 +249,6 @@ export default function Industries() {
                   </div>
                 </div>
                 <div className="absolute bottom-2 sm:bottom-6 right-2 sm:right-6 opacity-40">
-                  <div className="text-white text-sm sm:text-2xl">✦</div>
                 </div>
               </div>
             </div>

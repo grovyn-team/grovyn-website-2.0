@@ -4,6 +4,7 @@ import { getMessages } from "next-intl/server";
 import { locales, isRtl } from "@/i18n/config";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import "../globals.css";
 
 export default async function LocaleLayout({
@@ -30,6 +31,7 @@ export default async function LocaleLayout({
             {children}
           </main>
           <Footer locale={locale} />
+          <WhatsAppFloat />
         </NextIntlClientProvider>
       </body>
     </html>

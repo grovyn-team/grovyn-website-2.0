@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -12,12 +13,16 @@ export default function Footer({ locale }: { locale: string }) {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-1 space-y-6">
-            <div className="flex items-center space-x-2 text-white">
-              <div className="w-8 h-8 rounded-full border border-emerald-500 flex items-center justify-center font-bold text-emerald-500">
-                G
-              </div>
-              <span className="text-xl font-semibold tracking-tight">grovyn</span>
-            </div>
+            <Link href={base} className="inline-flex items-center">
+              <Image
+                src="/grovyn_logo.png"
+                alt="Grovyn"
+                width={120}
+                height={40}
+                className="h-8 w-auto object-contain"
+                style={{ width: "auto" }}
+              />
+            </Link>
             <p className="text-xs leading-relaxed max-w-xs">
               {t("tagline")}
             </p>

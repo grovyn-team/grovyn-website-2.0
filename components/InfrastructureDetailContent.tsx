@@ -33,9 +33,23 @@ import {
 import type { InfrastructureSlug } from "@/lib/infrastructure";
 
 const DEFAULT_HERO_IMG = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200";
-const DEFAULT_OVERVIEW_IMG = "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=600";
+const DEFAULT_OVERVIEW_IMG = "/assets/infra-works.png";
 const BANNER_IMG = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000";
 const EXPERT_AVATAR = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200";
+
+/** Hero background image per infrastructure route. Add local paths (e.g. /assets/NetworkHero.png) or URLs as you add assets. */
+const HERO_IMAGES: Record<InfrastructureSlug, string> = {
+  cloud: "/assets/CloudHero.png",
+  network: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200",
+  servers: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200",
+  security: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200",
+  support: DEFAULT_HERO_IMG,
+  backup: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=1200",
+  devops: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200",
+  datacenter: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200",
+  communication: DEFAULT_HERO_IMG,
+  migration: DEFAULT_HERO_IMG,
+};
 
 const SLUG_ICONS: Record<InfrastructureSlug, React.ReactNode> = {
   cloud: <Cloud size={28} />,
@@ -105,7 +119,7 @@ export default function InfrastructureDetailContent({ slug }: { slug: Infrastruc
     : [];
   const heroMetricsRaw = safeRaw<HeroMetric[]>(t, `${slugNs}.hero_metrics`);
   const stats = Array.isArray(heroMetricsRaw) ? heroMetricsRaw.slice(0, 3) : [];
-  const heroImg = DEFAULT_HERO_IMG;
+  const heroImg = HERO_IMAGES[slug] ?? DEFAULT_HERO_IMG;
   const overviewImg = DEFAULT_OVERVIEW_IMG;
 
   const fullTitle = [title, titleHighlight, titleSuffix].filter(Boolean).join(" ");
@@ -224,7 +238,7 @@ export default function InfrastructureDetailContent({ slug }: { slug: Infrastruc
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              <div className="absolute bottom-4 left-4 md:bottom-10 md:left-10 bg-white p-4 md:p-8 rounded-xl md:rounded-[2.5rem] shadow-2xl border border-gray-50 animate-float-slow">
+              <div className="absolute bottom-[-10px] left-4 md:left-10 bg-white p-4 md:p-8 rounded-xl md:rounded-[2.5rem] shadow-2xl border border-gray-50 animate-float-slow">
                 <div className="flex items-center space-x-2 md:space-x-4">
                   <div className="w-8 h-8 md:w-14 md:h-14 rounded-full bg-[#10b981] flex items-center justify-center text-white">
                     <Users size={16} className="md:w-7 md:h-7" />

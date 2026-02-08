@@ -255,8 +255,8 @@ export default function WebServiceContent() {
                       <div className="text-white text-[8px] md:text-xs font-bold uppercase tracking-widest">Optimized Pipeline</div>
                     </div>
                   </div>
-                  <div className="space-y-1.5 md:space-y-6">
-                    <h3 className="text-base md:text-3xl lg:text-5xl font-black tracking-tight leading-none text-white">Sub-Second <br />Execution.</h3>
+                  <div className="space-y-1.5 md:space-y-3">
+                    <h3 className="text-base md:text-2xl lg:text-4xl font-black tracking-tight leading-none text-white">Sub-Second <br />Execution.</h3>
                     <p className="text-gray-500 text-[10px] md:text-sm font-medium max-w-sm leading-relaxed line-clamp-2 md:line-clamp-none">
                       We eliminate bloat at the compiler level. Every byte is optimized for sub-100ms response times globally.
                     </p>
@@ -281,7 +281,7 @@ export default function WebServiceContent() {
                 </div>
               </div>
 
-              <div className="relative z-10 flex flex-col md:flex-row items-center space-y-1.5 md:space-y-0 md:space-x-6 mt-3 md:mt-0">
+              <div className="relative z-10 flex flex-col md:flex-row items-center space-y-1.5 md:space-y-0 md:space-x-6 mt-3 md:mt-2">
                 <Link
                   href={`${base}#contact`}
                   className="w-full md:w-auto bg-white text-black px-4 md:px-10 py-2 md:py-4 rounded-lg md:rounded-2xl text-[8px] md:text-[10px] font-black uppercase tracking-widest hover:bg-[#10b981] transition-all duration-500 text-center"

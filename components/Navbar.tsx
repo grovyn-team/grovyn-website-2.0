@@ -84,7 +84,6 @@ export default function Navbar() {
   const infrastructureFeatured = { slug: "migration", label: ti("migration"), desc: ti("migration_desc"), icon: <Truck size={20} /> };
 
   const resourceItems = [
-    { title: t("about"), href: `/${locale}/about`, icon: <Users size={20} /> },
     { title: t("careers"), href: `/${locale}/careers`, icon: <Briefcase size={20} /> },
     { title: t("resources_menu.blog"), href: `/${locale}/blog`, icon: <BookOpen size={20} /> },
     { title: t("resources_menu.contact"), href: `/${locale}#contact`, icon: <Mail size={20} /> },
@@ -301,6 +300,13 @@ export default function Navbar() {
             className={`transition-colors py-2 ${linkClass(pathname.includes("automations"))}`}
           >
             {t("automations")}
+          </Link>
+
+          <Link
+            href={`/${locale}/about`}
+            className={`transition-colors py-2 ${linkClass(pathname.includes("about"))}`}
+          >
+            {t("about")}
           </Link>
           <div
             className="relative group flex items-center h-full"

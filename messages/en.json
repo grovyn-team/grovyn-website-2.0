@@ -16,9 +16,9 @@
     "capabilities": "Capabilities",
     "services": "Services",
     "about": "About",
-    "portfolio": "Work",
+    "portfolio": "Portfolio",
     "industries": "Industries",
-    "automations": "Automations",
+    "automations": "AI Automations",
     "resources": "Resources",
     "infrastructure": "Infrastructure",
     "capabilities_explore": "What we do",
@@ -120,10 +120,10 @@
         "Telemedicine platforms",
         "Healthcare software products"
       ],
-      "projects": "12+",
+      "projects": "5+",
       "uptime": "99.99%"
     },
-    "finance": {
+    "fintech": {
       "title": "Financial Technology",
       "location": "Banking and financial services",
       "areas": [
@@ -132,20 +132,56 @@
         "Lending systems",
         "Financial data platforms"
       ],
-      "projects": "18+",
+      "projects": "5+",
       "uptime": "100%"
     },
     "ecommerce": {
-      "title": "Commerce Platforms",
-      "location": "Retail and marketplace systems",
+      "title": "E‑Commerce & Retail",
+      "location": "Online retail and marketplace systems",
       "areas": [
-        "Marketplace platforms",
-        "Inventory management",
-        "Direct-to-consumer stores",
-        "B2B commerce systems"
+        "Marketplace and storefront platforms",
+        "Inventory and order management",
+        "Direct-to-consumer and B2B stores",
+        "Fulfillment and logistics systems"
       ],
-      "projects": "24+",
+      "projects": "7+",
       "uptime": "99.98%"
+    },
+    "edtech": {
+      "title": "Education Technology",
+      "location": "Learning platforms and education tools",
+      "areas": [
+        "Learning management systems",
+        "Student and teacher portals",
+        "Assessment and progress tracking",
+        "Content and course delivery"
+      ],
+      "projects": "3+",
+      "uptime": "99.95%"
+    },
+    "media": {
+      "title": "Media & Content Platforms",
+      "location": "Streaming, publishing, and content systems",
+      "areas": [
+        "Streaming and on-demand platforms",
+        "Content management and publishing",
+        "Audience and analytics tools",
+        "Monetization and subscriptions"
+      ],
+      "projects": "3+",
+      "uptime": "99.97%"
+    },
+    "construction": {
+      "title": "Construction & Real Estate Tech",
+      "location": "Building, property, and project systems",
+      "areas": [
+        "Project and site management",
+        "Resource and supply chain tools",
+        "Property and portfolio platforms",
+        "Compliance and documentation"
+      ],
+      "projects": "2+",
+      "uptime": "99.9%"
     }
   },
   "capabilities": {
@@ -174,14 +210,25 @@
   "metrics": {
     "title": "How we work",
     "subtitle": "We focus on clear communication, realistic timelines, and building systems that continue to work well as your business grows.",
+    "deliveries_label": "Production system deliveries",
+    "deliveries_desc": "We deliver digital systems across stages of growth with care, structure, and accountability.",
+    "pricing_title": "Transparent and fixed pricing",
+    "pricing_desc": "Scope, responsibilities, and costs defined upfront. No surprises.",
+    "get_quote": "Get free quote",
+    "global_delivery_title": "Global delivery, thoughtful execution",
+    "global_delivery_desc": "Teams collaborate across regions with consistent communication and shared standards.",
+    "mvp_label": "Average MVP delivery",
+    "mvp_desc": "Stable foundation delivered in this timeframe once scope and priorities are clear.",
+    "quality_label": "Quality guarantee",
+    "quality_desc": "Structured support after delivery for stability and a smooth handover.",
+    "ownership_title": "Full ownership, no lock-in",
+    "ownership_desc": "All code, systems, and deliverables belong to you. No dependency, no hidden control.",
     "deliveries": "Projects shipped",
-    "pricing_title": "Clear pricing upfront",
-    "get_quote": "Talk to us",
     "global_delivery": "Teams across time zones",
     "mvp_delivery": "Typical project start",
     "mvp_value": "2-4 weeks",
     "quality_guarantee": "Support included",
-    "quality_value": "90 days",
+    "quality_value": "45 days",
     "ownership": "You own everything we build",
     "ticker": "Reliable systems"
   },
@@ -191,6 +238,15 @@
   },
   "contact": {
     "badge": "Get in touch",
+    "sidebar_title": "Get in touch",
+    "sidebar_subtitle": "Ready to discuss your technology needs? Reach out through any of these channels or fill out the form.",
+    "email_us": "Email us",
+    "call_us": "Call us",
+    "visit_us": "Visit us",
+    "working_hours": "Working hours",
+    "whatsapp_us": "WhatsApp us",
+    "whatsapp_subtitle": "Quick response via WhatsApp",
+    "response_note": "We respond to all inquiries within 24 hours (usually within 4 hours during business hours).",
     "title_line1": "Let's talk about",
     "title_highlight": "your project",
     "title_line2": "",
@@ -301,14 +357,14 @@
     "hero_title_line1": "Help build",
     "hero_title_line2": "technology",
     "hero_title_highlight": "that lasts",
-    "hero_subtitle": "We work with growing businesses around the world. Our team is spread across India, Singapore, Indonesia, and the Philippines.",
+    "hero_subtitle": "We work with people who care about building reliable systems and taking ownership of their work. Our teams value clarity, thoughtful decision-making, and long-term responsibility over quick wins.",
     "one_team_title": "One team,",
     "one_team_title_highlight": "clear goals",
     "one_team_subtitle": "We focus on building good software and supporting each other along the way.",
-    "one_team_item_1": "Grow your skills",
-    "one_team_item_2": "Work with experienced people",
-    "one_team_item_3": "Direct communication",
-    "one_team_item_4": "Space to learn and improve",
+    "one_team_item_1": "Learn through real work",
+    "one_team_item_2": "Collaborate with experienced people",
+    "one_team_item_3": "Communicate directly",
+    "one_team_item_4": "Improve continuously",
     "open_roles_title": "Open positions",
     "open_roles_count": "{count} open roles",
     "filter_by": "Filter by",
@@ -318,11 +374,11 @@
     "requirements_label": "What we need",
     "apply_now": "Apply",
     "why_join_title": "Why work here",
-    "why_join_subtitle": "We try to create an environment where people can do good work.",
+    "why_join_subtitle": "We create an environment that supports focused, thoughtful work and long-term growth.",
     "perk_remote": "Remote work",
-    "perk_stock": "Equity options",
-    "perk_learning": "Learning budget",
-    "perk_gear": "Good equipment",
+    "perk_stock": "Learning support",
+    "perk_learning": "Clear ownership",
+    "perk_gear": "Proper tools",
     "all_openings": "All openings",
     "detail_mission_title": "About this role",
     "detail_mission_body": "We're looking for someone who can help us build reliable software for growing businesses. You'll work directly with our team and our clients to understand what they need and build systems that solve real problems.",
@@ -908,10 +964,10 @@
   },
   "industries_landing": {
     "hero_badge": "Industries",
-    "hero_title_line1": "Software built for",
+    "hero_title_line1": "Software designed",
     "hero_title_line2": "",
-    "hero_title_highlight": "your sector",
-    "hero_subtitle": "We build systems for healthcare, finance, commerce, education, and other industries that need reliable technology.",
+    "hero_title_highlight": "for the realities of your industry",
+    "hero_subtitle": "We work with teams across healthcare, finance, commerce, education, and operationally complex sectors where reliability, clarity, and long-term system stability matter.\n\nOur focus is on building technology that fits real workflows and continues to perform as requirements evolve.",
     "hero_cta": "See what we do",
     "hero_explore_sectors": "Explore sectors",
     "section2_badge": "Experience",
@@ -993,7 +1049,7 @@
         "title_highlight": "Technology",
         "subtitle": "Software for health systems: electronic health records, telemedicine, hospital management, and healthcare platforms.",
         "hero_metrics": [
-          { "value": "12+", "label": "Projects" },
+          { "value": "5+", "label": "Projects" },
           { "value": "99.99%", "label": "Uptime" },
           { "value": "HIPAA", "label": "Compliant" }
         ],
@@ -1009,7 +1065,7 @@
         "title_highlight": "Technology",
         "subtitle": "Banking platforms, payment systems, lending, and financial services software.",
         "hero_metrics": [
-          { "value": "18+", "label": "Projects" },
+          { "value": "5+", "label": "Projects" },
           { "value": "100%", "label": "Uptime" }
         ],
         "features": ["Digital banking", "Payment processing", "Lending systems", "Asset management"],
@@ -1024,7 +1080,7 @@
         "title_highlight": "Platforms",
         "subtitle": "Online stores, marketplaces, inventory systems, and B2B commerce.",
         "hero_metrics": [
-          { "value": "24+", "label": "Projects" },
+          { "value": "7+", "label": "Projects" },
           { "value": "99.98%", "label": "Uptime" }
         ],
         "features": ["Marketplaces", "Inventory systems", "Online stores", "B2B commerce"],

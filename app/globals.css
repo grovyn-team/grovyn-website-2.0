@@ -19,6 +19,10 @@
     @apply m-0 p-0 box-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-white text-[#111] font-sans antialiased leading-relaxed overflow-x-hidden;
   }

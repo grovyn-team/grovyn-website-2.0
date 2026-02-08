@@ -105,7 +105,7 @@ export default function TechnologyStack() {
             return (
               <div key={index} className="flex flex-col items-center group">
                 <div
-                  className={`w-full flex items-center gap-2.5 px-5 py-3.5 rounded-2xl ${style.bg} border-2 ${style.border} shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 backdrop-blur-sm bg-opacity-80 relative overflow-hidden`}
+                  className={`w-full flex items-center gap-2.5 px-5 py-3.5 rounded-2xl ${style.bg} border-2 ${style.border} shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] backdrop-blur-sm bg-opacity-80 relative overflow-hidden will-change-transform`}
                 >
                   {/* Shine effect on hover */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
@@ -125,13 +125,13 @@ export default function TechnologyStack() {
                   {category.items.map((item, i) => (
                     <div key={i} className="flex flex-col items-center w-full">
                       <div
-                        className="w-0.5 h-4 transition-all duration-300 group-hover:h-5"
+                        className="w-0.5 h-5 shrink-0"
                         style={{ backgroundColor: style.line }}
                         aria-hidden
                       />
                       
                       <div
-                        className={`w-full flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white/90 backdrop-blur-sm border ${style.border} shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105 hover:-translate-y-0.5 relative overflow-hidden group/item`}
+                        className={`w-full flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white/90 backdrop-blur-sm border ${style.border} shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.02] hover:-translate-y-0.5 relative overflow-hidden group/item will-change-transform`}
                       >
                         {/* Subtle gradient background */}
                         <div className={`absolute inset-0 ${style.bg} opacity-0 group-hover/item:opacity-50 transition-opacity duration-300`} />
@@ -260,7 +260,7 @@ export default function TechnologyStack() {
               return (
                 <div key={index} className="flex flex-col items-center group" style={{ width: 'fit-content' }}>
                   <div
-                    className={`flex items-center gap-2.5 px-5 py-3.5 rounded-2xl ${style.bg} border-2 ${style.border} shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 whitespace-nowrap backdrop-blur-sm bg-opacity-80 relative overflow-hidden`}
+                    className={`flex items-center gap-2.5 px-5 py-3.5 rounded-2xl ${style.bg} border-2 ${style.border} shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] whitespace-nowrap backdrop-blur-sm bg-opacity-80 relative overflow-hidden will-change-transform`}
                   >
                     {/* Shine effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
@@ -280,13 +280,13 @@ export default function TechnologyStack() {
                     {category.items.map((item, i) => (
                       <div key={i} className="flex flex-col items-center">
                         <div
-                          className="w-0.5 h-4 transition-all duration-300 group-hover:h-5"
+                          className="w-0.5 h-5 shrink-0"
                           style={{ backgroundColor: style.line }}
                           aria-hidden
                         />
                         
                         <div
-                          className={`flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white/90 backdrop-blur-sm border ${style.border} shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105 hover:-translate-y-0.5 whitespace-nowrap relative overflow-hidden group/item`}
+                          className={`flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white/90 backdrop-blur-sm border ${style.border} shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.02] hover:-translate-y-0.5 whitespace-nowrap relative overflow-hidden group/item will-change-transform`}
                         >
                           {/* Subtle gradient background */}
                           <div className={`absolute inset-0 ${style.bg} opacity-0 group-hover/item:opacity-50 transition-opacity duration-300`} />
@@ -346,7 +346,7 @@ export default function TechnologyStack() {
                     {category.items.map((item, i) => (
                       <div
                         key={i}
-                        className="group relative bg-white/80 backdrop-blur-sm rounded-xl px-3 py-2.5 border border-gray-200/50 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden"
+                        className="group relative bg-white/80 backdrop-blur-sm rounded-xl px-3 py-2.5 border border-gray-200/50 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] overflow-hidden will-change-transform"
                       >
                         {/* Gradient overlay on tap/hover */}
                         <div className={`absolute inset-0 ${style.bg} opacity-0 group-hover:opacity-40 group-active:opacity-60 transition-opacity duration-300`} />

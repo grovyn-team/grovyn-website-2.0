@@ -35,7 +35,7 @@ export default function Hero() {
               >
                 {t("cta_primary")}
               </a>
-              <a
+              {/* <a
                 href="#contact"
                 className="group flex items-center justify-center space-x-3 border border-white/20 px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-black text-sm hover:bg-white/10 transition-all transform hover:-translate-y-1"
               >
@@ -44,7 +44,7 @@ export default function Hero() {
                   size={20}
                   className="text-[#10b981] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
                 />
-              </a>
+              </a> */}
             </div>
           </div>
 

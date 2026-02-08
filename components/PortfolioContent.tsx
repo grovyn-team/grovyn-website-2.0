@@ -90,7 +90,6 @@ const projects: Project[] = [
   },
 ];
 
-const HERO_IMG = "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000";
 const MAP_IMG = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200";
 
 export default function PortfolioContent() {
@@ -114,14 +113,15 @@ export default function PortfolioContent() {
     <div className="min-h-screen font-sans selection:bg-[#10b981] selection:text-white bg-white text-black">
       <section className="relative h-[70vh] sm:h-[80vh] lg:h-[85vh] flex flex-col items-center justify-center text-center px-4 sm:px-6 overflow-visible">
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <Image
-            src={HERO_IMG}
-            alt="Engineering Horizon"
-            fill
-            className="object-cover opacity-90"
-            sizes="100vw"
-            priority
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 h-full w-full object-cover opacity-90"
+          >
+            <source src="/assets/Portfolio.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-transparent" />
           <div
             className={`absolute bottom-[-1px] left-[-10%] w-[120%] h-[80px] sm:h-[100px] lg:h-[120px] transition-colors duration-500 ${
@@ -136,14 +136,14 @@ export default function PortfolioContent() {
             Grovyn Portfolio.
           </h1>
           <p className="text-white/90 text-base sm:text-lg md:text-2xl font-medium tracking-tight max-w-2xl mx-auto italic drop-shadow-md px-4">
-            Engineered growth for global innovators, bienvenue dans l&apos;archive Grovyn.
+          Real-world digital systems built with teams across different industries.
           </p>
 
           <div className="flex justify-center space-x-4 sm:space-x-6 pt-4">
             {[Search, Code, Terminal].map((Icon, idx) => (
               <div
                 key={idx}
-                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#10b981] flex items-center justify-center shadow-2xl hover:bg-[#10b981] hover:text-black transition-all cursor-pointer group"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center justify-center shadow-2xl hover:bg-[#10b981] hover:text-black transition-all cursor-pointer group"
               >
                 <Icon size={18} className="sm:w-[22px] sm:h-[22px] group-hover:scale-110 transition-transform" />
               </div>

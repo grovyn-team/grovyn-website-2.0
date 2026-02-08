@@ -28,10 +28,10 @@ type Opening = {
 
 const WHAT_WE_OFFER = [
   "Competitive Base + Performance Bonus",
-  "Early-stage Equity Options",
+  "Early-stage Learning support",
   "Flexible Remote-First Environment",
   "High-Performance M3 Max Hardware",
-  "Health, Wellness & Learning Budgets",
+  "Health, Wellness & Clear ownerships",
   "Annual Offsites in Global Tech Hubs",
 ];
 
