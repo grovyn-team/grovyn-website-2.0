@@ -12,17 +12,15 @@ const testimonials = [
     role: "Construction and Infrastructure Services",
     text: "In construction, clarity and control matter more than fancy tools. Grovyn took time to understand how our teams operate on-site and across projects. The systems they helped us structure improved coordination and reporting without adding complexity. It felt practical, reliable, and built with long-term use in mind.",
     rating: "4.5/5",
-    image:
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=200",
+    image: "/assets/bepl-logo.png",
   },
   {
     id: 2,
-    name: "The247 Care",
+    name: "The24x7 Care",
     role: "Home Healthcare Services",
     text: "Our work involves real people and real responsibilities, so reliability was critical for us. Grovyn approached our platform with sensitivity to operations, compliance, and scale. Instead of overengineering, they focused on building a system that our team could actually run day to day. That clarity made a meaningful difference.",
     rating: "4.5/5",
-    image:
-      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200",
+    image: "/assets/24x7care.png",
   },
   {
     id: 3,
@@ -30,8 +28,7 @@ const testimonials = [
     role: "Café and Food Services",
     text: "As a café, speed and simplicity are essential, especially during peak hours. Grovyn helped us implement a QR-based ordering system with queue handling and inventory visibility that fit naturally into how we work. The solution reduced friction for customers and staff without changing the soul of the place. It felt thoughtfully designed, not forced.",
     rating: "5.0/5",
-    image:
-      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=200",
+    image: "/assets/a3house.png",
   },
 ];
 
@@ -95,14 +92,22 @@ export default function Testimonials() {
                     <div className="absolute top-0 right-0 w-24 sm:w-32 h-24 sm:h-32 bg-pink-100/30 rounded-full blur-3xl -mr-12 sm:-mr-16 -mt-12 sm:-mt-16" />
 
                     <div className="w-full md:w-1/3 flex flex-col items-center">
-                      <div className="relative w-28 h-28 sm:w-40 sm:h-40 rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden shadow-xl border-4 border-white mb-4 sm:mb-6">
-                        <Image
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          fill
-                          className="object-cover"
-                          sizes="160px"
-                        />
+                      <div
+                        className={`relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden shadow-xl border-4 border-white mb-4 sm:mb-6 bg-white p-2 ${
+                          testimonial.id === 3
+                            ? "w-36 h-28 sm:w-48 sm:h-36"
+                            : "w-28 h-28 sm:w-40 sm:h-40"
+                        }`}
+                      >
+                        <div className="relative w-full h-full">
+                          <Image
+                            src={testimonial.image}
+                            alt={testimonial.name}
+                            fill
+                            className="object-contain"
+                            sizes="160px"
+                          />
+                        </div>
                       </div>
                       <div className="flex items-center space-x-2 sm:space-x-3">
                         <span className="font-bold text-gray-800 text-sm sm:text-base">{testimonial.rating}</span>
@@ -126,7 +131,7 @@ export default function Testimonials() {
                         <span className="absolute -top-4 sm:-top-6 -left-3 sm:-left-4 text-pink-200 text-6xl sm:text-8xl font-serif select-none opacity-50">
                           &quot;
                         </span>
-                        <p className="text-gray-700 text-base sm:text-xl leading-relaxed font-medium mb-8 sm:mb-12 relative z-10">
+                        <p className="text-gray-700 text-base sm:text-l text-justify leading-relaxed font-medium mb-8 sm:mb-12 relative z-10">
                           {testimonial.text}
                         </p>
                       </div>

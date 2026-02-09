@@ -63,7 +63,7 @@ export default function WebServiceContent() {
 
   return (
     <div className="bg-[#050505] text-white min-h-screen overflow-x-hidden selection:bg-[#10b981] selection:text-black font-sans">
-      <section className="relative py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-12 overflow-hidden">
+      <section className="relative py-10 md:py-10 lg:py-16 px-4 sm:px-6 lg:px-12 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-[-10%] right-[-10%] w-[800px] h-[800px] bg-[#10b981]/10 rounded-full blur-[120px] animate-pulse"></div>
           <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-[100px] animate-pulse delay-700"></div>
@@ -78,7 +78,7 @@ export default function WebServiceContent() {
                 <Terminal size={14} className="text-[#10b981]" />
                 <span className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-400">Engineering Protocol 2.5</span>
               </div>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[5.5rem] font-black tracking-[-0.06em] leading-[0.85] text-white">
+              <h1 className="text-3xl xl:text-[3.5rem] font-black tracking-[-0.06em] leading-[0.85] text-white">
                 Web <br />
                 <span className="text-[#10b981]">Engineering</span> <br />
                 Manifesto.
@@ -184,7 +184,7 @@ export default function WebServiceContent() {
           </div>
 
           <div className="relative">
-            <div className="bg-white border border-gray-200 rounded-[4rem] p-12 lg:p-20 relative overflow-hidden group shadow-xl shadow-gray-200/50">
+            <div className="bg-white border border-gray-200 rounded-[3rem] p-12 lg:p-20 relative overflow-hidden group shadow-xl shadow-gray-200/50">
               <div className="absolute top-0 right-0 p-12 text-gray-300 opacity-[0.08]"><Workflow size={200} /></div>
               <div className="relative z-10 space-y-8 animate-in fade-in duration-1000" key={activeLayer}>
                 <div className="w-20 h-20 rounded-3xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-[#10b981]">
@@ -218,7 +218,7 @@ export default function WebServiceContent() {
                 <Command size={14} />
                 <span>Strategic_Execution_Overview</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[5rem] font-black tracking-tighter leading-[0.85]">
+              <h2 className="text-3xl xl:text-[3.5rem] font-black tracking-tighter leading-[0.85]">
                 Engineered <br />
                 for <span className="text-[#10b981]">Results.</span>
               </h2>
@@ -571,10 +571,10 @@ export default function WebServiceContent() {
 
           <div className="space-y-4 sm:space-y-6">
             {[
-              { q: "What is your stance on Technical Debt?", a: "We treat technical debt as a priority. Our architectural blueprints are peer-reviewed to ensure that short-term delivery never compromises long-term maintenance and scaling." },
-              { q: "How do you handle real-time data synchronization?", a: "We utilize event-driven architectures with systems like Redis and RabbitMQ to ensure that your users receive updates in real-time with sub-50ms propagation." },
-              { q: "Can you modernize a legacy system without downtime?", a: "Yes. We use a 'Strangler Fig' pattern, where we build modern layers around your legacy core, gradually migrating services until the transition is complete and zero-downtime is maintained." },
-              { q: "Do we own the source code?", a: "100%. Upon final deployment, you receive full ownership of all repositories, documentation, and infrastructure scripts. No vendor lock-in, ever." },
+              { q: "Do you cut corners to hit deadlines?", a: "We don’t. We’d rather be upfront about timing than ship something that’s hard to change later. If we see shortcuts that will hurt you in a year, we’ll say so and suggest a better path. Our goal is code your team can actually maintain and build on." },
+              { q: "Can you build features that feel live and up to date?", a: "Yes. We use proven patterns—event-driven backends, real-time sync—so users see updates quickly without things feeling fragile. We’ll pick the right approach for your scale and explain how it works in plain terms." },
+              { q: "We have an old system that can’t afford downtime. Can you still help?", a: "Absolutely. We modernize in stages: we build new pieces alongside the old one and move traffic over gradually. Your team keeps working. There’s no big-bang weekend cutover. We’ve done this with systems that had to stay up 24/7." },
+              { q: "Who owns the code when we’re done?", a: "You do. When the project wraps, you get full ownership of the repositories, docs, and any infra scripts. No lock-in, no “you can’t take it with you.” We want you to own and run what we build." },
             ].map((faq, i) => (
               <div
                 key={i}
@@ -582,7 +582,7 @@ export default function WebServiceContent() {
               >
                 <button
                   onClick={() => setActiveFaq(activeFaq === i ? null : i)}
-                  className="w-full flex items-center justify-between p-10 text-left"
+                  className="w-full flex items-center justify-between px-10 py-5 text-left"
                 >
                   <span className="text-xl font-black tracking-tight text-[#111] pr-8">{faq.q}</span>
                   <div

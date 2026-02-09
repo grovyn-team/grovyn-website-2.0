@@ -2,9 +2,9 @@
 
 import WebServiceContent from "@/components/WebServiceContent";
 import MobileServiceContent from "@/components/MobileServiceContent";
-import PlatformServiceContent from "@/components/PlatformServiceContent";
+import CustomSoftwareContent from "@/components/CustomSoftwareContent";
 
-type ServiceSlug = "web" | "mobile" | "platform";
+type ServiceSlug = "web" | "mobile" | "custom-software";
 
 export default function ServiceDetailContent({ slug }: { slug: ServiceSlug }) {
   switch (slug) {
@@ -12,8 +12,8 @@ export default function ServiceDetailContent({ slug }: { slug: ServiceSlug }) {
       return <WebServiceContent />;
     case "mobile":
       return <MobileServiceContent />;
-    case "platform":
-      return <PlatformServiceContent />;
+    case "custom-software":
+      return <CustomSoftwareContent />;
     default:
       return null;
   }

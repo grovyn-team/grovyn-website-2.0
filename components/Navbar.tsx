@@ -48,12 +48,12 @@ export default function Navbar() {
   const serviceItems = [
     { title: t("menus.web"), desc: t("menus.web_desc"), icon: <Monitor size={18} />, slug: "web" },
     { title: t("menus.mobile"), desc: t("menus.mobile_desc"), icon: <Smartphone size={18} />, slug: "mobile" },
-    { title: t("menus.platform"), desc: t("menus.platform_desc"), icon: <LayoutGrid size={18} />, slug: "platform" },
+    { title: t("menus.custom_software"), desc: t("menus.custom_software_desc"), icon: <LayoutGrid size={18} />, slug: "custom-software" },
   ];
   const serviceColumns = [
     { title: t("services_web_title"), subtitle: t("services_web_subtitle"), items: [serviceItems[0]] },
     { title: t("services_mobile_title"), subtitle: t("services_mobile_subtitle"), items: [serviceItems[1]] },
-    { title: t("services_platform_title"), subtitle: t("services_platform_subtitle"), items: [serviceItems[2]] },
+    { title: t("services_custom_software_title"), subtitle: t("services_custom_software_subtitle"), items: [serviceItems[2]] },
   ];
 
   const ti = (key: string) => t(`infrastructure_menu.${key}`);

@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { OPEN_DISCOVERY_CALL_EVENT } from "@/components/WhatsAppFloat";
 
 export default function Hero() {
   const t = useTranslations("hero");
+  const tContact = useTranslations("contact");
 
   useEffect(() => {
     if (typeof window !== "undefined" && window.location.hash === "#hero") {
@@ -13,12 +15,18 @@ export default function Hero() {
     }
   }, []);
 
+  const openDiscoveryCall = useCallback(() => {
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new CustomEvent(OPEN_DISCOVERY_CALL_EVENT));
+    }
+  }, []);
+
   return (
     <div className="bg-white">
       
-      <section id="hero" className="min-h-[55vh] sm:min-h-[60vh] lg:min-h-[65vh] flex flex-col justify-center bg-black text-white pt-24 sm:pt-22 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-12 rounded-b-[2rem] sm:rounded-b-[3rem] relative overflow-hidden scroll-mt-20">
+      <section id="hero" className="min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] flex flex-col justify-center bg-black text-white pt-24 sm:pt-22 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-12 rounded-b-[2rem] sm:rounded-b-[3rem] relative overflow-hidden scroll-mt-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_45%,_rgba(16,185,129,0.12)_0%,_transparent_60%)]" />
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12 lg:gap-20 relative z-10">
+        <div className="max-w-7xl mx-[100px] flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12 lg:gap-20 relative z-10">
           <div className="lg:w-[55%] space-y-8 sm:space-y-12 text-center lg:text-left">
             <div className="space-y-4 sm:space-y-6">
               <h1 className="text-3xl sm:text-4xl lg:text-[3.4rem] font-black leading-[1.1] sm:leading-[1.02] tracking-tighter px-2 sm:px-0">
@@ -43,6 +51,17 @@ export default function Hero() {
               >
                 {t("cta_primary")}
               </a>
+              <button
+                type="button"
+                onClick={openDiscoveryCall}
+                className="group flex items-center justify-center space-x-3 border border-white/20 px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-black text-sm hover:bg-white/10 transition-all transform hover:-translate-y-1 cursor-pointer"
+              >
+                <span className="text-[#10b981]">{tContact("book_discovery_call")}</span>
+                <ArrowUpRight
+                  size={20}
+                  className="text-[#10b981] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+                />
+              </button>
               {/* <a
                 href="#contact"
                 className="group flex items-center justify-center space-x-3 border border-white/20 px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-black text-sm hover:bg-white/10 transition-all transform hover:-translate-y-1"

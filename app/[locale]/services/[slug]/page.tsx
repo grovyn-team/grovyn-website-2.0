@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import ServiceDetailContent from "@/components/ServiceDetailContent";
 
-const VALID_SLUGS = ["web", "mobile", "platform"] as const;
+const VALID_SLUGS = ["web", "mobile", "custom-software"] as const;
 
 type Slug = (typeof VALID_SLUGS)[number];
 

@@ -2,8 +2,6 @@
 
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { useLocale } from "next-intl";
 import {
   Search,
   Smartphone,
@@ -19,8 +17,8 @@ import {
   LayoutGrid,
   Activity,
   ShieldCheck,
-  Rocket,
 } from "lucide-react";
+import ContactForm from "@/components/ContactForm";
 
 interface Project {
   id: string;
@@ -93,7 +91,6 @@ const projects: Project[] = [
 const MAP_IMG = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200";
 
 export default function PortfolioContent() {
-  const locale = useLocale();
   const [activeCategory, setActiveCategory] = useState("All");
 
   const categories = [
@@ -152,7 +149,7 @@ export default function PortfolioContent() {
         </div>
 
         <div className="absolute bottom-[-60px] sm:bottom-[-70px] lg:bottom-[-80px] left-1/2 -translate-x-1/2 w-full max-w-6xl px-4 sm:px-6 z-20">
-          <div className="flex items-center justify-center space-x-2 sm:space-x-4 md:space-x-10 pb-4 scrollbar-hide overflow-x-auto">
+          <div className="flex items-center justify-center space-x-2 sm:space-x-4 md:space-x-10 pb-4 scrollbar-hide">
             {categories.map((cat) => (
               <div key={cat.name} className="flex flex-col items-center space-y-2 sm:space-y-4 group shrink-0">
                 <button
@@ -508,34 +505,7 @@ export default function PortfolioContent() {
         </div>
       </section>
 
-      <section className={`py-24 sm:py-32 lg:py-48 transition-colors duration-1000 bg-gray-50`}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div
-            className={`rounded-[1.5rem] sm:rounded-[2rem] p-8 sm:p-10 lg:p-12 xl:p-16 lg:p-10 shadow-2xl border text-center space-y-8 sm:space-y-10 lg:space-y-12 ${
-              "bg-white border-gray-100"
-            }`}
-          >
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-[#10b981]/10 rounded-full flex items-center justify-center mx-auto border border-[#10b981]/20 mb-6 sm:mb-8">
-              <Rocket size={40} className="sm:w-14 sm:h-14 lg:w-[56px] lg:h-[56px] text-[#10b981]" />
-            </div>
-            <h2 className="text-2xl sm:text-3xl md:text-6xl xl:text-7xl font-black tracking-tighter leading-tight italic text-[#111] dark:text-white self-center">
-              Prêt pour la <br className="md:hidden" /> <span className="text-[#10b981]">Prochaine</span> Étape?
-            </h2>
-            <p className="text-gray-400 text-base sm:text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed px-4">
-              Open a project dossier with our engineering leads today. Let&apos;s discuss high-performance architecture,
-              SDK integrations, or full-scale SaaS delivery.
-            </p>
-            <Link
-              href={`/${locale}#contact`}
-              className={`inline-block px-10 sm:px-12 md:px-16 py-4 sm:py-5 md:py-6 rounded-[1.5rem] sm:rounded-[2rem] font-black text-[10px] sm:text-xs uppercase tracking-widest shadow-2xl transition-all w-full sm:w-auto ${
-                "bg-black text-white hover:bg-[#10b981]"
-              }`}
-            >
-              Ouvrir un dossier projet
-            </Link>
-          </div>
-        </div>
-      </section>
+      <ContactForm />
     </div>
   );
 }

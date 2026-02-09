@@ -109,7 +109,7 @@ export default function AutomationsContent() {
     <div className="bg-white text-black min-h-screen selection:bg-[#10b981] selection:text-white font-sans overflow-x-hidden">
       <motion.section
         ref={heroRef}
-        className="relative min-h-[55vh] sm:min-h-[60vh] lg:min-h-[65vh] flex items-center justify-center px-4 sm:px-6 lg:px-12 overflow-hidden bg-gradient-to-br from-[#fafafa] via-white to-[#f0fdf4]"
+        className="relative min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] flex items-center justify-center px-4 sm:px-6 lg:px-12 overflow-hidden bg-gradient-to-br from-[#fafafa] via-white to-[#f0fdf4]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
@@ -318,9 +318,9 @@ export default function AutomationsContent() {
               { icon: MessageSquare, label: "Voice AI", color: "from-cyan-400 to-teal-500", pos: "top-[25%] left-[8%]", delay: 0.6, textColor: "text-cyan-600", float: { y: [-15, 5] } },
               { icon: BarChart3, label: "Marketing Intelligence", color: "from-slate-400 to-slate-600", pos: "top-[15%] right-[12%]", delay: 0.7, textColor: "text-slate-600", float: { y: [-8, 12] } },
               { icon: MessageSquare, label: "Chatbots", color: "from-rose-400 to-red-500", pos: "top-[45%] right-[5%]", delay: 0.8, textColor: "text-rose-600", float: { y: [-12, 8] } },
-              { icon: Search, label: "Computer Vision", color: "from-blue-400 to-blue-600", pos: "bottom-[28%] left-[5%]", delay: 0.9, textColor: "text-blue-600", float: { y: [-10, 10] } },
+              { icon: Search, label: "Customer Support Automation", color: "from-blue-400 to-blue-600", pos: "bottom-[28%] left-[5%]", delay: 0.9, textColor: "text-blue-600", float: { y: [-10, 10] } },
               { icon: Brain, label: "Predictive Analytics", color: "from-purple-400 to-purple-600", pos: "bottom-[20%] right-[15%]", delay: 1.0, textColor: "text-purple-600", float: { y: [-14, 6] } },
-              { icon: Zap, label: "Automation", color: "from-pink-400 to-pink-600", pos: "bottom-[8%] left-[38%]", delay: 1.1, textColor: "text-pink-600", float: { y: [-9, 11] } },
+              { icon: Zap, label: "Workflow Automation", color: "from-pink-400 to-pink-600", pos: "bottom-[8%] left-[38%]", delay: 1.1, textColor: "text-pink-600", float: { y: [-9, 11] } },
               { icon: CheckCircle2, label: "Recommendation Systems", color: "from-indigo-400 to-blue-500", pos: "top-[42%] left-[-2%]", delay: 1.2, textColor: "text-indigo-600", float: { y: [-11, 9] } },
             ].map((sat, i) => (
               <motion.div

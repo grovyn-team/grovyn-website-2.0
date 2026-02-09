@@ -212,7 +212,7 @@ export default function InfrastructureDetailContent({ slug }: { slug: Infrastruc
 
   return (
     <div className="bg-white selection:bg-[#10b981] selection:text-white">
-      <section className="relative min-h-[55vh] sm:min-h-[60vh] lg:min-h-[65vh] flex flex-col justify-center py-12 md:py-20 lg:py-24 pt-16 md:pt-20 overflow-hidden">
+      <section className="relative min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] flex flex-col justify-center py-12 md:py-20 lg:py-24 pt-16 md:pt-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImg}
@@ -251,12 +251,12 @@ export default function InfrastructureDetailContent({ slug }: { slug: Infrastruc
               >
                 {t("cta_discover_more")}
               </Link>
-              <div className="flex items-center space-x-2 md:space-x-4 text-white">
+              {/* <div className="flex items-center space-x-2 md:space-x-4 text-white">
                 <div className="w-8 h-8 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center animate-pulse">
                   <Play fill="currentColor" size={12} className="md:w-4 md:h-4" />
                 </div>
                 <span className="text-[7px] md:text-[10px] font-black uppercase tracking-widest">{t("cta_watch_intro")}</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

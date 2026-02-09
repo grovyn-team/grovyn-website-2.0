@@ -1,0 +1,433 @@
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
+import {
+  ArrowRight,
+  Zap,
+  CheckCircle2,
+  Search,
+  Terminal,
+  Workflow,
+  Box,
+  Lock,
+  ShieldCheck,
+  Command,
+  Radar,
+  Rocket,
+  Layers,
+  Hexagon,
+  Network,
+  Plus,
+} from "lucide-react";
+
+const customLayers = [
+  {
+    title: "Discovery & Design",
+    tech: "REQUIREMENTS / UX",
+    desc: "We learn your workflows, users, and goals so the solution fits from day one. Clear scope and design before we write code.",
+    features: ["User research", "Scope & milestones", "Wireframes & flows"],
+    icon: <Search className="text-[#10b981]" />,
+  },
+  {
+    title: "Build & Integrate",
+    tech: "MODERN STACK / APIs",
+    desc: "Iterative development with regular demos. We integrate with your existing tools and build APIs that grow with you.",
+    features: ["Sprint-based delivery", "API design", "Integrations"],
+    icon: <Terminal className="text-[#10b981]" />,
+  },
+  {
+    title: "Launch & Support",
+    tech: "DEPLOY / MAINTAIN",
+    desc: "We deploy to your environment, hand over documentation and code, and support you so you can run and evolve the product.",
+    features: ["Deployment", "Documentation", "Ongoing support"],
+    icon: <Rocket className="text-[#10b981]" />,
+  },
+];
+
+export default function CustomSoftwareContent() {
+  const [activeLayer, setActiveLayer] = useState(0);
+  const [activeFaq, setActiveFaq] = useState<number | null>(null);
+  const t = useTranslations("services_detail.custom_software");
+  const locale = useLocale();
+  const base = `/${locale}`;
+  const processSteps = t.raw("process_steps") as { step: string; title: string; desc: string }[];
+
+  return (
+    <div className="bg-[#050505] text-white min-h-screen overflow-x-hidden selection:bg-[#10b981] selection:text-black font-sans">
+      <section className="relative min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] flex flex-col justify-center py-16 md:py-20 lg:py-24 px-3 md:px-6 lg:px-12 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000"
+            fill
+            className="object-cover opacity-20 grayscale"
+            alt=""
+            priority
+          />
+          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute top-[-10%] right-[-10%] w-[800px] h-[800px] bg-[#10b981]/10 rounded-full blur-[120px] animate-pulse"></div>
+        </div>
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(#fff 1px, transparent 1px)", backgroundSize: "40px 40px" }}></div>
+        <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-6 md:gap-12 lg:gap-20 items-center relative z-10">
+          <div className="space-y-4 md:space-y-8 lg:space-y-10">
+            <div className="space-y-3 md:space-y-6">
+              <div className="inline-flex items-center space-x-2 md:space-x-3 px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
+                <Box size={12} className="text-[#10b981] md:w-3.5 md:h-3.5" />
+                <span className="text-[7px] md:text-[10px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em] text-gray-400">{t("hero_badge")}</span>
+              </div>
+              <h1 className="text-2xl md:text-4xl lg:text-5xl xl:text-[5.5rem] font-black tracking-[-0.06em] leading-[0.85] text-white">
+                {t("hero_title_line1")} <br />
+                <span className="text-[#10b981]">{t("hero_title_highlight")}</span>
+              </h1>
+              <p className="text-gray-400 text-xs md:text-base lg:text-lg font-medium max-w-xl leading-relaxed">
+                {t("hero_subtitle")}
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-6">
+              <Link
+                href={`${base}#contact`}
+                className="w-full sm:w-auto bg-white text-black px-6 md:px-12 py-3 md:py-5 rounded-xl md:rounded-2xl font-black text-[10px] md:text-xs uppercase tracking-widest flex items-center justify-center space-x-3 md:space-x-4 hover:bg-[#10b981] transition-all duration-500 group"
+              >
+                <span>{t("cta_primary")}</span>
+                <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform md:w-[18px] md:h-[18px]" />
+              </Link>
+            </div>
+          </div>
+          <div className="relative group hidden lg:block">
+            <div className="bg-white/5 border border-white/10 rounded-[3rem] p-8 backdrop-blur-xl shadow-2xl">
+              <div className="flex items-center justify-between mb-8 border-b border-white/5 pb-6">
+                <div className="flex space-x-2">
+                  <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-500/50"></div>
+                </div>
+                <span className="text-[10px] font-mono text-white/30 uppercase tracking-[0.2em]">Custom Build</span>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white/5 p-6 rounded-3xl border border-white/5 space-y-3">
+                  <span className="text-[10px] font-black uppercase tracking-widest text-gray-500">Your workflows</span>
+                  <div className="text-3xl font-black text-[#10b981]">First</div>
+                </div>
+                <div className="bg-white/5 p-6 rounded-3xl border border-white/5 space-y-3">
+                  <span className="text-[10px] font-black uppercase tracking-widest text-gray-500">Full ownership</span>
+                  <div className="text-3xl font-black text-[#10b981]">100%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-24 lg:py-40 px-3 md:px-6 lg:px-12 bg-[#fafafa] border-y border-gray-200">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-6 md:gap-12 lg:gap-24 items-center">
+          <div className="space-y-6 md:space-y-10 lg:space-y-12">
+            <div className="space-y-3 md:space-y-6">
+              <span className="text-[#10b981] font-black text-[8px] md:text-[10px] uppercase tracking-[0.3em] md:tracking-[0.6em]">{t("offer_section_title")}</span>
+              <h2 className="text-lg md:text-3xl lg:text-4xl font-black tracking-tighter leading-tight text-[#111]">{t("offer_section_title")} <br /><span className="text-[#10b981]">{t("offer_section_highlight")}</span>.</h2>
+            </div>
+            <div className="space-y-3 md:space-y-6">
+              {customLayers.map((layer, i) => (
+                <button
+                  key={i}
+                  onMouseEnter={() => setActiveLayer(i)}
+                  className={`w-full text-left p-3 md:p-8 rounded-xl md:rounded-[2.5rem] border transition-all duration-500 flex items-center justify-between group ${activeLayer === i ? "bg-white border-gray-200 shadow-xl shadow-gray-200/50" : "bg-gray-100/60 border-gray-100 opacity-80 hover:opacity-100 hover:bg-gray-100"}`}
+                >
+                  <div className="flex items-center space-x-2 md:space-x-6">
+                    <div className="w-8 h-8 md:w-12 md:h-12 rounded-lg md:rounded-2xl bg-white border border-gray-200 flex items-center justify-center shadow-sm flex-shrink-0">
+                      <div className="scale-75 md:scale-100">{layer.icon}</div>
+                    </div>
+                    <div className="min-w-0">
+                      <h4 className="text-xs md:text-xl font-black tracking-tight text-[#111] truncate">{layer.title}</h4>
+                      <p className="text-[7px] md:text-[10px] font-mono uppercase tracking-wider md:tracking-widest text-gray-500 mt-0.5 md:mt-1 truncate">{layer.tech}</p>
+                    </div>
+                  </div>
+                  <div className={`transition-transform duration-500 flex-shrink-0 ${activeLayer === i ? "rotate-90" : ""}`}>
+                    <ArrowRight size={16} className="text-gray-500 md:w-5 md:h-5" />
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="relative">
+            <div className="bg-white border border-gray-200 rounded-2xl md:rounded-[4rem] p-6 md:p-12 lg:p-20 relative overflow-hidden group shadow-xl shadow-gray-200/50">
+              <div className="absolute top-0 right-0 p-6 md:p-12 text-gray-300 opacity-[0.08] hidden md:block"><Workflow size={200} /></div>
+              <div className="relative z-10 space-y-4 md:space-y-8 animate-in fade-in duration-1000" key={activeLayer}>
+                <div className="w-12 h-12 md:w-20 md:h-20 rounded-xl md:rounded-3xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-[#10b981]">
+                  <div className="scale-75 md:scale-100">{customLayers[activeLayer].icon}</div>
+                </div>
+                <div className="space-y-2 md:space-y-4">
+                  <h3 className="text-lg md:text-3xl font-black tracking-tighter text-[#111]">{customLayers[activeLayer].title}</h3>
+                  <p className="text-gray-600 text-xs md:text-lg font-medium leading-relaxed">
+                    {customLayers[activeLayer].desc}
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 gap-2 md:gap-4">
+                  {customLayers[activeLayer].features.map((f, i) => (
+                    <div key={i} className="flex items-center space-x-2 md:space-x-3 p-2 md:p-4 bg-gray-50 rounded-lg md:rounded-2xl border border-gray-100">
+                      <CheckCircle2 size={12} className="text-[#10b981] md:w-4 md:h-4 flex-shrink-0" />
+                      <span className="text-[10px] md:text-xs font-bold text-gray-700">{f}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 sm:py-24 lg:py-40 px-4 sm:px-6 lg:px-12 bg-white text-black relative">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 sm:mb-16 lg:mb-24 gap-8 sm:gap-10 lg:gap-12">
+            <div className="space-y-4 sm:space-y-6">
+              <Command size={14} className="text-gray-300" />
+              <h2 className="text-3xl xl:text-[3rem] font-black tracking-tighter leading-[0.85]">
+                Built for <span className="text-[#10b981]">your business.</span>
+              </h2>
+            </div>
+            <div className="lg:w-1/3 space-y-6">
+              <p className="text-gray-500 text-lg font-medium leading-relaxed">
+                We build software around your workflows and goals—clear requirements, quality code, and full ownership when we’re done.
+              </p>
+              <div className="flex space-x-2">
+                <div className="h-1.5 w-12 bg-[#10b981] rounded-full"></div>
+                <div className="h-1.5 w-4 bg-gray-100 rounded-full"></div>
+                <div className="h-1.5 w-4 bg-gray-100 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-6 lg:gap-8 md:auto-rows-[380px]">
+            <div className="md:col-span-8 group relative bg-[#050505] rounded-xl md:rounded-[3.5rem] p-4 md:p-8 lg:p-12 overflow-hidden flex flex-col justify-between border border-white/5 shadow-2xl min-h-[240px] md:min-h-0">
+              <div className="absolute inset-0 opacity-5 pointer-events-none">
+                <div className="absolute top-0 right-0 w-32 h-32 md:w-64 md:h-64 bg-[#10b981] rounded-full blur-3xl animate-pulse"></div>
+              </div>
+              <div className="relative z-10 space-y-3 md:space-y-6">
+                <div className="flex items-center space-x-2 md:space-x-4">
+                  <div className="w-10 h-10 md:w-16 md:h-16 rounded-lg md:rounded-[1.8rem] bg-[#10b981] flex items-center justify-center text-black">
+                    <Zap size={20} strokeWidth={2.5} className="md:w-8 md:h-8" />
+                  </div>
+                  <div>
+                    <div className="text-white text-[9px] md:text-xs font-bold uppercase tracking-widest">Your workflows</div>
+                    <div className="text-[#10b981] text-[7px] md:text-[9px] font-mono mt-0.5 md:mt-1">TAILORED</div>
+                  </div>
+                </div>
+                <h3 className="text-base md:text-3xl lg:text-5xl font-black text-white leading-none">Built for <br />your process.</h3>
+                <p className="text-gray-500 text-[10px] md:text-sm font-medium max-w-sm">We design around how you work—internal tools, dashboards, and integrations that fit your team and goals.</p>
+              </div>
+              <div className="relative z-10 grid grid-cols-3 gap-2 md:gap-4 mt-4 md:mt-0">
+                <div className="bg-white/5 border border-white/10 rounded-lg md:rounded-xl p-2 md:p-3">
+                  <div className="text-[#10b981] text-xs md:text-lg font-black">100%</div>
+                  <div className="text-white/40 text-[7px] md:text-[9px] font-mono uppercase">Ownership</div>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-lg md:rounded-xl p-2 md:p-3">
+                  <div className="text-[#10b981] text-xs md:text-lg font-black">Clear</div>
+                  <div className="text-white/40 text-[7px] md:text-[9px] font-mono uppercase">Documentation</div>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-lg md:rounded-xl p-2 md:p-3">
+                  <div className="text-[#10b981] text-xs md:text-lg font-black">No</div>
+                  <div className="text-white/40 text-[7px] md:text-[9px] font-mono uppercase">Lock-in</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="md:col-span-4 bg-[#10b981] rounded-xl md:rounded-[3.5rem] p-4 md:p-8 lg:p-12 flex flex-col justify-between items-center relative overflow-hidden group min-h-[240px] md:min-h-0">
+              <div className="absolute inset-0 opacity-10 pointer-events-none">
+                <div className="absolute top-4 right-4 w-20 h-20 md:w-40 md:h-40 border-4 border-black rounded-full"></div>
+                <div className="absolute bottom-8 left-8 w-16 h-16 md:w-32 md:h-32 border-4 border-black rounded-lg rotate-12"></div>
+              </div>
+              <div className="relative z-10 w-full flex justify-between items-start mb-auto">
+                <div className="w-8 h-8 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-black/10 flex items-center justify-center">
+                  <Radar size={14} className="text-black md:w-6 md:h-6" />
+                </div>
+                <div className="text-right">
+                  <div className="text-[7px] md:text-[9px] font-black uppercase tracking-wider text-black/40">Reliability</div>
+                  <div className="text-[8px] md:text-xs font-black uppercase text-black">TIER_1</div>
+                </div>
+              </div>
+              <div className="relative z-10 text-center my-auto">
+                <div className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-black leading-none mb-2 md:mb-4">99.9%</div>
+                <div className="px-3 md:px-6 py-1.5 md:py-2 bg-black text-[#10b981] rounded-full text-[8px] md:text-[10px] font-black uppercase tracking-widest inline-block">
+                  Uptime target
+                </div>
+              </div>
+              <div className="relative z-10 w-full grid grid-cols-2 gap-2 mt-auto">
+                <div className="text-center">
+                  <div className="text-black text-xs md:text-xl font-black">24/7</div>
+                  <div className="text-black/60 text-[7px] md:text-[9px] font-bold uppercase">Support</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-black text-xs md:text-xl font-black">Full</div>
+                  <div className="text-black/60 text-[7px] md:text-[9px] font-bold uppercase">Ownership</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="md:col-span-5 bg-[#0a0a0a] rounded-xl md:rounded-[3.5rem] p-4 md:p-8 lg:p-12 text-white flex flex-col justify-between relative overflow-hidden min-h-[240px] md:min-h-0">
+              <div className="absolute top-0 left-0 w-full h-[2px] bg-[#10b981] shadow-[0_0_20px_#10b981] animate-[scan_3s_ease-in-out_infinite]"></div>
+              <div className="absolute inset-0 opacity-5 pointer-events-none">
+                <div className="absolute bottom-0 right-0 w-40 h-40 md:w-80 md:h-80 bg-[#10b981] rounded-full blur-3xl"></div>
+              </div>
+              <div className="relative z-10 flex items-start justify-between">
+                <div className="w-10 h-10 md:w-16 md:h-16 rounded-lg md:rounded-[1.8rem] bg-white/5 border border-white/10 flex items-center justify-center text-[#10b981]">
+                  <ShieldCheck size={20} className="md:w-8 md:h-8" />
+                </div>
+                <div className="text-right">
+                  <div className="text-[7px] md:text-[9px] font-mono text-gray-500 uppercase tracking-wider">Security</div>
+                  <div className="text-[8px] md:text-[10px] font-black text-[#10b981] tracking-wider mt-0.5 md:mt-1">BY DESIGN</div>
+                </div>
+              </div>
+              <div className="relative z-10 space-y-2 md:space-y-4">
+                <h3 className="text-base md:text-3xl lg:text-4xl font-black tracking-tighter leading-none">Secure & <br />maintainable.</h3>
+                <p className="text-gray-500 text-[10px] md:text-sm font-medium">We build with security and maintainability in mind—clear code, access control, and documentation.</p>
+              </div>
+              <div className="relative z-10 flex flex-wrap gap-1.5 md:gap-2">
+                <div className="flex items-center gap-1 px-2 md:px-2.5 py-1 bg-white/5 border border-white/10 rounded-md md:rounded-lg text-[8px] md:text-[9px] font-bold text-white/80">
+                  <Lock size={8} className="text-[#10b981] md:w-2.5 md:h-2.5" />
+                  Access control
+                </div>
+                <div className="flex items-center gap-1 px-2 md:px-2.5 py-1 bg-white/5 border border-white/10 rounded-md md:rounded-lg text-[8px] md:text-[9px] font-bold text-white/80">
+                  <ShieldCheck size={8} className="text-[#10b981] md:w-2.5 md:h-2.5" />
+                  Encrypted
+                </div>
+              </div>
+            </div>
+
+            <div className="md:col-span-7 bg-[#f8f9fa] border border-gray-100 rounded-xl md:rounded-[3.5rem] p-4 md:p-8 lg:p-12 flex flex-col justify-between shadow-inner min-h-[200px] md:min-h-0 gap-3 relative overflow-hidden">
+              <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
+                <div className="absolute top-4 right-4 w-16 h-16 md:w-32 md:h-32 border-2 border-gray-900 rounded-lg md:rounded-2xl rotate-12"></div>
+                <div className="absolute bottom-8 left-8 w-12 h-12 md:w-24 md:h-24 border-2 border-gray-900 rounded-full"></div>
+              </div>
+              <div className="relative z-10">
+                <div className="flex items-start justify-between gap-3 mb-3 md:mb-0">
+                  <div className="space-y-1.5 md:space-y-4 flex-1">
+                    <div className="flex items-center gap-2 md:gap-3">
+                      <div className="w-8 h-8 md:w-12 md:h-12 rounded-lg md:rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center">
+                        <Layers size={14} className="text-[#10b981] md:w-6 md:h-6" />
+                      </div>
+                      <span className="text-[8px] md:text-[10px] font-mono text-gray-500 uppercase tracking-wider">Tailored</span>
+                    </div>
+                    <h3 className="text-base md:text-3xl lg:text-4xl font-black text-black tracking-tighter leading-tight">Modular & <br />extensible.</h3>
+                    <p className="text-gray-500 text-[10px] md:text-sm font-medium max-w-xs">Add features and integrate with other systems without rewriting what you have.</p>
+                  </div>
+                  <div className="w-16 h-16 md:w-48 md:h-48 bg-white rounded-xl md:rounded-[3rem] shadow-lg border border-gray-100 flex items-center justify-center flex-shrink-0">
+                    <Layers size={28} className="text-[#10b981] md:w-20 md:h-20" />
+                  </div>
+                </div>
+              </div>
+              <div className="relative z-10 flex flex-wrap gap-1.5 md:gap-2">
+                <div className="inline-flex items-center gap-1.5 px-2 md:px-3 py-1 md:py-1.5 bg-white border border-gray-200 rounded-lg md:rounded-xl text-[9px] md:text-xs font-bold text-gray-700">
+                  <Box size={10} className="text-[#10b981] md:w-3 md:h-3" />
+                  <span>Your stack</span>
+                </div>
+                <div className="inline-flex items-center gap-1.5 px-2 md:px-3 py-1 md:py-1.5 bg-white border border-gray-200 rounded-lg md:rounded-xl text-[9px] md:text-xs font-bold text-gray-700">
+                  <Hexagon size={10} className="text-[#10b981] md:w-3 md:h-3" />
+                  <span>Zero lock-in</span>
+                </div>
+                <div className="inline-flex items-center gap-1.5 px-2 md:px-3 py-1 md:py-1.5 bg-white border border-gray-200 rounded-lg md:rounded-xl text-[9px] md:text-xs font-bold text-gray-700">
+                  <Network size={10} className="text-[#10b981] md:w-3 md:h-3" />
+                  <span>API-first</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-24 lg:py-40 bg-black text-white">
+        <div className="max-w-7xl mx-auto text-center mb-8 md:mb-20 lg:mb-32 px-3 md:px-6">
+          <span className="text-[#10b981] font-black text-[8px] md:text-[10px] uppercase tracking-[0.3em] md:tracking-[0.6em]">The Grovyn Protocol</span>
+          <h2 className="text-xl md:text-4xl lg:text-5xl xl:text-[5rem] font-black tracking-tighter leading-[0.9] mt-2 md:mt-4">Custom Software Lifecycle.</h2>
+        </div>
+        <div className={`grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 px-3 md:px-6 lg:px-12 ${processSteps.length >= 3 ? "lg:grid-cols-3" : "lg:grid-cols-4"}`}>
+          {processSteps.length >= 3 ? (
+            processSteps.map((step, i) => (
+              <div key={i} className="bg-white/5 border border-white/5 rounded-xl md:rounded-[3rem] p-4 md:p-10 space-y-4 md:space-y-8 group hover:border-[#10b981]/30 transition-all">
+                <div className="w-10 h-10 md:w-14 md:h-14 rounded-lg md:rounded-2xl bg-black border border-white/10 flex items-center justify-center text-[#10b981] group-hover:bg-[#10b981] group-hover:text-black transition-all">
+                  <div className="scale-75 md:scale-100">
+                    {i === 0 && <Search size={20} />}
+                    {i === 1 && <Terminal size={20} />}
+                    {i === 2 && <Rocket size={20} />}
+                  </div>
+                </div>
+                <div className="space-y-1.5 md:space-y-3">
+                  <div className="text-[9px] md:text-xs font-mono text-[#10b981] tracking-widest">{step.step}</div>
+                  <h4 className="text-base md:text-2xl font-black tracking-tight">{step.title}</h4>
+                  <p className="text-gray-500 text-[10px] md:text-xs font-medium leading-relaxed">{step.desc}</p>
+                </div>
+              </div>
+            ))
+          ) : (
+            [
+              { id: "01", title: "Discover", desc: "We learn your workflows, pain points, and what success looks like.", icon: <Search size={20} /> },
+              { id: "02", title: "Design & build", desc: "We design the solution and build in sprints with regular check-ins.", icon: <Terminal size={20} /> },
+              { id: "03", title: "Launch & iterate", desc: "We deploy, hand over, and support so you can run and evolve the product.", icon: <Rocket size={20} /> },
+            ].map((step, i) => (
+              <div key={i} className="bg-white/5 border border-white/5 rounded-xl md:rounded-[3rem] p-4 md:p-10 space-y-4 md:space-y-8 group hover:border-[#10b981]/30 transition-all">
+                <div className="w-10 h-10 md:w-14 md:h-14 rounded-lg md:rounded-2xl bg-black border border-white/10 flex items-center justify-center text-[#10b981] group-hover:bg-[#10b981] group-hover:text-black transition-all">
+                  <div className="scale-75 md:scale-100">{step.icon}</div>
+                </div>
+                <div className="space-y-1.5 md:space-y-3">
+                  <div className="text-[9px] md:text-xs font-mono text-[#10b981] tracking-widest">{step.id}</div>
+                  <h4 className="text-base md:text-2xl font-black tracking-tight">{step.title}</h4>
+                  <p className="text-gray-500 text-[10px] md:text-xs font-medium leading-relaxed">{step.desc}</p>
+                </div>
+              </div>
+            ))
+          )}
+        </div>
+      </section>
+
+      <section className="py-12 sm:py-16 lg:py-20 md:py-28 px-4 sm:px-6 bg-[#fafafa]">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#10b981] tracking-tight mb-3">
+            {t("methodology_heading")}
+          </h2>
+          <p className="text-lg sm:text-xl font-bold text-[#111] mb-8 sm:mb-12 lg:mb-14">
+            {t("methodology_subheading")}
+          </p>
+          <div className="relative pl-2">
+            <div className="absolute left-6 top-5 bottom-5 w-0.5 bg-gray-200" style={{ transform: "translateX(-50%)" }} aria-hidden />
+            {processSteps.map((step, i) => (
+              <div key={i} className="relative flex gap-6 pb-12 last:pb-0 items-start">
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#f4f6f8] border-2 border-gray-200 flex items-center justify-center text-[#10b981] font-black text-sm z-10">
+                  {step.step}
+                </div>
+                <div className="flex-1 pt-1">
+                  <h3 className="text-lg font-black text-[#111] mb-2">{step.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="mt-12 text-gray-600 font-medium text-center">
+            {t("methodology_conclusion")}
+          </p>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-24 lg:py-40 px-3 md:px-6 lg:px-12 bg-white text-black">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-center text-lg md:text-3xl lg:text-4xl font-black mb-8 md:mb-16 lg:mb-24 tracking-tight">Common questions <span className="text-[#10b981]">(FAQ)</span></h2>
+          <div className="space-y-3 md:space-y-6">
+            {[
+              { q: "We have unique processes. Can you really build something that fits?", a: "Yes. Custom software is what we do. We start with discovery—learning your workflows, users, and goals—so the solution is designed for you from the start, not forced into an off-the-shelf mold." },
+              { q: "How do you keep our data secure?", a: "We design for security from the start: access control, encryption where needed, and clear boundaries. We’ll align with your compliance requirements and document what’s in place so your team can own it." },
+              { q: "Will we own the code when you’re done?", a: "Yes. You get full ownership of the codebase, documentation, and any infrastructure we set up. No lock-in—you can take it with you or have another team maintain it." },
+            ].map((faq, i) => (
+              <div key={i} className={`rounded-xl md:rounded-[2.5rem] border-2 p-4 md:p-10 transition-all ${activeFaq === i ? "border-[#10b981] bg-[#f0fdf9]" : "border-gray-100"}`}>
+                <button onClick={() => setActiveFaq(activeFaq === i ? null : i)} className="w-full flex justify-between items-center text-xs md:text-xl font-black text-left gap-3">
+                  <span>{faq.q}</span>
+                  <Plus size={16} className={`flex-shrink-0 md:w-5 md:h-5 ${activeFaq === i ? "rotate-45" : ""}`} />
+                </button>
+                {activeFaq === i && <p className="mt-3 md:mt-8 text-gray-600 font-medium text-[10px] md:text-lg leading-relaxed">{faq.a}</p>}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

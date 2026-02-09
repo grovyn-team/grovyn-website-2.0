@@ -59,7 +59,7 @@ export default function PlatformServiceContent() {
 
   return (
     <div className="bg-[#050505] text-white min-h-screen overflow-x-hidden selection:bg-[#10b981] selection:text-black font-sans">
-      <section className="relative min-h-[55vh] sm:min-h-[60vh] lg:min-h-[65vh] flex flex-col justify-center py-16 md:py-20 lg:py-24 px-3 md:px-6 lg:px-12 overflow-hidden">
+      <section className="relative min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] flex flex-col justify-center py-16 md:py-20 lg:py-24 px-3 md:px-6 lg:px-12 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-[-10%] right-[-10%] w-[800px] h-[800px] bg-[#10b981]/10 rounded-full blur-[120px] animate-pulse"></div>
           <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-[100px] animate-pulse delay-700"></div>
@@ -183,7 +183,7 @@ export default function PlatformServiceContent() {
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 sm:mb-16 lg:mb-24 gap-8 sm:gap-10 lg:gap-12">
             <div className="space-y-4 sm:space-y-6">
               <Command size={14} className="text-gray-300" />
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[5rem] font-black tracking-tighter leading-[0.85]">
+              <h2 className="text-3xl xl:text-[3rem] font-black tracking-tighter leading-[0.85]">
                 Engineered <br />
                 for <span className="text-[#10b981]">Scale.</span>
               </h2>
@@ -421,9 +421,9 @@ export default function PlatformServiceContent() {
           <h2 className="text-center text-lg md:text-3xl lg:text-4xl font-black mb-8 md:mb-16 lg:mb-24 tracking-tight">System Queries <span className="text-[#10b981]">(FAQ)</span></h2>
           <div className="space-y-3 md:space-y-6">
             {[
-              { q: "Can you migrate legacy systems?", a: "Yes, we specialize in modernizing legacy monoliths into distributed platform architectures without disrupting operations." },
-              { q: "How do you ensure data security at scale?", a: "We implement Zero-Trust models and end-to-end encryption across all internal and external communication channels." },
-              { q: "What is your approach to multi-cloud?", a: "We use Infrastructure as Code (Terraform) to ensure that your platform remains cloud-agnostic and resilient to provider outages." },
+              { q: "Our current platform is a monolith. Can you help us evolve it without breaking things?", a: "Yes. We’re used to working with existing systems. We introduce new services and move responsibility over step by step so operations stay stable. No “rip and replace” unless that’s what you actually want." },
+              { q: "How do you keep our data secure as we scale?", a: "We design for security from the start: least-privilege access, encryption in transit and at rest, and clear boundaries between services. We’ll align with your compliance needs and explain what’s in place so your team can own it." },
+              { q: "What if we want to switch clouds or avoid depending on one provider?", a: "We build with that in mind. Using infrastructure-as-code and cloud-agnostic patterns, we keep your platform portable. If a provider has an outage or you want to move, you’re not stuck." },
             ].map((faq, i) => (
               <div key={i} className={`rounded-xl md:rounded-[2.5rem] border-2 p-4 md:p-10 transition-all ${activeFaq === i ? "border-[#10b981] bg-[#f0fdf9]" : "border-gray-100"}`}>
                 <button onClick={() => setActiveFaq(activeFaq === i ? null : i)} className="w-full flex justify-between items-center text-xs md:text-xl font-black text-left gap-3">

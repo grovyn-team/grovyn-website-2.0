@@ -7,6 +7,7 @@ const WHATSAPP_NUMBER = "917354972920";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const CAL_MODAL_BREAKPOINT = 768;
+export const OPEN_DISCOVERY_CALL_EVENT = "openDiscoveryCall";
 
 const CAL_COM_LINK =
   typeof process.env.NEXT_PUBLIC_CAL_COM_LINK === "string" &&
@@ -41,6 +42,12 @@ export default function WhatsAppFloat() {
       document.body.style.overflow = "";
     };
   }, [calOpen]);
+
+  useEffect(() => {
+    const openModal = () => setCalOpen(true);
+    window.addEventListener(OPEN_DISCOVERY_CALL_EVENT, openModal);
+    return () => window.removeEventListener(OPEN_DISCOVERY_CALL_EVENT, openModal);
+  }, []);
 
   const handleCalClick = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>) => {

@@ -115,7 +115,7 @@ export default function AboutContent() {
 
   return (
     <div className="bg-white overflow-x-hidden selection:bg-[#10b981] selection:text-white">
-      <section className="relative min-h-[55vh] sm:min-h-[60vh] lg:min-h-[65vh] flex flex-col justify-center py-8 sm:py-10 lg:py-14 px-4 sm:px-6 lg:px-12">
+      <section className="relative min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] flex flex-col justify-center py-8 sm:py-10 lg:py-14 px-4 sm:px-6 lg:px-12">
         <div className="max-w-7xl mx-[100px] flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16">
           <div className={`lg:w-1/2 space-y-5 sm:space-y-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-6"}`}>
             <nav className="flex items-center gap-2 text-[11px] sm:text-xs font-semibold uppercase tracking-widest text-gray-400">
@@ -179,7 +179,7 @@ export default function AboutContent() {
         <div className="max-w-5xl mx-auto">
           <p className="text-center text-gray-600 text-base sm:text-lg md:text-xl font-medium leading-relaxed max-w-2xl mx-auto mb-12 sm:mb-16">
             We are committed to the <span className="text-[#10b981] font-semibold">SaaS industry</span> with
-            innovative, sustainable solutions—combining <span className="text-[#111] font-semibold">state-of-the-art technology</span> to bring visions to life.
+            innovative, sustainable solutions-combining <span className="text-[#111] font-semibold">state-of-the-art technology</span> to bring visions to life.
           </p>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {stats.map((stat, i) => (
@@ -192,25 +192,23 @@ export default function AboutContent() {
         </div>
       </section>
 
-      <section className="py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-center text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-[#10b981] mb-10 sm:mb-12">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-12 bg-white">
+        <div className="max-w-2xl mx-auto">
+          <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-[#10b981] mb-4">
             Founder&apos;s note
           </p>
-          <div className="rounded-3xl sm:rounded-[2rem] bg-[#fafafa] border border-gray-100 p-8 sm:p-12 md:p-16 shadow-sm">
-            <p className="text-2xl sm:text-3xl md:text-4xl font-black text-[#111] tracking-tight leading-snug">
+          <div className="rounded-xl sm:rounded-2xl bg-[#fafafa] border border-gray-100 p-5 sm:p-6 shadow-sm">
+            <p className="text-lg sm:text-xl font-bold text-[#111] tracking-tight leading-snug">
               Trust is the most valuable thing in the world.
             </p>
-            <p className="mt-4 text-lg sm:text-xl text-gray-600 font-medium leading-relaxed">
+            <p className="mt-2 text-base text-gray-600 font-medium">
               It must be earned and carefully upheld.
             </p>
-            <div className="mt-8 sm:mt-10 pt-8 sm:pt-10 border-t border-gray-200/80">
-              <p className="text-gray-600 text-base sm:text-lg font-medium leading-relaxed">
-                At Grovyn, we believe trust is built through integrity, consistency, and doing the right thing even when it is harder.
-                It is earned over time and forms the foundation of everything we build and every partnership we commit to.
-              </p>
-            </div>
-            <p className="mt-8 text-[#111] font-bold text-sm sm:text-base">
+            <p className="mt-4 text-gray-600 text-sm sm:text-base leading-relaxed">
+              At Grovyn, we believe trust is built through integrity, consistency, and doing the right thing even when it is harder.
+              It is earned over time and forms the foundation of everything we build and every partnership we commit to.
+            </p>
+            <p className="mt-4 text-[#111] font-semibold text-sm">
               — CEO, Grovyn
             </p>
           </div>

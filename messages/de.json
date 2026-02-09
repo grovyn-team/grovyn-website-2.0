@@ -87,14 +87,18 @@
       "mobile": "Mobile Apps",
       "mobile_desc": "iOS and Android development",
       "platform": "Platform Design",
-      "platform_desc": "system architecture planning"
+      "platform_desc": "system architecture planning",
+      "custom_software": "Custom Software",
+      "custom_software_desc": "bespoke applications for your business"
     },
     "services_web_title": "Web & Applications",
     "services_web_subtitle": "Web applications and platforms",
     "services_mobile_title": "Mobile",
     "services_mobile_subtitle": "iOS and Android development",
     "services_platform_title": "Platform",
-    "services_platform_subtitle": "System architecture planning"
+    "services_platform_subtitle": "System architecture planning",
+    "services_custom_software_title": "Custom Software",
+    "services_custom_software_subtitle": "Bespoke applications for your business"
   },
   "services_we_offer": {
     "badge": "What we build",
@@ -655,6 +659,45 @@
       "cta_title": "Let's talk about your platform architecture",
       "cta_button": "Get in touch"
     },
+    "custom_software": {
+      "hero_badge": "Custom Software",
+      "hero_title_line1": "Software built",
+      "hero_title_highlight": "for your business",
+      "hero_subtitle": "We design and build bespoke applications tailored to your workflows, processes, and goals—no off-the-shelf compromise.",
+      "cta_primary": "Talk to us",
+      "cta_secondary": "See what we do",
+      "tech_title": "What we focus on",
+      "tech_items": ["Requirements & discovery", "UX and workflows", "Integration with your tools", "Scalability", "Ongoing support"],
+      "offer_section_title": "Custom Software",
+      "offer_section_highlight": "solutions",
+      "offer_section_subtitle": "Applications designed around how you work, not the other way around",
+      "offer_cards": [
+        { "title": "Business Applications", "description": "Internal tools, portals, and dashboards that match your operations.", "tags": ["Workflows", "Reporting", "User roles"] },
+        { "title": "Integration & APIs", "description": "Connect your software with existing systems and third-party services.", "tags": ["APIs", "Data sync", "Webhooks"] },
+        { "title": "Product Development", "description": "Custom products and SaaS built for your market and customers.", "tags": ["MVP", "Scale", "Maintenance"] }
+      ],
+      "offerings_title": "What we deliver",
+      "offerings": [
+        { "title": "Discovery & scope", "desc": "Clear understanding of your needs, users, and success criteria before we build." },
+        { "title": "Design & build", "desc": "Iterative development with regular demos and feedback so the product stays on track." },
+        { "title": "Launch & support", "desc": "Deployment, documentation, and ongoing maintenance so you can run it with confidence." }
+      ],
+      "features_title": "What we focus on",
+      "features": ["Your workflows", "Clear requirements", "Quality code", "Security", "Performance", "Maintainability"],
+      "advanced_title": "Why go custom",
+      "advanced": ["No vendor lock-in", "Fits your process", "Evolves with you", "Full ownership"],
+      "methodology_heading": "Our process",
+      "methodology_subheading": "From idea to production",
+      "methodology_conclusion": "Clear plan, less risk",
+      "process_title": "How we work",
+      "process_steps": [
+        { "step": "01", "title": "Discover", "desc": "We learn your workflows, pain points, and what success looks like." },
+        { "step": "02", "title": "Design & build", "desc": "We design the solution and build in sprints with regular check-ins." },
+        { "step": "03", "title": "Launch & iterate", "desc": "We deploy, hand over, and support so you can run and evolve the product." }
+      ],
+      "cta_title": "Let's talk about your custom software",
+      "cta_button": "Get in touch"
+    },
     "backend": {
       "hero_badge": "Backend Development",
       "hero_title_line1": "Backend systems",
@@ -980,10 +1023,11 @@
   },
   "industries_landing": {
     "hero_badge": "Industries",
-    "hero_title_line1": "Software designed",
+    "hero_title_line1": "Software built for",
     "hero_title_line2": "",
-    "hero_title_highlight": "for the realities of your industry",
-    "hero_subtitle": "We work with teams across healthcare, finance, commerce, education, and operationally complex sectors where reliability, clarity, and long-term system stability matter.\n\nOur focus is on building technology that fits real workflows and continues to perform as requirements evolve.",
+    "hero_title_highlight": "how your industry actually works",
+    "hero_subtitle": "We work with healthcare, finance, commerce, and education teams to build systems that fit real workflows and stay reliable as needs change.",
+
     "hero_cta": "See what we do",
     "hero_explore_sectors": "Explore sectors",
     "section2_badge": "Experience",
@@ -1003,10 +1047,10 @@
     "section4_title_line2": "your",
     "section4_title_line3": "industry",
     "section4_title_line4": "",
-    "section4_subtitle": "Every industry has specific requirements. We learn your sector so we can build systems that work the way you need them to.",
-    "section4_outcome_1": "Compliance",
-    "section4_outcome_2": "Reliability",
-    "section4_outcome_3": "Your needs",
+    "section4_subtitle": "Different industries have different needs. Healthcare needs HIPAA compliance. Finance needs security and audit trails. E-commerce needs reliable payment processing. We understand these requirements and build accordingly",
+    "section4_outcome_1": "Healthcare",
+     "section4_outcome_2": "Finance",
+    "section4_outcome_3": "Commerce",
     "section4_deliver_label": "What we build",
     "section4_deliver_1": "Web and mobile",
     "section4_deliver_2": "Cloud and APIs",

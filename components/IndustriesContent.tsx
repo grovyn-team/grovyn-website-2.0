@@ -53,7 +53,7 @@ export default function IndustriesContent() {
 
   return (
     <div className="bg-white overflow-x-hidden selection:bg-[#10b981] selection:text-white font-sans">
-      <section className="relative min-h-[55vh] sm:min-h-[60vh] lg:min-h-[65vh] flex items-center overflow-hidden pt-20 bg-black">
+      <section className="relative min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] flex items-center overflow-hidden pt-10 pb-16 sm:pb-20 bg-black">
         <div className="absolute inset-0 z-0">
           {!videoError ? (
             <video
@@ -90,7 +90,7 @@ export default function IndustriesContent() {
               <div className="w-8 sm:w-10 h-[2px] bg-[#10b981] rounded-full" />
               <span>{t("hero_badge")}</span>
             </div>
-            <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-[4.2rem] xl:text-[4.5rem] font-black tracking-tight leading-[0.92] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+            <h1 className="text-3xl sm:text-3xl md:text-3xl lg:text-[3.2rem] xl:text-[3.5rem] font-black tracking-tight leading-[0.92] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
               {t("hero_title_line1")}{" "}
               <span className="text-white">{t("hero_title_line2")}</span>
               <br />
@@ -273,61 +273,6 @@ export default function IndustriesContent() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-12 bg-white">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-stretch">
-          <div className="lg:col-span-5 bg-[#0a0c10] text-white p-6 sm:p-8 lg:p-10 xl:p-12 rounded-2xl sm:rounded-[2.5rem] flex flex-col justify-between shadow-2xl min-h-[340px] sm:min-h-[380px] lg:min-h-0">
-            <div className="space-y-5 sm:space-y-6">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-black tracking-tighter leading-tight">
-                {t("section3_title_line1")} <br />
-                {t("section3_title_line2")}
-              </h3>
-              <p className="text-gray-400 text-xs sm:text-sm font-medium leading-relaxed line-clamp-4 sm:line-clamp-none">
-                {t("section3_body")}
-              </p>
-              <div className="flex flex-wrap gap-x-4 gap-y-2 sm:gap-y-3">
-                {section3Items.map((item) => (
-                  <div key={item} className="flex items-center space-x-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#10b981] flex-shrink-0" />
-                    <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <Link
-              href={`${base}#contact`}
-              className="bg-[#10b981] text-black px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-black text-[9px] sm:text-[10px] uppercase tracking-widest mt-6 sm:mt-8 hover:bg-white transition-colors inline-block w-full sm:w-fit text-center"
-            >
-              {t("section3_cta")}
-            </Link>
-          </div>
-          <div className="lg:col-span-7 relative rounded-2xl sm:rounded-[2.5rem] overflow-hidden group shadow-2xl min-h-[280px] sm:min-h-[320px] lg:min-h-0 lg:h-full">
-            <div className="absolute inset-0">
-              <Image
-                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200"
-                alt="Video Preview"
-                fill
-                className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                sizes="(max-width: 1024px) 100vw, 58vw"
-              />
-            </div>
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
-            <button
-              type="button"
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white hover:scale-110 transition-transform"
-              aria-label="Play"
-            >
-              <Play size={28} className="sm:w-8 sm:h-8" fill="currentColor" />
-            </button>
-            <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 text-white">
-              <h4 className="text-xl sm:text-2xl font-black">{t("section3_showcase_label")}</h4>
-              <p className="text-gray-300 font-bold uppercase text-[9px] sm:text-[10px] tracking-widest mt-0.5">
-                {t("section3_showcase_title")}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="relative min-h-[60vh] sm:min-h-[70vh] lg:min-h-[80vh] py-12 sm:py-16 lg:py-24 flex items-center overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2000"
@@ -339,34 +284,8 @@ export default function IndustriesContent() {
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full relative z-10 flex flex-col lg:flex-row justify-between items-center gap-8 sm:gap-12 lg:gap-16">
-          <div className="w-full lg:w-[45%] grid grid-cols-2 gap-2 sm:gap-3 lg:gap-4 max-w-xl lg:max-w-none">
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl aspect-[4/5]">
-              <Image
-                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=600"
-                alt={t("section4_image_1_label")}
-                fill
-                className="object-cover opacity-90"
-                sizes="(max-width: 1024px) 50vw, 22vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-              <span className="absolute bottom-3 left-3 right-3 text-white text-[10px] font-black uppercase tracking-widest">
-                {t("section4_image_1_label")}
-              </span>
-            </div>
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl aspect-[4/5]">
-              <Image
-                src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=600"
-                alt={t("section4_image_2_label")}
-                fill
-                className="object-cover opacity-90"
-                sizes="(max-width: 1024px) 50vw, 22vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-              <span className="absolute bottom-3 left-3 right-3 text-white text-[10px] font-black uppercase tracking-widest">
-                {t("section4_image_2_label")}
-              </span>
-            </div>
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl aspect-[3/2] col-span-2">
+          <div className="w-full lg:w-[45%] max-w-xl lg:max-w-none">
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl aspect-[3/2]">
               <Image
                 src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800"
                 alt={t("section4_image_3_label")}
@@ -401,24 +320,6 @@ export default function IndustriesContent() {
                   </span>
                 )
               )}
-            </div>
-            <p className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-white/50 pt-2">
-              {t("section4_deliver_label")}
-            </p>
-            <div className="flex flex-wrap gap-3 sm:gap-4">
-              {[
-                { label: t("section4_deliver_1"), icon: <LayoutGrid size={16} className="sm:w-[18px] sm:h-[18px]" /> },
-                { label: t("section4_deliver_2"), icon: <Cloud size={16} className="sm:w-[18px] sm:h-[18px]" /> },
-                { label: t("section4_deliver_3"), icon: <Headphones size={16} className="sm:w-[18px] sm:h-[18px]" /> },
-              ].map(({ label, icon }) => (
-                <div
-                  key={label}
-                  className="flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-3 rounded-xl bg-white/5 border border-white/10 text-xs sm:text-sm font-bold text-white"
-                >
-                  <span className="text-[#10b981]">{icon}</span>
-                  {label}
-                </div>
-              ))}
             </div>
             <Link
               href={`${base}#contact`}

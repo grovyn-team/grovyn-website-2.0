@@ -97,7 +97,7 @@ export default function CareersContent() {
 
   return (
     <div className="bg-white overflow-x-hidden selection:bg-[#10b981] selection:text-white">
-      <section className="relative min-h-[55vh] sm:min-h-[60vh] lg:min-h-[65vh] flex items-center bg-black overflow-hidden px-4 sm:px-6 lg:px-12 pt-16 sm:pt-20">
+      <section className="relative min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] flex items-center bg-black overflow-hidden px-4 sm:px-6 lg:px-12 pt-16 sm:pt-20 pb-16 sm:pb-20">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0">
             <Image
