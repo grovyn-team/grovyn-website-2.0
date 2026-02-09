@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import { Phone, ChevronDown, Monitor, Smartphone, LayoutGrid, Users, Briefcase, Mail, X, Cloud, Network, Server, Headphones, GitBranch, Building2, MessageCircle, Truck, BookOpen, Shield, Database, ArrowRight } from "lucide-react";
+import { Phone, ChevronDown, Monitor, Smartphone, LayoutGrid, Users, Briefcase, Mail, X, Cloud, Network, Headphones, GitBranch, MessageCircle, Truck, BookOpen, Shield, Database } from "lucide-react";
 import { locales, localeNames, type Locale } from "@/i18n/config";
 
 export default function Navbar() {
@@ -46,9 +46,14 @@ export default function Navbar() {
   const isDarkNav = !isScrolled && isHome;
 
   const serviceItems = [
-    { title: t("menus.web"), desc: t("menus.web_desc"), icon: <Monitor size={20} />, slug: "web" },
-    { title: t("menus.mobile"), desc: t("menus.mobile_desc"), icon: <Smartphone size={20} />, slug: "mobile" },
-    { title: t("menus.platform"), desc: t("menus.platform_desc"), icon: <LayoutGrid size={20} />, slug: "platform" },
+    { title: t("menus.web"), desc: t("menus.web_desc"), icon: <Monitor size={18} />, slug: "web" },
+    { title: t("menus.mobile"), desc: t("menus.mobile_desc"), icon: <Smartphone size={18} />, slug: "mobile" },
+    { title: t("menus.platform"), desc: t("menus.platform_desc"), icon: <LayoutGrid size={18} />, slug: "platform" },
+  ];
+  const serviceColumns = [
+    { title: t("services_web_title"), subtitle: t("services_web_subtitle"), items: [serviceItems[0]] },
+    { title: t("services_mobile_title"), subtitle: t("services_mobile_subtitle"), items: [serviceItems[1]] },
+    { title: t("services_platform_title"), subtitle: t("services_platform_subtitle"), items: [serviceItems[2]] },
   ];
 
   const ti = (key: string) => t(`infrastructure_menu.${key}`);
@@ -59,7 +64,6 @@ export default function Navbar() {
       items: [
         { slug: "cloud", label: ti("cloud"), desc: ti("cloud_desc"), icon: <Cloud size={18} /> },
         { slug: "network", label: ti("network"), desc: ti("network_desc"), icon: <Network size={18} /> },
-        { slug: "servers", label: ti("servers"), desc: ti("servers_desc"), icon: <Server size={18} /> },
       ],
     },
     {
@@ -76,7 +80,6 @@ export default function Navbar() {
       subtitle: ti("operations_subtitle"),
       items: [
         { slug: "devops", label: ti("devops"), desc: ti("devops_desc"), icon: <GitBranch size={18} /> },
-        { slug: "datacenter", label: ti("datacenter"), desc: ti("datacenter_desc"), icon: <Building2 size={18} /> },
         { slug: "communication", label: ti("communication"), desc: ti("communication_desc"), icon: <MessageCircle size={18} /> },
       ],
     },
@@ -84,6 +87,7 @@ export default function Navbar() {
   const infrastructureFeatured = { slug: "migration", label: ti("migration"), desc: ti("migration_desc"), icon: <Truck size={20} /> };
 
   const resourceItems = [
+    { title: t("portfolio"), href: `/${locale}/portfolio`, icon: <LayoutGrid size={20} /> },
     { title: t("careers"), href: `/${locale}/careers`, icon: <Briefcase size={20} /> },
     { title: t("resources_menu.blog"), href: `/${locale}/blog`, icon: <BookOpen size={20} /> },
     { title: t("resources_menu.contact"), href: `/${locale}#contact`, icon: <Mail size={20} /> },
@@ -124,20 +128,35 @@ export default function Navbar() {
 
   return (
     <nav className={navClass}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 h-full flex justify-between items-center">
-        <Link href={`/${locale}`} className="flex items-center space-x-3 group">
-          <Image
-            src="/grovyn_logo.png"
-            alt="Grovyn"
-            width={120}
-            height={40}
-            className="h-10 w-auto object-contain"
-            style={{ width: "auto" }}
-            priority
-          />
+      <div className="max-w-7xl mx-auto px-0 sm:px-6 lg:px-0 h-full flex justify-between items-center gap-4 min-w-0">
+        <Link
+          href={`/${locale}#hero`}
+          className="flex items-center space-x-1 group shrink-0 mr-4 md:mr-6"
+          onClick={(e) => {
+            const isHome = pathname === `/${locale}` || pathname === "/";
+            if (isHome) {
+              e.preventDefault();
+              document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+        >
+          <span className="relative h-10 shrink-0" style={{ width: "auto" }}>
+            <Image
+              src="/grovyn_logo.png"
+              alt="Grovyn"
+              width={120}
+              height={40}
+              className="object-contain"
+              style={{ height: "2.5rem", width: "auto" }}
+              priority
+            />
+          </span>
+          <span className={`text-lg md:text-xl font-black tracking-tight whitespace-nowrap ${isDarkNav ? "text-white" : "text-[#111]"}`}>
+            rovyn
+          </span>
         </Link>
 
-        <div className="hidden md:flex items-center space-x-10 text-sm font-bold h-full">
+        <div className="hidden lg:flex items-center space-x-5 xl:space-x-8 text-sm font-bold h-full min-w-0 shrink">
           <div
             className="relative group flex items-center h-full"
             onMouseEnter={() => { setActiveMenu("capabilities"); setCapabilitiesSub((s) => (s === "services" || s === "infrastructure" ? s : "services")); }}
@@ -162,13 +181,10 @@ export default function Navbar() {
               >
                 <div className={`${dropPanel} flex w-[min(980px,calc(100vw-2rem))] overflow-hidden rounded-[2rem]`}>
                   <div className={`shrink-0 w-[220px] border-r ${dropBorder} flex flex-col`}>
-                    <p className={`px-5 pt-5 pb-2 text-[10px] font-black uppercase tracking-widest ${dropDesc}`}>
-                      {t("capabilities_explore")}
-                    </p>
                     <button
                       type="button"
                       onMouseEnter={() => setCapabilitiesSub("services")}
-                      className={`flex items-center gap-3 px-5 py-4 text-left transition-all border-l-2 ${capabilitiesSub === "services" ? "border-[#10b981] bg-[#10b981]/5" : `border-transparent ${dropItemHover}`}`}
+                      className={`flex items-center gap-3 px-5 pt-5 pb-4 text-left transition-all border-l-2 ${capabilitiesSub === "services" ? "border-[#10b981] bg-[#10b981]/5" : `border-transparent ${dropItemHover}`}`}
                     >
                       <Monitor size={20} className={capabilitiesSub === "services" ? "text-[#10b981]" : "opacity-60"} />
                       <span className={`font-bold text-sm ${dropTitle}`}>{t("services")}</span>
@@ -184,40 +200,36 @@ export default function Navbar() {
                   </div>
                   <div className="flex-1 min-w-0 p-8 flex flex-col">
                     {capabilitiesSub === "services" && (
-                      <>
-                        <h3 className={`text-xs font-black uppercase tracking-widest ${dropDesc} mb-5`}>
+                      <div className="space-y-5 flex-1 flex flex-col">
+                        <h3 className={`text-xs font-black uppercase tracking-widest ${dropDesc} mb-3`}>
                           {t("capabilities_services_heading")}
                         </h3>
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                          {serviceItems.map((service) => (
-                            <Link
-                              key={service.slug}
-                              href={`/${locale}/services/${service.slug}`}
-                              className={`flex items-start gap-4 group/item p-5 rounded-2xl border transition-all ${isDarkNav ? "border-white/10 hover:border-[#10b981]/40" : "border-gray-100 hover:border-[#10b981]/40 hover:shadow-md"}`}
-                              onClick={() => setActiveMenu(null)}
-                            >
-                              <div className="w-12 h-12 rounded-xl bg-[#10b981]/10 flex items-center justify-center text-[#10b981] shrink-0 group-hover/item:bg-[#10b981] group-hover/item:text-white transition-all">
-                                {service.icon}
-                              </div>
-                              <div className="space-y-1 min-w-0 flex-1">
-                                <h5 className={`${dropTitle} font-black text-sm leading-tight`}>{service.title}</h5>
-                                <p className={`${dropDesc} text-[12px] font-medium leading-relaxed`}>
-                                  {service.desc}
-                                </p>
-                              </div>
-                              <ArrowRight size={16} className={`shrink-0 opacity-0 group-hover/item:opacity-100 text-[#10b981] transition-opacity`} />
-                            </Link>
+                        <div className="grid grid-cols-3 gap-8">
+                          {serviceColumns.map((col, i) => (
+                            <div key={i} className="space-y-2 min-w-0">
+                              <ul className="space-y-2">
+                                {col.items.map((item) => (
+                                  <li key={item.slug}>
+                                    <Link
+                                      href={`/${locale}/services/${item.slug}`}
+                                      className={`flex items-start gap-3 p-2.5 -m-2.5 rounded-xl ${dropItemHoverAlt} transition-all group/item`}
+                                      onClick={() => setActiveMenu(null)}
+                                    >
+                                      <span className="w-8 h-8 rounded-lg bg-[#10b981]/10 flex items-center justify-center text-[#10b981] shrink-0 group-hover/item:bg-[#10b981] group-hover/item:text-white transition-all">
+                                        {item.icon}
+                                      </span>
+                                      <div className="min-w-0 flex-1">
+                                        <span className={`font-bold text-xs ${dropTitle} block`}>{item.title}</span>
+                                        <span className={`text-[11px] font-medium ${dropDesc} block leading-snug`}>{item.desc}</span>
+                                      </div>
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
                           ))}
                         </div>
-                        <Link
-                          href={`/${locale}/services/web`}
-                          className={`mt-4 inline-flex items-center gap-2 text-xs font-bold ${isDarkNav ? "text-[#10b981] hover:text-[#34d399]" : "text-[#10b981] hover:text-[#059669]"}`}
-                          onClick={() => setActiveMenu(null)}
-                        >
-                          {t("view_all_services")}
-                          <ArrowRight size={14} />
-                        </Link>
-                      </>
+                      </div>
                     )}
                     {capabilitiesSub === "infrastructure" && (
                       <div className="space-y-5 flex-1 flex flex-col">
@@ -253,29 +265,6 @@ export default function Navbar() {
                             </div>
                           ))}
                         </div>
-                        <div className={`flex items-center justify-between gap-4 pt-6 mt-2 border-t ${dropBorder}`}>
-                          <Link
-                            href={`/${locale}/infrastructure/${infrastructureFeatured.slug}`}
-                            className="flex items-center gap-4 p-4 rounded-xl bg-[#10b981]/10 border border-[#10b981]/20 hover:bg-[#10b981]/15 transition-all flex-1 min-w-0"
-                            onClick={() => setActiveMenu(null)}
-                          >
-                            <span className="w-10 h-10 rounded-lg bg-[#10b981] flex items-center justify-center text-white shrink-0">
-                              {infrastructureFeatured.icon}
-                            </span>
-                            <div className="text-left min-w-0">
-                              <span className="text-[9px] font-black uppercase tracking-wider text-[#10b981]">{ti("featured_tag")}</span>
-                              <p className={`font-black text-xs ${dropTitle} mt-0.5`}>{infrastructureFeatured.label}</p>
-                              <span className="inline-flex items-center gap-1 text-[10px] font-bold text-[#10b981] mt-1">{ti("featured_link")} →</span>
-                            </div>
-                          </Link>
-                          <Link
-                            href={`/${locale}#contact`}
-                            className="shrink-0 px-4 py-2.5 rounded-xl bg-[#10b981] text-black font-bold text-xs hover:bg-[#059669] transition-all"
-                            onClick={() => setActiveMenu(null)}
-                          >
-                            {ti("footer_cta")}
-                          </Link>
-                        </div>
                       </div>
                     )}
                   </div>
@@ -288,12 +277,6 @@ export default function Navbar() {
             className={`transition-colors py-2 ${linkClass(pathname.includes("industries"))}`}
           >
             {t("industries")}
-          </Link>
-          <Link
-            href={`/${locale}/portfolio`}
-            className={`transition-colors py-2 ${linkClass(pathname.includes("portfolio"))}`}
-          >
-            {t("portfolio")}
           </Link>
           <Link
             href={`/${locale}/automations`}
@@ -350,7 +333,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-4 shrink-0">
           <div className="relative">
             <button
               type="button"
@@ -393,7 +376,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className="md:hidden flex flex-col space-y-1.5 cursor-pointer p-2 z-[110]"
+          className="lg:hidden flex flex-col space-y-1.5 cursor-pointer p-2 z-[110]"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -413,7 +396,7 @@ export default function Navbar() {
         typeof document !== "undefined" &&
         createPortal(
           <div
-            className={`md:hidden fixed inset-0 z-[9999] transition-all duration-300 ${
+            className={`lg:hidden fixed inset-0 z-[9999] transition-all duration-300 ${
               mobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
             }`}
           >
@@ -433,17 +416,20 @@ export default function Navbar() {
                 <div className="flex items-center justify-between w-full shrink-0 bg-white">
                   <Link
                     href={`/${locale}`}
-                    className="flex items-center space-x-3"
+                    className="flex items-center space-x-2"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    <Image
-                      src="/grovyn_logo.png"
-                      alt="Grovyn"
-                      width={100}
-                      height={34}
-                      className="h-8 w-auto object-contain"
-                      style={{ width: "auto" }}
-                    />
+                    <span className="relative h-8 shrink-0" style={{ width: "auto" }}>
+                      <Image
+                        src="/grovyn_logo.png"
+                        alt="Grovyn"
+                        width={100}
+                        height={34}
+                        className="object-contain"
+                        style={{ height: "2rem", width: "auto" }}
+                      />
+                    </span>
+                    <span className="text-lg font-black tracking-tight text-[#111]">rovyn</span>
                   </Link>
                   <button
                     type="button"
@@ -496,19 +482,19 @@ export default function Navbar() {
                   </Link>
                   <hr className="border-gray-100" />
                   <Link
-                    href={`/${locale}/portfolio`}
-                    className="flex items-center gap-4 font-bold"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {t("portfolio")}
-                  </Link>
-                  <hr className="border-gray-100" />
-                  <Link
                     href={`/${locale}/automations`}
                     className="flex items-center gap-4 font-bold"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {t("automations")}
+                  </Link>
+                  <hr className="border-gray-100" />
+                  <Link
+                    href={`/${locale}/about`}
+                    className="flex items-center gap-4 font-bold"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {t("about")}
                   </Link>
                   <hr className="border-gray-100" />
                   <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">

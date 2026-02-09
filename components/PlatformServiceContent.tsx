@@ -59,7 +59,7 @@ export default function PlatformServiceContent() {
 
   return (
     <div className="bg-[#050505] text-white min-h-screen overflow-x-hidden selection:bg-[#10b981] selection:text-black font-sans">
-      <section className="relative py-16 md:py-20 lg:py-24 px-3 md:px-6 lg:px-12 overflow-hidden">
+      <section className="relative min-h-[55vh] sm:min-h-[60vh] lg:min-h-[65vh] flex flex-col justify-center py-16 md:py-20 lg:py-24 px-3 md:px-6 lg:px-12 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-[-10%] right-[-10%] w-[800px] h-[800px] bg-[#10b981]/10 rounded-full blur-[120px] animate-pulse"></div>
           <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-[100px] animate-pulse delay-700"></div>
@@ -201,9 +201,7 @@ export default function PlatformServiceContent() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-6 lg:gap-8 md:auto-rows-[380px]">
-            {/* Billions of Events Card */}
             <div className="md:col-span-8 group relative bg-[#050505] rounded-xl md:rounded-[3.5rem] p-4 md:p-8 lg:p-12 overflow-hidden flex flex-col justify-between border border-white/5 shadow-2xl min-h-[240px] md:min-h-0">
-              {/* Animated background */}
               <div className="absolute inset-0 opacity-5 pointer-events-none">
                 <div className="absolute top-0 right-0 w-32 h-32 md:w-64 md:h-64 bg-[#10b981] rounded-full blur-3xl animate-pulse"></div>
               </div>
@@ -224,7 +222,6 @@ export default function PlatformServiceContent() {
                 <p className="text-gray-500 text-[10px] md:text-sm font-medium max-w-sm">Our platform backends are designed to process massive concurrent data streams with zero packet loss.</p>
               </div>
               
-              {/* Stats at bottom */}
               <div className="relative z-10 grid grid-cols-3 gap-2 md:gap-4 mt-4 md:mt-0">
                 <div className="bg-white/5 border border-white/10 rounded-lg md:rounded-xl p-2 md:p-3">
                   <div className="text-[#10b981] text-xs md:text-lg font-black">10B+</div>
@@ -241,9 +238,7 @@ export default function PlatformServiceContent() {
               </div>
             </div>
 
-            {/* 99.9% Uptime Card */}
             <div className="md:col-span-4 bg-[#10b981] rounded-xl md:rounded-[3.5rem] p-4 md:p-8 lg:p-12 flex flex-col justify-between items-center relative overflow-hidden group min-h-[240px] md:min-h-0">
-              {/* Decorative elements */}
               <div className="absolute inset-0 opacity-10 pointer-events-none">
                 <div className="absolute top-4 right-4 w-20 h-20 md:w-40 md:h-40 border-4 border-black rounded-full"></div>
                 <div className="absolute bottom-8 left-8 w-16 h-16 md:w-32 md:h-32 border-4 border-black rounded-lg rotate-12"></div>
@@ -278,9 +273,7 @@ export default function PlatformServiceContent() {
               </div>
             </div>
 
-            {/* Security Enclave Card */}
             <div className="md:col-span-5 bg-[#0a0a0a] rounded-xl md:rounded-[3.5rem] p-4 md:p-8 lg:p-12 text-white flex flex-col justify-between relative overflow-hidden min-h-[240px] md:min-h-0">
-              {/* Animated scan line */}
               <div className="absolute top-0 left-0 w-full h-[2px] bg-[#10b981] shadow-[0_0_20px_#10b981] animate-[scan_3s_ease-in-out_infinite]"></div>
               
               <div className="absolute inset-0 opacity-5 pointer-events-none">
@@ -302,7 +295,6 @@ export default function PlatformServiceContent() {
                 <p className="text-gray-500 text-[10px] md:text-sm font-medium">Hardened infrastructure with Zero-Trust access and automated threat mitigation patterns.</p>
               </div>
               
-              {/* Security features */}
               <div className="relative z-10 flex flex-wrap gap-1.5 md:gap-2">
                 <div className="flex items-center gap-1 px-2 md:px-2.5 py-1 bg-white/5 border border-white/10 rounded-md md:rounded-lg text-[8px] md:text-[9px] font-bold text-white/80">
                   <Lock size={8} className="text-[#10b981] md:w-2.5 md:h-2.5" />
@@ -320,7 +312,6 @@ export default function PlatformServiceContent() {
             </div>
 
             <div className="md:col-span-7 bg-[#f8f9fa] border border-gray-100 rounded-xl md:rounded-[3.5rem] p-4 md:p-8 lg:p-12 flex flex-col justify-between shadow-inner min-h-[200px] md:min-h-0 gap-3 relative overflow-hidden">
-              {/* Decorative background pattern */}
               <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
                 <div className="absolute top-4 right-4 w-16 h-16 md:w-32 md:h-32 border-2 border-gray-900 rounded-lg md:rounded-2xl rotate-12"></div>
                 <div className="absolute bottom-8 left-8 w-12 h-12 md:w-24 md:h-24 border-2 border-gray-900 rounded-full"></div>
@@ -345,7 +336,6 @@ export default function PlatformServiceContent() {
                 </div>
               </div>
               
-              {/* Feature badges at bottom */}
               <div className="relative z-10 flex flex-wrap gap-1.5 md:gap-2">
                 <div className="inline-flex items-center gap-1.5 px-2 md:px-3 py-1 md:py-1.5 bg-white border border-gray-200 rounded-lg md:rounded-xl text-[9px] md:text-xs font-bold text-gray-700">
                   <Box size={10} className="text-[#10b981] md:w-3 md:h-3" />

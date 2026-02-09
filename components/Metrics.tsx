@@ -21,9 +21,8 @@ export default function Metrics() {
 
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 md:grid-rows-[auto_auto] md:auto-rows-fr">
-          {/* Card 1: 25+ Production System Deliveries - top left */}
           <div className="bg-white p-5 sm:p-6 lg:p-8 rounded-2xl sm:rounded-[1.75rem] border border-gray-100 shadow-sm flex flex-col md:col-start-1 md:row-start-1">
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111] mb-1 sm:mb-2">25+</h3>
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111] mb-1 sm:mb-2">{t("deliveries_value")}</h3>
             <p className="text-gray-500 text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-3 sm:mb-4">
               {t("deliveries_label")}
             </p>
@@ -32,7 +31,6 @@ export default function Metrics() {
             </p>
           </div>
 
-          {/* Card 2: Global Delivery - spans 2 rows, with chat mockup */}
           <div className="bg-white p-5 sm:p-6 lg:p-8 rounded-2xl sm:rounded-[1.75rem] border border-gray-100 shadow-sm flex flex-col md:col-start-2 md:row-start-1 md:row-span-2">
             <h4 className="text-base sm:text-lg font-black text-[#111] mb-3 sm:mb-4 leading-tight">
               {t("global_delivery_title")}
@@ -82,7 +80,6 @@ export default function Metrics() {
             </div>
           </div>
 
-          {/* Card 3: 2-4 Weeks - top middle-right */}
           <div className="bg-white p-5 sm:p-6 lg:p-8 rounded-2xl sm:rounded-[1.75rem] border border-gray-100 shadow-sm flex flex-col md:col-start-3 md:row-start-1">
             <h3 className="text-3xl sm:text-4xl font-black text-[#111] mb-1 sm:mb-2">2–4 weeks</h3>
             <p className="text-gray-500 text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-3 sm:mb-4">
@@ -93,7 +90,6 @@ export default function Metrics() {
             </p>
           </div>
 
-          {/* Card 4: 45 Day - top right */}
           <div className="bg-white p-5 sm:p-6 lg:p-8 rounded-2xl sm:rounded-[1.75rem] border border-gray-100 shadow-sm flex flex-col md:col-start-4 md:row-start-1">
             <h3 className="text-3xl sm:text-4xl font-black text-[#111] mb-1 sm:mb-2">45 day</h3>
             <p className="text-gray-500 text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-3 sm:mb-4">
@@ -104,7 +100,6 @@ export default function Metrics() {
             </p>
           </div>
 
-          {/* Card 5: Transparent and Fixed Pricing - bottom left */}
           <div className="bg-white p-5 sm:p-6 lg:p-8 rounded-2xl sm:rounded-[1.75rem] border border-gray-100 shadow-sm flex flex-col justify-between md:col-start-1 md:row-start-2">
             <div>
               <h4 className="text-base sm:text-lg font-black text-[#111] mb-3 sm:mb-4 leading-tight">
@@ -125,7 +120,6 @@ export default function Metrics() {
             </Link>
           </div>
 
-          {/* Card 6: Full Ownership - bottom right, spans remaining width */}
           <div className="bg-white p-5 sm:p-6 lg:p-8 rounded-2xl sm:rounded-[1.75rem] border border-gray-100 shadow-sm flex flex-row items-center gap-6 sm:gap-8 md:col-start-3 md:col-span-2 md:row-start-2">
             <div className="min-w-0 flex-1 space-y-2 sm:space-y-3">
               <h4 className="text-base sm:text-2xl lg:text-3xl font-black text-[#111] leading-tight">

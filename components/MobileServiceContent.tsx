@@ -62,7 +62,7 @@ export default function MobileServiceContent() {
 
   return (
     <div className="bg-[#050505] text-white min-h-screen pt-0 overflow-x-hidden selection:bg-[#10b981] selection:text-black font-sans">
-      <section className="relative py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-12 overflow-hidden">
+      <section className="relative min-h-[55vh] sm:min-h-[60vh] lg:min-h-[65vh] flex flex-col justify-center py-15 sm:py-15 lg:py-24 px-4 sm:px-6 lg:px-12 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1537498425277-c283d32ef9db?auto=format&fit=crop&q=80&w=2000"

@@ -19,7 +19,6 @@ export default function TechnologyStack() {
 
   return (
     <section className="relative py-20 lg:py-32 px-6 lg:px-12 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-purple-50/30">
-      {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
@@ -28,7 +27,6 @@ export default function TechnologyStack() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex justify-center mb-2">
           <div className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white/80 backdrop-blur-xl border-2 border-purple-200/50 shadow-lg shadow-purple-500/10 hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300 relative overflow-hidden">
-            {/* Gradient overlay on hover */}
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             
             <span className="relative w-3 h-3 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 shrink-0 shadow-lg shadow-purple-500/50" aria-hidden>
@@ -38,7 +36,6 @@ export default function TechnologyStack() {
           </div>
         </div>
 
-        {/* SVG connections - only on desktop with enhanced styling */}
         <div className="relative h-32 w-full hidden min-[1100px]:block" aria-hidden="true">
           <svg 
             viewBox="0 0 1000 120" 
@@ -68,15 +65,19 @@ export default function TechnologyStack() {
               const yStart = 0;
               const yEnd = 120;
               
+              const isCenterBranch = Math.abs(xEnd - xStart) < 1;
               const controlX1 = xStart;
               const controlY1 = yStart + 40;
               const controlX2 = xEnd;
               const controlY2 = yEnd - 40;
+              const pathD = isCenterBranch
+                ? `M ${xStart} ${yStart} L ${xEnd} ${yEnd}`
+                : `M ${xStart} ${yStart} C ${controlX1} ${controlY1}, ${controlX2} ${controlY2}, ${xEnd} ${yEnd}`;
               
               return (
                 <g key={i}>
                   <path
-                    d={`M ${xStart} ${yStart} C ${controlX1} ${controlY1}, ${controlX2} ${controlY2}, ${xEnd} ${yEnd}`}
+                    d={pathD}
                     fill="none"
                     stroke={`url(#desktop-gradient-${i})`}
                     strokeWidth="2.5"
@@ -98,7 +99,6 @@ export default function TechnologyStack() {
           </svg>
         </div>
 
-        {/* Desktop view (≥1100px): 5 columns with enhanced styling */}
         <div className="hidden min-[1100px]:grid grid-cols-5 gap-6 xl:gap-8">
           {categories.map((category, index) => {
             const style = BRANCH_COLORS[index];
@@ -107,7 +107,6 @@ export default function TechnologyStack() {
                 <div
                   className={`w-full flex items-center gap-2.5 px-5 py-3.5 rounded-2xl ${style.bg} border-2 ${style.border} shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] backdrop-blur-sm bg-opacity-80 relative overflow-hidden will-change-transform`}
                 >
-                  {/* Shine effect on hover */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                   
                   <span
@@ -133,7 +132,6 @@ export default function TechnologyStack() {
                       <div
                         className={`w-full flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white/90 backdrop-blur-sm border ${style.border} shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.02] hover:-translate-y-0.5 relative overflow-hidden group/item will-change-transform`}
                       >
-                        {/* Subtle gradient background */}
                         <div className={`absolute inset-0 ${style.bg} opacity-0 group-hover/item:opacity-50 transition-opacity duration-300`} />
                         
                         <span
@@ -152,10 +150,8 @@ export default function TechnologyStack() {
           })}
         </div>
 
-        {/* Tablet/Medium view (640px-1099px): Enhanced curved connections */}
         <div className="hidden min-[640px]:block min-[1100px]:hidden mt-8">
-          {/* Enhanced SVG connection tree with smooth curves */}
-          <div className="relative h-40 w-full mb-8" aria-hidden="true">
+          <div className="relative h-45 w-full mb-4" aria-hidden="true">
             <svg 
               viewBox="0 0 1000 160" 
               className="absolute inset-0 w-full h-full"
@@ -178,7 +174,6 @@ export default function TechnologyStack() {
                 </filter>
               </defs>
               
-              {/* Main vertical from root with glow */}
               <line
                 x1="500"
                 y1="0"
@@ -190,7 +185,6 @@ export default function TechnologyStack() {
                 filter="url(#tablet-glow)"
               />
               
-              {/* Curved branches to each category */}
               {categories.map((_, i) => {
                 const totalCategories = categories.length;
                 const spacing = 800 / (totalCategories + 1);
@@ -199,15 +193,19 @@ export default function TechnologyStack() {
                 const yStart = 50;
                 const yEnd = 160;
                 
+                const isCenterBranch = Math.abs(xEnd - xStart) < 1;
                 const controlX1 = xStart;
                 const controlY1 = yStart + 40;
                 const controlX2 = xEnd;
                 const controlY2 = yEnd - 40;
+                const pathD = isCenterBranch
+                  ? `M ${xStart} ${yStart} L ${xEnd} ${yEnd}`
+                  : `M ${xStart} ${yStart} C ${controlX1} ${controlY1}, ${controlX2} ${controlY2}, ${xEnd} ${yEnd}`;
                 
                 return (
                   <g key={i}>
                     <path
-                      d={`M ${xStart} ${yStart} C ${controlX1} ${controlY1}, ${controlX2} ${controlY2}, ${xEnd} ${yEnd}`}
+                      d={pathD}
                       fill="none"
                       stroke={`url(#tablet-gradient-${i})`}
                       strokeWidth="3.5"
@@ -218,7 +216,6 @@ export default function TechnologyStack() {
                 );
               })}
               
-              {/* Decorative glowing dots with enhanced styling */}
               <circle cx="500" cy="50" r="6" fill="#a78bfa" opacity="1" filter="url(#tablet-glow)">
                 <animate attributeName="r" values="6;7.5;6" dur="2.5s" repeatCount="indefinite" />
                 <animate attributeName="opacity" values="1;0.8;1" dur="2.5s" repeatCount="indefinite" />
@@ -262,7 +259,6 @@ export default function TechnologyStack() {
                   <div
                     className={`flex items-center gap-2.5 px-5 py-3.5 rounded-2xl ${style.bg} border-2 ${style.border} shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] whitespace-nowrap backdrop-blur-sm bg-opacity-80 relative overflow-hidden will-change-transform`}
                   >
-                    {/* Shine effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                     
                     <span
@@ -288,7 +284,6 @@ export default function TechnologyStack() {
                         <div
                           className={`flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white/90 backdrop-blur-sm border ${style.border} shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.02] hover:-translate-y-0.5 whitespace-nowrap relative overflow-hidden group/item will-change-transform`}
                         >
-                          {/* Subtle gradient background */}
                           <div className={`absolute inset-0 ${style.bg} opacity-0 group-hover/item:opacity-50 transition-opacity duration-300`} />
                           
                           <span
@@ -307,9 +302,7 @@ export default function TechnologyStack() {
             })}
           </div>
         </div>
-        {/* Mobile view (<640px): Redesigned card-based layout */}
         <div className="flex min-[640px]:hidden flex-col items-stretch mt-8 px-4 gap-6">
-          {/* Main vertical line from root with animated glow */}
           <div className="flex justify-center">
             <div className="relative w-1 h-12 rounded-full bg-gradient-to-b from-purple-500 via-purple-400 to-transparent" aria-hidden>
               <div className="absolute inset-0 bg-purple-500 blur-md opacity-40 animate-pulse" />
@@ -322,9 +315,7 @@ export default function TechnologyStack() {
             
             return (
               <div key={index} className="flex flex-col">
-                {/* Category Card */}
                 <div className={`rounded-2xl ${style.bg} border-2 ${style.border} shadow-xl overflow-hidden backdrop-blur-sm bg-opacity-90`}>
-                  {/* Category Header */}
                   <div className="relative px-4 py-4 border-b-2 border-current" style={{ borderColor: BRANCH_COLORS[index].line }}>
                     <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-transparent" />
                     <div className="relative flex items-center gap-3">
@@ -341,17 +332,14 @@ export default function TechnologyStack() {
                     </div>
                   </div>
                   
-                  {/* Items Grid */}
                   <div className="p-3 grid grid-cols-2 gap-2">
                     {category.items.map((item, i) => (
                       <div
                         key={i}
                         className="group relative bg-white/80 backdrop-blur-sm rounded-xl px-3 py-2.5 border border-gray-200/50 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] overflow-hidden will-change-transform"
                       >
-                        {/* Gradient overlay on tap/hover */}
                         <div className={`absolute inset-0 ${style.bg} opacity-0 group-hover:opacity-40 group-active:opacity-60 transition-opacity duration-300`} />
                         
-                        {/* Content */}
                         <div className="relative flex items-center gap-2 min-w-0">
                           <span
                             className={`w-1.5 h-1.5 rounded-full ${style.dot} shrink-0 shadow-sm`}
@@ -362,7 +350,6 @@ export default function TechnologyStack() {
                           </span>
                         </div>
                         
-                        {/* Corner accent */}
                         <div 
                           className="absolute top-0 right-0 w-8 h-8 opacity-10"
                           style={{
@@ -374,7 +361,6 @@ export default function TechnologyStack() {
                   </div>
                 </div>
                 
-                {/* Connector to next category */}
                 {!isLast && (
                   <div className="flex justify-center py-3">
                     <div className="flex flex-col items-center gap-1">

@@ -105,42 +105,42 @@ export default function WebServiceContent() {
             </div>
           </div>
 
-          <div className="relative group hidden lg:block">
-            <div className="absolute -inset-10 bg-[#10b981]/20 rounded-full blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-            <div className="relative bg-white/5 border border-white/10 rounded-[3rem] p-8 backdrop-blur-xl shadow-2xl transform transition-transform duration-1000 group-hover:rotate-1 group-hover:scale-[1.02]">
-              <div className="flex items-center justify-between mb-8 border-b border-white/5 pb-6">
-                <div className="flex space-x-2">
-                  <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500/50"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500/50"></div>
+          <div className="relative group hidden lg:block w-full max-w-[380px] xl:max-w-[420px]">
+            <div className="absolute -inset-8 bg-[#10b981]/20 rounded-full blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+            <div className="relative bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur-xl shadow-2xl transform transition-transform duration-1000 group-hover:rotate-1 group-hover:scale-[1.02]">
+              <div className="flex items-center justify-between mb-4 border-b border-white/5 pb-4">
+                <div className="flex space-x-1.5">
+                  <div className="w-2.5 h-2.5 rounded-full bg-red-500/50"></div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50"></div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-green-500/50"></div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <Activity size={14} className="text-[#10b981] animate-pulse" />
-                  <span className="text-[10px] font-mono text-white/30 uppercase tracking-[0.2em]">Deploying_Cluster_01</span>
+                <div className="flex items-center space-x-2">
+                  <Activity size={12} className="text-[#10b981] animate-pulse" />
+                  <span className="text-[9px] font-mono text-white/30 uppercase tracking-[0.15em]">Deploying_Cluster_01</span>
                 </div>
               </div>
 
-              <div className="space-y-8">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white/5 p-6 rounded-3xl border border-white/5 space-y-3">
-                    <span className="text-[10px] font-black uppercase tracking-widest text-gray-500">Node Status</span>
-                    <div className="text-3xl font-black text-[#10b981]">Healthy</div>
+              <div className="space-y-5">
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="bg-white/5 p-4 rounded-2xl border border-white/5 space-y-1.5">
+                    <span className="text-[9px] font-black uppercase tracking-widest text-gray-500">Node Status</span>
+                    <div className="text-xl font-black text-[#10b981]">Healthy</div>
                   </div>
-                  <div className="bg-white/5 p-6 rounded-3xl border border-white/5 space-y-3">
-                    <span className="text-[10px] font-black uppercase tracking-widest text-gray-500">Latency</span>
-                    <div className="text-3xl font-black text-[#10b981]">12ms</div>
+                  <div className="bg-white/5 p-4 rounded-2xl border border-white/5 space-y-1.5">
+                    <span className="text-[9px] font-black uppercase tracking-widest text-gray-500">Latency</span>
+                    <div className="text-xl font-black text-[#10b981]">12ms</div>
                   </div>
                 </div>
-                <div className="h-32 w-full bg-black/40 rounded-3xl border border-white/5 p-4 flex items-end gap-1">
+                <div className="h-20 w-full bg-black/40 rounded-2xl border border-white/5 p-3 flex items-end gap-0.5">
                   {[40, 70, 55, 90, 45, 80, 60, 95, 40, 60, 85].map((h, i) => (
-                    <div key={i} className="flex-1 bg-[#10b981]/40 rounded-t-lg group-hover:bg-[#10b981] transition-all" style={{ height: `${h}%`, transitionDelay: `${i * 50}ms` }}></div>
+                    <div key={i} className="flex-1 bg-[#10b981]/40 rounded-t-md group-hover:bg-[#10b981] transition-all" style={{ height: `${h}%`, transitionDelay: `${i * 50}ms` }}></div>
                   ))}
                 </div>
-                <div className="space-y-4">
-                  <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                <div className="space-y-2">
+                  <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden">
                     <div className="h-full w-[85%] bg-gradient-to-r from-emerald-500 to-[#10b981] rounded-full"></div>
                   </div>
-                  <div className="flex justify-between text-[9px] font-black uppercase tracking-[0.3em] text-white/20">
+                  <div className="flex justify-between text-[8px] font-black uppercase tracking-[0.2em] text-white/20">
                     <span>Build Progress</span>
                     <span>85% Optimized</span>
                   </div>

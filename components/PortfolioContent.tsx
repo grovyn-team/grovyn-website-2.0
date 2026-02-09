@@ -271,7 +271,7 @@ export default function PortfolioContent() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-6 sm:gap-8 md:gap-10 items-start">
-            <div className="lg:col-span-8 group relative rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3.5rem] overflow-hidden border border-white/5 shadow-2xl transition-all duration-700 hover:-translate-y-3">
+            <div className="lg:col-span-8 group relative rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3.5rem] overflow-hidden border border-white/5 shadow-2xl transition-shadow duration-300 hover:shadow-[0_24px_48px_-12px_rgba(0,0,0,0.25)]">
               <div className="aspect-[16/10] md:aspect-[16/8] relative">
                 <Image
                   src={projects[0].image}
@@ -280,37 +280,41 @@ export default function PortfolioContent() {
                   className="object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[2s]"
                   sizes="(max-width: 1024px) 100vw, 66vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-                <div className="absolute top-4 sm:top-6 lg:top-8 left-4 sm:left-6 lg:left-8 space-y-1">
-                  <span className="text-[7px] sm:text-[8px] font-mono font-black text-[#10b981] tracking-[0.4em] uppercase">
-                    SYSTEM_ARCHIVE_{projects[0].dossierId}
-                  </span>
-                  <h4 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-black text-white tracking-tighter italic">
-                    {projects[0].name}
-                  </h4>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                <div className="absolute top-4 sm:top-6 lg:top-8 left-4 sm:left-6 lg:left-8 right-4 sm:right-6 lg:right-8 max-w-xl">
+                  <div className="rounded-xl sm:rounded-2xl bg-black/60 backdrop-blur-md px-4 sm:px-5 lg:px-6 py-3 sm:py-4 shadow-lg border border-white/5">
+                    <div className="space-y-1 pointer-events-none">
+                      <span className="text-[7px] sm:text-[8px] font-mono font-black text-[#10b981] tracking-[0.4em] uppercase">
+                        SYSTEM_ARCHIVE_{projects[0].dossierId}
+                      </span>
+                      <h4 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-black text-white tracking-tighter italic">
+                        {projects[0].name}
+                      </h4>
+                    </div>
+                  </div>
                 </div>
-                <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-8 right-4 sm:right-6 lg:right-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4 sm:gap-6">
-                  <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 lg:space-x-8">
+                <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-8 right-4 sm:right-6 lg:right-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4 sm:gap-6 pointer-events-none">
+                  <div className="rounded-xl sm:rounded-2xl bg-black/60 backdrop-blur-md px-4 sm:px-5 lg:px-6 py-3 sm:py-4 shadow-lg border border-white/5 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 lg:space-x-8">
                     <div className="flex flex-col">
-                      <span className="text-[9px] sm:text-[10px] font-black uppercase text-white/40 tracking-widest">
+                      <span className="text-[9px] sm:text-[10px] font-black uppercase text-white/90 tracking-widest">
                         Reliability
                       </span>
                       <span className="text-xl sm:text-2xl font-black text-[#10b981]">99.99%</span>
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-[9px] sm:text-[10px] font-black uppercase text-white/40 tracking-widest">
+                      <span className="text-[9px] sm:text-[10px] font-black uppercase text-white/90 tracking-widest">
                         Deployment
                       </span>
                       <span className="text-xl sm:text-2xl font-black text-white">Global Edge</span>
                     </div>
                   </div>
-                  <button
-                    type="button"
-                    className="bg-[#10b981] text-black w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl flex items-center justify-center hover:scale-110 transition-transform shadow-xl shrink-0"
-                  >
-                    <ArrowUpRight size={20} className="sm:w-6 sm:h-6" />
-                  </button>
                 </div>
+                <button
+                  type="button"
+                  className="absolute bottom-4 sm:bottom-6 lg:bottom-8 right-4 sm:right-6 lg:right-8 bg-[#10b981] text-black w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl flex items-center justify-center hover:scale-110 transition-transform shadow-xl shrink-0 pointer-events-auto"
+                >
+                  <ArrowUpRight size={20} className="sm:w-6 sm:h-6" />
+                </button>
               </div>
             </div>
 

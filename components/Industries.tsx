@@ -224,14 +224,14 @@ export default function Industries() {
 
           <div className={`flex flex-col lg:flex-row items-stretch gap-3 sm:gap-6 lg:gap-12 relative z-10 transition-opacity duration-300 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}>
             <div className="w-full lg:w-[46%] relative lg:min-h-0 flex flex-col">
-              <div className="rounded-[1rem] overflow-hidden aspect-[1.15/1] sm:aspect-[3.5/2] lg:aspect-auto lg:min-h-0 lg:flex-1 lg:h-full shadow-xl relative border-2 sm:border-4 border-white/40 group">
+              <div className="rounded-[1rem] overflow-hidden aspect-[1.15/1] sm:aspect-[3.5/2] lg:aspect-[4/3] shadow-xl relative border-2 sm:border-4 border-white/40 group">
                 <div className="absolute inset-0">
                   <Image
                     key={current.id}
                     src={current.image}
                     alt={current.title}
                     fill
-                    className="object-cover grayscale-[0.1] transition-transform duration-1000 group-hover:scale-105"
+                    className="object-cover object-center grayscale-[0.1] transition-transform duration-1000 group-hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 46vw"
                     priority
                   />

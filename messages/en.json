@@ -88,7 +88,13 @@
       "mobile_desc": "iOS and Android development",
       "platform": "Platform Design",
       "platform_desc": "system architecture planning"
-    }
+    },
+    "services_web_title": "Web & Applications",
+    "services_web_subtitle": "Web applications and platforms",
+    "services_mobile_title": "Mobile",
+    "services_mobile_subtitle": "iOS and Android development",
+    "services_platform_title": "Platform",
+    "services_platform_subtitle": "System architecture planning"
   },
   "services_we_offer": {
     "badge": "What we build",
@@ -103,7 +109,7 @@
     "cta_link": "See what we do"
   },
   "industries": {
-    "badge": "Where we work",
+    "badge": "Solutions by Industry",
     "title_line1": "Building software for",
     "title_line2": "growing businesses",
     "title_highlight": "across sectors",
@@ -120,8 +126,8 @@
         "Telemedicine platforms",
         "Healthcare software products"
       ],
-      "projects": "5+",
-      "uptime": "99.99%"
+      "projects": "2+",
+      "uptime": "99.9%"
     },
     "fintech": {
       "title": "Financial Technology",
@@ -132,8 +138,8 @@
         "Lending systems",
         "Financial data platforms"
       ],
-      "projects": "5+",
-      "uptime": "100%"
+      "projects": "2+",
+      "uptime": "99.9%"
     },
     "ecommerce": {
       "title": "E‑Commerce & Retail",
@@ -144,8 +150,8 @@
         "Direct-to-consumer and B2B stores",
         "Fulfillment and logistics systems"
       ],
-      "projects": "7+",
-      "uptime": "99.98%"
+      "projects": "2+",
+      "uptime": "99.9%"
     },
     "edtech": {
       "title": "Education Technology",
@@ -156,8 +162,8 @@
         "Assessment and progress tracking",
         "Content and course delivery"
       ],
-      "projects": "3+",
-      "uptime": "99.95%"
+      "projects": "2+",
+      "uptime": "99.9%"
     },
     "media": {
       "title": "Media & Content Platforms",
@@ -168,8 +174,8 @@
         "Audience and analytics tools",
         "Monetization and subscriptions"
       ],
-      "projects": "3+",
-      "uptime": "99.97%"
+      "projects": "2+",
+      "uptime": "99.9%"
     },
     "construction": {
       "title": "Construction & Real Estate Tech",
@@ -210,8 +216,9 @@
   "metrics": {
     "title": "How we work",
     "subtitle": "We focus on clear communication, realistic timelines, and building systems that continue to work well as your business grows.",
+    "deliveries_value": "2+",
     "deliveries_label": "Production system deliveries",
-    "deliveries_desc": "We deliver digital systems across stages of growth with care, structure, and accountability.",
+    "deliveries_desc": "We deliver digital systems with care, structure, and accountability. Early-stage startup, founded Dec 2025.",
     "pricing_title": "Transparent and fixed pricing",
     "pricing_desc": "Scope, responsibilities, and costs defined upfront. No surprises.",
     "get_quote": "Get free quote",
@@ -246,6 +253,7 @@
     "working_hours": "Working hours",
     "whatsapp_us": "WhatsApp us",
     "whatsapp_subtitle": "Quick response via WhatsApp",
+    "book_discovery_call": "Book Discovery Call",
     "response_note": "We respond to all inquiries within 24 hours (usually within 4 hours during business hours).",
     "title_line1": "Let's talk about",
     "title_highlight": "your project",
@@ -468,11 +476,11 @@
     "badge": "Our stack",
     "root_label": "Our Tech-Stacks",
     "categories": [
-      { "title": "Web Development", "items": ["React", "Next.js", "Node.js", "Express", "MongoDB", "PostgreSQL"] },
-      { "title": "Mobile Development", "items": ["React Native", "Flutter", "Expo", "Android", "iOS"] },
-      { "title": "Cloud & DevOps", "items": ["AWS", "Docker", "Kubernetes", "CI/CD", "Serverless", "Terraform"] },
-      { "title": "AI & Data", "items": ["Machine Learning", "NLP", "Computer Vision", "Python", "TensorFlow", "PyTorch"] },
-      { "title": "Blockchain & Web3", "items": ["Ethereum", "Solidity", "Web3.js", "NFTs", "DeFi"] }
+      { "title": "Web Development", "items": ["React", "Next.js", "Node.js"] },
+      { "title": "Mobile Development", "items": ["React Native", "Flutter", "Android", "iOS"] },
+      { "title": "Cloud & DevOps", "items": ["AWS", "Docker", "Kubernetes", "Terraform"] },
+      { "title": "AI & Data", "items": ["Machine Learning", "NLP", "Computer Vision", "Python"] },
+      { "title": "Blockchain & Web3", "items": ["Ethereum", "Solidity", "Web3.js"] }
     ]
   },
   "ai_section": {
@@ -523,9 +531,9 @@
       "dedicated_desc": "We become part of your team. You'll talk directly to the people building your product, and you'll always know what's happening.",
       "dedicated_cta": "See our work",
       "metrics": [
-        { "value": "150+", "label": "Projects shipped" },
-        { "value": "2.4s", "label": "Average page load" },
-        { "value": "$40M+", "label": "Transaction value processed" }
+        { "value": "2+", "label": "Projects shipped" },
+        { "value": "2.4s", "label": "Target page load" },
+        { "value": "Dec 2025", "label": "Founded" }
       ],
       "methodology_heading": "Our process",
       "methodology_subheading": "Clear steps from start to finish",
@@ -744,7 +752,7 @@
     "template_cta_quote": "Let's talk about your infrastructure needs and how we can help.",
     "template_consultation": "Get in touch",
     "template_explore_portfolio": "See our work",
-    "template_expert_engineers": "Experienced engineers",
+    "template_expert_engineers": "Engineers on your side",
     "template_lead_architect": "Infrastructure Engineer",
     "features_title": "What we deliver",
     "process_title": "How we work",
@@ -758,18 +766,18 @@
         "title": "Cloud",
         "title_highlight": "Infrastructure",
         "title_suffix": "",
-        "subtitle": "We help teams move to cloud infrastructure and manage it reliably. AWS, Azure, and Google Cloud.",
+        "subtitle": "Whether you're on AWS, Azure, or Google Cloud—we help you get there and keep everything running smoothly so your team can focus on building.",
         "hero_metrics": [
           { "value": "3", "label": "Cloud platforms" },
-          { "value": "10K+", "label": "VMs managed" },
-          { "value": "99.99%", "label": "Reliability" },
-          { "value": "40%", "label": "Cost reduction" }
+          { "value": "Pilot", "label": "Scale" },
+          { "value": "99.9%", "label": "Target uptime" },
+          { "value": "Lean", "label": "Cost focus" }
         ],
         "features": ["Cloud migration", "Cloud backup", "Cost optimization", "Hybrid cloud", "Security", "Managed services"],
         "process_steps": [
-          { "step": "01", "title": "Assessment", "desc": "Review current setup and plan the migration." },
-          { "step": "02", "title": "Migration", "desc": "Move systems with minimal disruption." },
-          { "step": "03", "title": "Operation", "desc": "Ongoing management and optimization." }
+          { "step": "01", "title": "Assessment", "desc": "We take a close look at what you have today and design a migration path that fits your timeline and risk tolerance." },
+          { "step": "02", "title": "Migration", "desc": "We move your workloads in phases so your business keeps running—no big-bang cutover unless you want one." },
+          { "step": "03", "title": "Operation", "desc": "Once you're on the cloud, we help you run it well: cost control, reliability, and clear visibility." }
         ],
         "offerings": ["AWS", "Azure", "GCP", "Terraform", "Ansible"],
         "featured_projects_title": "Example projects",
@@ -784,18 +792,18 @@
         "title": "Network",
         "title_highlight": "Infrastructure",
         "title_suffix": "",
-        "subtitle": "We design and manage network infrastructure that keeps your business connected reliably.",
+        "subtitle": "From office and campus networks to secure remote access—we design and run networks that stay up and keep your teams connected.",
         "hero_metrics": [
-          { "value": "500+", "label": "Networks" },
-          { "value": "50K+", "label": "Devices" },
-          { "value": "Enterprise", "label": "Security" },
-          { "value": "99.9%", "label": "Uptime" }
+          { "value": "Design", "label": "Networks" },
+          { "value": "Pilot", "label": "Deployments" },
+          { "value": "Secure", "label": "By design" },
+          { "value": "99.9%", "label": "Target uptime" }
         ],
         "features": ["Network design", "VPN setup", "Firewall management", "Network monitoring", "SD-WAN", "Security"],
         "process_steps": [
-          { "step": "01", "title": "Design", "desc": "Plan network architecture for your needs." },
-          { "step": "02", "title": "Implementation", "desc": "Deploy with testing and validation." },
-          { "step": "03", "title": "Monitoring", "desc": "Ongoing monitoring and maintenance." }
+          { "step": "01", "title": "Design", "desc": "We map your sites, users, and apps so the network we design actually fits how you work." },
+          { "step": "02", "title": "Implementation", "desc": "We roll out in stages, test as we go, and make sure nothing goes dark when you flip the switch." },
+          { "step": "03", "title": "Monitoring", "desc": "We keep an eye on performance and availability so you hear about issues before your users do." }
         ],
         "offerings": ["Cisco", "Juniper", "Fortinet", "Ubiquiti"],
         "featured_projects_title": "Example projects",
@@ -810,18 +818,18 @@
         "title": "Server",
         "title_highlight": "Infrastructure",
         "title_suffix": "",
-        "subtitle": "We manage server infrastructure that stays reliable under load. Physical and virtual servers.",
+        "subtitle": "Whether it’s physical boxes or virtual—we keep your servers running, patched, and performing so your apps have a solid base.",
         "hero_metrics": [
-          { "value": "5K+", "label": "Servers" },
-          { "value": "10PB+", "label": "Storage" },
-          { "value": "20K+", "label": "VMs" },
-          { "value": "99.99%", "label": "Uptime" }
+          { "value": "Pilot", "label": "Servers" },
+          { "value": "Scalable", "label": "Storage" },
+          { "value": "Hybrid", "label": "VMs & physical" },
+          { "value": "99.9%", "label": "Target uptime" }
         ],
         "features": ["Virtualization", "Storage", "Server management", "High availability", "Performance tuning"],
         "process_steps": [
-          { "step": "01", "title": "Planning", "desc": "Size and design server infrastructure." },
-          { "step": "02", "title": "Deployment", "desc": "Install and configure systems." },
-          { "step": "03", "title": "Support", "desc": "Ongoing maintenance and updates." }
+          { "step": "01", "title": "Planning", "desc": "We size and design so you have enough capacity and headroom without overbuying." },
+          { "step": "02", "title": "Deployment", "desc": "We install, configure, and hand over a clean, documented setup." },
+          { "step": "03", "title": "Support", "desc": "We handle patches, monitoring, and changes so your servers stay healthy and secure." }
         ],
         "offerings": ["VMware", "Hyper-V", "KVM", "Dell EMC", "NetApp"],
         "featured_projects_title": "Example projects",
@@ -836,7 +844,7 @@
         "title": "Security",
         "title_highlight": "Services",
         "title_suffix": "",
-        "subtitle": "We help teams protect their systems and meet compliance requirements.",
+        "subtitle": "We help you lock down systems, stay compliant, and respond quickly when something doesn’t look right—so you can run with confidence.",
         "hero_metrics": [
           { "value": "SOC", "label": "Monitoring" },
           { "value": "24/7", "label": "Protection" },
@@ -844,9 +852,9 @@
         ],
         "features": ["Security hardening", "Access management", "Compliance audits", "Endpoint security", "Penetration testing", "Security monitoring"],
         "process_steps": [
-          { "step": "01", "title": "Assessment", "desc": "Identify security gaps and compliance needs." },
-          { "step": "02", "title": "Implementation", "desc": "Deploy security controls and policies." },
-          { "step": "03", "title": "Monitoring", "desc": "Ongoing monitoring and incident response." }
+          { "step": "01", "title": "Assessment", "desc": "We find where you're exposed and what compliance asks for, then lay out a plan that’s realistic and actionable." },
+          { "step": "02", "title": "Implementation", "desc": "We put controls and policies in place so security is built in, not bolted on." },
+          { "step": "03", "title": "Monitoring", "desc": "We watch for threats and anomalies and help you respond so small issues don’t become big ones." }
         ],
         "offerings": ["Firewall", "EDR", "IAM", "Compliance"],
         "technologies_used_title": "Security tools",
@@ -860,12 +868,14 @@
       },
       "support": {
         "title": "IT Support",
-        "subtitle": "24/7 technical support to keep your teams productive.",
+        "title_highlight": "",
+        "title_suffix": "",
+        "subtitle": "When something breaks or someone’s stuck, we’re there—so your teams can keep shipping instead of waiting on IT.",
         "features": ["24/7 helpdesk", "Tiered support", "Remote and on-site", "Asset management", "Knowledge base", "SLA reporting"],
         "process_steps": [
-          { "step": "01", "title": "Setup", "desc": "Define support scope and SLAs." },
-          { "step": "02", "title": "Support", "desc": "Handle incidents and requests." },
-          { "step": "03", "title": "Improvement", "desc": "Regular reviews and optimization." }
+          { "step": "01", "title": "Setup", "desc": "We agree on what’s in scope, how fast we’ll respond, and how we’ll work with your team day to day." },
+          { "step": "02", "title": "Support", "desc": "We handle tickets, fix issues, and answer questions so your people can focus on their work." },
+          { "step": "03", "title": "Improvement", "desc": "We look back at what’s breaking most and help you fix root causes so support gets easier over time." }
         ],
         "offerings": ["Helpdesk", "NOC", "On-site support", "Managed services"]
       },
@@ -873,18 +883,18 @@
         "title": "Backup &",
         "title_highlight": "Recovery",
         "title_suffix": "",
-        "subtitle": "We help protect your data with reliable backup and recovery systems.",
+        "subtitle": "We make sure your data is backed up, recoverable, and safe from ransomware—so when the worst happens, you’re ready.",
         "hero_metrics": [
-          { "value": "50PB+", "label": "Data protected" },
-          { "value": "1000+", "label": "Recoveries" },
-          { "value": "100+", "label": "DR sites" },
-          { "value": "99.9%", "label": "Success rate" }
+          { "value": "Pilot", "label": "Data protected" },
+          { "value": "Tested", "label": "Recovery drills" },
+          { "value": "DR ready", "label": "Design" },
+          { "value": "99.9%", "label": "Target success" }
         ],
         "features": ["Backup planning", "DR site setup", "Cloud DR", "RTO/RPO planning", "Ransomware recovery", "Business continuity"],
         "process_steps": [
-          { "step": "01", "title": "Assessment", "desc": "Define backup and recovery requirements." },
-          { "step": "02", "title": "Implementation", "desc": "Deploy backup and test recovery." },
-          { "step": "03", "title": "Maintenance", "desc": "Monitor backups and update plans." }
+          { "step": "01", "title": "Assessment", "desc": "We figure out what you need to protect, how fast you need it back, and what’s already in place." },
+          { "step": "02", "title": "Implementation", "desc": "We set up backup and run real recovery tests so you know it works when it matters." },
+          { "step": "03", "title": "Maintenance", "desc": "We watch backups, fix failures, and keep your runbooks and plans up to date." }
         ],
         "offerings": ["Veeam", "Acronis", "Azure Site Recovery", "AWS Backup"],
         "featured_projects_title": "Example projects",
@@ -899,18 +909,18 @@
         "title": "DevOps",
         "title_highlight": "Services",
         "title_suffix": "",
-        "subtitle": "We help teams automate deployment and manage infrastructure reliably.",
+        "subtitle": "We help you ship faster and safer with pipelines, infra-as-code, and automation that actually fits how your team works.",
         "hero_metrics": [
-          { "value": "1000+", "label": "Pipelines" },
-          { "value": "50K+", "label": "Containers" },
-          { "value": "500+", "label": "Deploys/day" },
-          { "value": "10x", "label": "Faster" }
+          { "value": "CI/CD", "label": "Pipelines" },
+          { "value": "Containers", "label": "Ready" },
+          { "value": "Automated", "label": "Deploys" },
+          { "value": "Faster", "label": "Ship speed" }
         ],
         "features": ["CI/CD pipelines", "Infrastructure as code", "Container orchestration", "Monitoring", "GitOps", "Cloud-native"],
         "process_steps": [
-          { "step": "01", "title": "Assessment", "desc": "Review current deployment process." },
-          { "step": "02", "title": "Automation", "desc": "Build pipelines and automation." },
-          { "step": "03", "title": "Operation", "desc": "Monitor and improve continuously." }
+          { "step": "01", "title": "Assessment", "desc": "We look at how you deploy today and where the bottlenecks and risks are—then propose a path that’s doable." },
+          { "step": "02", "title": "Automation", "desc": "We build CI/CD and automation so releases are repeatable, traceable, and less stressful." },
+          { "step": "03", "title": "Operation", "desc": "We help you run and tune pipelines and infra so things keep getting better, not just stable." }
         ],
         "offerings": ["Docker", "Kubernetes", "Terraform", "Jenkins", "Prometheus"],
         "featured_projects_title": "Example projects",
@@ -923,34 +933,40 @@
       },
       "datacenter": {
         "title": "Data Center Design",
-        "subtitle": "We help plan and operate data center facilities.",
+        "title_highlight": "",
+        "title_suffix": "",
+        "subtitle": "From strategy and design to build-out and day-two operations—we help you get the right facility and run it well.",
         "features": ["Strategy", "Power and cooling", "Layout design", "Monitoring", "Capacity planning"],
         "process_steps": [
-          { "step": "01", "title": "Strategy", "desc": "Define requirements and design." },
-          { "step": "02", "title": "Build", "desc": "Build-out and migration." },
-          { "step": "03", "title": "Operation", "desc": "Operate and optimize." }
+          { "step": "01", "title": "Strategy", "desc": "We work with you on capacity, location, and design so the facility matches your growth and risk profile." },
+          { "step": "02", "title": "Build", "desc": "We support build-out and migration so you move in without surprises or last-minute fixes." },
+          { "step": "03", "title": "Operation", "desc": "We help you operate and optimize so the DC stays reliable and efficient as demand changes." }
         ],
         "offerings": ["Design", "DCIM", "Power/cooling", "Compliance"]
       },
       "communication": {
         "title": "Communication Systems",
-        "subtitle": "We set up voice, video, and collaboration platforms.",
+        "title_highlight": "",
+        "title_suffix": "",
+        "subtitle": "We get your teams on one system for voice, video, and chat—so everyone can collaborate without juggling five different tools.",
         "features": ["VoIP", "Video conferencing", "Team messaging", "CRM integration", "Call centers", "Mobile access"],
         "process_steps": [
-          { "step": "01", "title": "Requirements", "desc": "Define needs and architecture." },
-          { "step": "02", "title": "Deployment", "desc": "Roll out and train users." },
-          { "step": "03", "title": "Support", "desc": "Ongoing support and updates." }
+          { "step": "01", "title": "Requirements", "desc": "We learn how you communicate today and what you need from a single platform." },
+          { "step": "02", "title": "Deployment", "desc": "We roll out the stack and train your people so adoption is smooth, not forced." },
+          { "step": "03", "title": "Support", "desc": "We handle changes, issues, and upgrades so the platform keeps working for you." }
         ],
         "offerings": ["Microsoft Teams", "Zoom", "Cisco", "SIP"]
       },
       "migration": {
-        "title": "Cloud Migration",
-        "subtitle": "We help teams move to cloud infrastructure with minimal disruption.",
+        "title": "Cloud &",
+        "title_highlight": "Migration",
+        "title_suffix": "",
+        "subtitle": "We move your workloads to the cloud in a way that fits your business—phased, low-risk, and with a clear path to turning off the old stuff.",
         "features": ["Migration planning", "Rehost or refactor", "Phased migration", "Zero-downtime goals", "Post-migration optimization", "Training"],
         "process_steps": [
-          { "step": "01", "title": "Discovery", "desc": "Inventory systems and plan migration." },
-          { "step": "02", "title": "Migration", "desc": "Execute in phases with testing." },
-          { "step": "03", "title": "Optimization", "desc": "Optimize and decommission old systems." }
+          { "step": "01", "title": "Discovery", "desc": "We map what you have, what depends on what, and build a migration plan that you can actually execute." },
+          { "step": "02", "title": "Migration", "desc": "We move in waves, test at each step, and keep rollback options so you’re never one mistake away from a crisis." },
+          { "step": "03", "title": "Optimization", "desc": "We tune cost and performance in the cloud and help you safely shut down the old environment." }
         ],
         "offerings": ["AWS Migration", "Azure Migrate", "VMware Cloud", "Database migration"]
       }
@@ -1049,9 +1065,9 @@
         "title_highlight": "Technology",
         "subtitle": "Software for health systems: electronic health records, telemedicine, hospital management, and healthcare platforms.",
         "hero_metrics": [
-          { "value": "5+", "label": "Projects" },
-          { "value": "99.99%", "label": "Uptime" },
-          { "value": "HIPAA", "label": "Compliant" }
+          { "value": "2+", "label": "Projects" },
+          { "value": "99.9%", "label": "Target uptime" },
+          { "value": "HIPAA", "label": "Ready" }
         ],
         "features": ["Hospital management", "Health records", "Telemedicine", "Healthcare platforms"],
         "process_steps": [
@@ -1065,8 +1081,8 @@
         "title_highlight": "Technology",
         "subtitle": "Banking platforms, payment systems, lending, and financial services software.",
         "hero_metrics": [
-          { "value": "5+", "label": "Projects" },
-          { "value": "100%", "label": "Uptime" }
+          { "value": "2+", "label": "Projects" },
+          { "value": "99.9%", "label": "Target uptime" }
         ],
         "features": ["Digital banking", "Payment processing", "Lending systems", "Asset management"],
         "process_steps": [
@@ -1080,8 +1096,8 @@
         "title_highlight": "Platforms",
         "subtitle": "Online stores, marketplaces, inventory systems, and B2B commerce.",
         "hero_metrics": [
-          { "value": "7+", "label": "Projects" },
-          { "value": "99.98%", "label": "Uptime" }
+          { "value": "2+", "label": "Projects" },
+          { "value": "99.9%", "label": "Target uptime" }
         ],
         "features": ["Marketplaces", "Inventory systems", "Online stores", "B2B commerce"],
         "process_steps": [
@@ -1095,7 +1111,7 @@
         "title_highlight": "Technology",
         "subtitle": "Learning management systems, course platforms, and education software.",
         "hero_metrics": [
-          { "value": "10+", "label": "Projects" }
+          { "value": "2+", "label": "Projects" }
         ],
         "features": ["Learning platforms", "Assessment tools", "Collaboration", "Mobile learning"],
         "process_steps": [
@@ -1109,7 +1125,7 @@
         "title_highlight": "Platforms",
         "subtitle": "Software products: multi-tenant architecture, subscriptions, and APIs.",
         "hero_metrics": [
-          { "value": "30+", "label": "Products" }
+          { "value": "2+", "label": "Products" }
         ],
         "features": ["Multi-tenant systems", "Subscriptions", "API-first design", "Analytics"],
         "process_steps": [

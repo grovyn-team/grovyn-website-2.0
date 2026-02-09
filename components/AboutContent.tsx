@@ -115,10 +115,9 @@ export default function AboutContent() {
 
   return (
     <div className="bg-white overflow-x-hidden selection:bg-[#10b981] selection:text-white">
-      {/* Hero */}
-      <section className="relative py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-12">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-14 sm:gap-20 lg:gap-24">
-          <div className={`lg:w-1/2 space-y-8 sm:space-y-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-6"}`}>
+      <section className="relative min-h-[55vh] sm:min-h-[60vh] lg:min-h-[65vh] flex flex-col justify-center py-8 sm:py-10 lg:py-14 px-4 sm:px-6 lg:px-12">
+        <div className="max-w-7xl mx-[100px] flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16">
+          <div className={`lg:w-1/2 space-y-5 sm:space-y-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-6"}`}>
             <nav className="flex items-center gap-2 text-[11px] sm:text-xs font-semibold uppercase tracking-widest text-gray-400">
               <Link href={`/${locale}`} className="hover:text-[#10b981] transition-colors">
                 Home
@@ -147,7 +146,7 @@ export default function AboutContent() {
             </Link>
           </div>
 
-          <div className="lg:w-1/2 w-full relative mt-8 lg:mt-0">
+          <div className="lg:w-1/2 w-full relative mt-6 lg:mt-0">
             <div className="relative rounded-3xl sm:rounded-[2.5rem] overflow-hidden shadow-[0_24px_48px_-12px_rgba(0,0,0,0.12)] ring-1 ring-black/5 aspect-[4/5] sm:aspect-square max-w-lg mx-auto lg:max-w-none">
               <Image
                 src={HERO_IMG}
@@ -176,7 +175,6 @@ export default function AboutContent() {
         </div>
       </section>
 
-      {/* Stats strip */}
       <section className="py-14 sm:py-20 px-4 sm:px-6 lg:px-12 bg-[#fafafa] border-y border-gray-100/80">
         <div className="max-w-5xl mx-auto">
           <p className="text-center text-gray-600 text-base sm:text-lg md:text-xl font-medium leading-relaxed max-w-2xl mx-auto mb-12 sm:mb-16">
@@ -194,7 +192,6 @@ export default function AboutContent() {
         </div>
       </section>
 
-      {/* Founder's note */}
       <section className="py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 bg-white">
         <div className="max-w-4xl mx-auto">
           <p className="text-center text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-[#10b981] mb-10 sm:mb-12">
@@ -309,7 +306,6 @@ export default function AboutContent() {
         </div>
       </section> */}
 
-      {/* Our story */}
       <section className="py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 bg-[#fafafa]">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-14 sm:gap-20 lg:gap-24">
           <div className="lg:w-1/2 w-full relative order-2 lg:order-1">
@@ -367,60 +363,6 @@ export default function AboutContent() {
         </div>
       </section>
 
-      {/* How we work — no video, 6-step grid */}
-      <section className="py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 bg-white">
-        <div className="max-w-7xl mx-auto space-y-12 sm:space-y-16">
-          <div className="text-center max-w-2xl mx-auto">
-            <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-[#10b981] mb-4">
-              Our process
-            </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-black tracking-tight text-[#111] mb-4">
-              How we <span className="text-[#10b981]">work</span>
-            </h2>
-            <p className="text-gray-600 text-base sm:text-lg font-medium leading-relaxed">
-              A transparent, efficient process designed for quality delivery and clear communication.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 items-stretch">
-            {processSteps.map((step, i) => (
-              <div
-                key={i}
-                className="rounded-2xl bg-white border border-gray-100 p-6 sm:p-7 shadow-sm hover:shadow-md hover:border-gray-200/80 transition-all duration-300"
-              >
-                <div className="flex flex-wrap items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-[#10b981] flex items-center justify-center text-white font-bold text-sm shrink-0">
-                    {i + 1}
-                  </div>
-                  <span className="text-[11px] font-semibold text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">
-                    {step.duration}
-                  </span>
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-[#111] tracking-tight mb-3">
-                  {step.title}
-                </h3>
-                <ul className="space-y-2.5 mb-5">
-                  {step.activities.map((activity, j) => (
-                    <li key={j} className="flex items-start gap-2.5 text-gray-600 text-sm font-medium leading-snug">
-                      <span className="w-4 h-4 rounded-full bg-[#10b981]/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <Check size={10} className="text-[#10b981]" strokeWidth={2.5} />
-                      </span>
-                      {activity}
-                    </li>
-                  ))}
-                </ul>
-                <div className="pt-3 border-t border-gray-100">
-                  <p className="text-gray-500 text-xs font-medium">
-                    <span className="text-[#10b981] font-semibold">Outcome:</span> {step.outcome}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
       <section className="py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 bg-[#fafafa]">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 sm:mb-16">
@@ -461,7 +403,6 @@ export default function AboutContent() {
         </div>
       </section>
 
-      {/* Values + CTA */}
       <section className="py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14 sm:mb-20">
@@ -523,6 +464,58 @@ export default function AboutContent() {
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 bg-white">
+        <div className="max-w-7xl mx-auto space-y-12 sm:space-y-16">
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-[#10b981] mb-4">
+              Our process
+            </p>
+            <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-black tracking-tight text-[#111] mb-4">
+              How we <span className="text-[#10b981]">work</span>
+            </h2>
+            <p className="text-gray-600 text-base sm:text-lg font-medium leading-relaxed">
+              A transparent, efficient process designed for quality delivery and clear communication.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 items-stretch">
+            {processSteps.map((step, i) => (
+              <div
+                key={i}
+                className="rounded-2xl bg-white border border-gray-100 p-6 sm:p-7 shadow-sm hover:shadow-md hover:border-gray-200/80 transition-all duration-300"
+              >
+                <div className="flex flex-wrap items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-[#10b981] flex items-center justify-center text-white font-bold text-sm shrink-0">
+                    {i + 1}
+                  </div>
+                  <span className="text-[11px] font-semibold text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">
+                    {step.duration}
+                  </span>
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-[#111] tracking-tight mb-3">
+                  {step.title}
+                </h3>
+                <ul className="space-y-2.5 mb-5">
+                  {step.activities.map((activity, j) => (
+                    <li key={j} className="flex items-start gap-2.5 text-gray-600 text-sm font-medium leading-snug">
+                      <span className="w-4 h-4 rounded-full bg-[#10b981]/10 flex items-center justify-center shrink-0 mt-0.5">
+                        <Check size={10} className="text-[#10b981]" strokeWidth={2.5} />
+                      </span>
+                      {activity}
+                    </li>
+                  ))}
+                </ul>
+                <div className="pt-3 border-t border-gray-100">
+                  <p className="text-gray-500 text-xs font-medium">
+                    <span className="text-[#10b981] font-semibold">Outcome:</span> {step.outcome}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

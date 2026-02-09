@@ -41,7 +41,6 @@ export default function AutomationsContent() {
   const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.8, 0]);
 
-  // Mouse tracking for parallax effect
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (heroRef.current) {
@@ -110,7 +109,7 @@ export default function AutomationsContent() {
     <div className="bg-white text-black min-h-screen selection:bg-[#10b981] selection:text-white font-sans overflow-x-hidden">
       <motion.section
         ref={heroRef}
-        className="relative min-h-[80vh] sm:min-h-[90vh] lg:min-h-[95vh] flex items-center justify-center px-4 sm:px-6 lg:px-12 overflow-hidden bg-gradient-to-br from-[#fafafa] via-white to-[#f0fdf4]"
+        className="relative min-h-[55vh] sm:min-h-[60vh] lg:min-h-[65vh] flex items-center justify-center px-4 sm:px-6 lg:px-12 overflow-hidden bg-gradient-to-br from-[#fafafa] via-white to-[#f0fdf4]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}

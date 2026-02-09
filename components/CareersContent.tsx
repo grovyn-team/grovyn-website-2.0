@@ -55,7 +55,7 @@ export default function CareersContent() {
 
   if (isSubmitted) {
     return (
-      <div className="pt-24 sm:pt-32 lg:pt-40 pb-16 sm:pb-24 lg:pb-32 flex flex-col items-center justify-center text-center space-y-8 sm:space-y-10 lg:space-y-12 min-h-screen bg-white px-4 sm:px-6">
+      <div className="min-h-[55vh] sm:min-h-[60vh] lg:min-h-[65vh] flex flex-col items-center justify-center text-center space-y-8 sm:space-y-10 lg:space-y-12 pt-24 sm:pt-32 lg:pt-40 pb-16 sm:pb-24 lg:pb-32 bg-white px-4 sm:px-6">
         <div className="relative">
           <div className="absolute inset-0 bg-[#10b981]/20 blur-3xl rounded-full scale-150 animate-pulse" />
           <div className="relative w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full bg-black flex items-center justify-center text-[#10b981] shadow-2xl">
@@ -97,7 +97,7 @@ export default function CareersContent() {
 
   return (
     <div className="bg-white overflow-x-hidden selection:bg-[#10b981] selection:text-white">
-      <section className="relative min-h-[70vh] sm:min-h-[80vh] lg:min-h-[85vh] flex items-center bg-black overflow-hidden px-4 sm:px-6 lg:px-12 pt-16 sm:pt-20">
+      <section className="relative min-h-[55vh] sm:min-h-[60vh] lg:min-h-[65vh] flex items-center bg-black overflow-hidden px-4 sm:px-6 lg:px-12 pt-16 sm:pt-20">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0">
             <Image

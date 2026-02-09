@@ -53,7 +53,7 @@ export default function IndustriesContent() {
 
   return (
     <div className="bg-white overflow-x-hidden selection:bg-[#10b981] selection:text-white font-sans">
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-20 bg-black">
+      <section className="relative min-h-[55vh] sm:min-h-[60vh] lg:min-h-[65vh] flex items-center overflow-hidden pt-20 bg-black">
         <div className="absolute inset-0 z-0">
           {!videoError ? (
             <video

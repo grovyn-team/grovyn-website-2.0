@@ -83,7 +83,7 @@ export default function CareerDetailContent({ slug }: { slug: string }) {
 
   if (!job) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center px-6 bg-[#fcfcfc]">
+      <div className="min-h-[55vh] sm:min-h-[60vh] lg:min-h-[65vh] flex flex-col items-center justify-center px-6 bg-[#fcfcfc]">
         <h1 className="text-2xl font-black text-[#111] mb-4">Opening not found</h1>
         <Link
           href={`${base}/careers`}
@@ -98,7 +98,7 @@ export default function CareerDetailContent({ slug }: { slug: string }) {
 
   if (isSubmitted) {
     return (
-      <div className="pt-40 pb-32 flex flex-col items-center justify-center text-center space-y-12 min-h-screen bg-white">
+      <div className="min-h-[55vh] sm:min-h-[60vh] lg:min-h-[65vh] flex flex-col items-center justify-center text-center space-y-12 pt-40 pb-32 bg-white">
         <div className="w-24 h-24 rounded-full bg-[#10b981] flex items-center justify-center text-white shadow-2xl shadow-[#10b981]/40">
           <CheckCircle2 size={48} />
         </div>

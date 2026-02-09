@@ -88,7 +88,13 @@
       "mobile_desc": "iOS and Android development",
       "platform": "Platform Design",
       "platform_desc": "system architecture planning"
-    }
+    },
+    "services_web_title": "Web & Applications",
+    "services_web_subtitle": "Web applications and platforms",
+    "services_mobile_title": "Mobile",
+    "services_mobile_subtitle": "iOS and Android development",
+    "services_platform_title": "Platform",
+    "services_platform_subtitle": "System architecture planning"
   },
   "services_we_offer": {
     "badge": "What we build",
@@ -103,7 +109,7 @@
     "cta_link": "See what we do"
   },
   "industries": {
-    "badge": "Where we work",
+    "badge": "Solutions by Industry",
     "title_line1": "Building software for",
     "title_line2": "growing businesses",
     "title_highlight": "across sectors",
@@ -210,6 +216,7 @@
   "metrics": {
     "title": "How we work",
     "subtitle": "We focus on clear communication, realistic timelines, and building systems that continue to work well as your business grows.",
+    "deliveries_value": "2+",
     "deliveries_label": "Production system deliveries",
     "deliveries_desc": "We deliver digital systems across stages of growth with care, structure, and accountability.",
     "pricing_title": "Transparent and fixed pricing",
@@ -246,6 +253,7 @@
     "working_hours": "Working hours",
     "whatsapp_us": "WhatsApp us",
     "whatsapp_subtitle": "Quick response via WhatsApp",
+    "book_discovery_call": "Book Discovery Call",
     "response_note": "We respond to all inquiries within 24 hours (usually within 4 hours during business hours).",
     "title_line1": "Let's talk about",
     "title_highlight": "your project",
@@ -468,11 +476,11 @@
     "badge": "Our stack",
     "root_label": "Our Tech-Stacks",
     "categories": [
-      { "title": "Web", "items": ["React", "Next.js", "Node.js", "Express", "PostgreSQL", "MongoDB"] },
-      { "title": "Mobile", "items": ["React Native", "Flutter", "iOS", "Android"] },
-      { "title": "Cloud", "items": ["AWS", "Docker", "Kubernetes", "CI/CD"] },
-      { "title": "AI", "items": ["Python", "TensorFlow", "OpenAI", "LangChain"] },
-      { "title": "Data & Intelligence", "items": ["Python", "Data Pipelines", "Machine Learning", "Analytics", "AI Integration"] }
+      { "title": "Web Development", "items": ["React", "Next.js", "Node.js"] },
+      { "title": "Mobile Development", "items": ["React Native", "Flutter", "Android", "iOS"] },
+      { "title": "Cloud & DevOps", "items": ["AWS", "Docker", "Kubernetes", "Terraform"] },
+      { "title": "AI & Data", "items": ["Machine Learning", "NLP", "Computer Vision", "Python"] },
+      { "title": "Blockchain & Web3", "items": ["Ethereum", "Solidity", "Web3.js"] }
     ]
   },
   "ai_section": {
@@ -860,6 +868,8 @@
       },
       "support": {
         "title": "IT Support",
+        "title_highlight": "",
+        "title_suffix": "",
         "subtitle": "24/7 technical support to keep your teams productive.",
         "features": ["24/7 helpdesk", "Tiered support", "Remote and on-site", "Asset management", "Knowledge base", "SLA reporting"],
         "process_steps": [
@@ -923,6 +933,8 @@
       },
       "datacenter": {
         "title": "Data Center Design",
+        "title_highlight": "",
+        "title_suffix": "",
         "subtitle": "We help plan and operate data center facilities.",
         "features": ["Strategy", "Power and cooling", "Layout design", "Monitoring", "Capacity planning"],
         "process_steps": [
@@ -934,6 +946,8 @@
       },
       "communication": {
         "title": "Communication Systems",
+        "title_highlight": "",
+        "title_suffix": "",
         "subtitle": "We set up voice, video, and collaboration platforms.",
         "features": ["VoIP", "Video conferencing", "Team messaging", "CRM integration", "Call centers", "Mobile access"],
         "process_steps": [
@@ -944,7 +958,9 @@
         "offerings": ["Microsoft Teams", "Zoom", "Cisco", "SIP"]
       },
       "migration": {
-        "title": "Cloud Migration",
+        "title": "Cloud &",
+        "title_highlight": "Migration",
+        "title_suffix": "",
         "subtitle": "We help teams move to cloud infrastructure with minimal disruption.",
         "features": ["Migration planning", "Rehost or refactor", "Phased migration", "Zero-downtime goals", "Post-migration optimization", "Training"],
         "process_steps": [

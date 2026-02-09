@@ -5,7 +5,7 @@ export default async function SolutionsIndustriesPage() {
   const t = await getTranslations("solutions_industries");
   return (
     <div className="bg-white">
-      <section className="bg-black text-white pt-28 pb-24 px-6 lg:px-12 rounded-b-[3rem] relative overflow-hidden">
+      <section className="min-h-[55vh] sm:min-h-[60vh] lg:min-h-[65vh] flex flex-col justify-center bg-black text-white pt-28 pb-24 px-6 lg:px-12 rounded-b-[3rem] relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_45%,_rgba(16,185,129,0.12)_0%,_transparent_60%)]" />
         <div className="max-w-5xl mx-auto relative z-10 text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] font-black uppercase tracking-widest text-[#10b981] mb-8">
