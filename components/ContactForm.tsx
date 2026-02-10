@@ -14,11 +14,14 @@ import {
   Zap,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { submitContact } from "@/lib/api";
 
 export default function ContactForm() {
   const t = useTranslations("contact");
   const [step, setStep] = useState(1);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -45,9 +48,28 @@ export default function ContactForm() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setSubmitError(null);
+    setIsSubmitting(true);
+    const message =
+      formData.details +
+      (formData.platform.length ? "\n\nPlatforms of interest: " + formData.platform.join(", ") : "");
+    const result = await submitContact({
+      name: formData.fullName.trim(),
+      email: formData.email.trim(),
+      company: formData.company.trim() || undefined,
+      projectType: formData.projectGoal.trim() || undefined,
+      budget: formData.budget.trim() || undefined,
+      timeline: formData.timeline.trim() || undefined,
+      message: message.trim() || formData.details.trim(),
+    });
+    setIsSubmitting(false);
+    if (result.success) {
+      setIsSubmitted(true);
+    } else {
+      setSubmitError(result.message);
+    }
   };
 
   if (isSubmitted) {
@@ -345,14 +367,19 @@ export default function ContactForm() {
               </div>
             )}
 
+            {submitError && (
+              <p className="mt-4 text-sm font-medium text-red-600 bg-red-50 border border-red-100 rounded-xl px-4 py-3">
+                {submitError}
+              </p>
+            )}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 sm:gap-0 mt-8 sm:mt-12 lg:mt-16 pt-6 sm:pt-8 border-t border-gray-50">
               <button
                 type="button"
                 onClick={() => setStep(Math.max(1, step - 1))}
-                disabled={step === 1}
+                disabled={step === 1 || isSubmitting}
                 className={`w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl border border-gray-100 text-xs sm:text-sm font-bold transition-all ${
                   step === 1 ? "opacity-0 pointer-events-none" : "hover:bg-gray-50"
-                }`}
+                } ${isSubmitting ? "opacity-60 pointer-events-none" : ""}`}
               >
                 {t("back")}
               </button>
@@ -360,7 +387,8 @@ export default function ContactForm() {
                 <button
                   type="button"
                   onClick={() => setStep(step + 1)}
-                  className="w-full sm:w-auto bg-[#10b981] text-white px-8 sm:px-10 py-3 sm:py-3.5 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center space-x-2 hover:bg-[#0d9488] transition-all transform hover:-translate-y-1 shadow-lg shadow-[#10b981]/20"
+                  disabled={isSubmitting}
+                  className="w-full sm:w-auto bg-[#10b981] text-white px-8 sm:px-10 py-3 sm:py-3.5 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center space-x-2 hover:bg-[#0d9488] transition-all transform hover:-translate-y-1 shadow-lg shadow-[#10b981]/20 disabled:opacity-60 disabled:pointer-events-none"
                 >
                   <span>{t("continue")}</span>
                   <ArrowRight size={14} className="sm:w-4 sm:h-4" />
@@ -368,9 +396,10 @@ export default function ContactForm() {
               ) : (
                 <button
                   type="submit"
-                  className="w-full sm:w-auto bg-[#10b981] text-white px-10 sm:px-12 py-3 sm:py-3.5 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center space-x-2 hover:bg-[#0d9488] transition-all transform hover:-translate-y-1 shadow-xl shadow-[#10b981]/30"
+                  disabled={isSubmitting}
+                  className="w-full sm:w-auto bg-[#10b981] text-white px-10 sm:px-12 py-3 sm:py-3.5 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center space-x-2 hover:bg-[#0d9488] transition-all transform hover:-translate-y-1 shadow-xl shadow-[#10b981]/30 disabled:opacity-60 disabled:pointer-events-none"
                 >
-                  <span>{t("send_request")}</span>
+                  <span>{isSubmitting ? "Sending…" : t("send_request")}</span>
                   <Check size={14} strokeWidth={3} className="sm:w-4 sm:h-4" />
                 </button>
               )}

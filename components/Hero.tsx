@@ -26,7 +26,7 @@ export default function Hero() {
       
       <section id="hero" className="min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] flex flex-col justify-center bg-black text-white pt-24 sm:pt-22 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-12 rounded-b-[2rem] sm:rounded-b-[3rem] relative overflow-hidden scroll-mt-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_45%,_rgba(16,185,129,0.12)_0%,_transparent_60%)]" />
-        <div className="max-w-7xl mx-[100px] flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12 lg:gap-20 relative z-10">
+        <div className="max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12 lg:gap-20 relative z-10">
           <div className="lg:w-[55%] space-y-8 sm:space-y-12 text-center lg:text-left">
             <div className="space-y-4 sm:space-y-6">
               <h1 className="text-3xl sm:text-4xl lg:text-[3.4rem] font-black leading-[1.1] sm:leading-[1.02] tracking-tighter px-2 sm:px-0">

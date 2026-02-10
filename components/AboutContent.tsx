@@ -192,48 +192,73 @@ export default function AboutContent() {
         </div>
       </section>
 
-      {/* Founder's Note — premium card */}
-      <section className="py-16 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-12 bg-[#fafafa]">
+      {/* Founder's Note — editorial layout with diagonal separator */}
+      <section className="py-16 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
-          <article
-            className="relative overflow-hidden rounded-[1.25rem] sm:rounded-[1.5rem] lg:rounded-[1.75rem] bg-white shadow-[0_24px_64px_-16px_rgba(0,0,0,0.08)] transition-all duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:shadow-[0_32px_80px_-20px_rgba(0,0,0,0.12)] hover:translate-y-[-2px] group"
-            style={{ boxShadow: "0 24px 64px -16px rgba(0,0,0,0.08)" }}
-          >
-            <div className="absolute inset-0 opacity-[0.02] pointer-events-none selected-work-grain" />
-            <div className="relative flex flex-col lg:flex-row min-h-0">
-              <div className="lg:w-[42%] relative aspect-[4/5] lg:aspect-auto lg:min-h-[420px] overflow-hidden">
+          <article className="relative overflow-hidden rounded-[1.25rem] sm:rounded-[1.5rem] lg:rounded-[1.75rem] bg-white shadow-[0_24px_64px_-16px_rgba(0,0,0,0.08)] min-h-[480px] sm:min-h-[520px] lg:min-h-[560px]">
+            {/* Mobile/tablet: stack image then content */}
+            <div className="flex flex-col lg:hidden">
+              <div className="relative aspect-[4/5] overflow-hidden bg-white">
                 <Image
                   src="/assets/aman-slack.jpeg"
                   alt="Aman K A — Founder & CEO"
                   fill
-                  className="object-cover object-top grayscale-[30%] lg:grayscale-[20%] group-hover:grayscale-0 transition-all duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
-                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  className="object-cover object-top grayscale"
+                  sizes="100vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute inset-0 ring-inset ring-1 ring-black/[0.04] pointer-events-none rounded-[1.25rem] sm:rounded-[1.5rem] lg:rounded-none" />
               </div>
-
-              <div className="lg:w-[58%] flex flex-col justify-center p-8 sm:p-10 lg:p-12 xl:p-14">
-                <p className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.35em] text-[#10b981] mb-3">
-                  Founder
+              <div className="flex flex-col justify-center bg-[#eaeaea] p-8 sm:p-10">
+                <p className="text-[#111] font-bold text-lg tracking-tight border-b-2 border-[#111] pb-1 inline-block">
+                  Aman K A
                 </p>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-[#111] mb-6">
+                <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-[#111] mt-6 mb-6">
                   Founder&apos;s Note
                 </h2>
-                <p className="text-[#111] text-base sm:text-lg font-medium leading-relaxed max-w-xl">
-                  We build systems that last. Our responsibility is to deliver clarity, stability, and long-term value not short-term noise.
+                <p className="text-[#111] text-sm sm:text-base leading-relaxed">
+                  We build systems that last. Our responsibility is to deliver clarity, stability, and long-term value — not short-term noise.
                 </p>
-                <p className="mt-4 text-gray-600 text-sm sm:text-base leading-relaxed max-w-xl">
+                <p className="mt-5 text-[#111] text-base leading-relaxed italic">
                   Trust is earned through consistency and doing the right thing. That is the standard we hold ourselves to at Grovyn.
                 </p>
-                <div className="mt-10 pt-6 border-t border-gray-100">
-                  <p className="text-[#111] font-bold text-lg sm:text-xl tracking-tight">
-                    Aman K A
-                  </p>
-                  <p className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.25em] text-[#10b981] mt-1">
-                    CEO
-                  </p>
-                </div>
+                <p className="mt-8 text-[10px] font-semibold uppercase tracking-[0.25em] text-gray-500">
+                  CEO
+                </p>
+              </div>
+            </div>
+
+            {/* Desktop: image left, content right with diagonal edge */}
+            <div className="hidden lg:flex absolute inset-0">
+              <div className="w-[42%] relative overflow-hidden bg-white">
+                <Image
+                  src="/assets/aman-slack.jpeg"
+                  alt="Aman K A — Founder & CEO"
+                  fill
+                  className="object-cover object-top grayscale"
+                  sizes="42vw"
+                />
+              </div>
+              <div
+                className="flex-1 flex flex-col justify-center bg-[#eaeaea] pl-[12%] pr-12 xl:pr-14 py-12 xl:py-14"
+                style={{
+                  clipPath: "polygon(12% 0, 100% 0, 100% 100%, 0 100%, 0 0)",
+                  marginLeft: "-2%",
+                }}
+              >
+                <p className="text-[#111] font-bold text-xl tracking-tight border-b-2 border-[#111] pb-1 inline-block">
+                  Aman K A
+                </p>
+                <h2 className="text-3xl xl:text-4xl font-black tracking-tight text-[#111] mt-6 mb-6">
+                  Founder&apos;s Note
+                </h2>
+                <p className="text-[#111] text-base leading-relaxed max-w-xl">
+                  We build systems that last. Our responsibility is to deliver clarity, stability, and long-term value — not short-term noise.
+                </p>
+                <p className="mt-5 text-[#111] text-lg leading-relaxed max-w-xl italic">
+                  Trust is earned through consistency and doing the right thing. That is the standard we hold ourselves to at Grovyn.
+                </p>
+                <p className="mt-8 text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500">
+                  CEO
+                </p>
               </div>
             </div>
           </article>
@@ -494,39 +519,40 @@ export default function AboutContent() {
         </div>
       </section>
 
-      <section className="py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 bg-white">
-        <div className="max-w-7xl mx-auto space-y-12 sm:space-y-16">
-          <div className="text-center max-w-2xl mx-auto">
-            <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-[#10b981] mb-4">
-              Our process
+      {/* Execution Framework — 6-step premium process */}
+      <section className="py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 bg-[#fafafa]">
+        <div className="max-w-6xl mx-auto">
+          <header className="text-center max-w-2xl mx-auto mb-14 sm:mb-20">
+            <p className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.3em] text-[#10b981] mb-3">
+              Delivery process
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-black tracking-tight text-[#111] mb-4">
-              How we <span className="text-[#10b981]">work</span>
+              Execution <span className="text-[#10b981]">Framework</span>
             </h2>
             <p className="text-gray-600 text-base sm:text-lg font-medium leading-relaxed">
-              A transparent, efficient process designed for quality delivery and clear communication.
+              A documented, predictable process. Six steps from first call to ongoing support.
             </p>
-          </div>
+          </header>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 items-stretch">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-6 items-stretch">
             {processSteps.map((step, i) => (
               <div
                 key={i}
-                className="rounded-2xl bg-white border border-gray-100 p-6 sm:p-7 shadow-sm hover:shadow-md hover:border-gray-200/80 transition-all duration-300"
+                className="group relative rounded-[1rem] sm:rounded-[1.25rem] lg:rounded-[1.5rem] bg-white p-6 sm:p-7 shadow-[0_4px_24px_-4px_rgba(0,0,0,0.06)] transition-all duration-[500ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:shadow-[0_20px_48px_-12px_rgba(0,0,0,0.12)] hover:translate-y-[-2px]"
               >
-                <div className="flex flex-wrap items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-[#10b981] flex items-center justify-center text-white font-bold text-sm shrink-0">
+                <div className="flex flex-wrap items-start gap-3 mb-5">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#10b981]/15 flex items-center justify-center text-[#10b981] font-black text-lg sm:text-xl transition-all duration-[500ms] ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:bg-[#10b981]/25 group-hover:scale-[1.05] shrink-0">
                     {i + 1}
                   </div>
-                  <span className="text-[11px] font-semibold text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">
+                  <span className="text-[11px] sm:text-xs font-semibold text-gray-500 bg-gray-100/90 px-3 py-1.5 rounded-full shrink-0">
                     {step.duration}
                   </span>
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-[#111] tracking-tight mb-3">
+                <h3 className="text-lg sm:text-xl font-black text-[#111] tracking-tight mb-4 leading-tight">
                   {step.title}
                 </h3>
-                <ul className="space-y-2.5 mb-5">
-                  {step.activities.map((activity, j) => (
+                <ul className="space-y-2.5 mb-6">
+                  {step.activities.slice(0, 3).map((activity, j) => (
                     <li key={j} className="flex items-start gap-2.5 text-gray-600 text-sm font-medium leading-snug">
                       <span className="w-4 h-4 rounded-full bg-[#10b981]/10 flex items-center justify-center shrink-0 mt-0.5">
                         <Check size={10} className="text-[#10b981]" strokeWidth={2.5} />
@@ -535,9 +561,10 @@ export default function AboutContent() {
                     </li>
                   ))}
                 </ul>
-                <div className="pt-3 border-t border-gray-100">
-                  <p className="text-gray-500 text-xs font-medium">
-                    <span className="text-[#10b981] font-semibold">Outcome:</span> {step.outcome}
+                <div className="pt-4 border-t border-gray-100">
+                  <p className="text-sm font-medium leading-snug">
+                    <span className="text-[#10b981] font-semibold font-mono text-[11px] uppercase tracking-wider">Outcome:</span>{" "}
+                    <span className="text-gray-700">{step.outcome}</span>
                   </p>
                 </div>
               </div>

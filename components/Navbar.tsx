@@ -334,7 +334,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden lg:flex items-center gap-4 shrink-0">
-          <div className="relative">
+          {/* <div className="relative">
             <button
               type="button"
               onClick={() => setLocaleOpen(!localeOpen)}
@@ -364,7 +364,7 @@ export default function Navbar() {
                 </div>
               </>
             )}
-          </div>
+          </div> */}
           <Link
             href={`/${locale}#contact`}
             className="flex items-center space-x-2.5 px-6 py-3 rounded-xl border border-[#10b981]/40 text-[#10b981] font-bold text-sm hover:bg-[#10b981] hover:text-black transition-all group"

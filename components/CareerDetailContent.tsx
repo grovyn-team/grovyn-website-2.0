@@ -15,6 +15,7 @@ import {
   Lock,
   Briefcase,
 } from "lucide-react";
+import { submitCareerApplication } from "@/lib/api";
 
 type Opening = {
   slug?: string;
@@ -43,6 +44,8 @@ export default function CareerDetailContent({ slug }: { slug: string }) {
   const job = openings.find((o) => (o.slug ?? o.title.toLowerCase().replace(/\s+/g, "-")) === slug);
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [dragActive, setDragActive] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
@@ -75,10 +78,26 @@ export default function CareerDetailContent({ slug }: { slug: string }) {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (!formData.resume || !job) return;
+    setSubmitError(null);
+    setIsSubmitting(true);
+    const result = await submitCareerApplication({
+      name: formData.fullName.trim(),
+      email: formData.email.trim(),
+      phone: formData.phone.trim() || undefined,
+      position: job.title,
+      message: formData.message.trim() || undefined,
+      resume: formData.resume,
+    });
+    setIsSubmitting(false);
+    if (result.success) {
+      setIsSubmitted(true);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      setSubmitError(result.message);
+    }
   };
 
   if (!job) {
@@ -308,6 +327,11 @@ export default function CareerDetailContent({ slug }: { slug: string }) {
                   />
                 </div>
 
+                {submitError && (
+                  <p className="text-sm font-medium text-red-400 bg-red-500/10 border border-red-500/20 rounded-2xl px-6 py-4">
+                    {submitError}
+                  </p>
+                )}
                 <div className="space-y-2">
                   <label className="text-[10px] font-black uppercase tracking-widest text-gray-500">
                     Resume / CV *
@@ -362,9 +386,10 @@ export default function CareerDetailContent({ slug }: { slug: string }) {
 
                 <button
                   type="submit"
-                  className="w-full bg-[#10b981] text-black py-6 rounded-2xl font-black text-xs uppercase tracking-[0.3em] flex items-center justify-center space-x-4 hover:bg-white transition-all transform hover:-translate-y-1 shadow-2xl shadow-[#10b981]/20"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#10b981] text-black py-6 rounded-2xl font-black text-xs uppercase tracking-[0.3em] flex items-center justify-center space-x-4 hover:bg-white transition-all transform hover:-translate-y-1 shadow-2xl shadow-[#10b981]/20 disabled:opacity-60 disabled:pointer-events-none"
                 >
-                  <span>{t("detail_submit")}</span>
+                  <span>{isSubmitting ? "Submitting…" : t("detail_submit")}</span>
                   <Send size={18} />
                 </button>
               </form>
