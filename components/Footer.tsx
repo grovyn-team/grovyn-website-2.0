@@ -11,8 +11,8 @@ export default function Footer({ locale }: { locale: string }) {
   return (
     <footer className="bg-[#111] text-gray-500 py-20 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-          <div className="col-span-1 md:col-span-1 space-y-6">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-12 mb-16">
+          <div className="space-y-6 md:max-w-sm">
             <Link href={base} className="inline-flex items-center">
               <Image
                 src="/grovyn_logo.png"
@@ -53,6 +53,7 @@ export default function Footer({ locale }: { locale: string }) {
             </div>
           </div>
 
+          <div className="flex flex-wrap gap-x-30 gap-y-10 md:gap-x-40 md:gap-y-0 md:flex-nowrap">
           <div>
             <h5 className="text-white text-sm font-bold mb-6">{t("services_heading")}</h5>
             <ul className="text-xs space-y-4">
@@ -92,6 +93,7 @@ export default function Footer({ locale }: { locale: string }) {
                   {t("careers")}
                 </Link>
               </li>
+              
             </ul>
           </div>
 
@@ -129,6 +131,7 @@ export default function Footer({ locale }: { locale: string }) {
                 </a>
               </li>
             </ul>
+          </div>
           </div>
         </div>
 

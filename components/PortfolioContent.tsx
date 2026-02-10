@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useCallback, useEffect } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import {
   Search,
   Smartphone,
@@ -9,9 +10,9 @@ import {
   Boxes,
   Code,
   Terminal,
-  Server,
   Layers,
   Plus,
+  ArrowLeft,
   ArrowRight,
   ArrowUpRight,
   LayoutGrid,
@@ -20,10 +21,19 @@ import {
 } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 
+// --- Carousel constants (single source for layout) ---
+const CAROUSEL_EASE = [0.4, 0, 0.2, 1] as const;
+const CAROUSEL_DURATION = 0.6;
+const CARD_WIDTH_PX = 320;
+const CARD_GAP_PX = 24;
+const CARD_HEIGHT_MOBILE = 380;
+const CARD_HEIGHT_TABLET = 420;
+const CARD_HEIGHT_DESKTOP = 480;
+
 interface Project {
   id: string;
   name: string;
-  category: "Web" | "Mobile" | "Integration";
+  category: "Web" | "Mobile" | "Integration" | "Construction" | "Media & Marketing" | "Gaming" | "Healthcare" | "AR/VR" | "SaaS";
   industry: string;
   description: string;
   completedDate: string;
@@ -36,74 +46,386 @@ interface Project {
 const projects: Project[] = [
   {
     id: "1",
-    name: "OmniStream Messaging",
-    category: "Integration",
-    industry: "Social SaaS",
+    name: "BEPL Corporation",
+    category: "Construction",
+    industry: "Construction",
     description:
-      "High-performance integration of CometChat SDK and Sendbird UIKit for global scale. Engineered custom real-time handlers with <50ms latency.",
+      "Comprehensive digital showcase for BEPL Corporation. Detailed corporate view featuring projects, capabilities, and industry leadership in construction infrastructure.",
     completedDate: "Feb 2025",
-    techStack: ["CometChat", "React", "WebSockets"],
-    metrics: { label: "Active Users", value: "2.5M+" },
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200",
+    techStack: ["Next.js", "Tailwind", "CMS"],
+    metrics: { label: "Projects Showcased", value: "50+" },
+    image: "/assets/Construction.png",
     dossierId: "GRVN-01",
   },
   {
     id: "2",
-    name: "Grovyn Finance Pro",
-    category: "Web",
-    industry: "FinTech",
+    name: "Roborofl",
+    category: "Media & Marketing",
+    industry: "Media & Marketing",
     description:
-      "Comprehensive wealth management SaaS. Features a high-performance dashboard with AI-driven predictive analytics.",
+      "Meme-based content generation platform with integrated lead generation. Engaging viral content engine designed for maximum reach and conversion.",
     completedDate: "Jan 2025",
-    techStack: ["Next.js 15", "Go", "PostgreSQL"],
-    metrics: { label: "Daily Volume", value: "$45M" },
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800",
+    techStack: ["React", "AI/ML", "Analytics"],
+    metrics: { label: "Lead Conversion", value: "35%+" },
+    image: "/assets/roborofl-dark.png",
     dossierId: "GRVN-02",
   },
   {
     id: "3",
-    name: "SwiftLogix Fleet",
-    category: "Mobile",
-    industry: "Logistics",
+    name: "A3 House of Friends",
+    category: "Gaming",
+    industry: "Gaming",
     description:
-      "Enterprise-grade fleet management for iOS & Android. Precise GPS tracking and offline data persistence.",
+      "Full-stack gaming platform for live slot booking, food ordering, and comprehensive admin panels. Real-time reservations, payments, and management dashboards.",
     completedDate: "Dec 2024",
-    techStack: ["Flutter", "Firebase", "Native Bridge"],
-    metrics: { label: "Deliveries", value: "150K+" },
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800",
+    techStack: ["Next.js", "Node.js", "WebSockets"],
+    metrics: { label: "Live Bookings", value: "1K+/day" },
+    image: "/assets/a3house-dark.png",
     dossierId: "GRVN-03",
   },
   {
     id: "4",
-    name: "SecureLink Auth SDK",
-    category: "Integration",
-    industry: "Cybersecurity",
+    name: "The 24x7 Care",
+    category: "Healthcare",
+    industry: "Healthcare",
     description:
-      "Security-first integration of biometric authentication and hardware key protocols for mission-critical apps.",
+      "Full-stack B2C hospital services platform. Appointment booking, teleconsultation, prescriptions, and patient management with HIPAA-compliant architecture.",
     completedDate: "Nov 2024",
-    techStack: ["OAuth 2.1", "WebAuthn", "Node.js"],
-    metrics: { label: "Security Score", value: "A+" },
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
+    techStack: ["Next.js", "PostgreSQL", "WebRTC"],
+    metrics: { label: "Patients Served", value: "10K+" },
+    image: "/assets/24x7care.png",
     dossierId: "GRVN-04",
+  },
+  {
+    id: "5",
+    name: "AR/VR Jewellery",
+    category: "AR/VR",
+    industry: "E-Commerce",
+    description:
+      "Immersive jewellery shopping with live AR try-on demo. Virtual try-before-you-buy experience powered by WebXR for seamless product visualization.",
+    completedDate: "Oct 2024",
+    techStack: ["WebXR", "Three.js", "React"],
+    metrics: { label: "Try-on Sessions", value: "25K+" },
+    image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=1200",
+    dossierId: "GRVN-05",
+  },
+  {
+    id: "6",
+    name: "Issue Tracker",
+    category: "SaaS",
+    industry: "Productivity",
+    description:
+      "JIRA and Linear-inspired issue tracking. Kanban boards, sprints, roadmaps, automation rules, and integrations for agile teams.",
+    completedDate: "Sep 2024",
+    techStack: ["React", "Node.js", "PostgreSQL"],
+    metrics: { label: "Issues Tracked", value: "100K+" },
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+    dossierId: "GRVN-06",
+  },
+  {
+    id: "7",
+    name: "RAG Assistant Chatbot",
+    category: "SaaS",
+    industry: "AI / Knowledge",
+    description:
+      "Retrieval-augmented generation chatbot for enterprise knowledge bases. Context-aware answers from your docs with citations and source grounding.",
+    completedDate: "Aug 2024",
+    techStack: ["LLM", "Vector DB", "Next.js"],
+    metrics: { label: "Queries Handled", value: "500K+" },
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200",
+    dossierId: "GRVN-07",
   },
 ];
 
 const MAP_IMG = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200";
 
+function ProjectCard({
+  project,
+  variant = "center",
+  fillHeight = false,
+}: {
+  project: Project;
+  variant?: "center" | "side";
+  fillHeight?: boolean;
+}) {
+  const isCenter = variant === "center";
+  return (
+    <div
+      className={`rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border-2 border-gray-100 bg-white transition-all duration-500 ${
+        fillHeight ? "h-full w-full" : isCenter ? "aspect-[16/10] shadow-2xl" : "aspect-[4/3] shadow-lg"
+      }`}
+    >
+      <div className="relative w-full h-full">
+        <Image
+          src={project.image}
+          alt={project.name}
+          width={800}
+          height={500}
+          className={`w-full h-full object-cover ${fillHeight ? "min-h-full" : ""}`}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent pointer-events-none" />
+        <div
+          className={`absolute bottom-0 left-0 right-0 p-4 sm:p-5 md:p-6 space-y-2 sm:space-y-3 ${
+            isCenter ? "sm:p-6 md:p-8" : "p-3 sm:p-4"
+          }`}
+        >
+          <div className="flex items-center justify-between">
+            <div className="px-2.5 sm:px-3 py-1 bg-[#10b981] text-white text-[7px] sm:text-[8px] font-black uppercase tracking-widest rounded-full">
+              {project.category}
+            </div>
+            <span className="text-white/60 text-[7px] sm:text-[8px] font-bold uppercase tracking-widest">
+              {project.completedDate}
+            </span>
+          </div>
+          <h3
+            className={`font-black text-white tracking-tight leading-tight ${
+              isCenter ? "text-xl sm:text-2xl md:text-3xl lg:text-4xl" : "text-sm sm:text-base md:text-lg"
+            }`}
+          >
+            {project.name}
+          </h3>
+          <div className="flex items-center justify-between pt-2 sm:pt-3 border-t border-white/15">
+            <div className="flex flex-col">
+              <span className="text-[7px] sm:text-[8px] font-black text-[#10b981] uppercase tracking-[0.2em]">
+                {project.metrics.label}
+              </span>
+              <span
+                className={`font-black text-white ${isCenter ? "text-base sm:text-lg md:text-xl" : "text-xs sm:text-sm"}`}
+              >
+                {project.metrics.value}
+              </span>
+            </div>
+            <span className="flex items-center gap-1 text-white font-black text-[7px] sm:text-[8px] uppercase tracking-widest">
+              View Dossier <Plus size={10} className="sm:w-3 sm:h-3" />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/** Signed distance for infinite carousel: -2,-1,0,1,2 so center is 0 */
+function getDistance(slideIndex: number, activeIndex: number, total: number): number {
+  if (total <= 1) return 0;
+  let d = (slideIndex - activeIndex) % total;
+  if (d > total / 2) d -= total;
+  if (d < -total / 2) d += total;
+  return d;
+}
+
+/** Scale, opacity, blur from distance (design contract) */
+function getCardStyle(distance: number, isMobile: boolean) {
+  if (isMobile) {
+    return { scale: 1, opacity: 1, filter: "blur(0px)" as const, zIndex: 10, pointerEvents: "auto" as const };
+  }
+  const abs = Math.abs(distance);
+  if (abs === 0) {
+    return { scale: 1, opacity: 1, filter: "blur(0px)" as const, zIndex: 10, pointerEvents: "auto" as const };
+  }
+  if (abs === 1) {
+    return { scale: 0.9, opacity: 0.85, filter: "blur(2px)" as const, zIndex: 9, pointerEvents: "none" as const };
+  }
+  return { scale: 0.8, opacity: 0.5, filter: "blur(8px)" as const, zIndex: 8, pointerEvents: "none" as const };
+}
+
+function PortfolioCarousel({
+  projects,
+  activeIndex,
+  onGoTo,
+}: {
+  projects: Project[];
+  activeIndex: number;
+  onGoTo: (index: number) => void;
+}) {
+  const N = projects.length;
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+
+  useEffect(() => {
+    const mqMobile = window.matchMedia("(max-width: 639px)");
+    const mqTablet = window.matchMedia("(min-width: 640px) and (max-width: 1023px)");
+    const update = () => {
+      setIsMobile(mqMobile.matches);
+      setIsTablet(mqTablet.matches);
+    };
+    update();
+    mqMobile.addEventListener("change", update);
+    mqTablet.addEventListener("change", update);
+    return () => {
+      mqMobile.removeEventListener("change", update);
+      mqTablet.removeEventListener("change", update);
+    };
+  }, []);
+
+  const halfWindow = isMobile ? 0 : isTablet ? 1 : 2;
+  const indices = useMemo(() => {
+    const list: number[] = [];
+    for (let i = -halfWindow; i <= halfWindow; i++) {
+      list.push((activeIndex + i + N) % N);
+    }
+    return list;
+  }, [activeIndex, N, halfWindow]);
+
+  const trackWidth =
+    (indices.length * CARD_WIDTH_PX + (indices.length - 1) * CARD_GAP_PX);
+
+  const handlePrev = useCallback(() => {
+    onGoTo((activeIndex - 1 + N) % N);
+  }, [activeIndex, N, onGoTo]);
+  const handleNext = useCallback(() => {
+    onGoTo((activeIndex + 1) % N);
+  }, [activeIndex, N, onGoTo]);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") handlePrev();
+      if (e.key === "ArrowRight") handleNext();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [handlePrev, handleNext]);
+
+  if (N === 0) return null;
+  if (N === 1) {
+    return (
+      <div className="flex justify-center overflow-hidden" style={{ minHeight: CARD_HEIGHT_MOBILE }}>
+        <div className="w-full max-w-[320px]">
+          <ProjectCard project={projects[0]} variant="center" />
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div
+      className="relative overflow-hidden py-8"
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Project portfolio carousel"
+      aria-live="polite"
+    >
+      <div
+        className="flex justify-center items-center mx-auto overflow-hidden"
+        style={{
+          minHeight: isMobile ? CARD_HEIGHT_MOBILE : isTablet ? CARD_HEIGHT_TABLET : CARD_HEIGHT_DESKTOP,
+          maxWidth: "100%",
+        }}
+      >
+        <div
+          className="flex items-center justify-center gap-6 flex-nowrap"
+          style={{
+            width: isMobile ? "100%" : trackWidth,
+            maxWidth: isMobile ? 360 : undefined,
+          }}
+        >
+          {indices.map((slideIndex, slotIndex) => {
+            const distance = halfWindow === 0 ? 0 : slotIndex - halfWindow;
+            const project = projects[slideIndex];
+            const style = getCardStyle(distance, isMobile);
+            const isActive = distance === 0;
+            return (
+              <motion.div
+                key={`${slideIndex}-${project.id}`}
+                layout
+                initial={false}
+                animate={{
+                  scale: style.scale,
+                  opacity: style.opacity,
+                  filter: style.filter,
+                }}
+                transition={{
+                  duration: CAROUSEL_DURATION,
+                  ease: CAROUSEL_EASE,
+                }}
+                className="flex-shrink-0 rounded-2xl overflow-hidden origin-center cursor-pointer"
+                style={{
+                  width: isMobile ? "100%" : CARD_WIDTH_PX,
+                  zIndex: style.zIndex,
+                  pointerEvents: style.pointerEvents,
+                  willChange: "transform",
+                  transformStyle: "preserve-3d",
+                  backfaceVisibility: "hidden",
+                  boxShadow: isActive ? "0 25px 80px -20px rgba(0,0,0,0.35)" : "0 10px 40px -10px rgba(0,0,0,0.2)",
+                }}
+                onClick={!isActive ? () => onGoTo(slideIndex) : undefined}
+              >
+                <div
+                  className="w-full rounded-2xl overflow-hidden"
+                  style={{
+                    height: isMobile ? CARD_HEIGHT_MOBILE : isTablet ? CARD_HEIGHT_TABLET : CARD_HEIGHT_DESKTOP,
+                  }}
+                >
+                  <ProjectCard project={project} variant={isActive ? "center" : "side"} fillHeight />
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center gap-6 mt-8">
+        <button
+          type="button"
+          onClick={handlePrev}
+          className="w-12 h-12 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-600 hover:border-[#10b981] hover:text-[#10b981] hover:bg-[#10b981]/5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#10b981]/50"
+          aria-label="Previous slide"
+        >
+          <ArrowLeft size={20} />
+        </button>
+        <div className="flex items-center gap-2" role="tablist" aria-label="Slide pagination">
+          {projects.map((_, idx) => (
+            <button
+              key={idx}
+              type="button"
+              role="tab"
+              aria-selected={idx === activeIndex}
+              aria-label={`Go to slide ${idx + 1}`}
+              onClick={() => onGoTo(idx)}
+              className={`rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#10b981]/50 ${
+                idx === activeIndex ? "bg-[#10b981] w-6 h-2" : "bg-gray-300 hover:bg-gray-400 w-2 h-2"
+              }`}
+            />
+          ))}
+        </div>
+        <button
+          type="button"
+          onClick={handleNext}
+          className="w-12 h-12 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-600 hover:border-[#10b981] hover:text-[#10b981] hover:bg-[#10b981]/5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#10b981]/50"
+          aria-label="Next slide"
+        >
+          <ArrowRight size={20} />
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export default function PortfolioContent() {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const goTo = useCallback((nextIndex: number) => {
+    setActiveIndex((prev) => (nextIndex === prev ? prev : nextIndex));
+  }, []);
 
   const categories = [
     { name: "All", icon: <Layers size={28} /> },
-    { name: "Web", icon: <Globe size={28} /> },
-    { name: "Mobile", icon: <Smartphone size={28} /> },
-    { name: "Integration", icon: <Boxes size={28} /> },
-    { name: "Infrastructure", icon: <Server size={28} /> },
+    { name: "Construction", icon: <Layers size={28} /> },
+    { name: "Media & Marketing", icon: <Activity size={28} /> },
+    { name: "Gaming", icon: <Smartphone size={28} /> },
+    { name: "Healthcare", icon: <ShieldCheck size={28} /> },
+    { name: "AR/VR", icon: <Boxes size={28} /> },
+    { name: "SaaS", icon: <Globe size={28} /> },
   ];
 
   const filteredProjects = useMemo(() => {
     if (activeCategory === "All") return projects;
     return projects.filter((p) => p.category === activeCategory);
+  }, [activeCategory]);
+
+  useEffect(() => {
+    setActiveIndex(0);
   }, [activeCategory]);
 
   return (
@@ -136,7 +458,7 @@ export default function PortfolioContent() {
           Real-world digital systems built with teams across different industries.
           </p>
 
-          <div className="flex justify-center space-x-4 sm:space-x-6 pt-4">
+          {/* <div className="flex justify-center space-x-4 sm:space-x-6 pt-4">
             {[Search, Code, Terminal].map((Icon, idx) => (
               <div
                 key={idx}
@@ -145,7 +467,7 @@ export default function PortfolioContent() {
                 <Icon size={18} className="sm:w-[22px] sm:h-[22px] group-hover:scale-110 transition-transform" />
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
 
         <div className="absolute bottom-[-60px] sm:bottom-[-70px] lg:bottom-[-80px] left-1/2 -translate-x-1/2 w-full max-w-6xl px-4 sm:px-6 z-20">
@@ -192,254 +514,219 @@ export default function PortfolioContent() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 xl:gap-16">
-          {filteredProjects.map((project) => (
-            <div key={project.id} className="group relative">
-              <div
-                className={`rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3.5rem] overflow-hidden aspect-[16/10] sm:aspect-[13/6] lg:aspect-[16/10] shadow-2xl border-2 sm:border-4 md:border-8 transition-all duration-700 group-hover:-translate-y-2 ${
-                  "border-gray-50"
-                }`}
-              >
-                <Image
-                  src={project.image}
-                  alt={project.name}
-                  width={800}
-                  height={500}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
-                />
-                <div className="absolute bottom-4 sm:bottom-6 md:bottom-10 left-4 sm:left-6 md:left-10 right-4 sm:right-6 md:right-10 space-y-3 sm:space-y-4 md:space-y-6">
-                  <div className="flex items-center space-x-3 sm:space-x-4">
-                    <div className="px-3 sm:px-4 py-1 sm:py-1.5 bg-[#10b981] text-white text-[8px] sm:text-[9px] font-black uppercase tracking-widest rounded-full">
-                      {project.category}
-                    </div>
-                    <span className="text-white/60 text-[8px] sm:text-[9px] font-black uppercase tracking-widest">
-                      {project.completedDate}
-                    </span>
-                  </div>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-white tracking-tight">
-                    {project.name}
-                  </h3>
-                  <div className="flex items-center justify-between pt-4 sm:pt-6 border-t border-white/10">
-                    <div className="flex flex-col">
-                      <span className="text-[8px] sm:text-[9px] font-black text-[#10b981] uppercase tracking-[0.2em]">
-                        {project.metrics.label}
-                      </span>
-                      <span className="text-lg sm:text-xl md:text-2xl font-black text-white">{project.metrics.value}</span>
-                    </div>
-                    <button
-                      type="button"
-                      className="flex items-center space-x-2 sm:space-x-3 text-white font-black text-[9px] sm:text-[10px] uppercase tracking-[0.3em] group/btn"
-                    >
-                      <span className="hidden sm:inline">View Dossier</span>
-                      <Plus size={14} className="sm:w-4 sm:h-4" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* Refactored carousel: single source of truth (activeIndex), distance-based styling, no overflow */}
+        <PortfolioCarousel
+          projects={filteredProjects}
+          activeIndex={activeIndex}
+          onGoTo={goTo}
+        />
       </section>
 
+      {/* Selected Work — premium archive of elite systems (light) */}
       <section
-        className={`py-20 sm:py-32 lg:py-40 rounded-t-[3rem] sm:rounded-t-[4rem] lg:rounded-t-[5rem] transition-colors duration-1000 overflow-hidden ${
-          "bg-[#fcfcfc]"
-        }`}
+        className="relative py-20 sm:py-28 lg:py-36 rounded-t-[2rem] sm:rounded-t-[2.5rem] lg:rounded-t-[3rem] overflow-hidden bg-[#fafafa] selected-work-grain"
+        style={{ transition: "background-color 1000ms ease" }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="flex flex-col items-center text-center mb-12 sm:mb-16 md:mb-24 lg:mb-32 space-y-4 sm:space-y-6 md:space-y-8">
-            <div className="inline-flex items-center space-x-2 sm:space-x-3 px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-[#10b981]/10 border border-[#10b981]/20">
-              <LayoutGrid size={12} className="sm:w-[14px] sm:h-[14px] text-[#10b981]" />
-              <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.5em] text-[#10b981]">
-                Engineering Masterpieces
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <header className="flex flex-col items-center text-center mb-14 sm:mb-20 lg:mb-24 space-y-4">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#10b981]/10 border border-[#10b981]/20">
+              <LayoutGrid size={14} className="text-[#10b981]" />
+              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#10b981]">
+                Archive
               </span>
-            </div>
-            <h2
-              className={`text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black tracking-tighter leading-none italic ${
-                "text-[#111]"
-              }`}
-            >
-              Selected <span className="text-[#10b981]">Systems.</span>
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-none text-[#111]">
+              Selected <span className="text-[#10b981] italic">Work.</span>
             </h2>
-            <p className="text-gray-500 text-sm sm:text-base md:text-xl font-medium max-w-2xl mx-auto leading-relaxed px-4">
-              Explore the architectural logic behind our most significant SaaS deployments and specialized SDK
-              integrations.
+            <p className="text-gray-500 text-sm sm:text-base md:text-lg font-medium max-w-xl mx-auto leading-relaxed">
+              Flagship systems. Capability and outcomes.
             </p>
-          </div>
+          </header>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-6 sm:gap-8 md:gap-10 items-start">
-            <div className="lg:col-span-8 group relative rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3.5rem] overflow-hidden border border-white/5 shadow-2xl transition-shadow duration-300 hover:shadow-[0_24px_48px_-12px_rgba(0,0,0,0.25)]">
-              <div className="aspect-[16/10] md:aspect-[16/8] relative">
+          {/* Asymmetric editorial grid: 2 large cinematic + 2 compact */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 sm:gap-5 lg:gap-6 items-stretch">
+            {/* Large cinematic — BEPL (top-left) */}
+            <motion.article
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+              className="lg:col-span-8 relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden min-h-[320px] sm:min-h-[380px] lg:min-h-[420px] group/card"
+            >
+              <div className="absolute inset-0">
                 <Image
                   src={projects[0].image}
                   alt={projects[0].name}
                   fill
-                  className="object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[2s]"
+                  className="object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)] group-hover/card:translate-y-[-2%]"
                   sizes="(max-width: 1024px) 100vw, 66vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                <div className="absolute top-4 sm:top-6 lg:top-8 left-4 sm:left-6 lg:left-8 right-4 sm:right-6 lg:right-8 max-w-xl">
-                  <div className="rounded-xl sm:rounded-2xl bg-black/60 backdrop-blur-md px-4 sm:px-5 lg:px-6 py-3 sm:py-4 shadow-lg border border-white/5">
-                    <div className="space-y-1 pointer-events-none">
-                      <span className="text-[7px] sm:text-[8px] font-mono font-black text-[#10b981] tracking-[0.4em] uppercase">
-                        SYSTEM_ARCHIVE_{projects[0].dossierId}
-                      </span>
-                      <h4 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-black text-white tracking-tighter italic">
-                        {projects[0].name}
-                      </h4>
-                    </div>
-                  </div>
-                </div>
-                <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-8 right-4 sm:right-6 lg:right-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4 sm:gap-6 pointer-events-none">
-                  <div className="rounded-xl sm:rounded-2xl bg-black/60 backdrop-blur-md px-4 sm:px-5 lg:px-6 py-3 sm:py-4 shadow-lg border border-white/5 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 lg:space-x-8">
-                    <div className="flex flex-col">
-                      <span className="text-[9px] sm:text-[10px] font-black uppercase text-white/90 tracking-widest">
-                        Reliability
-                      </span>
-                      <span className="text-xl sm:text-2xl font-black text-[#10b981]">99.99%</span>
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-[9px] sm:text-[10px] font-black uppercase text-white/90 tracking-widest">
-                        Deployment
-                      </span>
-                      <span className="text-xl sm:text-2xl font-black text-white">Global Edge</span>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  className="absolute bottom-4 sm:bottom-6 lg:bottom-8 right-4 sm:right-6 lg:right-8 bg-[#10b981] text-black w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl flex items-center justify-center hover:scale-110 transition-transform shadow-xl shrink-0 pointer-events-auto"
-                >
-                  <ArrowUpRight size={20} className="sm:w-6 sm:h-6" />
-                </button>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/20" />
               </div>
-            </div>
-
-            <div
-              className={`lg:col-span-4 group relative rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3.5rem] p-6 sm:p-8 md:p-10 flex flex-col justify-between border transition-all duration-700 hover:-translate-y-3 min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] ${
-                "bg-white border-gray-100 shadow-xl"
-              }`}
-            >
-              <div className="space-y-6 sm:space-y-8">
-                <div className="flex items-center space-x-3 sm:space-x-4">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-[#10b981]/10 flex items-center justify-center text-[#10b981]">
-                    <Smartphone size={24} className="sm:w-7 sm:h-7" />
-                  </div>
-                  <div>
-                    <span className="text-[8px] sm:text-[9px] font-black uppercase tracking-[0.2em] text-[#10b981]">
-                      Mobile Tier 1
-                    </span>
-                    <h4 className="text-xl sm:text-2xl font-black tracking-tight leading-none mt-1 text-[#111]">
-                      {projects[2].name}
-                    </h4>
-                  </div>
+              <div className="absolute inset-0 flex flex-col justify-between p-5 sm:p-6 lg:p-8">
+                <div>
+                  <p className="font-mono text-[10px] sm:text-[11px] font-medium tracking-[0.35em] uppercase text-white/60">
+                    SYSTEM_ARCHIVE_{projects[0].dossierId}
+                  </p>
+                  <h3 className="mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight italic leading-tight">
+                    {projects[0].name}
+                  </h3>
                 </div>
-                <p className={`text-xs sm:text-sm md:text-base font-medium leading-relaxed text-gray-500`}>
+                <div className="flex flex-wrap items-end justify-between gap-4">
+                  <div className="flex flex-wrap gap-6">
+                    <div>
+                      <p className="text-[10px] font-black uppercase tracking-widest text-white/70">Reliability</p>
+                      <p className="text-lg sm:text-xl font-black text-[#10b981]">99.99%</p>
+                    </div>
+                    <div>
+                      <p className="text-[10px] font-black uppercase tracking-widest text-white/70">Deployment</p>
+                      <p className="text-lg sm:text-xl font-black text-white">Global Edge</p>
+                    </div>
+                  </div>
+                  {/* <button
+                    type="button"
+                    className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-[#10b981] text-black flex items-center justify-center transition-all duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:shadow-[0_0_32px_rgba(16,185,129,0.4)] hover:translate-y-[-2px]"
+                    aria-label="View dossier"
+                  >
+                    <ArrowUpRight size={22} className="sm:w-6 sm:h-6" />
+                  </button> */}
+                </div>
+              </div>
+            </motion.article>
+
+            {/* Compact — A3 House (top-right) */}
+            <motion.article
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.6, delay: 0.05, ease: [0.4, 0, 0.2, 1] }}
+              className="lg:col-span-4 relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden bg-white min-h-[280px] flex flex-col justify-between p-5 sm:p-6 border border-gray-100 shadow-sm group/card transition-all duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:shadow-[0_24px_48px_-16px_rgba(0,0,0,0.08)] hover:translate-y-[-4px]"
+            >
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-[#10b981]/10 flex items-center justify-center text-[#10b981]">
+                  <Smartphone size={20} />
+                </div>
+                <p className="font-mono text-[10px] font-medium tracking-[0.3em] uppercase text-gray-500">
+                  GAMING TIER 1
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl sm:text-2xl font-black text-[#111] tracking-tight leading-tight">
+                  {projects[2].name}
+                </h3>
+                <p className="mt-3 text-sm text-gray-500 leading-relaxed line-clamp-2">
                   {projects[2].description}
                 </p>
               </div>
-              <div className="pt-6 sm:pt-8 border-t dark:border-white/5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0">
-                <div className="text-[8px] sm:text-[9px] font-mono text-gray-400 uppercase tracking-widest">
-                  {projects[2].dossierId}
-                </div>
-                <button
-                  type="button"
-                  className="text-[#10b981] font-black text-[9px] sm:text-[10px] uppercase tracking-widest flex items-center space-x-2 group/btn"
-                >
-                  <span>Review Docs</span>
-                  <Plus size={12} className="sm:w-[14px] sm:h-[14px] group-hover/btn:rotate-90 transition-transform" />
-                </button>
+              <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                <span className="font-mono text-[10px] uppercase tracking-widest text-gray-400">{projects[2].dossierId}</span>
+                {/* <button type="button" className="w-10 h-10 rounded-xl border border-gray-200 flex items-center justify-center text-[#10b981] hover:bg-[#10b981]/10 transition-colors duration-300" aria-label="Open">
+                  <Plus size={18} />
+                </button> */}
               </div>
-            </div>
+            </motion.article>
 
-            <div
-              className={`lg:col-span-4 group relative rounded-[3.5rem] overflow-hidden aspect-square border shadow-2xl transition-all duration-700 hover:-translate-y-3 ${
-                "border-gray-50 bg-white"
-              }`}
+            {/* Compact — Roborofl (bottom-left) */}
+            <motion.article
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.6, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
+              className="lg:col-span-4 relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden min-h-[280px] group/card transition-all duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:shadow-[0_24px_48px_-16px_rgba(0,0,0,0.08)] hover:translate-y-[-4px]"
             >
-              <Image
-                src={projects[1].image}
-                alt={projects[1].name}
-                fill
-                className="object-cover opacity-50 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
-                sizes="(max-width: 1024px) 100vw, 33vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8 space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Activity size={16} className="text-[#10b981] animate-pulse" />
-                  <span className="text-[9px] font-black uppercase tracking-widest text-[#10b981]">
-                    Real-time Logic
-                  </span>
-                </div>
-                <h4 className="text-3xl font-black text-white tracking-tight leading-none">{projects[1].name}</h4>
-                <p className="text-white/40 text-[10px] font-mono uppercase tracking-widest">Archived_01_2025</p>
+              <div className="absolute inset-0">
+                <Image
+                  src={projects[1].image}
+                  alt={projects[1].name}
+                  fill
+                  className="object-cover opacity-20 group-hover/card:opacity-100 transition-opacity duration-[600ms]"
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                />
+                
               </div>
-            </div>
+              <div className="relative flex flex-col justify-between h-full p-5 sm:p-6">
+                <div className="flex items-center gap-2">
+                  <Activity size={16} className="text-[#10b981]" />
+                  <p className="font-mono text-[10px] font-medium tracking-[0.3em] uppercase text-[#10b981]">
+                    VIRAL CONTENT ENGINE
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-black text-[#111] tracking-tight leading-tight">
+                    {projects[1].name}
+                  </h3>
+                  <p className="mt-2 text-[10px] font-mono uppercase tracking-widest text-gray-400">Archived_01_2025</p>
+                </div>
+                <div className="pt-4">
+                  {/* <button type="button" className="w-10 h-10 rounded-xl border border-gray-200 flex items-center justify-center text-[#10b981] hover:bg-[#10b981]/10 transition-colors duration-300" aria-label="Open">
+                    <Plus size={18} />
+                  </button> */}
+                </div>
+              </div>
+            </motion.article>
 
-            <div
-              className={`lg:col-span-8 group relative rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3.5rem] p-6 sm:p-8 md:p-12 flex flex-col md:flex-row items-center gap-6 sm:gap-8 md:gap-10 border transition-all duration-700 hover:-translate-y-3 shadow-2xl ${
-                "bg-white border-gray-100"
-              }`}
+            {/* Large cinematic — The 24x7 Care (bottom-right) */}
+            <motion.article
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.6, delay: 0.15, ease: [0.4, 0, 0.2, 1] }}
+              className="lg:col-span-8 relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden min-h-[320px] sm:min-h-[380px] lg:min-h-[420px] group/card"
             >
-              <div className="w-full md:w-[35%] aspect-square rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-black relative group/img shrink-0">
+              <div className="absolute inset-0">
                 <Image
                   src={projects[3].image}
                   alt={projects[3].name}
                   fill
-                  className="object-cover grayscale opacity-40 group-hover/img:grayscale-0 group-hover/img:opacity-100 transition-all duration-1000"
-                  sizes="(max-width: 768px) 100vw, 35vw"
+                  className="object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)] group-hover/card:translate-y-[-2%]"
+                  sizes="(max-width: 1024px) 100vw, 66vw"
                 />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/img:opacity-100 transition-opacity">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-black/40 backdrop-blur-md border border-white/20 flex items-center justify-center text-[#10b981]">
-                    <Search size={18} className="sm:w-[22px] sm:h-[22px]" />
-                  </div>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/20" />
               </div>
-              <div className="w-full md:w-[65%] space-y-6 sm:space-y-8">
-                <div className="space-y-3 sm:space-y-4">
-                  <div className="inline-flex items-center space-x-2 sm:space-x-3 text-[#10b981] font-black uppercase tracking-[0.4em] text-[8px] sm:text-[9px]">
-                    <ShieldCheck size={14} className="sm:w-4 sm:h-4" />
-                    <span>Security_Protocol_Dossier</span>
-                  </div>
-                  <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black tracking-tighter leading-tight text-[#111]">
+              <div className="absolute inset-0 flex flex-col justify-between p-5 sm:p-6 lg:p-8">
+                <div className="flex items-center gap-2">
+                  <ShieldCheck size={16} className="text-[#10b981] shrink-0" />
+                  <p className="font-mono text-[10px] sm:text-[11px] font-medium tracking-[0.35em] uppercase text-white/60">
+                    HEALTHCARE_B2C_DOSSIER
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight leading-tight">
                     {projects[3].name}
-                  </h4>
-                  <p className={`text-xs sm:text-sm md:text-base font-medium leading-relaxed line-clamp-2 text-gray-500`}>
+                  </h3>
+                  <p className="mt-2 text-sm text-white/60 leading-relaxed line-clamp-2 max-w-xl">
                     {projects[3].description}
                   </p>
                 </div>
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {projects[3].techStack.map((t) => (
-                    <span
-                      key={t}
-                      className="px-2 sm:px-3 py-1 sm:py-1.5 bg-gray-50 dark:bg-white/5 border dark:border-white/5 rounded-lg sm:rounded-xl text-[9px] sm:text-[10px] font-black uppercase text-gray-500"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-                <div className="pt-6 sm:pt-8 border-t dark:border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
-                  <div className="flex flex-col text-center sm:text-left">
-                    <span className="text-[8px] sm:text-[9px] font-black uppercase text-gray-400 tracking-widest">
-                      Reliability Score
-                    </span>
-                    <span className="text-xl sm:text-2xl font-black text-[#10b981]">99.99%</span>
+                <div className="flex flex-wrap items-end justify-between gap-4">
+                  <div className="flex flex-wrap gap-4">
+                    <div>
+                      <p className="text-[10px] font-black uppercase tracking-widest text-white/70">Patients Served</p>
+                      <p className="text-lg sm:text-xl font-black text-[#10b981]">10K+</p>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {projects[3].techStack.slice(0, 3).map((t) => (
+                        <span key={t} className="font-mono text-[9px] uppercase tracking-wider text-white/50">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                  <button
+                  {/* <button
                     type="button"
-                    className="bg-black dark:bg-white text-white dark:text-black px-8 sm:px-10 py-3 sm:py-4 rounded-full text-[9px] sm:text-[10px] font-black uppercase tracking-widest hover:bg-[#10b981] dark:hover:bg-[#10b981] transition-all w-full sm:w-auto"
+                    className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-[#10b981] text-black flex items-center justify-center transition-all duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:shadow-[0_0_32px_rgba(16,185,129,0.35)] hover:translate-y-[-2px]"
+                    aria-label="View dossier"
                   >
-                    Deep Dive Brief
-                  </button>
+                    <ArrowUpRight size={22} className="sm:w-6 sm:h-6" />
+                  </button> */}
                 </div>
               </div>
-            </div>
+            </motion.article>
           </div>
         </div>
       </section>
 
-      <section className="py-24 sm:py-40 lg:py-56 px-4 sm:px-6 lg:px-12 relative overflow-hidden bg-white dark:bg-[#0a0a0a]">
+      {/* <section className="py-24 sm:py-40 lg:py-56 px-4 sm:px-6 lg:px-12 relative overflow-hidden bg-white dark:bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 sm:gap-16 lg:gap-24 xl:gap-32">
           <div className="lg:w-1/2 space-y-8 sm:space-y-10 lg:space-y-12">
             <div className="space-y-6 sm:space-y-8">
@@ -503,7 +790,7 @@ export default function PortfolioContent() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <ContactForm />
     </div>

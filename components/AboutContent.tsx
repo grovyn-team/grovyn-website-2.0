@@ -192,28 +192,56 @@ export default function AboutContent() {
         </div>
       </section>
 
-      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-12 bg-white">
-        <div className="max-w-2xl mx-auto">
-          <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-[#10b981] mb-4">
-            Founder&apos;s note
-          </p>
-          <div className="rounded-xl sm:rounded-2xl bg-[#fafafa] border border-gray-100 p-5 sm:p-6 shadow-sm">
-            <p className="text-lg sm:text-xl font-bold text-[#111] tracking-tight leading-snug">
-              Trust is the most valuable thing in the world.
-            </p>
-            <p className="mt-2 text-base text-gray-600 font-medium">
-              It must be earned and carefully upheld.
-            </p>
-            <p className="mt-4 text-gray-600 text-sm sm:text-base leading-relaxed">
-              At Grovyn, we believe trust is built through integrity, consistency, and doing the right thing even when it is harder.
-              It is earned over time and forms the foundation of everything we build and every partnership we commit to.
-            </p>
-            <p className="mt-4 text-[#111] font-semibold text-sm">
-              — CEO, Grovyn
-            </p>
-          </div>
+      {/* Founder's Note — premium card */}
+      <section className="py-16 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-12 bg-[#fafafa]">
+        <div className="max-w-5xl mx-auto">
+          <article
+            className="relative overflow-hidden rounded-[1.25rem] sm:rounded-[1.5rem] lg:rounded-[1.75rem] bg-white shadow-[0_24px_64px_-16px_rgba(0,0,0,0.08)] transition-all duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:shadow-[0_32px_80px_-20px_rgba(0,0,0,0.12)] hover:translate-y-[-2px] group"
+            style={{ boxShadow: "0 24px 64px -16px rgba(0,0,0,0.08)" }}
+          >
+            <div className="absolute inset-0 opacity-[0.02] pointer-events-none selected-work-grain" />
+            <div className="relative flex flex-col lg:flex-row min-h-0">
+              <div className="lg:w-[42%] relative aspect-[4/5] lg:aspect-auto lg:min-h-[420px] overflow-hidden">
+                <Image
+                  src="/assets/aman-slack.jpeg"
+                  alt="Aman K A — Founder & CEO"
+                  fill
+                  className="object-cover object-top grayscale-[30%] lg:grayscale-[20%] group-hover:grayscale-0 transition-all duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute inset-0 ring-inset ring-1 ring-black/[0.04] pointer-events-none rounded-[1.25rem] sm:rounded-[1.5rem] lg:rounded-none" />
+              </div>
+
+              <div className="lg:w-[58%] flex flex-col justify-center p-8 sm:p-10 lg:p-12 xl:p-14">
+                <p className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.35em] text-[#10b981] mb-3">
+                  Founder
+                </p>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-[#111] mb-6">
+                  Founder&apos;s Note
+                </h2>
+                <p className="text-[#111] text-base sm:text-lg font-medium leading-relaxed max-w-xl">
+                  We build systems that last. Our responsibility is to deliver clarity, stability, and long-term value not short-term noise.
+                </p>
+                <p className="mt-4 text-gray-600 text-sm sm:text-base leading-relaxed max-w-xl">
+                  Trust is earned through consistency and doing the right thing. That is the standard we hold ourselves to at Grovyn.
+                </p>
+                <div className="mt-10 pt-6 border-t border-gray-100">
+                  <p className="text-[#111] font-bold text-lg sm:text-xl tracking-tight">
+                    Aman K A
+                  </p>
+                  <p className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.25em] text-[#10b981] mt-1">
+                    CEO
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
+
+
+      
       {/* comment out for now */}
       {/* <section className="py-20 sm:py-32 px-4 sm:px-6 lg:px-12">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 sm:gap-16 lg:gap-24">
@@ -361,7 +389,7 @@ export default function AboutContent() {
         </div>
       </section>
 
-      <section className="py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 bg-[#fafafa]">
+      {/* <section className="py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 bg-[#fafafa]">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 sm:mb-16">
             <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-[#10b981] mb-3">The people</p>
@@ -399,7 +427,7 @@ export default function AboutContent() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
