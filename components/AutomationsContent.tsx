@@ -28,10 +28,16 @@ export default function AutomationsContent() {
   const t = useTranslations("automations");
   const locale = useLocale();
   const [activeIndex, setActiveIndex] = useState(0);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const rightScrollRef = useRef<HTMLDivElement>(null);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
   const heroRef = useRef<HTMLElement>(null);
+
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  const orbX = useTransform(mouseX, [-1, 1], [-20, 20]);
+  const orbY = useTransform(mouseY, [-1, 1], [-20, 20]);
+  const coreX = useSpring(useTransform(mouseX, [-1, 1], [-15, 15]), { stiffness: 150, damping: 15 });
+  const coreY = useSpring(useTransform(mouseY, [-1, 1], [-15, 15]), { stiffness: 150, damping: 15 });
 
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -47,14 +53,15 @@ export default function AutomationsContent() {
         const rect = heroRef.current.getBoundingClientRect();
         const x = (e.clientX - rect.left - rect.width / 2) / rect.width;
         const y = (e.clientY - rect.top - rect.height / 2) / rect.height;
-        setMousePosition({ x, y });
+        mouseX.set(x);
+        mouseY.set(y);
       }
     };
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+  }, [mouseX, mouseY]);
 
-  const casesRaw = t.raw("use_cases") as Array<{
+  const casesRawDefault: Array<{
     id: string;
     title: string;
     agent: string;
@@ -62,7 +69,14 @@ export default function AutomationsContent() {
     outcome: string;
     accent: string;
     color: string;
-  }>;
+  }> = [];
+  let casesRaw: typeof casesRawDefault;
+  try {
+    const raw = t.raw("use_cases");
+    casesRaw = Array.isArray(raw) ? (raw as typeof casesRawDefault) : casesRawDefault;
+  } catch {
+    casesRaw = casesRawDefault;
+  }
 
   const cases = casesRaw;
 
@@ -83,43 +97,57 @@ export default function AutomationsContent() {
   }, []);
 
   useEffect(() => {
-    if (!rightScrollRef.current) return;
-
     const scrollContainer = rightScrollRef.current;
-    const options = {
+    if (!scrollContainer || cases.length === 0) return;
+
+    const options: IntersectionObserverInit = {
       root: scrollContainer,
       rootMargin: "-35% 0px -35% 0px",
       threshold: 0.1,
     };
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const idx = itemRefs.current.indexOf(entry.target as HTMLDivElement);
-          if (idx !== -1) {
-            setActiveIndex(idx);
-          }
-        }
-      });
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        const idx = itemRefs.current.indexOf(entry.target as HTMLDivElement);
+        if (idx !== -1) setActiveIndex(idx);
+      }
     }, options);
 
-    itemRefs.current.forEach((ref) => {
+    const refs = itemRefs.current;
+    for (let i = 0; i < refs.length; i++) {
+      const ref = refs[i];
       if (ref) observer.observe(ref);
-    });
+    }
 
     return () => observer.disconnect();
   }, [cases.length]);
 
   const scrollToItem = useCallback((index: number) => {
-    itemRefs.current[index]?.scrollIntoView({ behavior: "smooth", block: "center" });
+    const el = itemRefs.current[index];
+    if (el && typeof el.scrollIntoView === "function") {
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
   }, []);
 
-  const resultsCardsRaw = t.raw("results_cards") as Array<{ title: string; desc: string }>;
-  const resultsCards = [
-    { ...resultsCardsRaw[0], icon: Brain },
-    { ...resultsCardsRaw[1], icon: Clock },
-    { ...resultsCardsRaw[2], icon: BarChart3 },
-  ];
+  let resultsCards: Array<{ title: string; desc: string; icon: typeof Brain }>;
+  try {
+    const resultsCardsRaw = t.raw("results_cards") as Array<{ title: string; desc: string }> | undefined;
+    const raw = Array.isArray(resultsCardsRaw) ? resultsCardsRaw : [];
+    const defaults = [{ title: "", desc: "" }, { title: "", desc: "" }, { title: "", desc: "" }];
+    const cards = [raw[0] ?? defaults[0], raw[1] ?? defaults[1], raw[2] ?? defaults[2]];
+    resultsCards = [
+      { ...cards[0], icon: Brain },
+      { ...cards[1], icon: Clock },
+      { ...cards[2], icon: BarChart3 },
+    ];
+  } catch {
+    resultsCards = [
+      { title: "", desc: "", icon: Brain },
+      { title: "", desc: "", icon: Clock },
+      { title: "", desc: "", icon: BarChart3 },
+    ];
+  }
 
   return (
     <div className="bg-white text-black min-h-screen selection:bg-[#10b981] selection:text-white font-sans overflow-x-hidden">
@@ -141,10 +169,7 @@ export default function AutomationsContent() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          style={{
-            x: useTransform(useMotionValue(mousePosition.x), [-1, 1], [-20, 20]),
-            y: useTransform(useMotionValue(mousePosition.y), [-1, 1], [-20, 20]),
-          }}
+          style={{ x: orbX, y: orbY }}
         />
         <motion.div
           className="absolute bottom-[10%] right-[5%] sm:right-[15%] w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-blue-500/5 rounded-full blur-[80px] sm:blur-[120px] pointer-events-none"
@@ -159,8 +184,8 @@ export default function AutomationsContent() {
             delay: 1,
           }}
           style={{
-            x: useTransform(useMotionValue(mousePosition.x), [-1, 1], [20, -20]),
-            y: useTransform(useMotionValue(mousePosition.y), [-1, 1], [20, -20]),
+            x: useTransform(mouseX, [-1, 1], [20, -20]),
+            y: useTransform(mouseY, [-1, 1], [20, -20]),
           }}
         />
         
@@ -289,10 +314,7 @@ export default function AutomationsContent() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.4, type: "spring", stiffness: 100 }}
-              style={{
-                x: useSpring(mousePosition.x * 15, { stiffness: 150, damping: 15 }),
-                y: useSpring(mousePosition.y * 15, { stiffness: 150, damping: 15 }),
-              }}
+              style={{ x: coreX, y: coreY }}
             >
               <motion.div
                 className="relative bg-gradient-to-br from-[#111] via-[#1a1a1a] to-[#111] px-12 py-6 rounded-[2.5rem] shadow-[0_30px_80px_-20px_rgba(16,185,129,0.4)] border border-[#10b981]/30 cursor-pointer"
@@ -351,6 +373,9 @@ export default function AutomationsContent() {
                 }}
               >
                 <motion.div
+                  role="button"
+                  tabIndex={0}
+                  aria-label={sat.label}
                   className="flex items-center space-x-2.5 bg-white/95 backdrop-blur-md px-4 py-3 rounded-full shadow-[0_8px_24px_-8px_rgba(0,0,0,0.12)] border border-gray-100 cursor-pointer group"
                   whileHover={{
                     scale: 1.08,
@@ -363,6 +388,7 @@ export default function AutomationsContent() {
                     className={`w-8 h-8 rounded-full bg-gradient-to-br ${sat.color} flex items-center justify-center shadow-md shrink-0`}
                     whileHover={{ rotate: 90 }}
                     transition={{ duration: 0.3 }}
+                    aria-hidden
                   >
                     <sat.icon size={16} className="text-white" />
                   </motion.div>
@@ -373,7 +399,8 @@ export default function AutomationsContent() {
 
             {[...Array(12)].map((_, i) => (
               <motion.div
-                key={i}
+                key={`orb-dot-${i}`}
+                aria-hidden
                 className="absolute w-1 h-1 rounded-full opacity-30"
                 style={{
                   background: i % 3 === 0 ? "#10b981" : i % 3 === 1 ? "#3b82f6" : "#a855f7",
@@ -442,7 +469,10 @@ export default function AutomationsContent() {
         </motion.div>
       </motion.section>
 
-      <section className="relative px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto pt-20 sm:pt-24 lg:pt-28 pb-10 sm:pb-12">
+      <section
+        className="relative px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto pt-20 sm:pt-24 lg:pt-28 pb-10 sm:pb-12"
+        aria-labelledby="use-cases-heading"
+      >
         <motion.div
           className="mb-12 sm:mb-16 pl-0 sm:pl-1"
           initial={{ opacity: 0, y: 20 }}
@@ -456,7 +486,7 @@ export default function AutomationsContent() {
               Use cases
             </span>
           </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-7xl font-black tracking-tight leading-tight">
+          <h2 id="use-cases-heading" className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight leading-tight">
             {(() => {
               const heading =
                 (() => {
@@ -501,13 +531,15 @@ export default function AutomationsContent() {
             <div className="space-y-1 sm:space-y-2">
               {cases.map((useCase, idx) => (
                 <motion.button
-                  key={idx}
+                  key={useCase.id ?? idx}
                   type="button"
                   onClick={() => {
                     setActiveIndex(idx);
                     scrollToItem(idx);
                   }}
-                  className="w-full text-left focus:outline-none"
+                  aria-expanded={activeIndex === idx}
+                  aria-controls={`use-case-panel-${idx}`}
+                  className="w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10b981] focus-visible:ring-offset-2 rounded-lg"
                   whileHover={{ x: activeIndex !== idx ? 10 : 0 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
@@ -571,11 +603,13 @@ export default function AutomationsContent() {
             >
               {cases.map((useCase, idx) => (
                 <div
-                  key={idx}
+                  key={useCase.id ?? idx}
+                  id={`use-case-panel-${idx}`}
                   ref={(el) => {
                     itemRefs.current[idx] = el;
                   }}
                   className="snap-center pt-3"
+                  aria-label={useCase.title}
                 >
                   <div className="bg-white rounded-[3.5rem] border border-gray-100 overflow-hidden transform transition-all duration-700">
                     <div className="bg-[#fafafa] border-b border-gray-100 px-8 py-6 flex items-center justify-between">
