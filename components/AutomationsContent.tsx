@@ -67,6 +67,22 @@ export default function AutomationsContent() {
   const cases = casesRaw;
 
   useEffect(() => {
+    const el = rightScrollRef.current;
+    if (!el) return;
+    const preventWheel = (e: WheelEvent) => {
+      e.preventDefault();
+      e.stopPropagation();
+    };
+    const preventTouch = (e: TouchEvent) => e.preventDefault();
+    el.addEventListener("wheel", preventWheel, { passive: false });
+    el.addEventListener("touchmove", preventTouch, { passive: false });
+    return () => {
+      el.removeEventListener("wheel", preventWheel);
+      el.removeEventListener("touchmove", preventTouch);
+    };
+  }, []);
+
+  useEffect(() => {
     if (!rightScrollRef.current) return;
 
     const scrollContainer = rightScrollRef.current;
@@ -314,75 +330,64 @@ export default function AutomationsContent() {
             </motion.div>
 
             {[
-              { icon: ShieldCheck, label: "Fraud & Risk Monitoring", color: "from-orange-400 to-yellow-500", pos: "top-[8%] left-[35%]", delay: 0.5, textColor: "text-orange-600", float: { y: [-10, 10] } },
-              { icon: MessageSquare, label: "Customer Support Automation", color: "from-cyan-400 to-teal-500", pos: "top-[25%] left-[8%]", delay: 0.6, textColor: "text-cyan-600", float: { y: [-15, 5] } },
-              { icon: BarChart3, label: "Demand & Forecasting Insights", color: "from-slate-400 to-slate-600", pos: "top-[15%] right-[12%]", delay: 0.7, textColor: "text-slate-600", float: { y: [-8, 12] } },
-              { icon: MessageSquare, label: "Workflow Automation", color: "from-rose-400 to-red-500", pos: "top-[45%] right-[5%]", delay: 0.8, textColor: "text-rose-600", float: { y: [-12, 8] } },
-              { icon: Search, label: "Operational Efficiency", color: "from-blue-400 to-blue-600", pos: "bottom-[28%] left-[5%]", delay: 0.9, textColor: "text-blue-600", float: { y: [-10, 10] } },
-              { icon: Brain, label: "Smarter Business Decisions", color: "from-purple-400 to-purple-600", pos: "bottom-[20%] right-[15%]", delay: 1.0, textColor: "text-purple-600", float: { y: [-14, 6] } },
-              { icon: Zap, label: "Search & Knowledge Access", color: "from-pink-400 to-pink-600", pos: "bottom-[8%] left-[38%]", delay: 1.1, textColor: "text-pink-600", float: { y: [-9, 11] } },
-              { icon: CheckCircle2, label: "Personalized Recommendations", color: "from-indigo-400 to-blue-500", pos: "top-[42%] left-[-2%]", delay: 1.2, textColor: "text-indigo-600", float: { y: [-11, 9] } },
+              { icon: ShieldCheck, label: "Fraud & Risk Monitoring", color: "from-orange-400 to-yellow-500", left: "50%", top: "10%", delay: 0.5, textColor: "text-orange-600" },
+              { icon: MessageSquare, label: "Customer Support Automation", color: "from-cyan-400 to-teal-500", left: "78%", top: "22%", delay: 0.6, textColor: "text-cyan-600" },
+              { icon: BarChart3, label: "Demand & Forecasting Insights", color: "from-slate-400 to-slate-600", left: "90%", top: "50%", delay: 0.7, textColor: "text-slate-600" },
+              { icon: MessageSquare, label: "Workflow Automation", color: "from-rose-400 to-red-500", left: "78%", top: "78%", delay: 0.8, textColor: "text-rose-600" },
+              { icon: Search, label: "Operational Efficiency", color: "from-blue-400 to-blue-600", left: "50%", top: "90%", delay: 0.9, textColor: "text-blue-600" },
+              { icon: Brain, label: "Smarter Business Decisions", color: "from-purple-400 to-purple-600", left: "22%", top: "78%", delay: 1.0, textColor: "text-purple-600" },
+              { icon: Zap, label: "Search & Knowledge Access", color: "from-pink-400 to-pink-600", left: "10%", top: "50%", delay: 1.1, textColor: "text-pink-600" },
+              { icon: CheckCircle2, label: "Personalized Recommendations", color: "from-indigo-400 to-blue-500", left: "22%", top: "22%", delay: 1.2, textColor: "text-indigo-600" },
             ].map((sat, i) => (
               <motion.div
                 key={i}
-                className={`absolute ${sat.pos}`}
-                initial={{ opacity: 0, scale: 0, rotate: -180 }}
-                animate={{ opacity: 1, scale: 1, rotate: 0, y: sat.float.y }}
+                className="absolute -translate-x-1/2 -translate-y-1/2"
+                style={{ left: sat.left, top: sat.top }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
                 transition={{
-                  opacity: { duration: 0.6, delay: sat.delay },
-                  scale: { duration: 0.8, delay: sat.delay, type: "spring", stiffness: 200 },
-                  rotate: { duration: 0.8, delay: sat.delay, type: "spring" },
-                  y: {
-                    duration: 3 + i * 0.2,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                    ease: "easeInOut",
-                    delay: sat.delay,
-                  },
+                  opacity: { duration: 0.4, delay: sat.delay },
+                  scale: { duration: 0.5, delay: sat.delay, type: "spring", stiffness: 200, damping: 20 },
                 }}
               >
                 <motion.div
-                  className="flex items-center space-x-3 bg-white/95 backdrop-blur-md px-5 py-3.5 rounded-full shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-gray-100 cursor-pointer group"
+                  className="flex items-center space-x-2.5 bg-white/95 backdrop-blur-md px-4 py-3 rounded-full shadow-[0_8px_24px_-8px_rgba(0,0,0,0.12)] border border-gray-100 cursor-pointer group"
                   whileHover={{
-                    scale: 1.15,
-                    boxShadow: "0 25px 60px -15px rgba(16,185,129,0.4)",
-                    y: -5,
+                    scale: 1.08,
+                    boxShadow: "0 12px 32px -8px rgba(16,185,129,0.25)",
                   }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 18 }}
                 >
                   <motion.div
-                    className={`w-9 h-9 rounded-full bg-gradient-to-br ${sat.color} flex items-center justify-center shadow-lg`}
-                    whileHover={{ rotate: 180 }}
-                    transition={{ duration: 0.4 }}
+                    className={`w-8 h-8 rounded-full bg-gradient-to-br ${sat.color} flex items-center justify-center shadow-md shrink-0`}
+                    whileHover={{ rotate: 90 }}
+                    transition={{ duration: 0.3 }}
                   >
-                    <sat.icon size={18} className="text-white" />
+                    <sat.icon size={16} className="text-white" />
                   </motion.div>
-                  <span className={`text-xs font-bold ${sat.textColor} whitespace-nowrap`}>{sat.label}</span>
+                  <span className={`text-[11px] font-bold ${sat.textColor} whitespace-nowrap leading-tight`}>{sat.label}</span>
                 </motion.div>
               </motion.div>
             ))}
 
-            {[...Array(20)].map((_, i) => (
+            {[...Array(12)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute w-1.5 h-1.5 rounded-full"
+                className="absolute w-1 h-1 rounded-full opacity-30"
                 style={{
                   background: i % 3 === 0 ? "#10b981" : i % 3 === 1 ? "#3b82f6" : "#a855f7",
-                  top: `${10 + (i * 7) % 80}%`,
-                  left: `${5 + (i * 11) % 90}%`,
+                  top: `${12 + (i * 8) % 76}%`,
+                  left: `${8 + (i * 10) % 84}%`,
                 }}
-                initial={{ opacity: 0, scale: 0 }}
+                initial={{ opacity: 0 }}
                 animate={{
-                  opacity: [0, 0.4, 0],
-                  scale: [0, 1.5, 0.8, 1.2, 0],
-                  x: [0, (i % 3 - 1) * 20],
-                  y: [0, (i % 2 === 0 ? -20 : 20)],
+                  opacity: [0, 0.25, 0],
                 }}
                 transition={{
-                  duration: 3 + (i % 5) * 0.5,
+                  duration: 4 + (i % 3) * 0.5,
                   repeat: Infinity,
-                  delay: i * 0.15,
+                  delay: i * 0.2,
                   ease: "easeInOut",
                 }}
               />
@@ -437,7 +442,54 @@ export default function AutomationsContent() {
         </motion.div>
       </motion.section>
 
-      <section className="relative px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto py-8 sm:py-10">
+      <section className="relative px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto pt-20 sm:pt-24 lg:pt-28 pb-10 sm:pb-12">
+        <motion.div
+          className="mb-12 sm:mb-16 pl-0 sm:pl-1"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#10b981]/10 border border-[#10b981]/20 mb-4 sm:mb-5">
+            <Sparkles size={14} className="text-[#10b981]" />
+            <span className="text-[10px] font-black uppercase tracking-[0.25em] text-[#10b981]">
+              Use cases
+            </span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl lg:text-7xl font-black tracking-tight leading-tight">
+            {(() => {
+              const heading =
+                (() => {
+                  try {
+                    return t("use_cases_heading");
+                  } catch {
+                    return "AI in action";
+                  }
+                })() as string;
+              const words = heading.trim().split(/\s+/);
+              if (words.length <= 1) {
+                return <span className="text-[#10b981]">{heading}</span>;
+              }
+              const lastWord = words.pop() ?? "";
+              const firstPart = words.join(" ");
+              return (
+                <>
+                  <span className="text-[#111]">{firstPart} </span>
+                  <span className="text-[#10b981]">{lastWord}</span>
+                </>
+              );
+            })()}
+          </h2>
+          <p className="mt-3 sm:mt-4 text-gray-500 text-base sm:text-lg font-medium max-w-xl leading-relaxed border-l-4 border-[#10b981]/40 pl-4 sm:pl-5">
+            {(() => {
+              try {
+                return t("use_cases_subheading");
+              } catch {
+                return "Explore how AI fits into your workflows.";
+              }
+            })()}
+          </p>
+        </motion.div>
         <motion.div
           className="grid lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-24 items-start"
           initial={{ opacity: 0, y: 50 }}
@@ -514,7 +566,8 @@ export default function AutomationsContent() {
           <div className="lg:col-span-7 order-1 lg:order-2">
             <div
               ref={rightScrollRef}
-              className="lg:max-h-[85vh] overflow-y-auto scroll-smooth snap-y snap-mandatory automations-hide-scrollbar lg:pr-4 lg:-mr-4 space-y-12 sm:space-y-16 lg:space-y-32 py-4 sm:py-6 lg:py-10"
+              className="lg:max-h-[85vh] overflow-y-auto scroll-smooth snap-y snap-mandatory automations-hide-scrollbar lg:pr-4 lg:-mr-4 space-y-12 sm:space-y-16 lg:space-y-32 py-4 sm:py-6 lg:py-10 lg:touch-none"
+              style={{ overscrollBehavior: "contain" }}
             >
               {cases.map((useCase, idx) => (
                 <div
@@ -537,26 +590,7 @@ export default function AutomationsContent() {
                     </div>
 
                     <div className="p-10 lg:p-10 space-y-2">
-                      <div className="flex items-center justify-between pb-8 border-b border-gray-50">
-                        <div className="flex items-center space-x-6">
-                          <div className="relative w-20 h-20 rounded-[2.5rem] overflow-hidden shadow-xl border-4 border-white shrink-0">
-                            <Image
-                              src={`https://i.pravatar.cc/150?u=${idx + 15}`}
-                              alt=""
-                              fill
-                              className="object-cover"
-                              sizes="80px"
-                            />
-                          </div>
-                          <div className="space-y-1">
-                            <h4 className="text-3xl font-black text-[#111] leading-none tracking-tighter">
-                              {t("dashboard_title")}
-                            </h4>
-                            <p className="text-gray-400 font-bold uppercase text-[9px] tracking-widest">
-                              {t("dashboard_updated")}
-                            </p>
-                          </div>
-                        </div>
+                      <div className="flex items-center justify-end pb-8 border-b border-gray-50">
                         <div className="bg-[#10b981]/5 text-[#10b981] px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest border border-[#10b981]/20 shrink-0">
                           {t("system_operational")}
                         </div>

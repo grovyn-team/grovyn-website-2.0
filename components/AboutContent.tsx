@@ -116,7 +116,7 @@ export default function AboutContent() {
   return (
     <div className="bg-white overflow-x-hidden selection:bg-[#10b981] selection:text-white">
       <section className="relative min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] flex flex-col justify-center py-8 sm:py-10 lg:py-14 px-4 sm:px-6 lg:px-12">
-        <div className="max-w-7xl mx-[100px] flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16">
+        <div className="max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12 lg:gap-16">
           <div className={`lg:w-1/2 space-y-5 sm:space-y-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-6"}`}>
             <nav className="flex items-center gap-2 text-[11px] sm:text-xs font-semibold uppercase tracking-widest text-gray-400">
               <Link href={`/${locale}`} className="hover:text-[#10b981] transition-colors">

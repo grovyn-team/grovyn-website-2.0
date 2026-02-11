@@ -1219,6 +1219,8 @@
     "orbital_scribe": "Document AI",
     "orbital_researcher": "Research",
     "orbital_custom": "Custom AI",
+    "use_cases_heading": "AI in action",
+    "use_cases_subheading": "Explore how AI fits into your workflows.",
     "use_cases": [
       {
         "id": "01",
