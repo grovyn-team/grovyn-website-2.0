@@ -61,7 +61,7 @@ export default function ServicesWeOffer() {
 
         <div className="mt-10 text-center">
           <Link
-            href={`/${locale}/infrastructure/web`}
+            href={`/${locale}/infrastructure/cloud`}
             className="inline-flex items-center gap-2 text-[#10b981] font-bold text-sm hover:text-[#059669] transition-colors"
           >
             {t("cta_link")}

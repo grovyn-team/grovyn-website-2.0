@@ -8,8 +8,22 @@ export default getRequestConfig(async ({ requestLocale }) => {
       ? (locale as Locale)
       : defaultLocale;
 
+  let messages: Record<string, unknown>;
+  try {
+    messages = (await import(`../messages/${activeLocale}.json`)).default;
+  } catch {
+    messages = (await import(`../messages/${defaultLocale}.json`)).default;
+  }
+
   return {
     locale: activeLocale,
-    messages: (await import(`../messages/${activeLocale}.json`)).default,
+    messages,
+    onError() {
+      // Prevent missing-message errors from crashing the app in production
+    },
+    getMessageFallback({ namespace, key }) {
+      const path = [namespace, key].filter(Boolean).join(".");
+      return path || "…";
+    },
   };
 });

@@ -168,18 +168,16 @@ export default function InfrastructureDetailContent({ slug }: { slug: Infrastruc
   const base = `/${locale}`;
   const slugNs = `slugs.${slug}`;
 
-  const rawTitle = t.raw(`${slugNs}.title`) as string | undefined;
+  const rawTitle = safeRaw<string>(t, `${slugNs}.title`);
   const title = (typeof rawTitle === "string" && !isKeyLike(rawTitle) ? rawTitle : null) || slug;
   const titleHighlight = safeRaw<string>(t, `${slugNs}.title_highlight`);
   const titleSuffix = safeRaw<string>(t, `${slugNs}.title_suffix`);
-  const rawSubtitle = t.raw(`${slugNs}.subtitle`) as string | undefined;
+  const rawSubtitle = safeRaw<string>(t, `${slugNs}.subtitle`);
   const subtitle = (typeof rawSubtitle === "string" && !isKeyLike(rawSubtitle) ? rawSubtitle : null) || "";
-  const featuresRaw = t.raw(`${slugNs}.features`);
-  const features = Array.isArray(featuresRaw) ? (featuresRaw as string[]) : [];
-  const processStepsRaw = t.raw(`${slugNs}.process_steps`);
-  const processSteps = Array.isArray(processStepsRaw)
-    ? (processStepsRaw as ProcessStep[])
-    : [];
+  const featuresRaw = safeRaw<string[]>(t, `${slugNs}.features`);
+  const features = Array.isArray(featuresRaw) ? featuresRaw : [];
+  const processStepsRaw = safeRaw<ProcessStep[]>(t, `${slugNs}.process_steps`);
+  const processSteps = Array.isArray(processStepsRaw) ? processStepsRaw : [];
   const heroMetricsRaw = safeRaw<HeroMetric[]>(t, `${slugNs}.hero_metrics`);
   const stats = Array.isArray(heroMetricsRaw) ? heroMetricsRaw.slice(0, 3) : [];
   const heroImg = HERO_IMAGES[slug] ?? DEFAULT_HERO_IMG;
@@ -203,8 +201,8 @@ export default function InfrastructureDetailContent({ slug }: { slug: Infrastruc
     icon: DETAILED_SERVICE_ICONS[slug][i],
   }));
 
-  const expertBulletsRaw = t.raw("template_expert_bullets");
-  const expertBullets = Array.isArray(expertBulletsRaw) ? (expertBulletsRaw as string[]) : [];
+  const expertBulletsRaw = safeRaw<string[]>(t, "template_expert_bullets");
+  const expertBullets = Array.isArray(expertBulletsRaw) ? expertBulletsRaw : [];
 
   useEffect(() => {
     window.scrollTo(0, 0);
