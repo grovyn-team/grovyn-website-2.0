@@ -19,8 +19,10 @@ export default function Footer({ locale }: { locale: string }) {
                 alt="Grovyn"
                 width={120}
                 height={40}
+                sizes="120px"
                 className="h-8 w-auto object-contain"
                 style={{ width: "auto" }}
+                loading="lazy"
               />
             </Link>
             <p className="text-xs leading-relaxed max-w-xs">

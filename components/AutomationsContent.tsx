@@ -653,7 +653,8 @@ export default function AutomationsContent() {
                             alt={useCase.title}
                             fill
                             className="object-cover"
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                            loading="lazy"
                           />
                         </div>
                         

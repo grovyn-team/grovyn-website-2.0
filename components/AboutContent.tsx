@@ -215,6 +215,7 @@ export default function AboutContent() {
                 fill
                 className="object-cover object-top grayscale lg:group-hover:grayscale-0 transition-all duration-700 ease-out"
                 sizes="(max-width: 1024px) 100vw, 40vw"
+                loading="lazy"
               />
             </div>
 
@@ -366,11 +367,12 @@ export default function AboutContent() {
                 fill
                 className="object-cover grayscale-[20%] transition-all duration-500 hover:grayscale-0"
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                loading="lazy"
               />
             </div>
             <div className="flex gap-4">
               <div className="flex-1 rounded-2xl overflow-hidden aspect-square shadow-md ring-1 ring-black/5 relative">
-                <Image src={HISTORY_DETAIL_IMG} alt="" fill className="object-cover" sizes="(max-width: 1024px) 50vw, 20vw" />
+                <Image src={HISTORY_DETAIL_IMG} alt="" fill className="object-cover" sizes="(max-width: 1024px) 50vw, 20vw" loading="lazy" />
               </div>
               <div className="flex-[1.4] rounded-2xl p-6 sm:p-8 bg-[#111] text-white ring-1 ring-white/10 shadow-xl flex flex-col justify-center">
                 <div className="w-11 h-11 rounded-xl bg-[#10b981]/20 flex items-center justify-center mb-4">

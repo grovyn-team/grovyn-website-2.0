@@ -146,6 +146,7 @@ export default function Navbar() {
               alt="Grovyn"
               width={120}
               height={40}
+              sizes="120px"
               className="object-contain"
               style={{ height: "2.5rem", width: "auto" }}
               priority
