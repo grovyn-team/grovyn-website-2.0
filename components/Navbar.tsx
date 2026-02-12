@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import { Phone, ChevronDown, Monitor, Smartphone, LayoutGrid, Users, Briefcase, Mail, X, Cloud, Network, Headphones, GitBranch, MessageCircle, Truck, BookOpen, Shield, Database } from "lucide-react";
+import { Phone, ChevronDown, Monitor, Smartphone, LayoutGrid, Users, Briefcase, Mail, X, Cloud, Network, Headphones, GitBranch, MessageCircle, Truck, BookOpen, Shield, Database, Home } from "lucide-react";
 import { locales, localeNames, type Locale } from "@/i18n/config";
 
 export default function Navbar() {
@@ -157,6 +157,12 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden lg:flex items-center space-x-5 xl:space-x-8 text-sm font-bold h-full min-w-0 shrink">
+          <Link
+            href={`/${locale}`}
+            className={`transition-colors py-2 ${linkClass(isHome)}`}
+          >
+            {t("home")}
+          </Link>
           <div
             className="relative group flex items-center h-full"
             onMouseEnter={() => { setActiveMenu("capabilities"); setCapabilitiesSub((s) => (s === "services" || s === "infrastructure" ? s : "services")); }}
@@ -441,6 +447,17 @@ export default function Navbar() {
                   </button>
                 </div>
                 <div className="flex flex-col gap-6 mt-2 overflow-y-auto">
+                  <Link
+                    href={`/${locale}`}
+                    className="flex items-center gap-6 font-bold"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-[#10b981]/10 flex items-center justify-center text-[#10b981] shrink-0">
+                      <Home size={20} />
+                    </div>
+                    {t("home")}
+                  </Link>
+                  <hr className="border-gray-100" />
                   <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">
                     {t("capabilities")}
                   </p>

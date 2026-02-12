@@ -45,23 +45,23 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-5 justify-center lg:justify-start px-4 sm:px-0">
-              <a
-                href="#contact"
-                className="bg-[#10b981] text-black px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-black text-sm hover:bg-[#059669] transition-all transform hover:-translate-y-1 shadow-lg shadow-[#10b981]/20 text-center"
-              >
-                {t("cta_primary")}
-              </a>
               <button
                 type="button"
                 onClick={openDiscoveryCall}
-                className="group flex items-center justify-center space-x-3 border border-white/20 px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-black text-sm hover:bg-white/10 transition-all transform hover:-translate-y-1 cursor-pointer"
+                className="group flex items-center justify-center space-x-3 bg-[#10b981] text-black px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-black text-sm hover:bg-[#059669] transition-all transform hover:-translate-y-1 shadow-lg shadow-[#10b981]/20 cursor-pointer"
               >
-                <span className="text-[#10b981]">{tContact("book_discovery_call")}</span>
+                <span>{tContact("book_discovery_call")}</span>
                 <ArrowUpRight
                   size={20}
-                  className="text-[#10b981] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+                  className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
                 />
               </button>
+              <a
+                href="#contact"
+                className="flex items-center justify-center space-x-3 border border-white/20 px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-black text-sm hover:bg-white/10 transition-all transform hover:-translate-y-1 text-center"
+              >
+                <span className="text-[#10b981]">{t("cta_primary")}</span>
+              </a>
               {/* <a
                 href="#contact"
                 className="group flex items-center justify-center space-x-3 border border-white/20 px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-black text-sm hover:bg-white/10 transition-all transform hover:-translate-y-1"

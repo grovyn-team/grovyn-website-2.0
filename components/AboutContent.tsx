@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLocale } from "next-intl";
+import { motion } from "framer-motion";
 import {
   ArrowRight,
   ChevronRight,
@@ -192,76 +193,74 @@ export default function AboutContent() {
         </div>
       </section>
 
-      {/* Founder's Note — editorial layout with diagonal separator */}
-      <section className="py-16 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-12 bg-white">
+      {/* Founder's Note — premium luxury tech, editorial two-column card */}
+      <section className="py-16 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-12" style={{ backgroundColor: "#F6F5F3" }}>
         <div className="max-w-5xl mx-auto">
-          <article className="relative overflow-hidden rounded-[1.25rem] sm:rounded-[1.5rem] lg:rounded-[1.75rem] bg-white shadow-[0_24px_64px_-16px_rgba(0,0,0,0.08)] min-h-[480px] sm:min-h-[520px] lg:min-h-[560px]">
-            {/* Mobile/tablet: stack image then content */}
-            <div className="flex flex-col lg:hidden">
-              <div className="relative aspect-[4/5] overflow-hidden bg-white">
-                <Image
-                  src="/assets/aman-slack.jpeg"
-                  alt="Aman K A — Founder & CEO"
-                  fill
-                  className="object-cover object-top grayscale"
-                  sizes="100vw"
-                />
-              </div>
-              <div className="flex flex-col justify-center bg-[#eaeaea] p-8 sm:p-10">
-                <p className="text-[#111] font-bold text-lg tracking-tight border-b-2 border-[#111] pb-1 inline-block">
-                  Aman K A
-                </p>
-                <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-[#111] mt-6 mb-6">
-                  Founder&apos;s Note
-                </h2>
-                <p className="text-[#111] text-sm sm:text-base leading-relaxed">
-                  We build systems that last. Our responsibility is to deliver clarity, stability, and long-term value — not short-term noise.
-                </p>
-                <p className="mt-5 text-[#111] text-base leading-relaxed italic">
-                  Trust is earned through consistency and doing the right thing. That is the standard we hold ourselves to at Grovyn.
-                </p>
-                <p className="mt-8 text-[10px] font-semibold uppercase tracking-[0.25em] text-gray-500">
-                  CEO
-                </p>
-              </div>
+          <motion.article
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+            className="relative overflow-hidden rounded-[26px] min-h-[480px] sm:min-h-[520px] lg:min-h-[560px] flex flex-col lg:flex-row"
+            style={{
+              backgroundColor: "#F6F5F3",
+              boxShadow: "0 24px 64px -16px rgba(0,0,0,0.06), 0 12px 32px -12px rgba(0,0,0,0.04)",
+            }}
+          >
+            {/* Left column (40%) — founder portrait, rounded only on left */}
+            <div className="relative w-full lg:w-[40%] min-h-[320px] lg:min-h-full lg:min-w-0 overflow-hidden rounded-t-[26px] lg:rounded-tr-none lg:rounded-l-[26px] group">
+              <Image
+                src="/assets/aman-slack.jpeg"
+                alt="Aman K A — Founder & CEO"
+                fill
+                className="object-cover object-top grayscale lg:group-hover:grayscale-0 transition-all duration-700 ease-out"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
             </div>
 
-            {/* Desktop: image left, content right with diagonal edge */}
-            <div className="hidden lg:flex absolute inset-0">
-              <div className="w-[42%] relative overflow-hidden bg-white">
-                <Image
-                  src="/assets/aman-slack.jpeg"
-                  alt="Aman K A — Founder & CEO"
-                  fill
-                  className="object-cover object-top grayscale"
-                  sizes="42vw"
-                />
-              </div>
-              <div
-                className="flex-1 flex flex-col justify-center bg-[#eaeaea] pl-[12%] pr-12 xl:pr-14 py-12 xl:py-14"
-                style={{
-                  clipPath: "polygon(12% 0, 100% 0, 100% 100%, 0 100%, 0 0)",
-                  marginLeft: "-2%",
-                }}
+            {/* Right column (60%) — text content */}
+            <div
+              className="flex-1 flex flex-col justify-center p-8 sm:p-10 lg:p-12 xl:p-14 lg:pl-14 xl:pl-16"
+              style={{ backgroundColor: "#F6F5F3" }}
+            >
+              <p
+                className="text-sm font-medium tracking-[0.2em] uppercase"
+                style={{ color: "#8A8A8A" }}
               >
-                <p className="text-[#111] font-bold text-xl tracking-tight border-b-2 border-[#111] pb-1 inline-block">
-                  Aman K A
+                Aman K A
+              </p>
+              <hr className="mt-3 mb-6 w-12 border-[#121212]/20" aria-hidden />
+              <h2 className="font-founder-heading text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight" style={{ color: "#121212" }}>
+                Founder&apos;s Note
+              </h2>
+              <div className="mt-8 space-y-6 max-w-xl">
+                <p className="text-base sm:text-lg leading-[1.7]" style={{ color: "#4B4B4B" }}>
+                  We don&apos;t chase trends.
+                  <br />
+                  We design systems that endure.
                 </p>
-                <h2 className="text-3xl xl:text-4xl font-black tracking-tight text-[#111] mt-6 mb-6">
-                  Founder&apos;s Note
-                </h2>
-                <p className="text-[#111] text-base leading-relaxed max-w-xl">
-                  We build systems that last. Our responsibility is to deliver clarity, stability, and long-term value — not short-term noise.
+                <p className="text-base sm:text-lg leading-[1.7]" style={{ color: "#4B4B4B" }}>
+                  At Grovyn, our responsibility goes beyond building products —
+                  we create clarity in complexity, stability in growth, and value that compounds over time.
                 </p>
-                <p className="mt-5 text-[#111] text-lg leading-relaxed max-w-xl italic">
-                  Trust is earned through consistency and doing the right thing. That is the standard we hold ourselves to at Grovyn.
+                <p className="text-base sm:text-lg leading-[1.7]" style={{ color: "#4B4B4B" }}>
+                  Every decision we make is guided by one principle:
+                  do what is right, even when it is not easy.
                 </p>
-                <p className="mt-8 text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500">
-                  CEO
+                <p className="text-base sm:text-lg leading-[1.7]" style={{ color: "#4B4B4B" }}>
+                  Trust isn&apos;t claimed — it&apos;s earned through consistency, transparency, and execution.
+                  That is the standard we hold ourselves to, every single day.
                 </p>
               </div>
+              <p
+                className="mt-10 text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.3em]"
+                style={{ color: "#8A8A8A" }}
+              >
+                CEO & Founder
+                <span className="block mt-0.5" style={{ color: "#8A8A8A" }}>Grovyn</span>
+              </p>
             </div>
-          </article>
+          </motion.article>
         </div>
       </section>
 

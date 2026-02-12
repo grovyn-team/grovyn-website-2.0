@@ -13,6 +13,7 @@
     "cta_secondary": "See how we work"
   },
   "navbar": {
+    "home": "首页",
     "capabilities": "Capabilities",
     "services": "Services",
     "about": "About",
