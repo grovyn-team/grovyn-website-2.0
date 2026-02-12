@@ -299,6 +299,7 @@
     "back": "Back",
     "continue": "Continue",
     "send_request": "Send",
+    "sending": "Sending…",
     "success_title": "We received your message",
     "success_message": "Someone from our team will reach out within 24 hours to discuss your project.",
     "start_new": "Send another message"
@@ -405,9 +406,10 @@
     "detail_resume_browse": "or click to choose a file",
     "detail_resume_formats": "PDF, DOC, DOCX, or TXT (Max 5MB)",
     "detail_submit": "Submit application",
+    "detail_submitting": "Submitting…",
     "detail_secure": "Secure submission",
     "detail_success_title": "Application received",
-    "detail_success_message": "We'll review your application and get back to you within a few days.",
+    "detail_success_message": "We'll review your application for {title} and get back to you within a few days.",
     "back_to_roles": "Back to all roles",
     "culture_badge": "Our culture",
     "culture_title": "How we",
@@ -796,6 +798,7 @@
     "template_cta_quote": "Let's talk about your infrastructure needs and how we can help.",
     "template_consultation": "Get in touch",
     "template_explore_portfolio": "See our work",
+    "explore_tech": "Explore Tech",
     "template_expert_engineers": "Engineers on your side",
     "template_lead_architect": "Infrastructure Engineer",
     "features_title": "What we deliver",
@@ -914,6 +917,11 @@
         "title": "IT Support",
         "title_highlight": "",
         "title_suffix": "",
+        "hero_metrics": [
+          { "value": "24/7", "label": "Availability" },
+          { "value": "SLA", "label": "Driven" },
+          { "value": "99.9%", "label": "Target uptime" }
+        ],
         "subtitle": "When something breaks or someone’s stuck, we’re there—so your teams can keep shipping instead of waiting on IT.",
         "features": ["24/7 helpdesk", "Tiered support", "Remote and on-site", "Asset management", "Knowledge base", "SLA reporting"],
         "process_steps": [
@@ -980,6 +988,11 @@
         "title_highlight": "",
         "title_suffix": "",
         "subtitle": "From strategy and design to build-out and day-two operations—we help you get the right facility and run it well.",
+        "hero_metrics": [
+          { "value": "Design", "label": "& build" },
+          { "value": "Pilot", "label": "Facilities" },
+          { "value": "99.9%", "label": "Target uptime" }
+        ],
         "features": ["Strategy", "Power and cooling", "Layout design", "Monitoring", "Capacity planning"],
         "process_steps": [
           { "step": "01", "title": "Strategy", "desc": "We work with you on capacity, location, and design so the facility matches your growth and risk profile." },
@@ -993,6 +1006,11 @@
         "title_highlight": "",
         "title_suffix": "",
         "subtitle": "We get your teams on one system for voice, video, and chat—so everyone can collaborate without juggling five different tools.",
+        "hero_metrics": [
+          { "value": "Unified", "label": "Platform" },
+          { "value": "Pilot", "label": "Deployments" },
+          { "value": "99.9%", "label": "Target uptime" }
+        ],
         "features": ["VoIP", "Video conferencing", "Team messaging", "CRM integration", "Call centers", "Mobile access"],
         "process_steps": [
           { "step": "01", "title": "Requirements", "desc": "We learn how you communicate today and what you need from a single platform." },
@@ -1006,6 +1024,11 @@
         "title_highlight": "Migration",
         "title_suffix": "",
         "subtitle": "We move your workloads to the cloud in a way that fits your business—phased, low-risk, and with a clear path to turning off the old stuff.",
+        "hero_metrics": [
+          { "value": "Phased", "label": "Approach" },
+          { "value": "Low-risk", "label": "Cutover" },
+          { "value": "99.9%", "label": "Target uptime" }
+        ],
         "features": ["Migration planning", "Rehost or refactor", "Phased migration", "Zero-downtime goals", "Post-migration optimization", "Training"],
         "process_steps": [
           { "step": "01", "title": "Discovery", "desc": "We map what you have, what depends on what, and build a migration plan that you can actually execute." },
@@ -1287,7 +1310,7 @@
     "agent_active": "active",
     "agent_active_desc": "Processing data and updating systems.",
     "latest_logs": "Recent activity",
-    "log_template": "Processing complete. Results indexed and stored.",
+    "log_template": "Processing complete for {title}. Results indexed and stored.",
     "deployed_agent": "Active agent:",
     "results_badge": "Why this works",
     "results_heading": "Built for",

@@ -399,7 +399,7 @@ export default function ContactForm() {
                   disabled={isSubmitting}
                   className="w-full sm:w-auto bg-[#10b981] text-white px-10 sm:px-12 py-3 sm:py-3.5 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center space-x-2 hover:bg-[#0d9488] transition-all transform hover:-translate-y-1 shadow-xl shadow-[#10b981]/30 disabled:opacity-60 disabled:pointer-events-none"
                 >
-                  <span>{isSubmitting ? "Sending…" : t("send_request")}</span>
+                  <span>{isSubmitting ? t("sending") : t("send_request")}</span>
                   <Check size={14} strokeWidth={3} className="sm:w-4 sm:h-4" />
                 </button>
               )}

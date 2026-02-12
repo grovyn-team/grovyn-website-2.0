@@ -4,10 +4,10 @@
     "description": "We build reliable software systems for growing businesses. Clear architecture, dependable execution, and technology that works."
   },
   "hero": {
-    "title_line1": "Technology Capabilities",
-    "title_line2": "Engineered for",
-    "title_highlight": "not slow",
-    "title_highlight2": "it down",
+    "title_line1": "القدرات التقنية",
+    "title_line2": "مصممة من أجل",
+    "title_highlight": "نمو حقيقي",
+    "title_highlight2": "",
     "subtitle": "Grovyn helps teams build software systems that are designed to stay reliable as products and businesses scale. We focus on clear architecture, maintainable code, and technology choices that age well.",
     "cta_primary": "Start a conversation",
     "cta_secondary": "See how we work"
@@ -107,9 +107,33 @@
     "highlight": "works",
     "subtitle": "We build web applications, mobile apps, and platforms that stay reliable as your business grows.",
     "cards": [
-      { "title": "Web Applications", "description": "Custom web platforms built with modern tools and clear architecture.", "tags": ["React", "Node.js", "Cloud hosting"] },
-      { "title": "Mobile Applications", "description": "Native iOS and Android apps designed for performance and maintainability.", "tags": ["React Native", "Flutter", "Native iOS/Android"] },
-      { "title": "Platform Architecture", "description": "System design and technical planning for products that need to scale.", "tags": ["Architecture", "APIs", "System design"] }
+      {
+        "title": "Web Applications",
+        "description": "Custom web platforms built with modern tools and clear architecture.",
+        "tags": [
+          "React",
+          "Node.js",
+          "Cloud hosting"
+        ]
+      },
+      {
+        "title": "Mobile Applications",
+        "description": "Native iOS and Android apps designed for performance and maintainability.",
+        "tags": [
+          "React Native",
+          "Flutter",
+          "Native iOS/Android"
+        ]
+      },
+      {
+        "title": "Platform Architecture",
+        "description": "System design and technical planning for products that need to scale.",
+        "tags": [
+          "Architecture",
+          "APIs",
+          "System design"
+        ]
+      }
     ],
     "cta_link": "See what we do"
   },
@@ -204,18 +228,48 @@
     "title_line5": "",
     "subtext": "We help teams build software that stays reliable and maintainable as products grow.",
     "left": [
-      { "title": "Custom Software Development", "description": "Web and mobile applications built for your specific needs." },
-      { "title": "Web Applications", "description": "Modern web platforms designed for performance and clarity." },
-      { "title": "Mobile Applications", "description": "iOS and Android apps that feel native and work reliably." },
-      { "title": "Product Development", "description": "From initial concept through to launch and beyond." },
-      { "title": "Cloud Infrastructure", "description": "Hosting, deployment, and operations that scale smoothly." }
+      {
+        "title": "Custom Software Development",
+        "description": "Web and mobile applications built for your specific needs."
+      },
+      {
+        "title": "Web Applications",
+        "description": "Modern web platforms designed for performance and clarity."
+      },
+      {
+        "title": "Mobile Applications",
+        "description": "iOS and Android apps that feel native and work reliably."
+      },
+      {
+        "title": "Product Development",
+        "description": "From initial concept through to launch and beyond."
+      },
+      {
+        "title": "Cloud Infrastructure",
+        "description": "Hosting, deployment, and operations that scale smoothly."
+      }
     ],
     "right": [
-      { "title": "Product Design", "description": "User interfaces that make sense and work across devices." },
-      { "title": "Quality Assurance", "description": "Testing and quality processes to catch issues early." },
-      { "title": "Security", "description": "Security practices built into development from the start." },
-      { "title": "Integrations", "description": "Connecting your systems with third-party services." },
-      { "title": "Ongoing Support", "description": "Maintenance and updates to keep systems running well." }
+      {
+        "title": "Product Design",
+        "description": "User interfaces that make sense and work across devices."
+      },
+      {
+        "title": "Quality Assurance",
+        "description": "Testing and quality processes to catch issues early."
+      },
+      {
+        "title": "Security",
+        "description": "Security practices built into development from the start."
+      },
+      {
+        "title": "Integrations",
+        "description": "Connecting your systems with third-party services."
+      },
+      {
+        "title": "Ongoing Support",
+        "description": "Maintenance and updates to keep systems running well."
+      }
     ]
   },
   "metrics": {
@@ -301,7 +355,8 @@
     "send_request": "Send",
     "success_title": "We received your message",
     "success_message": "Someone from our team will reach out within 24 hours to discuss your project.",
-    "start_new": "Send another message"
+    "start_new": "Send another message",
+    "sending": "جاري الإرسال…"
   },
   "footer": {
     "tagline": "We build software systems that stay reliable as businesses grow. Clear architecture, maintainable code, and technology choices that age well.",
@@ -407,7 +462,7 @@
     "detail_submit": "Submit application",
     "detail_secure": "Secure submission",
     "detail_success_title": "Application received",
-    "detail_success_message": "We'll review your application and get back to you within a few days.",
+    "detail_success_message": "سنراجع طلبك للمنصب {title} ونعود إليك خلال أيام قليلة.",
     "back_to_roles": "Back to all roles",
     "culture_badge": "Our culture",
     "culture_title": "How we",
@@ -427,10 +482,62 @@
     "openings_title": "Open positions",
     "openings_sub": "See what's available",
     "openings": [
-      { "slug": "senior-full-stack-engineer", "title": "Senior Full-Stack Engineer", "type": "Full-time", "team": "Product", "location": "Remote", "description": "We need someone who can build web applications end-to-end. You'll work with React, Node.js, and cloud infrastructure.", "requirements": ["5+ years building web applications", "Experience with React and Node.js", "Comfortable with databases and APIs", "Have shipped products that people use"] },
-      { "slug": "lead-mobile-architect", "title": "Mobile Developer (Flutter)", "type": "Full-time", "team": "Mobile", "location": "Mumbai, India", "description": "Help us build mobile apps for iOS and Android using Flutter.", "requirements": ["Experience with Flutter and Dart", "Understanding of native iOS and Android", "Have shipped apps to the App Store and Play Store", "Can write code that other people can maintain"] },
-      { "slug": "devops-sre-specialist", "title": "DevOps Engineer", "type": "Full-time", "team": "Infrastructure", "location": "Remote", "description": "Help us keep our systems running reliably. You'll work with cloud infrastructure, deployment automation, and monitoring.", "requirements": ["Experience with cloud platforms (AWS, GCP, or Azure)", "Know how to work with Kubernetes and containers", "Comfortable writing scripts and automation", "Understand monitoring and incident response"] },
-      { "slug": "product-designer", "title": "Product Designer", "type": "Full-time", "team": "Design", "location": "Remote", "description": "Design interfaces and experiences for web and mobile products. Work closely with engineers and clients.", "requirements": ["4+ years designing digital products", "Portfolio showing your design process", "Experience with Figma or similar tools", "Comfortable working with engineers"] }
+      {
+        "slug": "senior-full-stack-engineer",
+        "title": "Senior Full-Stack Engineer",
+        "type": "Full-time",
+        "team": "Product",
+        "location": "Remote",
+        "description": "We need someone who can build web applications end-to-end. You'll work with React, Node.js, and cloud infrastructure.",
+        "requirements": [
+          "5+ years building web applications",
+          "Experience with React and Node.js",
+          "Comfortable with databases and APIs",
+          "Have shipped products that people use"
+        ]
+      },
+      {
+        "slug": "lead-mobile-architect",
+        "title": "Mobile Developer (Flutter)",
+        "type": "Full-time",
+        "team": "Mobile",
+        "location": "Mumbai, India",
+        "description": "Help us build mobile apps for iOS and Android using Flutter.",
+        "requirements": [
+          "Experience with Flutter and Dart",
+          "Understanding of native iOS and Android",
+          "Have shipped apps to the App Store and Play Store",
+          "Can write code that other people can maintain"
+        ]
+      },
+      {
+        "slug": "devops-sre-specialist",
+        "title": "DevOps Engineer",
+        "type": "Full-time",
+        "team": "Infrastructure",
+        "location": "Remote",
+        "description": "Help us keep our systems running reliably. You'll work with cloud infrastructure, deployment automation, and monitoring.",
+        "requirements": [
+          "Experience with cloud platforms (AWS, GCP, or Azure)",
+          "Know how to work with Kubernetes and containers",
+          "Comfortable writing scripts and automation",
+          "Understand monitoring and incident response"
+        ]
+      },
+      {
+        "slug": "product-designer",
+        "title": "Product Designer",
+        "type": "Full-time",
+        "team": "Design",
+        "location": "Remote",
+        "description": "Design interfaces and experiences for web and mobile products. Work closely with engineers and clients.",
+        "requirements": [
+          "4+ years designing digital products",
+          "Portfolio showing your design process",
+          "Experience with Figma or similar tools",
+          "Comfortable working with engineers"
+        ]
+      }
     ],
     "apply": "Apply",
     "no_fit": "Don't see something that fits? We're always interested in talking to talented people.",
@@ -459,7 +566,8 @@
     "submit_btn": "Send application",
     "success_title": "Application received",
     "success_message": "We'll review your application and get back to you soon.",
-    "return_btn": "Back to careers"
+    "return_btn": "Back to careers",
+    "detail_submitting": "جاري الإرسال…"
   },
   "why_grovyn": {
     "badge": "Why Grovyn",
@@ -468,12 +576,30 @@
     "title_line2": "they can",
     "title_highlight2": "depend on",
     "items": [
-      { "title": "Clear timelines", "description": "We'll tell you upfront how long things will take and keep you updated along the way." },
-      { "title": "Fixed pricing", "description": "You'll know what something costs before we start. No surprise invoices or hidden fees." },
-      { "title": "Production ready", "description": "What we build is tested, documented, and ready to deploy." },
-      { "title": "You own everything", "description": "All code and assets belong to you. No proprietary frameworks or vendor lock-in." },
-      { "title": "Global team", "description": "We work across time zones with clear communication." },
-      { "title": "90-day support", "description": "After launch, we'll help fix issues and make adjustments." }
+      {
+        "title": "Clear timelines",
+        "description": "We'll tell you upfront how long things will take and keep you updated along the way."
+      },
+      {
+        "title": "Fixed pricing",
+        "description": "You'll know what something costs before we start. No surprise invoices or hidden fees."
+      },
+      {
+        "title": "Production ready",
+        "description": "What we build is tested, documented, and ready to deploy."
+      },
+      {
+        "title": "You own everything",
+        "description": "All code and assets belong to you. No proprietary frameworks or vendor lock-in."
+      },
+      {
+        "title": "Global team",
+        "description": "We work across time zones with clear communication."
+      },
+      {
+        "title": "90-day support",
+        "description": "After launch, we'll help fix issues and make adjustments."
+      }
     ]
   },
   "technology_stack": {
@@ -481,11 +607,49 @@
     "badge": "Our stack",
     "root_label": "Our Tech-Stacks",
     "categories": [
-      { "title": "Web Development", "items": ["React", "Next.js", "Node.js"] },
-      { "title": "Mobile Development", "items": ["React Native", "Flutter", "Android", "iOS"] },
-      { "title": "Cloud & DevOps", "items": ["AWS", "Docker", "Kubernetes", "Terraform"] },
-      { "title": "AI & Data", "items": ["Machine Learning", "NLP", "Computer Vision", "Python"] },
-      { "title": "Blockchain & Web3", "items": ["Ethereum", "Solidity", "Web3.js"] }
+      {
+        "title": "Web Development",
+        "items": [
+          "React",
+          "Next.js",
+          "Node.js"
+        ]
+      },
+      {
+        "title": "Mobile Development",
+        "items": [
+          "React Native",
+          "Flutter",
+          "Android",
+          "iOS"
+        ]
+      },
+      {
+        "title": "Cloud & DevOps",
+        "items": [
+          "AWS",
+          "Docker",
+          "Kubernetes",
+          "Terraform"
+        ]
+      },
+      {
+        "title": "AI & Data",
+        "items": [
+          "Machine Learning",
+          "NLP",
+          "Computer Vision",
+          "Python"
+        ]
+      },
+      {
+        "title": "Blockchain & Web3",
+        "items": [
+          "Ethereum",
+          "Solidity",
+          "Web3.js"
+        ]
+      }
     ]
   },
   "ai_section": {
@@ -527,18 +691,51 @@
       "expertise_subheading": "Web systems for growing businesses",
       "expertise_intro": "We focus on applications where performance, reliability, and maintainability actually matter.",
       "expertise_cards": [
-        { "title": "Business Applications", "subtitle": "Custom web platforms", "bullets": ["Internal tools", "Customer portals", "Data dashboards"] },
-        { "title": "E-commerce", "subtitle": "Online stores", "bullets": ["Product catalogs", "Payment processing", "Order management"] },
-        { "title": "Content Platforms", "subtitle": "Publishing and media", "bullets": ["Content management", "Publishing workflows", "Media handling"] }
+        {
+          "title": "Business Applications",
+          "subtitle": "Custom web platforms",
+          "bullets": [
+            "Internal tools",
+            "Customer portals",
+            "Data dashboards"
+          ]
+        },
+        {
+          "title": "E-commerce",
+          "subtitle": "Online stores",
+          "bullets": [
+            "Product catalogs",
+            "Payment processing",
+            "Order management"
+          ]
+        },
+        {
+          "title": "Content Platforms",
+          "subtitle": "Publishing and media",
+          "bullets": [
+            "Content management",
+            "Publishing workflows",
+            "Media handling"
+          ]
+        }
       ],
       "dedicated_heading": "How we work",
       "dedicated_subheading": "Clear communication, realistic timelines",
       "dedicated_desc": "We become part of your team. You'll talk directly to the people building your product, and you'll always know what's happening.",
       "dedicated_cta": "See our work",
       "metrics": [
-        { "value": "150+", "label": "Projects shipped" },
-        { "value": "2.4s", "label": "Average page load" },
-        { "value": "$40M+", "label": "Transaction value processed" }
+        {
+          "value": "150+",
+          "label": "Projects shipped"
+        },
+        {
+          "value": "2.4s",
+          "label": "Average page load"
+        },
+        {
+          "value": "$40M+",
+          "label": "Transaction value processed"
+        }
       ],
       "methodology_heading": "Our process",
       "methodology_subheading": "Clear steps from start to finish",
@@ -547,37 +744,129 @@
       "website_services_highlight": "Development",
       "website_services_subtitle": "From simple websites to complex platforms. We build what you need.",
       "website_services_cards": [
-        { "title": "Business Websites", "description": "Professional websites that represent your business well and work across all devices.", "tags": ["Responsive design", "Fast loading", "SEO friendly"] },
-        { "title": "E-commerce Platforms", "description": "Online stores with product management, payment processing, and order fulfillment.", "tags": ["Shopping cart", "Payment integration", "Inventory"] },
-        { "title": "Web Applications", "description": "Custom platforms built for your specific business needs and workflows.", "tags": ["Custom features", "User management", "API integration"] }
+        {
+          "title": "Business Websites",
+          "description": "Professional websites that represent your business well and work across all devices.",
+          "tags": [
+            "Responsive design",
+            "Fast loading",
+            "SEO friendly"
+          ]
+        },
+        {
+          "title": "E-commerce Platforms",
+          "description": "Online stores with product management, payment processing, and order fulfillment.",
+          "tags": [
+            "Shopping cart",
+            "Payment integration",
+            "Inventory"
+          ]
+        },
+        {
+          "title": "Web Applications",
+          "description": "Custom platforms built for your specific business needs and workflows.",
+          "tags": [
+            "Custom features",
+            "User management",
+            "API integration"
+          ]
+        }
       ],
       "tech_title": "Technology we use",
-      "tech_items": ["React", "Next.js", "Node.js", "TypeScript", "PostgreSQL", "AWS"],
+      "tech_items": [
+        "React",
+        "Next.js",
+        "Node.js",
+        "TypeScript",
+        "PostgreSQL",
+        "AWS"
+      ],
       "offer_section_title": "What we",
       "offer_section_highlight": "build",
       "offer_section_subtitle": "Web systems designed to stay reliable as you grow",
       "offer_cards": [
-        { "title": "Web Platforms", "description": "Custom applications built for your business needs.", "tags": ["Modern stack", "Scalable", "Maintainable"] },
-        { "title": "E-commerce", "description": "Online stores that handle transactions reliably.", "tags": ["Secure payments", "Inventory", "Orders"] },
-        { "title": "Content Systems", "description": "Platforms for publishing and managing content.", "tags": ["CMS", "Publishing", "Media"] }
+        {
+          "title": "Web Platforms",
+          "description": "Custom applications built for your business needs.",
+          "tags": [
+            "Modern stack",
+            "Scalable",
+            "Maintainable"
+          ]
+        },
+        {
+          "title": "E-commerce",
+          "description": "Online stores that handle transactions reliably.",
+          "tags": [
+            "Secure payments",
+            "Inventory",
+            "Orders"
+          ]
+        },
+        {
+          "title": "Content Systems",
+          "description": "Platforms for publishing and managing content.",
+          "tags": [
+            "CMS",
+            "Publishing",
+            "Media"
+          ]
+        }
       ],
       "offerings_title": "What we deliver",
       "offerings_intro": "Web platforms built around real business needs",
       "offerings": [
-        { "title": "Modern web apps", "desc": "Built with React, Next.js, and similar tools for good performance and maintainability." },
-        { "title": "APIs and backends", "desc": "Server-side systems designed to handle load and integrate with other services." },
-        { "title": "Real-time features", "desc": "Live updates, notifications, and collaborative features when you need them." }
+        {
+          "title": "Modern web apps",
+          "desc": "Built with React, Next.js, and similar tools for good performance and maintainability."
+        },
+        {
+          "title": "APIs and backends",
+          "desc": "Server-side systems designed to handle load and integrate with other services."
+        },
+        {
+          "title": "Real-time features",
+          "desc": "Live updates, notifications, and collaborative features when you need them."
+        }
       ],
       "features_title": "What's included",
-      "features": ["User authentication", "Good performance", "Database design", "Clean code", "Deployment setup", "Documentation"],
+      "features": [
+        "User authentication",
+        "Good performance",
+        "Database design",
+        "Clean code",
+        "Deployment setup",
+        "Documentation"
+      ],
       "advanced_title": "Integrations",
-      "advanced": ["Payment processing", "Third-party APIs", "Analytics", "Email services"],
+      "advanced": [
+        "Payment processing",
+        "Third-party APIs",
+        "Analytics",
+        "Email services"
+      ],
       "process_title": "How we work",
       "process_steps": [
-        { "step": "01", "title": "Understand your needs", "desc": "We'll talk about what you're building and why. We'll help you understand what's involved." },
-        { "step": "02", "title": "Plan and design", "desc": "Clear scope, realistic timeline, and fixed price before we start building." },
-        { "step": "03", "title": "Build and test", "desc": "Regular updates, working software every couple of weeks, testing as we go." },
-        { "step": "04", "title": "Launch and support", "desc": "Deployment, monitoring, and support to make sure everything works well." }
+        {
+          "step": "01",
+          "title": "Understand your needs",
+          "desc": "We'll talk about what you're building and why. We'll help you understand what's involved."
+        },
+        {
+          "step": "02",
+          "title": "Plan and design",
+          "desc": "Clear scope, realistic timeline, and fixed price before we start building."
+        },
+        {
+          "step": "03",
+          "title": "Build and test",
+          "desc": "Regular updates, working software every couple of weeks, testing as we go."
+        },
+        {
+          "step": "04",
+          "title": "Launch and support",
+          "desc": "Deployment, monitoring, and support to make sure everything works well."
+        }
       ],
       "cta_title": "Let's talk about your web project",
       "cta_button": "Get in touch"
@@ -590,33 +879,97 @@
       "cta_primary": "Talk to us",
       "cta_secondary": "See what we do",
       "tech_title": "Technology we use",
-      "tech_items": ["React Native", "Flutter", "Swift", "Kotlin", "TypeScript", "Firebase"],
+      "tech_items": [
+        "React Native",
+        "Flutter",
+        "Swift",
+        "Kotlin",
+        "TypeScript",
+        "Firebase"
+      ],
       "offer_section_title": "Mobile",
       "offer_section_highlight": "applications",
       "offer_section_subtitle": "Apps that feel native and work reliably",
       "offer_cards": [
-        { "title": "Consumer Apps", "description": "Apps for end users with good UX and reliable performance.", "tags": ["iOS", "Android", "App stores"] },
-        { "title": "Business Apps", "description": "Internal tools and employee-facing applications.", "tags": ["Authentication", "Offline support", "Data sync"] },
-        { "title": "Marketplace Apps", "description": "Platforms connecting buyers and sellers.", "tags": ["Payments", "Reviews", "Notifications"] }
+        {
+          "title": "Consumer Apps",
+          "description": "Apps for end users with good UX and reliable performance.",
+          "tags": [
+            "iOS",
+            "Android",
+            "App stores"
+          ]
+        },
+        {
+          "title": "Business Apps",
+          "description": "Internal tools and employee-facing applications.",
+          "tags": [
+            "Authentication",
+            "Offline support",
+            "Data sync"
+          ]
+        },
+        {
+          "title": "Marketplace Apps",
+          "description": "Platforms connecting buyers and sellers.",
+          "tags": [
+            "Payments",
+            "Reviews",
+            "Notifications"
+          ]
+        }
       ],
       "offerings_title": "What we build",
       "offerings": [
-        { "title": "Native apps", "desc": "Swift for iOS and Kotlin for Android when you need the best performance and platform integration." },
-        { "title": "Cross-platform", "desc": "React Native or Flutter when you need to ship to both platforms from one codebase." },
-        { "title": "Offline and sync", "desc": "Apps that work without internet and sync data when reconnected." }
+        {
+          "title": "Native apps",
+          "desc": "Swift for iOS and Kotlin for Android when you need the best performance and platform integration."
+        },
+        {
+          "title": "Cross-platform",
+          "desc": "React Native or Flutter when you need to ship to both platforms from one codebase."
+        },
+        {
+          "title": "Offline and sync",
+          "desc": "Apps that work without internet and sync data when reconnected."
+        }
       ],
       "features_title": "What's included",
-      "features": ["Native feel", "Offline support", "Push notifications", "Secure login", "App store deployment", "Updates"],
+      "features": [
+        "Native feel",
+        "Offline support",
+        "Push notifications",
+        "Secure login",
+        "App store deployment",
+        "Updates"
+      ],
       "advanced_title": "Integrations",
-      "advanced": ["Real-time messaging", "Payment systems", "Analytics", "Deep linking"],
+      "advanced": [
+        "Real-time messaging",
+        "Payment systems",
+        "Analytics",
+        "Deep linking"
+      ],
       "methodology_heading": "Our process",
       "methodology_subheading": "From concept to app store",
       "methodology_conclusion": "Clear communication every step",
       "process_title": "How we work",
       "process_steps": [
-        { "step": "01", "title": "Define and design", "desc": "Understand what users need and how the app should work." },
-        { "step": "02", "title": "Build and test", "desc": "Iterative development with testing on real devices." },
-        { "step": "03", "title": "Launch and maintain", "desc": "App store submission and ongoing updates." }
+        {
+          "step": "01",
+          "title": "Define and design",
+          "desc": "Understand what users need and how the app should work."
+        },
+        {
+          "step": "02",
+          "title": "Build and test",
+          "desc": "Iterative development with testing on real devices."
+        },
+        {
+          "step": "03",
+          "title": "Launch and maintain",
+          "desc": "App store submission and ongoing updates."
+        }
       ],
       "cta_title": "Let's talk about your mobile app",
       "cta_button": "Get in touch"
@@ -629,33 +982,96 @@
       "cta_primary": "Talk to us",
       "cta_secondary": "See what we do",
       "tech_title": "What we focus on",
-      "tech_items": ["System design", "API architecture", "Data modeling", "Scaling patterns", "Integration strategy"],
+      "tech_items": [
+        "System design",
+        "API architecture",
+        "Data modeling",
+        "Scaling patterns",
+        "Integration strategy"
+      ],
       "offer_section_title": "Platform",
       "offer_section_highlight": "architecture",
       "offer_section_subtitle": "Technical planning that helps products scale smoothly",
       "offer_cards": [
-        { "title": "API Design", "description": "Well-designed APIs that are easy to use and maintain.", "tags": ["REST", "GraphQL", "Versioning"] },
-        { "title": "System Design", "description": "Architecture that can handle growth without rewrites.", "tags": ["Scalability", "Data modeling", "Boundaries"] },
-        { "title": "Multi-tenant Systems", "description": "Platforms that serve many customers from one codebase.", "tags": ["Isolation", "Performance", "Security"] }
+        {
+          "title": "API Design",
+          "description": "Well-designed APIs that are easy to use and maintain.",
+          "tags": [
+            "REST",
+            "GraphQL",
+            "Versioning"
+          ]
+        },
+        {
+          "title": "System Design",
+          "description": "Architecture that can handle growth without rewrites.",
+          "tags": [
+            "Scalability",
+            "Data modeling",
+            "Boundaries"
+          ]
+        },
+        {
+          "title": "Multi-tenant Systems",
+          "description": "Platforms that serve many customers from one codebase.",
+          "tags": [
+            "Isolation",
+            "Performance",
+            "Security"
+          ]
+        }
       ],
       "offerings_title": "What we deliver",
       "offerings": [
-        { "title": "Architecture plans", "desc": "Clear documentation and diagrams showing how systems fit together." },
-        { "title": "API design", "desc": "Well-structured APIs that are easy to use and maintain." },
-        { "title": "Migration paths", "desc": "Plans for moving from old systems to new ones with minimal risk." }
+        {
+          "title": "Architecture plans",
+          "desc": "Clear documentation and diagrams showing how systems fit together."
+        },
+        {
+          "title": "API design",
+          "desc": "Well-structured APIs that are easy to use and maintain."
+        },
+        {
+          "title": "Migration paths",
+          "desc": "Plans for moving from old systems to new ones with minimal risk."
+        }
       ],
       "features_title": "What we focus on",
-      "features": ["System boundaries", "API design", "Data models", "Security", "Scaling", "Integration"],
+      "features": [
+        "System boundaries",
+        "API design",
+        "Data models",
+        "Security",
+        "Scaling",
+        "Integration"
+      ],
       "advanced_title": "Advanced topics",
-      "advanced": ["Event-driven design", "Multi-region", "Legacy modernization", "Platform thinking"],
+      "advanced": [
+        "Event-driven design",
+        "Multi-region",
+        "Legacy modernization",
+        "Platform thinking"
+      ],
       "methodology_heading": "Our process",
       "methodology_subheading": "Planning before building",
       "methodology_conclusion": "Clear plans, less risk",
       "process_title": "How we work",
       "process_steps": [
-        { "step": "01", "title": "Understand needs", "desc": "What are you building and how big does it need to get?" },
-        { "step": "02", "title": "Design architecture", "desc": "Plan the technical structure and how pieces fit together." },
-        { "step": "03", "title": "Document and guide", "desc": "Clear specs that teams can use to build from." }
+        {
+          "step": "01",
+          "title": "Understand needs",
+          "desc": "What are you building and how big does it need to get?"
+        },
+        {
+          "step": "02",
+          "title": "Design architecture",
+          "desc": "Plan the technical structure and how pieces fit together."
+        },
+        {
+          "step": "03",
+          "title": "Document and guide",
+          "desc": "Clear specs that teams can use to build from."
+        }
       ],
       "cta_title": "Let's talk about your platform architecture",
       "cta_button": "Get in touch"
@@ -668,33 +1084,96 @@
       "cta_primary": "Talk to us",
       "cta_secondary": "See what we do",
       "tech_title": "What we focus on",
-      "tech_items": ["Requirements & discovery", "UX and workflows", "Integration with your tools", "Scalability", "Ongoing support"],
+      "tech_items": [
+        "Requirements & discovery",
+        "UX and workflows",
+        "Integration with your tools",
+        "Scalability",
+        "Ongoing support"
+      ],
       "offer_section_title": "Custom Software",
       "offer_section_highlight": "solutions",
       "offer_section_subtitle": "Applications designed around how you work, not the other way around",
       "offer_cards": [
-        { "title": "Business Applications", "description": "Internal tools, portals, and dashboards that match your operations.", "tags": ["Workflows", "Reporting", "User roles"] },
-        { "title": "Integration & APIs", "description": "Connect your software with existing systems and third-party services.", "tags": ["APIs", "Data sync", "Webhooks"] },
-        { "title": "Product Development", "description": "Custom products and SaaS built for your market and customers.", "tags": ["MVP", "Scale", "Maintenance"] }
+        {
+          "title": "Business Applications",
+          "description": "Internal tools, portals, and dashboards that match your operations.",
+          "tags": [
+            "Workflows",
+            "Reporting",
+            "User roles"
+          ]
+        },
+        {
+          "title": "Integration & APIs",
+          "description": "Connect your software with existing systems and third-party services.",
+          "tags": [
+            "APIs",
+            "Data sync",
+            "Webhooks"
+          ]
+        },
+        {
+          "title": "Product Development",
+          "description": "Custom products and SaaS built for your market and customers.",
+          "tags": [
+            "MVP",
+            "Scale",
+            "Maintenance"
+          ]
+        }
       ],
       "offerings_title": "What we deliver",
       "offerings": [
-        { "title": "Discovery & scope", "desc": "Clear understanding of your needs, users, and success criteria before we build." },
-        { "title": "Design & build", "desc": "Iterative development with regular demos and feedback so the product stays on track." },
-        { "title": "Launch & support", "desc": "Deployment, documentation, and ongoing maintenance so you can run it with confidence." }
+        {
+          "title": "Discovery & scope",
+          "desc": "Clear understanding of your needs, users, and success criteria before we build."
+        },
+        {
+          "title": "Design & build",
+          "desc": "Iterative development with regular demos and feedback so the product stays on track."
+        },
+        {
+          "title": "Launch & support",
+          "desc": "Deployment, documentation, and ongoing maintenance so you can run it with confidence."
+        }
       ],
       "features_title": "What we focus on",
-      "features": ["Your workflows", "Clear requirements", "Quality code", "Security", "Performance", "Maintainability"],
+      "features": [
+        "Your workflows",
+        "Clear requirements",
+        "Quality code",
+        "Security",
+        "Performance",
+        "Maintainability"
+      ],
       "advanced_title": "Why go custom",
-      "advanced": ["No vendor lock-in", "Fits your process", "Evolves with you", "Full ownership"],
+      "advanced": [
+        "No vendor lock-in",
+        "Fits your process",
+        "Evolves with you",
+        "Full ownership"
+      ],
       "methodology_heading": "Our process",
       "methodology_subheading": "From idea to production",
       "methodology_conclusion": "Clear plan, less risk",
       "process_title": "How we work",
       "process_steps": [
-        { "step": "01", "title": "Discover", "desc": "We learn your workflows, pain points, and what success looks like." },
-        { "step": "02", "title": "Design & build", "desc": "We design the solution and build in sprints with regular check-ins." },
-        { "step": "03", "title": "Launch & iterate", "desc": "We deploy, hand over, and support so you can run and evolve the product." }
+        {
+          "step": "01",
+          "title": "Discover",
+          "desc": "We learn your workflows, pain points, and what success looks like."
+        },
+        {
+          "step": "02",
+          "title": "Design & build",
+          "desc": "We design the solution and build in sprints with regular check-ins."
+        },
+        {
+          "step": "03",
+          "title": "Launch & iterate",
+          "desc": "We deploy, hand over, and support so you can run and evolve the product."
+        }
       ],
       "cta_title": "Let's talk about your custom software",
       "cta_button": "Get in touch"
@@ -707,30 +1186,96 @@
       "cta_primary": "Talk to us",
       "cta_secondary": "See what we do",
       "tech_title": "Technology we use",
-      "tech_items": ["Node.js", "Python", "PostgreSQL", "MongoDB", "Redis", "AWS", "Docker", "Kubernetes"],
+      "tech_items": [
+        "Node.js",
+        "Python",
+        "PostgreSQL",
+        "MongoDB",
+        "Redis",
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
       "offer_section_title": "Backend",
       "offer_section_highlight": "systems",
       "offer_section_subtitle": "Server-side infrastructure that handles load reliably",
       "offer_cards": [
-        { "title": "APIs", "description": "RESTful and GraphQL APIs that are easy to use and maintain.", "tags": ["REST", "GraphQL", "Documentation"] },
-        { "title": "Cloud Infrastructure", "description": "Hosting and deployment that scales smoothly.", "tags": ["AWS", "Auto-scaling", "Monitoring"] },
-        { "title": "Data Systems", "description": "Databases and data processing that handle growing data.", "tags": ["Databases", "Caching", "Analytics"] }
+        {
+          "title": "APIs",
+          "description": "RESTful and GraphQL APIs that are easy to use and maintain.",
+          "tags": [
+            "REST",
+            "GraphQL",
+            "Documentation"
+          ]
+        },
+        {
+          "title": "Cloud Infrastructure",
+          "description": "Hosting and deployment that scales smoothly.",
+          "tags": [
+            "AWS",
+            "Auto-scaling",
+            "Monitoring"
+          ]
+        },
+        {
+          "title": "Data Systems",
+          "description": "Databases and data processing that handle growing data.",
+          "tags": [
+            "Databases",
+            "Caching",
+            "Analytics"
+          ]
+        }
       ],
       "offerings_title": "What we build",
       "offerings": [
-        { "title": "APIs", "desc": "RESTful and GraphQL APIs designed for reliability and ease of use." },
-        { "title": "Cloud hosting", "desc": "Infrastructure on AWS, GCP, or Azure that scales smoothly." },
-        { "title": "DevOps", "desc": "Deployment automation, monitoring, and incident response." }
+        {
+          "title": "APIs",
+          "desc": "RESTful and GraphQL APIs designed for reliability and ease of use."
+        },
+        {
+          "title": "Cloud hosting",
+          "desc": "Infrastructure on AWS, GCP, or Azure that scales smoothly."
+        },
+        {
+          "title": "DevOps",
+          "desc": "Deployment automation, monitoring, and incident response."
+        }
       ],
       "features_title": "What's included",
-      "features": ["Scalable APIs", "Database design", "Caching", "Security", "Monitoring", "Backups"],
+      "features": [
+        "Scalable APIs",
+        "Database design",
+        "Caching",
+        "Security",
+        "Monitoring",
+        "Backups"
+      ],
       "advanced_title": "Advanced capabilities",
-      "advanced": ["Event-driven systems", "Multi-region", "Cost optimization", "Legacy migration"],
+      "advanced": [
+        "Event-driven systems",
+        "Multi-region",
+        "Cost optimization",
+        "Legacy migration"
+      ],
       "process_title": "How we work",
       "process_steps": [
-        { "step": "01", "title": "Architecture", "desc": "Plan how data flows and how systems connect." },
-        { "step": "02", "title": "Build", "desc": "Implement with testing and documentation." },
-        { "step": "03", "title": "Deploy and monitor", "desc": "Launch with monitoring and support." }
+        {
+          "step": "01",
+          "title": "Architecture",
+          "desc": "Plan how data flows and how systems connect."
+        },
+        {
+          "step": "02",
+          "title": "Build",
+          "desc": "Implement with testing and documentation."
+        },
+        {
+          "step": "03",
+          "title": "Deploy and monitor",
+          "desc": "Launch with monitoring and support."
+        }
       ],
       "cta_title": "Let's talk about your backend needs",
       "cta_button": "Get in touch"
@@ -743,30 +1288,95 @@
       "cta_primary": "Talk to us",
       "cta_secondary": "See examples",
       "tech_title": "What we work with",
-      "tech_items": ["LLMs", "RAG", "LangChain", "Python", "Vector databases", "OpenAI", "Anthropic"],
+      "tech_items": [
+        "LLMs",
+        "RAG",
+        "LangChain",
+        "Python",
+        "Vector databases",
+        "OpenAI",
+        "Anthropic"
+      ],
       "offer_section_title": "AI",
       "offer_section_highlight": "features",
       "offer_section_subtitle": "Practical AI that adds clear value",
       "offer_cards": [
-        { "title": "Search and Knowledge", "description": "Help users find information in your documents and data.", "tags": ["Semantic search", "Document Q&A", "Citations"] },
-        { "title": "Automation", "description": "Automate repetitive tasks that follow clear patterns.", "tags": ["Task automation", "Workflows", "Processing"] },
-        { "title": "Custom AI", "description": "Fine-tuning and custom models for specific needs.", "tags": ["Fine-tuning", "Training", "Deployment"] }
+        {
+          "title": "Search and Knowledge",
+          "description": "Help users find information in your documents and data.",
+          "tags": [
+            "Semantic search",
+            "Document Q&A",
+            "Citations"
+          ]
+        },
+        {
+          "title": "Automation",
+          "description": "Automate repetitive tasks that follow clear patterns.",
+          "tags": [
+            "Task automation",
+            "Workflows",
+            "Processing"
+          ]
+        },
+        {
+          "title": "Custom AI",
+          "description": "Fine-tuning and custom models for specific needs.",
+          "tags": [
+            "Fine-tuning",
+            "Training",
+            "Deployment"
+          ]
+        }
       ],
       "offerings_title": "What we build",
       "offerings": [
-        { "title": "Document search", "desc": "Semantic search across your documents and data with accurate answers." },
-        { "title": "AI workflows", "desc": "Automated processes that handle multi-step tasks." },
-        { "title": "Custom features", "desc": "AI capabilities designed for your specific use case." }
+        {
+          "title": "Document search",
+          "desc": "Semantic search across your documents and data with accurate answers."
+        },
+        {
+          "title": "AI workflows",
+          "desc": "Automated processes that handle multi-step tasks."
+        },
+        {
+          "title": "Custom features",
+          "desc": "AI capabilities designed for your specific use case."
+        }
       ],
       "features_title": "What we focus on",
-      "features": ["Clear value", "Reliable output", "Secure data", "Explainable results", "Good performance", "Maintainable code"],
+      "features": [
+        "Clear value",
+        "Reliable output",
+        "Secure data",
+        "Explainable results",
+        "Good performance",
+        "Maintainable code"
+      ],
       "advanced_title": "Advanced work",
-      "advanced": ["Multi-modal AI", "Fine-tuning", "Real-time inference", "Compliance"],
+      "advanced": [
+        "Multi-modal AI",
+        "Fine-tuning",
+        "Real-time inference",
+        "Compliance"
+      ],
       "process_title": "How we work",
       "process_steps": [
-        { "step": "01", "title": "Define value", "desc": "What problem are we solving and how will we measure success?" },
-        { "step": "02", "title": "Build and test", "desc": "Develop AI features with guardrails and testing." },
-        { "step": "03", "title": "Deploy and monitor", "desc": "Launch with monitoring and continuous improvement." }
+        {
+          "step": "01",
+          "title": "Define value",
+          "desc": "What problem are we solving and how will we measure success?"
+        },
+        {
+          "step": "02",
+          "title": "Build and test",
+          "desc": "Develop AI features with guardrails and testing."
+        },
+        {
+          "step": "03",
+          "title": "Deploy and monitor",
+          "desc": "Launch with monitoring and continuous improvement."
+        }
       ],
       "cta_title": "Let's talk about AI for your product",
       "cta_button": "Get in touch"
@@ -785,7 +1395,12 @@
     "template_expert_heading": "Infrastructure",
     "template_expert_highlight": "that works",
     "template_expert_para": "We help teams plan and manage infrastructure that stays reliable as systems grow. Clear architecture, good monitoring, and technology choices that age well.",
-    "template_expert_bullets": ["Clear planning", "Reliable systems", "Good monitoring", "Security first"],
+    "template_expert_bullets": [
+      "Clear planning",
+      "Reliable systems",
+      "Good monitoring",
+      "Security first"
+    ],
     "template_blueprint_line1": "Infrastructure built",
     "template_blueprint_highlight": "to last",
     "template_what_we_do": "What we do",
@@ -812,25 +1427,96 @@
         "title_suffix": "",
         "subtitle": "We help teams move to cloud infrastructure and manage it reliably. AWS, Azure, and Google Cloud.",
         "hero_metrics": [
-          { "value": "3", "label": "Cloud platforms" },
-          { "value": "10K+", "label": "VMs managed" },
-          { "value": "99.99%", "label": "Reliability" },
-          { "value": "40%", "label": "Cost reduction" }
+          {
+            "value": "3",
+            "label": "Cloud platforms"
+          },
+          {
+            "value": "10K+",
+            "label": "VMs managed"
+          },
+          {
+            "value": "99.99%",
+            "label": "Reliability"
+          },
+          {
+            "value": "40%",
+            "label": "Cost reduction"
+          }
         ],
-        "features": ["Cloud migration", "Cloud backup", "Cost optimization", "Hybrid cloud", "Security", "Managed services"],
+        "features": [
+          "Cloud migration",
+          "Cloud backup",
+          "Cost optimization",
+          "Hybrid cloud",
+          "Security",
+          "Managed services"
+        ],
         "process_steps": [
-          { "step": "01", "title": "Assessment", "desc": "Review current setup and plan the migration." },
-          { "step": "02", "title": "Migration", "desc": "Move systems with minimal disruption." },
-          { "step": "03", "title": "Operation", "desc": "Ongoing management and optimization." }
+          {
+            "step": "01",
+            "title": "Assessment",
+            "desc": "Review current setup and plan the migration."
+          },
+          {
+            "step": "02",
+            "title": "Migration",
+            "desc": "Move systems with minimal disruption."
+          },
+          {
+            "step": "03",
+            "title": "Operation",
+            "desc": "Ongoing management and optimization."
+          }
         ],
-        "offerings": ["AWS", "Azure", "GCP", "Terraform", "Ansible"],
+        "offerings": [
+          "AWS",
+          "Azure",
+          "GCP",
+          "Terraform",
+          "Ansible"
+        ],
         "featured_projects_title": "Example projects",
         "featured_projects": [
-          { "title": "Cloud Migration", "subtitle": "Manufacturing Company", "description": "Moved 500+ VMs to AWS with no downtime.", "tags": ["AWS", "Terraform"], "metric": "40% cost reduction" },
-          { "title": "Multi-Cloud Setup", "subtitle": "Financial Services", "description": "Built infrastructure across AWS and Azure for redundancy.", "tags": ["AWS", "Azure", "Kubernetes"], "metric": "99.99% uptime" },
-          { "title": "Cost Optimization", "subtitle": "SaaS Company", "description": "Reduced cloud spending through better resource management.", "tags": ["AWS", "Monitoring"], "metric": "$500K saved annually" }
+          {
+            "title": "Cloud Migration",
+            "subtitle": "Manufacturing Company",
+            "description": "Moved 500+ VMs to AWS with no downtime.",
+            "tags": [
+              "AWS",
+              "Terraform"
+            ],
+            "metric": "40% cost reduction"
+          },
+          {
+            "title": "Multi-Cloud Setup",
+            "subtitle": "Financial Services",
+            "description": "Built infrastructure across AWS and Azure for redundancy.",
+            "tags": [
+              "AWS",
+              "Azure",
+              "Kubernetes"
+            ],
+            "metric": "99.99% uptime"
+          },
+          {
+            "title": "Cost Optimization",
+            "subtitle": "SaaS Company",
+            "description": "Reduced cloud spending through better resource management.",
+            "tags": [
+              "AWS",
+              "Monitoring"
+            ],
+            "metric": "$500K saved annually"
+          }
         ],
-        "target_clients": ["Growing businesses", "SaaS companies", "Financial services", "Healthcare", "Government"]
+        "target_clients": [
+          "Growing businesses",
+          "SaaS companies",
+          "Financial services",
+          "Healthcare",
+          "Government"
+        ]
       },
       "network": {
         "title": "Network",
@@ -838,25 +1524,94 @@
         "title_suffix": "",
         "subtitle": "We design and manage network infrastructure that keeps your business connected reliably.",
         "hero_metrics": [
-          { "value": "500+", "label": "Networks" },
-          { "value": "50K+", "label": "Devices" },
-          { "value": "Enterprise", "label": "Security" },
-          { "value": "99.9%", "label": "Uptime" }
+          {
+            "value": "500+",
+            "label": "Networks"
+          },
+          {
+            "value": "50K+",
+            "label": "Devices"
+          },
+          {
+            "value": "Enterprise",
+            "label": "Security"
+          },
+          {
+            "value": "99.9%",
+            "label": "Uptime"
+          }
         ],
-        "features": ["Network design", "VPN setup", "Firewall management", "Network monitoring", "SD-WAN", "Security"],
+        "features": [
+          "Network design",
+          "VPN setup",
+          "Firewall management",
+          "Network monitoring",
+          "SD-WAN",
+          "Security"
+        ],
         "process_steps": [
-          { "step": "01", "title": "Design", "desc": "Plan network architecture for your needs." },
-          { "step": "02", "title": "Implementation", "desc": "Deploy with testing and validation." },
-          { "step": "03", "title": "Monitoring", "desc": "Ongoing monitoring and maintenance." }
+          {
+            "step": "01",
+            "title": "Design",
+            "desc": "Plan network architecture for your needs."
+          },
+          {
+            "step": "02",
+            "title": "Implementation",
+            "desc": "Deploy with testing and validation."
+          },
+          {
+            "step": "03",
+            "title": "Monitoring",
+            "desc": "Ongoing monitoring and maintenance."
+          }
         ],
-        "offerings": ["Cisco", "Juniper", "Fortinet", "Ubiquiti"],
+        "offerings": [
+          "Cisco",
+          "Juniper",
+          "Fortinet",
+          "Ubiquiti"
+        ],
         "featured_projects_title": "Example projects",
         "featured_projects": [
-          { "title": "Campus Network", "subtitle": "Education", "description": "Built reliable network for campus with 5,000+ users.", "tags": ["Cisco", "WiFi"], "metric": "99.9% uptime" },
-          { "title": "SD-WAN", "subtitle": "Retail Chain", "description": "Connected 200+ stores with centralized management.", "tags": ["SD-WAN", "Security"], "metric": "50% cost reduction" },
-          { "title": "Zero-Trust Network", "subtitle": "Healthcare", "description": "Secure access for remote and on-site users.", "tags": ["Security", "VPN"], "metric": "SOC2 compliant" }
+          {
+            "title": "Campus Network",
+            "subtitle": "Education",
+            "description": "Built reliable network for campus with 5,000+ users.",
+            "tags": [
+              "Cisco",
+              "WiFi"
+            ],
+            "metric": "99.9% uptime"
+          },
+          {
+            "title": "SD-WAN",
+            "subtitle": "Retail Chain",
+            "description": "Connected 200+ stores with centralized management.",
+            "tags": [
+              "SD-WAN",
+              "Security"
+            ],
+            "metric": "50% cost reduction"
+          },
+          {
+            "title": "Zero-Trust Network",
+            "subtitle": "Healthcare",
+            "description": "Secure access for remote and on-site users.",
+            "tags": [
+              "Security",
+              "VPN"
+            ],
+            "metric": "SOC2 compliant"
+          }
         ],
-        "target_clients": ["Enterprises", "Retail", "Healthcare", "Education", "Government"]
+        "target_clients": [
+          "Enterprises",
+          "Retail",
+          "Healthcare",
+          "Education",
+          "Government"
+        ]
       },
       "servers": {
         "title": "Server",
@@ -864,25 +1619,92 @@
         "title_suffix": "",
         "subtitle": "We manage server infrastructure that stays reliable under load. Physical and virtual servers.",
         "hero_metrics": [
-          { "value": "5K+", "label": "Servers" },
-          { "value": "10PB+", "label": "Storage" },
-          { "value": "20K+", "label": "VMs" },
-          { "value": "99.99%", "label": "Uptime" }
+          {
+            "value": "5K+",
+            "label": "Servers"
+          },
+          {
+            "value": "10PB+",
+            "label": "Storage"
+          },
+          {
+            "value": "20K+",
+            "label": "VMs"
+          },
+          {
+            "value": "99.99%",
+            "label": "Uptime"
+          }
         ],
-        "features": ["Virtualization", "Storage", "Server management", "High availability", "Performance tuning"],
+        "features": [
+          "Virtualization",
+          "Storage",
+          "Server management",
+          "High availability",
+          "Performance tuning"
+        ],
         "process_steps": [
-          { "step": "01", "title": "Planning", "desc": "Size and design server infrastructure." },
-          { "step": "02", "title": "Deployment", "desc": "Install and configure systems." },
-          { "step": "03", "title": "Support", "desc": "Ongoing maintenance and updates." }
+          {
+            "step": "01",
+            "title": "Planning",
+            "desc": "Size and design server infrastructure."
+          },
+          {
+            "step": "02",
+            "title": "Deployment",
+            "desc": "Install and configure systems."
+          },
+          {
+            "step": "03",
+            "title": "Support",
+            "desc": "Ongoing maintenance and updates."
+          }
         ],
-        "offerings": ["VMware", "Hyper-V", "KVM", "Dell EMC", "NetApp"],
+        "offerings": [
+          "VMware",
+          "Hyper-V",
+          "KVM",
+          "Dell EMC",
+          "NetApp"
+        ],
         "featured_projects_title": "Example projects",
         "featured_projects": [
-          { "title": "Virtualization", "subtitle": "Government", "description": "Consolidated 200 servers to 20 hosts.", "tags": ["VMware"], "metric": "85% hardware reduction" },
-          { "title": "High Availability", "subtitle": "Healthcare", "description": "Built failover cluster for critical systems.", "tags": ["Windows Server", "SQL"], "metric": "Zero downtime" },
-          { "title": "Storage Upgrade", "subtitle": "Manufacturing", "description": "Deployed fast storage for business systems.", "tags": ["Dell EMC", "NetApp"], "metric": "10x faster" }
+          {
+            "title": "Virtualization",
+            "subtitle": "Government",
+            "description": "Consolidated 200 servers to 20 hosts.",
+            "tags": [
+              "VMware"
+            ],
+            "metric": "85% hardware reduction"
+          },
+          {
+            "title": "High Availability",
+            "subtitle": "Healthcare",
+            "description": "Built failover cluster for critical systems.",
+            "tags": [
+              "Windows Server",
+              "SQL"
+            ],
+            "metric": "Zero downtime"
+          },
+          {
+            "title": "Storage Upgrade",
+            "subtitle": "Manufacturing",
+            "description": "Deployed fast storage for business systems.",
+            "tags": [
+              "Dell EMC",
+              "NetApp"
+            ],
+            "metric": "10x faster"
+          }
         ],
-        "target_clients": ["Government", "Healthcare", "Manufacturing", "Enterprises"]
+        "target_clients": [
+          "Government",
+          "Healthcare",
+          "Manufacturing",
+          "Enterprises"
+        ]
       },
       "security": {
         "title": "Security",
@@ -890,38 +1712,141 @@
         "title_suffix": "",
         "subtitle": "We help teams protect their systems and meet compliance requirements.",
         "hero_metrics": [
-          { "value": "SOC", "label": "Monitoring" },
-          { "value": "24/7", "label": "Protection" },
-          { "value": "Compliance", "label": "Ready" }
+          {
+            "value": "SOC",
+            "label": "Monitoring"
+          },
+          {
+            "value": "24/7",
+            "label": "Protection"
+          },
+          {
+            "value": "Compliance",
+            "label": "Ready"
+          }
         ],
-        "features": ["Security hardening", "Access management", "Compliance audits", "Endpoint security", "Penetration testing", "Security monitoring"],
+        "features": [
+          "Security hardening",
+          "Access management",
+          "Compliance audits",
+          "Endpoint security",
+          "Penetration testing",
+          "Security monitoring"
+        ],
         "process_steps": [
-          { "step": "01", "title": "Assessment", "desc": "Identify security gaps and compliance needs." },
-          { "step": "02", "title": "Implementation", "desc": "Deploy security controls and policies." },
-          { "step": "03", "title": "Monitoring", "desc": "Ongoing monitoring and incident response." }
+          {
+            "step": "01",
+            "title": "Assessment",
+            "desc": "Identify security gaps and compliance needs."
+          },
+          {
+            "step": "02",
+            "title": "Implementation",
+            "desc": "Deploy security controls and policies."
+          },
+          {
+            "step": "03",
+            "title": "Monitoring",
+            "desc": "Ongoing monitoring and incident response."
+          }
         ],
-        "offerings": ["Firewall", "EDR", "IAM", "Compliance"],
+        "offerings": [
+          "Firewall",
+          "EDR",
+          "IAM",
+          "Compliance"
+        ],
         "technologies_used_title": "Security tools",
         "featured_projects_title": "Example projects",
         "featured_projects": [
-          { "title": "Zero Trust", "subtitle": "Fintech", "description": "Built zero-trust access for hybrid environment.", "tags": ["Security", "Access control"], "metric": "SOC2 compliant" },
-          { "title": "SOC2 Compliance", "subtitle": "SaaS Company", "description": "Achieved SOC2 Type II certification.", "tags": ["Compliance", "Monitoring"], "metric": "Certified" },
-          { "title": "Endpoint Security", "subtitle": "Healthcare", "description": "Protected 5,000 endpoints with EDR and MFA.", "tags": ["EDR", "MFA"], "metric": "100% coverage" }
+          {
+            "title": "Zero Trust",
+            "subtitle": "Fintech",
+            "description": "Built zero-trust access for hybrid environment.",
+            "tags": [
+              "Security",
+              "Access control"
+            ],
+            "metric": "SOC2 compliant"
+          },
+          {
+            "title": "SOC2 Compliance",
+            "subtitle": "SaaS Company",
+            "description": "Achieved SOC2 Type II certification.",
+            "tags": [
+              "Compliance",
+              "Monitoring"
+            ],
+            "metric": "Certified"
+          },
+          {
+            "title": "Endpoint Security",
+            "subtitle": "Healthcare",
+            "description": "Protected 5,000 endpoints with EDR and MFA.",
+            "tags": [
+              "EDR",
+              "MFA"
+            ],
+            "metric": "100% coverage"
+          }
         ],
-        "target_clients": ["Fintech", "Healthcare", "E-commerce", "Government"]
+        "target_clients": [
+          "Fintech",
+          "Healthcare",
+          "E-commerce",
+          "Government"
+        ]
       },
       "support": {
         "title": "IT Support",
         "title_highlight": "",
         "title_suffix": "",
         "subtitle": "24/7 technical support to keep your teams productive.",
-        "features": ["24/7 helpdesk", "Tiered support", "Remote and on-site", "Asset management", "Knowledge base", "SLA reporting"],
-        "process_steps": [
-          { "step": "01", "title": "Setup", "desc": "Define support scope and SLAs." },
-          { "step": "02", "title": "Support", "desc": "Handle incidents and requests." },
-          { "step": "03", "title": "Improvement", "desc": "Regular reviews and optimization." }
+        "features": [
+          "24/7 helpdesk",
+          "Tiered support",
+          "Remote and on-site",
+          "Asset management",
+          "Knowledge base",
+          "SLA reporting"
         ],
-        "offerings": ["Helpdesk", "NOC", "On-site support", "Managed services"]
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Setup",
+            "desc": "Define support scope and SLAs."
+          },
+          {
+            "step": "02",
+            "title": "Support",
+            "desc": "Handle incidents and requests."
+          },
+          {
+            "step": "03",
+            "title": "Improvement",
+            "desc": "Regular reviews and optimization."
+          }
+        ],
+        "offerings": [
+          "Helpdesk",
+          "NOC",
+          "On-site support",
+          "Managed services"
+        ],
+        "hero_metrics": [
+          {
+            "value": "24/7",
+            "label": "Availability"
+          },
+          {
+            "value": "SLA",
+            "label": "Driven"
+          },
+          {
+            "value": "99.9%",
+            "label": "Target uptime"
+          }
+        ]
       },
       "backup": {
         "title": "Backup &",
@@ -929,25 +1854,93 @@
         "title_suffix": "",
         "subtitle": "We help protect your data with reliable backup and recovery systems.",
         "hero_metrics": [
-          { "value": "50PB+", "label": "Data protected" },
-          { "value": "1000+", "label": "Recoveries" },
-          { "value": "100+", "label": "DR sites" },
-          { "value": "99.9%", "label": "Success rate" }
+          {
+            "value": "50PB+",
+            "label": "Data protected"
+          },
+          {
+            "value": "1000+",
+            "label": "Recoveries"
+          },
+          {
+            "value": "100+",
+            "label": "DR sites"
+          },
+          {
+            "value": "99.9%",
+            "label": "Success rate"
+          }
         ],
-        "features": ["Backup planning", "DR site setup", "Cloud DR", "RTO/RPO planning", "Ransomware recovery", "Business continuity"],
+        "features": [
+          "Backup planning",
+          "DR site setup",
+          "Cloud DR",
+          "RTO/RPO planning",
+          "Ransomware recovery",
+          "Business continuity"
+        ],
         "process_steps": [
-          { "step": "01", "title": "Assessment", "desc": "Define backup and recovery requirements." },
-          { "step": "02", "title": "Implementation", "desc": "Deploy backup and test recovery." },
-          { "step": "03", "title": "Maintenance", "desc": "Monitor backups and update plans." }
+          {
+            "step": "01",
+            "title": "Assessment",
+            "desc": "Define backup and recovery requirements."
+          },
+          {
+            "step": "02",
+            "title": "Implementation",
+            "desc": "Deploy backup and test recovery."
+          },
+          {
+            "step": "03",
+            "title": "Maintenance",
+            "desc": "Monitor backups and update plans."
+          }
         ],
-        "offerings": ["Veeam", "Acronis", "Azure Site Recovery", "AWS Backup"],
+        "offerings": [
+          "Veeam",
+          "Acronis",
+          "Azure Site Recovery",
+          "AWS Backup"
+        ],
         "featured_projects_title": "Example projects",
         "featured_projects": [
-          { "title": "Backup System", "subtitle": "Healthcare", "description": "Protected 500TB with 15-minute RPO.", "tags": ["Veeam", "AWS"], "metric": "100% success" },
-          { "title": "DR Solution", "subtitle": "E-commerce", "description": "Built active-active DR across regions.", "tags": ["Azure", "Zerto"], "metric": "5min RTO" },
-          { "title": "Ransomware Protection", "subtitle": "Manufacturing", "description": "Immutable backups with quick recovery.", "tags": ["Rubrik", "AWS"], "metric": "4-hour recovery" }
+          {
+            "title": "Backup System",
+            "subtitle": "Healthcare",
+            "description": "Protected 500TB with 15-minute RPO.",
+            "tags": [
+              "Veeam",
+              "AWS"
+            ],
+            "metric": "100% success"
+          },
+          {
+            "title": "DR Solution",
+            "subtitle": "E-commerce",
+            "description": "Built active-active DR across regions.",
+            "tags": [
+              "Azure",
+              "Zerto"
+            ],
+            "metric": "5min RTO"
+          },
+          {
+            "title": "Ransomware Protection",
+            "subtitle": "Manufacturing",
+            "description": "Immutable backups with quick recovery.",
+            "tags": [
+              "Rubrik",
+              "AWS"
+            ],
+            "metric": "4-hour recovery"
+          }
         ],
-        "target_clients": ["Financial services", "Healthcare", "E-commerce", "Government"]
+        "target_clients": [
+          "Financial services",
+          "Healthcare",
+          "E-commerce",
+          "Government"
+        ]
       },
       "devops": {
         "title": "DevOps",
@@ -955,66 +1948,248 @@
         "title_suffix": "",
         "subtitle": "We help teams automate deployment and manage infrastructure reliably.",
         "hero_metrics": [
-          { "value": "1000+", "label": "Pipelines" },
-          { "value": "50K+", "label": "Containers" },
-          { "value": "500+", "label": "Deploys/day" },
-          { "value": "10x", "label": "Faster" }
+          {
+            "value": "1000+",
+            "label": "Pipelines"
+          },
+          {
+            "value": "50K+",
+            "label": "Containers"
+          },
+          {
+            "value": "500+",
+            "label": "Deploys/day"
+          },
+          {
+            "value": "10x",
+            "label": "Faster"
+          }
         ],
-        "features": ["CI/CD pipelines", "Infrastructure as code", "Container orchestration", "Monitoring", "GitOps", "Cloud-native"],
+        "features": [
+          "CI/CD pipelines",
+          "Infrastructure as code",
+          "Container orchestration",
+          "Monitoring",
+          "GitOps",
+          "Cloud-native"
+        ],
         "process_steps": [
-          { "step": "01", "title": "Assessment", "desc": "Review current deployment process." },
-          { "step": "02", "title": "Automation", "desc": "Build pipelines and automation." },
-          { "step": "03", "title": "Operation", "desc": "Monitor and improve continuously." }
+          {
+            "step": "01",
+            "title": "Assessment",
+            "desc": "Review current deployment process."
+          },
+          {
+            "step": "02",
+            "title": "Automation",
+            "desc": "Build pipelines and automation."
+          },
+          {
+            "step": "03",
+            "title": "Operation",
+            "desc": "Monitor and improve continuously."
+          }
         ],
-        "offerings": ["Docker", "Kubernetes", "Terraform", "Jenkins", "Prometheus"],
+        "offerings": [
+          "Docker",
+          "Kubernetes",
+          "Terraform",
+          "Jenkins",
+          "Prometheus"
+        ],
         "featured_projects_title": "Example projects",
         "featured_projects": [
-          { "title": "Kubernetes Platform", "subtitle": "SaaS Startup", "description": "Built production Kubernetes on AWS.", "tags": ["EKS", "ArgoCD"], "metric": "10x faster deploys" },
-          { "title": "CI/CD Modernization", "subtitle": "Fintech", "description": "Automated deployment pipeline.", "tags": ["GitLab CI", "Terraform"], "metric": "500+ deploys/day" },
-          { "title": "Infrastructure as Code", "subtitle": "Enterprise", "description": "Migrated to Terraform management.", "tags": ["Terraform", "AWS"], "metric": "Full IaC" }
+          {
+            "title": "Kubernetes Platform",
+            "subtitle": "SaaS Startup",
+            "description": "Built production Kubernetes on AWS.",
+            "tags": [
+              "EKS",
+              "ArgoCD"
+            ],
+            "metric": "10x faster deploys"
+          },
+          {
+            "title": "CI/CD Modernization",
+            "subtitle": "Fintech",
+            "description": "Automated deployment pipeline.",
+            "tags": [
+              "GitLab CI",
+              "Terraform"
+            ],
+            "metric": "500+ deploys/day"
+          },
+          {
+            "title": "Infrastructure as Code",
+            "subtitle": "Enterprise",
+            "description": "Migrated to Terraform management.",
+            "tags": [
+              "Terraform",
+              "AWS"
+            ],
+            "metric": "Full IaC"
+          }
         ],
-        "target_clients": ["Startups", "SaaS companies", "Digital-first businesses"]
+        "target_clients": [
+          "Startups",
+          "SaaS companies",
+          "Digital-first businesses"
+        ]
       },
       "datacenter": {
         "title": "Data Center Design",
         "title_highlight": "",
         "title_suffix": "",
         "subtitle": "We help plan and operate data center facilities.",
-        "features": ["Strategy", "Power and cooling", "Layout design", "Monitoring", "Capacity planning"],
-        "process_steps": [
-          { "step": "01", "title": "Strategy", "desc": "Define requirements and design." },
-          { "step": "02", "title": "Build", "desc": "Build-out and migration." },
-          { "step": "03", "title": "Operation", "desc": "Operate and optimize." }
+        "features": [
+          "Strategy",
+          "Power and cooling",
+          "Layout design",
+          "Monitoring",
+          "Capacity planning"
         ],
-        "offerings": ["Design", "DCIM", "Power/cooling", "Compliance"]
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Strategy",
+            "desc": "Define requirements and design."
+          },
+          {
+            "step": "02",
+            "title": "Build",
+            "desc": "Build-out and migration."
+          },
+          {
+            "step": "03",
+            "title": "Operation",
+            "desc": "Operate and optimize."
+          }
+        ],
+        "offerings": [
+          "Design",
+          "DCIM",
+          "Power/cooling",
+          "Compliance"
+        ],
+        "hero_metrics": [
+          {
+            "value": "Design",
+            "label": "& build"
+          },
+          {
+            "value": "Pilot",
+            "label": "Facilities"
+          },
+          {
+            "value": "99.9%",
+            "label": "Target uptime"
+          }
+        ]
       },
       "communication": {
         "title": "Communication Systems",
         "title_highlight": "",
         "title_suffix": "",
         "subtitle": "We set up voice, video, and collaboration platforms.",
-        "features": ["VoIP", "Video conferencing", "Team messaging", "CRM integration", "Call centers", "Mobile access"],
-        "process_steps": [
-          { "step": "01", "title": "Requirements", "desc": "Define needs and architecture." },
-          { "step": "02", "title": "Deployment", "desc": "Roll out and train users." },
-          { "step": "03", "title": "Support", "desc": "Ongoing support and updates." }
+        "features": [
+          "VoIP",
+          "Video conferencing",
+          "Team messaging",
+          "CRM integration",
+          "Call centers",
+          "Mobile access"
         ],
-        "offerings": ["Microsoft Teams", "Zoom", "Cisco", "SIP"]
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Requirements",
+            "desc": "Define needs and architecture."
+          },
+          {
+            "step": "02",
+            "title": "Deployment",
+            "desc": "Roll out and train users."
+          },
+          {
+            "step": "03",
+            "title": "Support",
+            "desc": "Ongoing support and updates."
+          }
+        ],
+        "offerings": [
+          "Microsoft Teams",
+          "Zoom",
+          "Cisco",
+          "SIP"
+        ],
+        "hero_metrics": [
+          {
+            "value": "Unified",
+            "label": "Platform"
+          },
+          {
+            "value": "Pilot",
+            "label": "Deployments"
+          },
+          {
+            "value": "99.9%",
+            "label": "Target uptime"
+          }
+        ]
       },
       "migration": {
         "title": "Cloud &",
         "title_highlight": "Migration",
         "title_suffix": "",
         "subtitle": "We help teams move to cloud infrastructure with minimal disruption.",
-        "features": ["Migration planning", "Rehost or refactor", "Phased migration", "Zero-downtime goals", "Post-migration optimization", "Training"],
-        "process_steps": [
-          { "step": "01", "title": "Discovery", "desc": "Inventory systems and plan migration." },
-          { "step": "02", "title": "Migration", "desc": "Execute in phases with testing." },
-          { "step": "03", "title": "Optimization", "desc": "Optimize and decommission old systems." }
+        "features": [
+          "Migration planning",
+          "Rehost or refactor",
+          "Phased migration",
+          "Zero-downtime goals",
+          "Post-migration optimization",
+          "Training"
         ],
-        "offerings": ["AWS Migration", "Azure Migrate", "VMware Cloud", "Database migration"]
+        "process_steps": [
+          {
+            "step": "01",
+            "title": "Discovery",
+            "desc": "Inventory systems and plan migration."
+          },
+          {
+            "step": "02",
+            "title": "Migration",
+            "desc": "Execute in phases with testing."
+          },
+          {
+            "step": "03",
+            "title": "Optimization",
+            "desc": "Optimize and decommission old systems."
+          }
+        ],
+        "offerings": [
+          "AWS Migration",
+          "Azure Migrate",
+          "VMware Cloud",
+          "Database migration"
+        ],
+        "hero_metrics": [
+          {
+            "value": "Phased",
+            "label": "Approach"
+          },
+          {
+            "value": "Low-risk",
+            "label": "Cutover"
+          },
+          {
+            "value": "99.9%",
+            "label": "Target uptime"
+          }
+        ]
       }
-    }
+    },
+    "explore_tech": "استكشف التقنيات"
   },
   "solutions_industries": {
     "hero_badge": "Industries",
@@ -1039,7 +2214,11 @@
     "section3_title_line1": "Industry",
     "section3_title_line2": "experience",
     "section3_body": "Different industries have different needs. Healthcare needs HIPAA compliance. Finance needs security and audit trails. E-commerce needs reliable payment processing. We understand these requirements and build accordingly.",
-    "section3_items": ["Healthcare", "Finance", "Commerce"],
+    "section3_items": [
+      "Healthcare",
+      "Finance",
+      "Commerce"
+    ],
     "section3_cta": "Learn more",
     "section3_showcase_title": "Our work",
     "section3_showcase_label": "Projects",
@@ -1049,7 +2228,7 @@
     "section4_title_line4": "",
     "section4_subtitle": "Different industries have different needs. Healthcare needs HIPAA compliance. Finance needs security and audit trails. E-commerce needs reliable payment processing. We understand these requirements and build accordingly.",
     "section4_outcome_1": "Healthcare",
-     "section4_outcome_2": "Finance",
+    "section4_outcome_2": "Finance",
     "section4_outcome_3": "Commerce",
     "section4_deliver_label": "What we build",
     "section4_deliver_1": "Web and mobile",
@@ -1109,15 +2288,41 @@
         "title_highlight": "Technology",
         "subtitle": "Software for health systems: electronic health records, telemedicine, hospital management, and healthcare platforms.",
         "hero_metrics": [
-          { "value": "12+", "label": "Projects" },
-          { "value": "99.99%", "label": "Uptime" },
-          { "value": "HIPAA", "label": "Compliant" }
+          {
+            "value": "12+",
+            "label": "Projects"
+          },
+          {
+            "value": "99.99%",
+            "label": "Uptime"
+          },
+          {
+            "value": "HIPAA",
+            "label": "Compliant"
+          }
         ],
-        "features": ["Hospital management", "Health records", "Telemedicine", "Healthcare platforms"],
+        "features": [
+          "Hospital management",
+          "Health records",
+          "Telemedicine",
+          "Healthcare platforms"
+        ],
         "process_steps": [
-          { "step": "01", "title": "Understanding needs", "desc": "Learn compliance and workflow requirements." },
-          { "step": "02", "title": "Build", "desc": "Secure, compliant systems." },
-          { "step": "03", "title": "Support", "desc": "Ongoing compliance and maintenance." }
+          {
+            "step": "01",
+            "title": "Understanding needs",
+            "desc": "Learn compliance and workflow requirements."
+          },
+          {
+            "step": "02",
+            "title": "Build",
+            "desc": "Secure, compliant systems."
+          },
+          {
+            "step": "03",
+            "title": "Support",
+            "desc": "Ongoing compliance and maintenance."
+          }
         ]
       },
       "fintech": {
@@ -1125,14 +2330,37 @@
         "title_highlight": "Technology",
         "subtitle": "Banking platforms, payment systems, lending, and financial services software.",
         "hero_metrics": [
-          { "value": "18+", "label": "Projects" },
-          { "value": "100%", "label": "Uptime" }
+          {
+            "value": "18+",
+            "label": "Projects"
+          },
+          {
+            "value": "100%",
+            "label": "Uptime"
+          }
         ],
-        "features": ["Digital banking", "Payment processing", "Lending systems", "Asset management"],
+        "features": [
+          "Digital banking",
+          "Payment processing",
+          "Lending systems",
+          "Asset management"
+        ],
         "process_steps": [
-          { "step": "01", "title": "Compliance", "desc": "Understand regulatory requirements." },
-          { "step": "02", "title": "Build", "desc": "Secure, auditable systems." },
-          { "step": "03", "title": "Operate", "desc": "Monitor and maintain compliance." }
+          {
+            "step": "01",
+            "title": "Compliance",
+            "desc": "Understand regulatory requirements."
+          },
+          {
+            "step": "02",
+            "title": "Build",
+            "desc": "Secure, auditable systems."
+          },
+          {
+            "step": "03",
+            "title": "Operate",
+            "desc": "Monitor and maintain compliance."
+          }
         ]
       },
       "ecommerce": {
@@ -1140,14 +2368,37 @@
         "title_highlight": "Platforms",
         "subtitle": "Online stores, marketplaces, inventory systems, and B2B commerce.",
         "hero_metrics": [
-          { "value": "5+", "label": "Projects" },
-          { "value": "99.98%", "label": "Uptime" }
+          {
+            "value": "5+",
+            "label": "Projects"
+          },
+          {
+            "value": "99.98%",
+            "label": "Uptime"
+          }
         ],
-        "features": ["Marketplaces", "Inventory systems", "Online stores", "B2B commerce"],
+        "features": [
+          "Marketplaces",
+          "Inventory systems",
+          "Online stores",
+          "B2B commerce"
+        ],
         "process_steps": [
-          { "step": "01", "title": "Strategy", "desc": "Plan catalog, fulfillment, and scale." },
-          { "step": "02", "title": "Build", "desc": "Checkout, payments, operations." },
-          { "step": "03", "title": "Scale", "desc": "Performance and growth." }
+          {
+            "step": "01",
+            "title": "Strategy",
+            "desc": "Plan catalog, fulfillment, and scale."
+          },
+          {
+            "step": "02",
+            "title": "Build",
+            "desc": "Checkout, payments, operations."
+          },
+          {
+            "step": "03",
+            "title": "Scale",
+            "desc": "Performance and growth."
+          }
         ]
       },
       "edtech": {
@@ -1155,13 +2406,33 @@
         "title_highlight": "Technology",
         "subtitle": "Learning management systems, course platforms, and education software.",
         "hero_metrics": [
-          { "value": "3+", "label": "Projects" }
+          {
+            "value": "3+",
+            "label": "Projects"
+          }
         ],
-        "features": ["Learning platforms", "Assessment tools", "Collaboration", "Mobile learning"],
+        "features": [
+          "Learning platforms",
+          "Assessment tools",
+          "Collaboration",
+          "Mobile learning"
+        ],
         "process_steps": [
-          { "step": "01", "title": "Discover", "desc": "Understand learning goals." },
-          { "step": "02", "title": "Build", "desc": "Accessible learning experiences." },
-          { "step": "03", "title": "Iterate", "desc": "Improve based on usage." }
+          {
+            "step": "01",
+            "title": "Discover",
+            "desc": "Understand learning goals."
+          },
+          {
+            "step": "02",
+            "title": "Build",
+            "desc": "Accessible learning experiences."
+          },
+          {
+            "step": "03",
+            "title": "Iterate",
+            "desc": "Improve based on usage."
+          }
         ]
       },
       "saas": {
@@ -1169,13 +2440,33 @@
         "title_highlight": "Platforms",
         "subtitle": "Software products: multi-tenant architecture, subscriptions, and APIs.",
         "hero_metrics": [
-          { "value": "7+", "label": "Products" }
+          {
+            "value": "7+",
+            "label": "Products"
+          }
         ],
-        "features": ["Multi-tenant systems", "Subscriptions", "API-first design", "Analytics"],
+        "features": [
+          "Multi-tenant systems",
+          "Subscriptions",
+          "API-first design",
+          "Analytics"
+        ],
         "process_steps": [
-          { "step": "01", "title": "Architecture", "desc": "Plan for scale and tenancy." },
-          { "step": "02", "title": "Build", "desc": "Secure, scalable platform." },
-          { "step": "03", "title": "Launch", "desc": "Deploy and optimize." }
+          {
+            "step": "01",
+            "title": "Architecture",
+            "desc": "Plan for scale and tenancy."
+          },
+          {
+            "step": "02",
+            "title": "Build",
+            "desc": "Secure, scalable platform."
+          },
+          {
+            "step": "03",
+            "title": "Launch",
+            "desc": "Deploy and optimize."
+          }
         ]
       },
       "startups": {
@@ -1183,14 +2474,37 @@
         "title_highlight": "",
         "subtitle": "From concept to launch: fast delivery and clear architecture for growing companies.",
         "hero_metrics": [
-          { "value": "2-4", "label": "Weeks to launch" },
-          { "value": "90", "label": "Days support" }
+          {
+            "value": "2-4",
+            "label": "Weeks to launch"
+          },
+          {
+            "value": "90",
+            "label": "Days support"
+          }
         ],
-        "features": ["Fast delivery", "Fixed pricing", "You own everything", "Built to scale"],
+        "features": [
+          "Fast delivery",
+          "Fixed pricing",
+          "You own everything",
+          "Built to scale"
+        ],
         "process_steps": [
-          { "step": "01", "title": "Scope", "desc": "Clear plan and timeline." },
-          { "step": "02", "title": "Build", "desc": "Fast, quality delivery." },
-          { "step": "03", "title": "Launch", "desc": "Deploy and support." }
+          {
+            "step": "01",
+            "title": "Scope",
+            "desc": "Clear plan and timeline."
+          },
+          {
+            "step": "02",
+            "title": "Build",
+            "desc": "Fast, quality delivery."
+          },
+          {
+            "step": "03",
+            "title": "Launch",
+            "desc": "Deploy and support."
+          }
         ]
       }
     }
@@ -1286,7 +2600,7 @@
     "agent_active": "active",
     "agent_active_desc": "Processing data and updating systems.",
     "latest_logs": "Recent activity",
-    "log_template": "Processing complete. Results indexed and stored.",
+    "log_template": "معالجة مكتملة لـ {title}. تم فهرسة النتائج وتخزينها.",
     "deployed_agent": "Active agent:",
     "results_badge": "Why this works",
     "results_heading": "Built for",

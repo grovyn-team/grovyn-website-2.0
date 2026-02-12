@@ -4,10 +4,10 @@
     "description": "We build reliable software systems for growing businesses. Clear architecture, dependable execution, and technology that works."
   },
   "hero": {
-    "title_line1": "Technology Capabilities",
-    "title_line2": "Engineered for",
-    "title_highlight": "not slow",
-    "title_highlight2": "it down",
+    "title_line1": "技术能力",
+    "title_line2": "为",
+    "title_highlight": "真实增长而打造",
+    "title_highlight2": "",
     "subtitle": "Grovyn helps teams build software systems that are designed to stay reliable as products and businesses scale. We focus on clear architecture, maintainable code, and technology choices that age well.",
     "cta_primary": "Start a conversation",
     "cta_secondary": "See how we work"
@@ -355,7 +355,8 @@
     "send_request": "Send",
     "success_title": "We received your message",
     "success_message": "Someone from our team will reach out within 24 hours to discuss your project.",
-    "start_new": "Send another message"
+    "start_new": "Send another message",
+    "sending": "发送中…"
   },
   "footer": {
     "tagline": "We build software systems that stay reliable as businesses grow. Clear architecture, maintainable code, and technology choices that age well.",
@@ -461,7 +462,7 @@
     "detail_submit": "Submit application",
     "detail_secure": "Secure submission",
     "detail_success_title": "Application received",
-    "detail_success_message": "We'll review your application and get back to you within a few days.",
+    "detail_success_message": "我们将审核您对 {title} 的申请，并在几天内回复。",
     "back_to_roles": "Back to all roles",
     "culture_badge": "Our culture",
     "culture_title": "How we",
@@ -565,7 +566,8 @@
     "submit_btn": "Send application",
     "success_title": "Application received",
     "success_message": "We'll review your application and get back to you soon.",
-    "return_btn": "Back to careers"
+    "return_btn": "Back to careers",
+    "detail_submitting": "提交中…"
   },
   "why_grovyn": {
     "badge": "Why Grovyn",
@@ -1082,33 +1084,96 @@
       "cta_primary": "Talk to us",
       "cta_secondary": "See what we do",
       "tech_title": "What we focus on",
-      "tech_items": ["Requirements & discovery", "UX and workflows", "Integration with your tools", "Scalability", "Ongoing support"],
+      "tech_items": [
+        "Requirements & discovery",
+        "UX and workflows",
+        "Integration with your tools",
+        "Scalability",
+        "Ongoing support"
+      ],
       "offer_section_title": "Custom Software",
       "offer_section_highlight": "solutions",
       "offer_section_subtitle": "Applications designed around how you work, not the other way around",
       "offer_cards": [
-        { "title": "Business Applications", "description": "Internal tools, portals, and dashboards that match your operations.", "tags": ["Workflows", "Reporting", "User roles"] },
-        { "title": "Integration & APIs", "description": "Connect your software with existing systems and third-party services.", "tags": ["APIs", "Data sync", "Webhooks"] },
-        { "title": "Product Development", "description": "Custom products and SaaS built for your market and customers.", "tags": ["MVP", "Scale", "Maintenance"] }
+        {
+          "title": "Business Applications",
+          "description": "Internal tools, portals, and dashboards that match your operations.",
+          "tags": [
+            "Workflows",
+            "Reporting",
+            "User roles"
+          ]
+        },
+        {
+          "title": "Integration & APIs",
+          "description": "Connect your software with existing systems and third-party services.",
+          "tags": [
+            "APIs",
+            "Data sync",
+            "Webhooks"
+          ]
+        },
+        {
+          "title": "Product Development",
+          "description": "Custom products and SaaS built for your market and customers.",
+          "tags": [
+            "MVP",
+            "Scale",
+            "Maintenance"
+          ]
+        }
       ],
       "offerings_title": "What we deliver",
       "offerings": [
-        { "title": "Discovery & scope", "desc": "Clear understanding of your needs, users, and success criteria before we build." },
-        { "title": "Design & build", "desc": "Iterative development with regular demos and feedback so the product stays on track." },
-        { "title": "Launch & support", "desc": "Deployment, documentation, and ongoing maintenance so you can run it with confidence." }
+        {
+          "title": "Discovery & scope",
+          "desc": "Clear understanding of your needs, users, and success criteria before we build."
+        },
+        {
+          "title": "Design & build",
+          "desc": "Iterative development with regular demos and feedback so the product stays on track."
+        },
+        {
+          "title": "Launch & support",
+          "desc": "Deployment, documentation, and ongoing maintenance so you can run it with confidence."
+        }
       ],
       "features_title": "What we focus on",
-      "features": ["Your workflows", "Clear requirements", "Quality code", "Security", "Performance", "Maintainability"],
+      "features": [
+        "Your workflows",
+        "Clear requirements",
+        "Quality code",
+        "Security",
+        "Performance",
+        "Maintainability"
+      ],
       "advanced_title": "Why go custom",
-      "advanced": ["No vendor lock-in", "Fits your process", "Evolves with you", "Full ownership"],
+      "advanced": [
+        "No vendor lock-in",
+        "Fits your process",
+        "Evolves with you",
+        "Full ownership"
+      ],
       "methodology_heading": "Our process",
       "methodology_subheading": "From idea to production",
       "methodology_conclusion": "Clear plan, less risk",
       "process_title": "How we work",
       "process_steps": [
-        { "step": "01", "title": "Discover", "desc": "We learn your workflows, pain points, and what success looks like." },
-        { "step": "02", "title": "Design & build", "desc": "We design the solution and build in sprints with regular check-ins." },
-        { "step": "03", "title": "Launch & iterate", "desc": "We deploy, hand over, and support so you can run and evolve the product." }
+        {
+          "step": "01",
+          "title": "Discover",
+          "desc": "We learn your workflows, pain points, and what success looks like."
+        },
+        {
+          "step": "02",
+          "title": "Design & build",
+          "desc": "We design the solution and build in sprints with regular check-ins."
+        },
+        {
+          "step": "03",
+          "title": "Launch & iterate",
+          "desc": "We deploy, hand over, and support so you can run and evolve the product."
+        }
       ],
       "cta_title": "Let's talk about your custom software",
       "cta_button": "Get in touch"
@@ -1767,6 +1832,20 @@
           "NOC",
           "On-site support",
           "Managed services"
+        ],
+        "hero_metrics": [
+          {
+            "value": "24/7",
+            "label": "Availability"
+          },
+          {
+            "value": "SLA",
+            "label": "Driven"
+          },
+          {
+            "value": "99.9%",
+            "label": "Target uptime"
+          }
         ]
       },
       "backup": {
@@ -1991,6 +2070,20 @@
           "DCIM",
           "Power/cooling",
           "Compliance"
+        ],
+        "hero_metrics": [
+          {
+            "value": "Design",
+            "label": "& build"
+          },
+          {
+            "value": "Pilot",
+            "label": "Facilities"
+          },
+          {
+            "value": "99.9%",
+            "label": "Target uptime"
+          }
         ]
       },
       "communication": {
@@ -2028,6 +2121,20 @@
           "Zoom",
           "Cisco",
           "SIP"
+        ],
+        "hero_metrics": [
+          {
+            "value": "Unified",
+            "label": "Platform"
+          },
+          {
+            "value": "Pilot",
+            "label": "Deployments"
+          },
+          {
+            "value": "99.9%",
+            "label": "Target uptime"
+          }
         ]
       },
       "migration": {
@@ -2065,9 +2172,24 @@
           "Azure Migrate",
           "VMware Cloud",
           "Database migration"
+        ],
+        "hero_metrics": [
+          {
+            "value": "Phased",
+            "label": "Approach"
+          },
+          {
+            "value": "Low-risk",
+            "label": "Cutover"
+          },
+          {
+            "value": "99.9%",
+            "label": "Target uptime"
+          }
         ]
       }
-    }
+    },
+    "explore_tech": "探索技术"
   },
   "solutions_industries": {
     "hero_badge": "Industries",
@@ -2478,7 +2600,7 @@
     "agent_active": "active",
     "agent_active_desc": "Processing data and updating systems.",
     "latest_logs": "Recent activity",
-    "log_template": "Processing complete. Results indexed and stored.",
+    "log_template": "{title} 处理完成。结果已索引并存储。",
     "deployed_agent": "Active agent:",
     "results_badge": "Why this works",
     "results_heading": "Built for",

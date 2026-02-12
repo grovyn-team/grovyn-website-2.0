@@ -389,7 +389,7 @@ export default function CareerDetailContent({ slug }: { slug: string }) {
                   disabled={isSubmitting}
                   className="w-full bg-[#10b981] text-black py-6 rounded-2xl font-black text-xs uppercase tracking-[0.3em] flex items-center justify-center space-x-4 hover:bg-white transition-all transform hover:-translate-y-1 shadow-2xl shadow-[#10b981]/20 disabled:opacity-60 disabled:pointer-events-none"
                 >
-                  <span>{isSubmitting ? "Submitting…" : t("detail_submit")}</span>
+                  <span>{isSubmitting ? t("detail_submitting") : t("detail_submit")}</span>
                   <Send size={18} />
                 </button>
               </form>

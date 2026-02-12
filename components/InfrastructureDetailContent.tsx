@@ -279,7 +279,7 @@ export default function InfrastructureDetailContent({ slug }: { slug: Infrastruc
                   href="#detailed-services"
                   className="text-[8px] md:text-[10px] font-black text-[#10b981] uppercase tracking-widest flex items-center justify-center space-x-1 md:space-x-2 mx-auto hover:opacity-80"
                 >
-                  <span>Explore Tech</span>
+                  <span>{t("explore_tech")}</span>
                   <ArrowRight size={10} className="md:w-3.5 md:h-3.5" />
                 </Link>
               </div>
