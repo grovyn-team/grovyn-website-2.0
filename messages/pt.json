@@ -2034,7 +2034,81 @@
           "Startups",
           "SaaS companies",
           "Digital-first businesses"
-        ]
+        ],
+        "cta_primary": "Get in touch",
+        "cta_secondary": "See how we work",
+        "trust_bar_text": "Trusted by startups, product teams, and growing SaaS companies across web and mobile platforms.",
+        "expert_heading": "Infrastructure that grows with your product",
+        "expert_para": "We help teams design cloud foundations that stay reliable as traffic increases. Clear architecture decisions, strong monitoring practices, and systems built to evolve.",
+        "expert_bullets": [
+          "Clear planning",
+          "Observability built in",
+          "Security focused setups",
+          "Long term scalability"
+        ],
+        "expert_show_avatar": false,
+        "process_section_heading": "How we approach infrastructure",
+        "process_steps_full": [
+          {
+            "step": "1",
+            "title": "Assessment",
+            "desc": "We understand your current stack, bottlenecks, and release workflow."
+          },
+          {
+            "step": "2",
+            "title": "Architecture Design",
+            "desc": "We define cloud structure, deployment flow, and scaling strategy."
+          },
+          {
+            "step": "3",
+            "title": "Implementation",
+            "desc": "Automation, pipelines, monitoring, and secure infrastructure setup."
+          },
+          {
+            "step": "4",
+            "title": "Continuous Improvement",
+            "desc": "Ongoing tuning, performance monitoring, and evolution as your product grows."
+          }
+        ],
+        "detailed_services": [
+          {
+            "title": "Infrastructure Assessment",
+            "desc": "We understand your current stack, bottlenecks, and release workflow.",
+            "stat": "Identify risks early"
+          },
+          {
+            "title": "Deployment Automation",
+            "desc": "We build CI/CD and automation so releases are repeatable, traceable, and less stressful.",
+            "stat": "Consistent deployments"
+          },
+          {
+            "title": "Platform Operations",
+            "desc": "We help you run and tune pipelines and infra so things keep getting better, not just stable.",
+            "stat": "Stable production systems"
+          }
+        ],
+        "tech_strip": [
+          "AWS",
+          "GCP",
+          "Docker",
+          "Kubernetes",
+          "Terraform",
+          "GitHub Actions",
+          "CI/CD Platforms",
+          "Monitoring and Observability"
+        ],
+        "value_heading": "Built for product teams, not generic setups",
+        "value_para": "Every infrastructure decision is aligned with how your engineering team actually builds and ships. We avoid over engineering and focus on systems that remain understandable as your product evolves.",
+        "mini_stats": [
+          "Faster deployment cycles",
+          "Reduced manual overhead",
+          "Improved system reliability",
+          "Clear production visibility"
+        ],
+        "cta_heading": "Ready to improve your infrastructure?",
+        "cta_subtext": "Let's discuss your platform and identify practical improvements that support long term growth.",
+        "cta_primary_btn": "Get in touch",
+        "cta_secondary_btn": "See our work"
       },
       "datacenter": {
         "title": "Data Center Design",

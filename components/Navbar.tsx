@@ -150,6 +150,7 @@ export default function Navbar() {
               className="object-contain"
               style={{ height: "2.5rem", width: "auto" }}
               priority
+              suppressHydrationWarning
             />
           </span>
           <span className={`text-lg md:text-xl font-black tracking-tight whitespace-nowrap ${isDarkNav ? "text-white" : "text-[#111]"}`}>
@@ -434,6 +435,7 @@ export default function Navbar() {
                         height={34}
                         className="object-contain"
                         style={{ height: "2rem", width: "auto" }}
+                        suppressHydrationWarning
                       />
                     </span>
                     <span className="text-lg font-black tracking-tight text-[#111]">rovyn</span>
