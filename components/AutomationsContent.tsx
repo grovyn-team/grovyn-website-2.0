@@ -31,6 +31,7 @@ export default function AutomationsContent() {
   const rightScrollRef = useRef<HTMLDivElement>(null);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
   const heroRef = useRef<HTMLElement>(null);
+  const nextSectionRef = useRef<HTMLElement>(null);
 
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -81,22 +82,6 @@ export default function AutomationsContent() {
   const cases = casesRaw;
 
   useEffect(() => {
-    const el = rightScrollRef.current;
-    if (!el) return;
-    const preventWheel = (e: WheelEvent) => {
-      e.preventDefault();
-      e.stopPropagation();
-    };
-    const preventTouch = (e: TouchEvent) => e.preventDefault();
-    el.addEventListener("wheel", preventWheel, { passive: false });
-    el.addEventListener("touchmove", preventTouch, { passive: false });
-    return () => {
-      el.removeEventListener("wheel", preventWheel);
-      el.removeEventListener("touchmove", preventTouch);
-    };
-  }, []);
-
-  useEffect(() => {
     const scrollContainer = rightScrollRef.current;
     if (!scrollContainer || cases.length === 0) return;
 
@@ -128,6 +113,32 @@ export default function AutomationsContent() {
     if (el && typeof el.scrollIntoView === "function") {
       el.scrollIntoView({ behavior: "smooth", block: "center" });
     }
+  }, []);
+
+  useEffect(() => {
+    const container = rightScrollRef.current;
+    const nextSection = nextSectionRef.current;
+    if (!container || !nextSection) return;
+
+    const BOTTOM_THRESHOLD = 20;
+    const TOP_THRESHOLD = 15;
+
+    const handleWheel = (e: WheelEvent) => {
+      const { scrollTop, clientHeight, scrollHeight } = container;
+      const atBottom = scrollTop + clientHeight >= scrollHeight - BOTTOM_THRESHOLD;
+      const atTop = scrollTop <= TOP_THRESHOLD;
+
+      if (atBottom && e.deltaY > 0) {
+        e.preventDefault();
+        nextSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else if (atTop && e.deltaY < 0) {
+        e.preventDefault();
+        container.closest("section")?.previousElementSibling?.scrollIntoView?.({ behavior: "smooth", block: "end" });
+      }
+    };
+
+    container.addEventListener("wheel", handleWheel, { passive: false });
+    return () => container.removeEventListener("wheel", handleWheel);
   }, []);
 
   let resultsCards: Array<{ title: string; desc: string; icon: typeof Brain }>;
@@ -521,14 +532,17 @@ export default function AutomationsContent() {
           </p>
         </motion.div>
         <motion.div
-          className="grid lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-24 items-start"
+          ref={rightScrollRef}
+          className="max-h-[85vh] overflow-y-auto overflow-x-hidden scroll-smooth snap-y snap-mandatory automations-hide-scrollbar rounded-2xl pl-4 sm:pl-6 lg:pl-8 pr-2"
+          style={{ overscrollBehavior: "auto" }}
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
-          <div className="lg:col-span-5 lg:sticky lg:top-32 order-2 lg:order-1">
-            <div className="space-y-1 sm:space-y-2">
+          <div className="grid lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-24 items-start min-h-full">
+            <div className="lg:col-span-5 lg:sticky lg:top-8 order-2 lg:order-1 self-start min-w-0 pl-2 lg:pl-0">
+              <div className="space-y-1 sm:space-y-2">
               {cases.map((useCase, idx) => (
                 <motion.button
                   key={useCase.id ?? idx}
@@ -592,15 +606,10 @@ export default function AutomationsContent() {
                   </div>
                 </motion.button>
               ))}
+              </div>
             </div>
-          </div>
 
-          <div className="lg:col-span-7 order-1 lg:order-2">
-            <div
-              ref={rightScrollRef}
-              className="lg:max-h-[85vh] overflow-y-auto scroll-smooth snap-y snap-mandatory automations-hide-scrollbar lg:pr-4 lg:-mr-4 space-y-12 sm:space-y-16 lg:space-y-32 py-4 sm:py-6 lg:py-10 lg:touch-none"
-              style={{ overscrollBehavior: "contain" }}
-            >
+            <div className="lg:col-span-7 order-1 lg:order-2 space-y-12 sm:space-y-16 lg:space-y-0 lg:pr-4 lg:-mr-4 py-4 sm:py-6 lg:py-10">
               {cases.map((useCase, idx) => (
                 <div
                   key={useCase.id ?? idx}
@@ -608,7 +617,7 @@ export default function AutomationsContent() {
                   ref={(el) => {
                     itemRefs.current[idx] = el;
                   }}
-                  className="snap-center pt-3"
+                  className="snap-center min-h-[80vh] lg:min-h-[85vh] flex flex-col justify-center pt-3"
                   aria-label={useCase.title}
                 >
                   <div className="bg-white rounded-[3.5rem] border border-gray-100 overflow-hidden transform transition-all duration-700">
@@ -715,7 +724,11 @@ export default function AutomationsContent() {
         </motion.div>
       </section>
 
-      <section className="py-10 px-6 lg:px-12 bg-white relative overflow-hidden">
+      <section
+        ref={nextSectionRef}
+        id="automations-architecture"
+        className="py-10 px-6 lg:px-12 bg-white relative overflow-hidden"
+      >
         <div 
           className="absolute inset-0 opacity-[0.03] pointer-events-none" 
           style={{ 
