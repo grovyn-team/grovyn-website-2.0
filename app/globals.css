@@ -110,6 +110,43 @@
   mix-blend-mode: overlay;
 }
 
+/* Trust & Capability Metrics – premium section */
+.trust-metrics-noise::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+@keyframes trust-ring-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes trust-ring-pulse {
+  0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 6px rgba(16, 185, 129, 0.35)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 12px rgba(16, 185, 129, 0.5)); }
+}
+
+.animate-trust-ring {
+  animation: trust-ring-rotate 25s linear infinite;
+}
+
+.animate-trust-ring-pulse {
+  animation: trust-ring-pulse 4s ease-in-out infinite;
+}
+
+.group:hover .animate-trust-ring {
+  animation-duration: 12s;
+}
+
+.group:hover .trust-card-glow {
+  box-shadow: 0 0 28px rgba(16, 185, 129, 0.25), 0 0 48px rgba(16, 185, 129, 0.12);
+}
+
 [dir="rtl"] {
   direction: rtl;
   text-align: right;

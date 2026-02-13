@@ -1427,6 +1427,9 @@
         "title_highlight": "Infrastructure",
         "title_suffix": "",
         "subtitle": "Whether you're on AWS, Azure, or Google Cloud-we help you get there and keep everything running smoothly so your team can focus on building.",
+        "banner_heading": "Cloud that scales",
+        "banner_highlight": "with your business",
+        "banner_tagline": "Migration, optimization, and day-two operations on AWS, Azure, and GCP—so you can focus on building, not infrastructure.",
         "hero_metrics": [
           {
             "value": "3",
@@ -1598,6 +1601,9 @@
         "title": "Network",
         "title_highlight": "Infrastructure",
         "title_suffix": "",
+        "banner_heading": "Networks that keep",
+        "banner_highlight": "everyone connected",
+        "banner_tagline": "From office and campus to secure remote access—we design and run networks that stay up and keep your teams connected.",
         "subtitle": "From office and campus networks to secure remote access—we design and run networks that stay up and keep your teams connected.",
         "hero_metrics": [
           {
@@ -1769,6 +1775,9 @@
         "title_highlight": "Infrastructure",
         "title_suffix": "",
         "subtitle": "Whether it’s physical boxes or virtual—we keep your servers running, patched, and performing so your apps have a solid base.",
+        "banner_heading": "Servers that give",
+        "banner_highlight": "your apps a solid base",
+        "banner_tagline": "Physical or virtual—we keep your servers running, patched, and performing so your applications never miss a beat.",
         "hero_metrics": [
           {
             "value": "Pilot",
@@ -1936,6 +1945,9 @@
         "title": "Security",
         "title_highlight": "Services",
         "title_suffix": "",
+        "banner_heading": "Security that protects",
+        "banner_highlight": "without slowing you down",
+        "banner_tagline": "From assessment and hardening to 24/7 monitoring and compliance—we help you stay secure and audit-ready.",
         "subtitle": "We help you lock down systems, stay compliant, and respond quickly when something doesn’t look right—so you can run with confidence.",
         "hero_metrics": [
           {
@@ -2102,6 +2114,9 @@
         "title": "IT Support",
         "title_highlight": "",
         "title_suffix": "",
+        "banner_heading": "Support that keeps",
+        "banner_highlight": "teams unblocked",
+        "banner_tagline": "When something breaks or someone's stuck, we're there—so your teams can keep shipping instead of waiting on IT.",
         "hero_metrics": [
           {
             "value": "24/7",
@@ -2227,6 +2242,9 @@
         "title": "Backup &",
         "title_highlight": "Recovery",
         "title_suffix": "",
+        "banner_heading": "Backup and recovery",
+        "banner_highlight": "that works when it matters",
+        "banner_tagline": "Clear RTO/RPO, tested recovery, and runbooks that stay current—so you're ready when the worst happens.",
         "subtitle": "We make sure your data is backed up, recoverable, and safe from ransomware—so when the worst happens, you’re ready.",
         "hero_metrics": [
           {
@@ -2395,6 +2413,9 @@
         "title": "DevOps and Infrastructure",
         "title_highlight": "that scale with your product",
         "title_suffix": "",
+        "banner_heading": "DevOps and infrastructure",
+        "banner_highlight": "that scale with your product",
+        "banner_tagline": "CI/CD, automation, and platform operations—so you ship faster with less risk and clearer visibility.",
         "subtitle": "We help teams ship faster with reliable pipelines, cloud architecture, and automation built around real engineering workflows.",
         "hero_metrics": [
           {
@@ -2563,6 +2584,9 @@
         "title": "Data Center Design",
         "title_highlight": "",
         "title_suffix": "",
+        "banner_heading": "Data center design",
+        "banner_highlight": "and day-two operations",
+        "banner_tagline": "From strategy and build-out to power, cooling, and monitoring—we help you get the right facility and run it well.",
         "subtitle": "From strategy and design to build-out and day-two operations—we help you get the right facility and run it well.",
         "hero_metrics": [
           {
@@ -2687,6 +2711,9 @@
         "title": "Communication Systems",
         "title_highlight": "",
         "title_suffix": "",
+        "banner_heading": "Communication systems",
+        "banner_highlight": "that bring teams together",
+        "banner_tagline": "Voice, video, and chat on one system—so everyone can collaborate without juggling multiple tools.",
         "subtitle": "We get your teams on one system for voice, video, and chat—so everyone can collaborate without juggling five different tools.",
         "hero_metrics": [
           {
@@ -2813,6 +2840,9 @@
         "title": "Cloud &",
         "title_highlight": "Migration",
         "title_suffix": "",
+        "banner_heading": "Migration done",
+        "banner_highlight": "your way",
+        "banner_tagline": "Phased, low-risk moves to the cloud with a clear path—so you can turn off the old stuff when you're ready.",
         "subtitle": "We move your workloads to the cloud in a way that fits your business—phased, low-risk, and with a clear path to turning off the old stuff.",
         "hero_metrics": [
           {

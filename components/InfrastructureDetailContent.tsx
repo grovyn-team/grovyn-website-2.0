@@ -1,12 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+/** Infrastructure detail page content - no lucide arrow icons (inline SVG used for CTA). */
+import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import {
-  ArrowUpRight,
   CheckCircle2,
   Cloud,
   Network,
@@ -18,8 +18,6 @@ import {
   Building2,
   MessageCircle,
   Truck,
-  ArrowRight,
-  Play,
   Check,
   Users,
   Zap,
@@ -42,12 +40,12 @@ const us = (id: string, w = 1200) => `https://images.unsplash.com/photo-${id}?au
 const HERO_IMAGES: Record<InfrastructureSlug, string> = {
   cloud: "/assets/CloudHero.png",
   network: us("1558494949-ef010cbdcc31"),
-  servers: us("1550757737-9c2f636e6c34"),
+  servers: us("1451187580459-43490279c0fa"),
   security: us("1563986768609-322da13575f3"),
   support: us("1600880292203-757bb62b4baf"),
   backup: us("1544197150-b99a580bb7a8"),
   devops: us("1555066931-4365d14bab8c"),
-  datacenter: us("1550757737-9c2f636e6c34"),
+  datacenter: us("1451187580459-43490279c0fa"),
   communication: us("1542744173-8e7e53415bb0"),
   migration: us("1451187580459-43490279c0fa"),
 };
@@ -55,12 +53,12 @@ const HERO_IMAGES: Record<InfrastructureSlug, string> = {
 const OVERVIEW_IMAGES: Record<InfrastructureSlug, string> = {
   cloud: us("1451187580459-43490279c0fa", 800),
   network: us("1558494949-ef010cbdcc31", 800),
-  servers: us("1550757737-9c2f636e6c34", 800),
+  servers: us("1451187580459-43490279c0fa", 800),
   security: us("1563986768609-322da13575f3", 800),
   support: us("1600880292203-757bb62b4baf", 800),
   backup: us("1544197150-b99a580bb7a8", 800),
   devops: us("1555066931-4365d14bab8c", 800),
-  datacenter: us("1550757737-9c2f636e6c34", 800),
+  datacenter: us("1451187580459-43490279c0fa", 800),
   communication: us("1542744173-8e7e53415bb0", 800),
   migration: us("1451187580459-43490279c0fa", 800),
 };
@@ -68,12 +66,12 @@ const OVERVIEW_IMAGES: Record<InfrastructureSlug, string> = {
 const BANNER_IMAGES: Record<InfrastructureSlug, string> = {
   cloud: us("1451187580459-43490279c0fa", 2000),
   network: us("1558494949-ef010cbdcc31", 2000),
-  servers: us("1550757737-9c2f636e6c34", 2000),
+  servers: us("1451187580459-43490279c0fa", 2000),
   security: us("1563986768609-322da13575f3", 2000),
   support: us("1600880292203-757bb62b4baf", 2000),
   backup: us("1544197150-b99a580bb7a8", 2000),
   devops: us("1555066931-4365d14bab8c", 2000),
-  datacenter: us("1550757737-9c2f636e6c34", 2000),
+  datacenter: us("1451187580459-43490279c0fa", 2000),
   communication: us("1542744173-8e7e53415bb0", 2000),
   migration: us("1451187580459-43490279c0fa", 2000),
 };
@@ -81,12 +79,12 @@ const BANNER_IMAGES: Record<InfrastructureSlug, string> = {
 const DETAILED_SERVICE_CARD_IMAGES: Record<InfrastructureSlug, [string, string, string]> = {
   cloud: ["/assets/assesment.png", "/assets/migrate.png", "/assets/operations.png"],
   network: ["/design.png", "/implementation.png", "/monitoring.png"],
-  servers: [us("1550757737-9c2f636e6c34", 800), us("1544197150-b99a580bb7a8", 800), us("1558494949-ef010cbdcc31", 800)],
-  security: [us("1563986768609-322da13575f3", 800), us("1573496359142-b8d87734a5a2", 800), us("1550757737-9c2f636e6c34", 800)],
+  servers: [us("1451187580459-43490279c0fa", 800), us("1544197150-b99a580bb7a8", 800), us("1558494949-ef010cbdcc31", 800)],
+  security: [us("1563986768609-322da13575f3", 800), us("1573496359142-b8d87734a5a2", 800), us("1451187580459-43490279c0fa", 800)],
   support: [us("1600880292203-757bb62b4baf", 800), us("1542744173-8e7e53415bb0", 800), us("1573496359142-b8d87734a5a2", 800)],
-  backup: [us("1544197150-b99a580bb7a8", 800), us("1550757737-9c2f636e6c34", 800), us("1563986768609-322da13575f3", 800)],
-  devops: [us("1555066931-4365d14bab8c", 800), us("1504384308090-c040fd5e7e0d", 800), us("1558494949-ef010cbdcc31", 800)],
-  datacenter: [us("1550757737-9c2f636e6c34", 800), us("1544197150-b99a580bb7a8", 800), us("1558494949-ef010cbdcc31", 800)],
+  backup: [us("1544197150-b99a580bb7a8", 800), "/assets/implementation-testing.png", us("1563986768609-322da13575f3", 800)],
+  devops: [us("1555066931-4365d14bab8c", 800), "/assets/deployment-automation.png", us("1558494949-ef010cbdcc31", 800)],
+  datacenter: [us("1451187580459-43490279c0fa", 800), us("1544197150-b99a580bb7a8", 800), us("1558494949-ef010cbdcc31", 800)],
   communication: [us("1542744173-8e7e53415bb0", 800), us("1600880292203-757bb62b4baf", 800), us("1573496359142-b8d87734a5a2", 800)],
   migration: [us("1451187580459-43490279c0fa", 800), us("1504384308090-c040fd5e7e0d", 800), us("1558494949-ef010cbdcc31", 800)],
 };
@@ -206,14 +204,21 @@ export default function InfrastructureDetailContent({ slug }: { slug: Infrastruc
   const ctaSubtext = safeRaw<string>(t, `${slugNs}.cta_subtext`);
   const ctaPrimaryBtn = safeRaw<string>(t, `${slugNs}.cta_primary_btn`);
   const ctaSecondaryBtn = safeRaw<string>(t, `${slugNs}.cta_secondary_btn`);
+  const bannerHeading = safeRaw<string>(t, `${slugNs}.banner_heading`);
+  const bannerHighlight = safeRaw<string>(t, `${slugNs}.banner_highlight`);
+  const bannerTagline = safeRaw<string>(t, `${slugNs}.banner_tagline`);
 
   const fullTitle = [title, titleHighlight, titleSuffix].filter(Boolean).join(" ");
   const titleWords = fullTitle.split(" ");
   const heroTitleFirst = titleWords[0] || title;
   const heroTitleRestRaw = titleWords.slice(1).join(" ");
-  const heroTitleRest = heroTitleRestRaw.startsWith("and ") 
-    ? heroTitleRestRaw 
-    : heroTitleRestRaw ? `& ${heroTitleRestRaw}` : "";
+  const heroTitleRest = heroTitleRestRaw.startsWith("and ")
+    ? `& ${heroTitleRestRaw.slice(4)}`
+    : heroTitleRestRaw.startsWith("& ")
+      ? heroTitleRestRaw
+      : heroTitleRestRaw
+        ? `& ${heroTitleRestRaw}`
+        : "";
 
   const featureCards = features.slice(0, 3).map((titleStr, i) => ({
     title: titleStr,
@@ -248,10 +253,6 @@ export default function InfrastructureDetailContent({ slug }: { slug: Infrastruc
   const expertParaResolved = typeof expertPara === "string" ? expertPara : t("template_expert_para");
   const showExpertAvatar = expertShowAvatar !== false;
 
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
@@ -262,11 +263,12 @@ export default function InfrastructureDetailContent({ slug }: { slug: Infrastruc
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImg}
-            alt={mounted ? fullTitle : "Infrastructure"}
+            alt={fullTitle || "Infrastructure"}
             fill
             className="object-cover grayscale-[0.3]"
             sizes="100vw"
             priority
+            unoptimized={heroImg.startsWith("https://")}
           />
           <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" />
           <div
@@ -279,88 +281,56 @@ export default function InfrastructureDetailContent({ slug }: { slug: Infrastruc
 
         <div className="max-w-7xl mx-auto px-3 md:px-6 lg:px-12 relative z-10 w-full">
           <div className="max-w-3xl space-y-3 md:space-y-8">
-            {!mounted ? (
-              <>
-                <div className="inline-flex items-center space-x-2 md:space-x-3 text-[#10b981] font-black uppercase tracking-[0.3em] md:tracking-[0.4em] text-[7px] md:text-[10px]">
-                  <div className="w-6 md:w-10 h-[1px] bg-[#10b981]" />
-                  <span>&nbsp;</span>
-                </div>
-                <h1 className="text-lg md:text-3xl lg:text-[3.5rem] font-black text-white tracking-tighter leading-[0.9]">
-                  <span>&nbsp;</span>
-                </h1>
-                <p className="text-gray-300 text-[11px] md:text-lg font-medium leading-relaxed max-w-xl italic border-l-2 md:border-l-4 border-[#10b981] pl-3 md:pl-6 line-clamp-3 md:line-clamp-none">
-                  &nbsp;
-                </p>
-                <div className="flex flex-wrap gap-2 md:gap-4 pt-2 md:pt-4">
-                  <span className="w-32 h-10 bg-[#10b981]/80 rounded-lg" />
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="inline-flex items-center space-x-2 md:space-x-3 text-[#10b981] font-black uppercase tracking-[0.3em] md:tracking-[0.4em] text-[7px] md:text-[10px]">
-                  <div className="w-6 md:w-10 h-[1px] bg-[#10b981]" />
-                  <span>{t("hero_tag")}</span>
-                </div>
-                <h1 className="text-lg md:text-3xl lg:text-[3.5rem] font-black text-white tracking-tighter leading-[0.9]">
-                  {heroTitleFirst}
-                  {heroTitleRest ? (
-                    <>
-                      {" "}
-                      <br />
-                      <span className="text-[#10b981]">{heroTitleRest.startsWith("and ") ? heroTitleRest : `& ${heroTitleRest}`}</span>
-                    </>
-                  ) : null}
-                </h1>
-                <p className="text-gray-300 text-[11px] md:text-lg font-medium leading-relaxed max-w-xl italic border-l-2 md:border-l-4 border-[#10b981] pl-3 md:pl-6 line-clamp-3 md:line-clamp-none">
-                  &quot;{subtitle}&quot;
-                </p>
-                <div className="flex flex-wrap gap-2 md:gap-4 pt-2 md:pt-4">
+            <>
+              <div className="inline-flex items-center space-x-2 md:space-x-3 text-[#10b981] font-black uppercase tracking-[0.3em] md:tracking-[0.4em] text-[7px] md:text-[10px]">
+                <div className="w-6 md:w-10 h-[1px] bg-[#10b981]" />
+                <span>{t("hero_tag")}</span>
+              </div>
+              <h1 className="text-lg md:text-3xl lg:text-[3.5rem] font-black text-white tracking-tighter leading-[0.9]">
+                {heroTitleFirst}
+                {heroTitleRest ? (
+                  <>
+                    {" "}
+                    <br />
+                    <span className="text-[#10b981]">{heroTitleRest.startsWith("and ") ? heroTitleRest : `${heroTitleRest}`}</span>
+                  </>
+                ) : null}
+              </h1>
+              <p className="text-gray-300 text-[11px] md:text-lg font-medium leading-relaxed max-w-xl italic border-l-2 md:border-l-4 border-[#10b981] pl-3 md:pl-6 line-clamp-3 md:line-clamp-none">
+                &quot;{subtitle}&quot;
+              </p>
+              <div className="flex flex-wrap gap-2 md:gap-4 pt-2 md:pt-4">
+                <Link
+                  href={`${base}#contact`}
+                  className="w-full sm:w-auto bg-[#10b981] text-black px-4 md:px-10 py-2.5 md:py-4 rounded-lg md:rounded-xl font-black text-[9px] md:text-xs uppercase tracking-widest hover:bg-white transition-all shadow-xl inline-flex items-center justify-center gap-2"
+                >
+                  {typeof ctaPrimary === "string" ? ctaPrimary : t("cta_discover_more")}
+                </Link>
+                {typeof ctaSecondary === "string" && (
                   <Link
-                    href={`${base}#contact`}
-                    className="w-full sm:w-auto bg-[#10b981] text-black px-4 md:px-10 py-2.5 md:py-4 rounded-lg md:rounded-xl font-black text-[9px] md:text-xs uppercase tracking-widest hover:bg-white transition-all shadow-xl inline-flex items-center justify-center gap-2"
+                    href={`${base}#how-we-work`}
+                    className="w-full sm:w-auto border-2 border-white text-white px-4 md:px-10 py-2.5 md:py-4 rounded-lg md:rounded-xl font-black text-[9px] md:text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all inline-flex items-center justify-center gap-2"
                   >
-                    {typeof ctaPrimary === "string" ? ctaPrimary : t("cta_discover_more")}
+                    {ctaSecondary}
                   </Link>
-                  {typeof ctaSecondary === "string" && (
-                    <Link
-                      href={`${base}#how-we-work`}
-                      className="w-full sm:w-auto border-2 border-white text-white px-4 md:px-10 py-2.5 md:py-4 rounded-lg md:rounded-xl font-black text-[9px] md:text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all inline-flex items-center justify-center gap-2"
-                    >
-                      {ctaSecondary}
-                    </Link>
-                  )}
-                </div>
-              </>
-            )}
+                )}
+              </div>
+            </>
           </div>
         </div>
       </section>
 
-      {mounted && typeof trustBarText === "string" && trustBarText.length > 0 && (
+      {/* {mounted && typeof trustBarText === "string" && trustBarText.length > 0 && (
         <section className="relative z-20 px-3 md:px-6 lg:px-12 py-6 md:py-8 bg-gray-50 border-y border-gray-100">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-gray-600 text-xs md:text-sm font-medium leading-relaxed">{trustBarText}</p>
           </div>
         </section>
-      )}
+      )} */}
 
       <section className="relative z-20 px-3 md:px-6 lg:px-12 mt-8 md:-mt-13 pb-12 md:pb-24 lg:pb-32">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 lg:gap-8">
-          {!mounted
-            ? [0, 1, 2].map((i) => (
-                <div
-                  key={i}
-                  className="bg-white p-4 md:p-8 lg:p-10 xl:p-12 rounded-xl md:rounded-[2.5rem] shadow-2xl border border-gray-50 flex flex-col items-center text-center min-w-0"
-                >
-                  <div className="w-12 h-12 md:w-20 md:h-20 rounded-lg md:rounded-2xl bg-[#f0fdf9] mb-4 md:mb-8 shrink-0" />
-                  <div className="h-6 w-3/4 bg-gray-200 rounded mb-2" />
-                  <div className="h-4 w-full bg-gray-100 rounded mb-4" />
-                  <div className="mt-4 md:mt-8 pt-4 md:pt-8 border-t border-gray-100 w-full">
-                    <div className="h-3 w-24 bg-gray-100 rounded mx-auto" />
-                  </div>
-                </div>
-              ))
-            : featureCards.map((feature, i) => (
+          {featureCards.map((feature, i) => (
                 <div
                   key={i}
                   className="bg-white p-4 md:p-8 lg:p-10 xl:p-12 rounded-xl md:rounded-[2.5rem] shadow-2xl border border-gray-50 group hover:-translate-y-4 transition-all duration-500 flex flex-col items-center text-center min-w-0"
@@ -373,15 +343,6 @@ export default function InfrastructureDetailContent({ slug }: { slug: Infrastruc
                   {"micro" in feature && feature.micro && (
                     <p className="mt-2 text-[#10b981] text-[9px] md:text-[10px] font-bold uppercase tracking-wider">{feature.micro}</p>
                   )}
-                  <div className="mt-4 md:mt-8 pt-4 md:pt-8 border-t border-gray-100 w-full">
-                    <Link
-                      href="#detailed-services"
-                      className="text-[8px] md:text-[10px] font-black text-[#10b981] uppercase tracking-widest flex items-center justify-center space-x-1 md:space-x-2 mx-auto hover:opacity-80"
-                    >
-                      <span>{t("explore_tech")}</span>
-                      <ArrowRight size={10} className="md:w-3.5 md:h-3.5" />
-                    </Link>
-                  </div>
                 </div>
               ))}
         </div>
@@ -393,10 +354,11 @@ export default function InfrastructureDetailContent({ slug }: { slug: Infrastruc
             <div className="rounded-2xl md:rounded-[4rem] overflow-hidden shadow-2xl relative aspect-[4/5] lg:aspect-square">
               <Image
                 src={overviewImg}
-                alt={mounted ? `${fullTitle} — expert guidance` : "Expert guidance"}
+                alt={`${fullTitle || "Infrastructure"} — expert guidance`}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                unoptimized={overviewImg.startsWith("https://")}
               />
               <div className="absolute bottom-[-10px] left-4 md:left-10 bg-white p-4 md:p-8 rounded-xl md:rounded-[2.5rem] shadow-2xl border border-gray-50 animate-float-slow">
                 <div className="flex items-center space-x-2 md:space-x-4">
@@ -446,7 +408,7 @@ export default function InfrastructureDetailContent({ slug }: { slug: Infrastruc
               ))}
             </div>
 
-            {showExpertAvatar && (
+            {/* {showExpertAvatar && (
               <div className="pt-4 md:pt-8 border-t border-gray-200 flex items-center space-x-3 md:space-x-6">
                 <div className="w-10 h-10 md:w-16 md:h-16 rounded-full overflow-hidden bg-gray-200 relative flex-shrink-0">
                   <Image src={EXPERT_AVATAR} alt="Expert" fill className="object-cover" sizes="64px" />
@@ -458,7 +420,7 @@ export default function InfrastructureDetailContent({ slug }: { slug: Infrastruc
                   </p>
                 </div>
               </div>
-            )}
+            )} */}
           </div>
         </div>
       </section>
@@ -487,22 +449,27 @@ export default function InfrastructureDetailContent({ slug }: { slug: Infrastruc
       )}
 
       <section className="relative h-[40vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
-        <Image
-          src={bannerImg}
-          alt={mounted ? fullTitle : "Infrastructure"}
-          fill
-          className="object-cover grayscale-[0.5]"
-          sizes="100vw"
+        <video
+          src="/infra.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover grayscale-[0.5]"
+          aria-hidden
         />
         <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 text-center space-y-4 md:space-y-8 max-w-4xl px-3 md:px-6">
-          <div className="w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-[#10b981] hover:bg-[#10b981] hover:text-white transition-all mx-auto cursor-pointer">
-            <Play size={16} className="md:w-6 md:h-6 lg:w-8 lg:h-8" fill="currentColor" />
-          </div>
+        <div className="relative z-10 text-center space-y-4 md:space-y-6 max-w-4xl px-3 md:px-6">
           <h2 className="text-lg md:text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black text-white tracking-tighter leading-none italic">
-            {t("template_blueprint_line1")} <br />
-            <span className="text-[#10b981]">{t("template_blueprint_highlight")}</span>
+            {typeof bannerHeading === "string" ? bannerHeading : t("template_blueprint_line1")}{" "}
+            <br />
+            <span className="text-[#10b981]">
+              {typeof bannerHighlight === "string" ? bannerHighlight : t("template_blueprint_highlight")}
+            </span>
           </h2>
+          <p className="text-white/90 text-sm md:text-base lg:text-lg font-medium max-w-2xl mx-auto leading-relaxed">
+            {typeof bannerTagline === "string" ? bannerTagline : fullTitle}
+          </p>
         </div>
       </section>
 
@@ -528,7 +495,7 @@ export default function InfrastructureDetailContent({ slug }: { slug: Infrastruc
                 fill
                 className="object-cover opacity-70 grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
                 sizes="(max-width: 768px) 100vw, 33vw"
-                unoptimized={cardImgSrc.startsWith("/")}
+                unoptimized={cardImgSrc.startsWith("/") || cardImgSrc.startsWith("https://")}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
@@ -641,7 +608,7 @@ export default function InfrastructureDetailContent({ slug }: { slug: Infrastruc
               className="text-[9px] md:text-[11px] font-black uppercase tracking-[0.25em] md:tracking-[0.3em] flex items-center space-x-1.5 md:space-x-2 text-[#111] hover:text-[#10b981]"
             >
               <span>{typeof ctaSecondaryBtn === "string" && ctaSecondaryBtn.length > 0 ? ctaSecondaryBtn : t("template_explore_portfolio")}</span>
-              <ArrowUpRight size={14} className="md:w-[18px] md:h-[18px]" />
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 md:w-[18px] md:h-[18px]" aria-hidden><path d="M7 17L17 7M17 7h-6M17 7v6" /></svg>
             </Link>
           </div>
         </div>
