@@ -44,7 +44,7 @@ const cardMotion = {
     scale: 1,
     transition: {
       duration: 0.5,
-      ease: [0.25, 0.46, 0.45, 0.94],
+      ease: [0.25, 0.46, 0.45, 0.94] as const,
     },
   },
 };
@@ -97,7 +97,7 @@ export default function TrustCapabilityMetrics() {
                 }}
                 whileHover={{
                   y: -6,
-                  transition: { duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] },
+                  transition: { duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] as const },
                 }}
               >
                 {/* Rotating gradient ring (visible as thin stroke) */}
