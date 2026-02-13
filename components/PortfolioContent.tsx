@@ -76,7 +76,7 @@ const projects: Project[] = [
     category: "Gaming",
     industry: "Gaming",
     description:
-      "Full-stack gaming platform for live slot booking, food ordering, and comprehensive admin panels. Real-time reservations, payments, and management dashboards.",
+      "Gaming platform with live slot booking, food ordering, and admin panels. Real-time reservations and payments.",
     completedDate: "Dec 2024",
     techStack: ["Next.js", "Node.js", "WebSockets"],
     metrics: { label: "Live Bookings", value: "1K+/day" },
@@ -138,6 +138,9 @@ const projects: Project[] = [
 ];
 
 const MAP_IMG = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200";
+
+const PORTFOLIO_SECTION_HEADER_CLASS =
+  "flex flex-col md:flex-row md:items-center justify-between mb-12 sm:mb-16 border-b border-gray-100 pb-8 sm:pb-10 lg:pb-12 gap-6 sm:gap-8";
 
 function ProjectCard({
   project,
@@ -239,10 +242,16 @@ function PortfolioCarousel({
   onGoTo: (index: number) => void;
 }) {
   const N = projects.length;
+  const [mounted, setMounted] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
     const mqMobile = window.matchMedia("(max-width: 639px)");
     const mqTablet = window.matchMedia("(min-width: 640px) and (max-width: 1023px)");
     const update = () => {
@@ -256,9 +265,9 @@ function PortfolioCarousel({
       mqMobile.removeEventListener("change", update);
       mqTablet.removeEventListener("change", update);
     };
-  }, []);
+  }, [mounted]);
 
-  const halfWindow = isMobile ? 0 : isTablet ? 1 : 2;
+  const halfWindow = !mounted ? 2 : isMobile ? 0 : isTablet ? 1 : 2;
   const indices = useMemo(() => {
     const list: number[] = [];
     for (let i = -halfWindow; i <= halfWindow; i++) {
@@ -499,7 +508,7 @@ export default function PortfolioContent() {
       </section>
 
       <section className="pt-32 sm:pt-48 lg:pt-64 pb-16 sm:pb-24 lg:pb-32 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 sm:mb-16 lg:mb-24 border-b border-gray-100 dark:border-white/5 pb-8 sm:pb-10 lg:pb-12 gap-6 sm:gap-8">
+        <div className={PORTFOLIO_SECTION_HEADER_CLASS} suppressHydrationWarning>
           <div className="space-y-2 sm:space-y-3">
             <h2
               className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter italic ${
@@ -526,6 +535,7 @@ export default function PortfolioContent() {
       <section
         className="relative py-20 sm:py-28 lg:py-36 rounded-t-[2rem] sm:rounded-t-[2.5rem] lg:rounded-t-[3rem] overflow-hidden bg-[#fafafa] selected-work-grain"
         style={{ transition: "background-color 1000ms ease" }}
+        suppressHydrationWarning
       >
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <header className="flex flex-col items-center text-center mb-14 sm:mb-20 lg:mb-24 space-y-4">
@@ -552,14 +562,17 @@ export default function PortfolioContent() {
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
               className="lg:col-span-8 relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden min-h-[320px] sm:min-h-[380px] lg:min-h-[420px] group/card"
+              suppressHydrationWarning
             >
-              <div className="absolute inset-0">
+              <div className="absolute inset-0" suppressHydrationWarning>
                 <Image
                   src={projects[0].image}
                   alt={projects[0].name}
                   fill
                   className="object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)] group-hover/card:translate-y-[-2%]"
                   sizes="(max-width: 1024px) 100vw, 66vw"
+                  priority
+                  loading="eager"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/20" />
               </div>
@@ -601,6 +614,7 @@ export default function PortfolioContent() {
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.6, delay: 0.05, ease: [0.4, 0, 0.2, 1] }}
               className="lg:col-span-4 relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden bg-white min-h-[280px] flex flex-col justify-between p-5 sm:p-6 border border-gray-100 shadow-sm group/card transition-all duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:shadow-[0_24px_48px_-16px_rgba(0,0,0,0.08)] hover:translate-y-[-4px]"
+              suppressHydrationWarning
             >
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-[#10b981]/10 flex items-center justify-center text-[#10b981]">
@@ -614,7 +628,7 @@ export default function PortfolioContent() {
                 <h3 className="text-xl sm:text-2xl font-black text-[#111] tracking-tight leading-tight">
                   {projects[2].name}
                 </h3>
-                <p className="mt-3 text-sm text-gray-500 leading-relaxed line-clamp-2">
+                <p className="mt-3 text-sm text-gray-500 leading-relaxed line-clamp-2" suppressHydrationWarning>
                   {projects[2].description}
                 </p>
               </div>

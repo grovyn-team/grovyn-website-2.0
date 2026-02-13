@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
@@ -8,6 +6,7 @@ import { useTranslations } from "next-intl";
 export default function Footer({ locale }: { locale: string }) {
   const t = useTranslations("footer");
   const base = `/${locale}`;
+  
   return (
     <footer className="bg-[#111] text-gray-500 py-20 px-4">
       <div className="max-w-7xl mx-auto">
@@ -20,9 +19,8 @@ export default function Footer({ locale }: { locale: string }) {
                 width={120}
                 height={40}
                 sizes="120px"
-                className="h-8 w-auto object-contain"
-                style={{ width: "auto" }}
-                loading="lazy"
+                className="object-contain"
+                style={{ width: "auto", height: "2rem" }}
               />
             </Link>
             <p className="text-xs leading-relaxed max-w-xs">
@@ -56,89 +54,89 @@ export default function Footer({ locale }: { locale: string }) {
           </div>
 
           <div className="flex flex-wrap gap-x-30 gap-y-10 md:gap-x-40 md:gap-y-0 md:flex-nowrap">
-          <div>
-            <h5 className="text-white text-sm font-bold mb-6">{t("services_heading")}</h5>
-            <ul className="text-xs space-y-4">
-              <li>
-                <Link href={`${base}#web-dev`} className="hover:text-emerald-500 transition-colors">
-                  {t("web_dev")}
-                </Link>
-              </li>
-              <li>
-                <Link href={`${base}#mobile-apps`} className="hover:text-emerald-500 transition-colors">
-                  {t("mobile_eng")}
-                </Link>
-              </li>
-              <li>
-                <Link href={`${base}/about`} className="hover:text-emerald-500 transition-colors">
-                  {t("ui_ux")}
-                </Link>
-              </li>
-              <li>
-                <Link href={`${base}#backend-cloud`} className="hover:text-emerald-500 transition-colors">
-                  {t("cloud_arch")}
-                </Link>
-              </li>
-            </ul>
-          </div>
+            <div>
+              <h5 className="text-white text-sm font-bold mb-6">{t("services_heading")}</h5>
+              <ul className="text-xs space-y-4">
+                <li>
+                  <Link href={`${base}#web-dev`} className="hover:text-emerald-500 transition-colors">
+                    {t("web_dev")}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`${base}#mobile-apps`} className="hover:text-emerald-500 transition-colors">
+                    {t("mobile_eng")}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`${base}/about`} className="hover:text-emerald-500 transition-colors">
+                    {t("ui_ux")}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`${base}#backend-cloud`} className="hover:text-emerald-500 transition-colors">
+                    {t("cloud_arch")}
+                  </Link>
+                </li>
+              </ul>
+            </div>
 
-          <div>
-            <h5 className="text-white text-sm font-bold mb-6">{t("company_heading")}</h5>
-            <ul className="text-xs space-y-4">
-              <li>
-                <Link href={`${base}/about`} className="hover:text-emerald-500 transition-colors">
-                  {t("about")}
-                </Link>
-              </li>
-              <li>
-                <Link href={`${base}/careers`} className="hover:text-emerald-500 transition-colors">
-                  {t("careers")}
-                </Link>
-              </li>
-              
-            </ul>
-          </div>
+            <div>
+              <h5 className="text-white text-sm font-bold mb-6">{t("company_heading")}</h5>
+              <ul className="text-xs space-y-4">
+                <li>
+                  <Link href={`${base}/about`} className="hover:text-emerald-500 transition-colors">
+                    {t("about")}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`${base}/careers`} className="hover:text-emerald-500 transition-colors">
+                    {t("careers")}
+                  </Link>
+                </li>
 
-          <div>
-            <h5 className="text-white text-sm font-bold mb-6">{t("resources_heading")}</h5>
-            <ul className="text-xs space-y-4">
-              <li>
-                <Link href={`${base}/blog`} className="hover:text-emerald-500 transition-colors">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href={`${base}#contact`} className="hover:text-emerald-500 transition-colors">
-                  {t("contact")}
-                </Link>
-              </li>
-              <li>
-                <Link href={`${base}/privacy`} className="hover:text-emerald-500 transition-colors">
-                  {t("privacy")}
-                </Link>
-              </li>
-              <li>
-                <Link href={`${base}/terms`} className="hover:text-emerald-500 transition-colors">
-                  {t("terms")}
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/company/grovynsystems/about"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-emerald-500 transition-colors"
-                >
-                  {t("linkedin")}
-                </a>
-              </li>
-            </ul>
-          </div>
+              </ul>
+            </div>
+
+            <div>
+              <h5 className="text-white text-sm font-bold mb-6">{t("resources_heading")}</h5>
+              <ul className="text-xs space-y-4">
+                <li>
+                  <Link href={`${base}/blog`} className="hover:text-emerald-500 transition-colors">
+                    Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`${base}#contact`} className="hover:text-emerald-500 transition-colors">
+                    {t("contact")}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`${base}/privacy`} className="hover:text-emerald-500 transition-colors">
+                    {t("privacy")}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`${base}/terms`} className="hover:text-emerald-500 transition-colors">
+                    {t("terms")}
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/company/grovynsystems/about"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-emerald-500 transition-colors"
+                  >
+                    {t("linkedin")}
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <div className="pt-8 border-t border-gray-800 flex justify-between items-center text-[10px] uppercase tracking-[0.1em] font-bold">
-          <p>© {new Date().getFullYear()} {t("copyright")}</p>
+          <p>©2026 {t("copyright")}</p>
           <div className="flex space-x-8">
             <Link href={`${base}/privacy`} className="hover:text-white">
               {t("privacy")}

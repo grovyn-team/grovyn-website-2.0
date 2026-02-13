@@ -10,6 +10,14 @@ const getBaseUrl = (): string => {
   return process.env.NEXT_PUBLIC_API_URL ?? "";
 };
 
+/** Allow only http(s) URLs; reject javascript:, data:, or malformed values to prevent SSRF/open redirect. */
+function isAllowedBaseUrl(url: string): boolean {
+  const trimmed = url.trim();
+  if (!trimmed) return false;
+  if (/[\s\r\n]/.test(trimmed)) return false;
+  return /^https?:\/\/[^\s]+$/i.test(trimmed);
+}
+
 export type ContactPayload = {
   name: string;
   email: string;
@@ -26,7 +34,7 @@ export type ContactResponse =
 
 export async function submitContact(payload: ContactPayload): Promise<ContactResponse> {
   const base = getBaseUrl();
-  if (!base) {
+  if (!base || !isAllowedBaseUrl(base)) {
     return { success: false, message: "API URL not configured. Set NEXT_PUBLIC_API_URL." };
   }
   const res = await fetch(`${base.replace(/\/$/, "")}/contact`, {
@@ -58,7 +66,7 @@ export async function submitCareerApplication(
   payload: CareerApplicationPayload
 ): Promise<CareerApplicationResponse> {
   const base = getBaseUrl();
-  if (!base) {
+  if (!base || !isAllowedBaseUrl(base)) {
     return { success: false, message: "API URL not configured. Set NEXT_PUBLIC_API_URL." };
   }
   const form = new FormData();
