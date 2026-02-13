@@ -1,11 +1,12 @@
 import { notFound } from "next/navigation";
 import { INFRASTRUCTURE_SLUGS, type InfrastructureSlug } from "@/lib/infrastructure";
+import { locales } from "@/i18n/config";
 import InfrastructureDetailContent from "@/components/InfrastructureDetailContent";
 
 export async function generateStaticParams() {
-  return INFRASTRUCTURE_SLUGS.map((slug) => ({
-    slug: slug,
-  }));
+  return locales.flatMap((locale) =>
+    INFRASTRUCTURE_SLUGS.map((slug) => ({ locale, slug }))
+  );
 }
 
 export async function generateMetadata({
