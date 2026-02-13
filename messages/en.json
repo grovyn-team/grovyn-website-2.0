@@ -1457,19 +1457,94 @@
           {
             "step": "01",
             "title": "Assessment",
-            "desc": "We take a close look at what you have today and design a migration path that fits your timeline and risk tolerance."
+            "desc": "We take a close look at what you have today and design a migration path that fits your timeline and risk tolerance.",
+            "micro": "Right-sized plan"
           },
           {
             "step": "02",
             "title": "Migration",
-            "desc": "We move your workloads in phases so your business keeps running—no big-bang cutover unless you want one."
+            "desc": "We move your workloads in phases so your business keeps running—no big-bang cutover unless you want one.",
+            "micro": "Low-risk cutover"
           },
           {
             "step": "03",
             "title": "Operation",
-            "desc": "Once you're on the cloud, we help you run it well: cost control, reliability, and clear visibility."
+            "desc": "Once you're on the cloud, we help you run it well: cost control, reliability, and clear visibility.",
+            "micro": "Ongoing optimization"
           }
         ],
+        "cta_primary": "Talk to us",
+        "cta_secondary": "See how we work",
+        "trust_bar_text": "Trusted by growing businesses and SaaS companies to move and run workloads on AWS, Azure, and Google Cloud.",
+        "expert_heading": "Cloud infrastructure that fits your business",
+        "expert_para": "We help teams design and operate cloud environments that stay reliable and cost-effective as usage grows. Clear architecture, solid monitoring, and choices that age well.",
+        "expert_bullets": [
+          "Clear migration planning",
+          "Cost and performance visibility",
+          "Security and compliance in mind",
+          "Multi-cloud and hybrid options"
+        ],
+        "expert_show_avatar": true,
+        "process_section_heading": "How we approach cloud",
+        "process_steps_full": [
+          {
+            "step": "1",
+            "title": "Assessment",
+            "desc": "We review your current estate, dependencies, and goals to design a migration path that fits your timeline and risk."
+          },
+          {
+            "step": "2",
+            "title": "Migration Planning",
+            "desc": "We define phases, priorities, and cutover strategy so your business keeps running throughout the move."
+          },
+          {
+            "step": "3",
+            "title": "Migration & Operation",
+            "desc": "We execute the move and hand over runbooks, cost controls, and monitoring so you can run it well long term."
+          },
+          {
+            "step": "4",
+            "title": "Optimization",
+            "desc": "We help you tune cost, performance, and reliability as usage and requirements evolve."
+          }
+        ],
+        "detailed_services": [
+          {
+            "title": "Cloud Assessment",
+            "desc": "We review your current infrastructure and design a migration path that fits your timeline and risk tolerance.",
+            "stat": "Clear roadmap"
+          },
+          {
+            "title": "Cloud Migration",
+            "desc": "We move your workloads in phases so your business keeps running—no big-bang cutover unless you want one.",
+            "stat": "Controlled cutover"
+          },
+          {
+            "title": "Cloud Operations",
+            "desc": "We help you run the cloud well: cost control, reliability, and clear visibility so you can focus on building.",
+            "stat": "Ongoing reliability"
+          }
+        ],
+        "tech_strip": [
+          "AWS",
+          "Azure",
+          "Google Cloud",
+          "Terraform",
+          "Kubernetes",
+          "Cost & monitoring tools"
+        ],
+        "value_heading": "Cloud that scales with you, not against you",
+        "value_para": "Every cloud decision is aligned with your actual workloads and growth. We avoid over-provisioning and focus on architecture that stays understandable and cost-effective as you scale.",
+        "mini_stats": [
+          "Phased, low-risk migration",
+          "Cost visibility and control",
+          "Reliable production environments",
+          "Clear runbooks and support"
+        ],
+        "cta_heading": "Ready to move or optimize your cloud?",
+        "cta_subtext": "Let's discuss your cloud strategy and identify practical steps that fit your timeline and goals.",
+        "cta_primary_btn": "Get in touch",
+        "cta_secondary_btn": "See our work",
         "offerings": [
           "AWS",
           "Azure",
@@ -1554,19 +1629,94 @@
           {
             "step": "01",
             "title": "Design",
-            "desc": "We map your sites, users, and apps so the network we design actually fits how you work."
+            "desc": "We map your sites, users, and apps so the network we design actually fits how you work.",
+            "micro": "Fit for purpose"
           },
           {
             "step": "02",
             "title": "Implementation",
-            "desc": "We roll out in stages, test as we go, and make sure nothing goes dark when you flip the switch."
+            "desc": "We roll out in stages, test as we go, and make sure nothing goes dark when you flip the switch.",
+            "micro": "Staged rollout"
           },
           {
             "step": "03",
             "title": "Monitoring",
-            "desc": "We keep an eye on performance and availability so you hear about issues before your users do."
+            "desc": "We keep an eye on performance and availability so you hear about issues before your users do.",
+            "micro": "Proactive visibility"
           }
         ],
+        "cta_primary": "Talk to us",
+        "cta_secondary": "See how we work",
+        "trust_bar_text": "Trusted by enterprises, retail, healthcare, and education to design and run networks that stay up and keep teams connected.",
+        "expert_heading": "Network infrastructure that keeps you connected",
+        "expert_para": "We design and manage networks that stay reliable as your sites and users grow. Clear topology, security by design, and monitoring so you see issues before users do.",
+        "expert_bullets": [
+          "Design that fits how you work",
+          "Staged, low-risk rollout",
+          "Ongoing monitoring and support",
+          "Security and compliance in mind"
+        ],
+        "expert_show_avatar": true,
+        "process_section_heading": "How we approach network infrastructure",
+        "process_steps_full": [
+          {
+            "step": "1",
+            "title": "Discovery & Design",
+            "desc": "We map your sites, users, and applications so the network design fits your real workflow and growth."
+          },
+          {
+            "step": "2",
+            "title": "Implementation",
+            "desc": "We roll out in stages, test as we go, and ensure nothing goes dark when you flip the switch."
+          },
+          {
+            "step": "3",
+            "title": "Monitoring & Support",
+            "desc": "We monitor performance and availability and respond to issues so your users stay connected."
+          },
+          {
+            "step": "4",
+            "title": "Evolution",
+            "desc": "We help you adapt the network as sites, security, and demand change over time."
+          }
+        ],
+        "detailed_services": [
+          {
+            "title": "Network Design",
+            "desc": "We map your sites, users, and apps so the network we design actually fits how you work.",
+            "stat": "Right-sized design"
+          },
+          {
+            "title": "Implementation",
+            "desc": "We roll out in stages, test as we go, and make sure nothing goes dark when you flip the switch.",
+            "stat": "Controlled rollout"
+          },
+          {
+            "title": "Monitoring & Support",
+            "desc": "We keep an eye on performance and availability so you hear about issues before your users do.",
+            "stat": "Proactive support"
+          }
+        ],
+        "tech_strip": [
+          "Cisco",
+          "Juniper",
+          "Fortinet",
+          "SD-WAN",
+          "VPN",
+          "Network monitoring"
+        ],
+        "value_heading": "Networks built for reliability, not just connectivity",
+        "value_para": "Every network decision is aligned with your sites, users, and applications. We avoid over-engineering and focus on designs that stay understandable and supportable as you grow.",
+        "mini_stats": [
+          "Design that fits your workflow",
+          "Staged, low-risk deployment",
+          "Proactive monitoring",
+          "Security and compliance ready"
+        ],
+        "cta_heading": "Ready to improve your network infrastructure?",
+        "cta_subtext": "Let's discuss your network needs and identify practical improvements that keep your teams connected and secure.",
+        "cta_primary_btn": "Get in touch",
+        "cta_secondary_btn": "See our work",
         "offerings": [
           "Cisco",
           "Juniper",
@@ -1648,19 +1798,94 @@
           {
             "step": "01",
             "title": "Planning",
-            "desc": "We size and design so you have enough capacity and headroom without overbuying."
+            "desc": "We size and design so you have enough capacity and headroom without overbuying.",
+            "micro": "Right-sized capacity"
           },
           {
             "step": "02",
             "title": "Deployment",
-            "desc": "We install, configure, and hand over a clean, documented setup."
+            "desc": "We install, configure, and hand over a clean, documented setup.",
+            "micro": "Clean handover"
           },
           {
             "step": "03",
             "title": "Support",
-            "desc": "We handle patches, monitoring, and changes so your servers stay healthy and secure."
+            "desc": "We handle patches, monitoring, and changes so your servers stay healthy and secure.",
+            "micro": "Ongoing health"
           }
         ],
+        "cta_primary": "Talk to us",
+        "cta_secondary": "See how we work",
+        "trust_bar_text": "Trusted by government, healthcare, and manufacturing to run server infrastructure that stays reliable under load.",
+        "expert_heading": "Server infrastructure that stays reliable",
+        "expert_para": "We help teams plan and operate server estates—physical and virtual—so your applications have a solid, performant base. Clear sizing, patching, and monitoring so nothing catches you off guard.",
+        "expert_bullets": [
+          "Sizing and capacity planning",
+          "Clean deployment and documentation",
+          "Patching and security",
+          "Monitoring and support"
+        ],
+        "expert_show_avatar": true,
+        "process_section_heading": "How we approach server infrastructure",
+        "process_steps_full": [
+          {
+            "step": "1",
+            "title": "Planning",
+            "desc": "We size and design so you have enough capacity and headroom without overbuying."
+          },
+          {
+            "step": "2",
+            "title": "Deployment",
+            "desc": "We install, configure, and hand over a clean, documented setup."
+          },
+          {
+            "step": "3",
+            "title": "Support & Maintenance",
+            "desc": "We handle patches, monitoring, and changes so your servers stay healthy and secure."
+          },
+          {
+            "step": "4",
+            "title": "Optimization",
+            "desc": "We help you tune performance and capacity as workloads and requirements evolve."
+          }
+        ],
+        "detailed_services": [
+          {
+            "title": "Planning & Sizing",
+            "desc": "We size and design so you have enough capacity and headroom without overbuying.",
+            "stat": "Right-sized design"
+          },
+          {
+            "title": "Deployment",
+            "desc": "We install, configure, and hand over a clean, documented setup.",
+            "stat": "Documented handover"
+          },
+          {
+            "title": "Support & Monitoring",
+            "desc": "We handle patches, monitoring, and changes so your servers stay healthy and secure.",
+            "stat": "Ongoing reliability"
+          }
+        ],
+        "tech_strip": [
+          "VMware",
+          "Hyper-V",
+          "KVM",
+          "Dell EMC",
+          "NetApp",
+          "Windows & Linux"
+        ],
+        "value_heading": "Servers that support your applications, not the other way around",
+        "value_para": "Every server decision is aligned with your actual workloads and growth. We avoid over-provisioning and focus on setups that stay maintainable and performant as demand changes.",
+        "mini_stats": [
+          "Right-sized capacity",
+          "Clean, documented setups",
+          "Patching and security",
+          "Proactive monitoring"
+        ],
+        "cta_heading": "Ready to improve your server infrastructure?",
+        "cta_subtext": "Let's discuss your server estate and identify practical improvements that keep your applications running reliably.",
+        "cta_primary_btn": "Get in touch",
+        "cta_secondary_btn": "See our work",
         "offerings": [
           "VMware",
           "Hyper-V",
@@ -1738,19 +1963,94 @@
           {
             "step": "01",
             "title": "Assessment",
-            "desc": "We find where you're exposed and what compliance asks for, then lay out a plan that’s realistic and actionable."
+            "desc": "We find where you're exposed and what compliance asks for, then lay out a plan that’s realistic and actionable.",
+            "micro": "Clear risk view"
           },
           {
             "step": "02",
             "title": "Implementation",
-            "desc": "We put controls and policies in place so security is built in, not bolted on."
+            "desc": "We put controls and policies in place so security is built in, not bolted on.",
+            "micro": "Security by design"
           },
           {
             "step": "03",
             "title": "Monitoring",
-            "desc": "We watch for threats and anomalies and help you respond so small issues don’t become big ones."
+            "desc": "We watch for threats and anomalies and help you respond so small issues don’t become big ones.",
+            "micro": "Proactive response"
           }
         ],
+        "cta_primary": "Talk to us",
+        "cta_secondary": "See how we work",
+        "trust_bar_text": "Trusted by fintech, healthcare, and SaaS companies to lock down systems, stay compliant, and respond quickly when something doesn't look right.",
+        "expert_heading": "Security that lets you run with confidence",
+        "expert_para": "We help teams identify exposure, implement controls, and monitor for threats so security is built in—and you can respond quickly when something doesn't look right.",
+        "expert_bullets": [
+          "Realistic, actionable assessment",
+          "Controls built in, not bolted on",
+          "Threat and anomaly monitoring",
+          "Compliance-ready practices"
+        ],
+        "expert_show_avatar": true,
+        "process_section_heading": "How we approach security",
+        "process_steps_full": [
+          {
+            "step": "1",
+            "title": "Assessment",
+            "desc": "We find where you're exposed and what compliance asks for, then lay out a plan that's realistic and actionable."
+          },
+          {
+            "step": "2",
+            "title": "Implementation",
+            "desc": "We put controls and policies in place so security is built in, not bolted on."
+          },
+          {
+            "step": "3",
+            "title": "Monitoring & Response",
+            "desc": "We watch for threats and anomalies and help you respond so small issues don't become big ones."
+          },
+          {
+            "step": "4",
+            "title": "Continuous Improvement",
+            "desc": "We help you evolve security posture as threats and compliance requirements change."
+          }
+        ],
+        "detailed_services": [
+          {
+            "title": "Security Assessment",
+            "desc": "We find where you're exposed and what compliance asks for, then lay out a plan that's realistic and actionable.",
+            "stat": "Clear risk picture"
+          },
+          {
+            "title": "Controls & Implementation",
+            "desc": "We put controls and policies in place so security is built in, not bolted on.",
+            "stat": "Security by design"
+          },
+          {
+            "title": "Monitoring & Response",
+            "desc": "We watch for threats and anomalies and help you respond so small issues don't become big ones.",
+            "stat": "Proactive response"
+          }
+        ],
+        "tech_strip": [
+          "Firewall",
+          "EDR",
+          "IAM",
+          "Compliance",
+          "SOC",
+          "Penetration testing"
+        ],
+        "value_heading": "Security that supports the business, not just checkboxes",
+        "value_para": "Every security decision is aligned with your actual risk and compliance needs. We avoid theater and focus on controls that reduce real exposure and stay maintainable over time.",
+        "mini_stats": [
+          "Realistic assessment",
+          "Built-in controls",
+          "Threat monitoring",
+          "Compliance readiness"
+        ],
+        "cta_heading": "Ready to strengthen your security posture?",
+        "cta_subtext": "Let's discuss your security and compliance needs and identify practical steps that reduce risk and support growth.",
+        "cta_primary_btn": "Get in touch",
+        "cta_secondary_btn": "See our work",
         "offerings": [
           "Firewall",
           "EDR",
@@ -1829,19 +2129,93 @@
           {
             "step": "01",
             "title": "Setup",
-            "desc": "We agree on what’s in scope, how fast we’ll respond, and how we’ll work with your team day to day."
+            "desc": "We agree on what’s in scope, how fast we’ll respond, and how we’ll work with your team day to day.",
+            "micro": "Clear scope"
           },
           {
             "step": "02",
             "title": "Support",
-            "desc": "We handle tickets, fix issues, and answer questions so your people can focus on their work."
+            "desc": "We handle tickets, fix issues, and answer questions so your people can focus on their work.",
+            "micro": "Day-to-day support"
           },
           {
             "step": "03",
             "title": "Improvement",
-            "desc": "We look back at what’s breaking most and help you fix root causes so support gets easier over time."
+            "desc": "We look back at what’s breaking most and help you fix root causes so support gets easier over time.",
+            "micro": "Continuous improvement"
           }
         ],
+        "cta_primary": "Talk to us",
+        "cta_secondary": "See how we work",
+        "trust_bar_text": "Trusted by growing teams to keep systems running so people can focus on their work instead of waiting on IT.",
+        "expert_heading": "IT support that keeps your teams shipping",
+        "expert_para": "We help teams get clear scope, fast response, and ongoing improvement so support gets easier over time—not just reactive ticket handling.",
+        "expert_bullets": [
+          "Clear SLAs and scope",
+          "Tiered support options",
+          "Remote and on-site",
+          "Root cause improvement"
+        ],
+        "expert_show_avatar": true,
+        "process_section_heading": "How we approach IT support",
+        "process_steps_full": [
+          {
+            "step": "1",
+            "title": "Setup",
+            "desc": "We agree on what's in scope, how fast we'll respond, and how we'll work with your team day to day."
+          },
+          {
+            "step": "2",
+            "title": "Support",
+            "desc": "We handle tickets, fix issues, and answer questions so your people can focus on their work."
+          },
+          {
+            "step": "3",
+            "title": "Improvement",
+            "desc": "We look back at what's breaking most and help you fix root causes so support gets easier over time."
+          },
+          {
+            "step": "4",
+            "title": "Evolution",
+            "desc": "We adapt scope, tools, and processes as your team and systems grow."
+          }
+        ],
+        "detailed_services": [
+          {
+            "title": "Setup",
+            "desc": "We agree on what's in scope, how fast we'll respond, and how we'll work with your team day to day.",
+            "stat": "Clear scope"
+          },
+          {
+            "title": "Support",
+            "desc": "We handle tickets, fix issues, and answer questions so your people can focus on their work.",
+            "stat": "SLA-driven"
+          },
+          {
+            "title": "Improvement",
+            "desc": "We look back at what's breaking most and help you fix root causes so support gets easier over time.",
+            "stat": "Fewer repeat issues"
+          }
+        ],
+        "tech_strip": [
+          "Helpdesk",
+          "NOC",
+          "On-site support",
+          "Asset management",
+          "SLA reporting"
+        ],
+        "value_heading": "Support that reduces friction, not just tickets",
+        "value_para": "Every support decision is aligned with how your team actually works. We focus on clear scope, fast response, and fixing root causes so issues don't keep coming back.",
+        "mini_stats": [
+          "Clear SLAs",
+          "Tiered support",
+          "Root cause focus",
+          "Ongoing improvement"
+        ],
+        "cta_heading": "Ready to improve your IT support?",
+        "cta_subtext": "Let's discuss your support needs and design a model that keeps your teams unblocked and productive.",
+        "cta_primary_btn": "Get in touch",
+        "cta_secondary_btn": "See our work",
         "offerings": [
           "Helpdesk",
           "NOC",
@@ -1884,19 +2258,93 @@
           {
             "step": "01",
             "title": "Assessment",
-            "desc": "We figure out what you need to protect, how fast you need it back, and what’s already in place."
+            "desc": "We figure out what you need to protect, how fast you need it back, and what’s already in place.",
+            "micro": "Clear requirements"
           },
           {
             "step": "02",
             "title": "Implementation",
-            "desc": "We set up backup and run real recovery tests so you know it works when it matters."
+            "desc": "We set up backup and run real recovery tests so you know it works when it matters.",
+            "micro": "Tested recovery"
           },
           {
             "step": "03",
             "title": "Maintenance",
-            "desc": "We watch backups, fix failures, and keep your runbooks and plans up to date."
+            "desc": "We watch backups, fix failures, and keep your runbooks and plans up to date.",
+            "micro": "Ongoing readiness"
           }
         ],
+        "cta_primary": "Talk to us",
+        "cta_secondary": "See how we work",
+        "trust_bar_text": "Trusted by financial services, healthcare, and e-commerce to protect data and recover quickly when the worst happens.",
+        "expert_heading": "Backup and recovery you can rely on",
+        "expert_para": "We help teams design backup and DR so data is protected, recoverable, and safe from ransomware—with real recovery tests so you know it works when it matters.",
+        "expert_bullets": [
+          "RTO/RPO aligned to business",
+          "Tested recovery drills",
+          "Ransomware-aware design",
+          "DR and business continuity"
+        ],
+        "expert_show_avatar": true,
+        "process_section_heading": "How we approach backup and recovery",
+        "process_steps_full": [
+          {
+            "step": "1",
+            "title": "Assessment",
+            "desc": "We figure out what you need to protect, how fast you need it back, and what's already in place."
+          },
+          {
+            "step": "2",
+            "title": "Implementation",
+            "desc": "We set up backup and run real recovery tests so you know it works when it matters."
+          },
+          {
+            "step": "3",
+            "title": "Maintenance",
+            "desc": "We watch backups, fix failures, and keep your runbooks and plans up to date."
+          },
+          {
+            "step": "4",
+            "title": "Evolution",
+            "desc": "We help you adapt backup and DR as data, compliance, and risk change."
+          }
+        ],
+        "detailed_services": [
+          {
+            "title": "Backup Assessment",
+            "desc": "We figure out what you need to protect, how fast you need it back, and what's already in place.",
+            "stat": "Clear RTO/RPO"
+          },
+          {
+            "title": "Implementation & Testing",
+            "desc": "We set up backup and run real recovery tests so you know it works when it matters.",
+            "stat": "Tested recovery"
+          },
+          {
+            "title": "Maintenance & DR",
+            "desc": "We watch backups, fix failures, and keep your runbooks and plans up to date.",
+            "stat": "Ongoing readiness"
+          }
+        ],
+        "tech_strip": [
+          "Veeam",
+          "Acronis",
+          "Azure Site Recovery",
+          "AWS Backup",
+          "DR planning"
+        ],
+        "value_heading": "Backup that works when it matters",
+        "value_para": "Every backup and DR decision is aligned with your actual data and recovery needs. We focus on tested recovery and runbooks that stay current so you're ready when the worst happens.",
+        "mini_stats": [
+          "Clear RTO/RPO",
+          "Tested recovery",
+          "Ransomware-aware",
+          "Runbooks up to date"
+        ],
+        "cta_heading": "Ready to strengthen your backup and recovery?",
+        "cta_subtext": "Let's discuss your data protection needs and design a plan that keeps you recoverable and compliant.",
+        "cta_primary_btn": "Get in touch",
+        "cta_secondary_btn": "See our work",
         "offerings": [
           "Veeam",
           "Acronis",
@@ -2141,19 +2589,93 @@
           {
             "step": "01",
             "title": "Strategy",
-            "desc": "We work with you on capacity, location, and design so the facility matches your growth and risk profile."
+            "desc": "We work with you on capacity, location, and design so the facility matches your growth and risk profile.",
+            "micro": "Right strategy"
           },
           {
             "step": "02",
             "title": "Build",
-            "desc": "We support build-out and migration so you move in without surprises or last-minute fixes."
+            "desc": "We support build-out and migration so you move in without surprises or last-minute fixes.",
+            "micro": "Smooth build"
           },
           {
             "step": "03",
             "title": "Operation",
-            "desc": "We help you operate and optimize so the DC stays reliable and efficient as demand changes."
+            "desc": "We help you operate and optimize so the DC stays reliable and efficient as demand changes.",
+            "micro": "Efficient operation"
           }
         ],
+        "cta_primary": "Talk to us",
+        "cta_secondary": "See how we work",
+        "trust_bar_text": "Trusted by enterprises to design, build, and operate data center facilities that stay reliable and efficient.",
+        "expert_heading": "Data center design and operations that fit your growth",
+        "expert_para": "We help teams from strategy and design to build-out and day-two operations—so you get the right facility and run it well as demand changes.",
+        "expert_bullets": [
+          "Strategy and capacity planning",
+          "Power, cooling, layout",
+          "Build and migration support",
+          "Ongoing optimization"
+        ],
+        "expert_show_avatar": true,
+        "process_section_heading": "How we approach data center",
+        "process_steps_full": [
+          {
+            "step": "1",
+            "title": "Strategy",
+            "desc": "We work with you on capacity, location, and design so the facility matches your growth and risk profile."
+          },
+          {
+            "step": "2",
+            "title": "Build",
+            "desc": "We support build-out and migration so you move in without surprises or last-minute fixes."
+          },
+          {
+            "step": "3",
+            "title": "Operation",
+            "desc": "We help you operate and optimize so the DC stays reliable and efficient as demand changes."
+          },
+          {
+            "step": "4",
+            "title": "Evolution",
+            "desc": "We help you plan capacity and changes as your footprint and requirements evolve."
+          }
+        ],
+        "detailed_services": [
+          {
+            "title": "Strategy & Design",
+            "desc": "We work with you on capacity, location, and design so the facility matches your growth and risk profile.",
+            "stat": "Right-sized strategy"
+          },
+          {
+            "title": "Build & Migration",
+            "desc": "We support build-out and migration so you move in without surprises or last-minute fixes.",
+            "stat": "Smooth build"
+          },
+          {
+            "title": "Operation & Optimization",
+            "desc": "We help you operate and optimize so the DC stays reliable and efficient as demand changes.",
+            "stat": "Efficient operation"
+          }
+        ],
+        "tech_strip": [
+          "Design",
+          "DCIM",
+          "Power/cooling",
+          "Compliance",
+          "Capacity planning"
+        ],
+        "value_heading": "Data centers that support your business, not the other way around",
+        "value_para": "Every data center decision is aligned with your capacity, risk, and growth. We focus on design and operations that stay reliable and efficient as demand changes.",
+        "mini_stats": [
+          "Strategy first",
+          "Smooth build-out",
+          "Efficient operation",
+          "Capacity planning"
+        ],
+        "cta_heading": "Ready to design or improve your data center?",
+        "cta_subtext": "Let's discuss your facility needs and identify practical steps that fit your growth and risk profile.",
+        "cta_primary_btn": "Get in touch",
+        "cta_secondary_btn": "See our work",
         "offerings": [
           "Design",
           "DCIM",
@@ -2192,19 +2714,94 @@
           {
             "step": "01",
             "title": "Requirements",
-            "desc": "We learn how you communicate today and what you need from a single platform."
+            "desc": "We learn how you communicate today and what you need from a single platform.",
+            "micro": "Single platform"
           },
           {
             "step": "02",
             "title": "Deployment",
-            "desc": "We roll out the stack and train your people so adoption is smooth, not forced."
+            "desc": "We roll out the stack and train your people so adoption is smooth, not forced.",
+            "micro": "Smooth rollout"
           },
           {
             "step": "03",
             "title": "Support",
-            "desc": "We handle changes, issues, and upgrades so the platform keeps working for you."
+            "desc": "We handle changes, issues, and upgrades so the platform keeps working for you.",
+            "micro": "Ongoing support"
           }
         ],
+        "cta_primary": "Talk to us",
+        "cta_secondary": "See how we work",
+        "trust_bar_text": "Trusted by enterprises to unify voice, video, and chat so teams can collaborate without juggling multiple tools.",
+        "expert_heading": "Communication systems that bring teams together",
+        "expert_para": "We get your teams on one system for voice, video, and chat—with rollout and support so everyone can collaborate without juggling five different tools.",
+        "expert_bullets": [
+          "Unified voice, video, chat",
+          "Smooth deployment",
+          "Training and adoption",
+          "Ongoing support"
+        ],
+        "expert_show_avatar": true,
+        "process_section_heading": "How we approach communication systems",
+        "process_steps_full": [
+          {
+            "step": "1",
+            "title": "Requirements",
+            "desc": "We learn how you communicate today and what you need from a single platform."
+          },
+          {
+            "step": "2",
+            "title": "Deployment",
+            "desc": "We roll out the stack and train your people so adoption is smooth, not forced."
+          },
+          {
+            "step": "3",
+            "title": "Support",
+            "desc": "We handle changes, issues, and upgrades so the platform keeps working for you."
+          },
+          {
+            "step": "4",
+            "title": "Evolution",
+            "desc": "We help you adapt as tools and needs change over time."
+          }
+        ],
+        "detailed_services": [
+          {
+            "title": "Requirements",
+            "desc": "We learn how you communicate today and what you need from a single platform.",
+            "stat": "Right fit"
+          },
+          {
+            "title": "Deployment",
+            "desc": "We roll out the stack and train your people so adoption is smooth, not forced.",
+            "stat": "Smooth rollout"
+          },
+          {
+            "title": "Support",
+            "desc": "We handle changes, issues, and upgrades so the platform keeps working for you.",
+            "stat": "Ongoing support"
+          }
+        ],
+        "tech_strip": [
+          "Microsoft Teams",
+          "Zoom",
+          "Cisco",
+          "SIP",
+          "VoIP",
+          "Video conferencing"
+        ],
+        "value_heading": "One platform for voice, video, and chat",
+        "value_para": "Every communication decision is aligned with how your teams actually collaborate. We avoid tool sprawl and focus on a single platform that stays usable and supported.",
+        "mini_stats": [
+          "Unified platform",
+          "Smooth adoption",
+          "Training included",
+          "Ongoing support"
+        ],
+        "cta_heading": "Ready to unify your communication systems?",
+        "cta_subtext": "Let's discuss your voice, video, and chat needs and design a rollout that fits how your teams work.",
+        "cta_primary_btn": "Get in touch",
+        "cta_secondary_btn": "See our work",
         "offerings": [
           "Microsoft Teams",
           "Zoom",
@@ -2243,19 +2840,93 @@
           {
             "step": "01",
             "title": "Discovery",
-            "desc": "We map what you have, what depends on what, and build a migration plan that you can actually execute."
+            "desc": "We map what you have, what depends on what, and build a migration plan that you can actually execute.",
+            "micro": "Clear plan"
           },
           {
             "step": "02",
             "title": "Migration",
-            "desc": "We move in waves, test at each step, and keep rollback options so you’re never one mistake away from a crisis."
+            "desc": "We move in waves, test at each step, and keep rollback options so you’re never one mistake away from a crisis.",
+            "micro": "Low-risk waves"
           },
           {
             "step": "03",
             "title": "Optimization",
-            "desc": "We tune cost and performance in the cloud and help you safely shut down the old environment."
+            "desc": "We tune cost and performance in the cloud and help you safely shut down the old environment.",
+            "micro": "Optimized cloud"
           }
         ],
+        "cta_primary": "Talk to us",
+        "cta_secondary": "See how we work",
+        "trust_bar_text": "Trusted by businesses to move workloads to the cloud in a way that fits—phased, low-risk, with a clear path to turning off the old stuff.",
+        "expert_heading": "Cloud and migration that fits your business",
+        "expert_para": "We move your workloads to the cloud in a way that fits your business—phased, low-risk, and with a clear path to turning off the old stuff and optimizing in the cloud.",
+        "expert_bullets": [
+          "Discovery and dependency mapping",
+          "Phased migration",
+          "Zero-downtime goals",
+          "Post-migration optimization"
+        ],
+        "expert_show_avatar": true,
+        "process_section_heading": "How we approach cloud migration",
+        "process_steps_full": [
+          {
+            "step": "1",
+            "title": "Discovery",
+            "desc": "We map what you have, what depends on what, and build a migration plan that you can actually execute."
+          },
+          {
+            "step": "2",
+            "title": "Migration",
+            "desc": "We move in waves, test at each step, and keep rollback options so you're never one mistake away from a crisis."
+          },
+          {
+            "step": "3",
+            "title": "Optimization",
+            "desc": "We tune cost and performance in the cloud and help you safely shut down the old environment."
+          },
+          {
+            "step": "4",
+            "title": "Ongoing",
+            "desc": "We help you operate and optimize as usage and requirements evolve."
+          }
+        ],
+        "detailed_services": [
+          {
+            "title": "Discovery & Planning",
+            "desc": "We map what you have, what depends on what, and build a migration plan that you can actually execute.",
+            "stat": "Executable plan"
+          },
+          {
+            "title": "Migration",
+            "desc": "We move in waves, test at each step, and keep rollback options so you're never one mistake away from a crisis.",
+            "stat": "Low-risk waves"
+          },
+          {
+            "title": "Optimization",
+            "desc": "We tune cost and performance in the cloud and help you safely shut down the old environment.",
+            "stat": "Optimized cloud"
+          }
+        ],
+        "tech_strip": [
+          "AWS Migration",
+          "Azure Migrate",
+          "VMware Cloud",
+          "Database migration",
+          "Phased cutover"
+        ],
+        "value_heading": "Migration that doesn't keep you up at night",
+        "value_para": "Every migration decision is aligned with your timeline and risk tolerance. We focus on phased moves, rollback options, and clear runbooks so you're never one mistake away from a crisis.",
+        "mini_stats": [
+          "Phased approach",
+          "Rollback options",
+          "Cost optimization",
+          "Clear runbooks"
+        ],
+        "cta_heading": "Ready to plan your cloud migration?",
+        "cta_subtext": "Let's discuss your migration goals and design a plan that fits your timeline and risk tolerance.",
+        "cta_primary_btn": "Get in touch",
+        "cta_secondary_btn": "See our work",
         "offerings": [
           "AWS Migration",
           "Azure Migrate",
