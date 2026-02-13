@@ -9,10 +9,17 @@ const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 const CAL_MODAL_BREAKPOINT = 768;
 export const OPEN_DISCOVERY_CALL_EVENT = "openDiscoveryCall";
 
+/** Allow only path-safe segment for cal.com (no protocol or host) to avoid open redirect. */
+function sanitizeCalComPath(raw: string): string {
+  const path = raw.replace(/^https?:\/\/[^/]*\/?/i, "").trim();
+  if (!path) return "grovyn/discovery-call";
+  return path.replace(/[^a-zA-Z0-9/_-]/g, "") || "grovyn/discovery-call";
+}
+
 const CAL_COM_LINK =
   typeof process.env.NEXT_PUBLIC_CAL_COM_LINK === "string" &&
   process.env.NEXT_PUBLIC_CAL_COM_LINK.length > 0
-    ? process.env.NEXT_PUBLIC_CAL_COM_LINK
+    ? sanitizeCalComPath(process.env.NEXT_PUBLIC_CAL_COM_LINK)
     : "grovyn/discovery-call";
 
 const CAL_COM_URL = `https://cal.com/${CAL_COM_LINK}`;
