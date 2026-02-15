@@ -1,9 +1,7 @@
-import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import CareerDetailContent from "@/components/CareerDetailContent";
 import { pageMetadata } from "@/lib/seo";
-
-type Opening = { slug: string; title: string; type: string; team: string; description?: string };
+import { getJobOpeningBySlugServer } from "@/lib/api";
 
 export async function generateMetadata({
   params,
@@ -11,9 +9,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const t = await getTranslations("careers");
-  const openings = (t.raw("openings") as Opening[]) ?? [];
-  const opening = openings.find((o) => o.slug === slug);
+  const opening = await getJobOpeningBySlugServer(slug, locale);
   const title = opening ? `${opening.title} | GROVYN Careers` : "Careers | GROVYN";
   const description = opening?.description ?? "Careers at GROVYN.";
   return pageMetadata({
@@ -29,10 +25,8 @@ export default async function CareerDetailPage({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
-  const t = await getTranslations("careers");
-  const openings = (t.raw("openings") as Opening[]) ?? [];
-  const valid = openings.some((o) => o.slug === slug);
-  if (!valid) notFound();
+  const { locale, slug } = await params;
+  const opening = await getJobOpeningBySlugServer(slug, locale);
+  if (!opening) notFound();
   return <CareerDetailContent slug={slug} />;
 }

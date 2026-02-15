@@ -15,17 +15,7 @@ import {
   Lock,
   Briefcase,
 } from "lucide-react";
-import { submitCareerApplication } from "@/lib/api";
-
-type Opening = {
-  slug?: string;
-  title: string;
-  type: string;
-  team: string;
-  location?: string;
-  description?: string;
-  requirements?: string[];
-};
+import { submitCareerApplication, fetchJobOpeningBySlug, type JobOpening } from "@/lib/api";
 
 const WHAT_WE_OFFER = [
   "Competitive Base + Performance Bonus",
@@ -40,8 +30,8 @@ export default function CareerDetailContent({ slug }: { slug: string }) {
   const t = useTranslations("careers");
   const locale = useLocale();
   const base = `/${locale}`;
-  const openings = (t.raw("openings") as Opening[]) ?? [];
-  const job = openings.find((o) => (o.slug ?? o.title.toLowerCase().replace(/\s+/g, "-")) === slug);
+  const [job, setJob] = useState<JobOpening | null>(null);
+  const [jobLoading, setJobLoading] = useState(true);
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -58,6 +48,19 @@ export default function CareerDetailContent({ slug }: { slug: string }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchJobOpeningBySlug(slug, locale).then((data) => {
+      if (!cancelled) {
+        setJob(data ?? null);
+        setJobLoading(false);
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [slug, locale]);
 
   const handleDrag = (e: React.DragEvent) => {
     e.preventDefault();
@@ -100,16 +103,24 @@ export default function CareerDetailContent({ slug }: { slug: string }) {
     }
   };
 
+  if (jobLoading) {
+    return (
+      <div className="min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] flex flex-col items-center justify-center px-6 bg-[#fcfcfc]">
+        <p className="text-gray-500 font-medium">{t("loading")}</p>
+      </div>
+    );
+  }
+
   if (!job) {
     return (
       <div className="min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] flex flex-col items-center justify-center px-6 bg-[#fcfcfc]">
-        <h1 className="text-2xl font-black text-[#111] mb-4">Opening not found</h1>
+        <h1 className="text-2xl font-black text-[#111] mb-4">{t("opening_not_found")}</h1>
         <Link
           href={`${base}/careers`}
           className="text-[#10b981] font-bold hover:underline inline-flex items-center gap-2"
         >
           <ArrowLeft size={18} />
-          Back to Careers
+          {t("back_to_careers")}
         </Link>
       </div>
     );

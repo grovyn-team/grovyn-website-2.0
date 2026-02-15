@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import { Phone, ChevronDown, Monitor, Smartphone, LayoutGrid, Users, Briefcase, Mail, X, Cloud, Network, Headphones, GitBranch, MessageCircle, Truck, BookOpen, Shield, Database, Home } from "lucide-react";
+import { Phone, ChevronDown, Monitor, Smartphone, LayoutGrid, Users, Briefcase, Mail, X, Cloud, Network, Headphones, GitBranch, MessageCircle, Truck, BookOpen, Shield, Database, Home, Globe } from "lucide-react";
 import { locales, localeNames, type Locale } from "@/i18n/config";
 
 export default function Navbar() {
@@ -128,7 +128,7 @@ export default function Navbar() {
 
   return (
     <nav className={navClass}>
-      <div className="max-w-7xl mx-auto px-0 sm:px-6 lg:px-0 h-full flex justify-between items-center gap-4 min-w-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 h-full flex justify-between items-center gap-4 min-w-0">
         <Link
           href={`/${locale}#hero`}
           className="flex items-center space-x-1 group shrink-0 mr-4 md:mr-6"
@@ -342,14 +342,19 @@ export default function Navbar() {
         </div>
 
         <div className="hidden lg:flex items-center gap-4 shrink-0">
-          {/* <div className="relative">
+          {/* Locale switcher disabled – re-enable when localization is needed
+          <div className="relative">
             <button
               type="button"
               onClick={() => setLocaleOpen(!localeOpen)}
-              className={`text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full border transition-colors flex items-center gap-1 ${localeButtonClass}`}
+              className={`text-xs font-bold uppercase tracking-wider px-3 py-2 rounded-xl border transition-colors flex items-center gap-2 ${localeButtonClass}`}
+              aria-expanded={localeOpen}
+              aria-haspopup="listbox"
+              aria-label="Switch language"
             >
-              {localeNames[locale as Locale]}
-              <ChevronDown size={12} className={localeOpen ? "rotate-180" : ""} />
+              <Globe size={14} className="shrink-0 opacity-80" />
+              <span>{localeNames[locale as Locale]}</span>
+              <ChevronDown size={12} className={`shrink-0 transition-transform ${localeOpen ? "rotate-180" : ""}`} />
             </button>
             {localeOpen && (
               <>
@@ -358,13 +363,15 @@ export default function Navbar() {
                   onClick={() => setLocaleOpen(false)}
                   aria-hidden
                 />
-                <div className={`absolute top-full right-0 mt-1 py-2 ${localeDropdown} z-[95] min-w-[140px]`}>
+                <div
+                  className={`absolute top-full right-0 mt-2 py-1.5 rounded-xl ${localeDropdown} z-[95] min-w-[160px] shadow-lg`}
+                >
                   {locales.map((loc) => (
                     <button
                       key={loc}
                       type="button"
                       onClick={() => switchLocale(loc)}
-                      className={`block w-full text-left px-4 py-2 text-sm font-medium ${localeItemHover} transition-colors ${locale === loc ? "text-[#10b981]" : ""} ${dropTitle}`}
+                      className={`w-full text-left px-4 py-2.5 text-sm font-medium ${localeItemHover} transition-colors ${locale === loc ? "text-[#10b981] font-bold" : ""} ${dropTitle}`}
                     >
                       {localeNames[loc]}
                     </button>
@@ -372,7 +379,8 @@ export default function Navbar() {
                 </div>
               </>
             )}
-          </div> */}
+          </div>
+          */}
           <Link
             href={`/${locale}#contact`}
             className="flex items-center space-x-2.5 px-6 py-3 rounded-xl border border-[#10b981]/40 text-[#10b981] font-bold text-sm hover:bg-[#10b981] hover:text-black transition-all group"
@@ -535,6 +543,7 @@ export default function Navbar() {
                   ))}
                 </div>
                 <div className="mt-auto flex flex-col gap-4">
+                  {/* Locale switcher disabled – re-enable when localization is needed
                   <div className="flex flex-wrap gap-2">
                     {locales.map((loc) => (
                       <button
@@ -554,6 +563,7 @@ export default function Navbar() {
                       </button>
                     ))}
                   </div>
+                  */}
                   <Link
                     href={`/${locale}#contact`}
                     className="w-full flex items-center justify-center gap-2 bg-[#10b981] text-black py-4 rounded-xl font-bold text-sm"

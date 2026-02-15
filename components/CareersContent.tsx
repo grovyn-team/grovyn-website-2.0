@@ -16,22 +16,29 @@ import {
   Upload,
   Send,
   ExternalLink,
+  Briefcase,
 } from "lucide-react";
-
-type Opening = {
-  slug?: string;
-  title: string;
-  type: string;
-  team: string;
-  location?: string;
-  requirements?: string[];
-};
+import { fetchJobOpenings, type JobOpening } from "@/lib/api";
 
 export default function CareersContent() {
   const locale = useLocale();
   const t = useTranslations("careers");
-  const openings = (t.raw("openings") as Opening[]) ?? [];
+  const [openings, setOpenings] = useState<JobOpening[]>([]);
+  const [openingsLoading, setOpeningsLoading] = useState(true);
   const [openJobSlug, setOpenJobSlug] = useState<string | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchJobOpenings(locale).then((data) => {
+      if (!cancelled) {
+        setOpenings(data);
+        setOpeningsLoading(false);
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [locale]);
   const [isVisible, setIsVisible] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -219,7 +226,7 @@ export default function CareersContent() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-24 lg:py-40 bg-gray-50/50 border-t border-gray-100 px-4 sm:px-6 lg:px-12">
+      <section className="py-16 sm:py-12 lg:py-24 bg-gray-50/50 border-t border-gray-100 px-4 sm:px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 sm:mb-16 lg:mb-20 space-y-3 sm:space-y-4">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111] tracking-tighter">
@@ -230,6 +237,7 @@ export default function CareersContent() {
             </p>
           </div>
 
+          {/* Filter tabs commented out for now—not wired up yet
           <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4 sm:gap-6 mb-8 sm:mb-10 lg:mb-12">
             <div className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-gray-400">
               {t("filter_by")}
@@ -250,9 +258,32 @@ export default function CareersContent() {
               )}
             </div>
           </div>
+          */}
 
           <div className="space-y-2">
-            {openings.map((job) => {
+            {openingsLoading ? (
+                <p className="text-sm text-gray-500 py-8">{t("open_roles_title")}...</p>
+              ) : openings.length === 0 ? (
+                <div className="bg-white border border-gray-100 rounded-[2rem] px-6 sm:px-10 lg:px-14 py-16 sm:py-20 lg:py-24 text-center shadow-sm">
+                  <div className="max-w-lg mx-auto space-y-6 sm:space-y-8">
+                    <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-[#10b981]/10 text-[#10b981]">
+                      <Briefcase className="w-8 h-8 sm:w-10 sm:h-10" strokeWidth={1.5} />
+                    </div>
+                    <div className="space-y-3">
+                      <h3 className="text-2xl sm:text-3xl font-black text-[#111] tracking-tight">
+                        {t("no_open_roles_title")}
+                      </h3>
+                      <p className="text-gray-500 text-sm sm:text-base font-medium leading-relaxed max-w-md mx-auto">
+                        {t("no_open_roles_message")}
+                      </p>
+                    </div>
+                    <p className="text-gray-400 text-xs sm:text-sm font-semibold pt-2 border-t border-gray-100 pt-6">
+                      {t("no_fit")}
+                    </p>
+                  </div>
+                </div>
+              ) : (
+                openings.map((job) => {
               const slug = job.slug ?? job.title.toLowerCase().replace(/\s+/g, "-");
               const isOpen = openJobSlug === slug;
               const requirements = job.requirements ?? [];
@@ -335,7 +366,8 @@ export default function CareersContent() {
                   </div>
                 </div>
               );
-            })}
+            })
+              )}
           </div>
         </div>
       </section>

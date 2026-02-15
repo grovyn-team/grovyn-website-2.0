@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -28,86 +28,38 @@ const VISION_IMG_1 = "https://images.unsplash.com/photo-1552664730-d307ca884978?
 const VISION_IMG_2 = "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=600";
 const HISTORY_IMG = "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1200";
 const HISTORY_DETAIL_IMG = "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600";
-const stats = [
-  { label: "Projects Delivered", value: "25+" },
-  { label: "Team Members", value: "15+" },
-  { label: "Founders", value: "2" },
-  { label: "Designers", value: "3+" },
-];
-
 const team = [
-  { name: "Aman K.A", role: "Chief Executive Officer", img: "/assets/aman-slack.jpeg", linkedin: "https://www.linkedin.com/in/aman-k-a-303561183" },
-  { name: "Gaurav Singh", role: "Chief Technology Officer", img: "https://media.licdn.com/dms/image/v2/D5603AQExg7d-EHaDFQ/profile-displayphoto-scale_200_200/B56ZpZmsT_HAAY-/0/1762439913466?e=1772064000&v=beta&t=HBm55F47ucAYKcaCJh_Dfh2eJsWt32ZOmFHYG1Gy8Gg", linkedin: "https://www.linkedin.com/in/thakurgaurav273" },
-  { name: "Janmejay Singh", role: "Head of Engineering", img: "/assets/jj.png", linkedin: "https://www.linkedin.com/in/sjanmejay1" },
-  { name: "Navya Pandey", role: "Sales & Marketing Lead", img: "https://media.licdn.com/dms/image/v2/D5603AQHjDD7ouJil5Q/profile-displayphoto-scale_400_400/B56ZuwrHG5IgAg-/0/1768195658607?e=1772064000&v=beta&t=ZL-0bMmseT4xLWxV1EIoTfImQsEN5KDob5g1VDsyt6U", linkedin: "https://www.linkedin.com/in/navya-pandey-22techinnovative" },
-];
-
-const processSteps = [
-  {
-    title: "Discovery Call",
-    duration: "20 minutes",
-    activities: [
-      "Understand your requirements and goals",
-      "Discuss technical needs and timeline",
-      "Align on success criteria",
-    ],
-    outcome: "Clear understanding of your needs.",
-  },
-  {
-    title: "Technical Proposal",
-    duration: "24-48 hours",
-    activities: [
-      "Detailed scope and technical approach",
-      "Fixed-price quote with milestones",
-      "Week-by-week timeline",
-    ],
-    outcome: "Exact quote before we start.",
-  },
-  {
-    title: "Contract & Kickoff",
-    duration: "2-3 days",
-    activities: [
-      "Sign contract and first milestone payment",
-      "Repository and communication setup",
-      "Team kickoff and planning",
-    ],
-    outcome: "Development starts immediately.",
-  },
-  {
-    title: "Development & QA",
-    duration: "2-8 weeks",
-    activities: [
-      "2-week sprint cycles with regular demos",
-      "Automated testing and code reviews",
-      "Daily progress updates and feedback loops",
-    ],
-    outcome: "Production-ready system with quality assurance.",
-  },
-  {
-    title: "Deployment & Documentation",
-    duration: "2-3 days",
-    activities: [
-      "Production deployment with monitoring",
-      "Complete technical and API documentation",
-      "Handover and team training",
-    ],
-    outcome: "System live with full ownership transferred.",
-  },
-  {
-    title: "Post-Launch Support",
-    duration: "45 days included",
-    activities: [
-      "Bug fixes and technical support",
-      "Performance monitoring and optimization",
-      "Minor adjustments as needed",
-    ],
-    outcome: "Continued support and peace of mind.",
-  },
+  { name: "Aman K.A", roleKey: "team_role_ceo", img: "/assets/aman-slack.jpeg", linkedin: "https://www.linkedin.com/in/aman-k-a-303561183" },
+  { name: "Gaurav Singh", roleKey: "team_role_cto", img: "https://media.licdn.com/dms/image/v2/D5603AQExg7d-EHaDFQ/profile-displayphoto-scale_200_200/B56ZpZmsT_HAAY-/0/1762439913466?e=1772064000&v=beta&t=HBm55F47ucAYKcaCJh_Dfh2eJsWt32ZOmFHYG1Gy8Gg", linkedin: "https://www.linkedin.com/in/thakurgaurav273" },
+  { name: "Janmejay Singh", roleKey: "team_role_hoe", img: "/assets/jj.png", linkedin: "https://www.linkedin.com/in/sjanmejay1" },
+  { name: "Navya Pandey", roleKey: "team_role_sales", img: "https://media.licdn.com/dms/image/v2/D5603AQHjDD7ouJil5Q/profile-displayphoto-scale_400_400/B56ZuwrHG5IgAg-/0/1768195658607?e=1772064000&v=beta&t=ZL-0bMmseT4xLWxV1EIoTfImQsEN5KDob5g1VDsyt6U", linkedin: "https://www.linkedin.com/in/navya-pandey-22techinnovative" },
 ];
 
 export default function AboutContent() {
   const locale = useLocale();
+  const t = useTranslations("about");
   const [isVisible, setIsVisible] = useState(false);
+
+  const stats = useMemo(
+    () => [
+      { label: t("stat_projects_delivered"), value: "25+" },
+      { label: t("stat_team_members"), value: "15+" },
+      { label: t("stat_founders"), value: "2" },
+      { label: t("stat_designers"), value: "3+" },
+    ],
+    [t]
+  );
+
+  const processSteps = useMemo(
+    () =>
+      [1, 2, 3, 4, 5, 6].map((i) => ({
+        title: t(`process_${i}_title`),
+        duration: t(`process_${i}_duration`),
+        activities: [t(`process_${i}_activity_1`), t(`process_${i}_activity_2`), t(`process_${i}_activity_3`)],
+        outcome: t(`process_${i}_outcome`),
+      })),
+    [t]
+  );
 
   useEffect(() => {
     setIsVisible(true);
@@ -121,28 +73,27 @@ export default function AboutContent() {
           <div className={`lg:w-1/2 space-y-5 sm:space-y-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-6"}`}>
             <nav className="flex items-center gap-2 text-[11px] sm:text-xs font-semibold uppercase tracking-widest text-gray-400">
               <Link href={`/${locale}`} className="hover:text-[#10b981] transition-colors">
-                Home
+                {t("page_nav_home")}
               </Link>
               <ChevronRight size={14} className="text-gray-300" />
-              <span className="text-[#10b981]">About Us</span>
+              <span className="text-[#10b981]">{t("page_nav_about_us")}</span>
             </nav>
 
             <h1 className="text-3xl sm:text-4xl md:text-[3.25rem] lg:text-[3.75rem] font-black tracking-tight leading-[1.05] text-[#111]">
-              Building reliable digital systems
+              {t("page_hero_title")}
               <br />
-              <span className="text-[#10b981]">together.</span>
+              <span className="text-[#10b981]">{t("page_hero_highlight")}</span>
             </h1>
 
             <p className="text-gray-600 text-base sm:text-lg font-medium leading-relaxed max-w-xl border-l-4 border-[#10b981]/60 pl-5 sm:pl-6">
-              Grovyn exists to help teams design and maintain software that remains clear, stable, and dependable as businesses grow.
-              We focus on thoughtful engineering, practical decision-making, and long-term technical confidence.
+              {t("page_hero_subtitle")}
             </p>
 
             <Link
               href={`/${locale}#contact`}
               className="inline-flex items-center gap-3 bg-[#111] text-white px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-sm tracking-tight hover:bg-[#10b981] transition-colors duration-300 shadow-lg shadow-black/5 group"
             >
-              <span>Learn our approach</span>
+              <span>{t("page_cta")}</span>
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -167,7 +118,7 @@ export default function AboutContent() {
                 <div>
                   <div className="text-2xl font-black text-[#111] leading-none">25+</div>
                   <div className="text-[10px] font-bold uppercase tracking-wider text-gray-500 mt-1">
-                    Projects shipped
+                    {t("projects_shipped")}
                   </div>
                 </div>
               </div>
@@ -179,8 +130,8 @@ export default function AboutContent() {
       <section className="py-14 sm:py-20 px-4 sm:px-6 lg:px-12 bg-[#fafafa] border-y border-gray-100/80">
         <div className="max-w-5xl mx-auto">
           <p className="text-center text-gray-600 text-base sm:text-lg md:text-xl font-medium leading-relaxed max-w-2xl mx-auto mb-12 sm:mb-16">
-            We are committed to the <span className="text-[#10b981] font-semibold">SaaS industry</span> with
-            innovative, sustainable solutions-combining <span className="text-[#111] font-semibold">state-of-the-art technology</span> to bring visions to life.
+            {t("commitment_para_1")} <span className="text-[#10b981] font-semibold">{t("commitment_para_2")}</span> {t("commitment_para_3")}
+            <span className="text-[#111] font-semibold"> {t("commitment_para_4")}</span> {t("commitment_para_5")}
           </p>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {stats.map((stat, i) => (
@@ -193,7 +144,7 @@ export default function AboutContent() {
         </div>
       </section>
 
-      {/* Founder's Note — matches reference: pinstripe bg, avatar+pill, title with underline, quote, blockquote with large decorative quotes */}
+      {/* Founder's Note - matches reference: pinstripe bg, avatar+pill, title with underline, quote, blockquote with large decorative quotes */}
       <section
         className="py-16 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-12"
         style={{
@@ -220,7 +171,7 @@ export default function AboutContent() {
               >
                 <Image
                   src="/aman.png"
-                  alt="Aman K A — Founder & CEO"
+                  alt="Aman K A - Founder & CEO"
                   fill
                   className="object-cover object-top"
                   sizes="64px"
@@ -231,30 +182,26 @@ export default function AboutContent() {
                 className="px-3 py-1 text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-white rounded-full"
                 style={{ backgroundColor: "#346800" }}
               >
-                Founder & CEO
+                {t("founder_badge")}
               </span>
             </div>
 
-            {/* Centered title "Founder's Note" with thin dark green underline under whole title */}
             <div className="text-center mb-8">
               <h2 className="font-founder-heading text-2xl sm:text-3xl font-bold tracking-tight" style={{ color: "#121212" }}>
-                Founder&apos;s Note
+                {t("founder_note_title")}
               </h2>
               <div className="mt-2 mx-auto w-16 h-0.5 rounded-full" style={{ backgroundColor: "#346800" }} aria-hidden />
             </div>
 
-            {/* Primary quote — centered, bold */}
             <div className="text-center mb-2">
               <p className="text-base sm:text-lg font-bold" style={{ color: "#121212" }}>
-                Trust is the most valuable thing in the world.
+                {t("founder_quote_1")}
               </p>
             </div>
-            {/* Elaboration — centered, smaller, italic, light grey */}
             <p className="text-center text-sm sm:text-base italic mb-8" style={{ color: "#9ca3af" }}>
-              It must be earned and carefully upheld.
+              {t("founder_quote_2")}
             </p>
 
-            {/* Block quote: large decorative opening quotes left + paragraph (left-aligned, generous width) */}
             <div className="relative pl-10 sm:pl-12">
               <span
                 className="absolute left-4 top-0 font-serif text-4xl sm:text-5xl font-bold leading-none select-none"
@@ -264,13 +211,12 @@ export default function AboutContent() {
                 &ldquo;
               </span>
               <p className="text-base sm:text-lg leading-[1.7] text-left" style={{ color: "#374151" }}>
-                At Grovyn, we believe trust is built through integrity, consistency, and doing the right thing even when it is harder. It is earned over time and forms the foundation of everything we build and every partnership we commit to.
+                {t("founder_blockquote")}
               </p>
             </div>
 
-            {/* Attribution — bottom right, smaller, light grey */}
             <p className="mt-8 text-right text-xs sm:text-sm font-medium" style={{ color: "#9ca3af" }}>
-              - CEO, GROVYN
+              - {t("founder_attribution")}
             </p>
           </motion.article>
         </div>
@@ -389,38 +335,25 @@ export default function AboutContent() {
                 <div className="w-11 h-11 rounded-xl bg-[#10b981]/20 flex items-center justify-center mb-4">
                   <History className="text-[#10b981] w-6 h-6" />
                 </div>
-                <div className="text-2xl sm:text-3xl font-black tracking-tight">2025</div>
-                <p className="text-[10px] font-bold uppercase tracking-wider text-[#10b981] mt-1">Foundation year</p>
+                <div className="text-2xl sm:text-3xl font-black tracking-tight">{t("foundation_year")}</div>
+                <p className="text-[10px] font-bold uppercase tracking-wider text-[#10b981] mt-1">{t("foundation_label")}</p>
               </div>
             </div>
           </div>
 
           <div className="lg:w-1/2 space-y-8 order-1 lg:order-2">
             <div>
-              <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#10b981] mb-3">Our story</p>
+              <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#10b981] mb-3">{t("story_badge")}</p>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-[#111]">
-                How we <span className="text-[#10b981]">grew.</span>
+                {t("story_title")} <span className="text-[#10b981]">{t("story_highlight")}</span>
               </h2>
             </div>
             <div className="space-y-5 text-gray-600 text-[15px] sm:text-base font-medium leading-relaxed">
-              <p>
-                Grovyn began with a simple intention: to make engineering smoother, more reliable, and easier to scale for growing teams.
-              </p>
-              <p>
-                We saw founders and businesses spending too much time managing complexity instead of building what truly mattered.
-                Engineering felt heavy, slow, and fragmented. Decisions made early often became obstacles later.
-              </p>
-              <p className="text-[#111] font-semibold">
-                We set out to change that.
-              </p>
-              <p>
-                Today, we help teams simplify their engineering journey through clean software, well-structured systems, and practical AI automation.
-                From core product development to LLM-powered workflows, our goal remains the same: reduce friction, improve clarity, and build
-                technology that works well today and continues to work as teams and products grow.
-              </p>
-              <p className="text-[#111] font-semibold">
-                Grovyn is built on the belief that good technology should support progress, not slow it down.
-              </p>
+              <p>{t("story_para_1")}</p>
+              <p>{t("story_para_2")}</p>
+              <p className="text-[#111] font-semibold">{t("story_para_3")}</p>
+              <p>{t("story_para_4")}</p>
+              <p className="text-[#111] font-semibold">{t("story_para_5")}</p>
             </div>
           </div>
         </div>
@@ -522,7 +455,7 @@ export default function AboutContent() {
                   href={`/${locale}#contact`}
                   className="inline-flex items-center gap-2 bg-white text-[#10b981] px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold text-sm hover:bg-gray-100 transition-colors group"
                 >
-                  <span>Start your project</span>
+                  <span>{t("start_project_cta")}</span>
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -531,18 +464,18 @@ export default function AboutContent() {
         </div>
       </section>
 
-      {/* Execution Framework — 6-step premium process */}
+      {/* Execution Framework - 6-step premium process */}
       <section className="py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 bg-[#fafafa]">
         <div className="max-w-6xl mx-auto">
           <header className="text-center max-w-2xl mx-auto mb-14 sm:mb-20">
             <p className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.3em] text-[#10b981] mb-3">
-              Delivery process
+              {t("delivery_badge")}
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-black tracking-tight text-[#111] mb-4">
-              Execution <span className="text-[#10b981]">Framework</span>
+              {t("delivery_title")} <span className="text-[#10b981]">{t("delivery_highlight")}</span>
             </h2>
             <p className="text-gray-600 text-base sm:text-lg font-medium leading-relaxed">
-              A documented, predictable process. Six steps from first call to ongoing support.
+              {t("delivery_sub")}
             </p>
           </header>
 
@@ -575,7 +508,7 @@ export default function AboutContent() {
                 </ul>
                 <div className="pt-4 border-t border-gray-100">
                   <p className="text-sm font-medium leading-snug">
-                    <span className="text-[#10b981] font-semibold font-mono text-[11px] uppercase tracking-wider">Outcome:</span>{" "}
+                    <span className="text-[#10b981] font-semibold font-mono text-[11px] uppercase tracking-wider">{t("outcome_label")}</span>{" "}
                     <span className="text-gray-700">{step.outcome}</span>
                   </p>
                 </div>

@@ -17,7 +17,7 @@ const METRICS = [
   {
     value: "Multi-Cloud",
     label: "& Hybrid Expertise",
-    meaning: "AWS, Azure, GCP and on-prem—right fit for your stack",
+    meaning: "AWS, Azure, GCP and on-prem-right fit for your stack",
   },
   {
     value: "Security First",

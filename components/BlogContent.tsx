@@ -128,7 +128,7 @@ export default function BlogContent() {
             </span>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-[4.5rem] font-black text-[#111] tracking-tighter italic px-4">
-            Coming Soon...
+            {t("coming_soon")}
           </h1>
 
           {/* <h1 className="text-3xl sm:text-4xl md:text-[4.5rem] font-black text-[#111] tracking-tighter italic px-4">

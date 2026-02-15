@@ -135,7 +135,7 @@ export default function WhatsAppFloat() {
           rel="noopener noreferrer"
           title={t("whatsapp_us")}
           className="group relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-[#25D366]/40 transition-all hover:scale-110 hover:shadow-xl hover:shadow-[#25D366]/50 focus:outline-none focus:ring-4 focus:ring-[#25D366]/50"
-          aria-label="Chat on WhatsApp"
+          aria-label={t("chat_whatsapp_aria")}
         >
           <span className="pointer-events-none absolute right-full mr-2 whitespace-nowrap rounded bg-gray-900 px-2.5 py-1.5 text-xs font-medium text-white opacity-0 shadow-md transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100">
             {t("whatsapp_us")}
