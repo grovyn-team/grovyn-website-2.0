@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 export default function Footer({ locale }: { locale: string }) {
   const t = useTranslations("footer");
   const base = `/${locale}`;
-  
+
   return (
     <footer className="bg-[#111] text-gray-500 py-20 px-4">
       <div className="max-w-7xl mx-auto">
@@ -19,8 +19,7 @@ export default function Footer({ locale }: { locale: string }) {
                 width={120}
                 height={40}
                 sizes="120px"
-                className="object-contain"
-                style={{ width: "auto", height: "2rem" }}
+                className="object-contain h-8 w-auto"
               />
             </Link>
             <p className="text-xs leading-relaxed max-w-xs">
@@ -58,23 +57,28 @@ export default function Footer({ locale }: { locale: string }) {
               <h5 className="text-white text-sm font-bold mb-6">{t("services_heading")}</h5>
               <ul className="text-xs space-y-4">
                 <li>
-                  <Link href={`${base}#web-dev`} className="hover:text-emerald-500 transition-colors">
+                  <Link href={`${base}/services/web`} className="hover:text-emerald-500 transition-colors">
                     {t("web_dev")}
                   </Link>
                 </li>
                 <li>
-                  <Link href={`${base}#mobile-apps`} className="hover:text-emerald-500 transition-colors">
+                  <Link href={`${base}/services/mobile`} className="hover:text-emerald-500 transition-colors">
                     {t("mobile_eng")}
                   </Link>
                 </li>
                 <li>
-                  <Link href={`${base}/about`} className="hover:text-emerald-500 transition-colors">
+                  <Link href={`${base}/portfolio`} className="hover:text-emerald-500 transition-colors">
                     {t("ui_ux")}
                   </Link>
                 </li>
                 <li>
-                  <Link href={`${base}#backend-cloud`} className="hover:text-emerald-500 transition-colors">
+                  <Link href={`${base}/infrastructure/cloud`} className="hover:text-emerald-500 transition-colors">
                     {t("cloud_arch")}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`${base}/services/custom-software`} className="hover:text-emerald-500 transition-colors">
+                    {t("custom_software")}
                   </Link>
                 </li>
               </ul>
@@ -102,7 +106,7 @@ export default function Footer({ locale }: { locale: string }) {
               <ul className="text-xs space-y-4">
                 <li>
                   <Link href={`${base}/blog`} className="hover:text-emerald-500 transition-colors">
-                    Blog
+                    {t("blog")}
                   </Link>
                 </li>
                 <li>

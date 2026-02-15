@@ -104,19 +104,19 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="contact" className="py-8 sm:py-12 lg:py-24 px-4 sm:px-6 lg:px-12 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-8 sm:gap-12 lg:gap-24">
+    <section id="contact" className="py-6 sm:py-10 lg:py-16 px-4 sm:px-6 lg:px-12 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-6 sm:gap-8 lg:gap-12">
         <div className="w-full lg:w-[60%] order-2 lg:order-1 lg:sticky lg:top-24">
           <form
             onSubmit={handleSubmit}
-            className="bg-white border border-gray-100 rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[2.5rem] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.05)] p-6 sm:p-8 lg:p-12 relative overflow-hidden"
+            className="bg-white border border-gray-100 rounded-xl sm:rounded-2xl shadow-[0_24px_48px_-12px_rgba(0,0,0,0.06)] p-5 sm:p-6 lg:p-8 relative overflow-hidden"
           >
-            <div className="flex items-center justify-between mb-8 sm:mb-12 lg:mb-16 relative">
-              <div className="absolute top-4 sm:top-5 left-0 w-full h-[1px] bg-gray-100 -z-0" />
+            <div className="flex items-center justify-between mb-5 sm:mb-6 lg:mb-8 relative">
+              <div className="absolute top-3.5 sm:top-4 left-0 w-full h-[1px] bg-gray-100 -z-0" />
               {steps.map((s) => (
                 <div key={s.id} className="relative z-10 flex flex-col items-center group flex-1">
                   <div
-                    className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold transition-all duration-300 ${
+                    className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 ${
                       step === s.id
                         ? "bg-[#10b981] text-white shadow-[0_0_15px_rgba(16,185,129,0.4)] scale-110"
                         : step > s.id
@@ -124,10 +124,10 @@ export default function ContactForm() {
                           : "bg-white border border-gray-100 text-gray-300"
                     }`}
                   >
-                    {step > s.id ? <Check size={12} className="sm:w-4 sm:h-4" /> : s.id}
+                    {step > s.id ? <Check size={10} className="sm:w-3 sm:h-3" /> : s.id}
                   </div>
                   <span
-                    className={`mt-2 sm:mt-3 text-[8px] sm:text-[10px] font-black uppercase tracking-widest transition-colors text-center px-1 ${
+                    className={`mt-1.5 text-[8px] font-black uppercase tracking-widest transition-colors text-center px-1 ${
                       step >= s.id ? "text-gray-800" : "text-gray-300"
                     }`}
                   >
@@ -138,24 +138,24 @@ export default function ContactForm() {
             </div>
 
             {step === 1 && (
-              <div className="space-y-6 sm:space-y-8 lg:space-y-10 animate-in slide-in-from-right-4 duration-500">
-                <div className="flex items-start space-x-3 sm:space-x-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#10b981] rounded-xl sm:rounded-2xl flex items-center justify-center text-white shrink-0">
-                    <Info size={20} className="sm:w-6 sm:h-6" />
+              <div className="space-y-4 sm:space-y-5 animate-in slide-in-from-right-4 duration-500">
+                <div className="flex items-start space-x-3">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 bg-[#10b981] rounded-lg sm:rounded-xl flex items-center justify-center text-white shrink-0">
+                    <Info size={18} className="sm:w-5 sm:h-5" />
                   </div>
                   <div>
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-black text-[#111]">
+                    <h3 className="text-base sm:text-lg font-black text-[#111]">
                       {t("your_info_title")}
                     </h3>
-                    <p className="text-gray-400 text-xs sm:text-sm font-medium">
+                    <p className="text-gray-400 text-xs font-medium mt-0.5">
                       {t("your_info_sub")}
                     </p>
                   </div>
                 </div>
-                <div className="space-y-6 sm:space-y-8">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
-                    <div className="space-y-2">
-                      <label className="text-xs font-black uppercase tracking-widest text-gray-400">
+                <div className="space-y-4 sm:space-y-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                    <div className="space-y-1.5">
+                      <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">
                         {t("full_name")}
                       </label>
                       <input
@@ -165,11 +165,11 @@ export default function ContactForm() {
                         onChange={(e) =>
                           setFormData({ ...formData, fullName: e.target.value })
                         }
-                        className="w-full bg-[#fcfcfc] border border-gray-100 rounded-xl px-5 py-4 text-sm font-bold focus:outline-none focus:border-[#10b981] transition-all"
+                        className="w-full bg-[#fcfcfc] border border-gray-100 rounded-lg px-3.5 py-2.5 text-sm font-bold focus:outline-none focus:border-[#10b981] transition-all"
                       />
                     </div>
-                    <div className="space-y-2">
-                      <label className="text-xs font-black uppercase tracking-widest text-gray-400">
+                    <div className="space-y-1.5">
+                      <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">
                         {t("email")}
                       </label>
                       <input
@@ -179,12 +179,12 @@ export default function ContactForm() {
                         onChange={(e) =>
                           setFormData({ ...formData, email: e.target.value })
                         }
-                        className="w-full bg-[#fcfcfc] border border-gray-100 rounded-xl px-5 py-4 text-sm font-bold focus:outline-none focus:border-[#10b981] transition-all"
+                        className="w-full bg-[#fcfcfc] border border-gray-100 rounded-lg px-3.5 py-2.5 text-sm font-bold focus:outline-none focus:border-[#10b981] transition-all"
                       />
                     </div>
                   </div>
-                  <div className="space-y-2">
-                    <label className="text-xs font-black uppercase tracking-widest text-gray-400">
+                  <div className="space-y-1.5">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">
                       {t("company")}
                     </label>
                     <input
@@ -194,7 +194,7 @@ export default function ContactForm() {
                       onChange={(e) =>
                         setFormData({ ...formData, company: e.target.value })
                       }
-                      className="w-full bg-[#fcfcfc] border border-gray-100 rounded-xl px-5 py-4 text-sm font-bold focus:outline-none focus:border-[#10b981] transition-all"
+                      className="w-full bg-[#fcfcfc] border border-gray-100 rounded-lg px-3.5 py-2.5 text-sm font-bold focus:outline-none focus:border-[#10b981] transition-all"
                     />
                   </div>
                 </div>
@@ -202,31 +202,31 @@ export default function ContactForm() {
             )}
 
             {step === 2 && (
-              <div className="space-y-6 sm:space-y-8 lg:space-y-10 animate-in slide-in-from-right-4 duration-500">
-                <div className="flex items-start space-x-3 sm:space-x-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#10b981] rounded-xl sm:rounded-2xl flex items-center justify-center text-white shrink-0">
-                    <Target size={20} className="sm:w-6 sm:h-6" />
+              <div className="space-y-4 sm:space-y-5 animate-in slide-in-from-right-4 duration-500">
+                <div className="flex items-start space-x-3">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 bg-[#10b981] rounded-lg sm:rounded-xl flex items-center justify-center text-white shrink-0">
+                    <Target size={18} className="sm:w-5 sm:h-5" />
                   </div>
                   <div>
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-black text-[#111]">
+                    <h3 className="text-base sm:text-lg font-black text-[#111]">
                       {t("project_goal_title")}
                     </h3>
-                    <p className="text-gray-400 text-xs sm:text-sm font-medium">
+                    <p className="text-gray-400 text-xs font-medium mt-0.5">
                       {t("project_goal_sub")}
                     </p>
                   </div>
                 </div>
-                <div className="space-y-6 sm:space-y-8">
-                  <div className="space-y-3 sm:space-y-4">
-                    <label className="text-xs font-black uppercase tracking-widest text-gray-400">
+                <div className="space-y-4 sm:space-y-5">
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">
                       {t("i_want")}
                     </label>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                       {[
-                        { label: t("build_mvp"), icon: <Rocket size={16} /> },
-                        { label: t("scale_platform"), icon: <Zap size={16} /> },
-                        { label: t("integration"), icon: <Code size={16} /> },
-                        { label: t("modernize"), icon: <Clock size={16} /> },
+                        { label: t("build_mvp"), icon: <Rocket size={14} /> },
+                        { label: t("scale_platform"), icon: <Zap size={14} /> },
+                        { label: t("integration"), icon: <Code size={14} /> },
+                        { label: t("modernize"), icon: <Clock size={14} /> },
                       ].map((opt) => (
                         <button
                           key={opt.label}
@@ -234,7 +234,7 @@ export default function ContactForm() {
                           onClick={() =>
                             setFormData({ ...formData, projectGoal: opt.label })
                           }
-                          className={`flex items-center space-x-2 sm:space-x-3 px-4 sm:px-5 py-3 sm:py-4 rounded-xl border font-bold text-xs sm:text-sm transition-all text-left w-full sm:w-auto ${
+                          className={`flex items-center space-x-2 px-3 sm:px-4 py-2.5 rounded-lg border font-bold text-xs transition-all text-left w-full sm:w-auto ${
                             formData.projectGoal === opt.label
                               ? "bg-[#10b981]/5 border-[#10b981] text-[#111]"
                               : "bg-white border-gray-100 text-gray-400 hover:border-gray-200"
@@ -254,24 +254,24 @@ export default function ContactForm() {
                       ))}
                     </div>
                   </div>
-                  <div className="space-y-3 sm:space-y-4">
-                    <label className="text-xs font-black uppercase tracking-widest text-gray-400">
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">
                       {t("target_platforms")}
                     </label>
-                    <div className="flex flex-wrap gap-3 sm:gap-4">
+                    <div className="flex flex-wrap gap-2 sm:gap-3">
                       {[
-                        { id: "web", label: t("web_app"), icon: <Globe size={16} /> },
+                        { id: "web", label: t("web_app"), icon: <Globe size={14} /> },
                         {
                           id: "mobile",
                           label: t("mobile_app"),
-                          icon: <Smartphone size={16} />,
+                          icon: <Smartphone size={14} />,
                         },
                       ].map((p) => (
                         <button
                           key={p.id}
                           type="button"
                           onClick={() => handlePlatformToggle(p.id)}
-                          className={`flex items-center space-x-2 sm:space-x-3 px-5 sm:px-6 py-3 sm:py-4 rounded-xl border font-bold text-xs sm:text-sm transition-all w-full sm:w-auto ${
+                          className={`flex items-center space-x-2 px-4 py-2.5 rounded-lg border font-bold text-xs transition-all w-full sm:w-auto ${
                             formData.platform.includes(p.id)
                               ? "bg-[#10b981]/5 border-[#10b981] text-[#111]"
                               : "bg-white border-gray-100 text-gray-400 hover:border-gray-200"
@@ -296,38 +296,38 @@ export default function ContactForm() {
             )}
 
             {step === 3 && (
-              <div className="space-y-6 sm:space-y-8 lg:space-y-10 animate-in slide-in-from-right-4 duration-500">
-                <div className="flex items-start space-x-3 sm:space-x-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#10b981] rounded-xl sm:rounded-2xl flex items-center justify-center text-white shrink-0">
-                    <Rocket size={20} className="sm:w-6 sm:h-6" />
+              <div className="space-y-4 sm:space-y-5 animate-in slide-in-from-right-4 duration-500">
+                <div className="flex items-start space-x-3">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 bg-[#10b981] rounded-lg sm:rounded-xl flex items-center justify-center text-white shrink-0">
+                    <Rocket size={18} className="sm:w-5 sm:h-5" />
                   </div>
                   <div>
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-black text-[#111]">
+                    <h3 className="text-base sm:text-lg font-black text-[#111]">
                       {t("details_title")}
                     </h3>
-                    <p className="text-gray-400 text-xs sm:text-sm font-medium">
+                    <p className="text-gray-400 text-xs font-medium mt-0.5">
                       {t("details_sub")}
                     </p>
                   </div>
                 </div>
-                <div className="space-y-6 sm:space-y-8">
-                  <div className="space-y-2">
-                    <label className="text-xs font-black uppercase tracking-widest text-gray-400">
+                <div className="space-y-4 sm:space-y-5">
+                  <div className="space-y-1.5">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">
                       {t("brief_desc")}
                     </label>
                     <textarea
-                      rows={4}
+                      rows={3}
                       value={formData.details}
                       onChange={(e) =>
                         setFormData({ ...formData, details: e.target.value })
                       }
                       placeholder={t("brief_placeholder")}
-                      className="w-full bg-[#fcfcfc] border border-gray-100 rounded-xl px-4 sm:px-5 py-3 sm:py-4 text-sm font-bold focus:outline-none focus:border-[#10b981] transition-all resize-none"
+                      className="w-full bg-[#fcfcfc] border border-gray-100 rounded-lg px-3.5 py-2.5 text-sm font-bold focus:outline-none focus:border-[#10b981] transition-all resize-none"
                     />
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
-                    <div className="space-y-4">
-                      <label className="text-xs font-black uppercase tracking-widest text-gray-400">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                    <div className="space-y-1.5">
+                      <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">
                         {t("budget")}
                       </label>
                       <select
@@ -335,7 +335,7 @@ export default function ContactForm() {
                         onChange={(e) =>
                           setFormData({ ...formData, budget: e.target.value })
                         }
-                        className="w-full bg-[#fcfcfc] border border-gray-100 rounded-xl px-5 py-4 text-sm font-bold focus:outline-none focus:border-[#10b981] transition-all appearance-none cursor-pointer"
+                        className="w-full bg-[#fcfcfc] border border-gray-100 rounded-lg px-3.5 py-2.5 text-sm font-bold focus:outline-none focus:border-[#10b981] transition-all appearance-none cursor-pointer"
                       >
                         <option value="">{t("select_range")}</option>
                         <option value="10-25k">$10k - $25k</option>
@@ -344,8 +344,8 @@ export default function ContactForm() {
                         <option value="100k+">$100k+</option>
                       </select>
                     </div>
-                    <div className="space-y-4">
-                      <label className="text-xs font-black uppercase tracking-widest text-gray-400">
+                    <div className="space-y-1.5">
+                      <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">
                         {t("timeline")}
                       </label>
                       <select
@@ -353,7 +353,7 @@ export default function ContactForm() {
                         onChange={(e) =>
                           setFormData({ ...formData, timeline: e.target.value })
                         }
-                        className="w-full bg-[#fcfcfc] border border-gray-100 rounded-xl px-5 py-4 text-sm font-bold focus:outline-none focus:border-[#10b981] transition-all appearance-none cursor-pointer"
+                        className="w-full bg-[#fcfcfc] border border-gray-100 rounded-lg px-3.5 py-2.5 text-sm font-bold focus:outline-none focus:border-[#10b981] transition-all appearance-none cursor-pointer"
                       >
                         <option value="">{t("select_timeline")}</option>
                         <option value="asap">ASAP</option>
@@ -372,12 +372,12 @@ export default function ContactForm() {
                 {submitError}
               </p>
             )}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 sm:gap-0 mt-8 sm:mt-12 lg:mt-16 pt-6 sm:pt-8 border-t border-gray-50">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-0 mt-5 sm:mt-6 lg:mt-8 pt-4 sm:pt-5 border-t border-gray-50">
               <button
                 type="button"
                 onClick={() => setStep(Math.max(1, step - 1))}
                 disabled={step === 1 || isSubmitting}
-                className={`w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl border border-gray-100 text-xs sm:text-sm font-bold transition-all ${
+                className={`w-full sm:w-auto px-5 sm:px-6 py-2.5 rounded-lg border border-gray-100 text-xs font-bold transition-all ${
                   step === 1 ? "opacity-0 pointer-events-none" : "hover:bg-gray-50"
                 } ${isSubmitting ? "opacity-60 pointer-events-none" : ""}`}
               >
@@ -388,16 +388,16 @@ export default function ContactForm() {
                   type="button"
                   onClick={() => setStep(step + 1)}
                   disabled={isSubmitting}
-                  className="w-full sm:w-auto bg-[#10b981] text-white px-8 sm:px-10 py-3 sm:py-3.5 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center space-x-2 hover:bg-[#0d9488] transition-all transform hover:-translate-y-1 shadow-lg shadow-[#10b981]/20 disabled:opacity-60 disabled:pointer-events-none"
+                  className="w-full sm:w-auto bg-[#10b981] text-white px-6 sm:px-8 py-2.5 rounded-lg font-bold text-xs flex items-center justify-center space-x-2 hover:bg-[#0d9488] transition-all shadow-md shadow-[#10b981]/20 disabled:opacity-60 disabled:pointer-events-none"
                 >
                   <span>{t("continue")}</span>
-                  <ArrowRight size={14} className="sm:w-4 sm:h-4" />
+                  <ArrowRight size={14} className="w-4 h-4" />
                 </button>
               ) : (
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full sm:w-auto bg-[#10b981] text-white px-10 sm:px-12 py-3 sm:py-3.5 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center space-x-2 hover:bg-[#0d9488] transition-all transform hover:-translate-y-1 shadow-xl shadow-[#10b981]/30 disabled:opacity-60 disabled:pointer-events-none"
+                  className="w-full sm:w-auto bg-[#10b981] text-white px-8 sm:px-10 py-2.5 rounded-lg font-bold text-xs flex items-center justify-center space-x-2 hover:bg-[#0d9488] transition-all shadow-lg shadow-[#10b981]/25 disabled:opacity-60 disabled:pointer-events-none"
                 >
                   <span>{isSubmitting ? t("sending") : t("send_request")}</span>
                   <Check size={14} strokeWidth={3} className="sm:w-4 sm:h-4" />
@@ -407,37 +407,37 @@ export default function ContactForm() {
           </form>
         </div>
 
-        <div className="w-full lg:w-[40%] space-y-8 sm:space-y-10 lg:space-y-12 order-1 lg:order-2">
-          <div className="space-y-4 sm:space-y-6">
-            <div className="inline-flex items-center px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-[#10b981]/10 text-[#10b981] text-[9px] sm:text-[10px] font-black uppercase tracking-widest">
+        <div className="w-full lg:w-[40%] space-y-5 sm:space-y-6 lg:space-y-8 order-1 lg:order-2">
+          <div className="space-y-3 sm:space-y-4">
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#10b981]/10 text-[#10b981] text-[9px] font-black uppercase tracking-widest">
               {t("badge")}
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[4.5rem] font-black text-[#111] leading-[0.95] tracking-tighter">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#111] leading-tight tracking-tighter">
               {t("title_line1")}
               <br />
               <span className="text-[#10b981]">{t("title_highlight")}</span>
               <br />
               {t("title_line2")}
             </h2>
-            <p className="text-gray-500 text-base sm:text-lg lg:text-xl font-medium leading-relaxed max-w-md">
+            <p className="text-gray-500 text-sm sm:text-base font-medium leading-relaxed max-w-md">
               {t("subtitle")}
             </p>
           </div>
-          <div className="space-y-6 sm:space-y-8">
+          <div className="space-y-4 sm:space-y-5">
             {[
               { title: t("confidential"), desc: t("confidential_desc") },
               { title: t("nda"), desc: t("nda_desc") },
               { title: t("no_sales"), desc: t("no_sales_desc") },
             ].map((item, idx) => (
-              <div key={idx} className="flex items-start space-x-4 sm:space-x-5 group">
-                <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#10b981]/10 flex items-center justify-center shrink-0 mt-1">
-                  <div className="w-1.5 h-1.5 bg-[#10b981] rounded-full" />
+              <div key={idx} className="flex items-start space-x-3 group">
+                <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-[#10b981]/10 flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-1 h-1 bg-[#10b981] rounded-full" />
                 </div>
-                <div className="space-y-1">
-                  <h4 className="text-lg sm:text-xl font-bold text-[#111] tracking-tight group-hover:text-[#10b981] transition-colors">
+                <div className="space-y-0.5 min-w-0">
+                  <h4 className="text-base sm:text-lg font-bold text-[#111] tracking-tight group-hover:text-[#10b981] transition-colors">
                     {item.title}
                   </h4>
-                  <p className="text-gray-400 text-xs sm:text-sm font-medium">{item.desc}</p>
+                  <p className="text-gray-400 text-xs font-medium">{item.desc}</p>
                 </div>
               </div>
             ))}

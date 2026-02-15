@@ -79,12 +79,10 @@ export default function WebServiceContent() {
                 <span className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-400">Engineering Protocol 2.5</span>
               </div>
               <h1 className="text-3xl xl:text-[3.5rem] font-black tracking-[-0.06em] leading-[0.85] text-white">
-                Web <br />
-                <span className="text-[#10b981]">Engineering</span> <br />
-                Manifesto.
+                Serious <span className="text-[#10b981]">Web Engineering</span> for Serious Products.
               </h1>
               <p className="text-gray-400 text-sm sm:text-base lg:text-lg font-medium max-w-xl leading-relaxed">
-                Moving beyond &quot;development&quot; into high-fidelity system architecture. We build web assets that are fast by default and scalable by design.
+                We help teams move beyond fragile builds and into resilient web architecture - delivering scalable frontends, robust backend systems, and infrastructure that evolves with your business.
               </p>
             </div>
 
@@ -245,7 +243,7 @@ export default function WebServiceContent() {
               </div>
 
               <div className="relative z-10 flex justify-between items-start">
-                <div className="space-y-3 md:space-y-8">
+                <div className="space-y-3 md:space-y-4">
                   <div className="flex items-center space-x-2 md:space-x-4">
                     <div className="w-8 h-8 md:w-16 md:h-16 rounded-lg md:rounded-[1.8rem] bg-[#10b981] flex items-center justify-center text-black shadow-[0_0_30px_rgba(16,185,129,0.4)]">
                       <Zap size={16} strokeWidth={2.5} className="md:w-8 md:h-8" />
@@ -256,9 +254,12 @@ export default function WebServiceContent() {
                     </div>
                   </div>
                   <div className="space-y-1.5 md:space-y-3">
-                    <h3 className="text-base md:text-2xl lg:text-4xl font-black tracking-tight leading-none text-white">Sub-Second <br />Execution.</h3>
+                    <h3 className="text-base md:text-2xl lg:text-4xl font-black tracking-tight leading-none text-white">Optimized <br />Execution.</h3>
                     <p className="text-gray-500 text-[10px] md:text-sm font-medium max-w-sm leading-relaxed line-clamp-2 md:line-clamp-none">
-                      We eliminate bloat at the compiler level. Every byte is optimized for sub-100ms response times globally.
+                      Sub-second benchmarks. Overhead reduced, performance consistent.
+                    </p>
+                    <p className="text-gray-600 text-[8px] md:text-[9px] font-medium max-w-sm italic">
+                      Varies by use case.
                     </p>
                   </div>
                 </div>
@@ -315,13 +316,13 @@ export default function WebServiceContent() {
               <div className="relative z-10 text-center">
                 <div className="text-3xl md:text-7xl font-black tracking-tighter text-black leading-none mb-1.5 md:mb-4">99.9%</div>
                 <div className="px-2.5 md:px-6 py-1 md:py-2 bg-black text-[#10b981] rounded-full text-[7px] md:text-[10px] font-black uppercase tracking-[0.4em] inline-block shadow-2xl">
-                  SLA_Guaranteed
+                  High_Availability
                 </div>
               </div>
 
               <div className="relative z-10 w-full text-center space-y-0 md:space-y-1">
-                <p className="text-black/60 font-bold text-[9px] md:text-xs">Uninterrupted Global Availability</p>
-                <p className="text-[7px] md:text-[9px] font-mono text-black/30">Last Failover: N/A</p>
+                <p className="text-black/60 font-bold text-[9px] md:text-xs">Up to 99.9% uptime in supported envs.</p>
+                <p className="text-[7px] md:text-[9px] font-mono text-black/30 italic mt-1">Infra-dependent.</p>
               </div>
             </div>
 
@@ -329,7 +330,7 @@ export default function WebServiceContent() {
               <div className="absolute top-0 left-0 w-full h-[2px] bg-[#10b981] shadow-[0_0_15px_#10b981] animate-[scan_6s_ease-in-out_infinite] opacity-40 z-20"></div>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(16,185,129,0.05)_0%,_transparent_100%)]"></div>
 
-              <div className="relative z-10 flex justify-between items-start">
+              <div className="relative z-10 flex justify-between items-start space-y-2">
                 <div className="w-8 h-8 md:w-16 md:h-16 rounded-lg md:rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[#10b981]">
                   <ShieldCheck size={16} className="md:w-8 md:h-8" />
                 </div>
@@ -340,10 +341,13 @@ export default function WebServiceContent() {
               </div>
 
               <div className="relative z-10 space-y-2 md:space-y-8">
-                <div className="space-y-1.5 md:space-y-6">
-                  <h3 className="text-base md:text-3xl lg:text-4xl font-black tracking-tighter leading-none">Hardened <br />Protocols.</h3>
+                <div className="space-y-1.5 md:space-y-2">
+                  <h3 className="text-base md:text-3xl lg:text-4xl font-black tracking-tighter leading-none">Security by <br />Design.</h3>
                   <p className="text-gray-500 text-[10px] md:text-sm font-medium leading-relaxed line-clamp-2 md:line-clamp-none">
-                    Beyond encryption. We implement zero-trust access control and real-time vulnerability mitigation.
+                    Encryption + role-based access. Security built in.
+                  </p>
+                  <p className="text-gray-600 text-[8px] md:text-[9px] font-medium italic">
+                    Per project.
                   </p>
                 </div>
 
@@ -368,15 +372,18 @@ export default function WebServiceContent() {
                     <Share2 size={8} className="md:w-3 md:h-3" />
                     <span>Architectural_Flexibility</span>
                   </div>
-                  <h3 className="text-base md:text-3xl lg:text-4xl font-black tracking-tighter leading-none">Modular <br />Ecosystem.</h3>
+                  <h3 className="text-base md:text-3xl lg:text-4xl font-black tracking-tighter leading-none">Modular <br />Architecture.</h3>
                   <p className="text-gray-500 text-[10px] md:text-sm font-medium max-w-sm leading-relaxed line-clamp-2 md:line-clamp-none">
-                    Deploy micro-frontends and shared logic clusters that grow with your user base. Future-proof code without the legacy overhead.
+                    Client-owned. Tech debt managed. Evolve & maintain.
+                  </p>
+                  <p className="text-gray-500 text-[8px] md:text-[9px] font-medium italic">
+                    Product-driven.
                   </p>
                 </div>
 
                 <div className="flex space-x-5 md:space-x-12">
                   <div className="space-y-0 md:space-y-1">
-                    <div className="text-base md:text-2xl font-black text-black tracking-tight">Zero</div>
+                    <div className="text-base md:text-2xl font-black text-black tracking-tight">Managed</div>
                     <div className="text-[6px] md:text-[9px] font-black uppercase tracking-widest text-gray-400">Tech Debt</div>
                   </div>
                   <div className="w-[1px] h-5 md:h-12 bg-gray-200"></div>
@@ -410,7 +417,7 @@ export default function WebServiceContent() {
           <div className="text-center mb-12 sm:mb-16 lg:mb-24 space-y-4 sm:space-y-6">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tighter">How it works</h2>
             <p className="text-gray-400 text-base sm:text-lg font-medium max-w-2xl mx-auto leading-relaxed">
-              Our engineering lifecycle is a synchronized progression from deep discovery to global optimization. We prioritize velocity without compromising stability.
+              Our approach is structured to reduce uncertainty, make decisions clear, and build systems that remain dependable over time.
             </p>
           </div>
 
@@ -418,10 +425,10 @@ export default function WebServiceContent() {
             <div className="absolute top-1.5 left-0 w-full h-[2px] bg-white/10 hidden lg:block"></div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 relative">
               {[
-                { step: "Step 1", title: "Discovery Scan", desc: "Technical audit of infrastructure and architectural constraints." },
-                { step: "Step 2", title: "Blueprint Phase", desc: "Modeling data structures and user flow hierarchies." },
-                { step: "Step 3", title: "Core Sprints", desc: "Developing with CI/CD and real-time observability." },
-                { step: "Step 4", title: "Final Deploy", desc: "Automated scaling tests and global CDN propagation." },
+                { step: "Step 1", title: "Discovery & Context", desc: "We begin by understanding business goals, existing systems, and technical constraints before defining any solution." },
+                { step: "Step 2", title: "System Blueprint", desc: "Architecture, data models, and responsibilities are mapped to create a clear and shared foundation." },
+                { step: "Step 3", title: "Controlled Implementation", desc: "Work progresses in planned phases with regular review, testing, and alignment against agreed priorities." },
+                { step: "Step 4", title: "Launch & Stabilization", desc: "Systems are prepared for real-world use with attention to deployment, monitoring, and a smooth handover." },
               ].map((item, i) => (
                 <div key={i} className="space-y-6 relative">
                   <div className="hidden lg:flex absolute -top-1 left-0 w-4 h-4 rounded-full bg-[#10b981] shadow-[0_0_15px_#10b981] z-10"></div>
@@ -442,10 +449,10 @@ export default function WebServiceContent() {
             <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 lg:gap-12">
               <div className="flex flex-col space-y-4 lg:w-[20%]">
                 {[
-                  { label: "Infra Audit", icon: <FileSearch size={14} /> },
-                  { label: "Logic Mapping", icon: <Share2 size={14} /> },
-                  { label: "Data Schema", icon: <Database size={14} /> },
-                  { label: "Sec Audit", icon: <Lock size={14} /> },
+                  { label: "Infrastructure review", icon: <FileSearch size={14} /> },
+                  { label: "Logic mapping", icon: <Share2 size={14} /> },
+                  { label: "Data structure design", icon: <Database size={14} /> },
+                  { label: "Security review", icon: <Lock size={14} /> },
                 ].map((item, i) => (
                   <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-5 flex items-center justify-between group/card hover:bg-[#10b981]/5 hover:border-[#10b981]/30 transition-all">
                     <span className="text-[11px] font-black uppercase tracking-widest text-gray-400 group-hover/card:text-white">{item.label}</span>
@@ -470,12 +477,12 @@ export default function WebServiceContent() {
                   <div className="bg-white/5 p-6 rounded-3xl border border-white/10 text-center space-y-3 flex-1 min-w-[140px]">
                     <PenTool size={20} className="text-[#10b981] mx-auto" />
                     <span className="block text-[9px] font-black uppercase tracking-widest text-white/50">Architectural</span>
-                    <div className="text-xs font-bold">Blueprint</div>
+                    <div className="text-xs font-bold">blueprint</div>
                   </div>
                   <div className="bg-white/5 p-6 rounded-3xl border border-white/10 text-center space-y-3 flex-1 min-w-[140px]">
                     <GitBranch size={20} className="text-[#10b981] mx-auto" />
-                    <span className="block text-[9px] font-black uppercase tracking-widest text-white/50">Sprint</span>
-                    <div className="text-xs font-bold">Roadmap</div>
+                    <span className="block text-[9px] font-black uppercase tracking-widest text-white/50">Delivery</span>
+                    <div className="text-xs font-bold">roadmap</div>
                   </div>
                 </div>
                 <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
@@ -498,8 +505,8 @@ export default function WebServiceContent() {
                     <div className="w-1.5 h-1.5 rounded-full bg-green-500/50"></div>
                   </div>
                   <div className="text-center space-y-2">
-                    <h5 className="text-3xl font-black text-[#10b981] tracking-tighter">Scalable_A</h5>
-                    <span className="text-[10px] font-black uppercase tracking-widest text-gray-500">Staging Environment</span>
+                    <h5 className="text-3xl font-black text-[#10b981] tracking-tighter">Staging</h5>
+                    <span className="text-[10px] font-black uppercase tracking-widest text-gray-500">environment</span>
                   </div>
                 </div>
                 <div className="bg-[#0c0c0c] border border-white/10 rounded-3xl p-8 space-y-6 relative overflow-hidden group/output">
@@ -509,8 +516,8 @@ export default function WebServiceContent() {
                     <div className="w-1.5 h-1.5 rounded-full bg-green-500/50"></div>
                   </div>
                   <div className="text-center space-y-2">
-                    <h5 className="text-3xl font-black text-[#10b981] tracking-tighter">Scalable_B</h5>
-                    <span className="text-[10px] font-black uppercase tracking-widest text-gray-500">Production Engine</span>
+                    <h5 className="text-3xl font-black text-[#10b981] tracking-tighter">Production</h5>
+                    <span className="text-[10px] font-black uppercase tracking-widest text-gray-500">environment</span>
                   </div>
                 </div>
               </div>
@@ -571,10 +578,10 @@ export default function WebServiceContent() {
 
           <div className="space-y-4 sm:space-y-6">
             {[
-              { q: "Do you cut corners to hit deadlines?", a: "We don’t. We’d rather be upfront about timing than ship something that’s hard to change later. If we see shortcuts that will hurt you in a year, we’ll say so and suggest a better path. Our goal is code your team can actually maintain and build on." },
-              { q: "Can you build features that feel live and up to date?", a: "Yes. We use proven patterns—event-driven backends, real-time sync—so users see updates quickly without things feeling fragile. We’ll pick the right approach for your scale and explain how it works in plain terms." },
-              { q: "We have an old system that can’t afford downtime. Can you still help?", a: "Absolutely. We modernize in stages: we build new pieces alongside the old one and move traffic over gradually. Your team keeps working. There’s no big-bang weekend cutover. We’ve done this with systems that had to stay up 24/7." },
-              { q: "Who owns the code when we’re done?", a: "You do. When the project wraps, you get full ownership of the repositories, docs, and any infra scripts. No lock-in, no “you can’t take it with you.” We want you to own and run what we build." },
+              { q: "What is your stance on technical debt?", a: "We treat technical debt as a long-term risk, not a shortcut. Architectural decisions are reviewed carefully to ensure short-term delivery does not compromise maintainability, scalability, or future change." },
+              { q: "How do you handle real-time data synchronization?", a: "We design event-driven systems using proven messaging and streaming patterns. The approach is selected based on consistency, latency requirements, and system reliability rather than fixed assumptions." },
+              { q: "Can you modernize a legacy system without downtime?", a: "In many cases, yes. We typically use incremental migration strategies that allow new systems to be introduced alongside existing ones, reducing risk while maintaining business continuity." },
+              { q: "Do we own the source code?", a: "Yes. Upon project completion, you receive full ownership of the source code, documentation, and infrastructure assets. There is no vendor lock-in by default." },
             ].map((faq, i) => (
               <div
                 key={i}

@@ -128,11 +128,16 @@ export default function BlogContent() {
             </span>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-[4.5rem] font-black text-[#111] tracking-tighter italic px-4">
-            {t("title_line1")} <span className="text-[#10b981]">{t("title_highlight")}</span> {t("title_line2")}
+            Coming Soon...
           </h1>
-          <p className="text-gray-500 text-base sm:text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed px-4">
+
+          {/* <h1 className="text-3xl sm:text-4xl md:text-[4.5rem] font-black text-[#111] tracking-tighter italic px-4">
+            {t("title_line1")} <span className="text-[#10b981]">{t("title_highlight")}</span> {t("title_line2")}
+          </h1> */}
+
+          {/* <p className="text-gray-500 text-base sm:text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed px-4">
             {t("subtitle")}
-          </p>
+          </p> */}
         </div>
       </section>
 
@@ -170,7 +175,7 @@ export default function BlogContent() {
         </div>
       </section> */}
 
-      <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+      {/* <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-10 sm:mb-12 lg:mb-16">
           <div className="space-y-1">
             <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-[#111]">All Articles</h2>
@@ -273,9 +278,9 @@ export default function BlogContent() {
             View More
           </button>
         </div>
-      </section>
+      </section> */}
 
-      <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-12 bg-gray-50 mt-12 sm:mt-16 lg:mt-20">
+      {/* <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-12 bg-gray-50 mt-12 sm:mt-16 lg:mt-20">
         <div className="max-w-5xl mx-auto bg-white rounded-[2.5rem] sm:rounded-[3rem] lg:rounded-[4rem] p-8 sm:p-10 lg:p-12 xl:p-24 shadow-2xl text-center space-y-6 sm:space-y-8 lg:space-y-10 border border-gray-100 relative overflow-hidden">
           <div className="absolute top-0 right-0 p-8 sm:p-12 opacity-[0.03] rotate-12 pointer-events-none hidden sm:block">
             <Mail size={200} className="sm:w-[250px] sm:h-[250px] lg:w-[300px] lg:h-[300px]" />
@@ -322,7 +327,7 @@ export default function BlogContent() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

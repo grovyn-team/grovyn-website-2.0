@@ -84,12 +84,10 @@ export default function MobileServiceContent() {
                 <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/50">Mobile Engineering Protocol 3.5</span>
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-[4.5rem] font-black tracking-[-0.07em] leading-[0.85] text-white">
-                Mobile <br />
-                <span className="text-[#10b981]">Engineering</span> <br />
-                Suite.
+                High-Performance <span className="text-[#10b981]">Mobile</span>, Built with Intent.
               </h1>
               <p className="text-gray-400 text-base sm:text-lg lg:text-xl font-medium max-w-xl leading-relaxed opacity-80">
-                High-performance iOS and Android experiences built for global scale. We bridge the gap between native hardware and user intent with sub-millisecond precision.
+                Native and cross-platform engineering focused on stability, speed, and real production demands - not short-term hacks.
               </p>
             </div>
 
@@ -269,6 +267,7 @@ export default function MobileServiceContent() {
                     <h3 className="text-sm md:text-xl lg:text-2xl xl:text-3xl font-black tracking-tight leading-[0.95] text-white">Responsive by Design.</h3>
                     <p className="text-xl md:text-2xl font-black text-[#10b981] tracking-tight">&lt; 1s</p>
                     <p className="text-[8px] md:text-[9px] font-semibold text-gray-400 uppercase tracking-wider">Typical interaction readiness</p>
+                    <p className="text-[7px] md:text-[8px] text-gray-500 italic">Design benchmark</p>
                     <p className="text-gray-500 text-[9px] md:text-xs lg:text-sm font-medium max-w-sm leading-relaxed line-clamp-2 md:line-clamp-none">
                       Optimized rendering paths and reduced main-thread work for smooth, consistent interactions across devices.
                     </p>
@@ -314,6 +313,7 @@ export default function MobileServiceContent() {
                 <div className="px-2.5 md:px-6 lg:px-8 py-1 md:py-2 bg-black text-[#10b981] rounded-full text-[6px] md:text-[9px] font-black uppercase tracking-[0.3em] inline-block shadow-2xl">
                   Session stability target
                 </div>
+                <p className="text-black/40 text-[7px] md:text-[8px] italic mt-1.5">Observed in production environments</p>
               </div>
 
               <div className="relative z-10 w-full text-center">
@@ -342,6 +342,7 @@ export default function MobileServiceContent() {
                   <h3 className="text-sm md:text-xl lg:text-2xl xl:text-3xl font-black tracking-tighter leading-none">Biometric <br />Security.</h3>
                   <p className="text-lg md:text-xl font-black text-[#10b981] tracking-tight">Platform-grade</p>
                   <p className="text-[8px] md:text-[9px] font-semibold text-gray-400 uppercase tracking-wider">Authentication security</p>
+                  <p className="text-[7px] md:text-[8px] text-gray-500 italic">Varies by device and use case</p>
                   <p className="text-gray-500 text-[9px] md:text-xs lg:text-sm font-medium leading-relaxed max-w-xs line-clamp-2 md:line-clamp-none">
                     Native biometric authentication using device-level protections and secure data isolation.
                   </p>
@@ -497,7 +498,7 @@ export default function MobileServiceContent() {
           <div className="space-y-4 sm:space-y-6">
             {[
               { q: "Should we go native or cross-platform? We’re not sure what’s right for us.", a: "It depends on your goals. If you need the best performance and deep device integration, we’ll lean native (Swift/Kotlin). If you need one codebase for iOS and Android and want to move fast, we often use Flutter. We’ll walk you through the tradeoffs so you can decide with confidence." },
-              { q: "Our users aren’t always online. Can the app still work well offline?", a: "Yes. We design apps that work offline first-data lives on the device and syncs when there’s a connection. We handle conflicts and edge cases so users don’t lose work or see confusing states. It’s something we’ve done for field teams and on-the-go users." },
+              { q: "What if we need to add or change features later?", a: "We build with that in mind. The app is structured so you can add features or change direction without rewriting everything. When you’re ready, we’ll scope the work together and get it done." },
               { q: "Will you help us get the app into the App Store and Play Store?", a: "Yes. We handle setup, provisioning, store listings, and submissions. We’ll make sure you meet each store’s guidelines and work with you through any review feedback so you can get to launch without the usual headaches." },
             ].map((faq, i) => (
               <div key={i} className={`rounded-[2.5rem] border-2 p-10 transition-all ${activeFaq === i ? "border-[#10b981] bg-[#f0fdf9]" : "border-gray-100"}`}>

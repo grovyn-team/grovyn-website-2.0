@@ -35,6 +35,39 @@
   .font-founder-heading {
     font-family: 'Playfair Display', Georgia, serif;
   }
+
+  /* Founder's Note section — avoid inline styles to prevent hydration mismatch */
+  .founder-note-section {
+    background-color: #ebeae8;
+    background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.02) 2px, rgba(0, 0, 0, 0.02) 3px);
+  }
+  .founder-note-card {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04);
+  }
+  .founder-note-avatar-border {
+    border-color: #346800;
+  }
+  .founder-note-pill {
+    background-color: #346800;
+  }
+  .founder-note-title-underline {
+    background-color: #346800;
+  }
+  .founder-note-quote-color {
+    color: #121212;
+  }
+  .founder-note-elaboration {
+    color: #9ca3af;
+  }
+  .founder-note-decorative-quote {
+    color: #d1d5db;
+  }
+  .founder-note-body {
+    color: #374151;
+  }
+  .founder-note-signature {
+    color: #9ca3af;
+  }
 }
 
 @keyframes marquee {
