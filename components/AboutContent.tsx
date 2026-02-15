@@ -193,74 +193,85 @@ export default function AboutContent() {
         </div>
       </section>
 
-      {/* Founder's Note — premium luxury tech, editorial two-column card */}
-      <section className="py-16 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-12" style={{ backgroundColor: "#F6F5F3" }}>
+      {/* Founder's Note — matches reference: pinstripe bg, avatar+pill, title with underline, quote, blockquote with large decorative quotes */}
+      <section
+        className="py-16 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-12"
+        style={{
+          backgroundColor: "#ebeae8",
+          backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.02) 2px, rgba(0,0,0,0.02) 3px)",
+        }}
+      >
         <div className="max-w-5xl mx-auto">
           <motion.article
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-            className="relative overflow-hidden rounded-[26px] min-h-[480px] sm:min-h-[520px] lg:min-h-[560px] flex flex-col lg:flex-row"
+            className="relative overflow-hidden rounded-2xl bg-white px-8 sm:px-10 lg:px-12 py-8 sm:py-10"
             style={{
-              backgroundColor: "#F6F5F3",
-              boxShadow: "0 24px 64px -16px rgba(0,0,0,0.06), 0 12px 32px -12px rgba(0,0,0,0.04)",
+              boxShadow: "0 4px 24px rgba(0,0,0,0.06), 0 1px 4px rgba(0,0,0,0.04)",
             }}
           >
-            {/* Left column (40%) — founder portrait, rounded only on left */}
-            <div className="relative w-full lg:w-[40%] min-h-[320px] lg:min-h-full lg:min-w-0 overflow-hidden rounded-t-[26px] lg:rounded-tr-none lg:rounded-l-[26px] group">
-              <Image
-                src="/assets/aman-slack.jpeg"
-                alt="Aman K A — Founder & CEO"
-                fill
-                className="object-cover object-top grayscale lg:group-hover:grayscale-0 transition-all duration-700 ease-out"
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                loading="lazy"
-              />
+            {/* Top left: circular avatar (dark green border) + oval FOUNDER & CEO tag */}
+            <div className="flex items-center gap-3 mb-8">
+              <div
+                className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden flex-shrink-0 border-2"
+                style={{ borderColor: "#346800" }}
+              >
+                <Image
+                  src="/aman.png"
+                  alt="Aman K A — Founder & CEO"
+                  fill
+                  className="object-cover object-top"
+                  sizes="64px"
+                  loading="lazy"
+                />
+              </div>
+              <span
+                className="px-3 py-1 text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-white rounded-full"
+                style={{ backgroundColor: "#346800" }}
+              >
+                Founder & CEO
+              </span>
             </div>
 
-            {/* Right column (60%) — text content */}
-            <div
-              className="flex-1 flex flex-col justify-center p-8 sm:p-10 lg:p-12 xl:p-14 lg:pl-14 xl:pl-16"
-              style={{ backgroundColor: "#F6F5F3" }}
-            >
-              <p
-                className="text-sm font-medium tracking-[0.2em] uppercase"
-                style={{ color: "#8A8A8A" }}
-              >
-                Aman K A
-              </p>
-              <hr className="mt-3 mb-6 w-12 border-[#121212]/20" aria-hidden />
-              <h2 className="font-founder-heading text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight" style={{ color: "#121212" }}>
+            {/* Centered title "Founder's Note" with thin dark green underline under whole title */}
+            <div className="text-center mb-8">
+              <h2 className="font-founder-heading text-2xl sm:text-3xl font-bold tracking-tight" style={{ color: "#121212" }}>
                 Founder&apos;s Note
               </h2>
-              <div className="mt-8 space-y-6 max-w-xl">
-                <p className="text-base sm:text-lg leading-[1.7]" style={{ color: "#4B4B4B" }}>
-                  We don&apos;t chase trends.
-                  <br />
-                  We design systems that endure.
-                </p>
-                <p className="text-base sm:text-lg leading-[1.7]" style={{ color: "#4B4B4B" }}>
-                  At Grovyn, our responsibility goes beyond building products —
-                  we create clarity in complexity, stability in growth, and value that compounds over time.
-                </p>
-                <p className="text-base sm:text-lg leading-[1.7]" style={{ color: "#4B4B4B" }}>
-                  Every decision we make is guided by one principle:
-                  do what is right, even when it is not easy.
-                </p>
-                <p className="text-base sm:text-lg leading-[1.7]" style={{ color: "#4B4B4B" }}>
-                  Trust isn&apos;t claimed — it&apos;s earned through consistency, transparency, and execution.
-                  That is the standard we hold ourselves to, every single day.
-                </p>
-              </div>
-              <p
-                className="mt-10 text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.3em]"
-                style={{ color: "#8A8A8A" }}
-              >
-                CEO & Founder
-                <span className="block mt-0.5" style={{ color: "#8A8A8A" }}>Grovyn</span>
+              <div className="mt-2 mx-auto w-16 h-0.5 rounded-full" style={{ backgroundColor: "#346800" }} aria-hidden />
+            </div>
+
+            {/* Primary quote — centered, bold */}
+            <div className="text-center mb-2">
+              <p className="text-base sm:text-lg font-bold" style={{ color: "#121212" }}>
+                Trust is the most valuable thing in the world.
               </p>
             </div>
+            {/* Elaboration — centered, smaller, italic, light grey */}
+            <p className="text-center text-sm sm:text-base italic mb-8" style={{ color: "#9ca3af" }}>
+              It must be earned and carefully upheld.
+            </p>
+
+            {/* Block quote: large decorative opening quotes left + paragraph (left-aligned, generous width) */}
+            <div className="relative pl-10 sm:pl-12">
+              <span
+                className="absolute left-4 top-0 font-serif text-4xl sm:text-5xl font-bold leading-none select-none"
+                style={{ color: "#d1d5db" }}
+                aria-hidden
+              >
+                &ldquo;
+              </span>
+              <p className="text-base sm:text-lg leading-[1.7] text-left" style={{ color: "#374151" }}>
+                At Grovyn, we believe trust is built through integrity, consistency, and doing the right thing even when it is harder. It is earned over time and forms the foundation of everything we build and every partnership we commit to.
+              </p>
+            </div>
+
+            {/* Attribution — bottom right, smaller, light grey */}
+            <p className="mt-8 text-right text-xs sm:text-sm font-medium" style={{ color: "#9ca3af" }}>
+              - CEO, GROVYN
+            </p>
           </motion.article>
         </div>
       </section>
@@ -360,7 +371,7 @@ export default function AboutContent() {
       <section className="py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 bg-[#fafafa]">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-14 sm:gap-20 lg:gap-24">
           <div className="lg:w-1/2 w-full relative order-2 lg:order-1">
-            <div className="rounded-2xl sm:rounded-3xl overflow-hidden aspect-video shadow-lg ring-1 ring-black/5 mb-6">
+            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-video shadow-lg ring-1 ring-black/5 mb-6">
               <Image
                 src={HISTORY_IMG}
                 alt="Our journey"

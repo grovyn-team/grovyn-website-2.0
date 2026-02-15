@@ -189,7 +189,7 @@ export default function CustomSoftwareContent() {
             </div>
             <div className="lg:w-1/3 space-y-6">
               <p className="text-gray-500 text-lg font-medium leading-relaxed">
-                We build software around your workflows and goals—clear requirements, quality code, and full ownership when we’re done.
+                We build software around your workflows and goals-clear requirements, quality code, and full ownership when we’re done.
               </p>
               <div className="flex space-x-2">
                 <div className="h-1.5 w-12 bg-[#10b981] rounded-full"></div>
@@ -204,7 +204,7 @@ export default function CustomSoftwareContent() {
               <div className="absolute inset-0 opacity-5 pointer-events-none">
                 <div className="absolute top-0 right-0 w-32 h-32 md:w-64 md:h-64 bg-[#10b981] rounded-full blur-3xl animate-pulse"></div>
               </div>
-              <div className="relative z-10 space-y-3 md:space-y-6">
+              <div className="relative z-10 space-y-3 md:space-y-4">
                 <div className="flex items-center space-x-2 md:space-x-4">
                   <div className="w-10 h-10 md:w-16 md:h-16 rounded-lg md:rounded-[1.8rem] bg-[#10b981] flex items-center justify-center text-black">
                     <Zap size={20} strokeWidth={2.5} className="md:w-8 md:h-8" />
@@ -214,8 +214,8 @@ export default function CustomSoftwareContent() {
                     <div className="text-[#10b981] text-[7px] md:text-[9px] font-mono mt-0.5 md:mt-1">TAILORED</div>
                   </div>
                 </div>
-                <h3 className="text-base md:text-3xl lg:text-5xl font-black text-white leading-none">Built for <br />your process.</h3>
-                <p className="text-gray-500 text-[10px] md:text-sm font-medium max-w-sm">We design around how you work—internal tools, dashboards, and integrations that fit your team and goals.</p>
+                <h3 className="text-base md:text-2xl lg:text-4xl font-black text-white leading-none">Built for <br />your process.</h3>
+                <p className="text-gray-500 text-[10px] md:text-sm font-medium max-w-sm">Internal tools, dashboards, and integrations that fit how your team actually works.</p>
               </div>
               <div className="relative z-10 grid grid-cols-3 gap-2 md:gap-4 mt-4 md:mt-0">
                 <div className="bg-white/5 border border-white/10 rounded-lg md:rounded-xl p-2 md:p-3">
@@ -281,7 +281,7 @@ export default function CustomSoftwareContent() {
               </div>
               <div className="relative z-10 space-y-2 md:space-y-4">
                 <h3 className="text-base md:text-3xl lg:text-4xl font-black tracking-tighter leading-none">Secure & <br />maintainable.</h3>
-                <p className="text-gray-500 text-[10px] md:text-sm font-medium">We build with security and maintainability in mind—clear code, access control, and documentation.</p>
+                <p className="text-gray-500 text-[10px] md:text-sm font-medium">Clear code, access control, and documentation. Built to stay secure and maintainable.</p>
               </div>
               <div className="relative z-10 flex flex-wrap gap-1.5 md:gap-2">
                 <div className="flex items-center gap-1 px-2 md:px-2.5 py-1 bg-white/5 border border-white/10 rounded-md md:rounded-lg text-[8px] md:text-[9px] font-bold text-white/80">
@@ -310,7 +310,7 @@ export default function CustomSoftwareContent() {
                       <span className="text-[8px] md:text-[10px] font-mono text-gray-500 uppercase tracking-wider">Tailored</span>
                     </div>
                     <h3 className="text-base md:text-3xl lg:text-4xl font-black text-black tracking-tighter leading-tight">Modular & <br />extensible.</h3>
-                    <p className="text-gray-500 text-[10px] md:text-sm font-medium max-w-xs">Add features and integrate with other systems without rewriting what you have.</p>
+                    <p className="text-gray-500 text-[10px] md:text-sm font-medium max-w-xs">Add features and connect to other systems without starting over.</p>
                   </div>
                   <div className="w-16 h-16 md:w-48 md:h-48 bg-white rounded-xl md:rounded-[3rem] shadow-lg border border-gray-100 flex items-center justify-center flex-shrink-0">
                     <Layers size={28} className="text-[#10b981] md:w-20 md:h-20" />
@@ -361,9 +361,9 @@ export default function CustomSoftwareContent() {
             ))
           ) : (
             [
-              { id: "01", title: "Discover", desc: "We learn your workflows, pain points, and what success looks like.", icon: <Search size={20} /> },
-              { id: "02", title: "Design & build", desc: "We design the solution and build in sprints with regular check-ins.", icon: <Terminal size={20} /> },
-              { id: "03", title: "Launch & iterate", desc: "We deploy, hand over, and support so you can run and evolve the product.", icon: <Rocket size={20} /> },
+              { id: "01", title: "Discover", desc: "We start by understanding how you work, what's getting in the way, and what good looks like for you.", icon: <Search size={20} /> },
+              { id: "02", title: "Design & build", desc: "We shape the solution with you and build in small steps, so you're always in the loop.", icon: <Terminal size={20} /> },
+              { id: "03", title: "Launch & iterate", desc: "We get it live, hand you the keys, and stay around so you can run and improve it over time.", icon: <Rocket size={20} /> },
             ].map((step, i) => (
               <div key={i} className="bg-white/5 border border-white/5 rounded-xl md:rounded-[3rem] p-4 md:p-10 space-y-4 md:space-y-8 group hover:border-[#10b981]/30 transition-all">
                 <div className="w-10 h-10 md:w-14 md:h-14 rounded-lg md:rounded-2xl bg-black border border-white/10 flex items-center justify-center text-[#10b981] group-hover:bg-[#10b981] group-hover:text-black transition-all">
@@ -413,9 +413,9 @@ export default function CustomSoftwareContent() {
           <h2 className="text-center text-lg md:text-3xl lg:text-4xl font-black mb-8 md:mb-16 lg:mb-24 tracking-tight">Common questions <span className="text-[#10b981]">(FAQ)</span></h2>
           <div className="space-y-3 md:space-y-6">
             {[
-              { q: "We have unique processes. Can you really build something that fits?", a: "Yes. Custom software is what we do. We start with discovery—learning your workflows, users, and goals—so the solution is designed for you from the start, not forced into an off-the-shelf mold." },
+              { q: "We have unique processes. Can you really build something that fits?", a: "Yes. Custom software is what we do. We start with discovery-learning your workflows, users, and goals-so the solution is designed for you from the start, not forced into an off-the-shelf mold." },
               { q: "How do you keep our data secure?", a: "We design for security from the start: access control, encryption where needed, and clear boundaries. We’ll align with your compliance requirements and document what’s in place so your team can own it." },
-              { q: "Will we own the code when you’re done?", a: "Yes. You get full ownership of the codebase, documentation, and any infrastructure we set up. No lock-in—you can take it with you or have another team maintain it." },
+              { q: "Will we own the code when you’re done?", a: "Yes. You get full ownership of the codebase, documentation, and any infrastructure we set up. No lock-in you can take it with you or have another team maintain it." },
             ].map((faq, i) => (
               <div key={i} className={`rounded-xl md:rounded-[2.5rem] border-2 p-4 md:p-10 transition-all ${activeFaq === i ? "border-[#10b981] bg-[#f0fdf9]" : "border-gray-100"}`}>
                 <button onClick={() => setActiveFaq(activeFaq === i ? null : i)} className="w-full flex justify-between items-center text-xs md:text-xl font-black text-left gap-3">

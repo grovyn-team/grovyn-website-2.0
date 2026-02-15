@@ -359,6 +359,7 @@
     "start_new": "Send another message"
   },
   "footer": {
+    "custom_software": "Custom Software",
     "tagline": "We build software systems that stay reliable as businesses grow. Clear architecture, maintainable code, and technology choices that age well.",
     "hours": "9:00am to 7:00pm IST",
     "location": "Mumbai, India",
@@ -374,11 +375,27 @@
     "connect": "Connect",
     "about": "About",
     "careers": "Careers",
+    "blog": "Blog",
     "contact": "Contact",
     "privacy": "Privacy",
     "terms": "Terms",
     "linkedin": "LinkedIn",
     "copyright": "Grovyn"
+  },
+  "cookie_consent": {
+    "message": "This website stores cookies on your computer. These cookies are used to collect information about how you interact with our website and allow us to remember you. We use this information in order to improve and customize your browsing experience and for analytics and metrics about our visitors both on this website and other media. To find out more about the cookies we use, see our Privacy Policy.",
+    "decline_note": "If you decline, your information won't be tracked when you visit this website. A single cookie will be used in your browser to remember your preference not to be tracked.",
+    "settings": "Cookies settings",
+    "accept_all": "Accept All",
+    "decline_all": "Decline All",
+    "save": "Save preferences",
+    "modal_title": "Cookie preferences",
+    "necessary_title": "Necessary",
+    "necessary_desc": "Required for the site to function and to remember your choices. Cannot be disabled.",
+    "analytics_title": "Analytics",
+    "analytics_desc": "Help us understand how visitors use our website so we can improve it.",
+    "marketing_title": "Marketing",
+    "marketing_desc": "Used to deliver relevant content or ads. We do not sell your data."
   },
   "about": {
     "badge": "About Grovyn",
@@ -1078,9 +1095,9 @@
     },
     "custom_software": {
       "hero_badge": "Custom Software",
-      "hero_title_line1": "Software built",
-      "hero_title_highlight": "for your business",
-      "hero_subtitle": "We design and build bespoke applications tailored to your workflows, processes, and goals—no off-the-shelf compromise.",
+      "hero_title_line1": "Purpose-Built Software,",
+      "hero_title_highlight": "Engineered for Real Operations.",
+      "hero_subtitle": "From internal platforms to customer-facing products, we design systems that remove friction from workflows and stay maintainable as your business evolves.",
       "cta_primary": "Talk to us",
       "cta_secondary": "See what we do",
       "tech_title": "What we focus on",
@@ -1162,17 +1179,17 @@
         {
           "step": "01",
           "title": "Discover",
-          "desc": "We learn your workflows, pain points, and what success looks like."
+          "desc": "We start by understanding how you work, what's getting in the way, and what good looks like for you."
         },
         {
           "step": "02",
           "title": "Design & build",
-          "desc": "We design the solution and build in sprints with regular check-ins."
+          "desc": "We shape the solution with you and build in small steps, so you're always in the loop."
         },
         {
           "step": "03",
           "title": "Launch & iterate",
-          "desc": "We deploy, hand over, and support so you can run and evolve the product."
+          "desc": "We get it live, hand you the keys, and stay around so you can run and improve it over time."
         }
       ],
       "cta_title": "Let's talk about your custom software",
@@ -3039,6 +3056,10 @@
     "edtech_desc": "Learning platforms and tools",
     "startups_title": "Startups",
     "startups_desc": "From concept to launch",
+    "dating_title": "Dating / Match Making",
+    "dating_desc": "Matching algorithms, profiles, and safe connections",
+    "media_content_title": "Media and Content platform",
+    "media_content_desc": "Streaming, publishing, and content management",
     "newsletter_title": "Stay updated",
     "newsletter_subtitle": "Get occasional updates about our work.",
     "newsletter_placeholder": "Your email",

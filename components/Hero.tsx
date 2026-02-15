@@ -149,8 +149,15 @@ export default function Hero() {
                       <div className="w-10 sm:w-12 h-3 sm:h-4 bg-black rounded-full border border-white/5" />
                     </div>
                     <div className="p-4 sm:p-5 space-y-4 sm:space-y-6">
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center font-black text-emerald-500 text-xs">
-                        G
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center p-1 overflow-hidden bg-emerald-500/10 border border-emerald-500/10">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src="/grovyn_logo.png"
+                          alt="Grovyn"
+                          width={32}
+                          height={32}
+                          className="w-full h-full object-contain object-center"
+                        />
                       </div>
                       <div className="space-y-1.5 sm:space-y-2">
                         <div className="h-3 sm:h-4 w-full bg-white/10 rounded-md" />

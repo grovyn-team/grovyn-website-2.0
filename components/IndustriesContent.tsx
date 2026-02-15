@@ -34,6 +34,14 @@ const INDUSTRY_CARD: Record<
     img: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=500",
     titleKey: "startups_title",
   },
+  dating: {
+    img: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&q=80&w=1000",
+    titleKey: "dating_title",
+  },
+  media_content: {
+    img: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1000",
+    titleKey: "media_content_title",
+  },
 };
 
 const HERO_VIDEO_SRC = "/videos/industries-hero.mp4";
@@ -240,7 +248,7 @@ export default function IndustriesContent() {
             </div>
           </div>
 
-          {(["saas", "ecommerce", "edtech", "startups"] as const).map((slug) => (
+          {(["saas", "ecommerce", "edtech", "startups", "dating", "media_content"] as const).map((slug) => (
             <div
               key={slug}
               id={slug}
