@@ -243,6 +243,8 @@ function PortfolioCarousel({
   projects: Project[];
   activeIndex: number;
   onGoTo: (index: number) => void;
+  prevSlideAria?: string;
+  nextSlideAria?: string;
 }) {
   const N = projects.length;
   const [mounted, setMounted] = useState(false);
