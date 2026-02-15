@@ -354,7 +354,7 @@ export default function InfrastructureDetailContent({ slug }: { slug: Infrastruc
             <div className="rounded-2xl md:rounded-[4rem] overflow-hidden shadow-2xl relative aspect-[4/5] lg:aspect-square">
               <Image
                 src={overviewImg}
-                alt={`${fullTitle || "Infrastructure"} — expert guidance`}
+                alt={`${fullTitle || "Infrastructure"} - expert guidance`}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

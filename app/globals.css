@@ -36,7 +36,7 @@
     font-family: 'Playfair Display', Georgia, serif;
   }
 
-  /* Founder's Note section — avoid inline styles to prevent hydration mismatch */
+  /* Founder's Note section - avoid inline styles to prevent hydration mismatch */
   .founder-note-section {
     background-color: #ebeae8;
     background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.02) 2px, rgba(0, 0, 0, 0.02) 3px);

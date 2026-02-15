@@ -312,6 +312,7 @@
     "working_hours": "Working hours",
     "whatsapp_us": "WhatsApp us",
     "whatsapp_subtitle": "Quick response via WhatsApp",
+    "chat_whatsapp_aria": "Chat on WhatsApp",
     "book_discovery_call": "Book Discovery Call",
     "response_note": "We respond to all inquiries within 24 hours (usually within 4 hours during business hours).",
     "title_line1": "Let's talk about",
@@ -395,7 +396,9 @@
     "analytics_title": "Analytics",
     "analytics_desc": "Help us understand how visitors use our website so we can improve it.",
     "marketing_title": "Marketing",
-    "marketing_desc": "Used to deliver relevant content or ads. We do not sell your data."
+    "marketing_desc": "Used to deliver relevant content or ads. We do not sell your data.",
+    "privacy_policy": "Privacy Policy",
+    "close_aria": "Close"
   },
   "about": {
     "badge": "About Grovyn",
@@ -431,7 +434,107 @@
     "cta_button": "Get in touch",
     "case_studies": "See our work",
     "code_metric_value": "240,000+",
-    "code_metric_label": "Lines of code shipped each month"
+    "code_metric_label": "Lines of code shipped each month",
+    "page_nav_home": "Home",
+    "page_nav_about_us": "About Us",
+    "page_hero_title": "Building reliable digital systems",
+    "page_hero_highlight": "together.",
+    "page_hero_subtitle": "Grovyn exists to help teams design and maintain software that remains clear, stable, and dependable as businesses grow. We focus on thoughtful engineering, practical decision-making, and long-term technical confidence.",
+    "page_cta": "Learn our approach",
+    "projects_shipped": "Projects shipped",
+    "commitment_para_1": "We are committed to the",
+    "commitment_para_2": "SaaS industry",
+    "commitment_para_3": "with innovative, sustainable solutions—combining",
+    "commitment_para_4": "state-of-the-art technology",
+    "commitment_para_5": "to bring visions to life.",
+    "stat_projects_delivered": "Projects Delivered",
+    "stat_team_members": "Team Members",
+    "stat_founders": "Founders",
+    "stat_designers": "Designers",
+    "founder_badge": "Founder & CEO",
+    "founder_note_title": "Founder's Note",
+    "founder_quote_1": "Trust is the most valuable thing in the world.",
+    "founder_quote_2": "It must be earned and carefully upheld.",
+    "founder_blockquote": "At Grovyn, we believe trust is built through integrity, consistency, and doing the right thing even when it is harder. It is earned over time and forms the foundation of everything we build and every partnership we commit to.",
+    "founder_attribution": "CEO, GROVYN",
+    "team_role_ceo": "Chief Executive Officer",
+    "team_role_cto": "Chief Technology Officer",
+    "team_role_hoe": "Head of Engineering",
+    "team_role_sales": "Sales & Marketing Lead",
+    "process_1_title": "Discovery Call",
+    "process_1_duration": "20 minutes",
+    "process_1_activity_1": "Understand your requirements and goals",
+    "process_1_activity_2": "Discuss technical needs and timeline",
+    "process_1_activity_3": "Align on success criteria",
+    "process_1_outcome": "Clear understanding of your needs.",
+    "process_2_title": "Technical Proposal",
+    "process_2_duration": "24-48 hours",
+    "process_2_activity_1": "Detailed scope and technical approach",
+    "process_2_activity_2": "Fixed-price quote with milestones",
+    "process_2_activity_3": "Week-by-week timeline",
+    "process_2_outcome": "Exact quote before we start.",
+    "process_3_title": "Contract & Kickoff",
+    "process_3_duration": "2-3 days",
+    "process_3_activity_1": "Sign contract and first milestone payment",
+    "process_3_activity_2": "Repository and communication setup",
+    "process_3_activity_3": "Team kickoff and planning",
+    "process_3_outcome": "Development starts immediately.",
+    "process_4_title": "Development & QA",
+    "process_4_duration": "2-8 weeks",
+    "process_4_activity_1": "2-week sprint cycles with regular demos",
+    "process_4_activity_2": "Automated testing and code reviews",
+    "process_4_activity_3": "Daily progress updates and feedback loops",
+    "process_4_outcome": "Production-ready system with quality assurance.",
+    "process_5_title": "Deployment & Documentation",
+    "process_5_duration": "2-3 days",
+    "process_5_activity_1": "Production deployment with monitoring",
+    "process_5_activity_2": "Complete technical and API documentation",
+    "process_5_activity_3": "Handover and team training",
+    "process_5_outcome": "System live with full ownership transferred.",
+    "process_6_title": "Post-Launch Support",
+    "process_6_duration": "45 days included",
+    "process_6_activity_1": "Bug fixes and technical support",
+    "process_6_activity_2": "Performance monitoring and optimization",
+    "process_6_activity_3": "Minor adjustments as needed",
+    "process_6_outcome": "Continued support and peace of mind.",
+    "team_heading": "Our team",
+    "process_heading": "How we work",
+    "story_badge": "Our story",
+    "story_title": "How we",
+    "story_highlight": "grew.",
+    "story_para_1": "Grovyn began with a simple intention: to make engineering smoother, more reliable, and easier to scale for growing teams.",
+    "story_para_2": "We saw founders and businesses spending too much time managing complexity instead of building what truly mattered. Engineering felt heavy, slow, and fragmented. Decisions made early often became obstacles later.",
+    "story_para_3": "We set out to change that.",
+    "story_para_4": "Today, we help teams simplify their engineering journey through clean software, well-structured systems, and practical AI automation. From core product development to LLM-powered workflows, our goal remains the same: reduce friction, improve clarity, and build technology that works well today and continues to work as teams and products grow.",
+    "story_para_5": "Grovyn is built on the belief that good technology should support progress, not slow it down.",
+    "foundation_year": "2025",
+    "foundation_label": "Foundation year",
+    "values_badge": "Our values",
+    "values_title": "GROW",
+    "values_times": "×",
+    "values_win": "WIN",
+    "grow_sub": "How we build",
+    "grow_1_title": "Grounded growth",
+    "grow_1_desc": "We prioritise steady, responsible growth over rushed outcomes.",
+    "grow_2_title": "Resilient health",
+    "grow_2_desc": "We build healthy systems, teams, and partnerships designed to last.",
+    "grow_3_title": "Owned ambition",
+    "grow_3_desc": "We set high standards and take full responsibility for meeting them.",
+    "grow_4_title": "With the customer",
+    "grow_4_desc": "We work closely with our customers, building alongside them with openness and respect.",
+    "win_sub": "Why it works",
+    "win_1": "We succeed when our clients succeed.",
+    "win_2": "When products scale smoothly.",
+    "win_3": "When technology becomes a strength, not a bottleneck.",
+    "win_4": "When trust deepens over time.",
+    "conversation_title": "Let's have a thoughtful conversation",
+    "conversation_para": "If you're planning a product or improving an existing system, we're happy to talk through the technical considerations and see whether working together makes sense.",
+    "start_project_cta": "Start your project",
+    "delivery_badge": "Delivery process",
+    "delivery_title": "Execution",
+    "delivery_highlight": "Framework",
+    "delivery_sub": "A documented, predictable process. Six steps from first call to ongoing support.",
+    "outcome_label": "Outcome:"
   },
   "careers": {
     "badge": "Join our team",
@@ -452,6 +555,8 @@
     "one_team_item_4": "Improve continuously",
     "open_roles_title": "Open positions",
     "open_roles_count": "{count} open roles",
+    "no_open_roles_title": "No open roles",
+    "no_open_roles_message": "Check back later or get in touch—we'd love to hear from you.",
     "filter_by": "Filter by",
     "filter_all_locations": "All locations",
     "filter_all_types": "All types",
@@ -558,7 +663,7 @@
       }
     ],
     "apply": "Apply",
-    "no_fit": "Don't see something that fits? We're always interested in talking to talented people.",
+    "no_fit": "Want to work with us? Get in touch.",
     "general_app": "General inquiry",
     "form_badge": "Get in touch",
     "form_title": "Interested in working with us?",
@@ -584,7 +689,10 @@
     "submit_btn": "Send application",
     "success_title": "Application received",
     "success_message": "We'll review your application and get back to you soon.",
-    "return_btn": "Back to careers"
+    "return_btn": "Back to careers",
+    "opening_not_found": "Opening not found",
+    "loading": "Loading…",
+    "back_to_careers": "Back to Careers"
   },
   "why_grovyn": {
     "badge": "Why Grovyn",
@@ -1446,7 +1554,7 @@
         "subtitle": "Whether you're on AWS, Azure, or Google Cloud-we help you get there and keep everything running smoothly so your team can focus on building.",
         "banner_heading": "Cloud that scales",
         "banner_highlight": "with your business",
-        "banner_tagline": "Migration, optimization, and day-two operations on AWS, Azure, and GCP—so you can focus on building, not infrastructure.",
+        "banner_tagline": "Migration, optimization, and day-two operations on AWS, Azure, and GCP-so you can focus on building, not infrastructure.",
         "hero_metrics": [
           {
             "value": "3",
@@ -1483,7 +1591,7 @@
           {
             "step": "02",
             "title": "Migration",
-            "desc": "We move your workloads in phases so your business keeps running—no big-bang cutover unless you want one.",
+            "desc": "We move your workloads in phases so your business keeps running-no big-bang cutover unless you want one.",
             "micro": "Low-risk cutover"
           },
           {
@@ -1536,7 +1644,7 @@
           },
           {
             "title": "Cloud Migration",
-            "desc": "We move your workloads in phases so your business keeps running—no big-bang cutover unless you want one.",
+            "desc": "We move your workloads in phases so your business keeps running-no big-bang cutover unless you want one.",
             "stat": "Controlled cutover"
           },
           {
@@ -1620,8 +1728,8 @@
         "title_suffix": "",
         "banner_heading": "Networks that keep",
         "banner_highlight": "everyone connected",
-        "banner_tagline": "From office and campus to secure remote access—we design and run networks that stay up and keep your teams connected.",
-        "subtitle": "From office and campus networks to secure remote access—we design and run networks that stay up and keep your teams connected.",
+        "banner_tagline": "From office and campus to secure remote access-we design and run networks that stay up and keep your teams connected.",
+        "subtitle": "From office and campus networks to secure remote access-we design and run networks that stay up and keep your teams connected.",
         "hero_metrics": [
           {
             "value": "Design",
@@ -1791,10 +1899,10 @@
         "title": "Server",
         "title_highlight": "Infrastructure",
         "title_suffix": "",
-        "subtitle": "Whether it’s physical boxes or virtual—we keep your servers running, patched, and performing so your apps have a solid base.",
+        "subtitle": "Whether it’s physical boxes or virtual-we keep your servers running, patched, and performing so your apps have a solid base.",
         "banner_heading": "Servers that give",
         "banner_highlight": "your apps a solid base",
-        "banner_tagline": "Physical or virtual—we keep your servers running, patched, and performing so your applications never miss a beat.",
+        "banner_tagline": "Physical or virtual-we keep your servers running, patched, and performing so your applications never miss a beat.",
         "hero_metrics": [
           {
             "value": "Pilot",
@@ -1844,7 +1952,7 @@
         "cta_secondary": "See how we work",
         "trust_bar_text": "Trusted by government, healthcare, and manufacturing to run server infrastructure that stays reliable under load.",
         "expert_heading": "Server infrastructure that stays reliable",
-        "expert_para": "We help teams plan and operate server estates—physical and virtual—so your applications have a solid, performant base. Clear sizing, patching, and monitoring so nothing catches you off guard.",
+        "expert_para": "We help teams plan and operate server estates-physical and virtual-so your applications have a solid, performant base. Clear sizing, patching, and monitoring so nothing catches you off guard.",
         "expert_bullets": [
           "Sizing and capacity planning",
           "Clean deployment and documentation",
@@ -1964,8 +2072,8 @@
         "title_suffix": "",
         "banner_heading": "Security that protects",
         "banner_highlight": "without slowing you down",
-        "banner_tagline": "From assessment and hardening to 24/7 monitoring and compliance—we help you stay secure and audit-ready.",
-        "subtitle": "We help you lock down systems, stay compliant, and respond quickly when something doesn’t look right—so you can run with confidence.",
+        "banner_tagline": "From assessment and hardening to 24/7 monitoring and compliance-we help you stay secure and audit-ready.",
+        "subtitle": "We help you lock down systems, stay compliant, and respond quickly when something doesn’t look right-so you can run with confidence.",
         "hero_metrics": [
           {
             "value": "SOC",
@@ -2012,7 +2120,7 @@
         "cta_secondary": "See how we work",
         "trust_bar_text": "Trusted by fintech, healthcare, and SaaS companies to lock down systems, stay compliant, and respond quickly when something doesn't look right.",
         "expert_heading": "Security that lets you run with confidence",
-        "expert_para": "We help teams identify exposure, implement controls, and monitor for threats so security is built in—and you can respond quickly when something doesn't look right.",
+        "expert_para": "We help teams identify exposure, implement controls, and monitor for threats so security is built in-and you can respond quickly when something doesn't look right.",
         "expert_bullets": [
           "Realistic, actionable assessment",
           "Controls built in, not bolted on",
@@ -2133,7 +2241,7 @@
         "title_suffix": "",
         "banner_heading": "Support that keeps",
         "banner_highlight": "teams unblocked",
-        "banner_tagline": "When something breaks or someone's stuck, we're there—so your teams can keep shipping instead of waiting on IT.",
+        "banner_tagline": "When something breaks or someone's stuck, we're there-so your teams can keep shipping instead of waiting on IT.",
         "hero_metrics": [
           {
             "value": "24/7",
@@ -2148,7 +2256,7 @@
             "label": "Target uptime"
           }
         ],
-        "subtitle": "When something breaks or someone’s stuck, we’re there—so your teams can keep shipping instead of waiting on IT.",
+        "subtitle": "When something breaks or someone’s stuck, we’re there-so your teams can keep shipping instead of waiting on IT.",
         "features": [
           "24/7 helpdesk",
           "Tiered support",
@@ -2181,7 +2289,7 @@
         "cta_secondary": "See how we work",
         "trust_bar_text": "Trusted by growing teams to keep systems running so people can focus on their work instead of waiting on IT.",
         "expert_heading": "IT support that keeps your teams shipping",
-        "expert_para": "We help teams get clear scope, fast response, and ongoing improvement so support gets easier over time—not just reactive ticket handling.",
+        "expert_para": "We help teams get clear scope, fast response, and ongoing improvement so support gets easier over time-not just reactive ticket handling.",
         "expert_bullets": [
           "Clear SLAs and scope",
           "Tiered support options",
@@ -2261,8 +2369,8 @@
         "title_suffix": "",
         "banner_heading": "Backup and recovery",
         "banner_highlight": "that works when it matters",
-        "banner_tagline": "Clear RTO/RPO, tested recovery, and runbooks that stay current—so you're ready when the worst happens.",
-        "subtitle": "We make sure your data is backed up, recoverable, and safe from ransomware—so when the worst happens, you’re ready.",
+        "banner_tagline": "Clear RTO/RPO, tested recovery, and runbooks that stay current-so you're ready when the worst happens.",
+        "subtitle": "We make sure your data is backed up, recoverable, and safe from ransomware-so when the worst happens, you’re ready.",
         "hero_metrics": [
           {
             "value": "Pilot",
@@ -2313,7 +2421,7 @@
         "cta_secondary": "See how we work",
         "trust_bar_text": "Trusted by financial services, healthcare, and e-commerce to protect data and recover quickly when the worst happens.",
         "expert_heading": "Backup and recovery you can rely on",
-        "expert_para": "We help teams design backup and DR so data is protected, recoverable, and safe from ransomware—with real recovery tests so you know it works when it matters.",
+        "expert_para": "We help teams design backup and DR so data is protected, recoverable, and safe from ransomware-with real recovery tests so you know it works when it matters.",
         "expert_bullets": [
           "RTO/RPO aligned to business",
           "Tested recovery drills",
@@ -2432,7 +2540,7 @@
         "title_suffix": "",
         "banner_heading": "DevOps and infrastructure",
         "banner_highlight": "that scale with your product",
-        "banner_tagline": "CI/CD, automation, and platform operations—so you ship faster with less risk and clearer visibility.",
+        "banner_tagline": "CI/CD, automation, and platform operations-so you ship faster with less risk and clearer visibility.",
         "subtitle": "We help teams ship faster with reliable pipelines, cloud architecture, and automation built around real engineering workflows.",
         "hero_metrics": [
           {
@@ -2603,8 +2711,8 @@
         "title_suffix": "",
         "banner_heading": "Data center design",
         "banner_highlight": "and day-two operations",
-        "banner_tagline": "From strategy and build-out to power, cooling, and monitoring—we help you get the right facility and run it well.",
-        "subtitle": "From strategy and design to build-out and day-two operations—we help you get the right facility and run it well.",
+        "banner_tagline": "From strategy and build-out to power, cooling, and monitoring-we help you get the right facility and run it well.",
+        "subtitle": "From strategy and design to build-out and day-two operations-we help you get the right facility and run it well.",
         "hero_metrics": [
           {
             "value": "Design",
@@ -2650,7 +2758,7 @@
         "cta_secondary": "See how we work",
         "trust_bar_text": "Trusted by enterprises to design, build, and operate data center facilities that stay reliable and efficient.",
         "expert_heading": "Data center design and operations that fit your growth",
-        "expert_para": "We help teams from strategy and design to build-out and day-two operations—so you get the right facility and run it well as demand changes.",
+        "expert_para": "We help teams from strategy and design to build-out and day-two operations-so you get the right facility and run it well as demand changes.",
         "expert_bullets": [
           "Strategy and capacity planning",
           "Power, cooling, layout",
@@ -2730,8 +2838,8 @@
         "title_suffix": "",
         "banner_heading": "Communication systems",
         "banner_highlight": "that bring teams together",
-        "banner_tagline": "Voice, video, and chat on one system—so everyone can collaborate without juggling multiple tools.",
-        "subtitle": "We get your teams on one system for voice, video, and chat—so everyone can collaborate without juggling five different tools.",
+        "banner_tagline": "Voice, video, and chat on one system-so everyone can collaborate without juggling multiple tools.",
+        "subtitle": "We get your teams on one system for voice, video, and chat-so everyone can collaborate without juggling five different tools.",
         "hero_metrics": [
           {
             "value": "Unified",
@@ -2778,7 +2886,7 @@
         "cta_secondary": "See how we work",
         "trust_bar_text": "Trusted by enterprises to unify voice, video, and chat so teams can collaborate without juggling multiple tools.",
         "expert_heading": "Communication systems that bring teams together",
-        "expert_para": "We get your teams on one system for voice, video, and chat—with rollout and support so everyone can collaborate without juggling five different tools.",
+        "expert_para": "We get your teams on one system for voice, video, and chat-with rollout and support so everyone can collaborate without juggling five different tools.",
         "expert_bullets": [
           "Unified voice, video, chat",
           "Smooth deployment",
@@ -2859,8 +2967,8 @@
         "title_suffix": "",
         "banner_heading": "Migration done",
         "banner_highlight": "your way",
-        "banner_tagline": "Phased, low-risk moves to the cloud with a clear path—so you can turn off the old stuff when you're ready.",
-        "subtitle": "We move your workloads to the cloud in a way that fits your business—phased, low-risk, and with a clear path to turning off the old stuff.",
+        "banner_tagline": "Phased, low-risk moves to the cloud with a clear path-so you can turn off the old stuff when you're ready.",
+        "subtitle": "We move your workloads to the cloud in a way that fits your business-phased, low-risk, and with a clear path to turning off the old stuff.",
         "hero_metrics": [
           {
             "value": "Phased",
@@ -2905,9 +3013,9 @@
         ],
         "cta_primary": "Talk to us",
         "cta_secondary": "See how we work",
-        "trust_bar_text": "Trusted by businesses to move workloads to the cloud in a way that fits—phased, low-risk, with a clear path to turning off the old stuff.",
+        "trust_bar_text": "Trusted by businesses to move workloads to the cloud in a way that fits-phased, low-risk, with a clear path to turning off the old stuff.",
         "expert_heading": "Cloud and migration that fits your business",
-        "expert_para": "We move your workloads to the cloud in a way that fits your business—phased, low-risk, and with a clear path to turning off the old stuff and optimizing in the cloud.",
+        "expert_para": "We move your workloads to the cloud in a way that fits your business-phased, low-risk, and with a clear path to turning off the old stuff and optimizing in the cloud.",
         "expert_bullets": [
           "Discovery and dependency mapping",
           "Phased migration",
@@ -3313,7 +3421,27 @@
     "subtitle": "Occasional posts about our work and technology.",
     "read_more": "Read more",
     "back": "Back to blog",
-    "no_posts": "No posts yet."
+    "no_posts": "No posts yet.",
+    "coming_soon": "Coming Soon..."
+  },
+  "portfolio": {
+    "hero_title": "Grovyn Portfolio.",
+    "hero_subtitle": "Real-world digital systems built with teams across different industries.",
+    "category_all": "All",
+    "category_construction": "Construction",
+    "category_media_marketing": "Media & Marketing",
+    "category_gaming": "Gaming",
+    "category_healthcare": "Healthcare",
+    "category_arvr": "AR/VR",
+    "category_saas": "SaaS",
+    "section_header_title": "Projects",
+    "section_header_highlight": "/ Work",
+    "section_header_sub": "Grovyn Business Engineering Archive",
+    "archive_badge": "Archive",
+    "selected_work_title": "Selected",
+    "selected_work_highlight": "Work.",
+    "next_slide_aria": "Next slide",
+    "prev_slide_aria": "Previous slide"
   },
   "automations": {
     "hero_title_1": "AI systems that",

@@ -1,7 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Linkedin, Twitter } from "lucide-react";
 import { useTranslations } from "next-intl";
+
+const SOCIAL_LINKS = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/grovynsystems/about", icon: Linkedin },
+  { label: "Twitter", href: "https://twitter.com/grovynsystems", icon: Twitter },
+] as const;
 
 export default function Footer({ locale }: { locale: string }) {
   const t = useTranslations("footer");
@@ -48,6 +53,23 @@ export default function Footer({ locale }: { locale: string }) {
               <div className="flex items-center space-x-3 text-[11px] font-medium group">
                 <Clock size={14} className="text-emerald-500 shrink-0" />
                 <span>{t("hours")}</span>
+              </div>
+            </div>
+            <div className="pt-4 border-t border-white/5">
+              <p className="text-[10px] font-bold uppercase tracking-wider text-gray-500 mb-3">{t("connect")}</p>
+              <div className="flex gap-2">
+                {SOCIAL_LINKS.map(({ label, href, icon: Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center w-9 h-9 rounded-lg bg-white/5 text-gray-400 hover:bg-emerald-500/20 hover:text-emerald-400 transition-colors"
+                    aria-label={label}
+                  >
+                    <Icon size={18} />
+                  </a>
+                ))}
               </div>
             </div>
           </div>

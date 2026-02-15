@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { getMessages } from "next-intl/server";
 import { locales, isRtl } from "@/i18n/config";
 import IntlErrorHandlingProvider from "@/components/IntlErrorHandlingProvider";
@@ -7,7 +8,10 @@ import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import CookieBanner from "@/components/CookieBanner";
 import StructuredData from "@/components/StructuredData";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import "../globals.css";
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 export default async function LocaleLayout({
   children,
@@ -27,6 +31,22 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={isRtl(locale) ? "rtl" : "ltr"}>
       <body className="font-sans antialiased">
+        {GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+              `}
+            </Script>
+            <GoogleAnalytics />
+          </>
+        )}
         <StructuredData />
         <IntlErrorHandlingProvider locale={locale} messages={messages}>
           <Navbar />

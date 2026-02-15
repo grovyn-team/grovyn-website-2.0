@@ -87,3 +87,63 @@ export async function submitCareerApplication(
   }
   return data as CareerApplicationResponse;
 }
+
+// ---------- Job openings (for Careers page) ----------
+
+export type JobOpening = {
+  _id?: string;
+  slug: string;
+  title: string;
+  type: string;
+  team: string;
+  location?: string;
+  description?: string;
+  requirements?: string[];
+};
+
+export async function fetchJobOpenings(locale?: string): Promise<JobOpening[]> {
+  const base = getBaseUrl();
+  if (!base || !isAllowedBaseUrl(base)) {
+    return [];
+  }
+  try {
+    const qs = locale?.trim() ? `?locale=${encodeURIComponent(locale.trim())}` : "";
+    const res = await fetch(`${base.replace(/\/$/, "")}/careers/openings${qs}`);
+    if (!res.ok) return [];
+    const data = await res.json();
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+}
+
+export async function fetchJobOpeningBySlug(slug: string, locale?: string): Promise<JobOpening | null> {
+  const base = getBaseUrl();
+  if (!base || !isAllowedBaseUrl(base) || !slug) return null;
+  try {
+    const qs = locale?.trim() ? `?locale=${encodeURIComponent(locale.trim())}` : "";
+    const res = await fetch(`${base.replace(/\/$/, "")}/careers/openings/${encodeURIComponent(slug)}${qs}`);
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data && typeof data.slug === "string" ? data : null;
+  } catch {
+    return null;
+  }
+}
+
+/** Server-side only: fetch one opening by slug (for generateMetadata / notFound check). Pass locale for localized title/description. */
+export async function getJobOpeningBySlugServer(slug: string, locale?: string): Promise<JobOpening | null> {
+  const base = process.env.NEXT_PUBLIC_API_URL ?? "";
+  if (!base || !slug) return null;
+  try {
+    const qs = locale?.trim() ? `?locale=${encodeURIComponent(locale.trim())}` : "";
+    const res = await fetch(`${base.replace(/\/$/, "")}/careers/openings/${encodeURIComponent(slug)}${qs}`, {
+      next: { revalidate: 60 },
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data && typeof data.slug === "string" ? data : null;
+  } catch {
+    return null;
+  }
+}

@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo, useCallback, useEffect } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
   Search,
@@ -236,6 +237,8 @@ function PortfolioCarousel({
   projects,
   activeIndex,
   onGoTo,
+  prevSlideAria = "Previous slide",
+  nextSlideAria = "Next slide",
 }: {
   projects: Project[];
   activeIndex: number;
@@ -378,7 +381,7 @@ function PortfolioCarousel({
           type="button"
           onClick={handlePrev}
           className="w-12 h-12 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-600 hover:border-[#10b981] hover:text-[#10b981] hover:bg-[#10b981]/5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#10b981]/50"
-          aria-label="Previous slide"
+          aria-label={prevSlideAria}
         >
           <ArrowLeft size={20} />
         </button>
@@ -401,7 +404,7 @@ function PortfolioCarousel({
           type="button"
           onClick={handleNext}
           className="w-12 h-12 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-600 hover:border-[#10b981] hover:text-[#10b981] hover:bg-[#10b981]/5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#10b981]/50"
-          aria-label="Next slide"
+          aria-label={nextSlideAria}
         >
           <ArrowRight size={20} />
         </button>
@@ -411,31 +414,35 @@ function PortfolioCarousel({
 }
 
 export default function PortfolioContent() {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const t = useTranslations("portfolio");
+  const [activeCategoryKey, setActiveCategoryKey] = useState("All");
   const [activeIndex, setActiveIndex] = useState(0);
 
   const goTo = useCallback((nextIndex: number) => {
     setActiveIndex((prev) => (nextIndex === prev ? prev : nextIndex));
   }, []);
 
-  const categories = [
-    { name: "All", icon: <Layers size={28} /> },
-    { name: "Construction", icon: <Layers size={28} /> },
-    { name: "Media & Marketing", icon: <Activity size={28} /> },
-    { name: "Gaming", icon: <Smartphone size={28} /> },
-    { name: "Healthcare", icon: <ShieldCheck size={28} /> },
-    { name: "AR/VR", icon: <Boxes size={28} /> },
-    { name: "SaaS", icon: <Globe size={28} /> },
-  ];
+  const categories = useMemo(
+    () => [
+      { name: t("category_all"), key: "All", icon: <Layers size={28} /> },
+      { name: t("category_construction"), key: "Construction", icon: <Layers size={28} /> },
+      { name: t("category_media_marketing"), key: "Media & Marketing", icon: <Activity size={28} /> },
+      { name: t("category_gaming"), key: "Gaming", icon: <Smartphone size={28} /> },
+      { name: t("category_healthcare"), key: "Healthcare", icon: <ShieldCheck size={28} /> },
+      { name: t("category_arvr"), key: "AR/VR", icon: <Boxes size={28} /> },
+      { name: t("category_saas"), key: "SaaS", icon: <Globe size={28} /> },
+    ],
+    [t]
+  );
 
   const filteredProjects = useMemo(() => {
-    if (activeCategory === "All") return projects;
-    return projects.filter((p) => p.category === activeCategory);
-  }, [activeCategory]);
+    if (activeCategoryKey === "All") return projects;
+    return projects.filter((p) => p.category === activeCategoryKey);
+  }, [activeCategoryKey]);
 
   useEffect(() => {
     setActiveIndex(0);
-  }, [activeCategory]);
+  }, [activeCategoryKey]);
 
   return (
     <div className="min-h-screen font-sans selection:bg-[#10b981] selection:text-white bg-white text-black">
@@ -461,10 +468,10 @@ export default function PortfolioContent() {
 
         <div className="relative z-10 space-y-6 sm:space-y-8 max-w-4xl animate-in fade-in slide-in-from-bottom-10 duration-1000 px-4">
           <h1 className="text-3xl sm:text-4xl md:text-[4.5rem] lg:text-[5.5rem] font-black text-white tracking-tighter leading-none drop-shadow-2xl italic">
-            Grovyn Portfolio.
+            {t("hero_title")}
           </h1>
           <p className="text-white/90 text-base sm:text-lg md:text-2xl font-medium tracking-tight max-w-2xl mx-auto italic drop-shadow-md px-4">
-          Real-world digital systems built with teams across different industries.
+            {t("hero_subtitle")}
           </p>
 
           {/* <div className="flex justify-center space-x-4 sm:space-x-6 pt-4">
@@ -482,12 +489,12 @@ export default function PortfolioContent() {
         <div className="absolute bottom-[-60px] sm:bottom-[-70px] lg:bottom-[-80px] left-1/2 -translate-x-1/2 w-full max-w-6xl px-4 sm:px-6 z-20">
           <div className="flex items-center justify-center space-x-2 sm:space-x-4 md:space-x-10 pb-4 scrollbar-hide">
             {categories.map((cat) => (
-              <div key={cat.name} className="flex flex-col items-center space-y-2 sm:space-y-4 group shrink-0">
+              <div key={cat.key} className="flex flex-col items-center space-y-2 sm:space-y-4 group shrink-0">
                 <button
                   type="button"
-                  onClick={() => setActiveCategory(cat.name)}
+                  onClick={() => setActiveCategoryKey(cat.key)}
                   className={`w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center transition-all duration-500 shadow-2xl border-2 sm:border-4 ${
-                    activeCategory === cat.name
+                    activeCategoryKey === cat.key
                       ? "bg-[#10b981] text-white border-white scale-110 shadow-[#10b981]/40"
                       : "bg-white border-gray-50 text-gray-400 hover:border-[#10b981]/40"
                   }`}
@@ -496,7 +503,7 @@ export default function PortfolioContent() {
                 </button>
                 <span
                   className={`text-[9px] sm:text-[10px] md:text-[11px] font-black uppercase tracking-widest transition-colors text-center ${
-                    activeCategory === cat.name ? "text-[#10b981]" : "text-gray-400 group-hover:text-black dark:group-hover:text-white"
+                    activeCategoryKey === cat.key ? "text-[#10b981]" : "text-gray-400 group-hover:text-black dark:group-hover:text-white"
                   }`}
                 >
                   {cat.name}
@@ -515,10 +522,10 @@ export default function PortfolioContent() {
                 "text-[#111]"
               }`}
             >
-              Projets <span className="text-[#10b981] text-xl sm:text-2xl md:text-3xl lg:text-4xl">/ Réalisations</span>
+              {t("section_header_title")} <span className="text-[#10b981] text-xl sm:text-2xl md:text-3xl lg:text-4xl">{t("section_header_highlight")}</span>
             </h2>
             <p className="text-gray-400 font-bold uppercase tracking-[0.4em] text-[9px] sm:text-[10px]">
-              Grovyn Business Engineering Archive
+              {t("section_header_sub")}
             </p>
           </div>
         </div>
@@ -528,10 +535,12 @@ export default function PortfolioContent() {
           projects={filteredProjects}
           activeIndex={activeIndex}
           onGoTo={goTo}
+          prevSlideAria={t("prev_slide_aria")}
+          nextSlideAria={t("next_slide_aria")}
         />
       </section>
 
-      {/* Selected Work — premium archive of elite systems (light) */}
+      {/* Selected Work - premium archive of elite systems (light) */}
       <section
         className="relative py-20 sm:py-28 lg:py-36 rounded-t-[2rem] sm:rounded-t-[2.5rem] lg:rounded-t-[3rem] overflow-hidden bg-[#fafafa] selected-work-grain"
         style={{ transition: "background-color 1000ms ease" }}
@@ -542,11 +551,11 @@ export default function PortfolioContent() {
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#10b981]/10 border border-[#10b981]/20">
               <LayoutGrid size={14} className="text-[#10b981]" />
               <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#10b981]">
-                Archive
+                {t("archive_badge")}
               </span>
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-none text-[#111]">
-              Selected <span className="text-[#10b981] italic">Work.</span>
+              {t("selected_work_title")} <span className="text-[#10b981] italic">{t("selected_work_highlight")}</span>
             </h2>
             <p className="text-gray-500 text-sm sm:text-base md:text-lg font-medium max-w-xl mx-auto leading-relaxed">
               Flagship systems. Capability and outcomes.
@@ -555,7 +564,7 @@ export default function PortfolioContent() {
 
           {/* Asymmetric editorial grid: 2 large cinematic + 2 compact */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 sm:gap-5 lg:gap-6 items-stretch">
-            {/* Large cinematic — BEPL (top-left) */}
+            {/* Large cinematic - BEPL (top-left) */}
             <motion.article
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -607,7 +616,7 @@ export default function PortfolioContent() {
               </div>
             </motion.article>
 
-            {/* Compact — A3 House (top-right) */}
+            {/* Compact - A3 House (top-right) */}
             <motion.article
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -640,7 +649,7 @@ export default function PortfolioContent() {
               </div>
             </motion.article>
 
-            {/* Compact — Roborofl (bottom-left) */}
+            {/* Compact - Roborofl (bottom-left) */}
             <motion.article
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -679,7 +688,7 @@ export default function PortfolioContent() {
               </div>
             </motion.article>
 
-            {/* Large cinematic — The 24x7 Care (bottom-right) */}
+            {/* Large cinematic - The 24x7 Care (bottom-right) */}
             <motion.article
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
