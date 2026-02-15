@@ -479,7 +479,6 @@ export default function AutomationsContent() {
           </div>
         </motion.div>
       </motion.section>
-
       <section
         className="relative px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto pt-20 sm:pt-24 lg:pt-28 pb-10 sm:pb-12"
         aria-labelledby="use-cases-heading"
@@ -533,7 +532,285 @@ export default function AutomationsContent() {
         </motion.div>
         <motion.div
           ref={rightScrollRef}
-          className="max-h-[85vh] overflow-y-auto overflow-x-hidden scroll-smooth snap-y snap-mandatory automations-hide-scrollbar rounded-2xl pl-4 sm:pl-6 lg:pl-8 pr-2"
+          className="max-h-[85vh] overflow-y-auto overflow-x-hidden scroll-smooth snap-y snap-mandatory automations-hide-scrollbar rounded-2xl pl-0 sm:pl-4 lg:pl-8 pr-2"
+          style={{ overscrollBehavior: "auto" }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+        >
+          {/* Mobile only: title → description → card, repeated for each use case */}
+          <div className="md:hidden space-y-8 pb-8">
+            {cases.map((useCase, idx) => (
+              <div key={`mobile-block-${useCase.id ?? idx}`} className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <span className="text-base font-black text-[#111] flex-shrink-0">{useCase.id}</span>
+                  <h3 className="text-lg font-black text-[#111] tracking-tight">{useCase.title}</h3>
+                </div>
+                <p className="text-gray-500 text-sm font-medium leading-relaxed">
+                  {useCase.desc}
+                </p>
+                <div className="rounded-2xl border border-gray-100 bg-gray-50/80 p-4 space-y-3">
+                  <div className="flex items-center space-x-2 text-[#10b981]">
+                    <CheckCircle2 size={14} className="flex-shrink-0" />
+                    <span className="font-black text-[10px] uppercase tracking-widest">{useCase.outcome}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-8 h-8 rounded-xl bg-gray-50 flex items-center justify-center text-[#10b981] border border-gray-100 flex-shrink-0">
+                      <Bot size={16} />
+                    </div>
+                    <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">
+                      {t("deployed_agent")} <span className="text-[#111]">{useCase.agent}</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop/tablet: current grid (list + panels) */}
+          <div className="hidden md:block">
+          <div className="grid lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-24 items-start min-h-full">
+            {/* Left sidebar - use cases list */}
+            <div className="lg:col-span-5 lg:sticky lg:top-8 order-2 lg:order-1 self-start min-w-0 pl-0 lg:pl-0">
+              <div className="space-y-1 sm:space-y-2">
+              {cases.map((useCase, idx) => (
+                <motion.button
+                  key={useCase.id ?? idx}
+                  type="button"
+                  onClick={() => {
+                    setActiveIndex(idx);
+                    scrollToItem(idx);
+                  }}
+                  aria-expanded={activeIndex === idx}
+                  aria-controls={`use-case-panel-${idx}`}
+                  className="w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#10b981] focus-visible:ring-offset-2 rounded-lg"
+                  whileHover={{ x: activeIndex !== idx ? 10 : 0 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                >
+                  <motion.div
+                    className="flex items-center space-x-3 sm:space-x-4 lg:space-x-8"
+                    animate={{
+                      scale: activeIndex === idx ? 1.02 : 1,
+                    }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <motion.span
+                      className={`text-base sm:text-lg lg:text-xl font-black transition-all duration-500 flex-shrink-0 ${activeIndex === idx ? "text-[#111]" : "text-gray-200"}`}
+                      animate={{
+                        color: activeIndex === idx ? "#111" : "#e5e5e5",
+                      }}
+                    >
+                      {useCase.id}
+                    </motion.span>
+                    <motion.h3
+                      className={`text-lg sm:text-xl lg:text-3xl font-black tracking-tighter`}
+                      animate={{
+                        color: activeIndex === idx ? "#111" : "#e5e5e5",
+                        x: activeIndex === idx ? 5 : 0,
+                      }}
+                      transition={{ duration: 0.5, ease: "easeOut" }}
+                    >
+                      {useCase.title}
+                    </motion.h3>
+                  </motion.div>
+                  <div
+                    className={`grid transition-all duration-700 ease-in-out ${activeIndex === idx ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+                  >
+                    <div className="overflow-hidden space-y-3 sm:space-y-4 lg:space-y-6 pl-8 sm:pl-10 lg:pl-14 pb-4 sm:pb-6 lg:pb-8">
+                      <p className="text-gray-500 text-sm sm:text-base lg:text-xl font-medium leading-relaxed max-w-md">
+                        {useCase.desc}
+                      </p>
+                      <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-4 text-[#10b981] pt-1 sm:pt-2">
+                        <CheckCircle2 size={14} className="sm:w-4 sm:h-4 flex-shrink-0" />
+                        <span className="font-black text-[9px] sm:text-[10px] lg:text-[11px] uppercase tracking-widest">{useCase.outcome}</span>
+                      </div>
+                      <div className="pt-2 sm:pt-3 lg:pt-4 flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
+                        <div className="w-7 h-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10 rounded-lg sm:rounded-xl lg:rounded-2xl bg-gray-50 flex items-center justify-center text-[#10b981] border border-gray-100 flex-shrink-0">
+                          <Bot size={16} className="sm:w-[18px] sm:h-[18px] lg:w-5 lg:h-5" />
+                        </div>
+                        <div className="text-[9px] sm:text-[9px] lg:text-[10px] font-black uppercase tracking-widest text-gray-400 break-words">
+                          {t("deployed_agent")} <span className="text-[#111]">{useCase.agent}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.button>
+              ))}
+              </div>
+            </div>
+
+            {/* Right side - visual panels */}
+            <div className="lg:col-span-7 order-1 lg:order-2 space-y-8 sm:space-y-12 lg:space-y-0 lg:pr-4 lg:-mr-4 py-2 sm:py-4 lg:py-10">
+              {cases.map((useCase, idx) => (
+                <div
+                  key={useCase.id ?? idx}
+                  id={`use-case-panel-${idx}`}
+                  ref={(el) => {
+                    itemRefs.current[idx] = el;
+                  }}
+                  className="snap-center min-h-[70vh] sm:min-h-[75vh] lg:min-h-[85vh] flex flex-col justify-center pt-2 sm:pt-3"
+                  aria-label={useCase.title}
+                >
+                  <div className="bg-white rounded-3xl sm:rounded-[3rem] lg:rounded-[3.5rem] border border-gray-100 overflow-hidden transform transition-all duration-700">
+                    <div className="bg-[#fafafa] border-b border-gray-100 px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 flex items-center justify-between">
+                      <div className="flex space-x-1.5 sm:space-x-2">
+                        <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-400/20" />
+                        <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-400/20" />
+                        <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#10b981]/20" />
+                      </div>
+                      <div className="text-[8px] sm:text-[9px] font-mono font-black uppercase tracking-[0.3em] sm:tracking-[0.4em] text-gray-300">
+                        {t("session_label")}_0{idx + 1}
+                      </div>
+                    </div>
+
+                    <div className="p-4 sm:p-6 lg:p-10 space-y-2">
+                      <div className="flex items-center justify-end pb-4 sm:pb-6 lg:pb-8 border-b border-gray-50">
+                        <div className="bg-[#10b981]/5 text-[#10b981] px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-2.5 rounded-full text-[9px] sm:text-[10px] font-black uppercase tracking-widest border border-[#10b981]/20 shrink-0">
+                          {t("system_operational")}
+                        </div>
+                      </div>
+
+                      <div className="relative aspect-video rounded-2xl sm:rounded-3xl lg:rounded-[3rem] bg-gradient-to-br from-gray-50 to-white border border-gray-100 overflow-hidden group/viz shadow-inner">
+                        <div className="absolute inset-0">
+                          <Image
+                            src={
+                              idx === 0 ? "/assets/chatbot-use-case.png" :
+                              idx === 1 ? "/assets/voice-ai-use-case.png" :
+                              idx === 2 ? "/assets/fraud-detection-use-case.png" :
+                              idx === 3 ? "/assets/recommendation-systems-use-case.png" :
+                              idx === 4 ? "/assets/automations-use-case.png" :
+                              "/assets/marketing-intelligence-use-case.png"
+                            }
+                            alt={useCase.title}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                            loading="lazy"
+                          />
+                        </div>
+                        
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                        
+                        <div className="absolute top-4 sm:top-6 lg:top-8 left-4 sm:left-6 lg:left-10 flex items-center space-x-2 sm:space-x-3 z-10">
+                          <motion.div
+                            className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#10b981] rounded-full"
+                            animate={{ scale: [1, 1.5, 1], opacity: [1, 0.5, 1] }}
+                            transition={{ duration: 2, repeat: Infinity }}
+                          />
+                          <div className="text-[8px] sm:text-[9px] lg:text-[10px] font-black uppercase tracking-[0.25em] sm:tracking-[0.3em] text-white drop-shadow-lg">
+                            {t("processing_label")}
+                          </div>
+                        </div>
+                        
+                        <motion.div
+                          className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-10 right-4 sm:right-6 lg:right-10 z-10"
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: 0.3 }}
+                        >
+                          <div className="bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 shadow-2xl border border-white/20">
+                            <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
+                              <motion.div
+                                className="w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-[#10b981] rounded-lg sm:rounded-xl flex items-center justify-center text-white shadow-lg flex-shrink-0"
+                                animate={{ rotate: [0, 360] }}
+                                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                              >
+                                {idx === 0 ? <MessageSquare size={18} className="sm:w-5 sm:h-5 lg:w-6 lg:h-6" /> :
+                                 idx === 1 ? <Activity size={18} className="sm:w-5 sm:h-5 lg:w-6 lg:h-6" /> :
+                                 idx === 2 ? <ShieldCheck size={18} className="sm:w-5 sm:h-5 lg:w-6 lg:h-6" /> :
+                                 idx === 3 ? <CheckCircle2 size={18} className="sm:w-5 sm:h-5 lg:w-6 lg:h-6" /> :
+                                 idx === 4 ? <Zap size={18} className="sm:w-5 sm:h-5 lg:w-6 lg:h-6" /> :
+                                 <BarChart3 size={18} className="sm:w-5 sm:h-5 lg:w-6 lg:h-6" />}
+                              </motion.div>
+                              <div className="flex-1 min-w-0">
+                                <h5 className="text-sm sm:text-base lg:text-lg font-black text-[#111] tracking-tight truncate">
+                                  {useCase.agent} {t("agent_active")}
+                                </h5>
+                                <p className="text-gray-500 text-[10px] sm:text-xs font-medium truncate">
+                                  Real-time processing and analysis
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </motion.div>
+                      </div>
+
+                      <div className="space-y-3 sm:space-y-4 lg:space-y-6">
+                        <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
+                          <Activity size={14} className="sm:w-4 sm:h-4 lg:w-[18px] lg:h-[18px] text-[#10b981] animate-pulse flex-shrink-0" />
+                          <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-gray-400">
+                            {t("latest_logs")}
+                          </span>
+                        </div>
+                        <div className="bg-gray-50 rounded-2xl sm:rounded-3xl lg:rounded-[2.5rem] p-4 sm:p-6 lg:p-8 border border-gray-100 italic text-gray-500 font-medium leading-relaxed text-xs sm:text-sm lg:text-base">
+                          &ldquo;{t("log_template", { title: useCase.title })}&rdquo;
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          </div>
+        </motion.div>
+      </section>
+      {/* <section
+        className="relative px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto pt-20 sm:pt-24 lg:pt-28 pb-10 sm:pb-12"
+        aria-labelledby="use-cases-heading"
+      >
+        <motion.div
+          className="mb-12 sm:mb-16 pl-0 sm:pl-1"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#10b981]/10 border border-[#10b981]/20 mb-4 sm:mb-5">
+            <Sparkles size={14} className="text-[#10b981]" />
+            <span className="text-[10px] font-black uppercase tracking-[0.25em] text-[#10b981]">
+              Use cases
+            </span>
+          </div>
+          <h2 id="use-cases-heading" className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight leading-tight">
+            {(() => {
+              const heading =
+                (() => {
+                  try {
+                    return t("use_cases_heading");
+                  } catch {
+                    return "AI in action";
+                  }
+                })() as string;
+              const words = heading.trim().split(/\s+/);
+              if (words.length <= 1) {
+                return <span className="text-[#10b981]">{heading}</span>;
+              }
+              const lastWord = words.pop() ?? "";
+              const firstPart = words.join(" ");
+              return (
+                <>
+                  <span className="text-[#111]">{firstPart} </span>
+                  <span className="text-[#10b981]">{lastWord}</span>
+                </>
+              );
+            })()}
+          </h2>
+          <p className="mt-3 sm:mt-4 text-gray-500 text-base sm:text-lg font-medium max-w-xl leading-relaxed border-l-4 border-[#10b981]/40 pl-4 sm:pl-5">
+            {(() => {
+              try {
+                return t("use_cases_subheading");
+              } catch {
+                return "Explore how AI fits into your workflows.";
+              }
+            })()}
+          </p>
+        </motion.div>
+        <motion.div
+          ref={rightScrollRef}
+          className="relative max-h-[85vh] overflow-y-auto overflow-x-hidden scroll-smooth snap-y snap-mandatory automations-hide-scrollbar rounded-2xl pl-4 sm:pl-6 lg:pl-8 pr-2"
           style={{ overscrollBehavior: "auto" }}
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -723,7 +1000,7 @@ export default function AutomationsContent() {
             </div>
           </div>
         </motion.div>
-      </section>
+      </section> */}
 
       <section
         ref={nextSectionRef}
@@ -1084,13 +1361,13 @@ export default function AutomationsContent() {
           </div>
 
           <motion.div
-            className="mt-24 text-center"
+            className="mt-12 md:mt-24 text-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <div className="inline-flex items-center space-x-8 bg-gray-50 px-10 py-6 rounded-full border border-gray-100 shadow-sm">
+            <div className="inline-flex items-center justify-center gap-4 md:gap-8 bg-gray-50 px-4 py-3 md:px-10 md:py-6 rounded-full border border-gray-100 shadow-sm">
               {[
                 { value: "2-4", label: "Weeks to Deploy" },
                 { value: "99.9%", label: "Uptime SLA" },
@@ -1098,7 +1375,7 @@ export default function AutomationsContent() {
               ].map((stat, i) => (
                 <motion.div
                   key={i}
-                  className="text-center"
+                  className="text-center min-w-0"
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
@@ -1106,7 +1383,7 @@ export default function AutomationsContent() {
                   whileHover={{ scale: 1.05 }}
                 >
                   <motion.div 
-                    className="text-3xl font-black text-[#10b981]"
+                    className="text-xl md:text-3xl font-black text-[#10b981]"
                     animate={{ 
                       textShadow: [
                         "0 0 0px rgba(16, 185, 129, 0)",
@@ -1118,7 +1395,7 @@ export default function AutomationsContent() {
                   >
                     {stat.value}
                   </motion.div>
-                  <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mt-1">
+                  <div className="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-wider mt-0.5 md:mt-1">
                     {stat.label}
                   </div>
                 </motion.div>

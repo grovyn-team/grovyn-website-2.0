@@ -128,7 +128,7 @@ export default function Navbar() {
 
   return (
     <nav className={navClass}>
-      <div className="max-w-7xl mx-auto px-0 sm:px-6 lg:px-0 h-full flex justify-between items-center gap-4 min-w-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 h-full flex justify-between items-center gap-4 min-w-0">
         <Link
           href={`/${locale}#hero`}
           className="flex items-center space-x-1 group shrink-0 mr-4 md:mr-6"

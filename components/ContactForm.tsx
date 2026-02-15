@@ -51,24 +51,41 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitError(null);
+
+    // Only allow submit when on the final step (prevents Enter key on step 1/2 from submitting)
+    if (step !== 3) {
+      return;
+    }
+
+    // Validate required fields before showing "Sending..." or calling the API
+    const name = formData.fullName.trim();
+    const email = formData.email.trim();
+    if (!name || !email) {
+      setSubmitError(t("validation_required"));
+      return;
+    }
+
     setIsSubmitting(true);
     const message =
       formData.details +
       (formData.platform.length ? "\n\nPlatforms of interest: " + formData.platform.join(", ") : "");
-    const result = await submitContact({
-      name: formData.fullName.trim(),
-      email: formData.email.trim(),
-      company: formData.company.trim() || undefined,
-      projectType: formData.projectGoal.trim() || undefined,
-      budget: formData.budget.trim() || undefined,
-      timeline: formData.timeline.trim() || undefined,
-      message: message.trim() || formData.details.trim(),
-    });
-    setIsSubmitting(false);
-    if (result.success) {
-      setIsSubmitted(true);
-    } else {
-      setSubmitError(result.message);
+    try {
+      const result = await submitContact({
+        name,
+        email,
+        company: formData.company.trim() || undefined,
+        projectType: formData.projectGoal.trim() || undefined,
+        budget: formData.budget.trim() || undefined,
+        timeline: formData.timeline.trim() || undefined,
+        message: message.trim() || formData.details.trim(),
+      });
+      if (result.success) {
+        setIsSubmitted(true);
+      } else {
+        setSubmitError(result.message);
+      }
+    } finally {
+      setIsSubmitting(false);
     }
   };
 

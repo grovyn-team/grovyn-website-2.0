@@ -79,10 +79,11 @@ export default function WebServiceContent() {
                 <span className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-400">Engineering Protocol 2.5</span>
               </div>
               <h1 className="text-3xl xl:text-[3.5rem] font-black tracking-[-0.06em] leading-[0.85] text-white">
-                Serious <span className="text-[#10b981]">Web Engineering</span> for Serious Products.
+                <span>Web </span>
+                <span className="text-[#10b981]">Engineering Principles</span>
               </h1>
               <p className="text-gray-400 text-sm sm:text-base lg:text-lg font-medium max-w-xl leading-relaxed">
-                We help teams move beyond fragile builds and into resilient web architecture - delivering scalable frontends, robust backend systems, and infrastructure that evolves with your business.
+                We design and build web systems with a focus on clarity, reliability, and long-term maintainability. Our work prioritizes clean architecture, thoughtful decisions, and technology that continues to perform as requirements evolve.
               </p>
             </div>
 
@@ -91,7 +92,7 @@ export default function WebServiceContent() {
                 href={`${base}#contact`}
                 className="w-full sm:w-auto bg-white text-black px-8 sm:px-12 py-4 sm:py-5 rounded-2xl font-black text-xs uppercase tracking-widest flex items-center justify-center space-x-4 hover:bg-[#10b981] transition-all duration-500 group"
               >
-                <span>Talk to an Architect</span>
+                <span>Start a conversation</span>
                 <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
               </Link>
               <Link

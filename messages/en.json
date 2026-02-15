@@ -357,7 +357,8 @@
     "sending": "Sending…",
     "success_title": "We received your message",
     "success_message": "Someone from our team will reach out within 24 hours to discuss your project.",
-    "start_new": "Send another message"
+    "start_new": "Send another message",
+    "validation_required": "Please fill in your name and email before sending."
   },
   "footer": {
     "custom_software": "Custom Software",

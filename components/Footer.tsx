@@ -25,6 +25,7 @@ export default function Footer({ locale }: { locale: string }) {
                 height={40}
                 sizes="120px"
                 className="object-contain h-8 w-auto"
+                style={{ width: "auto", height: "auto" }}
               />
             </Link>
             <p className="text-xs leading-relaxed max-w-xs">
